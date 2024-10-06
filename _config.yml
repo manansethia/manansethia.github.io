@@ -21,7 +21,7 @@ repository               : "manansethia/web"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "image.jpeg"
   name             : "Manan Sethia"
   pronouns         : # example: "she/her"  
   bio              : "Operating System Enthusiast"
