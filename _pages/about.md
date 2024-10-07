@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-![Illustration of Matrix Rain in a retro PC](/images/comp.jpeg){: .align-right width="300px" padding="5px"}
+![Illustration of Matrix Rain in a retro PC](/images/comp.jpeg){: .align-right width="300px" padding: 5px}
 
 Hi!👋
 I am Manan Sethia.
