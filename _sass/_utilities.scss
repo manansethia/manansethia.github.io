@@ -209,7 +209,24 @@ body:hover .visually-hidden button {
   .fa-behance-square {
     color: $behance-color;
   }
+   
+  .fa-codechef {
+     background: url('/images/codechef-svgrepo-com.svg') no-repeat center center;
+     background-size: contain;
+     width: 1em;
+     height: 1em;
+     display: inline-block;
+  }
+   
+  .fa-codechef::before {
+     content: "\00a0";  // Non-breaking space
+  }
 
+  .fa-codechef {
+     color: $codechef-color;
+  }
+
+   
   .fa-dribbble {
     color: $dribbble-color;
   }
