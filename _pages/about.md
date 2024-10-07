@@ -7,8 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-<div style="padding: 5px;">
-    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 300px; padding: 5px;float: right;">
+<div style="padding: 10px;">
+    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 320px; padding: 10px;float: right;">
 </div>
 
 Hi!👋"
