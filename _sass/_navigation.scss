@@ -257,7 +257,7 @@
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 2px solid #754600;
+    border: 2px solid #000000;
     border-radius: 10px;
     background: #c07300;
     box-shadow: 0 0 10px rgba(#000, 0.25);
@@ -280,7 +280,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: $border-color transparent;
+      border-color: #000000 transparent;
       display: block;
       z-index: 0;
     }
@@ -293,7 +293,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #fff transparent;
+      border-color: #000000 transparent;
       display: block;
       z-index: 1;
     }
