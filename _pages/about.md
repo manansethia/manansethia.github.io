@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-<div style="padding: 5px">
+<div>
     <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 320px; float: right; border: 2px solid #c07300; border-radius: 10px;">
 </div>
 
