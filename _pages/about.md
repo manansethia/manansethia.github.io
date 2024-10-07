@@ -8,11 +8,10 @@ redirect_from:
 ---
 
 <div style="padding: 5px;">
-    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 300px; float: right;">
+    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 300px; padding: 5px;float: right;">
 </div>
 
-Hi!👋
-
+Hi!👋"
 I am Manan Sethia.
 
 A Student, a Son and a Software freak.
