@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-![Illustration of Matrix Rain in a retro PC](/images/comp.jpeg){: .align-right width="300px" padding: 5px}
+<div style="padding: 5px;">
+    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 300px; float: right;">
+</div>
 
 Hi!👋
 
