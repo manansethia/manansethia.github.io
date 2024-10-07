@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <div>
-    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 150px; float: right; border: 3px solid #000000; border-radius: 20px;">
+    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 300px; float: right; border: 3px solid #000000; border-radius: 20px;">
 </div>
 <br>
 👋 Hi! I am Manan Sethia, a Student, a Son and a Software freak.<br>
