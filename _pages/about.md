@@ -7,8 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-<div style="border: 2px solid #c07300; border-radius: 10px;">
-    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 320px; float: right; border: none; border-radius: 10px;">
+<div>
+    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 320px; float: right; border: 2px solid #c07300; border-radius: 10px;">
 </div>
 
 Hi!👋"<br>
