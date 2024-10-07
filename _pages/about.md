@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <div>
-    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 320px; float: right; border: 2px solid #c07300; border-radius: 10px;">
+    <img src="/images/comp.jpeg" alt="Illustration of Matrix Rain in a retro PC" style="width: 300px; float: right; border: 3px solid #000000; border-radius: 20px;">
 </div>
 
 Hi!👋"<br>
