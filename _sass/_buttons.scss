@@ -35,8 +35,10 @@
   }
 
   /* fills width of parent container */
-
-  &--block {
+  &--forward {
+     float: right;
+   
+  @media (max-width: 600px) {
     display: block;
     width: 100%;
 
