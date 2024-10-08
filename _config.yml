@@ -24,12 +24,12 @@ author:
   avatar           : "image.jpeg"
   name             : "Manan Sethia"
   pronouns         : # example: "she/her"  
-  bio              : >
-  "Operating System Fanatic."
-  "Aspiring to be an OS Dev."
-  "International Olympiad Gold medallist."
-  "Quizzer."
-  "Conputer."
+  bio              : |
+    "Operating System Fanatic."
+    "Aspiring to be an OS Dev."
+    "International Olympiad Gold medallist."
+    "Quizzer."
+    "Conputer."
   location         : "Raipur, Chhattisgarh"
   employer         : "Krishna Public School"
   uri              : # URL
