@@ -38,7 +38,7 @@
   &--forward {
      float: right;
    
-  @media (max-width: 600px) {
+  &--block (max-width: 600px) {
     display: block;
     width: 100%;
 
