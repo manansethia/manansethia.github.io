@@ -44,6 +44,16 @@
     }
   }
 
+  .btn--forward {
+     float: right;
+
+     @media (max-width: 600px) {
+       float: none; // Adjusts to inline on small screens
+       display: block; // Optional: makes sure it takes full width on small screens
+       text-align: center; // Center-align the button text on small screens
+     }
+  }
+
   /* for dark backgrounds */
 
   &--inverse {
