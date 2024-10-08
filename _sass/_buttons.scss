@@ -9,6 +9,7 @@
 .btn {
   /* default button */
   display: inline-block;
+  float: right;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
   color: #fff !important;
@@ -42,16 +43,6 @@
     + .btn--block {
       margin-top: 0.25em;
     }
-  }
-
-  .btn--forward {
-     float: right;
-
-     @media (max-width: 600px) {
-       float: none; // Adjusts to inline on small screens
-       display: block; // Optional: makes sure it takes full width on small screens
-       width: 100%;
-     }
   }
 
   /* for dark backgrounds */
