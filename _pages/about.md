@@ -8,10 +8,9 @@ redirect_from:
 ---
 
 👋 Hi! I am Manan Sethia.<br> 
-<br>
 🖥️ An aspiring computer scientist who loves exploring new technologies and is currently learning more about Quantum Computing and Artificial Intelligence.<br>
-<br>
 📍 Based in Raipur, Chhattisgarh, India.<br>
 
 More About Me 
 ---
+sussybaka
