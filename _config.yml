@@ -23,13 +23,11 @@ author:
   # Biographic information
   avatar           : "image.jpeg"
   name             : "Manan Sethia"
-  pronouns         : # example: "she/her"  
-  bio              : |
-    Radioactive Hominoid who's a Tech Geek.<br>
-    🪲🦃<br>
+  pronouns         : "he/him"
+  bio              : "Radioactive Hominoid who's a Tech Geek. 🪲 🦃"
   location         : "Raipur, Chhattisgarh"
   employer         : "Krishna Public School"
-  uri              : # URL
+  uri              : "https://manansethia.github.io/"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
