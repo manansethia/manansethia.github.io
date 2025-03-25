@@ -25,9 +25,9 @@ author:
   name             : "Manan Sethia"
   pronouns         : # example: "she/her"  
   bio              : |
-    Operating System Fanatic - Aspiring to be an OS Dev. <br>
-    International Olympiad Gold-medallist & A Quizzer.<br>
-    Conputer.
+    Radioactive Hominoid.<br>
+    Tech Geek.<br>
+    Conputer.<br>
   location         : "Raipur, Chhattisgarh"
   employer         : "Krishna Public School"
   uri              : # URL
@@ -47,8 +47,8 @@ author:
   dribbble         : # Username
   github           : "manansethia"
   kaggle           : # Username  
-  stackoverflow    : "27665863/manan-sethia"
-  codechef         : "manan54"
+  #stackoverflow    : "27665863/manan-sethia"
+  #codechef         : "manan54"
 
   # Social media
   bluesky          : # Username # Replace this with you Bluesky username
@@ -58,9 +58,9 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
+  linkedin         : "manan-sethia"
   instagram        : "manan_xd.exe"
   lastfm           : # Username
-  linkedin         : "manan-sethia"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
