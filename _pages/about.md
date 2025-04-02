@@ -13,4 +13,4 @@ redirect_from:
 
 More About Me 
 ---
-Booted up on 30<sup>th</sup> November, 2007.
+Booted up on 30<sup>th</sup> November, 2007 to the Sethia family, thanks to the well compiled genetic code from Jitendra Kumar Sethia and Ratika Sethia.
