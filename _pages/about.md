@@ -13,4 +13,4 @@ redirect_from:
 
 More About Me 
 ---
-
+Booted up on 30<sup>th</sup> November, 2007.

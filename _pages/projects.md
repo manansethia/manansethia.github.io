@@ -13,8 +13,10 @@ AIRAVAT 🐘
 
 Conputer OS 🪲 
 ---
-A Debian based personal operating system with a Green Beetle as it's logo and various system components named after Egyptian and Indian inspirations.<br> 
-The name is inspired from an old Chat GPT meme.
+<ul>
+<li>A Debian based personal operating system with a Green Beetle as it's logo and various system components named after Egyptian and Indian inspirations.</li> 
+<li>The name is inspired from an old Chat GPT meme.</li>
+</ul>
 
 MRIDA 🌱
 ---
