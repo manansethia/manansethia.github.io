@@ -10,13 +10,16 @@ These are the projects which I have worked on till now. <br>
 AIRAVAT 🐘
 ---
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends
-
+<ul>
+  <li>AIRAVAT is an upcoming project which will compute hyper local weather using existing ground, weather balloon and sattelite data.</li>
+  <li> Named after the vehicle of deity Indra, Airavat is a divine elephent known as the "king of elephants", "elephant of the clouds" and "brother of the sun".
+</ul>
 
 Conputer OS 🪲 
 ---
 <ul>
-<li>A Debian based personal operating system currently being developed by me with a Green Beetle as it's logo and various system components named after Egyptian and Indian inspirations.</li> 
-<li>The name is inspired from an old Chat GPT meme.</li>
+  <li>A Debian based personal operating system currently being developed by me with a Green Beetle as it's logo and various system components named after Egyptian and Indian inspirations.</li> 
+  <li>The name is inspired from an old Chat GPT meme.</li>
 </ul>
 
 MRIDA 🌱
@@ -38,6 +41,6 @@ MRIDA 🌱
     </ul>
   </div>
   <div style="flex: 1; text-align: right;">
-    <img src="/images/mridaimg.png" alt="MRIDA Project Image" style="max-width: 100%; border-radius: 10px;">
+    <img src="/images/mridaimg.png" alt="MRIDA Project Image" style="max-width: 50%; border-radius: 10px;">
   </div>
 </div>
