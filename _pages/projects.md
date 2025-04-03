@@ -42,7 +42,7 @@ These are the projects which I have worked on till now. <br>
   @media (min-width: 768px) {
     .mrida-container {
       flex-direction: row;
-      align-items: center; /* Keep alignment balanced */
+      align-items: flex-start; /* Keep alignment balanced */
       gap: 20px; /* Add spacing between image & text */
     }
     .mrida-text {
@@ -52,11 +52,11 @@ These are the projects which I have worked on till now. <br>
     .mrida-image {
       flex: 1;
       order: 2;
-      text-align: right;
+      text-align: centre;
     }
     .mrida-image img {
-      margin-top: 0;
-      margin-bottom: 0; /* Remove spacing in desktop view */
+      margin-top: 0px;
+      margin-bottom: 0px; /* Remove spacing in desktop view */
     }
   }
 </style>
