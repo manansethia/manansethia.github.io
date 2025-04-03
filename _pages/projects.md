@@ -55,7 +55,7 @@ These are the projects which I have worked on till now. <br>
 <div class="airavat-container">
   <!-- Image (Above in Mobile, Side in Desktop) -->
   <div class="airavat-image">
-    <img src="/images/airavat.png" alt=“Airavat Image">
+    <img src="/images/airavat.png" alt="Airavat Image">
   </div>
 
   <!-- Text Content -->
