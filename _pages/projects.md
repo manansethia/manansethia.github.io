@@ -77,6 +77,9 @@ These are the projects which I have worked on till now. <br>
 ### Multipurpose Real-time Integrated Digital Analyzer  
 
 <style>
+  
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
   .mrida-container {
     display: flex;
     flex-direction: column;
@@ -94,6 +97,15 @@ These are the projects which I have worked on till now. <br>
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px; /* Add spacing in mobile view */
+  }
+
+  .ai-label {
+    font-size: 12px;
+    font-family: 'Orbitron', sans-serif;
+    color: gray;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 5px;
   }
 
   @media (min-width: 768px) {
@@ -122,6 +134,7 @@ These are the projects which I have worked on till now. <br>
   <!-- Image (Appears Above on Mobile, Side on Desktop) -->
   <div class="mrida-image">
     <img src="/images/mridaimg.png" alt="MRIDA Project Image" style = "border-radius: 10px;">
+    <div class="ai-label">Image generated with AI</div>
   </div>
 
   <!-- Text Content -->
