@@ -19,7 +19,7 @@ redirect_from:
     margin-top: 10px;
     margin-bottom: 10px;    
   }
-
+  
   .airavat-container {
     display: flex;
     flex-direction: column;
@@ -224,4 +224,4 @@ redirect_from:
 </div>
 
 ### MRIDA PDF
-<iframe src="/_pages/pdf-view.html" width="100%" height="500px"></iframe>
+<iframe src="/_pages/pdf-view.html" width="100%" height="500px" style="border: 3px solid black;"></iframe>
