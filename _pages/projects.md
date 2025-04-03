@@ -55,7 +55,6 @@ These are the projects which I have worked on till now. <br>
       text-align: centre;
     }
     .mrida-image img {
-      margin-top: 0px;
       margin-bottom: 0px; /* Remove spacing in desktop view */
     }
   }
