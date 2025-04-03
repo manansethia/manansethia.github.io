@@ -35,7 +35,8 @@ These are the projects which I have worked on till now. <br>
     max-width: auto;
     height: auto;
     border-radius: 10px;
-    margin-bottom: 20px; /* Add spacing in mobile view */
+    margin-top: 10px;
+    margin-bottom: 10px; /* Add spacing in mobile view */
   }
 
   @media (min-width: 768px) {
@@ -51,9 +52,10 @@ These are the projects which I have worked on till now. <br>
     .mrida-image {
       flex: 1;
       order: 2;
-      text-align: center;
+      text-align: right;
     }
     .mrida-image img {
+      margin-top: 0;
       margin-bottom: 0; /* Remove spacing in desktop view */
     }
   }
