@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background-color: white;
-            overflow-x: hidden;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,7 +22,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 2px solid black; /* ✅ Added 2px black border around the frame */
+            border: 3px solid black;
             padding: 10px;
             background-color: white;
         }
@@ -30,9 +30,9 @@
             width: 100vw !important;
             height: auto;
             display: block;
-            background-color: #f5f5f5 !important; /* ✅ Off-white background between pages */
+            background-color: #ffffff;
             border: none !important;
-            margin-bottom: 5px; /* ✅ 5px space between pages */
+            margin-bottom: 0px; 
         }
     </style>
 </head>
@@ -43,7 +43,7 @@
 <script>
     let pdfURL = "https://manansethia.github.io/files/MRIDA.pdf";
     let pdfDoc = null;
-    let scaleFactor = 5;  
+    let scaleFactor = 10;  
 
     function renderPDF() {
         pdfjsLib.getDocument(pdfURL).promise.then(pdf => {
@@ -70,9 +70,6 @@
                     page.render(renderContext);
                 });
             }
-
-            // ✅ Remove extra margin on last page
-            container.lastElementChild.style.marginBottom = "0px";
         }).catch(error => {
             console.error("Error loading PDF:", error);
         });
