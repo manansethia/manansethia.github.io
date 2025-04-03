@@ -38,9 +38,11 @@ These are the projects which I have worked on till now. <br>
     }
     .mrida-text {
       flex: 1;
+      order: 1; /* Text on Left */
     }
     .mrida-image {
       flex: 1;
+      order: 2; /* Image on Right */
       text-align: center;
     }
     .mrida-image img {
@@ -55,7 +57,7 @@ These are the projects which I have worked on till now. <br>
 
   <!-- Image (Appears Above on Mobile, Side on Desktop) -->
   <div class="mrida-image">
-    <img src="/images/mridaimg.png" alt="MRIDA Project Image">
+    <img src="/images/mridaimg.png" alt="MRIDA Project Image";border-radius: 10px;>
   </div>
 
   <!-- Text Content -->
