@@ -9,7 +9,7 @@ redirect_from:
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
 <style>
   h1 {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   h2 {
     margin-top: 20px;
