@@ -10,7 +10,7 @@ These are the projects which I have worked on till now. <br>
 ## AIRAVAT 🐘  
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
 <ul>
-  <li>AIRAVAT is an upcoming project which will compute hyper-local weather using existing ground, weather balloon, and satellite data.</li>
+  <li>AIRAVAT is an upcoming project which will compute hyper-local weather using existing ground, weather balloon, and satellite data with the help of AI-based climate model tuning.</li>
   <li>Named after the vehicle of deity Indra, Airavat is a divine elephant known as the "king of elephants", "elephant of the clouds", and "brother of the sun".</li>
 </ul>
 
@@ -21,6 +21,7 @@ These are the projects which I have worked on till now. <br>
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    position: relative; /* Allows absolute positioning inside */
   }
 
   .conos-image img {
@@ -41,7 +42,7 @@ These are the projects which I have worked on till now. <br>
       align-items: flex-start; /* Aligns image with first list item */
       gap: 20px; /* Space between image & text */
     }
-    
+
     .conos-text {
       flex: 1;
       order: 1;
@@ -54,6 +55,14 @@ These are the projects which I have worked on till now. <br>
     .conos-image img {
       margin-bottom: 0; /* Remove space in desktop */
     }
+  }
+
+  .conos-image {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
   }
 </style>
 
