@@ -5,11 +5,13 @@ author_profile: true
 redirect_from: 
   - /projetcs.html
 ---
-These are the projects which I have worked on till now. <br>
-
 ## AIRAVAT 🐘  
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
 <style>
+  h2 {
+    margin-top: 10px; /* ✅ Added 10px space before each h2 */
+  }
+
   .airavat-container {
     display: flex;
     flex-direction: column;
@@ -192,7 +194,7 @@ These are the projects which I have worked on till now. <br>
 
   <!-- Image (Appears Above on Mobile, Side on Desktop) -->
   <div class="mrida-image">
-    <img src="/images/mridaimg.png" alt="MRIDA Project Image" style = "border-radius: 10px;">
+    <img src="/images/mridaimg.png" alt="MRIDA Project Image" style="border-radius: 10px;">
     <div class="ai-label">Image generated with AI</div>
   </div>
 
@@ -213,4 +215,5 @@ These are the projects which I have worked on till now. <br>
   </div>
 </div>
 
-<iframe src="/_pages/pdf-view.html" width="100%" height="500px" style="border: none;"></iframe>
+### MRIDA PDF
+<iframe src="pdfview.html" width="100%" height="500px" style="border: 2px solid black;"></iframe>
