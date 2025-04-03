@@ -31,6 +31,10 @@ These are the projects which I have worked on till now. <br>
     text-align: left;
   }
 
+  .mrida-text ul {
+    margin-top: 0;
+  }
+
   .mrida-image img {
     max-width: auto;
     height: auto;
