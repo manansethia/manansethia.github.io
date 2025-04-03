@@ -110,7 +110,7 @@ These are the projects which I have worked on till now. <br>
 
   .responsive-pdf {
     width: 100%;
-    height: 100%;
+    height: auto;
     /*min-height: 1000px;*/ /* Ensures it's visible */
   }
 
