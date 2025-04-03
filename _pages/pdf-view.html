@@ -3,98 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer</title>
+    <title>High-Quality PDF Viewer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
         .pdf-container {
-            text-align: center;
+            width: 80%;
+            max-width: 900px;
+            height: 90vh;
+            overflow-y: scroll;
+            border: 2px solid #000;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            background: white;
+            padding: 10px;
         }
         canvas {
-            max-width: 100%;
-            border: 1px solid #ddd;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .nav-buttons {
-            margin-top: 10px;
-        }
-        button {
-            padding: 8px 12px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 5px;
+            width: 100%;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-<div class="pdf-container">
-    <canvas id="pdf-canvas"></canvas>
-    <div class="nav-buttons">
-        <button onclick="prevPage()">⬅️ Previous</button>
-        <span>Page: <span id="page-num">1</span> / <span id="page-count">?</span></span>
-        <button onclick="nextPage()">Next ➡️</button>
-    </div>
-</div>
+<div class="pdf-container" id="pdf-container"></div>
 
 <script>
     let pdfURL = "https://manansethia.github.io/files/MRIDA.pdf";
-    let pdfDoc = null, pageNum = 1, pageIsRendering = false, pageNumPending = null;
+    let pdfDoc = null;
+    let scaleFactor = 3;  // ⬆️ Increase this for better text clarity
 
-    function renderPage(num) {
-        pageIsRendering = true;
-        pdfDoc.getPage(num).then(page => {
-            let scale = 1.5;
-            let viewport = page.getViewport({ scale });
-            let canvas = document.getElementById("pdf-canvas");
-            let context = canvas.getContext("2d");
+    function renderPDF() {
+        pdfjsLib.getDocument(pdfURL).promise.then(pdf => {
+            pdfDoc = pdf;
+            let container = document.getElementById("pdf-container");
 
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                pdf.getPage(pageNum).then(page => {
+                    let viewport = page.getViewport({ scale: scaleFactor });  // ⬆️ Higher scale for sharp text
+                    let canvas = document.createElement("canvas");
+                    let context = canvas.getContext("2d");
 
-            let renderContext = {
-                canvasContext: context,
-                viewport: viewport
-            };
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    container.appendChild(canvas);
 
-            page.render(renderContext).promise.then(() => {
-                pageIsRendering = false;
-                if (pageNumPending !== null) {
-                    renderPage(pageNumPending);
-                    pageNumPending = null;
-                }
-            });
+                    let renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
 
-            document.getElementById("page-num").textContent = num;
+                    page.render(renderContext);
+                });
+            }
+        }).catch(error => {
+            console.error("Error loading PDF:", error);
         });
     }
 
-    function queueRenderPage(num) {
-        if (pageIsRendering) {
-            pageNumPending = num;
-        } else {
-            renderPage(num);
-        }
-    }
-
-    function prevPage() {
-        if (pageNum <= 1) return;
-        pageNum--;
-        queueRenderPage(pageNum);
-    }
-
-    function nextPage() {
-        if (pageNum >= pdfDoc.numPages) return;
-        pageNum++;
-        queueRenderPage(pageNum);
-    }
-
-    pdfjsLib.getDocument(pdfURL).promise.then(pdf => {
-        pdfDoc = pdf;
-        document.getElementById("page-count").textContent = pdf.numPages;
-        renderPage(pageNum);
-    }).catch(error => {
-        console.error("Error loading PDF:", error);
-    });
+    renderPDF();
 </script>
 
 </body>
