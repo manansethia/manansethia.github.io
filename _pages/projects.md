@@ -14,7 +14,7 @@ These are the projects which I have worked on till now. <br>
   <li>Named after the vehicle of deity Indra, Airavat is a divine elephant known as the "king of elephants", "elephant of the clouds", and "brother of the sun".</li>
 </ul>
 
-## Computer OS 🪲  
+## Conputer OS 🪲  
 <ul>
   <li>A Debian-based personal operating system currently being developed by me with a Green Beetle as its logo and various system components named after Egyptian and Indian inspirations.</li> 
   <li>The name is inspired by an old ChatGPT meme.</li>
