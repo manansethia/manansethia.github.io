@@ -161,7 +161,8 @@ These are the projects which I have worked on till now. <br>
 </div>
 
 <div class = "pdf-view">
-  <object data="/files/MRIDA.pdf" type="application/pdf" class="responsive-pdf">
-    <p>Your device does not support embedded PDFs. <a href="/files/MRIDA.pdf">Click here to download</a>.</p>
-</object>
+  <iframe 
+    src="https://docs.google.com/gview?url=https://manansethia.github.io/files/MRIDA.pdf&embedded=true" 
+    class="responsive-pdf">
+  </iframe>
 </div>
