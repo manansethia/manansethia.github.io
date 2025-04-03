@@ -32,7 +32,7 @@ These are the projects which I have worked on till now. <br>
   }
 
   .mrida-text ul {
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   .mrida-image img {
@@ -79,9 +79,9 @@ These are the projects which I have worked on till now. <br>
       <li>While the hardware was not developed, the MRIDA app was successfully built using MIT App Inventor and Python to analyze soil conditions and offer useful AI-driven insights.</li> 
       <li>This project was also presented in:
         <ul>
-          <li><strong>Data and AI Talks 2023</strong> – Champion in Group C (Senior) category. Awarded a <strong>9th Gen iPad, Trophy, AI-powered Rubik's Cube, and Certificates</strong>.</li>
-          <li><strong>INSPIRE Manak Awards 2023</strong> – Selected in the first stage and awarded <strong>₹10,000</strong>.</li>
-          <li><strong>Junior Smart India Hackathon 2023</strong> – Shortlisted for the <strong>interview round</strong> by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
+          <li><strong>Data and AI Talks 2023 –</strong> <strong>Champion in Group C (Senior) category.</strong> Awarded a 9th Gen iPad, Trophy, AI-powered Rubik's Cube, and Certificates.</li>
+          <li><strong>INSPIRE Manak Awards 2023 –</strong> Selected in the first stage and awarded <strong>₹10,000</strong>.</li>
+          <li><strong>Junior Smart India Hackathon 2023 –</strong> Shortlisted for the <strong>Interview Round</strong> by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
         </ul>
       </li>
     </ul>
