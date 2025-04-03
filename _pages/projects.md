@@ -9,15 +9,15 @@ redirect_from:
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
 <style>
   h1 {
-    margin-bottom: 18px;
+    margin-bottom: 15px;
   }
   h2 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
   h3 {
-    margin-top: 20px;
-    margin-bottom: 20px;    
+    margin-top: 10px;
+    margin-bottom: 15px;    
   }
 
   .airavat-container {
