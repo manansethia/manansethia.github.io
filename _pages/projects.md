@@ -216,4 +216,4 @@ redirect_from:
 </div>
 
 ### MRIDA PDF
-<iframe src="pdfview.html" width="100%" height="500px" style="border: 2px solid black;"></iframe>
+<iframe src="pdf-view.html" width="100%" height="500px" style="border: 2px solid black;"></iframe>
