@@ -27,28 +27,34 @@ These are the projects which I have worked on till now. <br>
   .mrida-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
+  }
+
+  .mrida-image img {
+    max-width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Add spacing in mobile view */
   }
 
   @media (min-width: 768px) {
     .mrida-container {
       flex-direction: row;
-      text-align: left;
+      align-items: center; /* Keep alignment balanced */
+      gap: 20px; /* Add spacing between image & text */
     }
     .mrida-text {
       flex: 1;
-      order: 1; /* Text on Left */
+      order: 1;
     }
     .mrida-image {
       flex: 1;
-      order: 2; /* Image on Right */
+      order: 2;
       text-align: center;
     }
     .mrida-image img {
-      max-width: auto;
-      height: auto;
-      border-radius: 10px;
+      margin-bottom: 0; /* Remove spacing in desktop view */
     }
   }
 </style>
