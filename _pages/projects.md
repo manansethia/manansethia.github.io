@@ -12,7 +12,7 @@ AIRAVAT 🐘
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends
 <ul>
   <li>AIRAVAT is an upcoming project which will compute hyper local weather using existing ground, weather balloon and sattelite data.</li>
-  <li> Named after the vehicle of deity Indra, Airavat is a divine elephent known as the "king of elephants", "elephant of the clouds" and "brother of the sun".
+  <li> Named after the vehicle of deity Indra, Airavat is a divine elephent known as the "king of elephants", "elephant of the clouds" and "brother of the sun".</li>
 
 Conputer OS 🪲 
 ---
@@ -34,7 +34,7 @@ MRIDA 🌱
           <li><strong>Data and AI Talks 2023</strong> - Champion in Group C (Senior) category and was awarded with 9th Gen iPad, Trophy, AI powered Rubik's Cube and Certificates.
           <li><strong>INSPIRE Manak Awards 2023</strong> - I was selected in the first stage and awarded with ₹10000</li> 
           <li><strong>Junior Smart India Hackathon 2023</strong> - Shortlisted for the interview round by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
-  <div style="flex: 1; text-align: right;">
+  <div style="flex: 1; text-align: centre;">
     <img src="/images/mridaimg.png" alt="MRIDA Project Image" style="max-width: 50%; border-radius: 10px;">
   </div>
 </div>
