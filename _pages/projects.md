@@ -77,7 +77,7 @@ These are the projects which I have worked on till now. <br>
 ### Multipurpose Real-time Integrated Digital Analyzer  
 
 <style>
-  
+
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
   .mrida-container {
@@ -106,6 +106,11 @@ These are the projects which I have worked on till now. <br>
     letter-spacing: 1px;
     text-align: center;
     margin-top: 5px;
+  }
+
+  .responsive-pdf {
+    width: auto;
+    height: auto;
   }
 
   @media (min-width: 768px) {
@@ -153,3 +158,4 @@ These are the projects which I have worked on till now. <br>
     </ul>
   </div>
 </div>
+<embed src="/files/MRIDA.pdf" class="responsive-pdf" type="application/pdf">
