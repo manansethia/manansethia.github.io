@@ -214,23 +214,5 @@ These are the projects which I have worked on till now. <br>
 </div>
 
 <div class="pdf-view">
-  <iframe id="pdf-frame" class="responsive-pdf"></iframe>
+  <iframe class="responsive-pdf" src="https://docs.google.com/gview?url=https://manansethia.github.io/files/MRIDA.pdf&embedded=true"></iframe>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let pdfFrame = document.getElementById("pdf-frame");
-    let pdfURL = "https://docs.google.com/gview?url=https://manansethia.github.io/files/MRIDA.pdf&embedded=true";
-
-    function loadPDF() {
-      let rect = pdfFrame.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        pdfFrame.src = pdfURL; // Load PDF when it enters the viewport
-      }
-    }
-
-    window.addEventListener("scroll", loadPDF);
-    window.addEventListener("resize", loadPDF);
-    loadPDF(); // Load instantly if already in view
-  });
-</script>
