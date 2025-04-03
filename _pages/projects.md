@@ -160,9 +160,58 @@ These are the projects which I have worked on till now. <br>
   </div>
 </div>
 
-<div class = "pdf-view">
-  <iframe 
-    src="https://manansethia.github.io/files/MRIDA.pdf" 
-    class="responsive-pdf">
-  </iframe>
+<div class="pdf-view">
+  <iframe id="pdf-frame" src="" class="responsive-pdf"></iframe>
+  <button id="pdf-button" onclick="reloadPDF()" style="display: none;">Load PDF</button>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let pdfFrame = document.getElementById("pdf-frame");
+    let pdfButton = document.getElementById("pdf-button");
+    let pdfURL = "https://docs.google.com/gview?url=https://manansethia.github.io/files/MRIDA.pdf&embedded=true";
+
+    function loadPDF() {
+      if (pdfFrame.getBoundingClientRect().top < window.innerHeight && !pdfFrame.src) {
+        pdfFrame.src = pdfURL;
+      }
+    }
+
+    function fallbackPDF() {
+      pdfFrame.style.display = "none";
+      pdfButton.style.display = "block";
+    }
+
+    // 🔥 Fix: Ensure reloadPDF is globally accessible
+    window.reloadPDF = function () {
+      pdfFrame.src = pdfURL;
+      pdfFrame.style.display = "block";
+      pdfButton.style.display = "none";
+    };
+
+    pdfFrame.onload = function() {
+      pdfFrame.style.display = "block";
+      pdfButton.style.display = "none";
+    };
+
+    // Timeout fallback in case of failure
+    setTimeout(() => {
+      if (!pdfFrame.src || pdfFrame.contentDocument?.body?.childElementCount === 0) {
+        fallbackPDF();
+      }
+    }, 5000);
+
+    window.addEventListener("scroll", loadPDF);
+    window.addEventListener("resize", loadPDF);
+    loadPDF(); // Load instantly if visible
+  });
+</script>
+
+<style>
+  .responsive-pdf {
+    width: 100%;
+    height: 750px;
+    border: none;
+  }
+</style>
+
