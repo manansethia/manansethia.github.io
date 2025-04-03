@@ -108,6 +108,12 @@ These are the projects which I have worked on till now. <br>
     margin-top: 5px;
   }
 
+  .responsive-pdf {
+    width: 100%;
+    height: auto;
+    min-height: 600px; /* Ensures it's visible */
+  }
+
   @media (min-width: 768px) {
     .mrida-container {
       flex-direction: row;
@@ -154,55 +160,9 @@ These are the projects which I have worked on till now. <br>
   </div>
 </div>
 
-<div class="pdf-view">
-  <iframe id="pdf-frame" src="" class="responsive-pdf"></iframe>
-  <button id="pdf-button" onclick="reloadPDF()" style="display: none;">Load PDF</button>
+<div class = "pdf-view">
+  <iframe 
+    src="https://manansethia.github.io/files/MRIDA.pdf" 
+    class="responsive-pdf">
+  </iframe>
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    let pdfFrame = document.getElementById("pdf-frame");
-    let pdfButton = document.getElementById("pdf-button");
-    let pdfURL = "https://manansethia.github.io/files/MRIDA.pdf";
-
-    function loadPDF() {
-      if (pdfFrame.getBoundingClientRect().top < window.innerHeight && !pdfFrame.src) {
-        pdfFrame.src = pdfURL;
-      }
-    }
-
-    function fallbackPDF() {
-      pdfFrame.style.display = "none";
-      pdfButton.style.display = "block";
-    }
-
-    function reloadPDF() {
-      pdfFrame.src = pdfURL;
-      pdfFrame.style.display = "block";
-      pdfButton.style.display = "none";
-    }
-
-    pdfFrame.onload = function() {
-      pdfFrame.style.display = "block";
-      pdfButton.style.display = "none";
-    };
-
-    setTimeout(() => {
-      if (!pdfFrame.src || pdfFrame.contentDocument?.body?.childElementCount === 0) {
-        fallbackPDF();
-      }
-    }, 5000);
-
-    window.addEventListener("scroll", loadPDF);
-    window.addEventListener("resize", loadPDF);
-    loadPDF(); 
-  });
-</script>
-
-<style>
-  .responsive-pdf {
-    width: 100%;
-    height: 750px;
-    border: none;
-  }
-</style>
