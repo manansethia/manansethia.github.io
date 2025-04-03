@@ -109,8 +109,9 @@ These are the projects which I have worked on till now. <br>
   }
 
   .responsive-pdf {
-    width: auto;
+    width: 100%;
     height: auto;
+    min-height: 500px; /* Ensures it's visible */
   }
 
   @media (min-width: 768px) {
@@ -158,4 +159,7 @@ These are the projects which I have worked on till now. <br>
     </ul>
   </div>
 </div>
-<embed src="/files/MRIDA.pdf" class="responsive-pdf" type="application/pdf">
+
+<div class = "pdf-view">
+  <embed src="/files/MRIDA.pdf" class = "responsive-pdf" type="application/pdf">
+</div>
