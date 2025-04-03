@@ -27,7 +27,7 @@ These are the projects which I have worked on till now. <br>
   .mrida-container {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     text-align: left;
   }
 
@@ -57,7 +57,7 @@ These are the projects which I have worked on till now. <br>
 
   <!-- Image (Appears Above on Mobile, Side on Desktop) -->
   <div class="mrida-image">
-    <img src="/images/mridaimg.png" alt="MRIDA Project Image";border-radius: 10px;>
+    <img src="/images/mridaimg.png" alt="MRIDA Project Image" style = "border-radius: 10px;">
   </div>
 
   <!-- Text Content -->
