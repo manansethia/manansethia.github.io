@@ -27,7 +27,7 @@ These are the projects which I have worked on till now. <br>
   .mrida-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
   }
 
