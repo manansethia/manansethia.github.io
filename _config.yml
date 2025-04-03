@@ -155,7 +155,6 @@ include:
   - .htaccess
   - _pages
   - files
-  - pdfview.html
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
