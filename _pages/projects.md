@@ -11,6 +11,7 @@ AIRAVAT 🐘
 ---
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends
 
+
 Conputer OS 🪲 
 ---
 <ul>
@@ -30,5 +31,3 @@ MRIDA 🌱
     <li><strong>Data and AI Talks 2023</strong> - Champion in Group C (Senior) category and was awarded with 9th Gen iPad, Trophy, AI powered Rubik's Cube and Certificates.
     <li><strong>INSPIRE Manak Awards 2023</strong> - I was selected in the first stage and awarded with ₹10000</li> 
     <li><strong>Junior Smart India Hackathon 2023</strong> - Shortlisted for the interview round by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
-  </ul>
-</ul>
