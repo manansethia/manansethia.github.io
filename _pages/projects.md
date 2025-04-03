@@ -213,7 +213,4 @@ These are the projects which I have worked on till now. <br>
   </div>
 </div>
 
-<div class="pdf-view">
-  <iframe id="pdf-frame" class="responsive-pdf" src="https://docs.google.com/gview?url=https://manansethia.github.io/files/MRIDA.pdf&embedded=true">
-  </iframe>
-</div>
+<iframe src="pdf-viewer.html" width="100%" height="750px"></iframe>

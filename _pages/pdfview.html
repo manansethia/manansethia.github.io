@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <style>
+        .pdf-container {
+            text-align: center;
+        }
+        canvas {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="pdf-container">
+    <canvas id="pdf-canvas"></canvas>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let pdfURL = "https://manansethia.github.io/files/MRIDA.pdf";
+
+        pdfjsLib.getDocument(pdfURL).promise.then(pdf => {
+            pdf.getPage(1).then(page => {
+                let scale = 1.5;
+                let viewport = page.getViewport({ scale });
+                let canvas = document.getElementById("pdf-canvas");
+                let context = canvas.getContext("2d");
+
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                let renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                page.render(renderContext);
+            });
+        }).catch(error => {
+            console.error("Error loading PDF:", error);
+        });
+    });
+</script>
+
+</body>
+</html>
