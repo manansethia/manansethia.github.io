@@ -9,10 +9,63 @@ These are the projects which I have worked on till now. <br>
 
 ## AIRAVAT 🐘  
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
-<ul>
-  <li>AIRAVAT is an upcoming project which will compute hyper-local weather using existing ground, weather balloon, and satellite data with the help of AI-based climate model tuning.</li>
-  <li>Named after the vehicle of deity Indra, Airavat is a divine elephant known as the "king of elephants", "elephant of the clouds", and "brother of the sun".</li>
-</ul>
+<style>
+  .airavat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .airavat-image img {
+    max-width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Add spacing in mobile view */
+  }
+
+  .airavat-text ul {
+    margin-top: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .airavat-container {
+      flex-direction: row;
+      align-items: flex-start; /* Aligns image with first list item */
+      gap: 20px; /* Space between image & text */
+    }
+
+    .airavat-text {
+      flex: 1;
+      order: 1;
+    }
+    .airavat-image {
+      flex: 1;
+      order: 2;
+      text-align: center;
+    }
+    .airavat-image img {
+      margin-bottom: 0; /* Remove space in desktop */
+    }
+  }
+</style>
+
+<!-- Airavat Section -->
+<div class="airavat-container">
+  <!-- Image (Above in Mobile, Side in Desktop) -->
+  <div class="airavat-image">
+    <img src="/images/airavat.png" alt=“Airavat Image">
+  </div>
+
+  <!-- Text Content -->
+  <div class="airavat-text">
+    <ul>
+  	  <li>AIRAVAT is an upcoming project which will compute hyper-local weather using existing ground, weather balloon, and satellite data with the help of AI-based climate model tuning.</li>
+  	  <li>Named after the vehicle of deity Indra, Airavat is a divine elephant known as the "king of elephants", "elephant of the clouds", and "brother of the sun".</li>
+    </ul>
+  </div>
+</div>
 
 ## Conputer OS 🪲  
 <style>
@@ -110,8 +163,8 @@ These are the projects which I have worked on till now. <br>
 
   .responsive-pdf {
     width: 100%;
-    height: auto;
-    min-height: 600px; /* Ensures it's visible */
+    height: 750px;
+    border: none;
   }
 
   @media (min-width: 768px) {
@@ -161,57 +214,23 @@ These are the projects which I have worked on till now. <br>
 </div>
 
 <div class="pdf-view">
-  <iframe id="pdf-frame" src="" class="responsive-pdf"></iframe>
-  <button id="pdf-button" onclick="reloadPDF()" style="display: none;">Load PDF</button>
+  <iframe id="pdf-frame" class="responsive-pdf"></iframe>
 </div>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     let pdfFrame = document.getElementById("pdf-frame");
-    let pdfButton = document.getElementById("pdf-button");
     let pdfURL = "https://docs.google.com/gview?url=https://manansethia.github.io/files/MRIDA.pdf&embedded=true";
 
     function loadPDF() {
-      if (pdfFrame.getBoundingClientRect().top < window.innerHeight && !pdfFrame.src) {
-        pdfFrame.src = pdfURL;
+      let rect = pdfFrame.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        pdfFrame.src = pdfURL; // Load PDF when it enters the viewport
       }
     }
-
-    function fallbackPDF() {
-      pdfFrame.style.display = "none";
-      pdfButton.style.display = "block";
-    }
-
-    // 🔥 Fix: Ensure reloadPDF is globally accessible
-    window.reloadPDF = function () {
-      pdfFrame.src = pdfURL;
-      pdfFrame.style.display = "block";
-      pdfButton.style.display = "none";
-    };
-
-    pdfFrame.onload = function() {
-      pdfFrame.style.display = "block";
-      pdfButton.style.display = "none";
-    };
-
-    // Timeout fallback in case of failure
-    setTimeout(() => {
-      if (!pdfFrame.src || pdfFrame.contentDocument?.body?.childElementCount === 0) {
-        fallbackPDF();
-      }
-    }, 5000);
 
     window.addEventListener("scroll", loadPDF);
     window.addEventListener("resize", loadPDF);
-    loadPDF(); // Load instantly if visible
+    loadPDF(); // Load instantly if already in view
   });
 </script>
-
-<style>
-  .responsive-pdf {
-    width: 100%;
-    height: 750px;
-    border: none;
-  }
-</style>
-
