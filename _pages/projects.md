@@ -161,5 +161,7 @@ These are the projects which I have worked on till now. <br>
 </div>
 
 <div class = "pdf-view">
-  <embed src="/files/MRIDA.pdf" class = "responsive-pdf" type="application/pdf">
+  <object data="/files/MRIDA.pdf" type="application/pdf" class="responsive-pdf">
+    <p>Your device does not support embedded PDFs. <a href="/files/MRIDA.pdf">Click here to download</a>.</p>
+</object>
 </div>
