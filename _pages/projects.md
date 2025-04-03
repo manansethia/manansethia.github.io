@@ -155,7 +155,7 @@ These are the projects which I have worked on till now. <br>
 </div>
 
 <div class="pdf-view">
-  <iframe id="pdf-frame" src="" class="responsive-pdf" onerror="fallbackPDF()"></iframe>
+  <iframe id="pdf-frame" src="" class="responsive-pdf"></iframe>
   <button id="pdf-button" onclick="reloadPDF()" style="display: none;">Load PDF</button>
 </div>
 
@@ -163,7 +163,7 @@ These are the projects which I have worked on till now. <br>
   document.addEventListener("DOMContentLoaded", function () {
     let pdfFrame = document.getElementById("pdf-frame");
     let pdfButton = document.getElementById("pdf-button");
-    let pdfURL = "https://docs.google.com/gview?url=https://manansethia.github.io/files/MRIDA.pdf&embedded=true";
+    let pdfURL = "https://manansethia.github.io/files/MRIDA.pdf";
 
     function loadPDF() {
       if (pdfFrame.getBoundingClientRect().top < window.innerHeight && !pdfFrame.src) {
@@ -182,9 +182,20 @@ These are the projects which I have worked on till now. <br>
       pdfButton.style.display = "none";
     }
 
+    pdfFrame.onload = function() {
+      pdfFrame.style.display = "block";
+      pdfButton.style.display = "none";
+    };
+
+    setTimeout(() => {
+      if (!pdfFrame.src || pdfFrame.contentDocument?.body?.childElementCount === 0) {
+        fallbackPDF();
+      }
+    }, 5000);
+
     window.addEventListener("scroll", loadPDF);
     window.addEventListener("resize", loadPDF);
-    loadPDF(); // Load instantly if visible
+    loadPDF(); 
   });
 </script>
 
@@ -195,4 +206,3 @@ These are the projects which I have worked on till now. <br>
     border: none;
   }
 </style>
-
