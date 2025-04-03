@@ -22,10 +22,44 @@ These are the projects which I have worked on till now. <br>
 
 ## MRIDA 🌱  
 ### Multipurpose Real-time Integrated Digital Analyzer  
-<div style="display: flex; align-items: center; gap: 20px;">
 
-  <!-- Left Side: Text -->
-  <div style="flex: 1;">
+<style>
+  .mrida-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .mrida-container {
+      flex-direction: row;
+      text-align: left;
+    }
+    .mrida-text {
+      flex: 1;
+    }
+    .mrida-image {
+      flex: 1;
+      text-align: center;
+    }
+    .mrida-image img {
+      max-width: auto;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+</style>
+
+<div class="mrida-container">
+
+  <!-- Image (Appears Above on Mobile, Side on Desktop) -->
+  <div class="mrida-image">
+    <img src="/images/mridaimg.png" alt="MRIDA Project Image">
+  </div>
+
+  <!-- Text Content -->
+  <div class="mrida-text">
     <ul>
       <li>MRIDA is an AI-powered project designed to help farmers easily check soil health and improve crop yields.</li>
       <li>It was created to measure soil pH, moisture, temperature, and nutrients while also providing weather alerts. It also had a built-in emergency service to contact concerned authorities and a speech-to-speech assistant to guide the user and provide insights.</li>
@@ -38,10 +72,5 @@ These are the projects which I have worked on till now. <br>
         </ul>
       </li>
     </ul>
-  </div>
-
-  <!-- Right Side: Image -->
-  <div style="flex: 1; text-align: center;">
-    <img src="/images/mridaimg.png" alt="MRIDA Project Image" style="max-width: 25%; height: auto; border-radius: 10px;">
   </div>
 </div>
