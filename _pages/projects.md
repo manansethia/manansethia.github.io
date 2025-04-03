@@ -8,8 +8,12 @@ redirect_from:
 ## AIRAVAT 🐘  
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
 <style>
+  h1 {
+    margin-bottom: 20px;
+  }
   h2 {
-    margin-top: 10px; /* ✅ Added 10px space before each h2 */
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .airavat-container {
