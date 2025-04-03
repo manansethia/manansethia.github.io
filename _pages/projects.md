@@ -21,7 +21,6 @@ These are the projects which I have worked on till now. <br>
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    position: relative; /* Allows absolute positioning inside */
   }
 
   .conos-image img {
@@ -55,14 +54,6 @@ These are the projects which I have worked on till now. <br>
     .conos-image img {
       margin-bottom: 0; /* Remove space in desktop */
     }
-  }
-
-  .conos-image {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
   }
 </style>
 
