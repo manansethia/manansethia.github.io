@@ -313,9 +313,3 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
-
-@media (min-width: 768px) { // Adjust breakpoint as needed
-  .mrida-image {
-    display: block; // Show the image on tablets and larger screens
-  }
-}
