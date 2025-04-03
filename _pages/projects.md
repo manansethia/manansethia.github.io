@@ -111,7 +111,7 @@ These are the projects which I have worked on till now. <br>
   .responsive-pdf {
     width: 100%;
     height: auto;
-    min-height: 500px; /* Ensures it's visible */
+    min-height: 1000px; /* Ensures it's visible */
   }
 
   @media (min-width: 768px) {
