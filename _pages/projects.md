@@ -15,10 +15,63 @@ These are the projects which I have worked on till now. <br>
 </ul>
 
 ## Conputer OS 🪲  
-<ul>
-  <li>A Debian-based personal operating system currently being developed by me with a Green Beetle as its logo and various system components named after Egyptian and Indian inspirations.</li> 
-  <li>The name is inspired by an old ChatGPT meme.</li>
-</ul>
+<style>
+  .conos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .conos-image img {
+    max-width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Add spacing in mobile view */
+  }
+
+  .conos-text ul {
+    margin-top: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .conos-container {
+      flex-direction: row;
+      align-items: flex-start; /* Aligns image with first list item */
+      gap: 20px; /* Space between image & text */
+    }
+    
+    .conos-text {
+      flex: 1;
+      order: 1;
+    }
+    .conos-image {
+      flex: 1;
+      order: 2;
+      text-align: center;
+    }
+    .conos-image img {
+      margin-bottom: 0; /* Remove space in desktop */
+    }
+  }
+</style>
+
+<!-- Conputer OS Section -->
+<div class="conos-container">
+  <!-- Image (Above in Mobile, Side in Desktop) -->
+  <div class="conos-image">
+    <img src="/images/con.png" alt="Conputer OS Image">
+  </div>
+
+  <!-- Text Content -->
+  <div class="conos-text">
+    <ul>
+      <li>A Debian-based personal operating system currently being developed by me with a Green Beetle as its logo and various system components named after Egyptian and Indian inspirations.</li>
+      <li>The name is inspired from an old ChatGPT meme.</li>
+    </ul>
+  </div>
+</div>
 
 ## MRIDA 🌱  
 ### Multipurpose Real-time Integrated Digital Analyzer  
