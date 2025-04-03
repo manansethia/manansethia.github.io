@@ -213,4 +213,4 @@ These are the projects which I have worked on till now. <br>
   </div>
 </div>
 
-<iframe src="pdfview.html" width="100%" height="750px"></iframe>
+<iframe src="./pdfview.html" width="100%" height="750px"></iframe>
