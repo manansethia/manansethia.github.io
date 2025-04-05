@@ -51,7 +51,7 @@ redirect_from:
   }
 
   .kka-entry {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .edu-divider {
