@@ -47,7 +47,7 @@ redirect_from:
   }
 
   .kps-entry {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .kka-entry {
