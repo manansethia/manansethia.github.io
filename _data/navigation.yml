@@ -5,6 +5,18 @@
 # prevent it from being included in the site.
 
 main:
+  - title: "Education"
+    url: /education/
+
+  - title: "Experience"
+    url: /experience/
+
+  - title: "Certifications"
+    url: /certifications/
+
+  - title: "Skills"
+    url: /skills/
+
   - title: "Achievements"
     url: /achievements/ 
 
@@ -14,8 +26,5 @@ main:
   - title: "In Media"
     url: /media/    
         
-  - title: "Blogs"
-    url: /blogs/
-    
-  - title: "Guide"
-    url: /markdown/
+  #- title: "Blogs"
+  #  url: /blogs/
