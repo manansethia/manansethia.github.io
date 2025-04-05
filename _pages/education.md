@@ -47,11 +47,6 @@ redirect_from:
   .edu-text ul {
     margin: 0;
   }
-
-  .edu-divider {
-    border-top: 1.5px solidrgb(44, 44, 44);
-    margin: 25px 0;
-  }
 </style>
 
 <!-- KPS Entry -->
@@ -69,6 +64,8 @@ redirect_from:
     -  <strong>Vice President :</strong> Coder's Club, 2022 <br>
   </div>
 </div>
+
+<hr style="border: none; height: 1.5px; background-color: #333;" />
 
 <!-- KKA Entry -->
 <div class="edu-entry">
