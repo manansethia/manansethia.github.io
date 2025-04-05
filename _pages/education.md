@@ -11,6 +11,7 @@ redirect_from:
     display: flex;
     align-items: flex-start;
     gap: 15px;
+    margin-top: 15px;
     margin-bottom: 25px;
     flex-wrap: nowrap;
   }
@@ -47,10 +48,9 @@ redirect_from:
     margin: 0;
   }
 
-  @media (min-width: 768px) {
-    .edu-entry {
-      padding-left: 20px; /* Only adds left gap on tablets & up */
-    }
+  .edu-divider {
+    border-top: 1.5px solid #333;
+    margin: 25px 0;
   }
 </style>
 
@@ -61,10 +61,10 @@ redirect_from:
   </div>
   <div class="edu-text">
     <h3>Krishna Public School, Dunda</h3>
-    <em>🎓 Grade 1 - Grade 12 (Math Stream)</em><br>
+    <em>🎓 Grade 1 - Grade 12</em><br>
     📍 Raipur, C.G., India <br>
     🗓️ April 2014 – April 2026 <br>
-    <strong>Roles:</strong>
+    <strong>Roles:</strong><br>
     -  <strong>President :</strong> Coder's Club, 2023 <br>
     -  <strong>Vice President :</strong> Coder's Club, 2022 <br>
   </div>
