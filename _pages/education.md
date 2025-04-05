@@ -12,7 +12,7 @@ redirect_from:
     align-items: flex-start;
     gap: 15px;
     margin-bottom: 25px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .edu-logo {
@@ -24,32 +24,32 @@ redirect_from:
     height: 60px;
     object-fit: cover;
     border-radius: 10px;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
   }
 
-  /* Border for KPS - rgb(205, 120, 37) */
   .kps-logo img {
     border-color: rgb(205, 120, 37);
   }
 
-  /* Border for KKA - rgb(123, 157, 225) */
   .kka-logo img {
     border-color: rgb(123, 157, 225);
   }
 
   .edu-text {
     flex: 1;
-    min-width: 200px;
+    min-width: 0;
   }
 
-  @media (max-width: 600px) {
-    .edu-entry {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+  .edu-text h3,
+  .edu-text em,
+  .edu-text strong,
+  .edu-text ul {
+    margin: 0;
+  }
 
-    .edu-logo {
-      margin-bottom: 10px;
+  @media (min-width: 768px) {
+    .edu-entry {
+      padding-left: 20px; /* Only adds left gap on tablets & up */
     }
   }
 </style>
@@ -60,16 +60,17 @@ redirect_from:
     <img src="/images/kps.jpeg" alt="KPS Logo">
   </div>
   <div class="edu-text">
-    <h3 style="margin: 0;">Krishna Public School, Dunda</h3>
-    <em>Grade 1 - Grade 12 (Math Stream)</em><br>
-    Raipur, C.G., India &nbsp; | &nbsp; 🗓️ April 2014 – April 2026<br>
+    <h3>Krishna Public School, Dunda</h3>
+    <em>🎓 Grade 1 - Grade 12 (Math Stream)</em><br>
+    📍 Raipur, C.G., India <br>
+    🗓️ April 2014 – April 2026 <br>
     <strong>Roles:</strong>
-    <ul>
-      <li>President - Coder's Club (2023)</li>
-      <li>Vice President - Coder's Club (2022)</li>
-    </ul>
+    -  <strong>President :</strong> Coder's Club, 2023 <br>
+    -  <strong>Vice President :</strong> Coder's Club, 2022 <br>
   </div>
 </div>
+
+---
 
 <!-- KKA Entry -->
 <div class="edu-entry">
@@ -77,9 +78,11 @@ redirect_from:
     <img src="/images/kka.jpeg" alt="KKA Logo">
   </div>
   <div class="edu-text">
-    <h3 style="margin: 0;">Krishna Kids Academy, Shailendra Nagar</h3>
-    <em>Playgroup - Kindergarten II</em><br>
-    Raipur, C.G., India &nbsp; | &nbsp; 🗓️ April 2010 – February 2014<br>
+    <h3>Krishna Kids Academy, Shailendra Nagar</h3>
+    <em>🎓 Playgroup - Kindergarten II</em><br>
+    📍 Raipur, C.G., India <br>
+    🗓️ April 2010 – February 2014 <br>
   </div>
 </div>
+
 
