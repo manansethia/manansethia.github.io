@@ -11,8 +11,6 @@ redirect_from:
     display: flex;
     align-items: flex-start;
     gap: 15px;
-    margin-top: 15px;
-    margin-bottom: 25px;
     flex-wrap: nowrap;
   }
 
@@ -47,10 +45,25 @@ redirect_from:
   .edu-text ul {
     margin: 0;
   }
+
+  .kps-entry {
+    margin-bottom: 10px;
+  }
+
+  .kka-entry {
+    margin-top: 10px;
+  }
+
+  .edu-divider {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0;
+  }
 </style>
 
 <!-- KPS Entry -->
-<div class="edu-entry">
+<div class="edu-entry kps-entry">
   <div class="edu-logo kps-logo">
     <img src="/images/kps.jpeg" alt="KPS Logo">
   </div>
@@ -59,16 +72,16 @@ redirect_from:
     <em>🎓 Grade 1 - Grade 12</em><br>
     📍 Raipur, C.G., India <br>
     🗓️ April 2014 – April 2026 <br>
-    <strong>Roles:</strong><br>
+    <strong style="margin-top: 5px; display: inline-block;">Roles:</strong><br>
     -  <strong>President :</strong> Coder's Club, 2023 <br>
     -  <strong>Vice President :</strong> Coder's Club, 2022 <br>
   </div>
 </div>
 
-<hr style="border: none; height: 1.5px; background-color: #333;" />
+<hr class="edu-divider" />
 
 <!-- KKA Entry -->
-<div class="edu-entry">
+<div class="edu-entry kka-entry">
   <div class="edu-logo kka-logo">
     <img src="/images/kka.jpeg" alt="KKA Logo">
   </div>
@@ -79,5 +92,3 @@ redirect_from:
     🗓️ April 2010 – February 2014 <br>
   </div>
 </div>
-
-
