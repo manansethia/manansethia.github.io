@@ -32,16 +32,21 @@ redirect_from:
     width: 180px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-decoration: none;
     text-align: center;
-    width: fit-content;
+    max-width: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    .episode-card {
+      max-width: 100%;
+    }
   }
 
   .episode-card img {
     width: auto;
     height: 160px;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-bottom: 6px;
     object-fit: cover;
     scroll-snap-align: start;
@@ -54,16 +59,17 @@ redirect_from:
   }
 
   .episode-card span {
-    margin-top: 6px;
+    margin-top: 0.4em;
     font-size: 0.9em;
     color: #b84d00;
     font-weight: 600;
     text-align: center;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    max-width: 200px;
+    max-width: 100%;
+    padding: 0 0.4em;
   }
 
   @media (min-width: 1024px) {
@@ -208,11 +214,12 @@ redirect_from:
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>June 2022</em>
   </div>
-
-  <div class="achievement-images-text">
-    <img src="/images/sc.jpg" alt="FIQ '21">
-    <div class="achievement-caption">
-      Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports.
+  <div class="achievement-images">
+    <div class="achievement-images-text">
+      <img src="/images/sc.jpg" alt="FIQ '21">
+      <div class="achievement-caption">
+        Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports.
+      </div>
     </div>
   </div>
 
