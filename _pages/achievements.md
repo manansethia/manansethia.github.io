@@ -25,7 +25,6 @@ redirect_from:
     display: flex;
     gap: 10px;
     align-items: center;
-    justify-content: center;
   }
 
   .episode-card {
