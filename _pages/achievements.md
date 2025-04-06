@@ -145,8 +145,8 @@ redirect_from:
     align-items: center;
     gap: 15px;
     flex-wrap: wrap; /* fallback on narrow screens */
-    margin-top: 13px;
-    margin-bottom: 13px;
+    margin-top: 16px;
+    margin-bottom: 18px;
   }
 
   .achievement-images-text img {
