@@ -23,13 +23,13 @@ redirect_from:
 
   .episode-container {
     display: flex;
-    gap: 10px;
+    gap: 0px;
     padding: 0 10px;
   }
 
   .episode-card {
     flex: 0 0 auto;
-    width: 180px;
+    width: auto;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -216,7 +216,7 @@ redirect_from:
   </div>
   <div class="achievement-images">
     <div class="achievement-images-text">
-      <img src="/images/sc.jpg" alt="FIQ '21">
+      <img src="/images/sc.jpg" alt="FIQ '21" style="width: 100%;">
       <div class="achievement-caption">
         Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports.
       </div>
