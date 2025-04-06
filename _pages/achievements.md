@@ -45,6 +45,8 @@ redirect_from:
   .episode-card img {
     height: 160px;
     width: auto;
+    object-fit: contain; /* Show full image */
+    display: block;
     overflow: hidden;
     border-radius: 10px;
     scroll-snap-align: start;
@@ -199,21 +201,30 @@ redirect_from:
       min-width: 20%;
     }
   }
+  .dashed-line {
+    order-top: 1px dashed lightgray;
+    width: 100%;
+    margin: 10px 0; /* adjust spacing as needed */
+  }
 </style>
 
 <!-- Achievements Section -->
 
 <div class="achievement-section">
   <h2>🏏 Fit India Quiz 2021 – Season 1</h2>
+  🏢 <em>Organized by the Ministry of Youth Affairs and Sports in collaboration with Central Board of Secondary Education and nationally broadcasted by Star India Group.</em><br>
   <p>
-    The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among school children across India. The preliminary rounds witnessed participation from 36,299 students representing 13,502 schools nationwide. Following these rounds, 360 schools advanced to the state-level competitions. Ultimately, 36 schools, each representing a different State or Union Territory, progressed to the National Finals. It was hosted by the CBSE in collaboration with the Ministry of Youth Affairs and Sports, and was nationally broadcast by Star India.
+    The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among school children across India. The preliminary rounds witnessed participation from 36,299 students representing 13,502 schools nationwide. Following these rounds, 360 schools advanced to the state-level competitions. Ultimately, 36 schools, each representing a different State or Union Territory, progressed to the National Finals.
   </p>
+
+  <div class="dashed-line"></div>
 
   <h3>📺 Selected for National Rounds – Mumbai</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>June 2022</em>
   </div>
+  <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu. The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
   <div class="achievement-images">
     <div class="achievement-images-text">
       <img src="/images/sc.jpg" alt="FIQ '21" style="width: auto;">
@@ -229,6 +240,8 @@ redirect_from:
       <span>Fit India Quiz – National Rounds | Season 1, Episode 4</span>
     </a>
   </div>
+
+  <div class="dashed-line"></div>
 
   <h3>🎖️ State Champions – Chhattisgarh</h3>
   <div class="achievement-meta">
