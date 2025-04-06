@@ -70,7 +70,7 @@ redirect_from:
   </div>
   <div class="edu-text">
     <h3>Krishna Public School, Dunda</h3>
-    <em>🎓 Grade 1 - Grade 12</em><br>
+    🎓 <em>Grade 1 - Grade 12</em><br>
     📍 Raipur, C.G., India <br>
     🗓️ April 2014 – April 2026 <br>
     <strong style="margin-top: 5px; display: inline-block;">Roles:</strong><br>
@@ -88,7 +88,7 @@ redirect_from:
   </div>
   <div class="edu-text">
     <h3>Krishna Kids Academy, Shailendra Nagar</h3>
-    <em>🎓 Playgroup - Kindergarten II</em><br>
+    🎓 <em>Playgroup - Kindergarten II</em><br>
     📍 Raipur, C.G., India <br>
     🗓️ April 2010 – February 2014 <br>
   </div>
