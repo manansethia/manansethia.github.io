@@ -25,6 +25,7 @@ redirect_from:
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
   }
 
   .episode-card {
@@ -149,6 +150,7 @@ redirect_from:
     flex-wrap: wrap; /* fallback on narrow screens */
     margin-top: 16px;
     margin-bottom: 18px;
+    justify-content: center;
   }
 
   .achievement-images-text img {
