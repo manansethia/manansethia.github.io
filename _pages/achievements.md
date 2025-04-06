@@ -7,6 +7,67 @@ redirect_from:
 ---
 
 <style>
+  .quiz-episodes-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 16px 0;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quiz-episodes-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .episode-container {
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .episode-card {
+    flex: 0 0 auto;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .episode-card img {
+    width: 180px;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .episode-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .episode-card span {
+    margin-top: 6px;
+    font-size: 0.9em;
+    color: #b84d00;
+    font-weight: 600;
+    text-align: center;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (min-width: 1024px) {
+    .episode-card img {
+      height: 180px;
+    }
+  }
+
   .achievement-section h2 {
     font-size: 1.2em;
     border-bottom: none !important;
@@ -105,10 +166,57 @@ redirect_from:
 <!-- Achievements Section -->
 
 <div class="achievement-section">
+  <h2>🏏 Fit India Quiz 2021 – Season 1</h2>
+  <p>
+    The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among school children across India. The preliminary rounds witnessed participation from 36,299 students representing 13,502 schools nationwide. Following these rounds, 360 schools advanced to the state-level competitions. Ultimately, 36 schools, each representing a different State or Union Territory, progressed to the National Finals. It was hosted by the CBSE in collaboration with the Ministry of Youth Affairs and Sports, and was nationally broadcast by Star India.
+  </p>
+
+  <h3>📺 Selected for National Rounds – Mumbai</h3>
+  <div class="achievement-meta">
+    🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
+    🗓️ <em>June 2022</em>
+  </div>
+  <div class="achievement-images">
+    <img src="/images/sc.jpg" alt="FIQ '21">
+  </div>
+  <div class="episode-container">
+    <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
+      <img src="/images/nr.png" alt="National Rounds">
+      <span>Fit India Quiz – National Rounds | Season 1, Episode 4</span>
+    </a>
+  </div>
+
+  <h3>🎖️ State Champions – Chhattisgarh</h3>
+  <div class="achievement-meta">
+    🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
+    🗓️ <em>February 2022</em>
+  </div>
+  <p>Partnering with Ishant Talreja, we emerged as the Chhattisgarh State Champions after winning both the State Semi-Final and the State Final.</p>
+  <p>Eight school teams were selected for the State Semi-Finals, from which two teams from each semi-final advanced to the State Final.</p>
+
+  <div class="quiz-episodes-scroll">
+    <div class="episode-container">
+      <!-- Episode 1 -->
+      <a href="https://youtube.com/watch?v=olKrkkhQNNM" class="episode-card">
+        <img src="/images/sf.jpg" alt="State Final">
+        <span>Fit India Quiz – State Final | Chhattisgarh</span>
+      </a>
+      <!-- Episode 2 -->
+      <a href="https://youtube.com/watch?v=jmTjf5EvejA" class="episode-card">
+        <img src="/images/ssf.jpg" alt="State Semi-Final">
+        <span>Fit India Quiz – State Semi-Final 2 | Chhattisgarh</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
   <h2>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h2>
   <div class="achievement-meta">
-    <h3>🏢  <em>Issued by World Wide Fund for Nature (WWF-India)</em><br></h3>
-    <h3>🗓️  <em>October 2019</em></h3>
+    🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
+    🗓️ <em>October 2019</em>
   </div>
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
   <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up.</p>
@@ -124,8 +232,8 @@ redirect_from:
 <div class="achievement-section">
   <h2>🐼 Zonal 1st Runner-Up – Junior Wild Wisdom Quiz 2018</h2>
   <div class="achievement-meta">
-    <h3>🏢  <em>Issued by World Wide Fund for Nature (WWF-India)</em><br></h3>
-    <h3>🗓️  <em>September 2018</em></h3>
+    🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
+    🗓️ <em>September 2018</em>
   </div>
   <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness.</p>
   <p>In 5th grade, I participated alongside my teammate, Agriyan Maulik, who was then in 4th grade. The quiz featured teams from Chhattisgarh and Madhya Pradesh. Together, we achieved the position of Zonal 1st Runner-Up.</p>
@@ -135,3 +243,26 @@ redirect_from:
     <img src="/images/wwq183.jpeg" alt="WWQ '18">
   </div>
 </div>
+
+
+```
+For links
+<div class="quiz-episodes-scroll">
+  <div class="episode-container">
+    <!-- Episode 1 -->
+    <a href="/quiz/episode1" class="episode-card">
+      <img src="/images/episode1-thumb.jpg" alt="Episode 1">
+      <span>Episode 1: West Region</span>
+    </a>
+
+    <!-- Episode 2 -->
+    <a href="/quiz/episode2" class="episode-card">
+      <img src="/images/episode2-thumb.jpg" alt="Episode 2">
+      <span>Episode 2: East Region</span>
+    </a>
+
+    <!-- Add more episodes here -->
+  </div>
+</div>
+```
+https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch
