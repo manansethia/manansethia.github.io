@@ -198,10 +198,13 @@ redirect_from:
 
 <div class="achievement-section">
   <h2>🏏 Fit India Quiz 2021 – Season 1</h2>
-  🏢 <em>Organized by the Ministry of Youth Affairs and Sports in collaboration with Central Board of Secondary Education and nationally broadcasted by Star India Group.</em><br>
-  <p>
-    The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among school children across India. The preliminary rounds witnessed participation from 36,299 students representing 13,502 schools nationwide. Following these rounds, 360 schools advanced to the state-level competitions. Ultimately, 36 schools, each representing a different State or Union Territory, progressed to the National Finals.
-  </p>
+  <div class="achievement-meta">
+    🏢 <em>Organized by the Ministry of Youth Affairs and Sports in collaboration with Central Board of Secondary Education and nationally broadcasted by Star India Group.</em><br>
+  </div>
+  <p> The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among school children across India.</p> 
+  <p>The preliminary rounds witnessed participation from 36,299 students representing 13,502 schools nationwide. </p>
+  <p>Following these rounds, 360 schools advanced to the state-level competitions.</p> 
+  <p>Ultimately, 36 schools, each representing a different State or Union Territory, progressed to the National Finals.</p>
 
   <div class="dashed-line"></div>
 
@@ -210,7 +213,8 @@ redirect_from:
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>June 2022</em>
   </div>
-  <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu. The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
+  <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu.</p>
+  <p>The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
   <div class="achievement-images">
     <div class="achievement-images-text">
       <img src="/images/sc.jpg" alt="FIQ '21">
