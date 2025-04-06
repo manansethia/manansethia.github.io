@@ -203,12 +203,6 @@ redirect_from:
     width: 100%;
     margin-top: 20px; 
   }
-
-  .episode-card span {
-    margin: 0;
-    padding: 0;
-    line-height: 1.2;
-  }
 </style>
 
 <!-- Achievements Section -->
