@@ -8,6 +8,7 @@ redirect_from:
 
 <style>
   .achievement-section h2 {
+    font-size: 1.2;
     border-bottom: none !important;
     margin-top: 6px;
     margin-bottom: 0;
@@ -15,7 +16,7 @@ redirect_from:
 
   .achievement-section {
     margin-top: 7px;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
   }
@@ -106,8 +107,8 @@ redirect_from:
 <div class="achievement-section">
   <h2>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h2>
   <div class="achievement-meta">
-    🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
-    🗓️ <em>October 2019</em>
+    <h3>🏢  <em>Issued by World Wide Fund for Nature (WWF-India)</em><br></h3>
+    <h3>🗓️  <em>October 2019</em></h3>
   </div>
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
   <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up.</p>
@@ -123,8 +124,8 @@ redirect_from:
 <div class="achievement-section">
   <h2>🐼 Zonal 1st Runner-Up – Junior Wild Wisdom Quiz 2018</h2>
   <div class="achievement-meta">
-    <h3>🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br></h3>
-    <h3>🗓️ <em>September 2018</em></h3>
+    <h3>🏢  <em>Issued by World Wide Fund for Nature (WWF-India)</em><br></h3>
+    <h3>🗓️  <em>September 2018</em></h3>
   </div>
   <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness.</p>
   <p>In 5th grade, I participated alongside my teammate, Agriyan Maulik, who was then in 4th grade. The quiz featured teams from Chhattisgarh and Madhya Pradesh. Together, we achieved the position of Zonal 1st Runner-Up.</p>
