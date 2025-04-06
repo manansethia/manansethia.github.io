@@ -22,6 +22,11 @@ redirect_from:
     margin-bottom: 5px;
   }
 
+  .achievement-section p {
+    margin: 6px 0; 
+    line-height: 1.5;
+  }
+
   .achievement-meta {
     font-size: 0.9em;
     color: rgb(0, 0, 0);
@@ -59,7 +64,7 @@ redirect_from:
     border: none;
     height: 1.5px;
     background-color: rgb(122, 91, 63);
-    margin: 0 0 7px 0;
+    margin: 0 0 12px 0;
   }
 
   @keyframes fadeInUp {
@@ -96,6 +101,17 @@ redirect_from:
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
   }
+
+  @keyframes fadeInZoom {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }  
 </style>
 
 <!-- Achievements Section -->
