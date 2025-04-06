@@ -65,14 +65,14 @@ redirect_from:
   }
 
   .achievement-section h2 {
-    font-size: 1.225em;
+    font-size: 1.235em;
     border-bottom: none !important;
     margin-top: 6px;
     margin-bottom: 0;
   }
 
   .achievement-section h3 {
-    font-size: 1.175em;
+    font-size: 1.12em;
     margin-top: 20px;
     margin-bottom: 20px;
   }
