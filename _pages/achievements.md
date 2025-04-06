@@ -216,7 +216,7 @@ redirect_from:
   </div>
   <div class="achievement-images">
     <div class="achievement-images-text">
-      <img src="/images/sc.jpg" alt="FIQ '21" style="width: 100%;">
+      <img src="/images/sc.jpg" alt="FIQ '21" style="width: auto;">
       <div class="achievement-caption">
         Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports.
       </div>
@@ -225,7 +225,7 @@ redirect_from:
 
   <div class="episode-container">
     <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
-      <img src="/images/nr.png" alt="National Rounds">
+      <img src="/images/nr.png" alt="National Rounds" style="width: auto;">
       <span>Fit India Quiz – National Rounds | Season 1, Episode 4</span>
     </a>
   </div>
@@ -241,11 +241,11 @@ redirect_from:
   <div class="quiz-episodes-scroll">
     <div class="episode-container">
       <a href="https://youtube.com/watch?v=olKrkkhQNNM" class="episode-card">
-        <img src="/images/sf.jpg" alt="State Final">
+        <img src="/images/sf.jpg" alt="State Final" style="width: auto;">
         <span>Fit India Quiz – State Final | Chhattisgarh</span>
       </a>
       <a href="https://youtube.com/watch?v=jmTjf5EvejA" class="episode-card">
-        <img src="/images/ssf.jpg" alt="State Semi-Final">
+        <img src="/images/ssf.jpg" alt="State Semi-Final" style="width: auto;">
         <span>Fit India Quiz – State Semi-Final 2 | Chhattisgarh</span>
       </a>
     </div>
