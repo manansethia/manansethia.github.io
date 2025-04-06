@@ -32,23 +32,14 @@ redirect_from:
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    text-align: center;
-    max-width: 100%;
-  }
-
-  @media screen and (max-width: 600px) {
-    .episode-card {
-      max-width: 100%;
-    }
+    text-align: center;;
   }
 
   .episode-card img {
     height: 160px;
-    width: auto;
-    object-fit: contain; /* Show full image */
-    display: block;
-    overflow: hidden;
+    flex: 0 0 auto;
     border-radius: 10px;
+    object-fit: cover;
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -72,12 +63,6 @@ redirect_from:
     word-wrap: break-word;
     max-width: 100%;
     padding: 0 0.4em;
-  }
-
-  @media (min-width: 1024px) {
-    .episode-card img {
-      height: 160px;
-    }
   }
 
   .achievement-section h2 {
@@ -201,8 +186,9 @@ redirect_from:
       min-width: 20%;
     }
   }
+
   .dashed-line {
-    order-top: 1px dashed lightgray;
+    border-top: 1px dashed lightgray;
     width: 100%;
     margin: 10px 0; /* adjust spacing as needed */
   }
@@ -227,7 +213,7 @@ redirect_from:
   <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu. The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
   <div class="achievement-images">
     <div class="achievement-images-text">
-      <img src="/images/sc.jpg" alt="FIQ '21" style="width: auto;">
+      <img src="/images/sc.jpg" alt="FIQ '21">
       <div class="achievement-caption">
         Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports.
       </div>
@@ -236,7 +222,7 @@ redirect_from:
 
   <div class="episode-container">
     <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
-      <img src="/images/nr.png" alt="National Rounds" style="width: auto;">
+      <img src="/images/nr.png" alt="National Rounds">
       <span>Fit India Quiz – National Rounds | Season 1, Episode 4</span>
     </a>
   </div>
@@ -254,11 +240,11 @@ redirect_from:
   <div class="quiz-episodes-scroll">
     <div class="episode-container">
       <a href="https://youtube.com/watch?v=olKrkkhQNNM" class="episode-card">
-        <img src="/images/sf.jpg" alt="State Final" style="width: auto;">
+        <img src="/images/sf.jpg" alt="State Final">
         <span>Fit India Quiz – State Final | Chhattisgarh</span>
       </a>
       <a href="https://youtube.com/watch?v=jmTjf5EvejA" class="episode-card">
-        <img src="/images/ssf.jpg" alt="State Semi-Final" style="width: auto;">
+        <img src="/images/ssf.jpg" alt="State Semi-Final">
         <span>Fit India Quiz – State Semi-Final 2 | Chhattisgarh</span>
       </a>
     </div>
