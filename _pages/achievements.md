@@ -94,61 +94,191 @@ redirect_from:
     }
   }
 
-  /* Modal Styles */
+  /* Enhanced Modal Styles */
   .modal {
     display: none;
     position: fixed;
     z-index: 9999;
-    padding: 40px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(4px);
-    animation: fadeInZoom 0.3s ease;
+    overflow: hidden;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
   }
 
-  .modal img {
-    display: block;
-    margin: auto;
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease;
+  .modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 85%;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-image-container {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 
   #modalImg {
+    max-width: 100%;
+    max-height: calc(100% - 100px);
+    object-fit: contain;
     transition: transform 0.3s ease;
+    transform-origin: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
 
-  .modal img.fade-in {
-    animation: fadeInZoom 0.3s ease;
+  .modal-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .nav-btn {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 20px;
+  }
+
+  .nav-btn:hover {
+    background: rgba(0,0,0,0.8);
   }
 
   .close-btn {
     position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 36px;
-    font-weight: bold;
+    top: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.5);
     color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 10000;
-  }  
+    transition: background 0.3s ease;
+    z-index: 10001;
+  }
 
-  @keyframes fadeInZoom {
+  .close-btn:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  .thumbnails-container {
+    width: 100%;
+    height: 90px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 5px 0;
+    scroll-behavior: smooth;
+  }
+
+  .thumbnails-container::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .thumbnails-container::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.5);
+    border-radius: 3px;
+  }
+
+  .thumbnail {
+    height: 70px;
+    width: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    opacity: 0.7;
+  }
+
+  .thumbnail.active {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(255,255,255,0.8);
+  }
+
+  .thumbnail:hover {
+    opacity: 1;
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .zoom-btn {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .zoom-btn:hover {
+    background: rgba(0,0,0,0.8);
+  }
+
+  @keyframes fadeIn {
     from {
-      transform: scale(0.95);
       opacity: 0;
     }
     to {
-      transform: scale(1);
       opacity: 1;
     }
-  }  
+  }
+
+  @media (max-width: 768px) {
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .thumbnails-container {
+      height: 70px;
+    }
+    
+    .thumbnail {
+      height: 50px;
+    }
+  }
 </style>
 
 <!-- Achievements Section -->
@@ -185,115 +315,242 @@ redirect_from:
   </div>
 </div>
 
-<!-- Image Modal -->
-<div id="imgModal" class="modal" onclick="this.style.display='none'">
-  <img id="modalImg" src="" alt="Enlarged View" />
+<!-- Enhanced Image Modal -->
+<div id="imgModal" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" id="closeModal">&times;</button>
+    
+    <div class="modal-image-container">
+      <img id="modalImg" src="" alt="Enlarged View" />
+      <div class="modal-nav">
+        <button class="nav-btn prev-btn" id="prevBtn">&#10094;</button>
+        <button class="nav-btn next-btn" id="nextBtn">&#10095;</button>
+      </div>
+    </div>
+    
+    <div class="thumbnails-container" id="thumbnailsContainer">
+      <!-- Thumbnails will be added here by JavaScript -->
+    </div>
+    
+    <div class="controls">
+      <button class="zoom-btn" id="zoomOutBtn">&#8722;</button>
+      <button class="zoom-btn" id="zoomInBtn">&#43;</button>
+    </div>
+  </div>
 </div>
 
 <script>
-  const modal = document.getElementById('imgModal');
-  const modalImg = document.getElementById('modalImg');
-  const closeBtn = document.querySelector('.close-btn');
-
-  let currentGallery = [];
-  let currentIndex = 0;
-  let lastTap = 0;
-  let startX = 0;
-  let currentScale = 1;
-  let initialDistance = 0;
-
-  document.querySelectorAll('.achievement-images').forEach((gallery) => {
-    const images = gallery.querySelectorAll('img');
-    images.forEach((img, index) => {
-      img.addEventListener('click', (e) => {
-        e.stopPropagation();
-        currentGallery = Array.from(images);
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.getElementById('closeModal');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const thumbnailsContainer = document.getElementById('thumbnailsContainer');
+    
+    // Collect all gallery images from all sections
+    const galleryContainers = document.querySelectorAll('.achievement-images');
+    let allGalleryImages = [];
+    
+    galleryContainers.forEach(container => {
+      const images = container.querySelectorAll('img');
+      allGalleryImages = [...allGalleryImages, ...Array.from(images)];
+    });
+    
+    let currentIndex = 0;
+    let currentZoom = 1;
+    const minZoom = 1;
+    const maxZoom = 3;
+    const zoomStep = 0.5;
+    
+    // Touch variables
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let initialDistance = 0;
+    let lastTapTime = 0;
+    let initialPinchZoom = 1;
+    
+    // Create all thumbnails
+    function createThumbnails() {
+      thumbnailsContainer.innerHTML = '';
+      allGalleryImages.forEach((img, index) => {
+        const thumbnail = document.createElement('img');
+        thumbnail.src = img.src;
+        thumbnail.alt = `Thumbnail ${index + 1}`;
+        thumbnail.classList.add('thumbnail');
+        if (index === currentIndex) {
+          thumbnail.classList.add('active');
+        }
+        thumbnail.addEventListener('click', () => {
+          currentIndex = index;
+          updateModal();
+        });
+        thumbnailsContainer.appendChild(thumbnail);
+      });
+    }
+    
+    // Update the modal with current image
+    function updateModal() {
+      modalImg.src = allGalleryImages[currentIndex].src;
+      modalImg.alt = allGalleryImages[currentIndex].alt;
+      
+      // Reset zoom
+      currentZoom = 1;
+      modalImg.style.transform = `scale(${currentZoom})`;
+      
+      // Update active thumbnail
+      const thumbnails = thumbnailsContainer.querySelectorAll('.thumbnail');
+      thumbnails.forEach((thumb, index) => {
+        if (index === currentIndex) {
+          thumb.classList.add('active');
+          // Scroll into view
+          thumb.scrollIntoView({behavior: 'smooth', block: 'nearest', inline: 'center'});
+        } else {
+          thumb.classList.remove('active');
+        }
+      });
+    }
+    
+    // Set up click event for all gallery images
+    allGalleryImages.forEach((img, index) => {
+      img.addEventListener('click', () => {
         currentIndex = index;
-        openModalWithImage();
+        modal.style.display = 'block';
+        createThumbnails();
+        updateModal();
       });
     });
-  });
-
-  function openModalWithImage() {
-    if (!currentGallery.length) return;
-    modal.style.display = 'block';
-    modalImg.src = currentGallery[currentIndex].src;
-    modalImg.alt = currentGallery[currentIndex].alt;
-    modalImg.classList.add('fade-in');
-    modalImg.style.transform = 'scale(1)';
-    currentScale = 1;
-  }
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal || e.target === closeBtn) {
+    
+    // Navigation functions
+    function showPrevImage() {
+      currentIndex = (currentIndex - 1 + allGalleryImages.length) % allGalleryImages.length;
+      updateModal();
+    }
+    
+    function showNextImage() {
+      currentIndex = (currentIndex + 1) % allGalleryImages.length;
+      updateModal();
+    }
+    
+    // Zoom functions
+    function zoomIn() {
+      if (currentZoom < maxZoom) {
+        currentZoom += zoomStep;
+        modalImg.style.transform = `scale(${currentZoom})`;
+      }
+    }
+    
+    function zoomOut() {
+      if (currentZoom > minZoom) {
+        currentZoom -= zoomStep;
+        modalImg.style.transform = `scale(${currentZoom})`;
+      }
+    }
+    
+    // Event listeners
+    closeBtn.addEventListener('click', () => {
       modal.style.display = 'none';
-      modalImg.style.transform = 'scale(1)';
-      currentScale = 1;
-    }
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (modal.style.display === 'block') {
-      if (e.key === 'ArrowRight') {
-        currentIndex = (currentIndex + 1) % currentGallery.length;
-        openModalWithImage();
-      } else if (e.key === 'ArrowLeft') {
-        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-        openModalWithImage();
-      } else if (e.key === 'Escape') {
+    });
+    
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
         modal.style.display = 'none';
-        modalImg.style.transform = 'scale(1)';
-        currentScale = 1;
       }
-    }
-  });
-
-  modalImg.addEventListener('touchstart', (e) => {
-    if (e.touches.length === 1) {
-      startX = e.touches[0].clientX;
-    } else if (e.touches.length === 2) {
-      initialDistance = getDistance(e.touches[0], e.touches[1]);
-    }
-  });
-
-  modalImg.addEventListener('touchmove', (e) => {
-    if (e.touches.length === 2) {
-      e.preventDefault();
-      const newDistance = getDistance(e.touches[0], e.touches[1]);
-      const scaleChange = newDistance / initialDistance;
-      const newScale = Math.min(Math.max(currentScale * scaleChange, 1), 3);
-      modalImg.style.transform = `scale(${newScale})`;
-    }
-  }, { passive: false });
-
-  modalImg.addEventListener('touchend', (e) => {
-    if (e.touches.length === 0 && e.changedTouches.length === 1) {
-      const endX = e.changedTouches[0].clientX;
-      const diff = startX - endX;
-
-      const currentTime = new Date().getTime();
-      const tapLength = currentTime - lastTap;
-
-      if (tapLength < 300 && tapLength > 0) {
-        currentScale = currentScale > 1 ? 1 : 2;
-        modalImg.style.transform = `scale(${currentScale})`;
-      }
-      lastTap = currentTime;
-
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          currentIndex = (currentIndex + 1) % currentGallery.length;
-        } else {
-          currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+    });
+    
+    prevBtn.addEventListener('click', showPrevImage);
+    nextBtn.addEventListener('click', showNextImage);
+    zoomInBtn.addEventListener('click', zoomIn);
+    zoomOutBtn.addEventListener('click', zoomOut);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (modal.style.display === 'block') {
+        if (e.key === 'ArrowRight') {
+          showNextImage();
+        } else if (e.key === 'ArrowLeft') {
+          showPrevImage();
+        } else if (e.key === '+') {
+          zoomIn();
+        } else if (e.key === '-') {
+          zoomOut();
+        } else if (e.key === 'Escape') {
+          modal.style.display = 'none';
         }
-        openModalWithImage();
       }
+    });
+    
+    // Touch events for mobile
+    modalImg.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      
+      if (e.touches.length === 1) {
+        // Single touch for swipe
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        
+        // Check for double tap
+        const currentTime = new Date().getTime();
+        const tapDelay = currentTime - lastTapTime;
+        
+        if (tapDelay < 300 && tapDelay > 0) {
+          // Double tap detected
+          if (currentZoom > minZoom) {
+            currentZoom = minZoom;
+          } else {
+            currentZoom = 2;
+          }
+          modalImg.style.transform = `scale(${currentZoom})`;
+        }
+        
+        lastTapTime = currentTime;
+        
+      } else if (e.touches.length === 2) {
+        // Pinch zoom
+        initialDistance = getDistance(e.touches[0], e.touches[1]);
+        initialPinchZoom = currentZoom;
+      }
+    }, { passive: false });
+    
+    modalImg.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        const newDistance = getDistance(e.touches[0], e.touches[1]);
+        const distanceRatio = newDistance / initialDistance;
+        
+        // Calculate new zoom level based on pinch
+        currentZoom = Math.min(Math.max(initialPinchZoom * distanceRatio, minZoom), maxZoom);
+        modalImg.style.transform = `scale(${currentZoom})`;
+      }
+    }, { passive: false });
+    
+    modalImg.addEventListener('touchend', (e) => {
+      if (e.changedTouches.length === 1 && e.touches.length === 0) {
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+        
+        // Only register as swipe if horizontal movement is significant
+        // and greater than vertical movement (to avoid confusion with scrolling)
+        if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (deltaX < 0) {
+            showNextImage();
+          } else {
+            showPrevImage();
+          }
+        }
+      }
+    });
+    
+    // Helper function to calculate distance between two touch points
+    function getDistance(touch1, touch2) {
+      const dx = touch1.clientX - touch2.clientX;
+      const dy = touch1.clientY - touch2.clientY;
+      return Math.sqrt(dx * dx + dy * dy);
     }
   });
-
-  function getDistance(touch1, touch2) {
-    const dx = touch2.clientX - touch1.clientX;
-    const dy = touch2.clientY - touch1.clientY;
-    return Math.sqrt(dx * dx + dy * dy);
-  }
 </script>
