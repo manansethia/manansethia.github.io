@@ -34,6 +34,7 @@ redirect_from:
     align-items: center;
     text-decoration: none;
     text-align: center;
+    justify-content: center;
   }
 
   .episode-card img {
@@ -117,6 +118,7 @@ redirect_from:
     -webkit-overflow-scrolling: touch;      
     margin-top: 4px;
     margin-bottom: 4px;
+    justify-content: center;
   }
 
   .achievement-images::-webkit-scrollbar {
@@ -151,10 +153,11 @@ redirect_from:
 
   .achievement-images-text img {
     height: auto;
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     flex-shrink: 0;
     align-items: center;
+    justify-content: center;
   }
 
   .achievement-images-text img:hover {
@@ -165,6 +168,7 @@ redirect_from:
   .achievement-caption {
     font-size: 0.9em;
     flex: 1;
+    text-align: center;
   }
 
   hr.silver-line {
