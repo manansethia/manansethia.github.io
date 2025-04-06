@@ -29,7 +29,7 @@ redirect_from:
 
   .episode-card {
     flex: 0 0 auto;
-    width: auto;
+    width: 180px;
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -44,11 +44,11 @@ redirect_from:
   }
 
   .episode-card img {
-    width: auto;
-    height: 160px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     margin-bottom: 6px;
-    object-fit: cover;
+    object-fit: contain;
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -141,7 +141,7 @@ redirect_from:
     height: 160px;
     flex: 0 0 auto;
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: contain;
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
