@@ -44,9 +44,9 @@ redirect_from:
 
   .episode-card img {
     height: 160px;
-    flex: 0 0 auto;
+    width: auto;
+    overflow: hidden;
     border-radius: 10px;
-    object-fit: cover;
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
