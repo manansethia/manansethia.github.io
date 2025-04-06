@@ -24,7 +24,6 @@ redirect_from:
   .episode-container {
     display: flex;
     gap: 10px;
-    padding: 0 10px;
   }
 
   .episode-card {
