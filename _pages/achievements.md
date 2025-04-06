@@ -24,7 +24,7 @@ redirect_from:
 
   .achievement-meta {
     font-size: 0.9em;
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     margin-bottom: 8px;
   }
 
@@ -33,7 +33,8 @@ redirect_from:
     overflow-x: auto;
     gap: 7px;
     scroll-snap-type: x mandatory;
-    padding: 10px 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
   }
 
   .achievement-images img {
@@ -54,8 +55,8 @@ redirect_from:
   hr.silver-line {
     border: none;
     height: 1.5px;
-    background-color:rgb(87, 71, 57);
-    margin: 15px 0;
+    background-color: rgb(122, 91, 63);
+    margin: 0;
   }
 
   @keyframes fadeInUp {
@@ -69,15 +70,32 @@ redirect_from:
     }
   }
 
-  @media (max-width: 600px) {
-    .achievement-images img {
-      height: 140px;
-      width: auto;
-    }
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+  }
+
+  .modal img {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
   }
 </style>
 
-<!-- START: Achievements Section -->
+<!-- Achievements Section -->
 
 <div class="achievement-section">
   <h3>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h3>
@@ -110,7 +128,10 @@ redirect_from:
   </div>
 </div>
 
-<!-- Add more achievement sections as needed -->
+<!-- Image Modal -->
+<div id="imgModal" class="modal" onclick="this.style.display='none'">
+  <img id="modalImg" src="" alt="Enlarged View" />
+</div>
 
 <script>
   // Fade-in on scroll
@@ -125,5 +146,21 @@ redirect_from:
 
   document.querySelectorAll('.achievement-section').forEach(section => {
     observer.observe(section);
+  });
+
+  // Image modal on click
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+
+  document.querySelectorAll('.achievement-images img').forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
   });
 </script>

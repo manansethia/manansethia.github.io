@@ -57,9 +57,9 @@ redirect_from:
 
   .edu-divider {
     border: none;
-    height: 1px;
-    background-color: #ccc;
-    margin: 0;
+    height: 1.5px;
+    background-color:rgb(122, 91, 63);
+    margin: 0px;
   }
 </style>
 
