@@ -155,7 +155,7 @@ redirect_from:
 
   .achievement-images-text img {
     height: auto;
-    width: 90%;
+    width: 94%;
     border-radius: 8px;
     flex-shrink: 0;
     align-items: center;
