@@ -35,7 +35,6 @@ redirect_from:
     align-items: center;
     text-decoration: none;
     text-align: center;
-    justify-content: center;
   }
 
   .episode-card img {
@@ -119,7 +118,6 @@ redirect_from:
     -webkit-overflow-scrolling: touch;      
     margin-top: 4px;
     margin-bottom: 4px;
-    justify-content: center;
   }
 
   .achievement-images::-webkit-scrollbar {
@@ -233,7 +231,7 @@ redirect_from:
       </div>
   </div>
 
-  <div class="episode-container">
+  <div class="episode-container" style="display: flex; justify-content: center;">
     <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
       <img src="/images/nr.png" alt="National Rounds">
       <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
