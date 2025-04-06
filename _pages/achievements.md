@@ -306,7 +306,7 @@ redirect_from:
 <!-- Achievements Section -->
 
 <div class="achievement-section">
-  <h3>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h3>
+  <h2>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
     🗓️ <em>October 2019</em>
@@ -323,7 +323,7 @@ redirect_from:
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h3>🐼 Zonal 1st Runner-Up – Junior Wild Wisdom Quiz 2018</h3>
+  <h2>🐼 Zonal 1st Runner-Up – Junior Wild Wisdom Quiz 2018</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
     🗓️ <em>September 2018</em>
