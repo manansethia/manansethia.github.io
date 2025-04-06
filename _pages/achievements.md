@@ -7,6 +7,12 @@ redirect_from:
 ---
 
 <style>
+  h2 {
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+
+
   .achievement-section {
     margin-top: 7px;
     margin-bottom: 30px;
