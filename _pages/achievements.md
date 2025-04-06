@@ -8,7 +8,7 @@ redirect_from:
 
 <style>
   .achievement-section h2 {
-    font-size: 1.2;
+    font-size: 1.2em;
     border-bottom: none !important;
     margin-top: 6px;
     margin-bottom: 0;
@@ -36,7 +36,7 @@ redirect_from:
 
   .achievement-meta {
     font-size: 0.9em;
-    color: rgb(0, 0, 0);
+    color: rgb(30, 15, 0);
     margin-bottom: 8px;
   }
 
