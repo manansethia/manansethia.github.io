@@ -34,12 +34,15 @@ redirect_from:
     flex-direction: column;
     align-items: center;
     text-decoration: none;
+    text-align: center;
+    width: fit-content;
   }
 
   .episode-card img {
-    width: 180px;
+    width: auto;
     height: 160px;
-    border-radius: 10px;
+    border-radius: 8px;
+    margin-bottom: 6px;
     object-fit: cover;
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -56,10 +59,11 @@ redirect_from:
     color: #b84d00;
     font-weight: 600;
     text-align: center;
-    max-width: 180px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    word-wrap: break-word;
+    max-width: 200px;
   }
 
   @media (min-width: 1024px) {
@@ -69,10 +73,16 @@ redirect_from:
   }
 
   .achievement-section h2 {
-    font-size: 1.2em;
+    font-size: 1.225em;
     border-bottom: none !important;
     margin-top: 6px;
     margin-bottom: 0;
+  }
+
+  .achievement-section h3 {
+    font-size: 1.175em;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .achievement-section {
@@ -134,7 +144,29 @@ redirect_from:
 
   .achievement-images img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px hsla(0, 0.00%, 0.00%, 0.20);
+  }
+
+  .achievement-images-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0;
+    flex-wrap: wrap; /* fallback on narrow screens */
+  }
+
+  .achievement-images-text img {
+    height: 140px;
+    width: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+
+  .achievement-caption {
+    font-size: 0.9em;
+    line-height: 1.5;
+    min-width: 200px;
+    flex: 1;
   }
 
   hr.silver-line {
@@ -176,9 +208,14 @@ redirect_from:
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>June 2022</em>
   </div>
-  <div class="achievement-images">
+
+  <div class="achievement-images-text">
     <img src="/images/sc.jpg" alt="FIQ '21">
+    <div class="achievement-caption">
+      Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports.
+    </div>
   </div>
+
   <div class="episode-container">
     <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
       <img src="/images/nr.png" alt="National Rounds">
@@ -196,12 +233,10 @@ redirect_from:
 
   <div class="quiz-episodes-scroll">
     <div class="episode-container">
-      <!-- Episode 1 -->
       <a href="https://youtube.com/watch?v=olKrkkhQNNM" class="episode-card">
         <img src="/images/sf.jpg" alt="State Final">
         <span>Fit India Quiz – State Final | Chhattisgarh</span>
       </a>
-      <!-- Episode 2 -->
       <a href="https://youtube.com/watch?v=jmTjf5EvejA" class="episode-card">
         <img src="/images/ssf.jpg" alt="State Semi-Final">
         <span>Fit India Quiz – State Semi-Final 2 | Chhattisgarh</span>
