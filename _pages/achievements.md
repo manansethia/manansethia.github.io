@@ -56,7 +56,7 @@ redirect_from:
     border: none;
     height: 1.5px;
     background-color: rgb(122, 91, 63);
-    margin: 0;
+    margin: 0 0 7px 0;
   }
 
   @keyframes fadeInUp {
