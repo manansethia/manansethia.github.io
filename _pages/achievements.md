@@ -226,7 +226,7 @@ redirect_from:
   <div class="episode-container">
     <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
       <img src="/images/nr.png" alt="National Rounds">
-      <span>Fit India Quiz – National Rounds | Season 1, Episode 4</span>
+      <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
     </a>
   </div>
 
@@ -244,11 +244,11 @@ redirect_from:
     <div class="episode-container">
       <a href="https://youtube.com/watch?v=olKrkkhQNNM" class="episode-card">
         <img src="/images/sf.jpg" alt="State Final">
-        <span>Fit India Quiz – State Final | Chhattisgarh</span>
+        <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
       </a>
       <a href="https://youtube.com/watch?v=jmTjf5EvejA" class="episode-card">
         <img src="/images/ssf.jpg" alt="State Semi-Final">
-        <span>Fit India Quiz – State Semi-Final 2 | Chhattisgarh</span>
+        <span>Fit India Quiz – State Semi-Final 2<br>Chhattisgarh</span>
       </a>
     </div>
   </div>
