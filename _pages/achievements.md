@@ -36,7 +36,7 @@ redirect_from:
   }
 
   .episode-card img {
-    height: 160px;
+    height: 180px;
     flex: 0 0 auto;
     border-radius: 10px;
     object-fit: cover;
@@ -124,7 +124,8 @@ redirect_from:
   }
 
   .achievement-images img {
-    height: 160px;
+    gap: 10px;
+    height: 180px;
     flex: 0 0 auto;
     border-radius: 10px;
     object-fit: cover;
@@ -148,16 +149,20 @@ redirect_from:
   }
 
   .achievement-images-text img {
-    height: 140px;
-    width: auto;
+    height: auto;
+    width: 100%;
     border-radius: 8px;
     flex-shrink: 0;
   }
 
+  .achievement-images-text img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px hsla(0, 0.00%, 0.00%, 0.20);
+  }
+
   .achievement-caption {
     font-size: 0.9em;
-    line-height: 1.5;
-    min-width: 200px;
+    line-height: 1.5px;
     flex: 1;
   }
 
@@ -214,13 +219,11 @@ redirect_from:
   </div>
   <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu.</p>
   <p>The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
-  <div class="achievement-images">
-    <div class="achievement-images-text">
-      <img src="/images/sc.jpg" alt="FIQ '21">
+  <div class="achievement-images-text">
+    <img src="/images/sc.jpg" alt="FIQ '21">
       <div class="achievement-caption">
-        Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports.
+        Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports in Mumbai.
       </div>
-    </div>
   </div>
 
   <div class="episode-container">
