@@ -54,7 +54,7 @@ redirect_from:
   .episode-card span {
     margin-top: 0.4em;
     font-size: 0.9em;
-    color: #b84d00;
+    color:rgb(232, 113, 28);
     font-weight: 600;
     text-align: center;
     white-space: normal;
@@ -187,7 +187,7 @@ redirect_from:
   }
 
   .dashed-line {
-    border-top: 1px dashed rgb(92, 70, 44);
+    border-top: 1px dashed rgb(215, 167, 108);
     width: 100%;
     margin-top: 20px; 
   }
