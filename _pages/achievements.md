@@ -64,7 +64,9 @@ redirect_from:
     text-overflow: ellipsis;
     word-wrap: break-word;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none !important;
+    color: inherit !important;
+    outline: none !important;
   }
 
   .achievement-section h2 {
