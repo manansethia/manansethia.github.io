@@ -12,7 +12,6 @@ redirect_from:
     box-shadow: none !important;
   }
 
-
   .achievement-section {
     margin-top: 7px;
     margin-bottom: 30px;
@@ -112,7 +111,7 @@ redirect_from:
     overflow: hidden;
     background: rgba(0,0,0,0.7);
     backdrop-filter: blur(5px);
-    animation: fadeInZoom 0.3s ease;
+    -webkit-backdrop-filter: blur(5px);
   }
 
   .modal-content {
@@ -145,10 +144,6 @@ redirect_from:
     object-fit: contain;
     transition: transform 0.3s ease;
     transform-origin: center;
-  }
-
-  .modal img.fade-in {
-    animation: fadeInZoom 0.3s ease;
   }
 
   /* Navigation Controls */
@@ -366,19 +361,18 @@ redirect_from:
 </div>
 
 <script>
+  // Wait for DOM to be fully loaded
   document.addEventListener('DOMContentLoaded', function() {
     // Get all gallery images across all sections
     const allSections = document.querySelectorAll('.achievement-section');
     const allGalleries = document.querySelectorAll('.achievement-images');
     let allImages = [];
-    let sectionMap = []; // Maps image index to section index
     
-    // Collect all images and build section mapping
-    allGalleries.forEach((gallery, sectionIndex) => {
+    // Collect all images
+    allGalleries.forEach((gallery) => {
       const images = gallery.querySelectorAll('img');
       images.forEach(img => {
         allImages.push(img);
-        sectionMap.push(sectionIndex);
       });
     });
 
@@ -432,7 +426,6 @@ redirect_from:
       // Update main image
       modalImg.src = allImages[currentIndex].src;
       modalImg.alt = allImages[currentIndex].alt;
-      modalImg.classList.add('fade-in');
       
       // Reset zoom and position
       resetZoomAndPosition();
@@ -490,11 +483,12 @@ redirect_from:
     });
 
     // Close modal
-    closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       modal.style.display = 'none';
     });
 
-    // Close modal when clicking outside the image
+    // Close modal when clicking outside the content
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
@@ -586,8 +580,6 @@ redirect_from:
 
     // Touch events for mobile
     modalImg.addEventListener('touchstart', (e) => {
-      e.preventDefault();
-      
       if (e.touches.length === 1) {
         // Single touch for dragging or double tap
         startX = e.touches[0].clientX;
@@ -625,8 +617,6 @@ redirect_from:
     }, { passive: false });
 
     modalImg.addEventListener('touchmove', (e) => {
-      e.preventDefault();
-      
       if (e.touches.length === 1 && isDragging) {
         // Dragging (panning) when zoomed in
         translateX = e.touches[0].clientX - dragStartX;
@@ -634,6 +624,7 @@ redirect_from:
         updateTransform();
         
       } else if (e.touches.length === 2) {
+        e.preventDefault();
         // Pinch zoom
         const currentDistance = getDistance(e.touches[0], e.touches[1]);
         const scale = currentDistance / initialDistance;
