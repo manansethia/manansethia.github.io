@@ -143,8 +143,7 @@ redirect_from:
   .achievement-images-text {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin: 10px 0;
+    gap: 25px;
     flex-wrap: wrap; /* fallback on narrow screens */
   }
 
@@ -153,6 +152,8 @@ redirect_from:
     width: 100%;
     border-radius: 8px;
     flex-shrink: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .achievement-images-text img:hover {
@@ -162,7 +163,6 @@ redirect_from:
 
   .achievement-caption {
     font-size: 0.9em;
-    line-height: 1.5px;
     flex: 1;
   }
 
