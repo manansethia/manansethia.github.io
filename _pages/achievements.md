@@ -57,11 +57,9 @@ redirect_from:
     color:rgb(232, 113, 28);
     font-weight: 600;
     text-align: center;
-    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    padding: 0 0.4em;
   }
 
   .achievement-section h2 {
@@ -195,6 +193,12 @@ redirect_from:
     border-top: 1px dashed rgb(215, 167, 108);
     width: 100%;
     margin-top: 20px; 
+  }
+
+  .episode-card span {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
   }
 </style>
 
