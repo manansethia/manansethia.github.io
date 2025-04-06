@@ -10,6 +10,7 @@ redirect_from:
   h2 {
     border-bottom: none !important;
     box-shadow: none !important;
+    margin-bottom: 5px;
   }
 
   .achievement-section {
