@@ -31,7 +31,9 @@ redirect_from:
   .achievement-images {
     display: flex;
     overflow-x: auto;
-    gap: 7px;
+    overflow-y: visible; /* allow vertical overflow */
+    padding: 15px 0;
+    gap: 10px;
     scroll-snap-type: x mandatory;
     margin-top: 4px;
     margin-bottom: 4px;
@@ -45,6 +47,7 @@ redirect_from:
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    z-index: 1;
   }
 
   .achievement-images img:hover {
