@@ -194,33 +194,36 @@ redirect_from:
   const modal = document.getElementById('imgModal');
   const modalImg = document.getElementById('modalImg');
   const closeBtn = document.querySelector('.close-btn');
-  const galleryImages = document.querySelectorAll('.achievement-images img');
 
+  let currentGallery = [];
   let currentIndex = 0;
   let lastTap = 0;
   let startX = 0;
   let currentScale = 1;
   let initialDistance = 0;
 
-  // Open modal with clicked image
-  galleryImages.forEach((img, index) => {
-    img.addEventListener('click', (e) => {
-      e.stopPropagation();
-      currentIndex = index;
-      openModalWithImage();
+  document.querySelectorAll('.achievement-images').forEach((gallery) => {
+    const images = gallery.querySelectorAll('img');
+    images.forEach((img, index) => {
+      img.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentGallery = Array.from(images);
+        currentIndex = index;
+        openModalWithImage();
+      });
     });
   });
 
   function openModalWithImage() {
+    if (!currentGallery.length) return;
     modal.style.display = 'block';
-    modalImg.src = galleryImages[currentIndex].src;
-    modalImg.alt = galleryImages[currentIndex].alt;
+    modalImg.src = currentGallery[currentIndex].src;
+    modalImg.alt = currentGallery[currentIndex].alt;
     modalImg.classList.add('fade-in');
     modalImg.style.transform = 'scale(1)';
     currentScale = 1;
   }
 
-  // Close modal
   modal.addEventListener('click', (e) => {
     if (e.target === modal || e.target === closeBtn) {
       modal.style.display = 'none';
@@ -229,14 +232,13 @@ redirect_from:
     }
   });
 
-  // Keyboard support
   document.addEventListener('keydown', (e) => {
     if (modal.style.display === 'block') {
       if (e.key === 'ArrowRight') {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
+        currentIndex = (currentIndex + 1) % currentGallery.length;
         openModalWithImage();
       } else if (e.key === 'ArrowLeft') {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
         openModalWithImage();
       } else if (e.key === 'Escape') {
         modal.style.display = 'none';
@@ -246,7 +248,6 @@ redirect_from:
     }
   });
 
-  // Swipe and pinch zoom
   modalImg.addEventListener('touchstart', (e) => {
     if (e.touches.length === 1) {
       startX = e.touches[0].clientX;
@@ -273,19 +274,17 @@ redirect_from:
       const currentTime = new Date().getTime();
       const tapLength = currentTime - lastTap;
 
-      // Double tap zoom
       if (tapLength < 300 && tapLength > 0) {
         currentScale = currentScale > 1 ? 1 : 2;
         modalImg.style.transform = `scale(${currentScale})`;
       }
       lastTap = currentTime;
 
-      // Swipe left/right
       if (Math.abs(diff) > 50) {
         if (diff > 0) {
-          currentIndex = (currentIndex + 1) % galleryImages.length;
+          currentIndex = (currentIndex + 1) % currentGallery.length;
         } else {
-          currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+          currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
         }
         openModalWithImage();
       }
