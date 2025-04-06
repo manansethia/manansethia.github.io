@@ -23,18 +23,17 @@ redirect_from:
 
   .episode-container {
     display: flex;
-    gap: 0px;
+    gap: 10px;
     padding: 0 10px;
   }
 
   .episode-card {
     flex: 0 0 auto;
-    width: 180px;
     display: flex;
     flex-direction: column;
     text-decoration: none;
     text-align: center;
-    max-width: auto;
+    max-width: 100%;
   }
 
   @media screen and (max-width: 600px) {
@@ -44,13 +43,14 @@ redirect_from:
   }
 
   .episode-card img {
-    width: 100%;
-    height: auto;
+    height: 160px;
+    flex: 0 0 auto;
     border-radius: 10px;
-    margin-bottom: 6px;
-    object-fit: contain;
+    object-fit: cover;
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
   }
 
   .episode-card img:hover {
@@ -74,7 +74,7 @@ redirect_from:
 
   @media (min-width: 1024px) {
     .episode-card img {
-      height: 180px;
+      height: 160px;
     }
   }
 
@@ -141,7 +141,7 @@ redirect_from:
     height: 160px;
     flex: 0 0 auto;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
     scroll-snap-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -286,25 +286,3 @@ redirect_from:
   </div>
 </div>
 
-
-```
-For links
-<div class="quiz-episodes-scroll">
-  <div class="episode-container">
-    <!-- Episode 1 -->
-    <a href="/quiz/episode1" class="episode-card">
-      <img src="/images/episode1-thumb.jpg" alt="Episode 1">
-      <span>Episode 1: West Region</span>
-    </a>
-
-    <!-- Episode 2 -->
-    <a href="/quiz/episode2" class="episode-card">
-      <img src="/images/episode2-thumb.jpg" alt="Episode 2">
-      <span>Episode 2: East Region</span>
-    </a>
-
-    <!-- Add more episodes here -->
-  </div>
-</div>
-```
-https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch
