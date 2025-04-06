@@ -188,9 +188,9 @@ redirect_from:
   }
 
   .dashed-line {
-    border-top: 1px dashed lightgray;
+    border-top: 1px dashed rgb(92, 70, 44);
     width: 100%;
-    margin: 10px 0; /* adjust spacing as needed */
+    margin-top: 20px; 
   }
 </style>
 
@@ -233,7 +233,7 @@ redirect_from:
 
   <div class="dashed-line"></div>
 
-  <h3>🎖️ State Champions – Chhattisgarh</h3>
+  <h3>🏆 State Champions – Chhattisgarh</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>February 2022</em>
