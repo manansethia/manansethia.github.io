@@ -24,14 +24,16 @@ redirect_from:
   .episode-container {
     display: flex;
     gap: 10px;
+    align-items: center;
   }
 
   .episode-card {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-decoration: none;
-    text-align: center;;
+    text-align: center;
   }
 
   .episode-card img {
@@ -59,6 +61,7 @@ redirect_from:
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
+    align-items: center;
   }
 
   .achievement-section h2 {
@@ -151,6 +154,7 @@ redirect_from:
     width: 100%;
     border-radius: 8px;
     flex-shrink: 0;
+    align-items: center;
   }
 
   .achievement-images-text img:hover {
