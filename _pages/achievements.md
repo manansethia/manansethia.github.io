@@ -61,7 +61,6 @@ redirect_from:
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
-    max-width: 100%;
     padding: 0 0.4em;
   }
 
