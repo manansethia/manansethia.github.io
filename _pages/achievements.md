@@ -7,6 +7,11 @@ redirect_from:
 ---
 
 <style>
+  a {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+  }
   .quiz-episodes-scroll {
     overflow-x: auto;
     overflow-y: hidden;
@@ -65,7 +70,6 @@ redirect_from:
     word-wrap: break-word;
     align-items: center;
     text-decoration: none !important;
-    color: inherit !important;
     outline: none !important;
   }
 
