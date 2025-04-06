@@ -36,12 +36,21 @@ redirect_from:
   .achievement-images {
     display: flex;
     overflow-x: auto;
-    overflow-y: visible; /* allow vertical overflow */
+    overflow-y: hidden; 
     padding: 15px 0;
     gap: 10px;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-gutter: stable both-edges;
+    -webkit-overflow-scrolling: touch;      
     margin-top: 4px;
     margin-bottom: 4px;
+  }
+
+  .achievement-images::-webkit-scrollbar {
+    display: none;                
   }
 
   .achievement-images img {
@@ -64,7 +73,7 @@ redirect_from:
     border: none;
     height: 1.5px;
     background-color: rgb(122, 91, 63);
-    margin: 0 0 12px 0;
+    margin: 0 0 20px 0;
   }
 
   @keyframes fadeInUp {
@@ -75,6 +84,13 @@ redirect_from:
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .achievement-images img {
+      height: 180px;
+      min-width: 20%;
     }
   }
 
@@ -91,6 +107,7 @@ redirect_from:
     overflow: auto;
     background: rgba(0,0,0,0.6);
     backdrop-filter: blur(4px);
+    animation: fadeInZoom 0.3s ease;
   }
 
   .modal img {
@@ -100,7 +117,27 @@ redirect_from:
     max-height: 90%;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
   }
+
+  #modalImg {
+    transition: transform 0.3s ease;
+  }
+
+  .modal img.fade-in {
+    animation: fadeInZoom 0.3s ease;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+  }  
 
   @keyframes fadeInZoom {
     from {
@@ -122,7 +159,8 @@ redirect_from:
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
     🗓️ <em>October 2019</em>
   </div>
-  <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up.</p>
+  <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
+  <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up.</p>
   <div class="achievement-images">
     <img src="/images/wwq191.jpg" alt="WWQ '19">
     <img src="/images/wwq192.jpg" alt="WWQ '19">
@@ -153,33 +191,110 @@ redirect_from:
 </div>
 
 <script>
-  // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.achievement-section').forEach(section => {
-    observer.observe(section);
-  });
-
-  // Image modal on click
   const modal = document.getElementById('imgModal');
   const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.close-btn');
+  const galleryImages = document.querySelectorAll('.achievement-images img');
 
-  document.querySelectorAll('.achievement-images img').forEach(img => {
-    img.addEventListener('click', () => {
-      modal.style.display = 'block';
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
+  let currentIndex = 0;
+  let lastTap = 0;
+  let startX = 0;
+  let currentScale = 1;
+  let initialDistance = 0;
+
+  // Open modal with clicked image
+  galleryImages.forEach((img, index) => {
+    img.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentIndex = index;
+      openModalWithImage();
     });
   });
 
-  modal.addEventListener('click', () => {
-    modal.style.display = 'none';
+  function openModalWithImage() {
+    modal.style.display = 'block';
+    modalImg.src = galleryImages[currentIndex].src;
+    modalImg.alt = galleryImages[currentIndex].alt;
+    modalImg.classList.add('fade-in');
+    modalImg.style.transform = 'scale(1)';
+    currentScale = 1;
+  }
+
+  // Close modal
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeBtn) {
+      modal.style.display = 'none';
+      modalImg.style.transform = 'scale(1)';
+      currentScale = 1;
+    }
   });
+
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (modal.style.display === 'block') {
+      if (e.key === 'ArrowRight') {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        openModalWithImage();
+      } else if (e.key === 'ArrowLeft') {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        openModalWithImage();
+      } else if (e.key === 'Escape') {
+        modal.style.display = 'none';
+        modalImg.style.transform = 'scale(1)';
+        currentScale = 1;
+      }
+    }
+  });
+
+  // Swipe and pinch zoom
+  modalImg.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      startX = e.touches[0].clientX;
+    } else if (e.touches.length === 2) {
+      initialDistance = getDistance(e.touches[0], e.touches[1]);
+    }
+  });
+
+  modalImg.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 2) {
+      e.preventDefault();
+      const newDistance = getDistance(e.touches[0], e.touches[1]);
+      const scaleChange = newDistance / initialDistance;
+      const newScale = Math.min(Math.max(currentScale * scaleChange, 1), 3);
+      modalImg.style.transform = `scale(${newScale})`;
+    }
+  }, { passive: false });
+
+  modalImg.addEventListener('touchend', (e) => {
+    if (e.touches.length === 0 && e.changedTouches.length === 1) {
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+
+      // Double tap zoom
+      if (tapLength < 300 && tapLength > 0) {
+        currentScale = currentScale > 1 ? 1 : 2;
+        modalImg.style.transform = `scale(${currentScale})`;
+      }
+      lastTap = currentTime;
+
+      // Swipe left/right
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+          currentIndex = (currentIndex + 1) % galleryImages.length;
+        } else {
+          currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        }
+        openModalWithImage();
+      }
+    }
+  });
+
+  function getDistance(touch1, touch2) {
+    const dx = touch2.clientX - touch1.clientX;
+    const dy = touch2.clientY - touch1.clientY;
+    return Math.sqrt(dx * dx + dy * dy);
+  }
 </script>
