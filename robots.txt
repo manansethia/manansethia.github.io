@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manansethia.github.io/sitemap.xml

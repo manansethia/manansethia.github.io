@@ -155,6 +155,8 @@ include:
   - .htaccess
   - _pages
   - files
+  - sitemap.xml
+  - robots.txt
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
