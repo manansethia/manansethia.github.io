@@ -303,4 +303,3 @@ redirect_from:
     <img src="/images/wwq183.jpeg" alt="WWQ '18">
   </div>
 </div>
-
