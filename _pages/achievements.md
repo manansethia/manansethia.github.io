@@ -159,6 +159,8 @@ author_profile: true
     word-wrap: break-word;
     text-decoration: none !important;
     outline: none !important;
+    flex: 0 0 auto;
+    flex-direction: column;
   }
 
   .achievement-images-text img {
@@ -240,7 +242,7 @@ author_profile: true
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
-    🗓️ <em>January 2023</em>
+    🗓️ <em>January 2023</em><br>
     📍 <em>New Delhi</em>
   </div>
 
@@ -260,7 +262,7 @@ author_profile: true
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
-    🗓️ <em>January 2023</em>
+    🗓️ <em>January 2023</em><br>
     📍 <em>New Delhi</em>
   </div>
 
@@ -280,7 +282,7 @@ author_profile: true
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
-    🗓️ <em>December 2022</em>
+    🗓️ <em>December 2022</em><br>
     📍 <em>Bhubaneswar, Odisha</em>
   </div>
 
@@ -301,7 +303,7 @@ author_profile: true
   <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
-    🗓️ <em>October 2022</em>
+    🗓️ <em>October 2022</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
   <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
@@ -333,7 +335,7 @@ author_profile: true
   <h3>📺 Selected for National Rounds</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
-    🗓️ <em>June 2022</em>
+    🗓️ <em>June 2022</em><br>
     📍 <em>Mumbai, Maharashtra</em>
   </div>
   <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu.</p>
@@ -351,7 +353,7 @@ author_profile: true
   <h3>🏆 State Champions - Chhattisgarh</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
-    🗓️ <em>February 2022</em>
+    🗓️ <em>February 2022</em><br>
     📍 <em>Online</em>
   </div>
   <p>We became the Chhattisgarh State Champions after winning both the State Semi-Final and the State Final.</p>
@@ -377,7 +379,7 @@ author_profile: true
   <h2>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
-    🗓️ <em>October 2019</em>
+    🗓️ <em>October 2019</em><br>
     📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
@@ -395,7 +397,7 @@ author_profile: true
   <h2>🐼 Zonal 1st Runner-Up – Junior Wild Wisdom Quiz 2018</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
-    🗓️ <em>September 2018</em>
+    🗓️ <em>September 2018</em><br>
     📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
   <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness.</p>
