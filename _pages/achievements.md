@@ -28,7 +28,6 @@ author_profile: true
     display: flex;
     gap: 15px;
     align-items: center;
-    margin-left: 10px;
   }
 
   .episode-card {
@@ -364,7 +363,7 @@ author_profile: true
   <p>Eight school teams competed in the State Semi-Finals, with two teams from each advancing to the State Final.</p>
 
   <div class="quiz-episodes-scroll">
-    <div class="episode-container">
+    <div class="episode-container" style="margin-left: 10px;">
       <a href="https://youtube.com/watch?v=olKrkkhQNNM" class="episode-card">
         <img src="/images/sf.jpg" alt="State Final">
         <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
