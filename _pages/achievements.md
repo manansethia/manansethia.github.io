@@ -26,8 +26,9 @@ author_profile: true
 
   .episode-container {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
+    margin-left: 10px;
   }
 
   .episode-card {
@@ -50,6 +51,8 @@ author_profile: true
     cursor: pointer;
     z-index: 1;
     text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 7px;
   }
 
   .episode-card img:hover {
@@ -110,8 +113,8 @@ author_profile: true
     display: flex;
     overflow-x: auto;
     overflow-y: hidden; 
-    padding: 15px 0;
-    gap: 10px;
+    padding: 15px 10px;
+    gap: 15px;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -171,6 +174,7 @@ author_profile: true
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
   }
 
   .achievement-images-text img:hover {
