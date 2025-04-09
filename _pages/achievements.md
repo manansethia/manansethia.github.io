@@ -230,7 +230,7 @@ author_profile: true
   <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runners-Up and receiving a cash prize of ₹15,000.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/hiq.jpg" alt="Heritage India Quiz">
+    <img src="/images/hiq.jpeg" alt="Heritage India Quiz">
     <span style="color: #000000">Infographic by the organizer</span>
   </div>
 
