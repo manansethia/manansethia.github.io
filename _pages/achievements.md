@@ -156,7 +156,6 @@ author_profile: true
     font-size: 0.9em;
     font-weight: 600;
     text-align: center;
-    overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
     text-decoration: none !important;
