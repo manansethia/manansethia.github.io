@@ -212,6 +212,20 @@ author_profile: true
 <!-- Achievements Section -->
 
 <div class="achievement-section">
+  <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
+    🗓️ <em>October 2022</em>
+  </div>
+  <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches and handbells instead of proper buzzers.</p>
+  <div class="achievement-images">
+    <img src="/images/intach.jpg" alt="INTACH '22">
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
   <h2>🏏 Fit India Quiz 2021 – Season 1</h2>
   <div class="achievement-meta">
     🏢 <em>Organized by the Ministry of Youth Affairs and Sports in collaboration with Central Board of Secondary Education and nationally broadcasted by Star India Group.</em><br>
