@@ -95,10 +95,6 @@ author_profile: true
     opacity: 1;
   }
 
-  .achievement-section h3 {
-    margin-bottom: 5px;
-  }
-
   .achievement-section p {
     margin: 6px 0; 
     line-height: 1.5;
@@ -132,7 +128,7 @@ author_profile: true
 
   .achievement-images img {
     gap: 10px;
-    height: 180px;
+    height: 220px;
     flex: 0 0 auto;
     border-radius: 10px;
     object-fit: cover;
@@ -159,8 +155,8 @@ author_profile: true
 
   .achievement-images-text img {
     height: auto;
-    width: 95%;
-    border-radius: 8px;
+    width: 75%;
+    border-radius: 10px;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
@@ -222,7 +218,7 @@ author_profile: true
   <p>Top-performing teams advanced through the regional rounds, with an average of over 30 teams competing in each region. The best among them moved on to the National Semi-Finals and Finals, held at Sardar Patel Vidyalaya, Lodi Estate, New Delhi.</p>
   <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runners-Up and receiving a cash prize of ₹15,000.</p>
 
-  <div class="achievement-images-text">
+  <div class="achievement-images-text" style="width: 65%">
     <img src="/images/hiq.jpg" alt="">
     <div class="achievement-caption">
       Facebook post by the organizers.
