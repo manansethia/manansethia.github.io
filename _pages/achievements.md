@@ -214,7 +214,7 @@ author_profile: true
   }
 
   .dashed-line {
-    border-top: 1px dashed rgb(215, 167, 108);
+    border-top: 1px dashed rgb(230, 193, 148);
     width: 100%;
     margin-top: 20px; 
   }
