@@ -191,7 +191,7 @@ author_profile: true
   hr.silver-line {
     border: none;
     height: 1.5px;
-    background-color: rgb(122, 91, 63);
+    background-color: rgb(164, 117, 76);
     margin: 0 0 20px 0;
   }
 
