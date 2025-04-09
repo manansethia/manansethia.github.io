@@ -222,6 +222,7 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/hiq.jpg" alt="Heritage India Quiz">
+    <span style="color: #000000">Infographic by<br>the organizer</span>
   </div>
 
   <div class="dashed-line"></div>
@@ -277,7 +278,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <img src="/images/hiqn.jpeg" alt="Regional Rounds" style="width: 335px;">
-      <span>News Coverage</span>
+      <span style="color: #000000">News Coverage</span>
     </div>
   </div>
 </div>
@@ -298,6 +299,7 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/sc.jpg" alt="FIQ '21">
+    <span style="color: #000000">Felicitation of<br>State Champions<br>in Mumbai</span>
   </div>
 
   <div class="dashed-line"></div>
