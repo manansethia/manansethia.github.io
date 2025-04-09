@@ -212,6 +212,75 @@ author_profile: true
 <!-- Achievements Section -->
 
 <div class="achievement-section">
+  <h2>🛕 CBSE Heritage India Quiz 2022</h2>
+  <div class="achievement-meta">
+    🏢 <em>Organized by the Central Board of Secondary Education in collaboration with and nationally broadcasted by the Network18 group – History TV18.</em><br>
+  </div>
+  <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions.</p>
+  <p>The 2022 edition focused on the theme of India’s Freedom Movement, commemorating 75 years of independence under the Azadi Ka Amrit Mahotsav initiative.</p>
+  <p>Tens of thousands of schools from across the country participated in this multi-stage competition, which began with an online qualifying round.</p>
+  <p>Top-performing teams advanced through the regional rounds, with an average of over 30 teams competing in each region. The best among them moved on to the National Semi-Finals and Finals, held at Sardar Patel Vidyalaya, Lodi Estate, New Delhi.</p>
+  <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runners-Up and receiving a cash prize of ₹15,000.</p>
+
+  <div class="dashed-line"></div>
+
+  <h3>📺 National 1st Runners-Up – New Delhi</h3>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Central Board of Secondary Education</em><br>
+    🗓️ <em>January 2023</em>
+  </div>
+  <p>The National Final featured teams from New Delhi, Tamil Nadu, Chhattisgarh, and Karnataka.</p>
+  <p>The team from New Delhi won, and we (Chhattisgarh) secured second place.</p>
+  <div class="achievement-images-text">
+    <img src="/images/hiq.jpg" alt="">
+    <div class="achievement-caption">
+      Facebook post by the organizers.
+    </div>
+  </div>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <a href="https://www.youtube.com/watch?v=ynYcqvTCh-Y" class="episode-card">
+      <img src="/images/hiqf.png" alt="National Rounds" style="width: 335px;">
+      <span>CBSE HIQ 2022<br>National Finale</span>
+    </a>
+  </div>
+
+  <div class="dashed-line"></div>
+
+  <h3>📺 Semi-Final 4 Winners – New Delhi</h3>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Central Board of Secondary Education</em><br>
+    🗓️ <em>January 2023</em>
+  </div>
+  <p>Semi-Final 4 featured teams from Chhattisgarh, Punjab, Assam, and Jharkhand.</p>
+  <p>We won the Semi-Final with a score of 100 points!</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <a href="https://www.youtube.com/watch?v=S_3fq0Vqc3I" class="episode-card">
+      <img src="/images/hiqsf.png" alt="National Rounds" style="width: 335px;">
+      <span>CBSE HIQ 2022<br>Semi-Final 4</span>
+    </a>
+  </div>
+
+  <div class="dashed-line"></div>
+
+  <h3>🏆 Zonal Champions – Bhubaneswar</h3>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Central Board of Secondary Education</em><br>
+    🗓️ <em>December 2022</em>
+  </div>
+  <p>We emerged as the Bhubaneswar Zone Champions after qualifying through the preliminary round and winning the stage round.</p>
+  <p>A total of thirty teams took part in the preliminary round, and then six teams were selected for the stage round. From these, one team per region advanced to the National Rounds in New Delhi.</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <img src="/images/hiqn.jpeg" alt="Regional Rounds" style="width: 335px;">
+    <span>CBSE HIQ 2022<br>In News</span>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
   <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
@@ -228,12 +297,13 @@ author_profile: true
 <div class="achievement-section">
   <h2>🏏 Fit India Quiz 2021 – Season 1</h2>
   <div class="achievement-meta">
-    🏢 <em>Organized by the Ministry of Youth Affairs and Sports in collaboration with Central Board of Secondary Education and nationally broadcasted by Star India Group.</em><br>
+    🏢 <em>Organized by the Ministry of Youth Affairs and Sports in collaboration with the Central Board of Secondary Education and nationally broadcasted by Star India Group.</em><br>
   </div>
-  <p> The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among school children across India.</p> 
-  <p>The preliminary rounds witnessed participation from 36,299 students representing 13,502 schools nationwide. </p>
-  <p>Following these rounds, 360 schools advanced to the state-level competitions.</p> 
-  <p>Ultimately, 36 schools, each representing a different State or Union Territory, progressed to the National Finals.</p>
+  <p>The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among schoolchildren across India.</p>
+  <p>The preliminary rounds saw participation from 36,299 students representing 13,502 schools nationwide.</p>
+  <p>From there, 360 schools advanced to the state-level competitions.</p>
+  <p>Eventually, 36 schools — each representing a different State or Union Territory — qualified for the National Finals.</p>
+  <p>Partnering with Ishant Talreja, we represented our school in the televised National Rounds. Our school received ₹2,50,000, and our team was awarded ₹25,000.</p>
 
   <div class="dashed-line"></div>
 
@@ -246,9 +316,9 @@ author_profile: true
   <p>The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
   <div class="achievement-images-text">
     <img src="/images/sc.jpg" alt="FIQ '21">
-      <div class="achievement-caption">
-        Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports in Mumbai.
-      </div>
+    <div class="achievement-caption">
+      Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports, in Mumbai.
+    </div>
   </div>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
@@ -265,8 +335,8 @@ author_profile: true
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>February 2022</em>
   </div>
-  <p>Partnering with Ishant Talreja, we emerged as the Chhattisgarh State Champions after winning both the State Semi-Final and the State Final.</p>
-  <p>Eight school teams were selected for the State Semi-Finals, from which two teams from each semi-final advanced to the State Final.</p>
+  <p>We became the Chhattisgarh State Champions after winning both the State Semi-Final and the State Final.</p>
+  <p>Eight school teams competed in the State Semi-Finals, with two teams from each advancing to the State Final.</p>
 
   <div class="quiz-episodes-scroll">
     <div class="episode-container">
