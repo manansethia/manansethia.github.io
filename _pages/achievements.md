@@ -222,6 +222,13 @@ author_profile: true
   <p>Top-performing teams advanced through the regional rounds, with an average of over 30 teams competing in each region. The best among them moved on to the National Semi-Finals and Finals, held at Sardar Patel Vidyalaya, Lodi Estate, New Delhi.</p>
   <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runners-Up and receiving a cash prize of ₹15,000.</p>
 
+  <div class="achievement-images-text">
+    <img src="/images/hiq.jpg" alt="">
+    <div class="achievement-caption">
+      Facebook post by the organizers.
+    </div>
+  </div>
+
   <div class="dashed-line"></div>
 
   <h3>📺 National 1st Runners-Up – New Delhi</h3>
@@ -231,12 +238,6 @@ author_profile: true
   </div>
   <p>The National Final featured teams from New Delhi, Tamil Nadu, Chhattisgarh, and Karnataka.</p>
   <p>The team from New Delhi won, and we (Chhattisgarh) secured second place.</p>
-  <div class="achievement-images-text">
-    <img src="/images/hiq.jpg" alt="">
-    <div class="achievement-caption">
-      Facebook post by the organizers.
-    </div>
-  </div>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <a href="https://www.youtube.com/watch?v=ynYcqvTCh-Y" class="episode-card">
@@ -273,8 +274,10 @@ author_profile: true
   <p>A total of thirty teams took part in the preliminary round, and then six teams were selected for the stage round. From these, one team per region advanced to the National Rounds in New Delhi.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <img src="/images/hiqn.jpeg" alt="Regional Rounds" style="width: 335px;">
-    <span>CBSE HIQ 2022<br>In News</span>
+    <div class="episode-card">
+      <img src="/images/hiqn.jpeg" alt="Regional Rounds" style="width: 335px;">
+      <span>News Coverage</span>
+    </div>
   </div>
 </div>
 
@@ -305,6 +308,13 @@ author_profile: true
   <p>Eventually, 36 schools — each representing a different State or Union Territory — qualified for the National Finals.</p>
   <p>Partnering with Ishant Talreja, we represented our school in the televised National Rounds. Our school received ₹2,50,000, and our team was awarded ₹25,000.</p>
 
+  <div class="achievement-images-text">
+    <img src="/images/sc.jpg" alt="FIQ '21">
+    <div class="achievement-caption">
+      Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports, in Mumbai.
+    </div>
+  </div>
+
   <div class="dashed-line"></div>
 
   <h3>📺 Selected for National Rounds – Mumbai</h3>
@@ -314,12 +324,6 @@ author_profile: true
   </div>
   <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu.</p>
   <p>The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
-  <div class="achievement-images-text">
-    <img src="/images/sc.jpg" alt="FIQ '21">
-    <div class="achievement-caption">
-      Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports, in Mumbai.
-    </div>
-  </div>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
