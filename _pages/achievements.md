@@ -156,6 +156,7 @@ author_profile: true
   .achievement-images-text img {
     height: auto;
     width: 75%;
+    min-width: 335px;
     border-radius: 10px;
     flex-shrink: 0;
     align-items: center;
