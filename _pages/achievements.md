@@ -218,10 +218,8 @@ author_profile: true
   <p>Top-performing teams advanced through the regional rounds, with an average of over 30 teams competing in each region. The best among them moved on to the National Semi-Finals and Finals, held at Sardar Patel Vidyalaya, Lodi Estate, New Delhi.</p>
   <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runners-Up and receiving a cash prize of ₹15,000.</p>
 
-  <div class="achievement-images-text" style="width: 65%">
+  <div class="achievement-images-text">
     <img src="/images/hiq.jpg" alt="">
-    <div class="achievement-caption">
-      Facebook post by the organizers.
     </div>
   </div>
 
@@ -306,9 +304,6 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/sc.jpg" alt="FIQ '21">
-    <div class="achievement-caption">
-      Felicitation for being State Champions by Anurag Singh Thakur, then Minister of Youth Affairs and Sports, in Mumbai.
-    </div>
   </div>
 
   <div class="dashed-line"></div>
