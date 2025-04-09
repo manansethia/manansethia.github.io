@@ -147,10 +147,18 @@ author_profile: true
     display: flex;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap; /* fallback on narrow screens */
     margin-top: 16px;
     margin-bottom: 18px;
     justify-content: center;
+    margin-top: 0.4em;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    text-decoration: none !important;
+    outline: none !important;
   }
 
   .achievement-images-text img {
@@ -223,7 +231,7 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/hiq.jpg" alt="Heritage India Quiz">
-    <span style="color: #000000">Infographic by<br>the organizer</span>
+    <span style="color: #000000">Infographic by the organizer</span>
   </div>
 
   <div class="dashed-line"></div>
@@ -233,6 +241,7 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>January 2023</em>
+    📍 <em>New Delhi</em>
   </div>
 
   <p>The National Final featured teams from New Delhi, Tamil Nadu, Chhattisgarh, and Karnataka.</p>
@@ -252,6 +261,7 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>January 2023</em>
+    📍 <em>New Delhi</em>
   </div>
 
   <p>Semi-Final 4 featured teams from Chhattisgarh, Punjab, Assam, and Jharkhand.</p>
@@ -266,11 +276,12 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>🏆 Zonal Champions – Bhubaneswar</h3>
+  <h3>🏆 Zonal Champions - Bhubaneswar region</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>December 2022</em>
+    📍 <em>Bhubaneswar, Odisha</em>
   </div>
 
   <p>We emerged as the Bhubaneswar Zone Champions after qualifying through the preliminary round and winning the stage round.</p>
@@ -284,6 +295,20 @@ author_profile: true
   </div>
 </div>
 
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
+    🗓️ <em>October 2022</em>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+  <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
+  <div class="achievement-images">
+    <img src="/images/intach.jpg" alt="INTACH '22">
+  </div>
+</div>
 
 <hr class="silver-line" />
 
@@ -305,10 +330,11 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>📺 Selected for National Rounds – Mumbai</h3>
+  <h3>📺 Selected for National Rounds</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>June 2022</em>
+    📍 <em>Mumbai, Maharashtra</em>
   </div>
   <p>Our quarter-final featured teams from Gujarat, Sikkim, Chhattisgarh, and Tamil Nadu.</p>
   <p>The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
@@ -322,10 +348,11 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>🏆 State Champions – Chhattisgarh</h3>
+  <h3>🏆 State Champions - Chhattisgarh</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>February 2022</em>
+    📍 <em>Online</em>
   </div>
   <p>We became the Chhattisgarh State Champions after winning both the State Semi-Final and the State Final.</p>
   <p>Eight school teams competed in the State Semi-Finals, with two teams from each advancing to the State Final.</p>
@@ -351,6 +378,7 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
     🗓️ <em>October 2019</em>
+    📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
   <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up.</p>
@@ -368,6 +396,7 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
     🗓️ <em>September 2018</em>
+    📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
   <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness.</p>
   <p>In 5th grade, I participated alongside my teammate, Agriyan Maulik, who was then in 4th grade. The quiz featured teams from Chhattisgarh and Madhya Pradesh. Together, we achieved the position of Zonal 1st Runner-Up.</p>
