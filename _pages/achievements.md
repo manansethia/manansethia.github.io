@@ -286,7 +286,7 @@ author_profile: true
     🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
     🗓️ <em>October 2022</em>
   </div>
-  <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches and handbells instead of proper buzzers.</p>
+  <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
   <div class="achievement-images">
     <img src="/images/intach.jpg" alt="INTACH '22">
   </div>
