@@ -233,7 +233,7 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/hiq.jpeg" alt="Heritage India Quiz">
-    <span style="color: #000000">Infographic by the organizer</span>
+    <span style="color: #000000">Team Picture: Left to right - Me, Shreeansh Naidu, Atharv Sharma</span>
   </div>
 
   <div class="dashed-line"></div>
