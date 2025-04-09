@@ -233,7 +233,7 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/hiq.jpeg" alt="Heritage India Quiz">
-    <span style="color: #000000">Team Picture: Left to right - Me, Shreeansh Naidu, Atharv Sharma</span>
+    <span style="color: #000000">Team Picture: Left to right<br> Manan Sethia, Shreeansh Naidu, Atharv Sharma</span>
   </div>
 
   <div class="dashed-line"></div>
@@ -326,8 +326,8 @@ author_profile: true
   <p>Partnering with Ishant Talreja, we represented our school in the televised National Rounds. Our school received ₹2,50,000, and our team was awarded ₹25,000.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/sc.jpg" alt="FIQ '21">
-    <span style="color: #000000">Felicitation of<br>State Champions<br>in Mumbai</span>
+    <img src="/images/sc.jpeg" alt="FIQ '21">
+    <span style="color: #000000">Felicitation of State Champions in Mumbai</span>
   </div>
 
   <div class="dashed-line"></div>
