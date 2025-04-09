@@ -209,9 +209,11 @@ author_profile: true
 
 <div class="achievement-section">
   <h2>🛕 CBSE Heritage India Quiz 2022</h2>
+  
   <div class="achievement-meta">
     🏢 <em>Organized by the Central Board of Secondary Education in collaboration with and nationally broadcasted by the Network18 group – History TV18.</em><br>
   </div>
+
   <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions.</p>
   <p>The 2022 edition focused on the theme of India’s Freedom Movement, commemorating 75 years of independence under the Azadi Ka Amrit Mahotsav initiative.</p>
   <p>Tens of thousands of schools from across the country participated in this multi-stage competition, which began with an online qualifying round.</p>
@@ -219,17 +221,18 @@ author_profile: true
   <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runners-Up and receiving a cash prize of ₹15,000.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/hiq.jpg" alt="">
-    </div>
+    <img src="/images/hiq.jpg" alt="Heritage India Quiz">
   </div>
 
   <div class="dashed-line"></div>
 
   <h3>📺 National 1st Runners-Up – New Delhi</h3>
+
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>January 2023</em>
   </div>
+
   <p>The National Final featured teams from New Delhi, Tamil Nadu, Chhattisgarh, and Karnataka.</p>
   <p>The team from New Delhi won, and we (Chhattisgarh) secured second place.</p>
 
@@ -243,16 +246,18 @@ author_profile: true
   <div class="dashed-line"></div>
 
   <h3>📺 Semi-Final 4 Winners – New Delhi</h3>
+
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>January 2023</em>
   </div>
+
   <p>Semi-Final 4 featured teams from Chhattisgarh, Punjab, Assam, and Jharkhand.</p>
   <p>We won the Semi-Final with a score of 100 points!</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <a href="https://www.youtube.com/watch?v=S_3fq0Vqc3I" class="episode-card">
-      <img src="/images/hiqsf.png" alt="National Rounds" style="width: 335px;">
+      <img src="/images/hiqsf.png" alt="Semi Final" style="width: 335px;">
       <span>CBSE HIQ 2022<br>Semi-Final 4</span>
     </a>
   </div>
@@ -260,10 +265,12 @@ author_profile: true
   <div class="dashed-line"></div>
 
   <h3>🏆 Zonal Champions – Bhubaneswar</h3>
+
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>December 2022</em>
   </div>
+
   <p>We emerged as the Bhubaneswar Zone Champions after qualifying through the preliminary round and winning the stage round.</p>
   <p>A total of thirty teams took part in the preliminary round, and then six teams were selected for the stage round. From these, one team per region advanced to the National Rounds in New Delhi.</p>
 
@@ -275,19 +282,6 @@ author_profile: true
   </div>
 </div>
 
-<hr class="silver-line" />
-
-<div class="achievement-section">
-  <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
-  <div class="achievement-meta">
-    🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
-    🗓️ <em>October 2022</em>
-  </div>
-  <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
-  <div class="achievement-images">
-    <img src="/images/intach.jpg" alt="INTACH '22">
-  </div>
-</div>
 
 <hr class="silver-line" />
 
