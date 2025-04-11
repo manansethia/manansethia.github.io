@@ -10,6 +10,12 @@ author_profile: true
     border: none !important;
     outline: none !important;
   }
+
+  .sidebar {
+    position: relative;
+    z-index: 10;
+  }  
+
   .quiz-episodes-scroll {
     overflow-x: auto;
     overflow-y: hidden;
@@ -18,6 +24,7 @@ author_profile: true
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    z-index: 0;
   }
 
   .quiz-episodes-scroll::-webkit-scrollbar {
@@ -91,8 +98,6 @@ author_profile: true
     margin-bottom: 12px;
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
-    position: relative;
-    z-index: -2;
   }
 
   .achievement-section.visible {
