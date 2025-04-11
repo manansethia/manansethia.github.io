@@ -91,6 +91,7 @@ author_profile: true
     margin-bottom: 12px;
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
+    position: relative;
     z-index: -2;
   }
 
