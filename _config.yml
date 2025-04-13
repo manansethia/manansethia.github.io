@@ -12,7 +12,7 @@ title                    : "Manan's Homepage"
 title_separator          : "-"
 name                     : &name "Manan Sethia"
 description              : &description "personal description"
-url                      : https://manansethia.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://manansethia.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "manansethia/manansethia.github.io"
 
