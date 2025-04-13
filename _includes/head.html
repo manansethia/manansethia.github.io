@@ -3,6 +3,19 @@
 <meta charset="utf-8">
 
 {% include seo.html %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Manan Sethia",
+  "url": "https://manansethia.github.io",
+  "sameAs": [
+    "https://github.com/manansethia",
+    "https://linkedin.com/in/manan-sethia/"
+  ]
+}
+</script>
+
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
