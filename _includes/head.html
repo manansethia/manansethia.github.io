@@ -5,7 +5,7 @@
 {% include seo.html %}
 
 <!-- ✅ Canonical Tag -->
-<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' | absolute_url }}" />
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}"{% if page.url == "/" %} itemprop="url"{% endif %}>
 
 <!-- ✅ JSON-LD Schema with custom domain -->
 <script type="application/ld+json">
