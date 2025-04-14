@@ -12,7 +12,7 @@ author_profile: true
   }
 
   .sidebar {
-    position: relative;
+    position: sticky;
     z-index: 10;
   }  
 
