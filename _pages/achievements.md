@@ -12,7 +12,6 @@ author_profile: true
   }
 
   .sidebar {
-    position: sticky;
     z-index: 10;
   }  
 
