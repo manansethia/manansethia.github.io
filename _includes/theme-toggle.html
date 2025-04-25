@@ -2,48 +2,68 @@
 <style>
     .theme-toggle {
       position: fixed;
-      bottom: 20px;
+      bottom: 60px; /* push above footer */
       right: 20px;
-      z-index: 1000;
+      z-index: 10000;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 10px;
-      border-radius: 50%;
-      transition: transform 0.3s ease;
+      padding: 18px;
+      margin-top: 18px;
+      width: 60px;
+      height: 60px;
     }
   
     .theme-toggle:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   
-    .sun-moon-container {
-      position: relative;
-      width: 24px;
-      height: 24px;
+    .theme-toggle .sun-moon-container {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(220, 140, 20);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.4s ease;
     }
   
     .icon {
-      position: absolute;
-      top: 0;
-      left: 0;
       fill: none;
       stroke: currentColor;
       stroke-width: 2;
-      width: 24px;
-      height: 24px;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      width: 28px;
+      height: 28px;
+      transition: opacity 0.3s ease, transform 0.3s ease, stroke 0.3s ease;
       opacity: 0;
       transform: scale(0.8);
     }
   
-    .icon.sun.visible,
+    .icon.sun.visible {
+      opacity: 1;
+      transform: scale(1);
+      stroke: #fef9e7;
+    }
+  
     .icon.moon.visible {
       opacity: 1;
       transform: scale(1);
+      stroke: #ccc;
     }
   
-    /* Dark theme styles */
+    .dark-mode .theme-toggle .sun-moon-container {
+      background-color: #333;
+    }
+  
+    .dark-mode .icon.sun {
+      stroke: #fef9e7;
+    }
+  
+    .dark-mode .icon.moon {
+      stroke: #ccc;
+    }
+  
     .dark-mode {
       background-color: #121212;
       color: #ffffff;
