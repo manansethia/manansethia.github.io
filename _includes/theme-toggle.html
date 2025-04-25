@@ -82,8 +82,12 @@
         background: transparent;
     }
 
-    .dark-mode .greedy-nav a:hover, .dark-mode .greedy-nav .visible-links a:before{
+    .dark-mode .greedy-nav a:hover{
         color:#ffdc9b
+    }
+
+    .dark-mode .greedy-nav .visible-links a:before{
+        background: #ffdc9b;
     }
   
     .dark-mode a {
@@ -129,6 +133,12 @@
     .dark-mode .site-nav a {
       color: #ffffff;
     }
+
+    .dark-mode ::selection {
+      background: #e5e5e5;
+      color: #000;
+    }
+
   </style>
   
   <script>
