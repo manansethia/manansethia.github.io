@@ -1,0 +1,127 @@
+<!-- BEGIN THEME TOGGLE BUTTON -->
+<style>
+    .theme-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+  
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+  
+    .sun-moon-container {
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+  
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      width: 24px;
+      height: 24px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  
+    .icon.sun.visible,
+    .icon.moon.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+    /* Dark theme styles */
+    .dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+  
+    .dark-mode a {
+      color: #90cdf4;
+    }
+  
+    .dark-mode .page__footer {
+      background-color: #1a1a1a;
+    }
+  
+    .dark-mode .masthead,
+    .dark-mode .site-nav,
+    .dark-mode .page__content {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+  
+    .dark-mode .site-title,
+    .dark-mode .site-nav a {
+      color: #ffffff;
+    }
+  </style>
+  
+  <script>
+    (function() {
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+    <div class="sun-moon-container">
+      <svg class="sun icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"></circle>
+        <line x1="12" y1="1" x2="12" y2="3"></line>
+        <line x1="12" y1="21" x2="12" y2="23"></line>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+        <line x1="1" y1="12" x2="3" y2="12"></line>
+        <line x1="21" y1="12" x2="23" y2="12"></line>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+      </svg>
+      <svg class="moon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </div>
+  </button>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const themeToggle = document.getElementById('theme-toggle');
+      const sun = document.querySelector('.sun');
+      const moon = document.querySelector('.moon');
+  
+      function updateIcons() {
+        const isDark = document.documentElement.classList.contains('dark-mode');
+        sun.classList.toggle('visible', !isDark);
+        moon.classList.toggle('visible', isDark);
+      }
+  
+      updateIcons();
+  
+      themeToggle.addEventListener('click', function () {
+        document.documentElement.classList.toggle('dark-mode');
+        localStorage.setItem(
+          'theme',
+          document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light'
+        );
+        updateIcons();
+      });
+    });
+</script>
+  <!-- END THEME TOGGLE BUTTON -->
+  
