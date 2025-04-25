@@ -1,6 +1,6 @@
 ---
 permalink: /certifications/
-title: "Certifications"
+title: "📜 Certifications"
 author_profile: true
 ---
 

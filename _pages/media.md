@@ -1,6 +1,6 @@
 ---
 permalink: /media/
-title: "In Media"
+title: "📰 In Media"
 author_profile: true
 ---
 

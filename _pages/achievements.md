@@ -1,6 +1,6 @@
 ---
 permalink: /achievements/
-title: "Achievements"
+title: "🏆 Achievements"
 author_profile: true
 ---
 
@@ -46,6 +46,16 @@ author_profile: true
     text-decoration: none;
   }
 
+  .episode-card-news {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+  }
+
   .episode-card img {
     height: 180px;
     flex: 0 0 auto;
@@ -69,6 +79,20 @@ author_profile: true
     margin-top: 0.4em;
     font-size: 0.9em;
     color:rgb(232, 113, 28);
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    align-items: center;
+    text-decoration: none !important;
+    outline: none !important;
+  }
+
+  .episode-card-news span {
+    margin-top: 0.4em;
+    font-size: 0.9em;
+    color: #000000;
     font-weight: 600;
     text-align: center;
     overflow: hidden;
@@ -168,6 +192,7 @@ author_profile: true
     outline: none !important;
     flex: 0 0 auto;
     flex-direction: column;
+    color: #000000
   }
 
   .achievement-images-text img {
@@ -195,7 +220,7 @@ author_profile: true
   hr.silver-line {
     border: none;
     height: 1.5px;
-    background-color: rgb(164, 117, 76);
+    background-color: #c07300;
     margin: 0 0 20px 0;
   }
 
@@ -218,7 +243,8 @@ author_profile: true
   }
 
   .dashed-line {
-    border-top: 1px dashed rgb(230, 193, 148);
+    border-top: 1px dashed;
+    color: #c07300;
     width: 100%;
     margin-top: 20px; 
   }
@@ -241,7 +267,7 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/hiq.jpeg" alt="Heritage India Quiz">
-    <span style="color: #000000">Team Picture: Left to right<br> Manan Sethia, Shreeansh Naidu, Atharv Sharma</span>
+    <span>Team Picture: Left to right<br> Manan Sethia, Shreeansh Naidu, Atharv Sharma</span>
   </div>
 
   <div class="dashed-line"></div>
@@ -298,9 +324,9 @@ author_profile: true
   <p>A total of thirty teams took part in the preliminary round, and then six teams were selected for the stage round. From these, one team per region advanced to the National Rounds in New Delhi.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <div class="episode-card">
+    <div class="episode-card-news">
       <img src="/images/hiqn.jpeg" alt="Regional Rounds" style="width: 335px;">
-      <span style="color: #000000">News Coverage</span>
+      <span>News Coverage</span>
     </div>
   </div>
 </div>
@@ -335,7 +361,7 @@ author_profile: true
 
   <div class="achievement-images-text">
     <img src="/images/sc.jpeg" alt="FIQ '21">
-    <span style="color: #000000">Felicitation of State Champions in Mumbai</span>
+    <span>Felicitation of State Champions in Mumbai</span>
   </div>
 
   <div class="dashed-line"></div>

@@ -1,6 +1,6 @@
 ---
 permalink: /education/
-title: "Education"
+title: "🎓 Education"
 author_profile: true
 ---
 
@@ -56,7 +56,7 @@ author_profile: true
   .edu-divider {
     border: none;
     height: 1.5px;
-    background-color:rgb(122, 91, 63);
+    background-color: #c07300;
     margin: 0px;
   }
 </style>

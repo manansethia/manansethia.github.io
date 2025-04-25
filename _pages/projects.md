@@ -1,6 +1,6 @@
 ---
 permalink: /projects/
-title: "Projects"
+title: "🧰 Projects"
 author_profile: true
 ---
 ## AIRAVAT 🐘  

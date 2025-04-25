@@ -1,6 +1,6 @@
 ---
 permalink: /skills/
-title: "Skills"
+title: "🛠️ Skills"
 author_profile: true
 ---
 
