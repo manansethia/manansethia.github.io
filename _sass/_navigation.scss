@@ -83,8 +83,8 @@
       line-height: 1.5;
       text-align: center;
       text-decoration: none;
-      color: #000000;
-      border: 1px solid #000000;
+      color: #4b2d00;
+      border: 1px solid #4b2d00;
       border-radius: 0;
 
       &:hover {
@@ -97,7 +97,7 @@
       }
 
       &.disabled {
-        color: #000000;
+        color: #4b2d00;
         pointer-events: none;
         cursor: not-allowed;
       }
@@ -175,7 +175,7 @@
 .greedy-nav {
   position: relative;
   min-width: 250px;
-  background: #c07300;
+  background: #eea316;
 
   a {
     display: block;
@@ -257,9 +257,9 @@
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 2px solid #000000;
+    border: 2px solid #4b2d00;
     border-radius: 10px;
-    background: #c07300;
+    background: #eea316;
     box-shadow: 0 0 10px rgba(#000, 0.25);
 
     a {
@@ -280,7 +280,7 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #000000 transparent;
+      border-color: #4b2d00 transparent;
       display: block;
       z-index: 0;
     }
@@ -293,14 +293,14 @@
       width: 0;
       border-style: solid;
       border-width: 0 10px 10px;
-      border-color: #000000 transparent;
+      border-color: #4b2d00 transparent;
       display: block;
       z-index: 1;
     }
 
     li {
       display: block;
-      border-bottom: 1.5px solid #000000;
+      border-bottom: 1.5px solid #4b2d00;
 
       &:last-child {
         border-bottom: none;
