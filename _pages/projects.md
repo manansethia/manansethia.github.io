@@ -222,4 +222,5 @@ author_profile: true
 </div>
 
 ### MRIDA PDF
-<iframe src="/_pages/pdf-view.html" width="100%" height="500px" style="border: 3px solid black;"></iframe>
+<iframe src="/_pages/pdf-view.html" width="100%" height="500px" class="pdf-frame"></iframe>
+
