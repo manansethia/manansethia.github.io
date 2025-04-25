@@ -2,39 +2,37 @@
 <style>
     .theme-toggle {
       position: fixed;
-      bottom: 60px; /* push above footer */
+      bottom: 60px;
       right: 20px;
-      z-index: 10000;
+      z-index: 1000;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 18px;
-      margin-top: 18px;
-      width: 60px;
-      height: 60px;
-    }
-  
-    .theme-toggle:hover {
-      transform: scale(1.05);
+      padding: 0;
+      width: 72px;
+      height: 72px;
     }
   
     .theme-toggle .sun-moon-container {
       width: 100%;
       height: 100%;
-      background-color: rgb(220, 140, 20);
-      border-radius: 16px;
+      background-color: rgb(220, 140, 20); /* warm sun bg */
+      border-radius: 16px; /* rounded square */
+      border: 2px solid #999;
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-color 0.4s ease;
+      transition: background-color 0.4s ease, border-color 0.3s ease;
     }
   
     .icon {
+      position: absolute;
       fill: none;
       stroke: currentColor;
       stroke-width: 2;
-      width: 28px;
-      height: 28px;
+      width: 42px;
+      height: 42px;
       transition: opacity 0.3s ease, transform 0.3s ease, stroke 0.3s ease;
       opacity: 0;
       transform: scale(0.8);
@@ -54,6 +52,7 @@
   
     .dark-mode .theme-toggle .sun-moon-container {
       background-color: #333;
+      border-color: #666;
     }
   
     .dark-mode .icon.sun {
@@ -64,6 +63,7 @@
       stroke: #ccc;
     }
   
+    /* Dark theme site styles */
     .dark-mode {
       background-color: #121212;
       color: #ffffff;
@@ -91,7 +91,7 @@
   </style>
   
   <script>
-    (function() {
+    (function () {
       try {
         if (localStorage.getItem('theme') === 'dark') {
           document.documentElement.classList.add('dark-mode');
@@ -120,28 +120,28 @@
   </button>
   
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const themeToggle = document.getElementById('theme-toggle');
-      const sun = document.querySelector('.sun');
-      const moon = document.querySelector('.moon');
+    document.addEventListener("DOMContentLoaded", function () {
+      const themeToggle = document.getElementById("theme-toggle");
+      const sun = document.querySelector(".sun");
+      const moon = document.querySelector(".moon");
   
       function updateIcons() {
-        const isDark = document.documentElement.classList.contains('dark-mode');
-        sun.classList.toggle('visible', !isDark);
-        moon.classList.toggle('visible', isDark);
+        const isDark = document.documentElement.classList.contains("dark-mode");
+        sun.classList.toggle("visible", !isDark);
+        moon.classList.toggle("visible", isDark);
       }
   
       updateIcons();
   
-      themeToggle.addEventListener('click', function () {
-        document.documentElement.classList.toggle('dark-mode');
+      themeToggle.addEventListener("click", function () {
+        document.documentElement.classList.toggle("dark-mode");
         localStorage.setItem(
-          'theme',
-          document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light'
+          "theme",
+          document.documentElement.classList.contains("dark-mode") ? "dark" : "light"
         );
         updateIcons();
       });
     });
-</script>
+  </script>
   <!-- END THEME TOGGLE BUTTON -->
   
