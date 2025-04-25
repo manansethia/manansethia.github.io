@@ -2,23 +2,23 @@
 <style>
     .theme-toggle {
       position: fixed;
-      bottom: 60px;
+      bottom: 100px;
       right: 20px;
       z-index: 1000;
       background: none;
       border: none;
       cursor: pointer;
       padding: 0;
-      width: 72px;
-      height: 72px;
+      width: 55px;
+      height: 55px;
     }
   
     .theme-toggle .sun-moon-container {
       width: 100%;
       height: 100%;
-      background-color: rgb(220, 140, 20); /* warm sun bg */
+      background-color: rgb(238, 163, 22); /* warm sun bg */
       border-radius: 16px; /* rounded square */
-      border: 2px solid #999;
+      border: 3px solid #c78400;
       position: relative;
       display: flex;
       align-items: center;
@@ -28,11 +28,12 @@
   
     .icon {
       position: absolute;
+      top: 12.25%;
       fill: none;
       stroke: currentColor;
       stroke-width: 2;
-      width: 42px;
-      height: 42px;
+      width: 37px;
+      height: 37px;
       transition: opacity 0.3s ease, transform 0.3s ease, stroke 0.3s ease;
       opacity: 0;
       transform: scale(0.8);
@@ -51,8 +52,8 @@
     }
   
     .dark-mode .theme-toggle .sun-moon-container {
-      background-color: #333;
-      border-color: #666;
+      background-color: #3e3e3e;
+      border-color: #959595;
     }
   
     .dark-mode .icon.sun {
@@ -65,23 +66,23 @@
   
     /* Dark theme site styles */
     .dark-mode {
-      background-color: #121212;
-      color: #ffffff;
+      background-color: #020202;
+      color: #fdfdfd;
     }
   
     .dark-mode a {
-      color: #90cdf4;
+      color: #fdfdfd;
     }
   
     .dark-mode .page__footer {
-      background-color: #1a1a1a;
+      background-color: #020202;
     }
   
     .dark-mode .masthead,
     .dark-mode .site-nav,
     .dark-mode .page__content {
-      background-color: #1a1a1a;
-      color: #f0f0f0;
+      background-color: #020202;
+      color: #fdfdfd;
     }
   
     .dark-mode .site-title,
