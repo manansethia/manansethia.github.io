@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Manan's Homepage"
+title: "🙏 Namaste! "
 author_profile: true
 ---
 
