@@ -51,6 +51,13 @@
   }
 }
 
+.navicon, .navicon:before, .navicon:after {
+  color: #663d00;
+}
+
+.close .navicon{
+  background: transparent;
+}
 
 /*
    Post pagination navigation links
