@@ -141,7 +141,6 @@ author_profile: true
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
     position: relative;
-    z-index: -10;
   }
 
   .achievement-section.visible {
