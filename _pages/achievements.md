@@ -46,16 +46,6 @@ author_profile: true
     text-decoration: none;
   }
 
-  .episode-card-news {
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    text-align: center;
-    text-decoration: none;
-  }
-
   .episode-card img {
     height: 180px;
     flex: 0 0 auto;
@@ -87,6 +77,35 @@ author_profile: true
     align-items: center;
     text-decoration: none !important;
     outline: none !important;
+  }
+
+  .episode-card-news {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .episode-card-news img {
+    height: 180px;
+    flex: 0 0 auto;
+    border-radius: 10px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+
+  .episode-card-news img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
 
   .episode-card-news span {
