@@ -246,7 +246,7 @@ author_profile: true
 
 <style>
   .matrix-heading {
-    margin-top: 10px;
+    margin-top: 35px;
   }
 
   .matrix-text ul {
@@ -279,8 +279,8 @@ author_profile: true
   .matrix-image span {
     margin-top: 0.4em;
     font-size: 0.9em;
-    color: rgb(47, 28, 0);
-    font-weight: 400;
+    color: rgb(136, 81, 0);
+    font-weight: 600;
     text-align: center;
     word-wrap: break-word;
   }
