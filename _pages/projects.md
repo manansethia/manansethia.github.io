@@ -31,10 +31,15 @@ author_profile: true
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px; /* Add spacing in mobile view */
+    transition: transform 0.3s ease;
   }
 
   .airavat-text ul {
     margin-top: 10px;
+  }
+
+  .airavat-image img:hover {
+    transform: scale(1.05);
   }
 
   @media (min-width: 768px) {
@@ -55,6 +60,7 @@ author_profile: true
     }
     .airavat-image img {
       margin-bottom: 0; /* Remove space in desktop */
+      transition: transform 0.3s ease;
     }
   }
 </style>
@@ -90,10 +96,15 @@ author_profile: true
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px; /* Add spacing in mobile view */
+    transition: transform 0.3s ease;
   }
 
   .conos-text ul {
     margin-top: 10px;
+  }
+
+  .conos-image img:hover {
+    transform: scale(1.05);
   }
 
   @media (min-width: 768px) {
@@ -114,6 +125,7 @@ author_profile: true
     }
     .conos-image img {
       margin-bottom: 0; /* Remove space in desktop */
+      transition: transform 0.3s ease;
     }
   }
 </style>
@@ -158,6 +170,7 @@ author_profile: true
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px; /* Add spacing in mobile view */
+    transition: transform 0.3s ease;
   }
 
   .ai-label {
@@ -173,6 +186,10 @@ author_profile: true
     width: 100%;
     height: 750px;
     border: none;
+  }
+
+  .mrida-image img:hover {
+    transform: scale(1.05);
   }
 
   @media (min-width: 768px) {
@@ -191,6 +208,7 @@ author_profile: true
       text-align: centre;
     }
     .mrida-image img {
+      transition: transform 0.3s ease;
       margin-bottom: 0px; /* Remove spacing in desktop view */
     }
   }
@@ -224,21 +242,31 @@ author_profile: true
 ### MRIDA PDF
 <iframe src="/_pages/pdf-view.html" width="100%" height="500px" class="pdf-frame"></iframe>
 
+<h2 class="matrix-heading">MATRIX 🤖</h2>
 
-
-## MATRIX 🤖
 <style>
+  .matrix-heading {
+    margin-top: 10px;
+  }
+
   .matrix-text ul {
     margin-top: 10px;
   }
 
+  .matrix-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .matrix-image img {
-    max-width: auto;
     width: 75%;
     min-width: 335px;
     border-radius: 10px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
   }
@@ -248,20 +276,13 @@ author_profile: true
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
 
-  .matrix-image span{
+  .matrix-image span {
     margin-top: 0.4em;
     font-size: 0.9em;
-    color:rgb(47, 28, 0);
+    color: rgb(47, 28, 0);
     font-weight: 400;
     text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
     word-wrap: break-word;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none !important;
-    outline: none !important;
-    margin-top: 5px;
   }
 </style>
 
@@ -274,17 +295,17 @@ author_profile: true
   </ul>
 </div>
 
-<div class = "matrix-image">
+<div class="matrix-image">
   <img src="/images/handdrawn.png" alt="MATRIX Hand-drawn">
   <span>How I imagined it before starting to build it</span>
 </div>
 
-<div class = "matrix-image">
+<div class="matrix-image">
   <img src="/images/matrixday.png" alt="MATRIX Day">
   <span>Day Mode</span>
 </div>
 
-<div class = "matrix-image">
+<div class="matrix-image">
   <img src="/images/matrixnight.png" alt="MATRIX Night">
   <span>Night Mode</span>
 </div>
