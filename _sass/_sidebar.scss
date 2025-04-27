@@ -130,9 +130,10 @@
 }
 
 .sidebar .author__desktop {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 925px) {
     display: block;
   }
+  display: none;
 }
 
 .author__pronouns {
