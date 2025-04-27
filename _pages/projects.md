@@ -224,6 +224,8 @@ author_profile: true
 ### MRIDA PDF
 <iframe src="/_pages/pdf-view.html" width="100%" height="500px" class="pdf-frame"></iframe>
 
+
+
 ## MATRIX 🤖
 <style>
   .matrix-text ul {
@@ -232,28 +234,38 @@ author_profile: true
 
   .matrix-image img {
     max-width: auto;
-    height: auto;
+    width: 75%;
+    min-width: 335px;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .matrix-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
 
   .matrix-image span{
     margin-top: 0.4em;
     font-size: 0.9em;
-    color: #000000;
-    font-weight: 200;
+    color:rgb(47, 28, 0);
+    font-weight: 400;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     word-wrap: break-word;
     align-items: center;
+    justify-content: center;
     text-decoration: none !important;
     outline: none !important;
+    margin-top: 5px;
   }
 </style>
 
-<div class="matrix-test">
+<div class="matrix-text">
   <ul>
     <li><b>MATRIX</b> is a speech-to-speech and text-to-speech voice assistant built using Python, Tkinter, and Microsoft Voice Pack.</li>
     <li>I programmed and built it when I was in 8th grade, referring to various videos on rule-based chatbots, and designed the complete Tkinter window by myself.</li>
