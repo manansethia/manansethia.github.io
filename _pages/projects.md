@@ -237,6 +237,20 @@ author_profile: true
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  .matrix-image span{
+    margin-top: 0.4em;
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: 200;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    align-items: center;
+    text-decoration: none !important;
+    outline: none !important;
+  }
 </style>
 
 <div class="matrix-test">
