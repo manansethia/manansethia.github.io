@@ -224,3 +224,41 @@ author_profile: true
 ### MRIDA PDF
 <iframe src="/_pages/pdf-view.html" width="100%" height="500px" class="pdf-frame"></iframe>
 
+## MATRIX 🤖
+<style>
+  .matrix-text ul {
+    margin-top: 10px;
+  }
+
+  .matrix-image img {
+    max-width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="matrix-test">
+  <ul>
+    <li><b>MATRIX</b> is a speech-to-speech and text-to-speech voice assistant built using Python, Tkinter, and Microsoft Voice Pack.</li>
+    <li>I programmed and built it when I was in 8th grade, referring to various videos on rule-based chatbots, and designed the complete Tkinter window by myself.</li>
+    <li>It also supported text-to-text interaction, featuring a quick-glance home screen with weather, top 5 tech news, time and date, my location, and additional windows for other overviews.</li>
+    <li>I might have been a little too inspired by <i>Iron Man</i> and <i>The Matrix</i> movies, lol.</li>
+  </ul>
+</div>
+
+<div class = "matrix-image">
+  <img src="/images/handdrawn.png" alt="MATRIX Hand-drawn">
+  <span>How I imagined it before starting to build it</span>
+</div>
+
+<div class = "matrix-image">
+  <img src="/images/matrixday.png" alt="MATRIX Day">
+  <span>Day Mode</span>
+</div>
+
+<div class = "matrix-image">
+  <img src="/images/matrixnight.png" alt="MATRIX Night">
+  <span>Night Mode</span>
+</div>
