@@ -279,7 +279,7 @@ author_profile: true
   .matrix-image span {
     margin-top: 0.4em;
     font-size: 0.9em;
-    color: rgb(136, 81, 0);
+    color: rgb(152, 91, 0);
     font-weight: 600;
     text-align: center;
     word-wrap: break-word;
