@@ -4,4 +4,4 @@ title: "🛠️ Skills"
 author_profile: true
 ---
 
-Test
+Details will be added shortly.

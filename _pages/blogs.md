@@ -4,4 +4,4 @@ title: "Blogs"
 author_profile: true
 ---
 
-Test
+Details will be added shortly.
