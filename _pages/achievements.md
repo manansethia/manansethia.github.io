@@ -271,6 +271,69 @@ author_profile: true
 </style>
 
 <!-- Achievements Section -->
+<div class="achievement-section">
+  <h2>👨‍💻 Winner of Code 2 Champions - Innovritti 1.0</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Institute of Technology and Management, Raipur</em><br>
+    🗓️ <em>April 2025</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🌏 Winner of Earth Day Quiz 2025 - NEHU Shillong</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by North Eastern Hill University Shillong</em><br>
+    🗓️ <em>April 2025</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>👨‍💻 All India Rank 10 - HPE Codewars 2025 India Edition</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Hewlett Packard Enterprise and Codingal</em><br>
+    🗓️ <em>April 2025</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>✉️ Selective Invitation - Harvard Undergraduate Ventures-TECH Summer Program 2025</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Technology and Entrepreneurship Center at Harvard</em><br>
+    🗓️ <em>February 2025</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🇮🇳 Qualified for National Camp - Indian National Earth Science Olympiad 2025</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Geological Society of India</em><br>
+    🗓️ <em>March 2025</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🦋 Selected for International Quantum Research - BeyondQuantum 2025</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by ThinkingBeyond</em><br>
+    🗓️ <em>March 2025</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
 
 <hr class="silver-line" />
 
@@ -279,7 +342,7 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Issued by Association for Computing Machinery, Pune, India</em><br>
     🗓️ <em>January 2025</em><br>
-    📍 <em>Raipur, Chhattisgarh</em>
+    📍 <em>Online</em>
   </div>
 </div>
 
