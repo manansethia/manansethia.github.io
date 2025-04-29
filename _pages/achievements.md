@@ -272,6 +272,203 @@ author_profile: true
 
 <!-- Achievements Section -->
 
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🤖 Qualified for Stage 2 - The India Artificial Intelligence Olympiad</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Association for Computing Machinery, Pune, India</em><br>
+    🗓️ <em>January 2025</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🎖️ Felicitated as One of India's Esteemed International Olympiad Medalists of 2024</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Homi Bhabha Centre for Science Education and Tata Institute of Fundamental Research.</em><br>
+    🗓️ <em>December 2024</em><br>
+    📍 <em>Mumbai, Maharashtra</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>👨‍💻 Zonal Topper - Zonal Computing Olympiad</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Indian Association for Research in Computing Science</em><br>
+    🗓️ <em>December 2024</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>📱 Runner-Up of Nagpur region - TCS InQuizitive 2024</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Tata Consultancy Services</em><br>
+    🗓️ <em>November 2024</em><br>
+    📍 <em>Nagpur, Maharashtra</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>👨‍💻 Winner of Coding Competition - Nexus 2K24</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Shri Shankaracharya Institute of Professional Management and Technology</em><br>
+    🗓️ <em>November 2024</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>👨‍💻 Runner-up of Technical Quiz - Nexus 2K24</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Shri Shankaracharya Institute of Professional Management and Technology</em><br>
+    🗓️ <em>November 2024</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🧠 Winner of General Knowledge Quiz - Mindspark 2024</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Brighton International School</em><br>
+    🗓️ <em>October 2024</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🏅 Special Mention (United Nations General Assembly) - KPS Model United Nations 3.0</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
+    🗓️ <em>October 2024</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🌏 International Earth Science Olympiad 2024</h2>
+  <div class="achievement-meta">
+    🏢 <em>Organized by the International Geoscience Education Organisation (IGEO) </em><br>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>💳 Zonal Winner - National Financial Literacy Quiz 2024</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Securities and Exchange Board of India (SEBI)</em><br>
+    🗓️ <em>May 2024</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🧪 Certificate of High Distinction - International Chemistry Quiz 2023</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Royal Australian Chemical Institute</em><br>
+    🗓️ <em>March 2024</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>💡 Selected in the First Stage - ATL Inspire Manak Awards 2023-24</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Department of Science and Technology (DST) Government of India</em><br>
+    🗓️ <em>February 2024</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>💡 Idea selected for the National Rounds - Junior Smart India Hackathon 2024</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Ministry of Education's Innovation Cell Government of India</em><br>
+    🗓️ <em>January 2024</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🛕 Bhubaneswar region Runner-Up - CBSE Heritage India Quiz 2023</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Central Board of Secondary Education</em><br>
+    🗓️ <em>December 2023</em><br>
+    📍 <em>Bhubaneswar, Odisha</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>👨‍💻 Winner of Technical Quiz - Nexus 2K23</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Shri Shankaracharya Institute of Professional Management and Technology</em><br>
+    🗓️ <em>November 2023</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🥎 Ultimate Sports Quiz</h2>
+  <div class="achievement-meta">
+    🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. – Jiohotstar.</em><br>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🤖 Winner - Data and AI Talks 2023</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by igebra.ai</em><br>
+    🗓️ <em>August 2023</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🧠 All India Top 5 - Mind Wars National Academic Championship 2023</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Zee Entertainment Enterprises Ltd.</em><br>
+    🗓️ <em>May 2023</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
 <div class="achievement-section">
   <h2>🛕 CBSE Heritage India Quiz 2022</h2>
   
@@ -354,6 +551,17 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
+  <h2>🏆 Winners of Paryavaran Paheli ECO Quiz - KPS Intelligence Fest 2022</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
+    🗓️ <em>November 2022</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
   <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
@@ -363,6 +571,17 @@ author_profile: true
   <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
   <div class="achievement-images">
     <img src="/images/intach.jpg" alt="INTACH '22">
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🏆 Winners of Senior Group Quiz - Shine COSMO 2022</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by The Rotary Club of Raipur</em><br>
+    🗓️ <em>September 2022</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
   </div>
 </div>
 
@@ -430,6 +649,17 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
+  <h2>🍀 Certificate of Merit - Teri Green Olympiad 2019</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by The Energy and Resources Institute</em><br>
+    🗓️ <em>2019</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
   <h2>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
@@ -448,6 +678,28 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
+  <h2>🌒 All India Rank 23 - All India Astronomy Test 2018-2019</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by COSMOS Astronomy Education and Research</em><br>
+    🗓️ <em>January 2019</em><br>
+    📍 <em>Online</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🐝 Winner - Interschool Spell Bee Excella Fest 2018</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Chhattisgarh Public School</em><br>
+    🗓️ <em>October 2018</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
   <h2>🐼 Zonal 1st Runner-Up – Junior Wild Wisdom Quiz 2018</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
@@ -460,5 +712,16 @@ author_profile: true
     <img src="/images/wwq181.jpeg" alt="WWQ '18">
     <img src="/images/wwq182.jpeg" alt="WWQ '18">
     <img src="/images/wwq183.jpeg" alt="WWQ '18">
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🌏 2nd Runner-Up - Quiz Premier League 2.0 Earth Day</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
+    🗓️ <em>2016</em><br>
+    📍 <em>Raipur, Chhattisgarh</em>
   </div>
 </div>
