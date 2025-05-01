@@ -787,4 +787,9 @@ author_profile: true
     🗓️ <em>2016</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>This was the first quiz I ever participated in. I took part with my father as my partner when I was in 3rd grade, it was a family quiz. I really enjoyed it and found out about it through a school notification.</p>
+  <p>The key moment I remember from this quiz is when a buzzer question was asked about the Rafflesia flower. I couldn’t recall its name, but I still pressed the buzzer and said, ‘The name sounds something like this but it has no stem and no roots.’ I was even awarded with the points too lol.</p>
+  <div class="achievement-images">
+    <img src="/images/qpl.jpeg" alt="QPL 2.0">
+  </div>
 </div>
