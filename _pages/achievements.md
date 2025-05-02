@@ -528,6 +528,8 @@ author_profile: true
     🗓️ <em>May 2023</em><br>
     📍 <em>Online</em>
   </div>
+  <p>Mind Wars was a platform supported by Zee5 where anyone could play quizzes on various topics and learn something new. It also hosted various contests with exciting prizes.</p>
+  <p>This particular competition was a one-of-a-kind online MCQ-based test, where the top 2 rankers won a trip to Thailand. I don’t remember my exact rank, but I was in the top 5.</p>
 </div>
 
 <hr class="silver-line" />
@@ -599,7 +601,6 @@ author_profile: true
     🗓️ <em>December 2022</em><br>
     📍 <em>Bhubaneswar, Odisha</em>
   </div>
-
   <p>We emerged as the Bhubaneswar Zone Champions after qualifying through the preliminary round and winning the stage round.</p>
   <p>A total of thirty teams took part in the preliminary round, and then six teams were selected for the stage round. From these, one team per region advanced to the National Rounds in New Delhi.</p>
 
@@ -620,6 +621,8 @@ author_profile: true
     🗓️ <em>November 2022</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>Once again, with my quiz partner Atharv, we took part in our school's interschool fest quiz competition and emerged as the winners in the senior category.</p>
+  <p>Several teams from various schools in Raipur participated in the prelims, and six teams were selected for the on-stage finals.</p>
 </div>
 
 <hr class="silver-line" />
@@ -631,6 +634,7 @@ author_profile: true
     🗓️ <em>October 2022</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>The INTACH Heritage Quiz is an annual national-level quiz competition based on organized by the Indian National Trust for Art and Cultural Heritage (INTACH).</p>
   <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
   <div class="achievement-images">
     <img src="/images/intach.jpg" alt="INTACH '22">
@@ -646,6 +650,8 @@ author_profile: true
     🗓️ <em>September 2022</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>Shine COSMO is an interschool event conducted by the Rotary Club of Raipur and hosted by Maharaja Agrasen International College.</p>
+  <p>Partnering with my classmate and friend Atharv Sharma, we emerged as the champions of the quiz competition, which saw participation from over 30 schools.</p>
 </div>
 
 <hr class="silver-line" />
@@ -718,6 +724,9 @@ author_profile: true
     🗓️ <em>2019</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>The TERI Green Olympiad is an annual environmental examination organized by The Energy and Resources Institute (TERI), a New Delhi-based research institute.</p>
+  <p>Initiated in 1999, the olympiad is designed to assess students for their knowledge on enviornmental issues and sustainable development.</p>
+  <p>Over 2,000 schools participate each year, and I earned the Certificate of Merit when I was in 6th grade.</p>
 </div>
 
 <hr class="silver-line" />
@@ -730,7 +739,7 @@ author_profile: true
     📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
-  <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up.</p>
+  <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up. Back-to-back podium finishes by our team!</p>
   <div class="achievement-images">
     <img src="/images/wwq191.jpg" alt="WWQ '19">
     <img src="/images/wwq192.jpg" alt="WWQ '19">
@@ -747,6 +756,9 @@ author_profile: true
     🗓️ <em>January 2019</em><br>
     📍 <em>Online</em>
   </div>
+  <p>I was always fascinated by the universe, the probabilites of finding life on another planets, is our life same as some other alien's life etc and this fascination made me participate in this contest.</p>
+  <p>It was a computer based contest and I took part in it through my school.</p>
+  <p>Honestly, being in the top 25 of my category across the entire nation felt really, really cool to me at that time.</p>
 </div>
 
 <hr class="silver-line" />
@@ -758,6 +770,7 @@ author_profile: true
     🗓️ <em>October 2018</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>A spell bee + quiz fusion interschool competition hosted by Chhattisgarh Public School, I was in 5th grade when I participated in it.</p>
 </div>
 
 <hr class="silver-line" />
@@ -769,7 +782,7 @@ author_profile: true
     🗓️ <em>September 2018</em><br>
     📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
-  <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness.</p>
+  <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness. It is Asia's biggest wildlife quiz.</p>
   <p>In 5th grade, I participated alongside my teammate, Agriyan Maulik, who was then in 4th grade. The quiz featured teams from Chhattisgarh and Madhya Pradesh. Together, we achieved the position of Zonal 1st Runner-Up.</p>
   <div class="achievement-images">
     <img src="/images/wwq181.jpeg" alt="WWQ '18">
