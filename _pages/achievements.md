@@ -278,6 +278,10 @@ author_profile: true
     🗓️ <em>April 2025</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>Innovritti 1.0 was the first inter-college competition organized by ITM University, Raipur.</p>
+  <p>A handful of school students also participated in the contests (I was one of them).</p>
+  <p>I took part in the "Code 2 Champions" coding competition, which consisted of three rounds covering SQL mind maps, queries, and databases, with the final round including DSA integration. Over 20 individuals and teams participated, almost all of them college students.</p>
+  <p>I was the only school student in the competition and emerged as the champion, winning a prize of ₹3000.</p>
 </div>
 
 <hr class="silver-line" />
@@ -289,6 +293,8 @@ author_profile: true
     🗓️ <em>April 2025</em><br>
     📍 <em>Online</em>
   </div>
+  <p>This was an online quiz organized by North-Eastern Hill University, Shillong, which hosted the INESO Camp 2024.</p>
+  <p>The quiz saw around 200 participants from across India. The program also featured two insightful lectures by members of the Geological Society of India on Geothermal Energy and Green Hydrogen.</p>
 </div>
 
 <hr class="silver-line" />
@@ -300,6 +306,8 @@ author_profile: true
     🗓️ <em>April 2025</em><br>
     📍 <em>Online</em>
   </div>
+  <p>HPE CodeWars is a 3-hour online coding competition organized by Codingal on their platform.</p>
+  <p>Over 23,000 students participated, and I secured the 10th position, earning a keyboard as a prize.</p>
 </div>
 
 <hr class="silver-line" />
