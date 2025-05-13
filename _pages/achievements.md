@@ -319,6 +319,9 @@ author_profile: true
     🗓️ <em>February 2025</em><br>
     📍 <em>Online</em>
   </div>
+  <p>Harvard Undergraduate Ventures-TECH Summer Program is the premier high school innovation academy which provides students with hands-on experience by working with leading startups and mentorship from world-renowned CEOs, investors, and Harvard faculty.</p>
+  <p>I was identified by one of their partner organizations as a strong fit for the 2025 program.</p>
+  <p>I applied for the program but was not selected for the cohort.</p>
 </div>
 
 <hr class="silver-line" />
@@ -330,6 +333,8 @@ author_profile: true
     🗓️ <em>March 2025</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>For the second consecutive year, I qualified for the Indian National Camp for the International Earth Science Olympiad (IESO). Driven by my continued passion for Earth science, I chose to take the exam again in 2025 to challenge myself.</p>
+  <p>Since I had already represented India in IESO 2024, I was not eligible to be selected again for the international team.</p>
 </div>
 
 <hr class="silver-line" />
@@ -525,6 +530,10 @@ author_profile: true
     🗓️ <em>August 2023</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+  <p>Data and AI Talks 2023 was a flagship program organized by igebra.ai, a Delaware, US-based AI research, product development, and education company.</p>
+  <p>Over 10,000 students from 12 schools participated in the event, with the grand finale held at NH Goel School, Raipur.</p>
+  <p>Out of 10,000+ participants, 1,034 were selected for the qualifying rounds, 72 advanced to Level 1, and 12 to Level 2.</p>
+  <p>I emerged as the winner of Group C (Senior) and was awarded an iPad along with various other prizes from the event sponsors.</p>
 </div>
 
 <hr class="silver-line" />
