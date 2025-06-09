@@ -738,7 +738,7 @@ author_profile: true
   <h2>🍀 Certificate of Merit - Teri Green Olympiad 2019</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by The Energy and Resources Institute</em><br>
-    🗓️ <em>2019</em><br>
+    🗓️ <em>December 2019</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
   <p>The TERI Green Olympiad is an annual environmental examination organized by The Energy and Resources Institute (TERI), a New Delhi-based research institute.</p>
