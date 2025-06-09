@@ -145,12 +145,16 @@ author_profile: true
 </div>
 -->
 
-## MRIDA 🌱  
+<h2 class="mrida-heading">MATRIX 🤖</h2>
 ### Multipurpose Real-time Integrated Digital Analyzer  
 
 <style>
 
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+  .mrida-heading {
+    margin-top: 35px;
+  }
 
   .mrida-container {
     display: flex;
