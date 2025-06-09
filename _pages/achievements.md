@@ -767,7 +767,7 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>🌒 All India Rank 23 - All India Astronomy Test 2018-2019</h2>
+  <h2>🌒 All India Rank 23 - All India Astronomy Test 2018-19</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by COSMOS Astronomy Education and Research</em><br>
     🗓️ <em>January 2019</em><br>
