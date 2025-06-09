@@ -539,7 +539,7 @@ author_profile: true
   <p><strong>😆 Fun Fact:</strong> The team we defeated in the Semi-Finals (BHS Kolkata) were the lucky losers of the Semi Finals, and then went on to defeat us in the National Finals! Also, Tagore International was the second lucky loser of Zonal Finals.</p>
 
   <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
-    <img src="/images/yoda.png" style="height: 1em; vertical-align: middle;">
+    <img src="/images/yoda.png" style="height: 1.4em; vertical-align: middle;">
     <strong>Hmmm… the National Finale, for lucky losers it became.</strong>
   </div>
 
