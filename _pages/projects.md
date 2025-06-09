@@ -66,13 +66,12 @@ author_profile: true
 </style>
 
 <!-- Airavat Section -->
+<!--
 <div class="airavat-container">
-  <!-- Image (Above in Mobile, Side in Desktop) -->
   <div class="airavat-image">
     <img src="/images/airavat.png" alt="Airavat Image">
   </div>
 
-  <!-- Text Content -->
   <div class="airavat-text">
     <ul>
   	  <li>AIRAVAT is an upcoming project which will compute hyper-local weather using existing ground, weather balloon, and satellite data with the help of AI-based climate model tuning.</li>
@@ -80,6 +79,7 @@ author_profile: true
     </ul>
   </div>
 </div>
+-->
 
 ## Conputer OS 🪲  
 <style>
@@ -131,13 +131,12 @@ author_profile: true
 </style>
 
 <!-- Conputer OS Section -->
+<!--
 <div class="conos-container">
-  <!-- Image (Above in Mobile, Side in Desktop) -->
   <div class="conos-image">
     <img src="/images/con.png" alt="Conputer OS Image">
   </div>
 
-  <!-- Text Content -->
   <div class="conos-text">
     <ul>
       <li>A Debian-based personal operating system currently being developed by me with a Green Beetle as its logo and various system components named after Egyptian and Indian inspirations.</li>
@@ -145,6 +144,7 @@ author_profile: true
     </ul>
   </div>
 </div>
+-->
 
 ## MRIDA 🌱  
 ### Multipurpose Real-time Integrated Digital Analyzer  
