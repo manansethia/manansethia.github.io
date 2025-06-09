@@ -535,7 +535,13 @@ author_profile: true
   <h3>🥳 National Grand Finale - 2nd Runners-Up</h3>
 
   <p>National Grand Finale featured KPS Kamal Vihar (our team), BHS Kolkata, and Tagore International (VV), New Delhi.</p>
-  <p><strong>😆 Fun Fact:</strong> The team we defeated in the Semi-Finals (BHS Kolkata) were the lucky losers of the Semi Finals, and then went on to defeat us in the National Finals!</p>
+  <p>We scored 50 points and emerged as the National 2nd Runner-Ups.</p>
+  <p><strong>😆 Fun Fact:</strong> The team we defeated in the Semi-Finals (BHS Kolkata) were the lucky losers of the Semi Finals, and then went on to defeat us in the National Finals! Also, Tagore International was the second lucky loser of Zonal Finals.</p>
+
+  <div style="text-align: center; margin-top: 10px;">
+    <img src="https://cdn.emojis.com/emoji/yoda-yoga-ft4PUIN4Qb.png" alt="Yoda Yoga Emoji" style="height: 1em; vertical-align: middle;">
+    <strong>Hmmm… the National Finale, for lucky losers it became.</strong>
+  </div>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/final/1971301232/watch?search_query=ultimate+sports+quiz" class="episode-card">
