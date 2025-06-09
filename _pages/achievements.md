@@ -519,6 +519,18 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. – Jiohotstar.</em><br>
   </div>
+
+  <p>Ultimate Sports Quiz was the most premium sports quiz show of India, which wanted to foster "a little sporting culture in India" by engaging students not just as players but as knowledgeable sports enthusiasts.</p>
+  <p>The 2023 edition was the 2nd season of the quiz, and it featured the top 36 teams shortlisted through a selection test from across 4000 teams and 350 cities across the county.</p>
+  <p>This competition is also an endeavor to support grass root level sports development as the top three teams that reach the national finals will be awarded a total prize pool of INR 1 Crore approx.</p>
+  <p>The format of the quiz is modelled on the Olympic motto of – Citius, Altius, Fortius. The three rounds are designed to test speed and accuracy, depth of knowledge and ability to perform under pressure.</p>
+  <p>My partner Ameya Tamaskar and I represented our school in all the rounds, ultimately finishing as the National 2nd Runners-Up. We were awarded Apple M1 MacBook Airs, and our school received ₹10,00,000.</p>
+
+  <div class="achievement-images-text">
+    <img src="/images/usq.jpeg" alt="Ultimate Sports Quiz">
+  </div>
+
+
 </div>
 
 <hr class="silver-line" />
@@ -562,7 +574,7 @@ author_profile: true
   <p>The 2022 edition focused on the theme of India’s Freedom Movement, commemorating 75 years of independence under the Azadi Ka Amrit Mahotsav initiative.</p>
   <p>Tens of thousands of schools from across the country participated in this multi-stage competition, which began with an online qualifying round.</p>
   <p>Top-performing teams advanced through the regional rounds, with an average of over 30 teams competing in each region. The best among them moved on to the National Semi-Finals and Finals, held at Sardar Patel Vidyalaya, Lodi Estate, New Delhi.</p>
-  <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runners-Up and receiving a cash prize of ₹15,000.</p>
+  <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runner-Ups and receiving a cash prize of ₹15,000.</p>
 
   <div class="achievement-images-text">
     <img src="/images/hiq.jpeg" alt="Heritage India Quiz">
