@@ -814,7 +814,7 @@ author_profile: true
   <h2>🌏 2nd Runner-Up - Quiz Premier League 2.0 Earth Day</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
-    🗓️ <em>2016</em><br>
+    🗓️ <em>April 2016</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
   <p>This was the first quiz I ever participated in. I took part with my father as my partner when I was in 3rd grade, it was a family quiz. I really enjoyed it and found out about it through a school notification.</p>
