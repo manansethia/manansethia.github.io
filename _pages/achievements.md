@@ -544,6 +544,7 @@ author_profile: true
     </a>
   </div>
 
+  <div class="dashed-line"></div>
 
   <h3>📺 Semi-Final 1 Winners</h3>
 
@@ -557,6 +558,7 @@ author_profile: true
     </a>
   </div>
 
+  <div class="dashed-line"></div>
 
   <h3>📺 West Zone Final's Lucky Losers</h3>
 
@@ -577,6 +579,8 @@ author_profile: true
     </a>
   </div>
 
+  <div class="dashed-line"></div>
+
   <h3>📺 West Zone Preliminary Round Winner</h3>
 
   <div class="achievement-meta">
@@ -596,6 +600,7 @@ author_profile: true
     </a>
   </div>
 
+  <div class="dashed-line"></div>
 
   <h3>📝 One of the Top 9 teams from West Zone's Qualifying Test</h3>
 
@@ -610,7 +615,7 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card-news">
-      <img src="/images/usqqt.png" alt="Regional Rounds" style="width: 335px;">
+      <img src="/images/usqqt.png" alt="Regional Rounds" style="width: 335px; height: auto; max-height: 100%">
       <span>Top 9 Teams of West Zone</span>
     </div>
   </div>
