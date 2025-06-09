@@ -3,6 +3,8 @@ permalink: /projects/
 title: "🧰 Projects"
 author_profile: true
 ---
+
+<!--
 ## AIRAVAT 🐘  
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
 <style>
@@ -65,8 +67,6 @@ author_profile: true
   }
 </style>
 
-<!-- Airavat Section -->
-<!--
 <div class="airavat-container">
   <div class="airavat-image">
     <img src="/images/airavat.png" alt="Airavat Image">
@@ -81,6 +81,7 @@ author_profile: true
 </div>
 -->
 
+<!--
 ## Conputer OS 🪲  
 <style>
   .conos-container {
@@ -130,8 +131,6 @@ author_profile: true
   }
 </style>
 
-<!-- Conputer OS Section -->
-<!--
 <div class="conos-container">
   <div class="conos-image">
     <img src="/images/con.png" alt="Conputer OS Image">
