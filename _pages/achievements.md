@@ -530,7 +530,90 @@ author_profile: true
     <img src="/images/usq.jpeg" alt="Ultimate Sports Quiz">
   </div>
 
+  <div class="dashed-line"></div>
 
+  <h3>🥳 National Grand Finale - 2nd Runners-Up</h3>
+
+  <p>National Grand Finale featured KPS Kamal Vihar (our team), BHS Kolkata, and Tagore International (VV), New Delhi.</p>
+  <p><strong>😆 Fun Fact:</strong> The team we defeated in the Semi-Finals (BHS Kolkata) were the lucky losers of the Semi Finals, and then went on to defeat us in the National Finals!</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/final/1971301232/watch?search_query=ultimate+sports+quiz" class="episode-card">
+      <img src="/images/usqnf.jpg" alt="National Finals" style="width: 335px;">
+      <span>USQ 2023<br>National Grand Finale</span>
+    </a>
+  </div>
+
+
+  <h3>📺 Semi-Final 1 Winners</h3>
+
+  <p>Semi Final - 1 featured KPS Kamal Vihar (our team), St. Francis Hazratganj, Lucknow, and BHS Kolkata.</p>
+  <p>We scored 130 points and emerged as the winners of the round.</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/semi-final-1/1971301234/watch?search_query=ultimate+sports+quiz" class="episode-card">
+      <img src="/images/usqsf1.jpg" alt="Semi Final 1" style="width: 335px;">
+      <span>USQ 2023<br>Semi Final - 1</span>
+    </a>
+  </div>
+
+
+  <h3>📺 West Zone Final's Lucky Losers</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by Super Six Sports Gaming Private Limited</em><br>
+    🗓️ <em>September 2023</em><br>
+    📍 <em>Mumbai</em>
+  </div>
+
+  <p>West Zone Finals featured KPS Kamal Vihar (our team), DPS Kolar, Bhopal, and St. Anthony's Sen. Sec. School, Udaipur.</p>
+  <p>We scored 90 points and lagged behind the winner of the round by 10 points and were given the title of lucky losers.</p>
+  <p>The lucky losers were the two highest scoring teams, excluding the winners of the four Zonal Rounds. These teams received a wildcard entry into the semi-finals.</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/final-west-zone/1971301035/watch" class="episode-card">
+      <img src="/images/usqwzf.jpg" alt="Zonal Finals" style="width: 335px;">
+      <span>USQ 2023<br>West Zone Finals</span>
+    </a>
+  </div>
+
+  <h3>📺 West Zone Preliminary Round Winner</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by Super Six Sports Gaming Private Limited</em><br>
+    🗓️ <em>September 2023</em><br>
+    📍 <em>Mumbai</em>
+  </div>
+
+  <p>Our preliminary round featured KPS Kamal Vihar (our team), Kendriya Vidyalaya Bhandup, Mumbai, and Bhatikar Model High School, Goa.</p>
+  <p>We scored 130 points and emerged as the winners of the round.</p>
+  <p><strong>😆 Fun Fact:</strong> This episode was supposed to be aired and uploaded on 1st December 2023 but, was uploaded a day earlier on 30th November 2023, which was my birthday lol.</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/preliminary-round-west-zone/1971301085/watch?search_query=ultimate+sports+quiz" class="episode-card">
+      <img src="/images/usqwp.jpg" alt="Prelims" style="width: 335px;">
+      <span>USQ 2023<br>West Zone Prelims</span>
+    </a>
+  </div>
+
+
+  <h3>📝 One of the Top 9 teams from West Zone's Qualifying Test</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by Super Six Sports Gaming Private Limited</em><br>
+    🗓️ <em>December 2022</em><br>
+    📍 <em>Raipur</em>
+  </div>
+
+  <p>It was a mobile based proctored mcq test with offline invigilators from the USQ team, our school was the Centre for Chhattisgarh.</p>
+  <p>Around 30 teams gave the qualifying test and we were the only qualifying team from our centre.</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <div class="episode-card-news">
+      <img src="/images/usqqt.png" alt="Regional Rounds" style="width: 335px;">
+      <span>Top 9 Teams of West Zone</span>
+    </div>
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -583,7 +666,7 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>📺 National 1st Runners-Up – New Delhi</h3>
+  <h3>📺 National 1st Runners-Up</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
@@ -603,7 +686,7 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>📺 Semi-Final 4 Winners – New Delhi</h3>
+  <h3>📺 Semi-Final 4 Winners</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
@@ -641,7 +724,7 @@ author_profile: true
   </div>
 </div>
 
-<hr class="silver-line" />
+<hr class="silver-line"/>
 
 <div class="achievement-section">
   <h2>🏆 Winners of Paryavaran Paheli ECO Quiz - KPS Intelligence Fest 2022</h2>
