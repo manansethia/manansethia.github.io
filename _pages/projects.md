@@ -145,7 +145,7 @@ author_profile: true
 </div>
 -->
 
-<h2 class="mrida-heading">MATRIX 🤖</h2>
+<h2 class="mrida-heading">MRIDA 🌱</h2>
 ### Multipurpose Real-time Integrated Digital Analyzer  
 
 <style>
