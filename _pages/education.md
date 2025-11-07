@@ -68,13 +68,14 @@ author_profile: true
     <img src="/images/kps.jpeg" alt="KPS Logo">
   </div>
   <div class="edu-text">
-    <h3>Krishna Public School, Dunda</h3>
+    <h3>Krishna Public School, Kamal Vihar</h3>
     🎓 <em>Grade 1 - Grade 12</em><br>
     📍 Raipur, C.G., India <br>
     🗓️ April 2014 – April 2026 <br>
     <strong style="margin-top: 5px; display: inline-block;">Roles:</strong><br>
-    -  <strong>President :</strong> Coder's Club, 2023 <br>
-    -  <strong>Vice President :</strong> Coder's Club, 2022 <br>
+    -  <strong>Headboy :</strong> Head of the entire Student Council Body, 2025-26 <br>
+    -  <strong>President :</strong> Coder's Club, 2023-24 <br>
+    -  <strong>Vice President :</strong> Coder's Club, 2022-23 <br>
   </div>
 </div>
 

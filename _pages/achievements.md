@@ -271,6 +271,20 @@ author_profile: true
 </style>
 
 <!-- Achievements Section -->
+
+<div class="achievement-section">
+  <h2>⚫️ Selected into Leangap 2025 Online Cohort</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Leangap</em><br>
+    🗓️ <em>May 2025</em><br>
+    📍 <em>Online</em>
+  </div>
+  <p>This was an online quiz organized by North-Eastern Hill University, Shillong, which hosted the INESO Camp 2024.</p>
+  <p>The quiz saw around 200 participants from across India. The program also featured two insightful lectures by members of the Geological Society of India on Geothermal Energy and Green Hydrogen.</p>
+</div>
+
+<hr class="silver-line" />
+
 <div class="achievement-section">
   <h2>👨‍💻 Winner of Code 2 Champions - Innovritti 1.0</h2>
   <div class="achievement-meta">
