@@ -145,9 +145,6 @@ author_profile: true
 </div>
 -->
 
-<h2 class="mrida-heading">MRIDA 🌱</h2>
-### Multipurpose Real-time Integrated Digital Analyzer  
-
 <style>
 
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
@@ -217,6 +214,10 @@ author_profile: true
   }
 </style>
 <section id="mrida">
+
+<h2 class="mrida-heading">MRIDA 🌱</h2>
+### Multipurpose Real-time Integrated Digital Analyzer  
+
 <div class="mrida-container">
 
   <!-- Image (Appears Above on Mobile, Side on Desktop) -->
