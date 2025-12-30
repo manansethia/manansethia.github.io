@@ -336,7 +336,7 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>Winner of IIM Bhilai Chapter - Metal and Material Quiz 2025</h2>
+  <h2>🪨 Winner of IIM Bhilai Chapter - Metal and Material Quiz 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Institute of Metals, Bhilai</em><br>
     🗓️ <em>August 2025</em><br>
@@ -347,7 +347,7 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>Winner of Bhopal Region - SBI Scholar Quiz 2025</h2>
+  <h2>🪙 Winner of Bhopal Region - SBI Scholar Quiz 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by State Bank of India</em><br>
     🗓️ <em>June 2025</em><br>
