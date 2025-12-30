@@ -272,8 +272,6 @@ author_profile: true
 
 <!-- Achievements Section -->
 
-<hr class="silver-line" />
-
 <div class="achievement-section">
   <h2>🎲 Shaastra 2026 by IIT Madras</h2>
   
@@ -361,6 +359,12 @@ author_profile: true
   <p>The Nagpur regional round of the 2025 edition featured quizmaster Ms. Rashmi Furtado, and almost every other team was from Maharashtra except us.</p>
   <p>With my junior Om Nirmalkar, we emerged as the Nagpur region's 1st Runner-Up.</p>
 
+  <div class="achievement-images">
+    <img src="/images/tcs251.jpeg" alt="TCS '25">
+    <img src="/images/tcs252.jpeg" alt="TCS '25">
+    <img src="/images/tcs253.jpg" alt="TCS '25">
+    <img src="/images/tcs254.jpg" alt="TCS '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
