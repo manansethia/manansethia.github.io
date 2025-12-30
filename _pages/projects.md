@@ -216,7 +216,7 @@ author_profile: true
     }
   }
 </style>
-
+<section id="mrida">
 <div class="mrida-container">
 
   <!-- Image (Appears Above on Mobile, Side on Desktop) -->
@@ -234,6 +234,7 @@ author_profile: true
       <li>This project was also presented in:
         <ul>
           <li><strong>Data and AI Talks 2023 –</strong> <strong>Champion in Group C (Senior) category.</strong> Awarded a 9th Gen iPad, Trophy, AI-powered Rubik's Cube, and Certificates.</li>
+          <li><strong>Youth Ideathon 2023 -</strong> Selected among the <strong>Top 1,000</strong> ideas nationwide.</li>
           <li><strong>INSPIRE Manak Awards 2023 –</strong> Selected in the first stage and awarded <strong>₹10,000</strong>.</li>
           <li><strong>Junior Smart India Hackathon 2023 –</strong> Shortlisted for the <strong>Interview Round</strong> by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
         </ul>
@@ -241,6 +242,7 @@ author_profile: true
     </ul>
   </div>
 </div>
+</section>
 
 ### MRIDA PDF
 <iframe src="/_pages/pdf-view.html" width="100%" height="500px" class="pdf-frame"></iframe>

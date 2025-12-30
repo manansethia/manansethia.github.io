@@ -570,22 +570,36 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>💡 Selected in the First Stage - ATL Inspire Manak Awards 2023-24</h2>
+  <h2>💡 Qualified for DLEPC - ATL Inspire Manak Awards 2023-24</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Department of Science and Technology (DST) Government of India</em><br>
     🗓️ <em>February 2024</em><br>
     📍 <em>Online</em>
+  </div>
+  <p>The INSPIRE Awards – MANAK (Million minds Augmenting National Aspirations and Knowledge) is a flagship initiative jointly executed by the Department of Science and Technology (DST) and the National Innovation Foundation (NIF).</p>
+  <p>This competition aims to foster a culture of creative and innovative thinking among school students aged 10–15 years (Classes 6 to 10) by encouraging them to develop science-rooted solutions for societal challenges.</p>
+  <p>My idea of <a href="https://manansethia.com/projects/#mrida">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> was selected for the District Level Exhibition and Project Competitions (DLEPC) and received a one-time financial award of ₹10,000 via Direct Benefit Transfer (DBT).</p>
+
+  <div class="achievement-images">
+    <img src="/images/inspiremanak.jpg" alt="Inspire-MANAK '23">
   </div>
 </div>
 
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>💡 Idea selected for the National Rounds - Junior Smart India Hackathon 2024</h2>
+  <h2>💡 Idea selected for the National Rounds - Junior Smart India Hackathon 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Ministry of Education's Innovation Cell Government of India</em><br>
     🗓️ <em>January 2024</em><br>
     📍 <em>Online</em>
+  </div>
+  <p>The Junior Smart India Hackathon 2023 is a nationwide initiative launched by All India Council for Technical Education and Ministry of Education to provide students with a platform to solve some of the pressing problems we face in our daily lives.</p>
+  <p>The event aims to inculcate a culture of product innovation and a mindset of problem-solving among young and innovative minds. The hackathon invites students from classes 6th to 12th to showcase their out-of-the-box thinking and innovative ideas.</p>
+  <p>I presented my Idea on <a href="https://manansethia.com/projects/#mrida">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and qualified for the National presentation round.</p>
+
+  <div class="achievement-images">
+    <img src="/images/jsih.jpg" alt="JSIH '23">
   </div>
 </div>
 
@@ -597,6 +611,14 @@ author_profile: true
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>December 2023</em><br>
     📍 <em>Bhubaneswar, Odisha</em>
+  </div>
+  <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions.</p>
+  <p>The 2022 edition focused on "India: The Mother of Democracy," celebrating India's G20 presidency and rich history.</p>
+  <p>Tens of thousands of schools from across the country participated in this multi-stage competition, which began with an online qualifying round.</p>
+  <p>Atharv Sharma, Snigdha Mohanty, and I represented our school in the Bhuvaneshwar regional round but were unable to qualify for the national finale as we emerged as the regional runner-ups.</p>
+
+  <div class="achievement-images">
+    <img src="/images/cbsehiq23.jpg" alt="CBSE HIQ '23">
   </div>
 </div>
 
@@ -615,6 +637,24 @@ author_profile: true
 
   <div class="achievement-images">
     <img src="/images/nexus23.jpg" alt="Nexus Quiz '23">
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>💡 Selected among the Top 1,000 ideas nationwide - Youth Ideathon 2023</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by ThinkStartup and MEPSC</em><br>
+    🗓️ <em>October 2023</em><br>
+    📍 <em>Online</em>
+  </div>
+  <p>Youth Ideathon 2023 was the third edition of India’s largest innovation and entrepreneurship competition for school students, organized by ThinkStartup and the Management Entrepreneurship Professional Skills Council (MEPSC) in collaboration with CBSE.</p>
+  <p>The event focused on the theme "iStartup a Good Thing for India" (Mera Idea Jo Badal De Bharat).</p>
+  <p>I presented my Idea on <a href="https://manansethia.com/projects/#mrida">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and was selected among the Top 1,000 ideas.</p>
+
+  <div class="achievement-images">
+    <img src="/images/yi23.jpg" alt="YI '23">
   </div>
 </div>
 
@@ -965,6 +1005,7 @@ author_profile: true
     🗓️ <em>October 2021</em><br>
     📍 <em>Online</em>
   </div>
+  <p>The Wild Wisdom Global Challenge (earlier known as the Wild Wisdom Quiz), initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness. It is Asia's biggest wildlife quiz.</p>
   <p>Due to COVID-19, 2020 edition of Wild Wisdom Quiz was cancelled and was later renamed as Wild Wisdom Global Challenge, highlighting participations from students outside of India.</p>
   <p>It was conducted online and individually due to the pandemic outbreak.</p>
   <div class="achievement-images">
@@ -981,6 +1022,7 @@ author_profile: true
     🗓️ <em>October 2019</em><br>
     📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
+  <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness. It is Asia's biggest wildlife quiz.</p>
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
   <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up. Back-to-back podium finishes by our team!</p>
   <div class="achievement-images">
