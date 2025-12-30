@@ -71,7 +71,7 @@ author_profile: true
     <h3>Krishna Public School, Kamal Vihar</h3>
     🎓 <em>Grade 1 - Grade 12</em><br>
     📍 Raipur, C.G., India <br>
-    🗓️ April 2014 – April 2026 <br>
+    🗓️ March 2014 – March 2026 <br>
     <strong style="margin-top: 5px; display: inline-block;">Roles:</strong><br>
     -  <strong>Headboy :</strong> Head of the entire Student Council Body, 2025-26 <br>
     -  <strong>President :</strong> Coder's Club, 2023-24 <br>
