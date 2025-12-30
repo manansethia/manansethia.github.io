@@ -314,6 +314,50 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
+  <h2>📈 2nd Runner Up - Wonga Wits Quiz Season 2</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Yes Securities</em><br>
+    🗓️ <em>November 2025</em><br>
+    📍 <em>National Institue of Technology, Raipur</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>📱 1st Runner-Up of Nagpur region - TCS InQuizitive 2025</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Issued by Tata Consultancy Services</em><br>
+    🗓️ <em>August 2025</em><br>
+    📍 <em>Kavivarya Suresh Bhat Auditorium, Nagpur</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>Winner of IIM Bhilai Chapter - Metal and Material Quiz 2025</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Indian Institute of Metals, Bhilai</em><br>
+    🗓️ <em>August 2025</em><br>
+    📍 <em>Bhilai Niwas, Bhilai</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>Winner of Bhopal Region - SBI Scholar Quiz 2025</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by State Bank of India</em><br>
+    🗓️ <em>June 2025</em><br>
+    📍 <em>Bhilai Niwas, Bhilai</em>
+  </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
   <h2>⚫️ Selected into Leangap 2025 Online Cohort</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Leangap</em><br>
@@ -368,20 +412,6 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>✉️ Selective Invitation - Harvard Undergraduate Ventures-TECH Summer Program 2025</h2>
-  <div class="achievement-meta">
-    🏢 <em>Issued by Technology and Entrepreneurship Center at Harvard</em><br>
-    🗓️ <em>February 2025</em><br>
-    📍 <em>Online</em>
-  </div>
-  <p>Harvard Undergraduate Ventures-TECH Summer Program is the premier high school innovation academy which provides students with hands-on experience by working with leading startups and mentorship from world-renowned CEOs, investors, and Harvard faculty.</p>
-  <p>I was identified by one of their partner organizations as a strong fit for the 2025 program.</p>
-  <p>I applied for the program but was not selected for the cohort.</p>
-</div>
-
-<hr class="silver-line" />
-
-<div class="achievement-section">
   <h2>🇮🇳 Qualified for National Camp - Indian National Earth Science Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Geological Society of India</em><br>
@@ -401,6 +431,20 @@ author_profile: true
     🗓️ <em>March 2025</em><br>
     📍 <em>Online</em>
   </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>✉️ Selective Invitation - Harvard Undergraduate Ventures-TECH Summer Program 2025</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by Technology and Entrepreneurship Center at Harvard</em><br>
+    🗓️ <em>February 2025</em><br>
+    📍 <em>Online</em>
+  </div>
+  <p>Harvard Undergraduate Ventures-TECH Summer Program is the premier high school innovation academy which provides students with hands-on experience by working with leading startups and mentorship from world-renowned CEOs, investors, and Harvard faculty.</p>
+  <p>I was identified by one of their partner organizations as a strong fit for the 2025 program.</p>
+  <p>I applied for the program but was not selected for the cohort.</p>
 </div>
 
 <hr class="silver-line" />
@@ -439,7 +483,7 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>📱 Runner-Up of Nagpur region - TCS InQuizitive 2024</h2>
+  <h2>📱 1st Runner-Up of Nagpur region - TCS InQuizitive 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Tata Consultancy Services</em><br>
     🗓️ <em>November 2024</em><br>
