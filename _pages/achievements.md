@@ -609,6 +609,13 @@ author_profile: true
     🗓️ <em>November 2023</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
+
+  <p>An interschool technical quiz organized by students of SSIPMT.</p> 
+  <p>I finished first among teams from almost every school in raipur, winning a cash prize of ₹10,000.</p>
+
+  <div class="achievement-images">
+    <img src="/images/nexus23.jpg" alt="Nexus Quiz '23">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -739,6 +746,9 @@ author_profile: true
   <p>Over 10,000 students from 12 schools participated in the event, with the grand finale held at NH Goel School, Raipur.</p>
   <p>Out of 10,000+ participants, 1,034 were selected for the qualifying rounds, 72 advanced to Level 1, and 12 to Level 2.</p>
   <p>I emerged as the winner of Group C (Senior) and was awarded an iPad along with various other prizes from the event sponsors.</p>
+  <div class="achievement-images">
+    <img src="/images/data&ai.jpg" alt="Data&AI '23">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -752,6 +762,9 @@ author_profile: true
   </div>
   <p>Mind Wars was a platform supported by Zee5 where anyone could play quizzes on various topics and learn something new. It also hosted various contests with exciting prizes.</p>
   <p>This particular competition was a one-of-a-kind online MCQ-based test, where the top 2 rankers won a trip to Thailand. I don’t remember my exact rank, but I was in the top 5.</p>
+  <div class="achievement-images">
+    <img src="/images/mindwars.jpg" alt="MindWars '23">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -845,6 +858,9 @@ author_profile: true
   </div>
   <p>Once again, with my quiz partner Atharv, we took part in our school's interschool fest quiz competition and emerged as the winners in the senior category.</p>
   <p>Several teams from various schools in Raipur participated in the prelims, and six teams were selected for the on-stage finals.</p>
+  <div class="achievement-images">
+    <img src="/images/intelli.jpg" alt="ParyavaranPaheli '22">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -874,6 +890,9 @@ author_profile: true
   </div>
   <p>Shine COSMO is an interschool event conducted by the Rotary Club of Raipur and hosted by Maharaja Agrasen International College.</p>
   <p>Partnering with my classmate and friend Atharv Sharma, we emerged as the champions of the quiz competition, which saw participation from over 30 schools.</p>
+  <div class="achievement-images">
+    <img src="/images/shinecosmo.jpg" alt="ShineCOSMO '22">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -948,20 +967,9 @@ author_profile: true
   </div>
   <p>Due to COVID-19, 2020 edition of Wild Wisdom Quiz was cancelled and was later renamed as Wild Wisdom Global Challenge, highlighting participations from students outside of India.</p>
   <p>It was conducted online and individually due to the pandemic outbreak.</p>
-</div>
-
-<hr class="silver-line" />
-
-<div class="achievement-section">
-  <h2>🍀 Certificate of Merit - Teri Green Olympiad 2019</h2>
-  <div class="achievement-meta">
-    🏢 <em>Issued by The Energy and Resources Institute</em><br>
-    🗓️ <em>December 2019</em><br>
-    📍 <em>Raipur, Chhattisgarh</em>
+  <div class="achievement-images">
+    <img src="/images/wwq211.jpg" alt="WWQ '21">
   </div>
-  <p>The TERI Green Olympiad is an annual environmental examination organized by The Energy and Resources Institute (TERI), a New Delhi-based research institute.</p>
-  <p>Initiated in 1999, the olympiad is designed to assess students for their knowledge on enviornmental issues and sustainable development.</p>
-  <p>Over 2,000 schools participate each year, and I earned the Certificate of Merit when I was in 6th grade.</p>
 </div>
 
 <hr class="silver-line" />
@@ -979,6 +987,7 @@ author_profile: true
     <img src="/images/wwq191.jpg" alt="WWQ '19">
     <img src="/images/wwq192.jpg" alt="WWQ '19">
     <img src="/images/wwq193.jpg" alt="WWQ '19">
+    <img src="/images/wwq194.jpg" alt="WWQ '19">
   </div>
 </div>
 
@@ -994,6 +1003,9 @@ author_profile: true
   <p>I was always fascinated by the universe, the probabilites of finding life on another planets, is our life same as some other alien's life etc and this fascination made me participate in this contest.</p>
   <p>It was a computer based contest and I took part in it through my school.</p>
   <p>Honestly, being in the top 25 of my category across the entire nation felt really, really cool to me at that time.</p>
+  <div class="achievement-images">
+    <img src="/images/aiat.jpg" alt="AIAT '18">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -1006,6 +1018,9 @@ author_profile: true
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
   <p>A spell bee + quiz fusion interschool competition hosted by Chhattisgarh Public School, I was in 5th grade when I participated in it.</p>
+  <div class="achievement-images">
+    <img src="/images/spell.jpg" alt="SpellBee '18">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -1023,6 +1038,7 @@ author_profile: true
     <img src="/images/wwq181.jpeg" alt="WWQ '18">
     <img src="/images/wwq182.jpeg" alt="WWQ '18">
     <img src="/images/wwq183.jpeg" alt="WWQ '18">
+    <img src="/images/wwq184.jpg" alt="WWQ '18">
   </div>
 </div>
 
@@ -1038,6 +1054,6 @@ author_profile: true
   <p>This was the first quiz I ever participated in. I took part with my father as my partner when I was in 3rd grade, it was a family quiz. I really enjoyed it and found out about it through a school notification.</p>
   <p>The key moment I remember from this quiz is when a buzzer question was asked about the Rafflesia flower. I couldn’t recall its name, but I still pressed the buzzer and said, ‘The name sounds something like this but it has no stem and no roots.’ I was even awarded with the points too lol.</p>
   <div class="achievement-images">
-    <img src="/images/qpl.jpeg" alt="QPL 2.0">
+    <img src="/images/qpl.jpg" alt="QPL 2.0">
   </div>
 </div>
