@@ -272,6 +272,47 @@ author_profile: true
 
 <!-- Achievements Section -->
 
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🎲 Shaastra 2026 by IIT Madras</h2>
+  
+  <div class="achievement-meta">
+    🏢 <em>Organized by the Indian Institute of Technology, Madras</em><br>
+  </div>
+
+  <p></p>
+
+  <div class="achievement-images-text">
+  </div>
+
+  <div class="dashed-line"></div>
+
+  <h3>👨‍💻 All India Rank 17 and Qualified for the National Shaastra Programming Contest 2026</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by Indian Institute of Technology, Madras</em><br>
+    🗓️ <em>December 2025</em><br>
+    📍 <em>CodeChef, Online</em>
+  </div>
+
+  <p></p>
+
+  <div class="dashed-line"></div>
+
+  <h3>🍯 Selected for the National Finals - Competitive Programming Potpourri 2026</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by Indian Institute of Technology, Madras</em><br>
+    🗓️ <em>December 2025</em><br>
+    📍 <em>CodeChef, Online</em>
+  </div>
+
+  <p></p>
+</div>
+
+<hr class="silver-line" />
+
 <div class="achievement-section">
   <h2>⚫️ Selected into Leangap 2025 Online Cohort</h2>
   <div class="achievement-meta">
@@ -850,6 +891,19 @@ author_profile: true
       </a>
     </div>
   </div>
+</div>
+
+<hr class="silver-line" />
+
+<div class="achievement-section">
+  <h2>🐼 National Level Qualifier - Wild Wisdom Global Challenge 2021</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
+    🗓️ <em>October 2021</em><br>
+    📍 <em>Online</em>
+  </div>
+  <p>Due to COVID-19, 2020 edition of Wild Wisdom Quiz was cancelled and was later renamed as Wild Wisdom Global Challenge, highlighting participations from students outside of India.</p>
+  <p>It was conducted online and individually due to the pandemic outbreak.</p>
 </div>
 
 <hr class="silver-line" />
