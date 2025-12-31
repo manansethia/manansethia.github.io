@@ -536,9 +536,9 @@ author_profile: true
   <p>I was felicitated for my achievement at International Earth Science Olympiad (IESO) 2024 and was awarded with a scholarship of ₹15000.</p>
 
   <div class="achievement-images">
-    <img src="/images/fel.jpg" alt="Felicitation '25">
-    <img src="/images/fel1.jpg" alt="Felicitation '25">
-    <img src="/images/fel2.jpg" alt="Felicitation '25">
+    <img src="/images/fel.jpg" alt="Felicitation '24">
+    <img src="/images/fel1.jpg" alt="Felicitation '24">
+    <img src="/images/fel2.jpg" alt="Felicitation '24">
   </div>
 </div>
 
@@ -576,6 +576,14 @@ author_profile: true
   <p>The Nagpur regional round of the 2024 edition featured quizmaster Mr. Giri "Pickbrain" Balasubramaniam, and almost every other participant was from Nagpur or Maharashtra except me.</p>
   <p>I emerged as the Nagpur region's 1st Runner-Up.</p>
 
+  <div class="achievement-images">
+    <img src="/images/tcs241.png" alt="TCS '24">
+    <img src="/images/tcs242.jpeg" alt="TCS '24">
+    <img src="/images/tcs243.jpg" alt="TCS '24">
+    <img src="/images/tcs244.jpg" alt="TCS '24">
+    <img src="/images/tcs24cer.jpg" alt="TCS '24">
+    <img src="/images/tcs24semcer.jpeg" alt="TCS '24">
+  </div>
 </div>
 
 <hr class="silver-line" />
