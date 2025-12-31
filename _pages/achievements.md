@@ -515,6 +515,10 @@ author_profile: true
   <p>The Indian National AI Olympiad (INAO), also known as the India AI Olympiad, is the official national gateway for students to represent India at the International Olympiad in Artificial Intelligence (IOAI).</p> 
   <p>Organized by ACM India in partnership with ACM IKDD, the competition identifies top talent in Grades 9–12 through a multi-stage process that tests both conceptual understanding and practical problem-solving in machine learning and AI.</p>
   <p>I qualified for Stage 2 of the India Artificial Intelligence Olympiad.</p>
+
+  <div class="achievement-images">
+    <img src="/images/ioai.jpg" alt="INAIO '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
