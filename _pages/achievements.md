@@ -666,7 +666,7 @@ author_profile: true
   <p>I represented the Syrian Arab Republic in the United Nations General Assembly (UNGA), where the agenda focused on deliberations on de-escalation and demobilisation in the context of global peace. The role required navigating complex geopolitical narratives and defending positions under intense debate, allowing me to engage actively and articulate arguments from a challenging diplomatic standpoint. Consequently, I was given the Special Mention Award.</p>
 
   <div class="achievement-images">
-    <img src="/images/mun1.jpg" alt="KPS MUN 3.0 '24">
+    <img src="/images/mun1.png" alt="KPS MUN 3.0 '24">
     <img src="/images/mun2.jpg" alt="KPS MUN 3.0 '24">
     <img src="/images/kpsmun.jpg" alt="KPS MUN 3.0 '24">
   </div>
