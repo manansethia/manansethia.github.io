@@ -402,6 +402,11 @@ author_profile: true
   <p>The quiz commemorated SBI's 70 years of service and featured regional rounds in 16 cities across India.</p>
   <p>Along with my younger sister, Hiranya Sethia, I participated in the Bhopal Regional Round and secured the Winner title.</p>
   <p>Each of us was awarded a ₹50,000 scholarship, our accompanying parent received ₹25,000, and our school was awarded ₹50,000.</p>
+
+   <div class="achievement-images">
+    <img src="/images/sbikps.jpg" alt="SBI '25">
+    <img src="/images/sbi.jpg" alt="SBI '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
