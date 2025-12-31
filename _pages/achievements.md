@@ -458,6 +458,10 @@ author_profile: true
   <p>HPE CodeWars is one of the world's most renowned high school computer science competitions, hosted annually by Hewlett Packard Enterprise (HPE) with Codingal in India.</p> 
   <p>The event challenges students in Grades 9–12 to solve a series of complex algorithmic problems within a three-hour window using languages like Python, C++, or Java.</p>
   <p>6131 students participated, and I secured the 10th position, earning a keyboard and mouse set with a ₹1000 Amazon voucher as a prize.</p>
+
+  <div class="achievement-images">
+    <img src="/images/hpe.jpeg" alt="HPE '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
