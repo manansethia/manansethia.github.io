@@ -383,7 +383,6 @@ author_profile: true
   <p>Our performance qualified us for the National Finale and the Metal Camp held at Kalpakkam, Tamil Nadu, home to a major nuclear power facility. We were also awarded printers as part of the recognition.</p>
 
   <div class="achievement-images">
-    <img src="/images/mmq1.jpg" alt="BPMMQ '25">
     <img src="/images/mmq2.jpeg" alt="BPMMQ '25">
     <img src="/images/mmq4.jpeg" alt="BPMMQ '25">
     <img src="/images/mmq3.jpg" alt="BPMMQ '25">
@@ -405,7 +404,8 @@ author_profile: true
   <p>Each of us was awarded a ₹50,000 scholarship, our accompanying parent received ₹25,000, and our school was awarded ₹50,000.</p>
 
    <div class="achievement-images">
-    <img src="/images/sbikps.jpg" alt="SBI '25">
+    <img src="/images/sbi001.jpeg" alt="SBI '25">
+    <img src="/images/sbi01.jpeg" alt="SBI '25">
     <img src="/images/sbi.jpg" alt="SBI '25">
   </div>
 </div>
@@ -579,8 +579,6 @@ author_profile: true
   <div class="achievement-images">
     <img src="/images/tcs241.png" alt="TCS '24">
     <img src="/images/tcs242.jpeg" alt="TCS '24">
-    <img src="/images/tcs243.jpg" alt="TCS '24">
-    <img src="/images/tcs244.jpg" alt="TCS '24">
     <img src="/images/tcs24cer.jpg" alt="TCS '24">
     <img src="/images/tcs24semcer.jpeg" alt="TCS '24">
   </div>
