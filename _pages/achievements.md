@@ -385,6 +385,7 @@ author_profile: true
   <div class="achievement-images">
     <img src="/images/mmq1.jpg" alt="BPMMQ '25">
     <img src="/images/mmq2.jpeg" alt="BPMMQ '25">
+    <img src="/images/mmq4.jpeg" alt="BPMMQ '25">
     <img src="/images/mmq3.jpg" alt="BPMMQ '25">
   </div>
 </div>
@@ -533,6 +534,12 @@ author_profile: true
   <p>The Homi Bhabha Centre for Science Education (HBCSE), a national centre of the Tata Institute of Fundamental Research (TIFR), serves as the nodal agency for felicitating Indian students who win medals at International Olympiads.</p>
   <p>A comprehensive Felicitation of International Olympiad Medallists is held annually in December.</p>
   <p>I was felicitated for my achievement at International Earth Science Olympiad (IESO) 2024 and was awarded with a scholarship of ₹15000.</p>
+
+  <div class="achievement-images">
+    <img src="/images/fel.jpg" alt="Felicitation '25">
+    <img src="/images/fel1.jpg" alt="Felicitation '25">
+    <img src="/images/fel2.jpg" alt="Felicitation '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -548,6 +555,10 @@ author_profile: true
   <p>It is a national-level competition aimed at identifying school students with exceptional skills in algorithms and computer programming to eventually select the team representing India at the International Olympiad in Informatics (IOI).</p> 
   <p>The exam is typically a three-hour programming test where participants solve complex problems using languages like C, C++, Java, or Python.</p>
   <p>I qualified for Indian National Olympiad in Informatics, which is the second level and was also the Zonal Topper.</p>
+
+  <div class="achievement-images">
+    <img src="/images/zco.jpg" alt="ZCO '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
