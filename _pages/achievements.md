@@ -439,6 +439,11 @@ author_profile: true
   </div>
   <p>This was an online quiz organized by North-Eastern Hill University, Shillong, which hosted the INESO Camp 2024.</p>
   <p>The quiz saw around 200 participants from across India. The program also featured two insightful lectures by members of the Geological Society of India on Geothermal Energy and Green Hydrogen.</p>
+
+  <div class="achievement-images">
+    <img src="/images/nehueday.png" alt="NEHU '25">
+    <img src="/images/nehuearth.png" alt="NEHU '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
