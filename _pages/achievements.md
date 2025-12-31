@@ -422,6 +422,10 @@ author_profile: true
   <p>A handful of school students also participated in the contests (I was one of them).</p>
   <p>I took part in the "Code 2 Champions" coding competition, which consisted of three rounds covering SQL mind maps, queries, and databases, with the final round including DSA integration. Over 20 individuals and teams participated, almost all of them college students.</p>
   <p>I was the only school student in the competition and emerged as the champion, winning a prize of ₹3000.</p>
+
+  <div class="achievement-images">
+    <img src="/images/itm.jpg" alt="ITM '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
