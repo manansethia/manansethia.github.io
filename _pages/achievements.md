@@ -381,6 +381,12 @@ author_profile: true
   <p>The IIM Bhilai Chapter, which operates in close coordination with the academic and research environment of the region, serves as the local hub for selecting teams to represent Chhattisgarh at the national level.</p>
   <p>Schools from across Chhattisgarh participated in this quiz. I partnered with my junior, Shantanu Shukla, and we emerged victorious, defeating five other teams on stage.</p> 
   <p>Our performance qualified us for the National Finale and the Metal Camp held at Kalpakkam, Tamil Nadu, home to a major nuclear power facility. We were also awarded printers as part of the recognition.</p>
+
+  <div class="achievement-images">
+    <img src="/images/mmq1.jpg" alt="BPMMQ '25">
+    <img src="/images/mmq2.jpeg" alt="BPMMQ '25">
+    <img src="/images/mmq3.jpg" alt="BPMMQ '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
