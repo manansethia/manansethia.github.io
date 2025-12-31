@@ -477,6 +477,10 @@ author_profile: true
   <p>The examination assesses students across multiple Earth science disciplines, including geology, meteorology, oceanography, astronomy, and environmental science, and serves as one of the most rigorous pre-university evaluations in the field.</p>
   <p>For the second consecutive year, I qualified for the Indian National Camp for the International Earth Science Olympiad (IESO). Driven by my continued passion for Earth science, I chose to take the exam again in 2025 to challenge myself.</p>
   <p>Since I had already represented India in IESO 2024, I was not eligible to be selected again for the international team.</p>
+
+  <div class="achievement-images">
+    <img src="/images/ineso.jpg" alt="INESO '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
@@ -492,7 +496,11 @@ author_profile: true
   <p>Organized by ThinkingBeyond Education, the programme is structured into two six-week phases: the Course Stage, which covers the foundations of quantum mechanics and linear algebra, and the Research Stage, where students work in teams under the guidance of academic mentors to complete an original research project.</p> 
   <p>The programme culminates in the BeyondQuantum Research Fair, a one-day online conference where participants showcase their findings to a public audience and leading quantum experts.</p>
   <p>I was selected for the program after a lengthy application process.</p>
-
+  <div class="achievement-images">
+    <img src="/images/bequ1.png" alt="BEQU '25">
+    <img src="/images/bequ2.png" alt="BEQU '25">
+    <img src="/images/bequ3.png" alt="BEQU '25">
+  </div>
 </div>
 
 <hr class="silver-line" />
