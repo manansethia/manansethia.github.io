@@ -1149,26 +1149,33 @@ author_profile: true
   <p>We became the Chhattisgarh State Champions after winning both the State Semi-Final and the State Final.</p>
   <p>Eight school teams competed in the State Semi-Finals, with two teams from each advancing to the State Final.</p>
 
-  <div class="episode-card">
-    <iframe
-    src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo"
-    title="Fit India Quiz – State Final Chhattisgarh"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-    </iframe>
-    <span>Fit India Quiz · State Final (Chhattisgarh)</span>
-  </div>
-
-  <div class="episode-card">
-    <iframe
-    src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk"
-    title="Fit India Quiz – Semi Final Chhattisgarh"
-    loading="lazy"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-    </iframe>
-    <span>Fit India Quiz · Semi Final (Chhattisgarh)</span>
+  <div class="quiz-episodes-scroll">
+    <div class="episode-container" style="margin-left: 10px;">
+      <div class="episode-card">
+        <div class="video-wrapper">
+          <iframe
+          src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo"
+          title="Fit India Quiz – State Final Chhattisgarh"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+          </iframe>
+        </div>
+        <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
+      </div>
+      <div class="episode-card">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk"
+            title="Fit India Quiz – State Semi-Final Chhattisgarh"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <span>Fit India Quiz – Semi-Final 2<br>Chhattisgarh</span>
+      </div>
+    </div>
   </div>
 </div>
 
