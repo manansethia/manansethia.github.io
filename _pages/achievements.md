@@ -382,6 +382,21 @@ author_profile: true
   <p>The Nagpur regional round of the 2025 edition featured quizmaster Ms. Rashmi Furtado, and almost every other team was from Maharashtra except us.</p>
   <p>With my junior Om Nirmalkar, we emerged as the Nagpur region's 1st Runner-Up.</p>
 
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/YUFKJevNpG8"
+          title="TCS 2025"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <span>TCS InQuizitive 2025<br>Nagpur Regional Round</span>
+    </div>
+  </div>
+
   <div class="achievement-images">
     <img src="/images/tcs251.jpeg" alt="TCS '25">
     <img src="/images/tcs252.jpeg" alt="TCS '25">
@@ -598,6 +613,21 @@ author_profile: true
   <p>Reimagined from the long-standing TCS IT Wiz, the competition focuses on the latest global trends in technology, science, sports, engineering, and the arts.</p>
   <p>The Nagpur regional round of the 2024 edition featured quizmaster Mr. Giri "Pickbrain" Balasubramaniam, and almost every other participant was from Nagpur or Maharashtra except me.</p>
   <p>I emerged as the Nagpur region's 1st Runner-Up.</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/GGaPWeNIODI"
+          title="TCS 2024"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <span>TCS InQuizitive 2024<br>Nagpur Regional Round</span>
+    </div>
+  </div>
 
   <div class="achievement-images">
     <img src="/images/tcs241.png" alt="TCS '24">
@@ -869,10 +899,18 @@ author_profile: true
   </div>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/final/1971301232/watch?search_query=ultimate+sports+quiz" class="episode-card">
-      <img src="/images/usqnf.jpg" alt="National Finals" style="width: 335px;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/4B1YQ5edqBs"
+          title="USQ 2023 National Grand Finale"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
       <span>USQ 2023<br>National Grand Finale</span>
-    </a>
+    </div>
   </div>
 
   <div class="dashed-line"></div>
@@ -885,14 +923,22 @@ author_profile: true
     📍 <em>Mumbai, Maharashtra</em>
   </div>
 
-    <p>Semi Final - 1 featured KPS Kamal Vihar (our team), St. Francis Hazratganj, Lucknow, and BHS Kolkata.</p>
-    <p>We scored 130 points and emerged as the winners of the round.</p>
+  <p>Semi Final - 1 featured KPS Kamal Vihar (our team), St. Francis Hazratganj, Lucknow, and BHS Kolkata.</p>
+  <p>We scored 130 points and emerged as the winners of the round.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/semi-final-1/1971301234/watch?search_query=ultimate+sports+quiz" class="episode-card">
-      <img src="/images/usqsf1.jpg" alt="Semi Final 1" style="width: 335px;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/Bgdd8B0XzxE"
+          title="USQ 2023 Semi Final - 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
       <span>USQ 2023<br>Semi Final - 1</span>
-    </a>
+    </div>
   </div>
 
   <div class="dashed-line"></div>
@@ -910,10 +956,18 @@ author_profile: true
   <p>The lucky losers were the two highest scoring teams, excluding the winners of the four Zonal Rounds. These teams received a wildcard entry into the semi-finals.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/final-west-zone/1971301035/watch" class="episode-card">
-      <img src="/images/usqwzf.jpg" alt="Zonal Finals" style="width: 335px;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/nPel1DDxFrw"
+          title="USQ 2023 West Zone Finals"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
       <span>USQ 2023<br>West Zone Finals</span>
-    </a>
+    </div>
   </div>
 
   <div class="dashed-line"></div>
@@ -931,10 +985,18 @@ author_profile: true
   <p><strong>😆 Fun Fact:</strong> This episode was supposed to be aired and uploaded on 1st December 2023 but, was uploaded a day earlier on 30th November 2023, which was my birthday lol.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <a href="https://www.hotstar.com/in/shows/ultimate-sports-quiz/1971003789/preliminary-round-west-zone/1971301085/watch?search_query=ultimate+sports+quiz" class="episode-card">
-      <img src="/images/usqwp.jpg" alt="Prelims" style="width: 335px;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/DQZmbhGw6oE"
+          title="USQ 2023 West Zone Prelims"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
       <span>USQ 2023<br>West Zone Prelims</span>
-    </a>
+    </div>
   </div>
 
   <div class="dashed-line"></div>
