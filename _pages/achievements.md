@@ -724,10 +724,77 @@ author_profile: true
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>🌏 International Earth Science Olympiad 2024</h2>
+  <h2>🌏 International Earth Science Olympiad</h2>
   <div class="achievement-meta">
-    🏢 <em>Organized by the International Geoscience Education Organisation (IGEO) </em><br>
+    🏢 <em>Organized by the International Geoscience Education Organisation (IGEO).</em><br>
   </div>
+
+  <p></p>
+
+  <div class="achievement-images-text">
+    <img src="/images/ieso.jpeg" alt="Ultimate Sports Quiz">
+  </div>
+
+  <div class="dashed-line"></div>
+
+  <h3>🥇 Gold Award - Earth System Project</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by International Geoscience Education Organisation (IGEO)</em><br>
+    🗓️ <em>August 2024</em><br>
+    📍 <em>Beijing, China</em>
+  </div>
+
+  <p></p>
+
+  <div class="dashed-line"></div>
+
+  <h3>🥉 Bronze Medal - Individual Test</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by International Geoscience Education Organisation (IGEO)</em><br>
+    🗓️ <em>August 2024</em><br>
+    📍 <em>Beijing, China</em>
+  </div>
+
+  <p></p>
+
+  <div class="dashed-line"></div>
+
+  <h3>🧳 Pre-Departure Training Camp</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Conducted by Geological Society of India (GSI)</em><br>
+    🗓️ <em>July - August 2024</em><br>
+    📍 <em>Chennai, Tamil Nadu</em>
+  </div>
+
+  <p></p>
+
+  <div class="dashed-line"></div>
+
+  <h3>🇨🇳 Selected to represent India at Beijing</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Conducted by Geological Society of India (GSI)</em><br>
+    🗓️ <em>May - June 2024</em><br>
+    📍 <em>Shillong, Meghalaya</em>
+  </div>
+
+  <p></p>
+
+  <div class="dashed-line"></div>
+
+  <h3>🇮🇳 Qualified for the Indian National Training Camp</h3>
+
+  <div class="achievement-meta">
+    🏢 <em>Issued by Super Six Sports Gaming Private Limited</em><br>
+    🗓️ <em>May - June 2024</em><br>
+    📍 <em>Shillong, Meghalaya</em>
+  </div>
+
+  <p></p>
+  
 </div>
 
 <hr class="silver-line" />
@@ -1090,7 +1157,7 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>January 2023</em><br>
-    📍 <em>New Delhi</em>
+    📍 <em>New Delhi, India</em>
   </div>
 
   <p>The National Final featured teams from New Delhi, Tamil Nadu, Chhattisgarh, and Karnataka.</p>
@@ -1118,7 +1185,7 @@ author_profile: true
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>January 2023</em><br>
-    📍 <em>New Delhi</em>
+    📍 <em>New Delhi, India</em>
   </div>
 
   <p>Semi-Final 4 featured teams from Chhattisgarh, Punjab, Assam, and Jharkhand.</p>
