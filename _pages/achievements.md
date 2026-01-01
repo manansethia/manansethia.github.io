@@ -273,6 +273,24 @@ author_profile: true
     width: 100%;
     margin-top: 20px; 
   }
+  .video-wrapper {
+    width: 335px;             
+    aspect-ratio: 16 / 9;    
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background: #000;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
 </style>
 
 <!-- Achievements Section -->
