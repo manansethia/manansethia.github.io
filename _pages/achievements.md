@@ -729,7 +729,11 @@ author_profile: true
     🏢 <em>Organized by the International Geoscience Education Organisation (IGEO).</em><br>
   </div>
 
-  <p></p>
+  <p>The International Earth Science Olympiad (IESO) is a prestigious global academic competition that brings together top school/junior college students from around the world to assess excellence in multiple domains of Earth Science, including geology, meteorology, oceanography, environmental science, and data interpretation.</p> 
+  <p>It is organized by the International Geoscience Education Organisation (IGEO) with the aim of promoting geoscience education and international scientific collaboration.
+  <p>It features three core components: Earth System Project (ESP), which evaluates interdisciplinary understanding of Earth processes through scientific poster making and presentation between mixed international teams; the International Team Field Investigation (ITFI), a collaborative, field-based exercise conducted in mixed international teams; and an Individual Test that tests conceptual knowledge, data interpretation, and analytical skills across the Earth sciences.</p>
+  <p>In India, the selection process for IESO is conducted by the Geological Society of India(GSI) through a rigorous multi-stage pathway comprising the Indian National Earth Science Olympiad (INESO), followed by intensive training at the Indian National Camp and the Pre-Departure Training Camp.</p>
+  <p>Following this national selection and training process, I was selected to represent India as a member of Team India at Beijing, China.</p>
 
   <div class="achievement-images-text">
     <img src="/images/ieso.jpeg" alt="Ultimate Sports Quiz">
@@ -745,7 +749,18 @@ author_profile: true
     📍 <em>Beijing, China</em>
   </div>
 
-  <p></p>
+  <p>The Earth System Project (ESP) was conducted in international teams, each comprising students from multiple countries. My team, <strong>ESP-E</strong>, included students from <strong>India, Austria, South Korea, Germany, Belarus, and Macao</strong>. We were assigned the theme of <strong>Atmosphere</strong>, and our project focused on the historical evolution of Earth’s atmosphere, its key transitions, and its role in sustaining life.</p>
+
+  <p>I led the research direction and overall design of the project, while also distributing specific research components among team members to ensure efficient collaboration. I was primarily responsible for synthesizing the findings and designing the final poster presentation. Our project was evaluated as the <strong>highest-rated Earth System Project</strong> among all teams, securing the <strong>Gold Award</strong>.</p>
+
+  <div class="achievement-images">
+    <img src="/images/iesog1.jpg" alt="IESO">
+    <img src="/images/iesog2.jpg" alt="IESO">
+    <img src="/images/iesog3.jpg" alt="IESO">
+    <img src="/images/iesog4.jpg" alt="IESO">
+    <img src="/images/iesog5.jpg" alt="IESO">
+    <img src="/images/iesog6.jpg" alt="IESO">
+  </div>
 
   <div class="dashed-line"></div>
 
@@ -757,7 +772,18 @@ author_profile: true
     📍 <em>Beijing, China</em>
   </div>
 
-  <p></p>
+  <p>The Individual Test is a rigorous written and practical examination designed to assess each participant’s independent mastery of Earth sciences.</p> 
+  <p>It typically includes both theoretical questions and practical problem-solving tasks covering disciplines such as geology, meteorology, oceanography and environmental science, requiring analytical thinking and application of earth system concepts.</p>
+  <p>It also featured a <strong>Data Mining Test (DMT)</strong> component, which involved analyzing large datasets related to Earth’s history. This section assessed skills in data interpretation through formulation, tabulation, graphical analysis, and drawing scientifically sound conclusions from real-world geoscientific data.</p>
+  <p>Based on my performance in the Individual Test, I was awarded the <strong>Bronze Medal</strong></p>
+
+  <div class="achievement-images">
+    <img src="/images/iesob1.jpg" alt="IESO">
+    <img src="/images/iesob2.jpg" alt="IESO">
+    <img src="/images/iesob3.jpg" alt="IESO">
+    <img src="/images/iesob4.jpg" alt="IESO">
+    <img src="/images/iesob5.jpg" alt="IESO">
+  </div>
 
   <div class="dashed-line"></div>
 
@@ -769,7 +795,17 @@ author_profile: true
     📍 <em>Chennai, Tamil Nadu</em>
   </div>
 
-  <p></p>
+  <p>As part of the IESO selection process, I was invited to the <strong>Pre-Departure Training Camp</strong> held at <strong>Anna University, Chennai</strong>, which took place over a one-week period from <strong>31 July to 6 August</strong>. The camp provided advanced training in Earth sciences, conducted by professors and domain experts from across India, with sessions held both on-site and online.</p>
+  <p>The training included hands-on study of various fossil samples, along with field-based observations of atmospheric and oceanic phenomena along the Marina Beach coastline. These activities focused on understanding coastal processes such as sedimentation, wave dynamics, and shoreline formation.</p>
+  <p>As part of the field excursions, we also travelled to <strong>Puducherry</strong>, studying diverse geological formations along the route, including rock structures such as <em>Krishna’s Butter Ball</em>. We further examined the <strong>Shore Temple at Mahabalipuram</strong> to understand ancient construction techniques, particularly the use of sandstone and calcium carbonate–rich sea shell paste as binding materials in coastal temple architecture.</p>
+
+  <div class="achievement-images">
+    <img src="/images/iesopd1.jpg" alt="IESO">
+    <img src="/images/iesopd2.jpg" alt="IESO">
+    <img src="/images/iesopd3.jpg" alt="IESO">
+    <img src="/images/iesopd4.jpg" alt="IESO">
+    <img src="/images/iesopd5.jpg" alt="IESO">
+  </div>
 
   <div class="dashed-line"></div>
 
@@ -781,20 +817,41 @@ author_profile: true
     📍 <em>Shillong, Meghalaya</em>
   </div>
 
-  <p></p>
+  <p>Following the national selection process, I was selected among the <strong>top four students nationally</strong> and consequently chosen as a member of <strong>Team India</strong> for the International Earth Science Olympiad. As part of this process, I attended an intensive residential training and evaluation camp held at <strong>North-Eastern Hill University (NEHU), Shillong</strong>, from <strong>26 May to 13 June</strong>.</p>
+  <p>The camp featured comprehensive instruction by professors and subject experts from leading institutions across India, covering both fundamental and advanced topics in Earth sciences. Areas of study included geology, mineralogy, astronomy and astrophysics, environmental science, sustainability, Earth-system processes, and related interdisciplinary domains.</p>
+  <p>The academic program was complemented by extensive laboratory training, including hands-on work with mineral and rock samples, rock cutting techniques, and microscopic examination of crystalline structures. The camp concluded with a rigorous evaluation comprising theoretical examinations, practical assessments, and presentation-based components. As part of these assessments, I delivered a <strong>PowerPoint presentation on Microplastics</strong> and a <strong>poster presentation on Human Migration</strong>.</p>
+  <p>In addition, multiple field study excursions were conducted across geologically significant regions, where we examined mica-rich soils, rock and valley cuts, coal-bearing formations, and karst landscapes. Key sites included <strong>Sohra (Cherrapunjee)</strong>, the <strong>Arwah–Lumshynna Cave</strong>, and <strong>Laitkhanai Falls</strong>, providing firsthand exposure to geomorphological processes and sedimentary and cave formations. Beyond academics, the experience fostered strong collaborations and lasting professional friendships.</p>
+
+  <div class="achievement-images">
+    <img src="/images/iesotc1.jpg" alt="IESO">
+    <img src="/images/iesotc2.jpg" alt="IESO">
+    <img src="/images/iesotc3.jpeg" alt="IESO">
+    <img src="/images/iesotc4.jpg" alt="IESO">
+    <img src="/images/iesotc0.jpg" alt="IESO">
+    <img src="/images/iesotc5.jpg" alt="IESO">
+    <img src="/images/iesotc6.jpg" alt="IESO">
+    <img src="/images/iesotc.jpg" alt="IESO">
+  </div>
 
   <div class="dashed-line"></div>
 
   <h3>🇮🇳 Qualified for the Indian National Training Camp</h3>
 
   <div class="achievement-meta">
-    🏢 <em>Issued by Super Six Sports Gaming Private Limited</em><br>
+    🏢 <em>Conducted by Geological Society of India (GSI)</em><br>
     🗓️ <em>May - June 2024</em><br>
     📍 <em>Shillong, Meghalaya</em>
   </div>
 
-  <p></p>
-  
+  <p>The Indian National Training Camp qualification was determined through a rigorous offline written examination consisting of 100 objective-type questions, conducted at designated test centres across the country. Based on performance in this national-level assessment, 26 students were selected to advance to the Indian National Training Camp.</p>
+  <p>I qualified for the camp and was ranked <strong>8th nationally</strong>.</p> 
+  <p>I was the <strong>only student selected from Chhattisgarh</strong>, one of only two students from Central India, and the <strong>third student from my school</strong> to achieve this qualification.</p>
+
+  <div class="achievement-images">
+    <img src="/images/iesoqt1.jpg" alt="IESO">
+    <img src="/images/iesoqt2.jpg" alt="IESO">
+  </div>
+
 </div>
 
 <hr class="silver-line" />
