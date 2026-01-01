@@ -1046,10 +1046,18 @@ author_profile: true
   <p>We won the Semi-Final with a score of 100 points!</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <a href="https://www.youtube.com/watch?v=S_3fq0Vqc3I" class="episode-card">
-      <img src="/images/hiqsf.png" alt="Semi Final" style="width: 335px;">
-      <span>CBSE HIQ 2022<br>Semi-Final 4</span>
-    </a>
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/PpuNR-Q95Mk"
+          title="Fit India Quiz – National Rounds Season 1 Episode 4"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
+    </div>
   </div>
 
   <div class="dashed-line"></div>
