@@ -971,8 +971,19 @@ author_profile: true
   <p>Over 10,000 students from 12 schools participated in the event, with the grand finale held at NH Goel School, Raipur.</p>
   <p>Out of 10,000+ participants, 1,034 were selected for the qualifying rounds, 72 advanced to Level 1, and 12 to Level 2.</p>
   <p>I emerged as the winner of Group C (Senior) and was awarded an iPad along with various other prizes from the event sponsors.</p>
-  <div class="achievement-images">
-    <img src="/images/data&ai.jpg" alt="Data&AI '23">
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/O19X4Ah9vfk"
+          title="Fit India Quiz – National Rounds Season 1 Episode 4"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
+    </div>
   </div>
 </div>
 
@@ -1026,10 +1037,18 @@ author_profile: true
   <p>The team from New Delhi won, and we (Chhattisgarh) secured second place.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <a href="https://www.youtube.com/watch?v=ynYcqvTCh-Y" class="episode-card">
-      <img src="/images/hiqf.png" alt="National Rounds" style="width: 335px;">
-      <span>CBSE HIQ 2022<br>National Finale</span>
-    </a>
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/UwzXg_3KkWc"
+          title="Fit India Quiz – National Rounds Season 1 Episode 4"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
+    </div>
   </div>
 
   <div class="dashed-line"></div>
