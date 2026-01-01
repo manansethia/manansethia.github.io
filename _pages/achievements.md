@@ -480,7 +480,7 @@ author_profile: true
 
   <div class="achievement-images">
     <img src="/images/nehueday.png" alt="NEHU '25">
-    <img src="/images/nehuearth.png" alt="NEHU '25">
+    <img src="/images/nehuearth.jpg" alt="NEHU '25">
   </div>
 </div>
 
