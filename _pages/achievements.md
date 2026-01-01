@@ -976,13 +976,13 @@ author_profile: true
       <div class="video-wrapper">
         <iframe
           src="https://www.youtube-nocookie.com/embed/O19X4Ah9vfk"
-          title="Fit India Quiz – National Rounds Season 1 Episode 4"
+          title="MRIDA Presentation - Data & AI Talks"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
-      <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
+      <span>MRIDA Presentation<br>Data & AI Talks</span>
     </div>
   </div>
 </div>
@@ -1041,13 +1041,13 @@ author_profile: true
       <div class="video-wrapper">
         <iframe
           src="https://www.youtube-nocookie.com/embed/UwzXg_3KkWc"
-          title="Fit India Quiz – National Rounds Season 1 Episode 4"
+          title="CBSE HIQ 2022 National Finale"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
-      <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
+      <span>CBSE HIQ 2022<br>National Finale</span>
     </div>
   </div>
 
@@ -1069,13 +1069,13 @@ author_profile: true
       <div class="video-wrapper">
         <iframe
           src="https://www.youtube-nocookie.com/embed/PpuNR-Q95Mk"
-          title="Fit India Quiz – National Rounds Season 1 Episode 4"
+          title="CBSE HIQ 2022 Semi-Final 4"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
       </div>
-      <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
+      <span>CBSE HIQ 2022<br>Semi-Final 4</span>
     </div>
   </div>
 
