@@ -1148,7 +1148,7 @@ author_profile: true
   <div class="episode-container" style="margin-left: 10px;">
     <div class="episode-card">
       <iframe
-        src="https://youtu.be/BQ2v2y-vIAo"
+        src="https://www.youtube-nocookie.com/embed/olKrkkhQNNM"
         title="Fit India Quiz – State Final Chhattisgarh"
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1158,7 +1158,7 @@ author_profile: true
     </div>
     <div class="episode-card">
       <iframe
-        src="https://youtu.be/2n_GQwlG0Bk"
+        src="https://www.youtube-nocookie.com/embed/jmTjf5EvejA"
         title="Fit India Quiz – State Semi-Final 2 Chhattisgarh"
         loading="lazy"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
