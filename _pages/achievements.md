@@ -1150,11 +1150,20 @@ author_profile: true
   <p>The team from Tamil Nadu won, and we (Chhattisgarh) secured second place.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
-    <a href="https://www.hotstar.com/in/shows/fit-india-quiz/1260112749/fit-india-quiz-season-1-episode-4/1260113050/watch" class="episode-card">
-      <img src="/images/nr.png" alt="National Rounds" style="width: 335px;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/UAQWCSxxFqk"
+          title="Fit India Quiz – National Rounds Season 1 Episode 4"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
       <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
-    </a>
+    </div>
   </div>
+
 
   <div class="dashed-line"></div>
 
