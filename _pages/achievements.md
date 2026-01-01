@@ -939,7 +939,7 @@ author_profile: true
   <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions.</p>
   <p>The 2022 edition focused on "India: The Mother of Democracy," celebrating India's G20 presidency and rich history.</p>
   <p>Tens of thousands of schools from across the country participated in this multi-stage competition, which began with an online qualifying round.</p>
-  <p>Atharv Sharma, Snigdha Mohanty, and I represented our school in the Bhuvaneshwar regional round but were unable to qualify for the national finale as we emerged as the regional runner-ups.</p>
+  <p>Atharv Sharma, Snigdha Mohanty, and I represented our school in the Bhubaneswar regional round but were unable to qualify for the national finale as we emerged as the regional runner-ups.</p>
 
   <div class="achievement-images">
     <img src="/images/cbsehiq23.jpg" alt="CBSE HIQ '23">
@@ -1217,8 +1217,12 @@ author_profile: true
     📍 <em>New Delhi, India</em>
   </div>
 
-  <p>The National Final featured teams from New Delhi, Tamil Nadu, Chhattisgarh, and Karnataka.</p>
-  <p>The team from New Delhi won, and we (Chhattisgarh) secured second place.</p>
+  <p>The National Finale of the CBSE Heritage India Quiz brought together the champion teams
+  from across the country, representing New Delhi, Tamil Nadu, Chhattisgarh (us), and Karnataka.</p>
+
+  <p>Competing at the national stage in New Delhi, we represented Chhattisgarh and faced teams with
+  diverse academic and regional backgrounds. After a closely contested final comprising multiple
+  high-pressure rounds, the team from New Delhi secured first place, while we emerged as the National 1st Runners-Up.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
@@ -1245,8 +1249,10 @@ author_profile: true
     📍 <em>New Delhi, India</em>
   </div>
 
-  <p>Semi-Final 4 featured teams from Chhattisgarh, Punjab, Assam, and Jharkhand.</p>
-  <p>We won the Semi-Final with a score of 100 points!</p>
+  <p>Semi-Final 4 featured strong teams representing the states of Chhattisgarh (us), Punjab, Assam,
+  and Jharkhand.</p>
+  <p>We delivered a dominant performance throughout the semi-final, maintaining a consistent lead
+  across multiple rounds and finishing with a score of 100 points.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
