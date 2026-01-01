@@ -398,7 +398,6 @@ author_profile: true
   </div>
 
   <div class="achievement-images">
-    <img src="/images/tcs251.jpeg" alt="TCS '25">
     <img src="/images/tcs252.jpeg" alt="TCS '25">
     <img src="/images/tcs253.jpg" alt="TCS '25">
     <img src="/images/tcs254.jpg" alt="TCS '25">
@@ -630,7 +629,6 @@ author_profile: true
   </div>
 
   <div class="achievement-images">
-    <img src="/images/tcs241.png" alt="TCS '24">
     <img src="/images/tcs242.jpeg" alt="TCS '24">
     <img src="/images/tcs24cer.jpg" alt="TCS '24">
     <img src="/images/tcs24semcer.jpeg" alt="TCS '24">
