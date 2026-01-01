@@ -1375,7 +1375,6 @@ author_profile: true
     </div>
   </div>
 
-
   <div class="dashed-line"></div>
 
   <h3>🏆 State Champions - Chhattisgarh</h3>
@@ -1384,35 +1383,45 @@ author_profile: true
     🗓️ <em>February 2022</em><br>
     📍 <em>Online</em>
   </div>
-  <p>We became the Chhattisgarh State Champions after winning both the State Semi-Final and the State Final.</p>
-  <p>Eight school teams competed in the State Semi-Finals, with two teams from each advancing to the State Final.</p>
+  <p>In the State Final, we competed against the top teams from across Chhattisgarh. By outperforming all other finalist teams across multiple rounds, we emerged as the State Champions, earning the opportunity to advance to the national stage of the Fit India Quiz.</p>
 
-  <div class="quiz-episodes-scroll">
-    <div class="episode-container" style="margin-left: 10px;">
-      <div class="episode-card">
-        <div class="video-wrapper">
-          <iframe
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
           src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo"
           title="Fit India Quiz – State Final Chhattisgarh"
           loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
-          </iframe>
-        </div>
-        <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
+        </iframe>
       </div>
-      <div class="episode-card">
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk"
-            title="Fit India Quiz – State Semi-Final Chhattisgarh"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <span>Fit India Quiz – Semi-Final 2<br>Chhattisgarh</span>
+      <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
+    </div>
+  </div>
+
+  <div class="dashed-line"></div>
+
+  <h3>📺 Winners - Chhattisgarh State Semi-Final 2</h3>
+  <div class="achievement-meta">
+    🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
+    🗓️ <em>February 2022</em><br>
+    📍 <em>Online</em>
+  </div>
+  <p>After I qualified the preliminary stages, we competed in the State Semi-Final 2, where we emerged as the winners and secured qualification for the State Final.</p>
+
+  <div class="episode-container" style="display: flex; justify-content: center;">
+    <div class="episode-card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk"
+          title="Fit India Quiz – State Semi-Final Chhattisgarh"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
+      <span>Fit India Quiz – Semi-Final 2<br>Chhattisgarh</span>
     </div>
   </div>
 </div>
