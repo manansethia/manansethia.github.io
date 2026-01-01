@@ -851,7 +851,6 @@ author_profile: true
     <img src="/images/iesoqt1.jpg" alt="IESO">
     <img src="/images/iesoqt2.jpg" alt="IESO">
   </div>
-
 </div>
 
 <hr class="silver-line" />
