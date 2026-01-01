@@ -730,7 +730,7 @@ author_profile: true
   </div>
 
   <p>The International Earth Science Olympiad (IESO) is a prestigious global academic competition that brings together top school/junior college students from around the world to assess excellence in multiple domains of Earth Science, including geology, meteorology, oceanography, environmental science, and data interpretation.</p> 
-  <p>It is organized by the International Geoscience Education Organisation (IGEO) with the aim of promoting geoscience education and international scientific collaboration.
+  <p>It is organized by the International Geoscience Education Organisation (IGEO) with the aim of promoting geoscience education and international scientific collaboration.</p>
   <p>It features three core components: Earth System Project (ESP), which evaluates interdisciplinary understanding of Earth processes through scientific poster making and presentation between mixed international teams; the International Team Field Investigation (ITFI), a collaborative, field-based exercise conducted in mixed international teams; and an Individual Test that tests conceptual knowledge, data interpretation, and analytical skills across the Earth sciences.</p>
   <p>In India, the selection process for IESO is conducted by the Geological Society of India(GSI) through a rigorous multi-stage pathway comprising the Indian National Earth Science Olympiad (INESO), followed by intensive training at the Indian National Camp and the Pre-Departure Training Camp.</p>
   <p>Following this national selection and training process, I was selected to represent India as a member of Team India at Beijing, China.</p>
