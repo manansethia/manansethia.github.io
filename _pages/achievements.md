@@ -1145,17 +1145,30 @@ author_profile: true
   <p>Eight school teams competed in the State Semi-Finals, with two teams from each advancing to the State Final.</p>
 
   <div class="quiz-episodes-scroll">
-    <div class="episode-container" style="margin-left: 10px;">
-      <a href="https://youtube.com/watch?v=olKrkkhQNNM" class="episode-card">
-        <img src="/images/sf.jpg" alt="State Final">
-        <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
-      </a>
-      <a href="https://youtube.com/watch?v=jmTjf5EvejA" class="episode-card">
-        <img src="/images/ssf.jpg" alt="State Semi-Final">
-        <span>Fit India Quiz – State Semi-Final 2<br>Chhattisgarh</span>
-      </a>
+  <div class="episode-container" style="margin-left: 10px;">
+    <div class="episode-card">
+      <iframe
+        src="https://youtu.be/BQ2v2y-vIAo"
+        title="Fit India Quiz – State Final Chhattisgarh"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
+    </div>
+    <div class="episode-card">
+      <iframe
+        src="https://youtu.be/2n_GQwlG0Bk"
+        title="Fit India Quiz – State Semi-Final 2 Chhattisgarh"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      <span>Fit India Quiz – State Semi-Final 2<br>Chhattisgarh</span>
     </div>
   </div>
+</div>
+
 </div>
 
 <hr class="silver-line" />
