@@ -1377,7 +1377,7 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>🏆 State Champions - Chhattisgarh</h3>
+  <h3>📺 State Champions - Chhattisgarh</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>February 2022</em><br>
