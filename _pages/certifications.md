@@ -52,7 +52,7 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 335px;
+  width: 270px;
 }
 
 .cert-card img {
@@ -77,7 +77,7 @@ a {
 }
 
 .cert-text {
-  width: 335px;
+  width: 270px;
   box-sizing: border-box;
   padding: 0 6px;
 }
