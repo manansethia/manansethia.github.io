@@ -64,8 +64,9 @@ author_profile: true
   }
 
   .cert-card img {
-    height: 220px;
+    height: 180px;
     width: auto;
+    min-width: 20%;
     border-radius: 10px;
     object-fit: cover;
     scroll-snap-align: start;
@@ -115,13 +116,6 @@ author_profile: true
     height: 1.5px;
     background-color: #c07300;
     margin: 0 0 20px 0;
-  }
-
-  @media (min-width: 1024px) {
-    .cert-card img {
-        height: 180px;
-        min-width: 20%;
-    }
   }
 
     @keyframes fadeInUp {
