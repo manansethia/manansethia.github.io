@@ -4,6 +4,21 @@
   {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
 {% endif %}
 
+<style>
+  .author__bio {
+    display: inline;
+  }
+
+  .bio-icon {
+    width: 0.9em;
+    height: 0.9em;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-left: 6px;
+    max-width: none;
+  }
+</style>
+
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
