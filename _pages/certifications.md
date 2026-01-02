@@ -134,7 +134,7 @@ author_profile: true
 
 <h2>
   <img src="/images/cert/codechef.svg" class="cert-logo" alt="CodeChef">
-  CodeChef – Programming Certifications
+  CodeChef - Programming & DSA
 </h2>
 
 <div class="cert-scroll">
@@ -215,7 +215,7 @@ author_profile: true
 
 <h2>
   <img src="/images/cert/coursera.svg" class="cert-logo" alt="Coursera">
-  Coursera – Professional Certifications
+  Coursera - Professional
 </h2>
 
 <div class="cert-scroll">
