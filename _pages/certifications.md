@@ -5,116 +5,120 @@ author_profile: true
 ---
 
 <style>
-a {
-  text-decoration: none !important;
-  border: none !important;
-  outline: none !important;
-}
-
-.cert-section h2 {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.235em;
-  margin-top: 6px;
-  margin-bottom: 18px;
-  border-bottom: none !important;
-}
-
-.cert-logo {
-  height: 28px;
-  width: auto;
-  display: block;
-}
-
-.cert-scroll {
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 15px 10px;
-  gap: 15px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  -webkit-overflow-scrolling: touch;
-  margin-top: 4px;
-  margin-bottom: 12px;
-}
-
-.cert-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.cert-card {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 270px;
-}
-
-.cert-card img {
-  height: 220px;
-  width: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  scroll-snap-align: start;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  z-index: 1;
-  margin-bottom: 7px;
-}
-
-.cert-card img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.20);
-}
-
-.cert-card {
-  color: inherit !important;
-}
-
-.cert-text {
-  width: 270px;
-  box-sizing: border-box;
-  padding: 0 6px;
-}
-
-.cert-title {
-  margin-top: 0.4em;
-  font-size: 0.9em;
-  font-weight: 600;
-  color: var(--body-color) !important;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.cert-desc {
-  font-size: 0.9em;
-  line-height: 1.5;
-  margin-top: 4px;
-  color: var(--body-color) !important;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-hr.silver-line {
-  border: none;
-  height: 1.5px;
-  background-color: #c07300;
-  margin: 0 0 20px 0;
-}
-
-@media (min-width: 1024px) {
-  .cert-card img {
-    height: 180px;
-    min-width: 20%;
+  a {
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
   }
-}
+
+  .page__content h2 {
+    padding bottom: 0em;
+  }
+
+  .cert-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.235em;
+    margin-top: 6px;
+    margin-bottom: 0px;
+    border-bottom: none !important;
+  }
+
+  .cert-logo {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+
+  .cert-scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 15px 10px;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
+
+  .cert-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cert-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 270px;
+  }
+
+  .cert-card img {
+    height: 220px;
+    width: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+    margin-bottom: 7px;
+  }
+
+  .cert-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.20);
+  }
+
+  .cert-card {
+    color: inherit !important;
+  }
+
+  .cert-text {
+    width: 270px;
+    box-sizing: border-box;
+    padding: 0 6px;
+  }
+
+  .cert-title {
+    margin-top: 0.4em;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--body-color) !important;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .cert-desc {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-top: 4px;
+    color: var(--body-color) !important;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  hr.silver-line {
+    border: none;
+    height: 1.5px;
+    background-color: #c07300;
+    margin: 0 0 20px 0;
+  }
+
+  @media (min-width: 1024px) {
+    .cert-card img {
+        height: 180px;
+        min-width: 20%;
+    }
+  }
 </style>
 
 <div class="cert-section">
