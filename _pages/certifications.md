@@ -134,7 +134,7 @@ author_profile: true
 
 <h2>
   <img src="/images/cert/codechef.svg" class="cert-logo" alt="CodeChef">
-  CodeChef – Programming & Data Structures
+  CodeChef – Programming Certifications
 </h2>
 
 <div class="cert-scroll">
