@@ -141,7 +141,7 @@ author_profile: true
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn Python - Pro.pdf" target="_blank">
     <img src="/images/cert/jpg/learnpython.jpg" alt="Learn Python Pro">
     <div class="cert-text">
-      <div class="cert-title">Learn Python – Pro</div>
+      <div class="cert-title">Learn Python Programming</div>
       <div class="cert-desc">
         Advanced Python concepts, structured problem-solving, and efficient coding practices.
       </div>
@@ -222,7 +222,7 @@ author_profile: true
   <a class="cert-card" href="/images/cert/pdf/Coursera Google Cybersecurity.pdf" target="_blank">
     <img src="/images/cert/jpg/googlecybersec.jpg" alt="Google Cybersecurity">
     <div class="cert-text">
-      <div class="cert-title">Google Cybersecurity Professional Certificate</div>
+      <div class="cert-title">Google Cybersecurity</div>
       <div class="cert-desc">
         Comprehensive training in cybersecurity covering threats, defense, Linux, SQL, and automation.
       </div>
