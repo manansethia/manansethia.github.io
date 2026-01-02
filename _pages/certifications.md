@@ -52,11 +52,13 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  max-width: 100%;
 }
 
 .cert-card img {
   height: 220px;
-  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
   border-radius: 10px;
   object-fit: cover;
   scroll-snap-align: start;
@@ -71,10 +73,19 @@ a {
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.20);
 }
 
+.cert-card a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 .cert-text {
-  max-width: 335px;
-  padding: 0 4px;
+  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
+  padding: 0 4px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .cert-title {
@@ -89,6 +100,11 @@ a {
   line-height: 1.5;
   margin-top: 4px;
   color: inherit;
+}
+
+.cert-title, .cert-desc {
+  display: block;
+  max-width: 100%;
 }
 
 hr.silver-line {
