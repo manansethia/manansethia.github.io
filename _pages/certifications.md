@@ -12,7 +12,7 @@ author_profile: true
   }
 
   .page__content h2 {
-    padding bottom: 0em;
+    padding-bottom: 0em;
   }
 
   .cert-section h2 {
