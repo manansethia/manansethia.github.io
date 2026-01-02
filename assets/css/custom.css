@@ -1,0 +1,12 @@
+.author__bio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bio-icon {
+  height: 1em;
+  width: auto;
+  opacity: 0.85;
+}
+
