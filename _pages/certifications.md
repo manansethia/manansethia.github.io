@@ -81,14 +81,14 @@ a {
   margin-top: 0.4em;
   font-size: 0.9em;
   font-weight: 600;
-  color: #000000;
+  color: inherit;
 }
 
 .cert-desc {
   font-size: 0.9em;
   line-height: 1.5;
   margin-top: 4px;
-  color: #000000;
+  color: inherit;
 }
 
 hr.silver-line {
