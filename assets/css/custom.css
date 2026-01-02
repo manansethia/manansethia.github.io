@@ -3,9 +3,10 @@
 }
 
 .bio-icon {
-  height: 1em;
-  width: 1em;
-  vertical-align: text-bottom;
+  width: 0.9em;
+  height: 0.9em;
   display: inline-block;
+  vertical-align: text-bottom;
   margin-left: 6px;
+  max-width: none;
 }
