@@ -15,6 +15,10 @@ author_profile: true
     padding-bottom: 0em;
   }
 
+  .cert-section {
+    animation: fadeInUp 1s ease forwards;
+  }
+
   .cert-section h2 {
     display: flex;
     align-items: center;
@@ -117,6 +121,17 @@ author_profile: true
     .cert-card img {
         height: 180px;
         min-width: 20%;
+    }
+  }
+
+    @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 </style>
