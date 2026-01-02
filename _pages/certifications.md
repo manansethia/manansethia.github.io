@@ -25,7 +25,7 @@ author_profile: true
     gap: 10px;
     font-size: 1.235em;
     margin-top: 6px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     border-bottom: none !important;
   }
 
