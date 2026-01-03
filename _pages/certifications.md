@@ -324,7 +324,6 @@ author_profile: true
         if (isDragging) momentum();
       });
 
-      /* 🔒 Kill link clicks ONLY if dragging happened */
       container.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', e => {
           if (isDragging) {
@@ -334,7 +333,6 @@ author_profile: true
         });
       });
 
-      /* Keyboard support */
       container.setAttribute('tabindex', '0');
       container.addEventListener('keydown', e => {
         if (e.key === 'ArrowRight') {
