@@ -1556,15 +1556,17 @@ author_profile: true
     '.cert-scroll'
   ];
 
-  const friction = 0.94;
+  const friction = 0.92;
   const arrowStep = 220;
+  const dragThreshold = 6;
 
   selectors.forEach(selector => {
     document.querySelectorAll(selector).forEach(container => {
 
       let isDown = false;
+      let isDragging = false;
       let startX = 0;
-      let scrollLeft = 0;
+      let scrollStart = 0;
       let velocity = 0;
       let rafId = null;
 
@@ -1576,53 +1578,68 @@ author_profile: true
       const momentum = () => {
         container.scrollLeft += velocity;
         velocity *= friction;
-        if (Math.abs(velocity) > 0.5) {
+        if (Math.abs(velocity) > 0.4) {
           rafId = requestAnimationFrame(momentum);
         }
       };
 
       container.addEventListener('mousedown', e => {
         isDown = true;
+        isDragging = false;
         stopMomentum();
-        startX = e.pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
+        startX = e.pageX;
+        scrollStart = container.scrollLeft;
         container.classList.add('dragging');
+      });
+
+      container.addEventListener('mousemove', e => {
+        if (!isDown) return;
+
+        const dx = e.pageX - startX;
+        if (Math.abs(dx) > dragThreshold) {
+          isDragging = true;
+        }
+
+        if (!isDragging) return;
+
+        e.preventDefault();
+        const prevScroll = container.scrollLeft;
+        container.scrollLeft = scrollStart - dx;
+        velocity = container.scrollLeft - prevScroll;
       });
 
       window.addEventListener('mouseup', () => {
         if (!isDown) return;
         isDown = false;
         container.classList.remove('dragging');
-        momentum();
+        if (isDragging) momentum();
       });
 
       container.addEventListener('mouseleave', () => {
         if (!isDown) return;
         isDown = false;
         container.classList.remove('dragging');
-        momentum();
+        if (isDragging) momentum();
       });
 
-      container.addEventListener('mousemove', e => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = x - startX;
-        const prevScroll = container.scrollLeft;
-        container.scrollLeft = scrollLeft - walk;
-        velocity = container.scrollLeft - prevScroll;
+      /* 🔒 Kill link clicks ONLY if dragging happened */
+      container.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', e => {
+          if (isDragging) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+          }
+        });
       });
 
+      /* Keyboard support */
       container.setAttribute('tabindex', '0');
-
       container.addEventListener('keydown', e => {
         if (e.key === 'ArrowRight') {
-          e.preventDefault();
           stopMomentum();
           container.scrollLeft += arrowStep;
         }
         if (e.key === 'ArrowLeft') {
-          e.preventDefault();
           stopMomentum();
           container.scrollLeft -= arrowStep;
         }
