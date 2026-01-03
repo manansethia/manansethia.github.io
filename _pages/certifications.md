@@ -128,6 +128,12 @@ author_profile: true
       transform: translateY(0);
     }
   }
+  
+  .achievement-images, 
+  .quiz-episodes-scroll,
+  .cert-scroll {
+    cursor: grab;
+  }
 
   .dragging {
     cursor: grabbing;
@@ -252,8 +258,8 @@ author_profile: true
     '.cert-scroll'
   ];
 
-  const friction = 0.92;
-  const wheelBoost = 0.8;
+  const friction = 0.94;
+  const arrowStep = 220;
 
   selectors.forEach(selector => {
     document.querySelectorAll(selector).forEach(container => {
@@ -276,15 +282,6 @@ author_profile: true
           rafId = requestAnimationFrame(momentum);
         }
       };
-
-      container.addEventListener('wheel', e => {
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-          e.preventDefault();
-          stopMomentum();
-          velocity += e.deltaY * wheelBoost;
-          momentum();
-        }
-      }, { passive: false });
 
       container.addEventListener('mousedown', e => {
         isDown = true;
@@ -312,10 +309,25 @@ author_profile: true
         if (!isDown) return;
         e.preventDefault();
         const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX);
+        const walk = x - startX;
         const prevScroll = container.scrollLeft;
         container.scrollLeft = scrollLeft - walk;
         velocity = container.scrollLeft - prevScroll;
+      });
+
+      container.setAttribute('tabindex', '0');
+
+      container.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          stopMomentum();
+          container.scrollLeft += arrowStep;
+        }
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          stopMomentum();
+          container.scrollLeft -= arrowStep;
+        }
       });
     });
   });
