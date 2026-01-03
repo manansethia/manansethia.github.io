@@ -128,6 +128,10 @@ author_profile: true
       transform: translateY(0);
     }
   }
+
+  .dragging {
+    cursor: grabbing;
+  }
 </style>
 
 <div class="cert-section">
@@ -239,3 +243,81 @@ author_profile: true
     </div>
   </a>
 </div>
+
+<script>
+(function () {
+  const selectors = [
+    '.achievement-images',
+    '.quiz-episodes-scroll',
+    '.cert-scroll'
+  ];
+
+  const friction = 0.92;
+  const wheelBoost = 0.8;
+
+  selectors.forEach(selector => {
+    document.querySelectorAll(selector).forEach(container => {
+
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      let velocity = 0;
+      let rafId = null;
+
+      const stopMomentum = () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+      };
+
+      const momentum = () => {
+        container.scrollLeft += velocity;
+        velocity *= friction;
+        if (Math.abs(velocity) > 0.5) {
+          rafId = requestAnimationFrame(momentum);
+        }
+      };
+
+      container.addEventListener('wheel', e => {
+        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+          e.preventDefault();
+          stopMomentum();
+          velocity += e.deltaY * wheelBoost;
+          momentum();
+        }
+      }, { passive: false });
+
+      container.addEventListener('mousedown', e => {
+        isDown = true;
+        stopMomentum();
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+        container.classList.add('dragging');
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (!isDown) return;
+        isDown = false;
+        container.classList.remove('dragging');
+        momentum();
+      });
+
+      container.addEventListener('mouseleave', () => {
+        if (!isDown) return;
+        isDown = false;
+        container.classList.remove('dragging');
+        momentum();
+      });
+
+      container.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX);
+        const prevScroll = container.scrollLeft;
+        container.scrollLeft = scrollLeft - walk;
+        velocity = container.scrollLeft - prevScroll;
+      });
+    });
+  });
+})();
+</script>
