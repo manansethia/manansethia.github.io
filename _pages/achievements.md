@@ -427,13 +427,13 @@ author_profile: true
     text-decoration: none !important;
     border: none !important;
     outline: none !important;
-    transition: background 0.2s ease, padding-left 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
     line-height: 1.4;
   }
 
   .toc-list a:hover {
     background: rgba(222,141,0,0.1);
-    padding-left: 12px;
+    transform: translateX(4px);
     color: #c07300 !important;
   }
 
@@ -1323,7 +1323,7 @@ author_profile: true
   <p><strong>😆 Fun Fact:</strong> The team we defeated in the Semi-Finals (BHS Kolkata) were the lucky losers of the Semi Finals, and then went on to defeat us in the National Finals! Also, Tagore International was the second lucky loser of Zonal Finals.</p>
 
   <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
-    <img src="/images/yoda.webp" style="height: 1.4em; vertical-align: middle;">
+    <img src="/images/yoda.webp" alt="Yoda" style="height: 1.4em; vertical-align: middle;">
     <strong>Hmmm… the National Finale, for lucky losers it became.</strong>
   </div>
 
@@ -1869,7 +1869,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var href = link.getAttribute('href');
     if (href) {
       link.setAttribute('data-target', href.substring(1));
-      link.removeAttribute('href');
+      /* DO NOT remove href here so crawlers can still see the links */
       link.style.cursor = 'pointer';
     }
     link.addEventListener('click', function (e) {
