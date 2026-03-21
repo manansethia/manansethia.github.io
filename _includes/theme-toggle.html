@@ -382,7 +382,6 @@
   </button>
   
   <script data-cfasync="false">
-    document.addEventListener("DOMContentLoaded", function () {
       const themeToggle = document.getElementById("theme-toggle");
       const sun = document.querySelector(".sun");
       const moon = document.querySelector(".moon");
@@ -426,7 +425,6 @@
       /* Defer slightly so browser scroll-restoration finishes before we check */
       setTimeout(updateJtt, 100);
       window.addEventListener("scroll", updateJtt, { passive: true });
-    });
   </script>
   <!-- END THEME TOGGLE BUTTON -->
   
