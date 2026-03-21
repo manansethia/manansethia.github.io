@@ -13,7 +13,7 @@
 
     .theme-toggle {
       position: fixed;
-      bottom: 100px;
+      bottom: 30px;
       right: 20px;
       z-index: 1000;
       background: none;
@@ -279,9 +279,72 @@
     .dark-mode .pdf-frame {
       border-color: #d39c2e;
     }
+
+    /* ── Jump to Top Button ── */
+    .jump-to-top {
+      position: fixed;
+      bottom: 95px;
+      right: 20px;
+      z-index: 1000;
+      background: none !important;
+      border: none !important;
+      cursor: pointer;
+      padding: 0;
+      width: 55px;
+      height: 55px;
+      opacity: 0 !important;
+      visibility: hidden;
+      pointer-events: none !important;
+      transform: translateY(8px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    }
+
+    .jump-to-top.visible {
+      opacity: 1 !important;
+      visibility: visible;
+      pointer-events: auto !important;
+      transform: translateY(0);
+    }
+
+    .jump-to-top .jtt-container {
+      width: 100%;
+      height: 100%;
+      background-color: #eea316;
+      border-radius: 16px;
+      border: 3px solid #c78400;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.4s ease, border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .jump-to-top .jtt-container:hover {
+      transform: translateY(-2px);
+    }
+
+    .jump-to-top .jtt-arrow {
+      width: 22px;
+      height: 22px;
+      stroke: #fff7dc;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .dark-mode .jump-to-top .jtt-container {
+      background-color: #554125;
+      border-color: #fff5e7;
+    }
+
+    .dark-mode .jump-to-top .jtt-arrow {
+      stroke: #ffe6c4;
+    }
   </style>
   
-  <script>
+  <script data-cfasync="false">
     (function () {
       try {
         if (localStorage.getItem('theme') === 'dark') {
@@ -291,6 +354,14 @@
     })();
   </script>
   
+  <button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
+    <div class="jtt-container">
+      <svg class="jtt-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </div>
+  </button>
+
   <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
     <div class="sun-moon-container">
       <svg class="sun icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -310,7 +381,7 @@
     </div>
   </button>
   
-  <script>
+  <script data-cfasync="false">
     document.addEventListener("DOMContentLoaded", function () {
       const themeToggle = document.getElementById("theme-toggle");
       const sun = document.querySelector(".sun");
@@ -332,6 +403,29 @@
         );
         updateIcons();
       });
+
+      document.getElementById("jump-to-top").addEventListener("click", function () {
+        if (window.jQuery) {
+          $("html, body").animate({ scrollTop: 0 }, 700, "swing");
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+
+      /* Show jump-to-top only when: page is scrollable AND not at the very top */
+      var jttBtn = document.getElementById("jump-to-top");
+      function updateJtt() {
+        var pageIsScrollable = document.body.scrollHeight > window.innerHeight;
+        var notAtTop = window.scrollY > 0;
+        if (pageIsScrollable && notAtTop) {
+          jttBtn.classList.add("visible");
+        } else {
+          jttBtn.classList.remove("visible");
+        }
+      }
+      /* Defer slightly so browser scroll-restoration finishes before we check */
+      setTimeout(updateJtt, 100);
+      window.addEventListener("scroll", updateJtt, { passive: true });
     });
   </script>
   <!-- END THEME TOGGLE BUTTON -->

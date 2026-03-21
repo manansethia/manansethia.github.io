@@ -30,11 +30,11 @@ $(document).ready(function(){
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
-  // init smooth scroll, this needs to be slightly more than then fixed masthead height
-  $("a").smoothScroll({offset: -65});
+  // init smooth scroll — 800ms with eased curve for silky feel
+  $("a").smoothScroll({offset: -80, speed: 800});
 
   // add lightbox class to all image links
-  $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
+  $("a[href$='.webp'],a[href$='.webp'],a[href$='.webp'],a[href$='.webp'],a[href$='.gif']").addClass("image-popup");
 
   // Magnific-Popup options
   $(".image-popup").magnificPopup({

@@ -65,7 +65,7 @@ author_profile: true
 <!-- KPS Entry -->
 <div class="edu-entry kps-entry">
   <div class="edu-logo kps-logo">
-    <img src="/images/kps.jpeg" alt="KPS Logo">
+    <img src="/images/kps.webp" alt="KPS Logo">
   </div>
   <div class="edu-text">
     <h3>Krishna Public School, Kamal Vihar</h3>
@@ -84,7 +84,7 @@ author_profile: true
 <!-- KKA Entry -->
 <div class="edu-entry kka-entry">
   <div class="edu-logo kka-logo">
-    <img src="/images/kka.jpeg" alt="KKA Logo">
+    <img src="/images/kka.webp" alt="KKA Logo">
   </div>
   <div class="edu-text">
     <h3>Krishna Kids Academy, Shailendra Nagar</h3>

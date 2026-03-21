@@ -300,9 +300,308 @@ author_profile: true
   .dragging {
     cursor: grabbing;
   }
+
+  /* ── Table of Contents ── */
+
+  .achievement-section {
+    scroll-margin-top: 80px;
+  }
+
+  hr.silver-line {
+    scroll-margin-top: 80px;
+  }
+
+  .toc-box {
+    margin-bottom: 28px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid #e8c774;
+    background: linear-gradient(135deg, #fffaf0 0%, #fff5e1 100%);
+    box-shadow: 0 2px 12px rgba(192,115,0,0.08);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  .toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px 14px 20px;
+    cursor: pointer;
+    user-select: none;
+    background: linear-gradient(135deg, #fff3d6 0%, #ffe8b8 100%);
+    transition: background 0.3s ease;
+  }
+
+  .toc-header:hover {
+    background: linear-gradient(135deg, #ffedcc 0%, #ffe0a0 100%);
+  }
+
+  .toc-header h2 {
+    font-size: 1.05em;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    color: #8b5e00;
+    font-weight: 700;
+  }
+
+  .toc-chevron {
+    width: 10px;
+    height: 10px;
+    border-right: 2.5px solid #b07800;
+    border-bottom: 2.5px solid #b07800;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .toc-box.collapsed .toc-chevron {
+    transform: rotate(-45deg);
+  }
+
+  .toc-search-wrap {
+    padding: 12px 20px 0;
+    border-top: 1.5px solid #e8c774;
+  }
+
+  .toc-search {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1.5px solid #e0c070;
+    border-radius: 8px;
+    font-size: 0.85em;
+    outline: none;
+    background: rgba(255,255,255,0.7);
+    color: #5a3e00;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .toc-search:focus {
+    border-color: #de8d00;
+    box-shadow: 0 0 0 3px rgba(222,141,0,0.15);
+  }
+
+  .toc-search::placeholder {
+    color: #b89960;
+  }
+
+  .toc-body {
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1), padding 0.45s ease, opacity 0.3s ease;
+    padding: 10px 20px 16px;
+    max-height: 6000px;
+    opacity: 1;
+  }
+
+  .toc-box.collapsed .toc-body {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .toc-list li {
+    border-bottom: 1px solid rgba(192,115,0,0.1);
+  }
+
+  .toc-list li:last-child {
+    border-bottom: none;
+  }
+
+  .toc-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 7px 8px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #6b4000 !important;
+    text-decoration: none !important;
+    border: none !important;
+    outline: none !important;
+    transition: background 0.2s ease, padding-left 0.2s ease, color 0.2s ease;
+    line-height: 1.4;
+  }
+
+  .toc-list a:hover {
+    background: rgba(222,141,0,0.1);
+    padding-left: 12px;
+    color: #c07300 !important;
+  }
+
+  .toc-list a.active {
+    background: rgba(222,141,0,0.18);
+    color: #a06000 !important;
+    font-weight: 600;
+    border-left: 3px solid #de8d00 !important;
+  }
+
+  .toc-num {
+    color: #6b4400;
+    font-size: 0.78em;
+    font-weight: 700;
+    min-width: 22px;
+    flex-shrink: 0;
+  }
+
+  .toc-title { flex: 1; }
+
+  .toc-date {
+    color: #6b4400;
+    opacity: 0.8;
+    font-size: 0.88em;
+    font-weight: 500;
+  }
+
+  .toc-count {
+    display: inline-block;
+    font-size: 0.78em;
+    color: #a07830;
+    background: rgba(192,115,0,0.1);
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    font-weight: 600;
+  }
+
+  /* ── Dark Mode (class-based) ── */
+  .dark-mode .toc-box {
+    background: linear-gradient(135deg, #1e1a14 0%, #2a2318 100%);
+    border-color: #5a4520;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  .dark-mode .toc-header {
+    background: linear-gradient(135deg, #2a2318 0%, #342b1c 100%);
+  }
+  .dark-mode .toc-header:hover {
+    background: linear-gradient(135deg, #342b1c 0%, #3e3220 100%);
+  }
+  .dark-mode .toc-header h2 { color: #f0c870; }
+  .dark-mode .toc-chevron { border-color: #d4a040; }
+  .dark-mode .toc-search-wrap { border-top-color: #5a4520; }
+  .dark-mode .toc-search {
+    background: rgba(40,34,26,0.8);
+    border-color: #5a4520;
+    color: #e8d0a0;
+  }
+  .dark-mode .toc-search:focus {
+    border-color: #d4a040;
+    box-shadow: 0 0 0 3px rgba(212,160,64,0.2);
+  }
+  .dark-mode .toc-search::placeholder { color: #8a7050; }
+  .dark-mode .toc-list li { border-bottom-color: rgba(90,69,32,0.4); }
+  .dark-mode .toc-list a { color: #d4b878 !important; }
+  .dark-mode .toc-list a:hover {
+    background: rgba(212,160,64,0.12);
+    color: #f0c870 !important;
+  }
+  .dark-mode .toc-list a.active {
+    background: rgba(212,160,64,0.2);
+    color: #f0c870 !important;
+    border-left-color: #d4a040 !important;
+  }
+  .dark-mode .toc-num { color: #c8a060; font-weight: 700; }
+  .dark-mode .toc-date { color: #b89a60; opacity: 0.9; }
+  .dark-mode .toc-count {
+    color: #c0a060;
+    background: rgba(90,69,32,0.3);
+  }
+
+  @media (min-width: 768px) {
+    .toc-list {
+      columns: 2;
+      column-gap: 12px;
+    }
+    .toc-list li {
+      break-inside: avoid;
+    }
+  }
 </style>
 
+<!-- ═══ Quick Navigation TOC ═══ -->
+<div class="toc-box collapsed" id="achievementToc">
+  <div class="toc-header" onclick="toggleToc()">
+    <h2>📋 Quick Navigation <span class="toc-count">40 achievements</span></h2>
+    <span class="toc-chevron"></span>
+  </div>
+  <div class="toc-search-wrap">
+    <input type="text" class="toc-search" id="tocSearch" placeholder="🔍 Search achievements… (try: quiz, coding, olympiad, MUN)">
+  </div>
+  <div class="toc-body" id="tocBody">
+    <ul class="toc-list" id="tocList">
+      <li data-tags="tech coding olympiad ibm"><a href="#ach-1"><span class="toc-num">1.</span><span class="toc-title">🥈 Silver Medalist: Future Tech Olympiad 2026 <span class="toc-date">(February 2026)</span></span></a></li>
+      <li data-tags="tech coding programming iit"><a href="#ach-2"><span class="toc-num">2.</span><span class="toc-title">🎲 Shaastra 2026 by IIT Madras <span class="toc-date">(December 2025)</span></span></a></li>
+      <li data-tags="quiz finance"><a href="#ach-3"><span class="toc-num">3.</span><span class="toc-title">📈 2nd Runner Ups - Wonga Wits Quiz Season 2 <span class="toc-date">(November 2025)</span></span></a></li>
+      <li data-tags="quiz tech tcs"><a href="#ach-4"><span class="toc-num">4.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2025 <span class="toc-date">(August 2025)</span></span></a></li>
+      <li data-tags="quiz science"><a href="#ach-5"><span class="toc-num">5.</span><span class="toc-title">🪨 Winner IIM Bhilai – BPMMQ 2025 <span class="toc-date">(August 2025)</span></span></a></li>
+      <li data-tags="quiz finance"><a href="#ach-6"><span class="toc-num">6.</span><span class="toc-title">🪙 Winner Bhopal – SBI Scholar Quiz 2025 <span class="toc-date">(June 2025)</span></span></a></li>
+      <li data-tags="coding code tech"><a href="#ach-7"><span class="toc-num">7.</span><span class="toc-title">👨‍💻 Winner – Code 2 Champions <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="quiz science environment"><a href="#ach-8"><span class="toc-num">8.</span><span class="toc-title">🌏 Winner – Earth Day Quiz NEHU <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="coding code tech"><a href="#ach-9"><span class="toc-num">9.</span><span class="toc-title">👨‍💻 AIR 10 – HPE Codewars 2025 <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="olympiad science"><a href="#ach-10"><span class="toc-num">10.</span><span class="toc-title">🇮🇳 Qualified National Camp – INESO 2025 <span class="toc-date">(March 2025)</span></span></a></li>
+      <li data-tags="science quantum research"><a href="#ach-11"><span class="toc-num">11.</span><span class="toc-title">🦋 BeyondQuantum 2025 <span class="toc-date">(March 2025)</span></span></a></li>
+      <li data-tags="tech coding ai olympiad"><a href="#ach-12"><span class="toc-num">12.</span><span class="toc-title">🤖 Qualified Stage 2 – India AI Olympiad 2025 <span class="toc-date">(January 2025)</span></span></a></li>
+      <li data-tags="olympiad international"><a href="#ach-13"><span class="toc-num">13.</span><span class="toc-title">🎖️ Felicitated – International Olympiad Medalists <span class="toc-date">(December 2024)</span></span></a></li>
+      <li data-tags="coding code olympiad"><a href="#ach-14"><span class="toc-num">14.</span><span class="toc-title">👨‍💻 Zonal Topper – ZCO 2025 <span class="toc-date">(December 2024)</span></span></a></li>
+      <li data-tags="quiz tech tcs"><a href="#ach-15"><span class="toc-num">15.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2024 <span class="toc-date">(November 2024)</span></span></a></li>
+      <li data-tags="coding code quiz tech"><a href="#ach-16"><span class="toc-num">16.</span><span class="toc-title">✴️ Nexus 2K24 – SSIPMT Raipur <span class="toc-date">(November 2024)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-17"><span class="toc-num">17.</span><span class="toc-title">🧠 Winner – GK Quiz Mindspark 2024 <span class="toc-date">(October 2024)</span></span></a></li>
+      <li data-tags="mun diplomacy"><a href="#ach-18"><span class="toc-num">18.</span><span class="toc-title">🏅 Special Mention UNGA – KPS MUN 3.0 <span class="toc-date">(October 2024)</span></span></a></li>
+      <li data-tags="olympiad international science"><a href="#ach-19"><span class="toc-num">19.</span><span class="toc-title">🌏 International Earth Science Olympiad 2024 <span class="toc-date">(August 2024)</span></span></a></li>
+      <li data-tags="quiz finance"><a href="#ach-20"><span class="toc-num">20.</span><span class="toc-title">💳 Ranked 1st Central Zone – NFLQ 2024 <span class="toc-date">(May 2024)</span></span></a></li>
+      <li data-tags="science olympiad"><a href="#ach-21"><span class="toc-num">21.</span><span class="toc-title">🧪 High Distinction – Int'l Chemistry Quiz <span class="toc-date">(March 2024)</span></span></a></li>
+      <li data-tags="tech innovation"><a href="#ach-22"><span class="toc-num">22.</span><span class="toc-title">💡 Qualified DLEPC – INSPIRE MANAK <span class="toc-date">(February 2024)</span></span></a></li>
+      <li data-tags="tech innovation coding"><a href="#ach-23"><span class="toc-num">23.</span><span class="toc-title">💡 National Rounds – Jr. Smart India Hackathon <span class="toc-date">(January 2024)</span></span></a></li>
+      <li data-tags="quiz heritage"><a href="#ach-24"><span class="toc-num">24.</span><span class="toc-title">🛕 Runner-Up Bhubaneswar – CBSE HIQ 2023 <span class="toc-date">(December 2023)</span></span></a></li>
+      <li data-tags="quiz tech coding"><a href="#ach-25"><span class="toc-num">25.</span><span class="toc-title">👨‍💻 Winner Tech Quiz – Nexus 2K23 <span class="toc-date">(November 2023)</span></span></a></li>
+      <li data-tags="tech innovation"><a href="#ach-26"><span class="toc-num">26.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
+      <li data-tags="quiz sports"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
+      <li data-tags="tech ai coding"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🧠 All India Top 5 – Mind Wars 2023 <span class="toc-date">(May 2023)</span></span></a></li>
+      <li data-tags="quiz heritage"><a href="#ach-30"><span class="toc-num">30.</span><span class="toc-title">🛕 National 1st Runner-Ups – CBSE HIQ 2022 <span class="toc-date">(January 2023)</span></span></a></li>
+      <li data-tags="quiz environment"><a href="#ach-31"><span class="toc-num">31.</span><span class="toc-title">🏆 Winner – Paryavaran Paheli ECO Quiz <span class="toc-date">(November 2022)</span></span></a></li>
+      <li data-tags="quiz heritage"><a href="#ach-32"><span class="toc-num">32.</span><span class="toc-title">🛕 City Champions – INTACH Heritage Quiz <span class="toc-date">(October 2022)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-33"><span class="toc-num">33.</span><span class="toc-title">🏆 Winner – Shine COSMO 2022 <span class="toc-date">(September 2022)</span></span></a></li>
+      <li data-tags="quiz sports"><a href="#ach-34"><span class="toc-num">34.</span><span class="toc-title">🏏 Fit India Quiz 2021 – Season 1 <span class="toc-date">(June 2022)</span></span></a></li>
+      <li data-tags="quiz environment wildlife"><a href="#ach-35"><span class="toc-num">35.</span><span class="toc-title">🐼 National Qualifier – Wild Wisdom 2021 <span class="toc-date">(October 2021)</span></span></a></li>
+      <li data-tags="quiz environment wildlife"><a href="#ach-36"><span class="toc-num">36.</span><span class="toc-title">🐼 Zonal 2nd Runner-Up – Wild Wisdom 2019 <span class="toc-date">(October 2019)</span></span></a></li>
+      <li data-tags="science"><a href="#ach-37"><span class="toc-num">37.</span><span class="toc-title">🌒 AIR 23 – All India Astronomy Test 2018 <span class="toc-date">(January 2019)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-38"><span class="toc-num">38.</span><span class="toc-title">🐝 Winner – Spell Bee Excella 2018 <span class="toc-date">(October 2018)</span></span></a></li>
+      <li data-tags="quiz environment wildlife"><a href="#ach-39"><span class="toc-num">39.</span><span class="toc-title">🐼 Zonal 1st Runner-Up – Wild Wisdom 2018 <span class="toc-date">(September 2018)</span></span></a></li>
+      <li data-tags="quiz environment"><a href="#ach-40"><span class="toc-num">40.</span><span class="toc-title">🌏 2nd Runner-Up – QPL 2.0 Earth Day <span class="toc-date">(April 2016)</span></span></a></li>
+    </ul>
+  </div>
+</div>
+
 <!-- Achievements Section -->
+
+
+<div class="achievement-section">
+  <h2>🥈 Silver Medalist: Future Tech Olympiad 2026</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by 1M1B in collaboration with IBM SkillsBuild</em><br>
+    🗓️ <em>February 2026</em><br>
+    📍 <em>Online</em>
+  </div>
+
+  <p>The Future Tech Olympiad is a national-level competition organized by 1M1B in collaboration with IBM SkillsBuild, aimed at promoting technological literacy, innovation, and problem-solving skills among students.</p>
+  <p>It was a national level competition and I was the only student from my school to be awarded a medal.</p>
+
+  <div class="achievement-images">
+    <img src="/images/fto.webp" alt="Future Tech Olympiad '26">
+  </div>
+
+</div>
+
+<hr class="silver-line" />
 
 <div class="achievement-section">
   <h2>🎲 Shaastra 2026 by IIT Madras</h2>
@@ -330,7 +629,7 @@ author_profile: true
   <p>I secured an All India Rank of 17, qualifying for the National Shaastra Programming Contest 2026.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/spc26.png" alt="SPC '26">
+    <img src="/images/spc26.webp" alt="SPC '26">
   </div>
 
   <div class="dashed-line"></div>
@@ -348,7 +647,7 @@ author_profile: true
   <p>I was selected for the National Finals of Competitive Programming Potpourri 2026 based on my performance in the qualifying rounds.</p>
 
   <div class="achievement-images">
-    <img src="/images/cppot.jpg" alt="SCPP '26">
+    <img src="/images/cppot.webp" alt="SCPP '26">
   </div>
 
 </div>
@@ -368,10 +667,10 @@ author_profile: true
   <p>With my junior Shantanu Shukla, we finished as the 2nd Runner-Ups. </p>
 
   <div class="achievement-images">
-    <img src="/images/yesww1.jpg" alt="WongaWits '25">
-    <img src="/images/yesww2.jpeg" alt="WongaWits '25">
-    <img src="/images/yesww3.jpg" alt="WongaWits '25">
-    <img src="/images/yesww4.jpg" alt="WongaWits '25">
+    <img src="/images/yesww1.webp" alt="WongaWits '25">
+    <img src="/images/yesww2.webp" alt="WongaWits '25">
+    <img src="/images/yesww3.webp" alt="WongaWits '25">
+    <img src="/images/yesww4.webp" alt="WongaWits '25">
   </div>
 
 </div>
@@ -407,9 +706,9 @@ author_profile: true
   </div>
 
   <div class="achievement-images">
-    <img src="/images/tcs252.jpeg" alt="TCS '25">
-    <img src="/images/tcs253.jpg" alt="TCS '25">
-    <img src="/images/tcs254.jpg" alt="TCS '25">
+    <img src="/images/tcs252.webp" alt="TCS '25">
+    <img src="/images/tcs253.webp" alt="TCS '25">
+    <img src="/images/tcs254.webp" alt="TCS '25">
   </div>
 </div>
 
@@ -429,9 +728,9 @@ author_profile: true
   <p>Our performance qualified us for the National Finale and the Metal Camp held at Kalpakkam, Tamil Nadu, home to a major nuclear power facility. We were also awarded printers as part of the recognition.</p>
 
   <div class="achievement-images">
-    <img src="/images/mmq2.jpeg" alt="BPMMQ '25">
-    <img src="/images/mmq4.jpeg" alt="BPMMQ '25">
-    <img src="/images/mmq3.jpg" alt="BPMMQ '25">
+    <img src="/images/mmq2.webp" alt="BPMMQ '25">
+    <img src="/images/mmq4.webp" alt="BPMMQ '25">
+    <img src="/images/mmq3.webp" alt="BPMMQ '25">
   </div>
 </div>
 
@@ -450,9 +749,9 @@ author_profile: true
   <p>Each of us was awarded a ₹50,000 scholarship, our accompanying parent received ₹25,000, and our school was awarded ₹50,000.</p>
 
    <div class="achievement-images">
-    <img src="/images/sbi001.jpeg" alt="SBI '25">
-    <img src="/images/sbi01.jpeg" alt="SBI '25">
-    <img src="/images/sbi.jpg" alt="SBI '25">
+    <img src="/images/sbi001.webp" alt="SBI '25">
+    <img src="/images/sbi01.webp" alt="SBI '25">
+    <img src="/images/sbi.webp" alt="SBI '25">
   </div>
 </div>
 
@@ -471,7 +770,7 @@ author_profile: true
   <p>I was the only school student in the competition and emerged as the champion, winning a prize of ₹3000.</p>
 
   <div class="achievement-images">
-    <img src="/images/itm.jpg" alt="ITM '25">
+    <img src="/images/itm.webp" alt="ITM '25">
   </div>
 </div>
 
@@ -488,8 +787,8 @@ author_profile: true
   <p>The quiz saw around 200 participants from across India. The program also featured two insightful lectures by members of the Geological Society of India on Geothermal Energy and Green Hydrogen.</p>
 
   <div class="achievement-images">
-    <img src="/images/nehueday.png" alt="NEHU '25">
-    <img src="/images/nehuearth.jpg" alt="NEHU '25">
+    <img src="/images/nehueday.webp" alt="NEHU '25">
+    <img src="/images/nehuearth.webp" alt="NEHU '25">
   </div>
 </div>
 
@@ -507,7 +806,7 @@ author_profile: true
   <p>6131 students participated, and I secured the 10th position, earning a keyboard and mouse set with a ₹1000 Amazon voucher as a prize.</p>
 
   <div class="achievement-images">
-    <img src="/images/hpe.jpeg" alt="HPE '25">
+    <img src="/images/hpe.webp" alt="HPE '25">
   </div>
 </div>
 
@@ -526,7 +825,7 @@ author_profile: true
   <p>Since I had already represented India in IESO 2024, I was not eligible to be selected again for the international team.</p>
 
   <div class="achievement-images">
-    <img src="/images/ineso.jpg" alt="INESO '25">
+    <img src="/images/ineso.webp" alt="INESO '25">
   </div>
 </div>
 
@@ -544,16 +843,16 @@ author_profile: true
   <p>The programme culminates in the BeyondQuantum Research Fair, a one-day online conference where participants showcase their findings to a public audience and leading quantum experts.</p>
   <p>I was selected for the program after a lengthy application process.</p>
   <div class="achievement-images">
-    <img src="/images/bequ1.png" alt="BEQU '25">
-    <img src="/images/bequ2.png" alt="BEQU '25">
-    <img src="/images/bequ3.png" alt="BEQU '25">
+    <img src="/images/bequ1.webp" alt="BEQU '25">
+    <img src="/images/bequ2.webp" alt="BEQU '25">
+    <img src="/images/bequ3.webp" alt="BEQU '25">
   </div>
 </div>
 
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>🤖 Qualified for Stage 2 - The India Artificial Intelligence Olympiad</h2>
+  <h2>🤖 Qualified for Stage 2 - The India Artificial Intelligence Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Association for Computing Machinery, Pune, India</em><br>
     🗓️ <em>January 2025</em><br>
@@ -564,7 +863,7 @@ author_profile: true
   <p>I qualified for Stage 2 of the India Artificial Intelligence Olympiad.</p>
 
   <div class="achievement-images">
-    <img src="/images/ioai.jpg" alt="INAIO '25">
+    <img src="/images/ioai.webp" alt="INAIO '25">
   </div>
 </div>
 
@@ -582,16 +881,16 @@ author_profile: true
   <p>I was felicitated for my achievement at International Earth Science Olympiad (IESO) 2024 and was awarded with a scholarship of ₹15000.</p>
 
   <div class="achievement-images">
-    <img src="/images/fel.jpg" alt="Felicitation '24">
-    <img src="/images/fel1.jpg" alt="Felicitation '24">
-    <img src="/images/fel2.jpg" alt="Felicitation '24">
+    <img src="/images/fel.webp" alt="Felicitation '24">
+    <img src="/images/fel1.webp" alt="Felicitation '24">
+    <img src="/images/fel2.webp" alt="Felicitation '24">
   </div>
 </div>
 
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>👨‍💻 Zonal Topper - Zonal Computing Olympiad</h2>
+  <h2>👨‍💻 Zonal Topper - Zonal Computing Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Association for Research in Computing Science</em><br>
     🗓️ <em>December 2024</em><br>
@@ -603,7 +902,7 @@ author_profile: true
   <p>I qualified for Indian National Olympiad in Informatics, which is the second level and was also the Zonal Topper.</p>
 
   <div class="achievement-images">
-    <img src="/images/zco.jpg" alt="ZCO '25">
+    <img src="/images/zco.webp" alt="ZCO '25">
   </div>
 </div>
 
@@ -638,9 +937,9 @@ author_profile: true
   </div>
 
   <div class="achievement-images">
-    <img src="/images/tcs242.jpeg" alt="TCS '24">
-    <img src="/images/tcs24cer.jpg" alt="TCS '24">
-    <img src="/images/tcs24semcer.jpeg" alt="TCS '24">
+    <img src="/images/tcs242.webp" alt="TCS '24">
+    <img src="/images/tcs24cer.webp" alt="TCS '24">
+    <img src="/images/tcs24semcer.webp" alt="TCS '24">
   </div>
 </div>
 
@@ -669,7 +968,7 @@ author_profile: true
   <p>The competition saw participation from over 40 students and was conducted across three progressively challenging rounds. In the final stage, participants were required to solve three intermediate-level programs; I completed all three in approximately four minutes, while most others took over fifteen minutes, and was awarded with a ₹5000 cheque.</p>
 
   <div class="achievement-images">
-    <img src="/images/nexcod.jpg" alt="Nexus'24">
+    <img src="/images/nexcod.webp" alt="Nexus'24">
   </div>
 
   <div class="dashed-line"></div>
@@ -685,7 +984,7 @@ author_profile: true
   <p>Over 70 students participated in the quiz, which included a written pen-and-paper round followed by five on-stage rounds. Partnering with my senior, Ayush Agarwal, we finished as 1st Runner-Up.</p>
 
   <div class="achievement-images">
-    <img src="/images/nexquiz.jpg" alt="Nexus'24">
+    <img src="/images/nexquiz.webp" alt="Nexus'24">
   </div>
 
 </div>
@@ -705,8 +1004,8 @@ author_profile: true
   <p>I teamed up with my great friend Aditya Singh and we, together as "Team ThinkTank" emerged as the winner of the quiz.</p>
 
   <div class="achievement-images">
-    <img src="/images/mindsparkquiz.jpg" alt="Minspark '24">
-    <img src="/images/quizbrighton.jpg" alt="Minspark '24">
+    <img src="/images/mindsparkquiz.webp" alt="Minspark '24">
+    <img src="/images/quizbrighton.webp" alt="Minspark '24">
   </div>
 </div>
 
@@ -724,16 +1023,16 @@ author_profile: true
   <p>I represented the Syrian Arab Republic in the United Nations General Assembly (UNGA), where the agenda focused on deliberations on de-escalation and demobilisation in the context of global peace. The role required navigating complex geopolitical narratives and defending positions under intense debate, allowing me to engage actively and articulate arguments from a challenging diplomatic standpoint. Consequently, I was given the Special Mention Award.</p>
 
   <div class="achievement-images">
-    <img src="/images/mun1.png" alt="KPS MUN 3.0 '24">
-    <img src="/images/mun2.jpg" alt="KPS MUN 3.0 '24">
-    <img src="/images/kpsmun.jpg" alt="KPS MUN 3.0 '24">
+    <img src="/images/mun1.webp" alt="KPS MUN 3.0 '24">
+    <img src="/images/mun2.webp" alt="KPS MUN 3.0 '24">
+    <img src="/images/kpsmun.webp" alt="KPS MUN 3.0 '24">
   </div>
 </div>
 
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>🌏 International Earth Science Olympiad</h2>
+  <h2>🌏 International Earth Science Olympiad 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Organized by the International Geoscience Education Organisation (IGEO).</em><br>
   </div>
@@ -745,7 +1044,7 @@ author_profile: true
   <p>Following this national selection and training process, I was selected to represent India as a member of Team India at Beijing, China.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/ieso.jpeg" alt="Ultimate Sports Quiz">
+    <img src="/images/ieso.webp" alt="International Earth Science Olympiad 2024">
   </div>
 
   <div class="dashed-line"></div>
@@ -763,12 +1062,12 @@ author_profile: true
   <p>I led the research direction and overall design of the project, while also distributing specific research components among team members to ensure efficient collaboration. I was primarily responsible for synthesizing the findings and designing the final poster presentation. Our project was evaluated as the <strong>highest-rated Earth System Project</strong> among all teams, securing the <strong>Gold Award</strong>.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesog1.jpg" alt="IESO">
-    <img src="/images/iesog2.jpg" alt="IESO">
-    <img src="/images/iesog3.jpg" alt="IESO">
-    <img src="/images/iesog4.jpg" alt="IESO">
-    <img src="/images/iesog5.jpg" alt="IESO">
-    <img src="/images/iesog6.jpg" alt="IESO">
+    <img src="/images/iesog1.webp" alt="IESO">
+    <img src="/images/iesog2.webp" alt="IESO">
+    <img src="/images/iesog3.webp" alt="IESO">
+    <img src="/images/iesog4.webp" alt="IESO">
+    <img src="/images/iesog5.webp" alt="IESO">
+    <img src="/images/iesog6.webp" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
@@ -787,11 +1086,11 @@ author_profile: true
   <p>Based on my performance in the Individual Test, I was awarded the <strong>Bronze Medal</strong></p>
 
   <div class="achievement-images">
-    <img src="/images/iesob1.jpg" alt="IESO">
-    <img src="/images/iesob2.jpg" alt="IESO">
-    <img src="/images/iesob3.jpg" alt="IESO">
-    <img src="/images/iesob4.jpg" alt="IESO">
-    <img src="/images/iesob5.jpg" alt="IESO">
+    <img src="/images/iesob1.webp" alt="IESO">
+    <img src="/images/iesob2.webp" alt="IESO">
+    <img src="/images/iesob3.webp" alt="IESO">
+    <img src="/images/iesob4.webp" alt="IESO">
+    <img src="/images/iesob5.webp" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
@@ -809,11 +1108,11 @@ author_profile: true
   <p>As part of the field excursions, we also travelled to <strong>Puducherry</strong>, studying diverse geological formations along the route, including rock structures such as <em>Krishna’s Butter Ball</em>. We further examined the <strong>Shore Temple at Mahabalipuram</strong> to understand ancient construction techniques, particularly the use of sandstone and calcium carbonate–rich sea shell paste as binding materials in coastal temple architecture.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesopd1.jpg" alt="IESO">
-    <img src="/images/iesopd2.jpg" alt="IESO">
-    <img src="/images/iesopd3.jpg" alt="IESO">
-    <img src="/images/iesopd4.jpg" alt="IESO">
-    <img src="/images/iesopd5.jpg" alt="IESO">
+    <img src="/images/iesopd1.webp" alt="IESO">
+    <img src="/images/iesopd2.webp" alt="IESO">
+    <img src="/images/iesopd3.webp" alt="IESO">
+    <img src="/images/iesopd4.webp" alt="IESO">
+    <img src="/images/iesopd5.webp" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
@@ -832,14 +1131,14 @@ author_profile: true
   <p>In addition, multiple field study excursions were conducted across geologically significant regions, where we examined mica-rich soils, rock and valley cuts, coal-bearing formations, and karst landscapes. Key sites included <strong>Sohra (Cherrapunjee)</strong>, the <strong>Arwah–Lumshynna Cave</strong>, and <strong>Laitkhanai Falls</strong>, providing firsthand exposure to geomorphological processes and sedimentary and cave formations. Beyond academics, the experience fostered strong collaborations and lasting professional friendships.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesotc1.jpg" alt="IESO">
-    <img src="/images/iesotc2.jpg" alt="IESO">
-    <img src="/images/iesotc3.jpeg" alt="IESO">
-    <img src="/images/iesotc4.jpg" alt="IESO">
-    <img src="/images/iesotc0.jpg" alt="IESO">
-    <img src="/images/iesotc5.jpg" alt="IESO">
-    <img src="/images/iesotc6.jpg" alt="IESO">
-    <img src="/images/iesotc.jpg" alt="IESO">
+    <img src="/images/iesotc1.webp" alt="IESO">
+    <img src="/images/iesotc2.webp" alt="IESO">
+    <img src="/images/iesotc3.webp" alt="IESO">
+    <img src="/images/iesotc4.webp" alt="IESO">
+    <img src="/images/iesotc0.webp" alt="IESO">
+    <img src="/images/iesotc5.webp" alt="IESO">
+    <img src="/images/iesotc6.webp" alt="IESO">
+    <img src="/images/iesotc.webp" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
@@ -857,8 +1156,8 @@ author_profile: true
   <p>I was the <strong>only student selected from Chhattisgarh</strong>, one of only two students from Central India, and the <strong>third student from my school</strong> to achieve this qualification.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesoqt1.jpg" alt="IESO">
-    <img src="/images/iesoqt2.jpg" alt="IESO">
+    <img src="/images/iesoqt1.webp" alt="IESO">
+    <img src="/images/iesoqt2.webp" alt="IESO">
   </div>
 </div>
 
@@ -876,7 +1175,7 @@ author_profile: true
   <p>I was ranked first in the central zone (intermediate category) and received a ₹5,000 Amazon Voucher.</p>
 
   <div class="achievement-images">
-    <img src="/images/nflq.jpg" alt="NFLQ '24">
+    <img src="/images/nflq.webp" alt="NFLQ '24">
   </div>
 </div>
 
@@ -895,7 +1194,7 @@ author_profile: true
   <p>I was awarded with the "Certificate of High Distinction", which is the highest level of recognition awarded in ICQ.</p>
 
   <div class="achievement-images">
-    <img src="/images/icq.jpg" alt="ICQ '23">
+    <img src="/images/icq.webp" alt="ICQ '23">
   </div>
 </div>
 
@@ -913,7 +1212,7 @@ author_profile: true
   <p>My idea of <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> was selected for the District Level Exhibition and Project Competitions (DLEPC) and received a one-time financial award of ₹10,000 via Direct Benefit Transfer (DBT).</p>
 
   <div class="achievement-images">
-    <img src="/images/inspiremanak.jpg" alt="Inspire-MANAK '23">
+    <img src="/images/inspiremanak.webp" alt="Inspire-MANAK '23">
   </div>
 </div>
 
@@ -931,7 +1230,7 @@ author_profile: true
   <p>I presented my Idea on <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and qualified for the National presentation round.</p>
 
   <div class="achievement-images">
-    <img src="/images/jsih.jpg" alt="JSIH '23">
+    <img src="/images/jsih.webp" alt="JSIH '23">
   </div>
 </div>
 
@@ -950,7 +1249,7 @@ author_profile: true
   <p>Atharv Sharma, Snigdha Mohanty, and I represented our school in the Bhubaneswar regional round but were unable to qualify for the national finale as we emerged as the regional runner-ups.</p>
 
   <div class="achievement-images">
-    <img src="/images/cbsehiq23.jpg" alt="CBSE HIQ '23">
+    <img src="/images/cbsehiq23.webp" alt="CBSE HIQ '23">
   </div>
 </div>
 
@@ -969,7 +1268,7 @@ author_profile: true
   <p>I finished first among teams from almost every school in raipur in the Technical Quiz event, winning a cash prize of ₹10,000.</p>
 
   <div class="achievement-images">
-    <img src="/images/nexus23.jpg" alt="Nexus Quiz '23">
+    <img src="/images/nexus23.webp" alt="Nexus Quiz '23">
   </div>
 </div>
 
@@ -987,14 +1286,14 @@ author_profile: true
   <p>I presented my Idea on <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and was selected among the Top 1,000 ideas.</p>
 
   <div class="achievement-images">
-    <img src="/images/yi23.jpg" alt="YI '23">
+    <img src="/images/yi23.webp" alt="YI '23">
   </div>
 </div>
 
 <hr class="silver-line" />
 
 <div class="achievement-section">
-  <h2>🥎 Ultimate Sports Quiz</h2>
+  <h2>🥎 Ultimate Sports Quiz 2023: Season 2</h2>
   <div class="achievement-meta">
     🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. – Jiohotstar.</em><br>
   </div>
@@ -1006,7 +1305,7 @@ author_profile: true
   <p>My partner Ameya Tamaskar and I represented our school in all the rounds, ultimately finishing as the National 2nd Runners-Up. We were awarded Apple M1 MacBook Airs, and our school received ₹10,00,000.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/usq.jpeg" alt="Ultimate Sports Quiz">
+    <img src="/images/usq.webp" alt="Ultimate Sports Quiz">
   </div>
 
   <div class="dashed-line"></div>
@@ -1024,7 +1323,7 @@ author_profile: true
   <p><strong>😆 Fun Fact:</strong> The team we defeated in the Semi-Finals (BHS Kolkata) were the lucky losers of the Semi Finals, and then went on to defeat us in the National Finals! Also, Tagore International was the second lucky loser of Zonal Finals.</p>
 
   <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
-    <img src="/images/yoda.png" style="height: 1.4em; vertical-align: middle;">
+    <img src="/images/yoda.webp" style="height: 1.4em; vertical-align: middle;">
     <strong>Hmmm… the National Finale, for lucky losers it became.</strong>
   </div>
 
@@ -1144,7 +1443,7 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card-news">
-      <img src="/images/usqqt.png" alt="Regional Rounds" style="width: 335px; height: auto; max-height: 100%">
+      <img src="/images/usqqt.webp" alt="Regional Rounds" style="width: 335px; height: auto; max-height: 100%">
       <span>Top 9 Teams of West Zone</span>
     </div>
   </div>
@@ -1191,7 +1490,7 @@ author_profile: true
   <p>Mind Wars was a platform supported by Zee5 where anyone could play quizzes on various topics and learn something new. It also hosted various contests with exciting prizes.</p>
   <p>This particular competition was a one-of-a-kind online MCQ-based test, where the top 2 rankers won a trip to Thailand. I don’t remember my exact rank, but I was in the top 5.</p>
   <div class="achievement-images">
-    <img src="/images/mindwars.jpg" alt="MindWars '23">
+    <img src="/images/mindwars.webp" alt="MindWars '23">
   </div>
 </div>
 
@@ -1211,7 +1510,7 @@ author_profile: true
   <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runner-Ups and receiving a cash prize of ₹15,000.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/hiq.jpeg" alt="Heritage India Quiz">
+    <img src="/images/hiq.webp" alt="Heritage India Quiz">
     <span>Team Picture: Left to right<br> Manan Sethia, Shreeansh Naidu, Atharv Sharma</span>
   </div>
 
@@ -1291,7 +1590,7 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card-news">
-      <img src="/images/hiqn.jpeg" alt="Regional Rounds" style="width: 335px;">
+      <img src="/images/hiqn.webp" alt="Regional Rounds" style="width: 335px;">
       <span>News Coverage</span>
     </div>
   </div>
@@ -1309,7 +1608,7 @@ author_profile: true
   <p>Once again, with my quiz partner Atharv, we took part in our school's interschool fest quiz competition and emerged as the winners in the senior category.</p>
   <p>Several teams from various schools in Raipur participated in the prelims, and six teams were selected for the on-stage finals.</p>
   <div class="achievement-images">
-    <img src="/images/intelli.jpg" alt="ParyavaranPaheli '22">
+    <img src="/images/intelli.webp" alt="ParyavaranPaheli '22">
   </div>
 </div>
 
@@ -1325,7 +1624,7 @@ author_profile: true
   <p>The INTACH Heritage Quiz is an annual national-level quiz competition based on organized by the Indian National Trust for Art and Cultural Heritage (INTACH).</p>
   <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
   <div class="achievement-images">
-    <img src="/images/intach.jpg" alt="INTACH '22">
+    <img src="/images/intach.webp" alt="INTACH '22">
   </div>
 </div>
 
@@ -1341,7 +1640,7 @@ author_profile: true
   <p>Shine COSMO is an interschool event conducted by the Rotary Club of Raipur and hosted by Maharaja Agrasen International College.</p>
   <p>Partnering with my classmate and friend Atharv Sharma, we emerged as the champions of the quiz competition, which saw participation from over 30 schools.</p>
   <div class="achievement-images">
-    <img src="/images/shinecosmo.jpg" alt="ShineCOSMO '22">
+    <img src="/images/shinecosmo.webp" alt="ShineCOSMO '22">
   </div>
 </div>
 
@@ -1359,7 +1658,7 @@ author_profile: true
   <p>Partnering with Ishant Talreja, we represented our school in the televised National Rounds. Our school received ₹2,50,000, and our team was awarded ₹25,000.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/sc.jpeg" alt="FIQ '21">
+    <img src="/images/sc.webp" alt="FIQ '21">
     <span>Felicitation of State Champions in Mumbai</span>
   </div>
 
@@ -1453,7 +1752,7 @@ author_profile: true
   <p>Due to COVID-19, 2020 edition of Wild Wisdom Quiz was cancelled and was later renamed as Wild Wisdom Global Challenge, highlighting participations from students outside of India.</p>
   <p>It was conducted online and individually due to the pandemic outbreak.</p>
   <div class="achievement-images">
-    <img src="/images/wwq211.jpg" alt="WWQ '21">
+    <img src="/images/wwq211.webp" alt="WWQ '21">
   </div>
 </div>
 
@@ -1470,10 +1769,10 @@ author_profile: true
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
   <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up. Back-to-back podium finishes by our team!</p>
   <div class="achievement-images">
-    <img src="/images/wwq191.jpg" alt="WWQ '19">
-    <img src="/images/wwq192.jpg" alt="WWQ '19">
-    <img src="/images/wwq193.jpg" alt="WWQ '19">
-    <img src="/images/wwq194.jpg" alt="WWQ '19">
+    <img src="/images/wwq191.webp" alt="WWQ '19">
+    <img src="/images/wwq192.webp" alt="WWQ '19">
+    <img src="/images/wwq193.webp" alt="WWQ '19">
+    <img src="/images/wwq194.webp" alt="WWQ '19">
   </div>
 </div>
 
@@ -1491,7 +1790,7 @@ author_profile: true
   <p>It was a computer based contest and I took part in it through my school.</p>
   <p>Honestly, being in the top 25 of my category across the entire nation felt really, really cool to me at that time.</p>
   <div class="achievement-images">
-    <img src="/images/aiat.jpg" alt="AIAT '18">
+    <img src="/images/aiat.webp" alt="AIAT '18">
   </div>
 </div>
 
@@ -1507,7 +1806,7 @@ author_profile: true
   <p>The Interschool Spell Bee was a prominent feature of Excella Fest 2018, an annual inter-school competition hosted by Chhattisgarh Public School (CPS), Raipur.</p>
   <p>It was a fusion of a spell bee and a quiz competition, and I participated in it while I was in the 5th grade.</p>
   <div class="achievement-images">
-    <img src="/images/spell.jpg" alt="SpellBee '18">
+    <img src="/images/spell.webp" alt="SpellBee '18">
   </div>
 </div>
 
@@ -1523,10 +1822,10 @@ author_profile: true
   <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness. It is Asia's biggest wildlife quiz.</p>
   <p>In 5th grade, I participated alongside my teammate, Agriyan Maulik, who was then in 4th grade. The quiz featured teams from Chhattisgarh and Madhya Pradesh. Together, we achieved the position of Zonal 1st Runner-Up.</p>
   <div class="achievement-images">
-    <img src="/images/wwq181.jpeg" alt="WWQ '18">
-    <img src="/images/wwq182.jpeg" alt="WWQ '18">
-    <img src="/images/wwq183.jpeg" alt="WWQ '18">
-    <img src="/images/wwq184.jpg" alt="WWQ '18">
+    <img src="/images/wwq181.webp" alt="WWQ '18">
+    <img src="/images/wwq182.webp" alt="WWQ '18">
+    <img src="/images/wwq183.webp" alt="WWQ '18">
+    <img src="/images/wwq184.webp" alt="WWQ '18">
   </div>
 </div>
 
@@ -1544,6 +1843,90 @@ author_profile: true
   <p>This was the first quiz I ever participated in. I took part with my father as my partner when I was in 3rd grade, it was a family quiz. I really enjoyed it and found out about it through a school notification.</p>
   <p>The key moment I remember from this quiz is when a buzzer question was asked about the Rafflesia flower. I couldn’t recall its name, but I still pressed the buzzer and said, ‘The name sounds something like this but it has no stem and no roots.’ I was even awarded with the points too lol.</p>
   <div class="achievement-images">
-    <img src="/images/qpl.jpg" alt="QPL 2.0">
+    <img src="/images/qpl.webp" alt="QPL 2.0">
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  /* ── 1. Assign IDs to achievement sections (matching static TOC links) ── */
+  var sections = document.querySelectorAll('.achievement-section');
+  var idx = 0;
+  var sectionMap = [];
+
+  sections.forEach(function (sec) {
+    var h2 = sec.querySelector('h2');
+    if (!h2) return;
+    idx++;
+    sec.id = 'ach-' + idx;
+    sectionMap.push(sec);
+  });
+
+  /* ── 2. Click handler: scroll with offset above each section ── */
+  var tocLinks = document.querySelectorAll('#tocList a');
+  tocLinks.forEach(function (link) {
+    /* Move href to data-target so browser doesn't do native anchor jump */
+    var href = link.getAttribute('href');
+    if (href) {
+      link.setAttribute('data-target', href.substring(1));
+      link.removeAttribute('href');
+      link.style.cursor = 'pointer';
+    }
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var targetId = this.getAttribute('data-target');
+      var target = document.getElementById(targetId);
+      if (target) {
+        /* Use offsetTop for absolute position, subtract 100px for breathing room */
+        var destination = target.offsetTop - 85;
+        window.scrollTo({ top: destination, behavior: 'smooth' });
+      }
+      return false;
+    });
+  });
+
+  /* ── 3. Search with tag support ── */
+  var tocItems = document.querySelectorAll('#tocList li');
+  document.getElementById('tocSearch').addEventListener('input', function () {
+    var q = this.value.toLowerCase().trim();
+    tocItems.forEach(function (li) {
+      var text = li.textContent.toLowerCase();
+      var tags = (li.getAttribute('data-tags') || '').toLowerCase();
+      li.style.display = (text.indexOf(q) !== -1 || tags.indexOf(q) !== -1) ? '' : 'none';
+    });
+  });
+
+  /* ── 4. Scroll-spy: highlight active section ── */
+  var ticking = false;
+  function updateActive() {
+    var scrollY = window.scrollY + 120;
+    var current = null;
+    sectionMap.forEach(function (sec) {
+      if (sec.offsetTop <= scrollY) current = sec;
+    });
+    tocLinks.forEach(function (link) {
+      var linkId = link.getAttribute('data-target');
+      if (current && current.id === linkId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(updateActive);
+      ticking = true;
+    }
+  }, { passive: true });
+});
+
+/* ── 5. Toggle collapse (list only, search stays) ── */
+function toggleToc() {
+  var box = document.getElementById('achievementToc');
+  box.classList.toggle('collapsed');
+}
+</script>

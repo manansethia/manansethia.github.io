@@ -69,7 +69,7 @@ author_profile: true
 
 <div class="airavat-container">
   <div class="airavat-image">
-    <img src="/images/airavat.png" alt="Airavat Image">
+    <img src="/images/airavat.webp" alt="Airavat Image">
   </div>
 
   <div class="airavat-text">
@@ -133,7 +133,7 @@ author_profile: true
 
 <div class="conos-container">
   <div class="conos-image">
-    <img src="/images/con.png" alt="Conputer OS Image">
+    <img src="/images/con.webp" alt="Conputer OS Image">
   </div>
 
   <div class="conos-text">
@@ -222,7 +222,7 @@ author_profile: true
 
   <!-- Image (Appears Above on Mobile, Side on Desktop) -->
   <div class="mrida-image">
-    <img src="/images/mridaimg.png" alt="MRIDA Project Image" style="border-radius: 10px;">
+    <img src="/images/mridaimg.webp" alt="MRIDA Project Image" style="border-radius: 10px;">
     <div class="ai-label">Image generated with AI</div>
   </div>
 
@@ -302,16 +302,16 @@ author_profile: true
 </div>
 
 <div class="matrix-image">
-  <img src="/images/handdrawn.png" alt="MATRIX Hand-drawn">
+  <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn">
   <span>How I imagined it before starting to build it</span>
 </div>
 
 <div class="matrix-image">
-  <img src="/images/matrixday.png" alt="MATRIX Day">
+  <img src="/images/matrixday.webp" alt="MATRIX Day">
   <span>Day Mode</span>
 </div>
 
 <div class="matrix-image">
-  <img src="/images/matrixnight.png" alt="MATRIX Night">
+  <img src="/images/matrixnight.webp" alt="MATRIX Night">
   <span>Night Mode</span>
 </div>

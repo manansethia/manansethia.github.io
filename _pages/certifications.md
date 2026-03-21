@@ -149,7 +149,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn Python - Pro.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnpython.jpg" alt="Learn Python Pro">
+    <img src="/images/cert/jpg/learnpython.webp" alt="Learn Python Pro">
     <div class="cert-text">
       <div class="cert-title">Learn Python Programming</div>
       <div class="cert-desc">
@@ -159,7 +159,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn C Programming.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnc.jpg" alt="Learn C Programming">
+    <img src="/images/cert/jpg/learnc.webp" alt="Learn C Programming">
     <div class="cert-text">
       <div class="cert-title">Learn C Programming</div>
       <div class="cert-desc">
@@ -169,7 +169,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn C++.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnc++.jpg" alt="Learn C++">
+    <img src="/images/cert/jpg/learnc++.webp" alt="Learn C++">
     <div class="cert-text">
       <div class="cert-title">Learn C++</div>
       <div class="cert-desc">
@@ -179,7 +179,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn Java.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnjava.jpg" alt="Learn Java">
+    <img src="/images/cert/jpg/learnjava.webp" alt="Learn Java">
     <div class="cert-text">
       <div class="cert-title">Learn Java</div>
       <div class="cert-desc">
@@ -191,7 +191,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/manan54-Advanced Python.pdf" target="_blank">
-    <img src="/images/cert/jpg/advancedpython.jpg" alt="Advanced Python">
+    <img src="/images/cert/jpg/advancedpython.webp" alt="Advanced Python">
     <div class="cert-text">
       <div class="cert-title">Advanced Python</div>
       <div class="cert-desc">
@@ -201,7 +201,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Beginner DSA in Python.pdf" target="_blank">
-    <img src="/images/cert/jpg/pythondsa.jpg" alt="DSA in Python">
+    <img src="/images/cert/jpg/pythondsa.webp" alt="DSA in Python">
     <div class="cert-text">
       <div class="cert-title">DSA in Python</div>
       <div class="cert-desc">
@@ -211,7 +211,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-C++ STL - Standard template library.pdf" target="_blank">
-    <img src="/images/cert/jpg/c++stl.jpg" alt="C++ STL">
+    <img src="/images/cert/jpg/c++stl.webp" alt="C++ STL">
     <div class="cert-text">
       <div class="cert-title">C++ STL</div>
       <div class="cert-desc">
@@ -230,7 +230,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/Coursera Google Cybersecurity.pdf" target="_blank">
-    <img src="/images/cert/jpg/googlecybersec.jpg" alt="Google Cybersecurity">
+    <img src="/images/cert/jpg/googlecybersec.webp" alt="Google Cybersecurity">
     <div class="cert-text">
       <div class="cert-title">Google Cybersecurity</div>
       <div class="cert-desc">
@@ -240,7 +240,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/Coursera IBM Ethical Hacking with Open Source Tools.pdf" target="_blank">
-    <img src="/images/cert/jpg/ibmhack.jpg" alt="IBM Ethical Hacking">
+    <img src="/images/cert/jpg/ibmhack.webp" alt="IBM Ethical Hacking">
     <div class="cert-text">
       <div class="cert-title">IBM Ethical Hacking with Open-Source Tools</div>
       <div class="cert-desc">
