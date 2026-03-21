@@ -51,8 +51,8 @@ function updateNav() {
   // Keep counter updated
   $btn.attr("count", breaks.length);
 
-  // Recur if the visible list is still overflowing the nav
-  if($vlinks.width() > availableSpace) {
+  // Recur if the visible list is still overflowing the nav AND there are movable items left
+  if($vlinks.width() > availableSpace && $vlinks.children('*:not(.masthead__menu-item--lg)').length > 0) {
     updateNav();
   }
 
