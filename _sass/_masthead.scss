@@ -4,16 +4,16 @@
 
 .masthead {
   position: fixed;
-  background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  /* NO backdrop-filter here — moved to ::before pseudo-element so that
+     child .hidden-links can have its own backdrop-filter (browsers can't
+     nest backdrop-filter: a parent with it flattens children's blur) */
+  background: transparent;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.4);
   height: $masthead-height;
   top: 0;
   width: 100%;
   overflow: visible;
-  /* CRITICAL: must be visible so .hidden-links can escape and backdrop-filter works */
 
   -webkit-animation: intro 0.3s both;
   animation: intro 0.3s both;
@@ -21,13 +21,24 @@
   animation-delay: 0.15s;
   z-index: 20;
 
+  /* Blur layer — sits behind all masthead content, does not affect children */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    z-index: -1;
+    pointer-events: none;
+  }
+
   &__inner-wrap {
     @include container;
     @include clearfix;
     padding: 1em 1em 1em;
     font-family: $sans-serif-narrow;
     overflow: visible;
-    /* propagate visibility so nav children aren't clipped */
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -36,7 +47,6 @@
     nav {
       z-index: 10;
       overflow: visible;
-      /* same — must not clip .hidden-links dropdown */
     }
 
     a {
