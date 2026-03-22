@@ -693,13 +693,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/YUFKJevNpG8"
-          title="TCS 2025"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/YUFKJevNpG8" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>TCS InQuizitive 2025<br>Nagpur Regional Round</span>
     </div>
@@ -924,13 +918,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/GGaPWeNIODI"
-          title="TCS 2024"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/GGaPWeNIODI" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>TCS InQuizitive 2024<br>Nagpur Regional Round</span>
     </div>
@@ -1330,13 +1318,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/4B1YQ5edqBs"
-          title="USQ 2023 National Grand Finale"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/4B1YQ5edqBs" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>National Grand Finale</span>
     </div>
@@ -1358,13 +1340,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/Bgdd8B0XzxE"
-          title="USQ 2023 Semi Final - 1"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/Bgdd8B0XzxE" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>Semi Final - 1</span>
     </div>
@@ -1387,13 +1363,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/nPel1DDxFrw"
-          title="USQ 2023 West Zone Finals"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/nPel1DDxFrw" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>West Zone Finals</span>
     </div>
@@ -1416,13 +1386,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/DQZmbhGw6oE"
-          title="USQ 2023 West Zone Prelims"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/DQZmbhGw6oE" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>West Zone Prelims</span>
     </div>
@@ -1465,13 +1429,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/O19X4Ah9vfk"
-          title="MRIDA Presentation - Data & AI Talks"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/O19X4Ah9vfk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>MRIDA Presentation<br>Data & AI Talks</span>
     </div>
@@ -1534,13 +1492,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/UwzXg_3KkWc"
-          title="CBSE HIQ 2022 National Finale"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/UwzXg_3KkWc" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>CBSE HIQ 2022<br>National Finale</span>
     </div>
@@ -1564,13 +1516,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/PpuNR-Q95Mk"
-          title="CBSE HIQ 2022 Semi-Final 4"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/PpuNR-Q95Mk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>CBSE HIQ 2022<br>Semi-Final 4</span>
     </div>
@@ -1676,13 +1622,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/UAQWCSxxFqk"
-          title="Fit India Quiz – National Rounds Season 1 Episode 4"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/UAQWCSxxFqk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
     </div>
@@ -1701,13 +1641,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo"
-          title="Fit India Quiz – State Final Chhattisgarh"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
     </div>
@@ -1726,13 +1660,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk"
-          title="Fit India Quiz – State Semi-Final Chhattisgarh"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>Fit India Quiz – Semi-Final 2<br>Chhattisgarh</span>
     </div>
