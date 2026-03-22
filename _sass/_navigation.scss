@@ -185,6 +185,8 @@
   position: relative;
   min-width: 250px;
   background: transparent;
+  overflow: visible;
+  /* CRITICAL: prevents parent from clipping backdrop-filter on .hidden-links */
 
   a {
     display: block;
@@ -208,7 +210,7 @@
     background-color: transparent;
     color: #fff;
     cursor: pointer;
-    z-index: 100;
+    z-index: 110;
   }
 
   .visible-links {
@@ -270,10 +272,14 @@
     padding: 5px;
     border: 1.5px solid rgba(255, 255, 255, 0.4);
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(229,149,0,0.7), rgba(255,188,66,0.4));
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+    isolation: isolate;
 
     a {
       margin: 0;
