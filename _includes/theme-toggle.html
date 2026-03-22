@@ -82,7 +82,6 @@
   /* Dark theme site styles */
   .dark-mode {
     background-color: #120c00;
-    ;
     color: #fdfdfd;
   }
 
@@ -111,7 +110,7 @@
   }
 
   .dark-mode .greedy-nav a:hover {
-    color: #ffdc9b
+    color: #ffdc9b;
   }
 
   .dark-mode .greedy-nav .visible-links a:before {
@@ -146,6 +145,7 @@
   .dark-mode .greedy-nav {
     background-color: transparent !important;
     color: #fdfdfd;
+    overflow: visible !important;
   }
 
   .dark-mode .author__content,
@@ -171,36 +171,47 @@
     color: #00acff;
   }
 
+  /* ── Author URLs ── */
+
+  /* Light mode: fix z-index:-1 from main.css that kills backdrop-filter */
+  .author__urls {
+    z-index: 20 !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4)) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    will-change: backdrop-filter;
+    isolation: isolate;
+  }
+
+  /* Desktop: strip everything back — no glass effect needed */
+  @media (min-width: 57.8125em) {
+    .author__urls {
+      z-index: auto !important;
+      background: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      isolation: auto !important;
+      will-change: auto !important;
+    }
+  }
+
+  /* Dark mode override (desktop reset above still applies via cascade) */
   .dark-mode .author__urls {
     background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
-    transform: translateZ(0);
-    will-change: backdrop-filter;
-    isolation: isolate;
-  }
-
-  .author__urls {
-    z-index: 10 !important;
-    backdrop-filter: blur(16px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-    transform: translateZ(0);
-    will-change: backdrop-filter;
-    isolation: isolate;
   }
 
   @media (min-width: 57.8125em) {
     .dark-mode .author__urls {
-      display: block !important;
-      position: relative !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      border: 0 !important;
       background: transparent !important;
       backdrop-filter: none !important;
       -webkit-backdrop-filter: none !important;
+      border: 0 !important;
       box-shadow: none !important;
     }
   }
@@ -215,7 +226,8 @@
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border: 1.5px solid rgba(255, 230, 196, 0.3) !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1) !important;
+    z-index: 100 !important;
     transform: translateZ(0);
     will-change: backdrop-filter;
     isolation: isolate;
@@ -278,13 +290,11 @@
 
   .dark-mode .site-nav {
     background-color: #120c00;
-    ;
     color: #fdfdfd;
   }
 
   .dark-mode .page__content {
     background-color: #120c00;
-    ;
     color: #fdfdfd;
   }
 
