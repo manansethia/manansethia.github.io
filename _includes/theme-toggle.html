@@ -173,9 +173,13 @@
 
   .dark-mode .author__urls {
     background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+    isolation: isolate;
   }
 
   @media (min-width: 57.8125em) {
@@ -199,10 +203,13 @@
 
   .dark-mode .greedy-nav .hidden-links {
     background: rgba(102, 61, 0, 0.85) !important;
-    backdrop-filter: blur(14px) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border: 1.5px solid rgba(255, 230, 196, 0.3) !important;
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+    isolation: isolate;
   }
 
   .dark-mode .greedy-nav .hidden-links li {
