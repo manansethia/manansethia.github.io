@@ -182,6 +182,15 @@
     isolation: isolate;
   }
 
+  .author__urls {
+    z-index: 10 !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    transform: translateZ(0);
+    will-change: backdrop-filter;
+    isolation: isolate;
+  }
+
   @media (min-width: 57.8125em) {
     .dark-mode .author__urls {
       display: block !important;
