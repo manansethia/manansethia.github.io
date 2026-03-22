@@ -87,7 +87,7 @@
   }
 
   .dark-mode .greedy-nav .hidden-links:before {
-    border-color: #ffe6c4 transparent;
+    border-color: #ffffff transparent;
   }
 
   .dark-mode .navicon,
@@ -96,12 +96,18 @@
     background-color: #ffffff !important;
   }
 
+  .navicon,
+  .navicon:before,
+  .navicon:after {
+    background-color: #4b2d00 !important;
+  }
+
   .dark-mode .close .navicon {
     background: transparent;
   }
 
   .close .navicon {
-    background: transparent;
+    background: none;
   }
 
   .dark-mode .greedy-nav a:hover {
@@ -181,8 +187,14 @@
   }
 
   @media (min-width: 57.8125em) {
-    .dark-mode .author__avatar img {
-      border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+    .dark-mode .author__urls {
+      display: block;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
     }
   }
 
@@ -208,7 +220,7 @@
   }
 
   .dark-mode .greedy-nav .hidden-links:after {
-    border-color: #ffe6c4 transparent;
+    border-color: #ffffff transparent;
   }
 
   .btn--inverse:hover {
