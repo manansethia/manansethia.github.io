@@ -15,9 +15,9 @@
   padding-right: 2em;
   font-family: $sans-serif;
   -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
+  animation: intro 0.3s both;
   -webkit-animation-delay: 0.30s;
-          animation-delay: 0.30s;
+  animation-delay: 0.30s;
 
   @include breakpoint($large) {
     padding-left: 1em;
@@ -51,11 +51,13 @@
   }
 }
 
-.navicon, .navicon:before, .navicon:after {
+.navicon,
+.navicon:before,
+.navicon:after {
   background-color: #4b2d00;
 }
 
-.close .navicon{
+.close .navicon {
   background: transparent;
 }
 
@@ -165,10 +167,10 @@
   }
 }
 
-.page__content + .pagination,
-.page__meta + .pagination,
-.page__share + .pagination,
-.page__comments + .pagination {
+.page__content+.pagination,
+.page__meta+.pagination,
+.page__share+.pagination,
+.page__comments+.pagination {
   margin-top: 2em;
   padding-top: 2em;
   border-top: 1px solid $border-color;
@@ -204,7 +206,7 @@
     border: 0;
     outline: none;
     background-color: transparent;
-    color: #4b2d00;
+    color: #fff;
     cursor: pointer;
     z-index: 100;
   }
@@ -218,7 +220,7 @@
 
       &:first-child {
         font-weight: bold;
-        white-space: nowrap;
+        text-wrap: wrap;
 
         a {
           margin-left: 0;
@@ -246,14 +248,16 @@
         -webkit-transition: $global-transition;
         transition: $global-transition;
         -webkit-transform: scaleX(0);
-            -ms-transform: scaleX(0);
-                transform: scaleX(0); /* hide*/
+        -ms-transform: scaleX(0);
+        transform: scaleX(0);
+        /* hide*/
       }
 
       &:hover:before {
         -webkit-transform: scaleX(1);
-            -ms-transform: scaleX(1);
-                transform: scaleX(1); /* reveal*/
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+        /* reveal*/
       }
     }
   }
@@ -264,9 +268,9 @@
     right: 0;
     margin-top: 15px;
     padding: 5px;
-    border: 1px solid rgba(75, 45, 0, 0.3);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
     border-radius: 12px;
-    background: rgba(229, 149, 0, 0.85);
+    background: linear-gradient(135deg, rgba(229,149,0,0.7), rgba(255,188,66,0.4));
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -421,19 +425,19 @@
     }
   }
 
-  > li:last-child {
+  >li:last-child {
     a {
       border-bottom: none;
     }
   }
 
-  li ul > li a {
+  li ul>li a {
     padding-left: 2rem;
     font-weight: normal;
   }
 
   /* hide sub sub links on small screens*/
-  li > ul li {
+  li>ul li {
     display: none;
 
     @include breakpoint($medium) {

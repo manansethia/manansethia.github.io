@@ -20,8 +20,11 @@
           animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
           animation-delay: 0.45s;
-  background-color: #ffe6af;
-  border-top: 2px solid #744500;
+  background: linear-gradient(135deg, rgba(229,149,0,0.7), rgba(255,188,66,0.4));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
 
   footer {
     @include clearfix;

@@ -171,8 +171,9 @@ author_profile: true
   .project-section h2 {
     font-size: 1.7em;
     margin-top: 0;
-    margin-bottom: 5px;
-    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    border-bottom: none !important;
     color: #5a3e00;
   }
   
@@ -183,9 +184,9 @@ author_profile: true
   .project-section h3 {
     font-size: 1.05em;
     font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #a07830;
+    margin-top: 3px;
+    margin-bottom: 8px;
+    color: #c07300;
   }
 
   /* Tech Stack Pills */
@@ -296,8 +297,11 @@ author_profile: true
   }
   
   .project-gallery img {
-    width: 100%;
-    border-radius: 12px;
+    height: 220px;
+    flex: 0 0 auto;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: start;
     box-shadow: 0 6px 15px rgba(0,0,0,0.12);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: grab;
@@ -308,11 +312,18 @@ author_profile: true
   }
   
   .project-gallery figcaption {
-    margin-top: 12px;
-    font-size: 0.85em;
-    color: #a07830;
-    font-weight: 600;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+    font-weight: 500;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
   .dark-mode .project-gallery figcaption { color: #d4a040; }
 
@@ -392,7 +403,7 @@ author_profile: true
 <div class="project-section" id="mrida"> 
   <h2>MRIDA 🌱</h2>
   <h3>Multipurpose Real-time Integrated Digital Analyzer</h3>
-  <div style="margin-top: -15px; margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;">2023 - 2025</div>
+  <div style="margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;">2023 - 2025</div>
   
   <div class="project-meta">
     <span>🐍 Python</span>
@@ -440,8 +451,8 @@ author_profile: true
 
 <div class="project-section" id="matrix">
   <h2>MATRIX 🤖</h2>
-  <h3>Speech-to-Speech, Text-to-Speech, and Speech-to-Text Desktop Voice Assistant</h3>
-  <div style="margin-top: -15px; margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;">2021 - 2022</div>
+  <h3>A JARVIS Inspired Voice and Text Activated Assistant</h3>
+  <div style="margin-top: 0px; margin-bottom: 15px; font-weight: 500; color: #a07830; font-size: 0.9em;">2021 - 2022</div>
 
   <div class="project-meta">
     <span>🐍 Python</span>

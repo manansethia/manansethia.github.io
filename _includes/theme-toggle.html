@@ -1,319 +1,346 @@
 <!-- BEGIN THEME TOGGLE BUTTON -->
 <style>
-    @media (min-width: 57.8125em) {
-      .page {
-        padding-right: 5%;
-        padding-left: 5%;
-      }
+  @media (min-width: 57.8125em) {
+    .page {
+      padding-right: 5%;
+      padding-left: 5%;
     }
+  }
 
-    html {
-      background-color: #fffbeb;
-    }
+  html {
+    background-color: #fffbeb;
+  }
 
-    .theme-toggle {
-      position: fixed;
-      bottom: 30px;
-      right: 20px;
-      z-index: 1000;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      width: 55px;
-      height: 55px;
-    }
-  
-    .theme-toggle .sun-moon-container {
-      width: 100%;
-      height: 100%;
-      border-radius: 16px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background-color 0.4s ease, border-color 0.3s ease;
-      background: linear-gradient(135deg, rgba(229,149,0,0.7), rgba(255,188,66,0.4));
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-    }
-  
-    .icon {
-      position: absolute;
-      top: 12.25%;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      width: 37px;
-      height: 37px;
-      transition: opacity 0.3s ease, transform 0.3s ease, stroke 0.3s ease;
-      opacity: 0;
-      transform: scale(0.8);
-    }
-  
-    .icon.sun.visible {
-      opacity: 1;
-      transform: scale(1);
-      stroke: #fff7dc;
-    }
-  
-    .icon.moon.visible {
-      opacity: 1;
-      transform: scale(1);
-      stroke: #ffe6c4;
-    }
-  
-    .dark-mode .theme-toggle .sun-moon-container {
-      background: linear-gradient(135deg, rgba(80,50,0,0.8), rgba(40,25,0,0.6));
-      border: 1px solid rgba(255, 230, 196, 0.1);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-    }
-  
-    .dark-mode .icon.sun {
-      stroke: #fff7dc;
-    }
-  
-    .dark-mode .icon.moon {
-      stroke: #ffe6c4;
-    }
-  
-    /* Dark theme site styles */
-    .dark-mode {
-      background-color: #120c00;;
-      color: #fdfdfd;
-    }
+  .theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+  }
 
-    .dark-mode .greedy-nav button{
-        background-color: #ffe6c4;;
-    }
+  .theme-toggle .sun-moon-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease, border-color 0.3s ease;
+    background-color: #eea316;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    border: 3px solid #c78400;
+  }
 
-    .dark-mode .greedy-nav .hidden-links:before{
-      border-color: #ffe6c4 transparent;
-    }
+  .icon {
+    position: absolute;
+    top: 12.25%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    width: 37px;
+    height: 37px;
+    transition: opacity 0.3s ease, transform 0.3s ease, stroke 0.3s ease;
+    opacity: 0;
+    transform: scale(0.8);
+  }
 
-    .dark-mode .navicon, .dark-mode .navicon:before, .dark-mode .navicon:after {
-        background-color: #663d00;
-    }
+  .icon.sun.visible {
+    opacity: 1;
+    transform: scale(1);
+    stroke: #fff7dc;
+  }
 
-    .dark-mode .close .navicon{
-        background: transparent;
-    }
+  .icon.moon.visible {
+    opacity: 1;
+    transform: scale(1);
+    stroke: #ffe6c4;
+  }
 
-    .dark-mode .greedy-nav a:hover{
-        color:#ffdc9b
-    }
+  .dark-mode .theme-toggle .sun-moon-container {
+    background-color: #554125;
+    border: 3px solid #fff5e7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  }
 
-    .dark-mode .greedy-nav .visible-links a:before{
-        background: #ffdc9b;
-    }
-  
-    .dark-mode a {
-      color: #fdfdfd;
-    }
-  
-    .dark-mode .page__footer {
-      background-color: #554125;
-      border-top: 2px solid #ffdc9b;
-    }
+  .dark-mode .icon.sun {
+    stroke: #fff7dc;
+  }
 
-    .dark-mode .page__footer footer {
-      color: #eeeeee;
-    }
-  
-    .dark-mode .masthead{
-      background: linear-gradient(135deg, rgba(80,50,0,0.8), rgba(40,25,0,0.6)) !important;
-      backdrop-filter: blur(16px) !important;
-      -webkit-backdrop-filter: blur(16px) !important;
-      color: #fdfdfd;
-      border-bottom: 1px solid rgba(255, 230, 196, 0.1) !important;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
-    }
+  .dark-mode .icon.moon {
+    stroke: #ffe6c4;
+  }
 
-    .dark-mode .greedy-nav{
-      background-color: transparent !important;
-      color: #fdfdfd;
+  /* Dark theme site styles */
+  .dark-mode {
+    background-color: #120c00;
+    ;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .greedy-nav button {
+    background-color: #ffe6c4;
+    ;
+  }
+
+  .dark-mode .greedy-nav .hidden-links:before {
+    border-color: #ffe6c4 transparent;
+  }
+
+  .dark-mode .navicon,
+  .dark-mode .navicon:before,
+  .dark-mode .navicon:after {
+    background-color: #ffffff !important;
+  }
+
+  .dark-mode .close .navicon {
+    background: transparent;
+  }
+
+  .dark-mode .greedy-nav a:hover {
+    color: #ffdc9b
+  }
+
+  .dark-mode .greedy-nav .visible-links a:before {
+    background: #ffdc9b;
+  }
+
+  .dark-mode a {
+    color: #fdfdfd;
+  }
+
+  .dark-mode .page__footer {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .dark-mode .page__footer footer {
+    color: #eeeeee;
+  }
+
+  .dark-mode .masthead {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    color: #fdfdfd;
+    border-bottom: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .dark-mode .greedy-nav {
+    background-color: transparent !important;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .author__content,
+  .dark-mode .author__urls,
+  .dark-mode .social-icons .fa-github {
+    color: #fdfdfd;
+  }
+
+  @media (min-width: 925px) {
+    .dark-mode .author__urls {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
     }
+  }
 
-    .dark-mode .author__content, .dark-mode .author__urls, .dark-mode .social-icons .fa-github{
-        color: #fdfdfd;
-    }
+  .dark-mode .author__urls {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+  }
 
-    @media (min-width: 925px) {
-      .dark-mode .author__urls {
-          background: transparent !important;
-          box-shadow: none !important;
-          border: none !important; 
-      }
-    }
+  .dark-mode .author__urls:before {
+    border-color: rgba(255, 230, 196, 0.2) transparent;
+  }
 
-    .dark-mode .author__urls{
-      background: #543200;
-      border: 1px solid #ffe6c4;
-    }
+  .dark-mode .author__urls:after {
+    border-color: rgba(80, 50, 0, 0.8) transparent;
+  }
 
-    .dark-mode .author__urls:after, .dark-mode .author__urls:before {
-      border-color: #ffe6c4 transparent;
-    }
+  .dark-mode .social-icons .fa-instagram {
+    color: #ad2bff;
+  }
 
-    .dark-mode .social-icons .fa-instagram {
-        color: #ad2bff;
-    }    
-
-    .dark-mode .social-icons .fa-linkedin, .social-icons .fa-linkedin-square {
+  .dark-mode .social-icons .fa-linkedin,
+  .social-icons .fa-linkedin-square {
     color: #00acff;
-    }
+  }
 
-    @media (min-width: 57.8125em) {
-      .dark-mode .author__avatar img {
-        border: 3px solid #ffae34 !important;
-      }
-    }
-
+  @media (min-width: 57.8125em) {
     .dark-mode .author__avatar img {
-      max-width: 175px;  
-      border: 2px solid #ffae34;
+      border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
     }
+  }
 
-    .dark-mode .greedy-nav .hidden-links {
-        background: rgba(102, 61, 0, 0.85) !important;
-        backdrop-filter: blur(14px) !important;
-        -webkit-backdrop-filter: blur(14px) !important;
-        border: 1px solid rgba(255, 230, 196, 0.3) !important;
-        box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1) !important;
-    }
+  .dark-mode .author__avatar img {
+    max-width: 175px;
+    border: 1.5px solid rgba(255, 230, 196, 0.2);
+  }
 
-    .dark-mode .greedy-nav .hidden-links li {
-      border-bottom: 1.5px solid #ffe6c4;
-    }
+  .dark-mode .greedy-nav .hidden-links {
+    background: rgba(102, 61, 0, 0.85) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 230, 196, 0.3) !important;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1) !important;
+  }
 
-    .dark-mode .greedy-nav .hidden-links li:last-child {
-        border-bottom: none;
-    }
+  .dark-mode .greedy-nav .hidden-links li {
+    border-bottom: 1.5px solid #ffe6c4;
+  }
 
-    .dark-mode .greedy-nav .hidden-links:after {
-      border-color: #ffe6c4 transparent;
-    }
+  .dark-mode .greedy-nav .hidden-links li:last-child {
+    border-bottom: none;
+  }
+
+  .dark-mode .greedy-nav .hidden-links:after {
+    border-color: #ffe6c4 transparent;
+  }
 
     .btn--inverse:hover {
       box-shadow: #000000 0 0 0.3rem;
+      background: linear-gradient(135deg, rgba(95, 57, 0, 1), rgba(95, 57, 0, 0.8)) !important;
       color: #e9a700 !important;
-      border: 2px solid  #060400 !important;
-      background-color: #5f3900; 
+      border: 1.5px solid #060400 !important;
     }
 
     .btn--inverse {
+      background: linear-gradient(135deg, rgba(95, 57, 0, 0.8), rgba(95, 57, 0, 0.4)) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
       color: #e9a700 !important;
-      border: 2px solid  #060400 !important;
-      background-color: #5f3900; 
+      border: 1.5px solid rgba(6, 4, 0, 0.5) !important;
     }
 
     .dark-mode .btn--inverse:hover {
-      box-shadow: #fff5e7 0 0 0.3rem;
-      background-color: #ffefcc !important;  
+      box-shadow: #fff5e7 0 0 0.3rem !important;
+      background: linear-gradient(135deg, rgba(255, 239, 204, 1), rgba(255, 239, 204, 0.8)) !important;
       color: #663d00 !important;
-      border: 2px solid #ffaa2a !important;
+      border: 1.5px solid #ffaa2a !important;
     }
 
     .dark-mode .btn--inverse {
-      background-color: #ffefcc !important;  
+      background: linear-gradient(135deg, rgba(255, 239, 204, 0.9), rgba(255, 239, 204, 0.6)) !important;
+      backdrop-filter: blur(8px) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
       color: #663d00 !important;
-      border: 2px solid #ffaa2a !important;
+      border: 1.5px solid rgba(255, 170, 42, 0.6) !important;
     }
 
-    .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
-      color: #fdfdfd;
-    }
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode h3,
+  .dark-mode h4,
+  .dark-mode h5,
+  .dark-mode h6 {
+    color: #fdfdfd;
+  }
 
-    .dark-mode .page__content h2 {
-      border-bottom: 1px solid #ffae34;
-    }
+  .dark-mode .page__content h2 {
+    border-bottom: 1px solid #ffae34;
+  }
 
-    .dark-mode .site-nav {
-      background-color: #120c00;;
-      color: #fdfdfd;
-    }
+  .dark-mode .site-nav {
+    background-color: #120c00;
+    ;
+    color: #fdfdfd;
+  }
 
-    .dark-mode .page__content {
-      background-color: #120c00;;
-      color: #fdfdfd;
-    }
-  
-    .dark-mode .site-title {
-      color: #ffffff;
-    }
+  .dark-mode .page__content {
+    background-color: #120c00;
+    ;
+    color: #fdfdfd;
+  }
 
-    .dark-mode .site-nav a {
-      color: #ffffff;
-    }
+  .dark-mode .site-title {
+    color: #ffffff;
+  }
 
-    .dark-mode ::selection {
-      background: #fdfdfd;
-      color: #000;
-    }
+  .dark-mode .site-nav a {
+    color: #ffffff;
+  }
 
-    .dark-mode .edu-divider{
-      background-color: #ffae34;
-    }
+  .dark-mode ::selection {
+    background: #fdfdfd;
+    color: #000;
+  }
 
-    .dark-mode .achievement-meta {
-      color: rgb(255 223 192);
-    }
+  .dark-mode .edu-divider {
+    background-color: #ffae34;
+  }
 
-    .dark-mode .achievement-images-text{
-      color: #fdfdfd;
-    }
+  .dark-mode .achievement-meta {
+    color: rgb(255 223 192);
+  }
 
-    .dark-mode .episode-card-news span{
-      color: #fdfdfd;
-    }
+  .dark-mode .achievement-images-text {
+    color: #fdfdfd;
+  }
 
-    .dark-mode .episode-card span{
-      color: rgb(237, 130, 54);
-    }
+  .dark-mode .episode-card-news span {
+    color: #fdfdfd;
+  }
 
-    .dark-mode .dashed-line {
-      color: #e6c194;
-    }
+  .dark-mode .episode-card span {
+    color: rgb(237, 130, 54);
+  }
 
-    .dark-mode hr.silver-line{
-      background-color: #e6c194;
-    }
+  .dark-mode .dashed-line {
+    color: #e6c194;
+  }
 
-    .pdf-frame {
-      border: 3px solid #4c2d00;
-    }
+  .dark-mode hr.silver-line {
+    background-color: #e6c194;
+  }
 
-    .dark-mode .pdf-frame {
-      border-color: #d39c2e;
-    }
+  .pdf-frame {
+    border: 3px solid #4c2d00;
+  }
 
-    /* ── Jump to Top Button ── */
-    .jump-to-top {
-      position: fixed;
-      bottom: 95px;
-      right: 20px;
-      z-index: 1000;
-      background: none !important;
-      border: none !important;
-      cursor: pointer;
-      padding: 0;
-      width: 55px;
-      height: 55px;
-      opacity: 0 !important;
-      visibility: hidden;
-      pointer-events: none !important;
-      transform: translateY(8px);
-      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-    }
+  .dark-mode .pdf-frame {
+    border-color: #d39c2e;
+  }
 
-    .jump-to-top.visible {
-      opacity: 1 !important;
-      visibility: visible;
-      pointer-events: auto !important;
-      transform: translateY(0);
-    }
+  /* ── Jump to Top Button ── */
+  .jump-to-top {
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+    z-index: 1000;
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none !important;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  }
+
+  .jump-to-top.visible {
+    opacity: 1 !important;
+    visibility: visible;
+    pointer-events: auto !important;
+    transform: translateY(0);
+  }
 
     .jump-to-top .jtt-container {
       width: 100%;
@@ -324,120 +351,115 @@
       align-items: center;
       justify-content: center;
       transition: background-color 0.4s ease, border-color 0.3s ease, transform 0.2s ease;
-      background: linear-gradient(135deg, rgba(229,149,0,0.7), rgba(255,188,66,0.4));
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.25);
+      background-color: #eea316;
+      border: 3px solid #c78400;
     }
 
-    .jump-to-top .jtt-container:hover {
-      transform: translateY(-2px);
-    }
+  .jump-to-top .jtt-container:hover {
+    transform: translateY(-2px);
+  }
 
-    .jump-to-top .jtt-arrow {
-      width: 22px;
-      height: 22px;
-      stroke: #fff7dc;
-      stroke-width: 2.5;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: stroke 0.3s ease;
-    }
+  .jump-to-top .jtt-arrow {
+    width: 22px;
+    height: 22px;
+    stroke: #fff7dc;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+  }
 
     .dark-mode .jump-to-top .jtt-container {
-      background: linear-gradient(135deg, rgba(80,50,0,0.8), rgba(40,25,0,0.6));
-      border: 1px solid rgba(255, 230, 196, 0.1);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+      background-color: #554125;
+      border: 3px solid #fff5e7;
     }
 
-    .dark-mode .jump-to-top .jtt-arrow {
-      stroke: #ffe6c4;
+  .dark-mode .jump-to-top .jtt-arrow {
+    stroke: #ffe6c4;
+  }
+</style>
+
+<script data-cfasync="false">
+  (function () {
+    try {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) { }
+  })();
+</script>
+
+<button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
+  <div class="jtt-container">
+    <svg class="jtt-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+</button>
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+  <div class="sun-moon-container">
+    <svg class="sun icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </div>
+</button>
+
+<script data-cfasync="false">
+  const themeToggle = document.getElementById("theme-toggle");
+  const sun = document.querySelector(".sun");
+  const moon = document.querySelector(".moon");
+
+  function updateIcons() {
+    const isDark = document.documentElement.classList.contains("dark-mode");
+    sun.classList.toggle("visible", !isDark);
+    moon.classList.toggle("visible", isDark);
+  }
+
+  updateIcons();
+
+  themeToggle.addEventListener("click", function () {
+    document.documentElement.classList.toggle("dark-mode");
+    localStorage.setItem(
+      "theme",
+      document.documentElement.classList.contains("dark-mode") ? "dark" : "light"
+    );
+    updateIcons();
+  });
+
+  document.getElementById("jump-to-top").addEventListener("click", function () {
+    if (window.jQuery) {
+      $("html, body").animate({ scrollTop: 0 }, 700, "swing");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  </style>
-  
-  <script data-cfasync="false">
-    (function () {
-      try {
-        if (localStorage.getItem('theme') === 'dark') {
-          document.documentElement.classList.add('dark-mode');
-        }
-      } catch (e) {}
-    })();
-  </script>
-  
-  <button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
-    <div class="jtt-container">
-      <svg class="jtt-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <polyline points="18 15 12 9 6 15"></polyline>
-      </svg>
-    </div>
-  </button>
+  });
 
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-    <div class="sun-moon-container">
-      <svg class="sun icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line>
-        <line x1="12" y1="21" x2="12" y2="23"></line>
-        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-        <line x1="1" y1="12" x2="3" y2="12"></line>
-        <line x1="21" y1="12" x2="23" y2="12"></line>
-        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-      <svg class="moon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-    </div>
-  </button>
-  
-  <script data-cfasync="false">
-      const themeToggle = document.getElementById("theme-toggle");
-      const sun = document.querySelector(".sun");
-      const moon = document.querySelector(".moon");
-  
-      function updateIcons() {
-        const isDark = document.documentElement.classList.contains("dark-mode");
-        sun.classList.toggle("visible", !isDark);
-        moon.classList.toggle("visible", isDark);
-      }
-  
-      updateIcons();
-  
-      themeToggle.addEventListener("click", function () {
-        document.documentElement.classList.toggle("dark-mode");
-        localStorage.setItem(
-          "theme",
-          document.documentElement.classList.contains("dark-mode") ? "dark" : "light"
-        );
-        updateIcons();
-      });
-
-      document.getElementById("jump-to-top").addEventListener("click", function () {
-        if (window.jQuery) {
-          $("html, body").animate({ scrollTop: 0 }, 700, "swing");
-        } else {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-      });
-
-      /* Show jump-to-top only when: page is scrollable AND not at the very top */
-      var jttBtn = document.getElementById("jump-to-top");
-      function updateJtt() {
-        var pageIsScrollable = document.body.scrollHeight > window.innerHeight;
-        var notAtTop = window.scrollY > 0;
-        if (pageIsScrollable && notAtTop) {
-          jttBtn.classList.add("visible");
-        } else {
-          jttBtn.classList.remove("visible");
-        }
-      }
-      /* Defer slightly so browser scroll-restoration finishes before we check */
-      setTimeout(updateJtt, 100);
-      window.addEventListener("scroll", updateJtt, { passive: true });
-  </script>
-  <!-- END THEME TOGGLE BUTTON -->
-  
+  /* Show jump-to-top only when: page is scrollable AND not at the very top */
+  var jttBtn = document.getElementById("jump-to-top");
+  function updateJtt() {
+    var pageIsScrollable = document.body.scrollHeight > window.innerHeight;
+    var notAtTop = window.scrollY > 0;
+    if (pageIsScrollable && notAtTop) {
+      jttBtn.classList.add("visible");
+    } else {
+      jttBtn.classList.remove("visible");
+    }
+  }
+  /* Defer slightly so browser scroll-restoration finishes before we check */
+  setTimeout(updateJtt, 100);
+  window.addEventListener("scroll", updateJtt, { passive: true });
+</script>
+<!-- END THEME TOGGLE BUTTON -->
