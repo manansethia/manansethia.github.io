@@ -71,3 +71,8 @@
 .greedy-nav {
   overflow: visible !important;
 }
+
+/* ── Fix: sidebar overflow:auto kills backdrop-filter on .author__urls ── */
+.sidebar {
+  overflow: visible !important;
+}
