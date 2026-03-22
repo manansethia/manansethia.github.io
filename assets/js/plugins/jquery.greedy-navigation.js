@@ -1,72 +1,66 @@
 /*
 * Greedy Navigation
-*
 * http://codepen.io/lukejacksonn/pen/PwmwWV
-*
+* Modified: teleport .hidden-links to body for cross-browser backdrop-filter
 */
 
-var $nav = $('#site-nav');
-var $btn = $('#site-nav button');
-var $vlinks = $('#site-nav .visible-links');
-var $hlinks = $('#site-nav .hidden-links');
+$(document).ready(function () {
 
-var breaks = [];
+  var $nav = $('#site-nav');
+  var $btn = $('#site-nav button');
+  var $vlinks = $('#site-nav .visible-links');
+  var $hlinks = $('#site-nav .hidden-links');
+  var breaks = [];
 
-function updateNav() {
+  /* Teleport to body so backdrop-filter works in Chrome */
+  $hlinks.appendTo('body');
 
-  var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
+  function positionHlinks() {
+    var btnRect = $btn[0].getBoundingClientRect();
+    var hlWidth = $hlinks.outerWidth(true);
+    $hlinks.css({
+      position: 'fixed',
+      top: (btnRect.bottom + 15) + 'px',
+      left: (btnRect.right - hlWidth) + 'px'
+    });
+  }
 
-  // The visible list is overflowing the nav
-  if($vlinks.width() > availableSpace) {
+  function updateNav() {
+    var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
-    // Record the width of the list
-    breaks.push($vlinks.width());
-
-    // Move item to the hidden list
-    $vlinks.children('*:not(.masthead__menu-item--lg)').last().prependTo($hlinks);
-
-    // Show the dropdown btn
-    if($btn.hasClass('hidden')) {
-      $btn.removeClass('hidden');
+    if ($vlinks.width() > availableSpace) {
+      breaks.push($vlinks.width());
+      $vlinks.children('*:not(.masthead__menu-item--lg)').last().prependTo($hlinks);
+      if ($btn.hasClass('hidden')) { $btn.removeClass('hidden'); }
+    } else {
+      if (availableSpace > breaks[breaks.length - 1]) {
+        $hlinks.children().first().appendTo($vlinks);
+        breaks.pop();
+      }
+      if (breaks.length < 1) {
+        $btn.addClass('hidden');
+        $hlinks.addClass('hidden');
+      }
     }
 
-  // The visible list is not overflowing
-  } else {
+    $btn.attr('count', breaks.length);
 
-    // There is space for another item in the nav
-    if(availableSpace > breaks[breaks.length-1]) {
-
-      // Move the item to the visible list
-      $hlinks.children().first().appendTo($vlinks);
-      breaks.pop();
-    }
-
-    // Hide the dropdown btn if hidden list is empty
-    if(breaks.length < 1) {
-      $btn.addClass('hidden');
-      $hlinks.addClass('hidden');
+    if ($vlinks.width() > availableSpace && $vlinks.children('*:not(.masthead__menu-item--lg)').length > 0) {
+      updateNav();
     }
   }
 
-  // Keep counter updated
-  $btn.attr("count", breaks.length);
-
-  // Recur if the visible list is still overflowing the nav AND there are movable items left
-  if($vlinks.width() > availableSpace && $vlinks.children('*:not(.masthead__menu-item--lg)').length > 0) {
+  $(window).resize(function () {
     updateNav();
-  }
+    if (!$hlinks.hasClass('hidden')) { positionHlinks(); }
+  });
 
-}
+  $btn.on('click', function () {
+    $hlinks.toggleClass('hidden');
+    $(this).toggleClass('close');
+    if (!$hlinks.hasClass('hidden')) { positionHlinks(); }
+  });
 
-// Window listeners
-
-$(window).resize(function() {
   updateNav();
-});
 
-$btn.on('click', function() {
-  $hlinks.toggleClass('hidden');
-  $(this).toggleClass('close');
 });
-
-updateNav();

@@ -7,9 +7,7 @@
    ========================================================================== */
 
 .sidebar {
-  /* transform: translate3d(0, 0, 0); — REMOVED: creates stacking context that kills backdrop-filter on .author__urls */
-  will-change: transform;
-  /* same GPU compositing hint without creating a stacking context */
+  /* transform and will-change removed — both create stacking context that kills backdrop-filter on .author__urls in Chrome */
 
   @include clearfix();
   margin-bottom: 1em;
@@ -207,8 +205,6 @@
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
   z-index: 20;
-  will-change: backdrop-filter;
-  isolation: isolate;
 
   @include breakpoint($large) {
     display: block;
@@ -221,8 +217,6 @@
     -webkit-backdrop-filter: none;
     box-shadow: none;
     z-index: auto;
-    will-change: auto;
-    isolation: auto;
   }
 
   &:before {

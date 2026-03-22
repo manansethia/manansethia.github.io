@@ -38,7 +38,161 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
 
-/* ── Greedy nav: overflow visible so hidden-links backdrop-filter works ── */
+/* ── Greedy nav: overflow visible so hidden-links can escape ── */
 .greedy-nav {
   overflow: visible !important;
+}
+
+/* ── Teleported hidden-links (moved to body by JS) ── */
+body>.hidden-links {
+  position: fixed;
+  padding: 5px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  list-style: none;
+  margin: 0;
+}
+
+body>.hidden-links.hidden {
+  display: none;
+}
+
+body>.hidden-links a {
+  display: block;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #4b2d00;
+  text-decoration: none;
+}
+
+body>.hidden-links a:hover {
+  color: #ffffff;
+}
+
+body>.hidden-links li {
+  display: block;
+  border-bottom: 1.5px solid #4b2d00;
+}
+
+body>.hidden-links li:last-child {
+  border-bottom: none;
+}
+
+body>.hidden-links:before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: 10px;
+  width: 0;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  border-color: rgba(255, 255, 255, 0.4) transparent;
+  display: block;
+  z-index: 0;
+}
+
+body>.hidden-links:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  width: 0;
+  border-style: solid;
+  border-width: 0 10px 10px;
+  border-color: rgba(229, 149, 0, 0.7) transparent;
+  display: block;
+  z-index: 1;
+}
+
+.dark-mode body>.hidden-links {
+  background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
+  border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+}
+
+.dark-mode body>.hidden-links li {
+  border-bottom: 1.5px solid #ffe6c4;
+}
+
+.dark-mode body>.hidden-links li:last-child {
+  border-bottom: none;
+}
+
+.dark-mode body>.hidden-links a {
+  color: #fdfdfd;
+}
+
+.dark-mode body>.hidden-links:before {
+  border-color: rgba(255, 230, 196, 0.2) transparent;
+}
+
+.dark-mode body>.hidden-links:after {
+  border-color: rgba(80, 50, 0, 0.8) transparent;
+}
+
+/* ── Teleported author__urls base styles ── */
+body>.author__urls {
+  display: none;
+  position: fixed !important;
+  margin-top: 0 !important;
+  /* kill the original 40px margin-top — we position via JS */
+  margin-bottom: 0 !important;
+  z-index: 1000 !important;
+  width: auto !important;
+  padding: 10px !important;
+  list-style-type: none !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 4px !important;
+  background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4)) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  will-change: backdrop-filter !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) !important;
+  font-size: 0.75em !important;
+  cursor: default !important;
+}
+
+body>.author__urls li {
+  white-space: nowrap;
+}
+
+body>.author__urls a {
+  display: block;
+  margin-bottom: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: inherit;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+body>.author__urls a:hover {
+  text-decoration: underline;
+}
+
+/* Hide location/school on mobile when teleported (mirror .author__desktop behaviour) */
+@media screen and (max-width: 924px) {
+  body>.author__urls .author__desktop {
+    display: none !important;
+  }
+}
+
+.dark-mode body>.author__urls {
+  background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
+  border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+}
+
+/* ── Force GPU compositing for author__urls blur in Chrome ──
+   Sidebar is position:fixed only at 1024px+, but button hidden at 925px+
+   so blur only needs forcing in the 925-1024px range where both coexist ── */
+@media screen and (max-width: 1023px) {
+  .author__urls {
+    will-change: backdrop-filter !important;
+  }
 }
