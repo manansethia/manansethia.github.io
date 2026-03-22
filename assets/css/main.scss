@@ -38,3 +38,36 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+/* ── Sidebar transform fix: kills stacking context that breaks backdrop-filter ── */
+.sidebar {
+  -webkit-transform: none !important;
+  transform: none !important;
+  will-change: transform;
+}
+
+/* ── Author URLs: fix z-index:-1 from compiled CSS that kills backdrop-filter ── */
+.author__urls {
+  z-index: 20 !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  will-change: backdrop-filter;
+  isolation: isolate;
+}
+
+@media (min-width: 57.8125em) {
+  .author__urls {
+    z-index: auto !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    isolation: auto !important;
+    will-change: auto !important;
+  }
+}
+
+/* ── Greedy nav: overflow visible so hidden-links backdrop-filter works ── */
+.greedy-nav {
+  overflow: visible !important;
+}
