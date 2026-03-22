@@ -20,6 +20,8 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
   z-index: 20;
+  will-change: transform;
+  /* forces GPU compositing layer so ::before backdrop-filter renders on load in Chrome */
 
   /* Blur layer — sits behind all masthead content, does not affect children */
   &::before {
@@ -41,6 +43,7 @@
     font-family: $sans-serif-narrow;
     overflow: visible;
     position: relative;
+    z-index: 1;
     /* sits above ::before blur layer */
 
     @include breakpoint($x-large) {
