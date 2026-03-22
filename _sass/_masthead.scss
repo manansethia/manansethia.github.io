@@ -4,8 +4,11 @@
 
 .masthead {
   position: fixed;
-  background: #e59500;
-  border-bottom: 2px solid #4b2d00;
+  background: linear-gradient(135deg, rgba(229,149,0,0.7), rgba(255,188,66,0.4));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
   height: $masthead-height;
   top: 0;
   width: 100%;

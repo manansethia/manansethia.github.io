@@ -145,173 +145,332 @@ author_profile: true
 </div>
 -->
 
-<h2 class="mrida-heading">MRIDA 🌱</h2>
-### Multipurpose Real-time Integrated Digital Analyzer 
-
 <style>
-
   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-  .mrida-heading {
-    margin-top: 35px;
+  /* Base Project Section */
+  .project-section {
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+    box-shadow: 0 4px 24px rgba(192, 115, 0, 0.06);
+    border: 1.5px solid rgba(232, 199, 116, 0.4);
+    box-sizing: border-box;
+  }
+  
+  .dark-mode .project-section {
+    background: linear-gradient(135deg, rgba(30,26,20,0.6) 0%, rgba(20,16,10,0.3) 100%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1.5px solid rgba(90, 69, 32, 0.4);
   }
 
-  .mrida-container {
+  .project-section h2 {
+    font-size: 1.7em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-bottom: none;
+    color: #5a3e00;
+  }
+  
+  .dark-mode .project-section h2 {
+    color: #ffe6aa;
+  }
+
+  .project-section h3 {
+    font-size: 1.05em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #a07830;
+  }
+
+  /* Tech Stack Pills */
+  .project-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+  .project-meta span {
+    background: linear-gradient(135deg, #fff3d6 0%, #ffe8b8 100%);
+    color: #8b5e00;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(192, 115, 0, 0.1);
+  }
+  .dark-mode .project-meta span {
+    background: linear-gradient(135deg, #342b1c 0%, #2a2318 100%);
+    color: #f0c870;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Flex Layouts */
+  .project-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    gap: 30px;
   }
 
-  .mrida-text ul {
-    margin-top: 10px;
+  .project-text {
+    flex: 1;
+    font-size: 0.98em;
+    line-height: 1.7;
+  }
+  .project-text p {
+    margin-bottom: 12px;
   }
 
-  .mrida-image img {
-    max-width: auto;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px; /* Add spacing in mobile view */
-    transition: transform 0.3s ease;
+  .project-text .notable {
+    margin-top: 25px;
+    font-weight: 600;
+    color: #8b5e00;
+  }
+  .dark-mode .project-text .notable {
+    color: #f0c870;
   }
 
-  .ai-label {
-    font-size: 12px;
-    font-family: 'Orbitron', sans-serif;
-    color: gray;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-top: 5px;
+  .project-text ul {
+    margin-top: 8px;
+    padding-left: 20px;
   }
 
-  .responsive-pdf {
-    width: 100%;
-    height: 750px;
-    border: none;
+  .project-text li {
+    margin-bottom: 6px;
   }
 
-  .mrida-image img:hover {
-    transform: scale(1.05);
-  }
-
-  @media (min-width: 768px) {
-    .mrida-container {
-      flex-direction: row;
-      align-items: flex-start; /* Keep alignment balanced */
-      gap: 20px; /* Add spacing between image & text */
-    }
-    .mrida-text {
-      flex: 1;
-      order: 1;
-    }
-    .mrida-image {
-      flex: 1;
-      order: 2;
-      text-align: centre;
-    }
-    .mrida-image img {
-      transition: transform 0.3s ease;
-      margin-bottom: 0px; /* Remove spacing in desktop view */
-    }
-  }
-</style>
-<section id="mrida"> 
-
-<div class="mrida-container">
-
-  <!-- Image (Appears Above on Mobile, Side on Desktop) -->
-  <div class="mrida-image">
-    <img src="/images/mridaimg.webp" alt="MRIDA Project Image" style="border-radius: 10px;">
-    <div class="ai-label">Image generated with AI</div>
-  </div>
-
-  <!-- Text Content -->
-  <div class="mrida-text">
-    <ul>
-      <li>MRIDA is an AI-powered project designed to help farmers easily check soil health and improve crop yields.</li>
-      <li>It was created to measure soil pH, moisture, temperature, and nutrients while also providing weather alerts. It also had a built-in emergency service to contact concerned authorities and a speech-to-speech assistant to guide the user and provide insights.</li>
-      <li>While the hardware was not developed, the MRIDA app was successfully built using MIT App Inventor and Python to analyze soil conditions and offer useful AI-driven insights.</li> 
-      <li>This project was also presented in:
-        <ul>
-          <li><strong>Data and AI Talks 2023 –</strong> <strong>Champion in Group C (Senior) category.</strong> Awarded a 9th Gen iPad, Trophy, AI-powered Rubik's Cube, and Certificates.</li>
-          <li><strong>Youth Ideathon 2023 -</strong> Selected among the <strong>Top 1,000</strong> ideas nationwide.</li>
-          <li><strong>INSPIRE Manak Awards 2023 –</strong> Selected in the first stage and awarded <strong>₹10,000</strong>.</li>
-          <li><strong>Junior Smart India Hackathon 2023 –</strong> Shortlisted for the <strong>Interview Round</strong> by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</div>
-</section>
-
-### MRIDA PDF
-<iframe src="/_pages/pdf-view.html" width="100%" height="500px" class="pdf-frame"></iframe>
-
-<h2 class="matrix-heading">MATRIX 🤖</h2>
-
-<style>
-  .matrix-heading {
-    margin-top: 35px;
-  }
-
-  .matrix-text ul {
-    margin-top: 10px;
-  }
-
-  .matrix-image {
+  .project-image-box {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  }
+  
+  .project-image-box img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .project-image-box img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
   }
 
-  .matrix-image img {
-    width: 75%;
-    min-width: 335px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+  .ai-label {
+    font-size: 11px;
+    font-family: 'Orbitron', sans-serif;
+    color: #888;
+    letter-spacing: 1.5px;
+    margin-top: 12px;
+    text-transform: uppercase;
   }
 
-  .matrix-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  /* Gallery Horizontal Scroll */
+  .project-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 5px 25px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 15px;
   }
-
-  .matrix-image span {
-    margin-top: 0.4em;
-    font-size: 0.9em;
-    color: rgb(152, 91, 0);
+  .project-gallery::-webkit-scrollbar { display: none; }
+  
+  .project-gallery figure {
+    flex: 0 0 85%;
+    max-width: 420px;
+    margin: 0;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-gallery img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: grab;
+  }
+  .project-gallery img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+  
+  .project-gallery figcaption {
+    margin-top: 12px;
+    font-size: 0.85em;
+    color: #a07830;
     font-weight: 600;
     text-align: center;
-    word-wrap: break-word;
+  }
+  .dark-mode .project-gallery figcaption { color: #d4a040; }
+
+  /* PDF Container Vibe */
+  .pdf-wrapper {
+    margin-top: 30px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1.5px solid rgba(192, 115, 0, 0.2);
+    background: #fff;
+  }
+  .dark-mode .pdf-wrapper {
+    border-color: #5a4520;
+  }
+  .pdf-toolbar {
+    height: 36px;
+    background: linear-gradient(to bottom, #f6f6f6, #e0e0e0);
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-bottom: 1px solid #ccc;
+  }
+  .dark-mode .pdf-toolbar {
+    background: linear-gradient(to bottom, #3a3225, #2a2318);
+    border-bottom: 1px solid #1a150e;
+  }
+  .pdf-dots {
+    display: flex;
+    gap: 7px;
+  }
+  .pdf-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .dot-red { background: #ff5f56; }
+  .dot-yel { background: #ffbd2e; }
+  .dot-grn { background: #27c93f; }
+  
+  .pdf-toolbar-title {
+    flex: 1;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #666;
+    margin-left: -50px; /* Centering offset */
+  }
+  .dark-mode .pdf-toolbar-title { color: #aaa; }
+
+  .responsive-pdf {
+    width: 100%;
+    height: 650px;
+    border: none;
+    display: block;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (min-width: 900px) {
+    .project-container {
+      flex-direction: row;
+      align-items: center;
+    }
+    .project-text, .project-image-box {
+      flex: 1;
+    }
+    .project-gallery figure {
+      flex: 0 0 45%;
+    }
   }
 </style>
 
-<div class="matrix-text">
-  <ul>
-    <li><b>MATRIX</b> is a speech-to-speech and text-to-speech voice assistant built using Python, Tkinter, and Microsoft Voice Pack.</li>
-    <li>I programmed and built it when I was in 8th grade, referring to various videos on rule-based chatbots, and designed the complete Tkinter window by myself.</li>
-    <li>It also supported text-to-text interaction, featuring a quick-glance home screen with weather, top 5 tech news, time and date, my location, and additional windows for other overviews.</li>
-    <li>I might have been a little too inspired by <i>Iron Man</i> and <i>The Matrix</i> movies, lol.</li>
-  </ul>
+<div class="project-section" id="mrida"> 
+  <h2>MRIDA 🌱</h2>
+  <h3>Multipurpose Real-time Integrated Digital Analyzer</h3>
+  <div style="margin-top: -15px; margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;">2023 - 2025</div>
+  
+  <div class="project-meta">
+    <span>🐍 Python</span>
+    <span>📱 MIT App Inventor</span>
+    <span>🤖 AI & IoT</span>
+    <span>🍓 Raspberry Pi 5</span>
+    <span>🌱 AgriTech</span>
+  </div>
+
+  <div class="project-container">
+    <div class="project-text">
+      <p><strong>MRIDA</strong> is an AI-powered project designed to help farmers easily check soil health and improve crop yields.</p>
+      <p>It was created to measure soil pH, moisture, temperature, and nutrients while also providing weather alerts. It also had a built-in emergency service to contact concerned authorities and a speech-to-speech assistant to guide the user and provide insights.</p>
+      <p>While the hardware was not developed, the MRIDA app was successfully built using MIT App Inventor and Python to analyze soil conditions and offer useful AI-driven insights.</p>
+      
+      <p class="notable">🏆 This project was also presented in:</p>
+      <ul>
+        <li><strong>Data and AI Talks 2023</strong> – Champion in Group C (Senior) category. Awarded a 9th Gen iPad, Trophy, AI-powered Rubik's Cube, and Certificates.</li>
+        <li><strong>Youth Ideathon 2023</strong> – Selected among the Top 1,000 ideas nationwide.</li>
+        <li><strong>INSPIRE Manak Awards 2023</strong> – Selected in the first stage and awarded ₹10,000.</li>
+        <li><strong>Junior Smart India Hackathon 2023</strong> – Shortlisted for the Interview Round by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
+      </ul>
+    </div>
+    
+    <div class="project-image-box">
+      <img src="/images/mridaimg.webp" alt="MRIDA Project Concept">
+      <div class="ai-label">Initial Concept Layout Generated with AI</div>
+    </div>
+  </div>
+
+  <!-- Premium PDF Embed Document -->
+  <div class="pdf-wrapper">
+    <div class="pdf-toolbar">
+      <div class="pdf-dots">
+        <div class="pdf-dot dot-red"></div>
+        <div class="pdf-dot dot-yel"></div>
+        <div class="pdf-dot dot-grn"></div>
+      </div>
+      <div class="pdf-toolbar-title">mrida-research-deck.pdf</div>
+    </div>
+    <iframe src="/_pages/pdf-view.html" class="responsive-pdf" title="MRIDA Presentation"></iframe>
+  </div>
+
 </div>
 
-<div class="matrix-image">
-  <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn">
-  <span>How I imagined it before starting to build it</span>
-</div>
+<div class="project-section" id="matrix">
+  <h2>MATRIX 🤖</h2>
+  <h3>Speech-to-Speech, Text-to-Speech, and Speech-to-Text Desktop Voice Assistant</h3>
+  <div style="margin-top: -15px; margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;">2021 - 2022</div>
 
-<div class="matrix-image">
-  <img src="/images/matrixday.webp" alt="MATRIX Day">
-  <span>Day Mode</span>
-</div>
+  <div class="project-meta">
+    <span>🐍 Python</span>
+    <span>🖥️ Tkinter GUI</span>
+    <span>🎙️ MS Voice Pack</span>
+  </div>
 
-<div class="matrix-image">
-  <img src="/images/matrixnight.webp" alt="MATRIX Night">
-  <span>Night Mode</span>
+  <div class="project-container">
+    <div class="project-text">
+      <p><strong>MATRIX</strong> is a speech-to-speech, text-to-speech, and speech-to-text desktop voice assistant built using Python, Tkinter, and Microsoft Voice Pack.</p>
+      <p>I programmed and built it when I was in 8th grade, referring to various videos on rule-based chatbots, and designed the complete Tkinter window by myself.</p>
+      <p>It also supported text-to-text interaction, featuring a quick-glance home screen with weather, top 5 tech news, time and date, my location, and additional windows for other overviews.</p>
+      <p><em>(I might have been a little too inspired by Iron Man and The Matrix movies, lol.)</em></p>
+    </div>
+  </div>
+
+  <!-- Premium Horizontal Gallery -->
+  <div class="project-gallery">
+    <figure>
+      <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn mockup">
+      <figcaption>My precise hand-drawn conceptual interface mockup</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/matrixday.webp" alt="MATRIX Day Mode GUI">
+      <figcaption>The finalized Light Mode GUI state</figcaption>
+    </figure>
+    <figure>
+      <img src="/images/matrixnight.webp" alt="MATRIX Night Mode GUI">
+      <figcaption>The finalized Dark Mode GUI state</figcaption>
+    </figure>
+  </div>
 </div>

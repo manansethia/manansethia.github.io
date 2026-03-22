@@ -14,11 +14,18 @@ body {
   color: #000;
   font-family: $global-font-family;
   line-height: 1.5;
+  background-color: #fffbeb;
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent !important;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
   }
+}
+
+.dark-mode body {
+  background-color: #120c00;
 }
 
 h1, h2, h3, h4, h5, h6 {
