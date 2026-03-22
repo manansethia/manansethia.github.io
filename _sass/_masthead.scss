@@ -41,7 +41,6 @@
     font-family: $sans-serif-narrow;
     overflow: visible;
     position: relative;
-    z-index: 1;
     /* sits above ::before blur layer */
 
     @include breakpoint($x-large) {
