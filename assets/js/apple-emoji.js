@@ -6,7 +6,15 @@
   'use strict';
 
   var EMOJI_MAP = {
+  "👨‍💻": "/images/emoji/emoji-1F468-200D-1F4BB.webp",
+  "🇨🇳": "/images/emoji/emoji-1F1E8-1F1F3.webp",
   "🇮🇳": "/images/emoji/emoji-1F1EE-1F1F3.webp",
+  "☁": "/images/emoji/emoji-2601.webp",
+  "⚔": "/images/emoji/emoji-2694.webp",
+  "⚠": "/images/emoji/emoji-26A0.webp",
+  "⚡": "/images/emoji/emoji-26A1.webp",
+  "✅": "/images/emoji/emoji-2705.webp",
+  "✴": "/images/emoji/emoji-2734.webp",
   "🃏": "/images/emoji/emoji-1F0CF.webp",
   "🌅": "/images/emoji/emoji-1F305.webp",
   "🌍": "/images/emoji/emoji-1F30D.webp",
@@ -84,21 +92,14 @@
   "🧳": "/images/emoji/emoji-1F9F3.webp",
   "🪙": "/images/emoji/emoji-1FA99.webp",
   "🪨": "/images/emoji/emoji-1FAA8.webp",
-  "🪲": "/images/emoji/emoji-1FAB2.webp",
-  "☁": "/images/emoji/emoji-2601.webp",
-  "⚔": "/images/emoji/emoji-2694.webp",
-  "⚠": "/images/emoji/emoji-26A0.webp",
-  "⚡": "/images/emoji/emoji-26A1.webp",
-  "✅": "/images/emoji/emoji-2705.webp",
-  "✴": "/images/emoji/emoji-2734.webp"
+  "🪲": "/images/emoji/emoji-1FAB2.webp"
   };
 
-  // Build sorted keys (longest first so compound sequences match first)
+  // Build sorted keys (longest first so compound/ZWJ sequences match first)
   var keys = Object.keys(EMOJI_MAP).sort(function(a, b) { return b.length - a.length; });
 
-  // Regex that matches any emoji we have (escaped for regex)
   var escapedKeys = keys.map(function(k) {
-    return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return k.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
   });
   var emojiRegex = new RegExp('(' + escapedKeys.join('|') + ')', 'gu');
 
@@ -148,7 +149,6 @@
       node.nodeName !== 'INPUT' &&
       !node.classList.contains('no-emoji')
     ) {
-      // Process children in reverse to avoid index shifting
       var children = Array.from(node.childNodes);
       children.forEach(function(child) { replaceEmojisInNode(child); });
     }
