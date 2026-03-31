@@ -10,6 +10,7 @@
 */
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
+@import "apple-fonts";
 @import "mixins";
 @import "vendor/susy/susy";
 
@@ -195,4 +196,20 @@ body>.author__urls a:hover {
   .author__urls {
     will-change: backdrop-filter !important;
   }
+}
+
+/* ── Apple Emoji images ── */
+img.apple-emoji {
+  display: inline-block;
+  width:  1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  object-fit: contain;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 0.02em;
+  border-radius: 0 !important;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
 }

@@ -17,12 +17,20 @@ $serif : Georgia,
 Times,
 serif;
 $sans-serif : -apple-system,
+"SF Pro",
+"SF Pro Text",
 ".SFNSText-Regular",
 "San Francisco",
-"Roboto",
 "Segoe UI",
 "Helvetica Neue",
-"Lucida Grande",
+Arial,
+sans-serif;
+$sans-serif-display : -apple-system,
+"SF Pro Display",
+".SFNSDisplay",
+"San Francisco",
+"Segoe UI",
+"Helvetica Neue",
 Arial,
 sans-serif;
 $monospace : Monaco,
@@ -50,7 +58,7 @@ $garamond : Garamond,
 serif;
 
 $global-font-family : $sans-serif;
-$header-font-family : $sans-serif;
+$header-font-family : $sans-serif-display;
 $caption-font-family : $serif;
 
 /* type scale */
