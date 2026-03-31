@@ -529,7 +529,7 @@ author_profile: true
 <!-- ═══ Quick Navigation TOC ═══ -->
 <div class="toc-box collapsed" id="achievementToc">
   <div class="toc-header" onclick="toggleToc()">
-    <h2>📋 Quick Navigation <span class="toc-count">40 achievements</span></h2>
+    <h2>📋 Quick Navigation <span class="toc-count">41 achievements</span></h2>
     <span class="toc-chevron"></span>
   </div>
   <div class="toc-search-wrap">
@@ -537,54 +537,78 @@ author_profile: true
   </div>
   <div class="toc-body" id="tocBody">
     <ul class="toc-list" id="tocList">
-      <li data-tags="tech coding olympiad ibm"><a href="#ach-1"><span class="toc-num">1.</span><span class="toc-title">🥈 Silver Medalist: Future Tech Olympiad 2026 <span class="toc-date">(February 2026)</span></span></a></li>
-      <li data-tags="tech coding programming iit"><a href="#ach-2"><span class="toc-num">2.</span><span class="toc-title">🎲 Shaastra 2026 by IIT Madras <span class="toc-date">(December 2025)</span></span></a></li>
-      <li data-tags="quiz finance"><a href="#ach-3"><span class="toc-num">3.</span><span class="toc-title">📈 2nd Runner Ups - Wonga Wits Quiz Season 2 <span class="toc-date">(November 2025)</span></span></a></li>
-      <li data-tags="quiz tech tcs"><a href="#ach-4"><span class="toc-num">4.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2025 <span class="toc-date">(August 2025)</span></span></a></li>
-      <li data-tags="quiz science"><a href="#ach-5"><span class="toc-num">5.</span><span class="toc-title">🪨 Winner IIM Bhilai – BPMMQ 2025 <span class="toc-date">(August 2025)</span></span></a></li>
-      <li data-tags="quiz finance"><a href="#ach-6"><span class="toc-num">6.</span><span class="toc-title">🪙 Winner Bhopal – SBI Scholar Quiz 2025 <span class="toc-date">(June 2025)</span></span></a></li>
-      <li data-tags="coding code tech"><a href="#ach-7"><span class="toc-num">7.</span><span class="toc-title">👨‍💻 Winner – Code 2 Champions <span class="toc-date">(April 2025)</span></span></a></li>
-      <li data-tags="quiz science environment"><a href="#ach-8"><span class="toc-num">8.</span><span class="toc-title">🌏 Winner – Earth Day Quiz NEHU <span class="toc-date">(April 2025)</span></span></a></li>
-      <li data-tags="coding code tech"><a href="#ach-9"><span class="toc-num">9.</span><span class="toc-title">👨‍💻 AIR 10 – HPE Codewars 2025 <span class="toc-date">(April 2025)</span></span></a></li>
-      <li data-tags="olympiad science"><a href="#ach-10"><span class="toc-num">10.</span><span class="toc-title">🇮🇳 Qualified National Camp – INESO 2025 <span class="toc-date">(March 2025)</span></span></a></li>
-      <li data-tags="science quantum research"><a href="#ach-11"><span class="toc-num">11.</span><span class="toc-title">🦋 BeyondQuantum 2025 <span class="toc-date">(March 2025)</span></span></a></li>
-      <li data-tags="tech coding ai olympiad"><a href="#ach-12"><span class="toc-num">12.</span><span class="toc-title">🤖 Qualified Stage 2 – India AI Olympiad 2025 <span class="toc-date">(January 2025)</span></span></a></li>
-      <li data-tags="olympiad international"><a href="#ach-13"><span class="toc-num">13.</span><span class="toc-title">🎖️ Felicitated – International Olympiad Medalists <span class="toc-date">(December 2024)</span></span></a></li>
-      <li data-tags="coding code olympiad"><a href="#ach-14"><span class="toc-num">14.</span><span class="toc-title">👨‍💻 Zonal Topper – ZCO 2025 <span class="toc-date">(December 2024)</span></span></a></li>
-      <li data-tags="quiz tech tcs"><a href="#ach-15"><span class="toc-num">15.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2024 <span class="toc-date">(November 2024)</span></span></a></li>
-      <li data-tags="coding code quiz tech"><a href="#ach-16"><span class="toc-num">16.</span><span class="toc-title">✴️ Nexus 2K24 – SSIPMT Raipur <span class="toc-date">(November 2024)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-17"><span class="toc-num">17.</span><span class="toc-title">🧠 Winner – GK Quiz Mindspark 2024 <span class="toc-date">(October 2024)</span></span></a></li>
-      <li data-tags="mun diplomacy"><a href="#ach-18"><span class="toc-num">18.</span><span class="toc-title">🏅 Special Mention UNGA – KPS MUN 3.0 <span class="toc-date">(October 2024)</span></span></a></li>
-      <li data-tags="olympiad international science"><a href="#ach-19"><span class="toc-num">19.</span><span class="toc-title">🌏 International Earth Science Olympiad 2024 <span class="toc-date">(August 2024)</span></span></a></li>
-      <li data-tags="quiz finance"><a href="#ach-20"><span class="toc-num">20.</span><span class="toc-title">💳 Ranked 1st Central Zone – NFLQ 2024 <span class="toc-date">(May 2024)</span></span></a></li>
-      <li data-tags="science olympiad"><a href="#ach-21"><span class="toc-num">21.</span><span class="toc-title">🧪 High Distinction – Int'l Chemistry Quiz <span class="toc-date">(March 2024)</span></span></a></li>
-      <li data-tags="tech innovation"><a href="#ach-22"><span class="toc-num">22.</span><span class="toc-title">💡 Qualified DLEPC – INSPIRE MANAK <span class="toc-date">(February 2024)</span></span></a></li>
-      <li data-tags="tech innovation coding"><a href="#ach-23"><span class="toc-num">23.</span><span class="toc-title">💡 National Rounds – Jr. Smart India Hackathon <span class="toc-date">(January 2024)</span></span></a></li>
-      <li data-tags="quiz heritage"><a href="#ach-24"><span class="toc-num">24.</span><span class="toc-title">🛕 Runner-Up Bhubaneswar – CBSE HIQ 2023 <span class="toc-date">(December 2023)</span></span></a></li>
-      <li data-tags="quiz tech coding"><a href="#ach-25"><span class="toc-num">25.</span><span class="toc-title">👨‍💻 Winner Tech Quiz – Nexus 2K23 <span class="toc-date">(November 2023)</span></span></a></li>
-      <li data-tags="tech innovation"><a href="#ach-26"><span class="toc-num">26.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
-      <li data-tags="quiz sports"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
-      <li data-tags="tech ai coding"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🧠 All India Top 5 – Mind Wars 2023 <span class="toc-date">(May 2023)</span></span></a></li>
-      <li data-tags="quiz heritage"><a href="#ach-30"><span class="toc-num">30.</span><span class="toc-title">🛕 National 1st Runner-Ups – CBSE HIQ 2022 <span class="toc-date">(January 2023)</span></span></a></li>
-      <li data-tags="quiz environment"><a href="#ach-31"><span class="toc-num">31.</span><span class="toc-title">🏆 Winner – Paryavaran Paheli ECO Quiz <span class="toc-date">(November 2022)</span></span></a></li>
-      <li data-tags="quiz heritage"><a href="#ach-32"><span class="toc-num">32.</span><span class="toc-title">🛕 City Champions – INTACH Heritage Quiz <span class="toc-date">(October 2022)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-33"><span class="toc-num">33.</span><span class="toc-title">🏆 Winner – Shine COSMO 2022 <span class="toc-date">(September 2022)</span></span></a></li>
-      <li data-tags="quiz sports"><a href="#ach-34"><span class="toc-num">34.</span><span class="toc-title">🏏 Fit India Quiz 2021 – Season 1 <span class="toc-date">(June 2022)</span></span></a></li>
-      <li data-tags="quiz environment wildlife"><a href="#ach-35"><span class="toc-num">35.</span><span class="toc-title">🐼 National Qualifier – Wild Wisdom 2021 <span class="toc-date">(October 2021)</span></span></a></li>
-      <li data-tags="quiz environment wildlife"><a href="#ach-36"><span class="toc-num">36.</span><span class="toc-title">🐼 Zonal 2nd Runner-Up – Wild Wisdom 2019 <span class="toc-date">(October 2019)</span></span></a></li>
-      <li data-tags="science"><a href="#ach-37"><span class="toc-num">37.</span><span class="toc-title">🌒 AIR 23 – All India Astronomy Test 2018 <span class="toc-date">(January 2019)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-38"><span class="toc-num">38.</span><span class="toc-title">🐝 Winner – Spell Bee Excella 2018 <span class="toc-date">(October 2018)</span></span></a></li>
-      <li data-tags="quiz environment wildlife"><a href="#ach-39"><span class="toc-num">39.</span><span class="toc-title">🐼 Zonal 1st Runner-Up – Wild Wisdom 2018 <span class="toc-date">(September 2018)</span></span></a></li>
-      <li data-tags="quiz environment"><a href="#ach-40"><span class="toc-num">40.</span><span class="toc-title">🌏 2nd Runner-Up – QPL 2.0 Earth Day <span class="toc-date">(April 2016)</span></span></a></li>
+      <li data-tags="quiz tech iiit technovate campus"><a href="#ach-1"><span class="toc-num">1.</span><span class="toc-title">⚔️ Winner – Clash of Campus Quiz 2026 <span class="toc-date">(March 2026)</span></span></a></li>
+      <li data-tags="tech coding olympiad ibm"><a href="#ach-2"><span class="toc-num">2.</span><span class="toc-title">🥈 Silver Medalist: Future Tech Olympiad 2026 <span class="toc-date">(February 2026)</span></span></a></li>
+      <li data-tags="tech coding programming iit"><a href="#ach-3"><span class="toc-num">3.</span><span class="toc-title">🎲 Shaastra 2026 by IIT Madras <span class="toc-date">(December 2025)</span></span></a></li>
+      <li data-tags="quiz finance"><a href="#ach-4"><span class="toc-num">4.</span><span class="toc-title">📈 2nd Runner Ups - Wonga Wits Quiz Season 2 <span class="toc-date">(November 2025)</span></span></a></li>
+      <li data-tags="quiz tech tcs"><a href="#ach-5"><span class="toc-num">5.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2025 <span class="toc-date">(August 2025)</span></span></a></li>
+      <li data-tags="quiz science"><a href="#ach-6"><span class="toc-num">6.</span><span class="toc-title">🪨 Winner IIM Bhilai – BPMMQ 2025 <span class="toc-date">(August 2025)</span></span></a></li>
+      <li data-tags="quiz finance"><a href="#ach-7"><span class="toc-num">7.</span><span class="toc-title">🪙 Winner Bhopal – SBI Scholar Quiz 2025 <span class="toc-date">(June 2025)</span></span></a></li>
+      <li data-tags="coding code tech"><a href="#ach-8"><span class="toc-num">8.</span><span class="toc-title">👨‍💻 Winner – Code 2 Champions <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="quiz science environment"><a href="#ach-9"><span class="toc-num">9.</span><span class="toc-title">🌏 Winner – Earth Day Quiz NEHU <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="coding code tech"><a href="#ach-10"><span class="toc-num">10.</span><span class="toc-title">👨‍💻 AIR 10 – HPE Codewars 2025 <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="olympiad science"><a href="#ach-11"><span class="toc-num">11.</span><span class="toc-title">🇮🇳 Qualified National Camp – INESO 2025 <span class="toc-date">(March 2025)</span></span></a></li>
+      <li data-tags="science quantum research"><a href="#ach-12"><span class="toc-num">12.</span><span class="toc-title">🦋 BeyondQuantum 2025 <span class="toc-date">(March 2025)</span></span></a></li>
+      <li data-tags="tech coding ai olympiad"><a href="#ach-13"><span class="toc-num">13.</span><span class="toc-title">🤖 Qualified Stage 2 – India AI Olympiad 2025 <span class="toc-date">(January 2025)</span></span></a></li>
+      <li data-tags="olympiad international"><a href="#ach-14"><span class="toc-num">14.</span><span class="toc-title">🎖️ Felicitated – International Olympiad Medalists <span class="toc-date">(December 2024)</span></span></a></li>
+      <li data-tags="coding code olympiad"><a href="#ach-15"><span class="toc-num">15.</span><span class="toc-title">👨‍💻 Zonal Topper – ZCO 2025 <span class="toc-date">(December 2024)</span></span></a></li>
+      <li data-tags="quiz tech tcs"><a href="#ach-16"><span class="toc-num">16.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2024 <span class="toc-date">(November 2024)</span></span></a></li>
+      <li data-tags="coding code quiz tech"><a href="#ach-17"><span class="toc-num">17.</span><span class="toc-title">✴️ Nexus 2K24 – SSIPMT Raipur <span class="toc-date">(November 2024)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-18"><span class="toc-num">18.</span><span class="toc-title">🧠 Winner – GK Quiz Mindspark 2024 <span class="toc-date">(October 2024)</span></span></a></li>
+      <li data-tags="mun diplomacy"><a href="#ach-19"><span class="toc-num">19.</span><span class="toc-title">🏅 Special Mention UNGA – KPS MUN 3.0 <span class="toc-date">(October 2024)</span></span></a></li>
+      <li data-tags="olympiad international science"><a href="#ach-20"><span class="toc-num">20.</span><span class="toc-title">🌏 International Earth Science Olympiad 2024 <span class="toc-date">(August 2024)</span></span></a></li>
+      <li data-tags="quiz finance"><a href="#ach-21"><span class="toc-num">21.</span><span class="toc-title">💳 Ranked 1st Central Zone – NFLQ 2024 <span class="toc-date">(May 2024)</span></span></a></li>
+      <li data-tags="science olympiad"><a href="#ach-22"><span class="toc-num">22.</span><span class="toc-title">🧪 High Distinction – Int'l Chemistry Quiz <span class="toc-date">(March 2024)</span></span></a></li>
+      <li data-tags="tech innovation"><a href="#ach-23"><span class="toc-num">23.</span><span class="toc-title">💡 Qualified DLEPC – INSPIRE MANAK <span class="toc-date">(February 2024)</span></span></a></li>
+      <li data-tags="tech innovation coding"><a href="#ach-24"><span class="toc-num">24.</span><span class="toc-title">💡 National Rounds – Jr. Smart India Hackathon <span class="toc-date">(January 2024)</span></span></a></li>
+      <li data-tags="quiz heritage"><a href="#ach-25"><span class="toc-num">25.</span><span class="toc-title">🛕 Runner-Up Bhubaneswar – CBSE HIQ 2023 <span class="toc-date">(December 2023)</span></span></a></li>
+      <li data-tags="quiz tech coding"><a href="#ach-26"><span class="toc-num">26.</span><span class="toc-title">👨‍💻 Winner Tech Quiz – Nexus 2K23 <span class="toc-date">(November 2023)</span></span></a></li>
+      <li data-tags="tech innovation"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
+      <li data-tags="quiz sports"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
+      <li data-tags="tech ai coding"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-30"><span class="toc-num">30.</span><span class="toc-title">🧠 All India Top 5 – Mind Wars 2023 <span class="toc-date">(May 2023)</span></span></a></li>
+      <li data-tags="quiz heritage"><a href="#ach-31"><span class="toc-num">31.</span><span class="toc-title">🛕 National 1st Runner-Ups – CBSE HIQ 2022 <span class="toc-date">(January 2023)</span></span></a></li>
+      <li data-tags="quiz environment"><a href="#ach-32"><span class="toc-num">32.</span><span class="toc-title">🏆 Winner – Paryavaran Paheli ECO Quiz <span class="toc-date">(November 2022)</span></span></a></li>
+      <li data-tags="quiz heritage"><a href="#ach-33"><span class="toc-num">33.</span><span class="toc-title">🛕 City Champions – INTACH Heritage Quiz <span class="toc-date">(October 2022)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-34"><span class="toc-num">34.</span><span class="toc-title">🏆 Winner – Shine COSMO 2022 <span class="toc-date">(September 2022)</span></span></a></li>
+      <li data-tags="quiz sports"><a href="#ach-35"><span class="toc-num">35.</span><span class="toc-title">🏏 Fit India Quiz 2021 – Season 1 <span class="toc-date">(June 2022)</span></span></a></li>
+      <li data-tags="quiz environment wildlife"><a href="#ach-36"><span class="toc-num">36.</span><span class="toc-title">🐼 National Qualifier – Wild Wisdom 2021 <span class="toc-date">(October 2021)</span></span></a></li>
+      <li data-tags="quiz environment wildlife"><a href="#ach-37"><span class="toc-num">37.</span><span class="toc-title">🐼 Zonal 2nd Runner-Up – Wild Wisdom 2019 <span class="toc-date">(October 2019)</span></span></a></li>
+      <li data-tags="science"><a href="#ach-38"><span class="toc-num">38.</span><span class="toc-title">🌒 AIR 23 – All India Astronomy Test 2018 <span class="toc-date">(January 2019)</span></span></a></li>
+      <li data-tags="quiz"><a href="#ach-39"><span class="toc-num">39.</span><span class="toc-title">🐝 Winner – Spell Bee Excella 2018 <span class="toc-date">(October 2018)</span></span></a></li>
+      <li data-tags="quiz environment wildlife"><a href="#ach-40"><span class="toc-num">40.</span><span class="toc-title">🐼 Zonal 1st Runner-Up – Wild Wisdom 2018 <span class="toc-date">(September 2018)</span></span></a></li>
+      <li data-tags="quiz environment"><a href="#ach-41"><span class="toc-num">41.</span><span class="toc-title">🌏 2nd Runner-Up – QPL 2.0 Earth Day <span class="toc-date">(April 2016)</span></span></a></li>
     </ul>
   </div>
 </div>
 
 <!-- Achievements Section -->
 
+<section>
+<div class="achievement-section" id="ach-1">
+  <h2>⚔️ Winner - Clash of Campus Quiz 2026</h2>
+  <div class="achievement-meta">
+    🏢 <em>Issued by IIIT Naya Raipur</em><br>
+    🗓️ <em>March 2026</em><br>
+    📍 <em>Naya Raipur, Chhattisgarh</em>
+  </div>
 
-<div class="achievement-section">
+  <p>Technovate is the annual technical fest of IIIT Naya Raipur, one of the premier IIITs in central India. Now in its seventh edition, Technovate 7.0 has grown into a flagship college-level event that brings together students from institutions across Chhattisgarh for a range of technical and aptitude-based competitions.</p>
+  <p>Clash of Campus was the flagship quiz event of Technovate 7.0 — a fast-paced, multi-round general knowledge and aptitude quiz open to college students, with teams of two competing against each other on stage.</p>
+  <p>I was the only school student in the entire competition, and I competed alone — no partner. Every other team was a college duo. That made the whole thing a little surreal, honestly.</p>
+  <p>Somehow, I came out on top, winning the quiz and taking home a ₹6000 cash prize.</p>
+
+  <div class="achievement-images">
+  </div>
+
+</div>
+</section>
+
+<hr class="silver-line" />
+
+
+<section>
+<div class="achievement-section" id="ach-2">
   <h2>🥈 Silver Medalist: Future Tech Olympiad 2026</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by 1M1B in collaboration with IBM SkillsBuild</em><br>
@@ -600,10 +624,12 @@ author_profile: true
   </div>
 
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-3">
   <h2>🎲 Shaastra 2026 by IIT Madras</h2>
   
   <div class="achievement-meta">
@@ -651,10 +677,12 @@ author_profile: true
   </div>
 
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-4">
   <h2>📈 2nd Runner Ups - Wonga Wits Quiz Season 2</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Yes Securities</em><br>
@@ -674,10 +702,12 @@ author_profile: true
   </div>
 
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-5">
   <h2>📱 1st Runner-Up of Nagpur region - TCS InQuizitive 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Issued by Tata Consultancy Services</em><br>
@@ -705,10 +735,12 @@ author_profile: true
     <img src="/images/tcs254.webp" alt="TCS '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-6">
   <h2>🪨 Winner of IIM Bhilai Chapter - Brahmaprakash Memorial Materials Quiz 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Institute of Metals, Bhilai</em><br>
@@ -727,10 +759,12 @@ author_profile: true
     <img src="/images/mmq3.webp" alt="BPMMQ '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-7">
   <h2>🪙 Winner of Bhopal Region - SBI Scholar Quiz 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by State Bank of India</em><br>
@@ -748,10 +782,12 @@ author_profile: true
     <img src="/images/sbi.webp" alt="SBI '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-8">
   <h2>👨‍💻 Winner of Code 2 Champions - Innovritti 1.0</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Institute of Technology and Management, Raipur</em><br>
@@ -767,10 +803,12 @@ author_profile: true
     <img src="/images/itm.webp" alt="ITM '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-9">
   <h2>🌏 Winner of Earth Day Quiz 2025 - NEHU Shillong</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by North Eastern Hill University Shillong</em><br>
@@ -785,10 +823,12 @@ author_profile: true
     <img src="/images/nehuearth.webp" alt="NEHU '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-10">
   <h2>👨‍💻 All India Rank 10 - HPE Codewars 2025 India Edition</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Hewlett Packard Enterprise and Codingal</em><br>
@@ -803,10 +843,12 @@ author_profile: true
     <img src="/images/hpe.webp" alt="HPE '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-11">
   <h2>🇮🇳 Qualified for National Camp - Indian National Earth Science Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Geological Society of India</em><br>
@@ -822,10 +864,12 @@ author_profile: true
     <img src="/images/ineso.webp" alt="INESO '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-12">
   <h2>🦋 Selected for International Quantum Research - BeyondQuantum 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by ThinkingBeyond</em><br>
@@ -842,10 +886,12 @@ author_profile: true
     <img src="/images/bequ3.webp" alt="BEQU '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-13">
   <h2>🤖 Qualified for Stage 2 - The India Artificial Intelligence Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Association for Computing Machinery, Pune, India</em><br>
@@ -860,10 +906,12 @@ author_profile: true
     <img src="/images/ioai.webp" alt="INAIO '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-14">
   <h2>🎖️ Felicitated as One of India's Esteemed International Olympiad Medalists of 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Homi Bhabha Centre for Science Education and Tata Institute of Fundamental Research.</em><br>
@@ -880,10 +928,12 @@ author_profile: true
     <img src="/images/fel2.webp" alt="Felicitation '24">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-15">
   <h2>👨‍💻 Zonal Topper - Zonal Computing Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Association for Research in Computing Science</em><br>
@@ -899,10 +949,12 @@ author_profile: true
     <img src="/images/zco.webp" alt="ZCO '25">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-16">
   <h2>📱 1st Runner-Up of Nagpur region - TCS InQuizitive 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Tata Consultancy Services</em><br>
@@ -930,10 +982,12 @@ author_profile: true
     <img src="/images/tcs24semcer.webp" alt="TCS '24">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-17">
   <h2>✴️ Nexus 2K24 by SSIPMT Raipur</h2>
   
   <div class="achievement-meta">
@@ -976,10 +1030,12 @@ author_profile: true
   </div>
 
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-18">
   <h2>🧠 Winner of General Knowledge Quiz - Mindspark 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Brighton International School</em><br>
@@ -996,10 +1052,12 @@ author_profile: true
     <img src="/images/quizbrighton.webp" alt="Minspark '24">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-19">
   <h2>🏅 Special Mention (United Nations General Assembly) - KPS Model United Nations 3.0</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
@@ -1016,10 +1074,12 @@ author_profile: true
     <img src="/images/kpsmun.webp" alt="KPS MUN 3.0 '24">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-20">
   <h2>🌏 International Earth Science Olympiad 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Organized by the International Geoscience Education Organisation (IGEO).</em><br>
@@ -1148,10 +1208,12 @@ author_profile: true
     <img src="/images/iesoqt2.webp" alt="IESO">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-21">
   <h2>💳 Ranked First in Central Zone - National Financial Literacy Quiz 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Securities and Exchange Board of India (SEBI)</em><br>
@@ -1166,10 +1228,12 @@ author_profile: true
     <img src="/images/nflq.webp" alt="NFLQ '24">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-22">
   <h2>🧪 Certificate of High Distinction - International Chemistry Quiz 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Royal Australian Chemical Institute</em><br>
@@ -1185,10 +1249,12 @@ author_profile: true
     <img src="/images/icq.webp" alt="ICQ '23">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-23">
   <h2>💡 Qualified for DLEPC - ATL Inspire Manak Awards 2023-24</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Department of Science and Technology (DST) Government of India</em><br>
@@ -1203,10 +1269,12 @@ author_profile: true
     <img src="/images/inspiremanak.webp" alt="Inspire-MANAK '23">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-24">
   <h2>💡 Idea selected for the National Rounds - Junior Smart India Hackathon 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Ministry of Education's Innovation Cell Government of India</em><br>
@@ -1221,10 +1289,12 @@ author_profile: true
     <img src="/images/jsih.webp" alt="JSIH '23">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-25">
   <h2>🛕 Bhubaneswar region Runner-Up - CBSE Heritage India Quiz 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
@@ -1240,10 +1310,12 @@ author_profile: true
     <img src="/images/cbsehiq23.webp" alt="CBSE HIQ '23">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-26">
   <h2>👨‍💻 Winner of Technical Quiz - Nexus 2K23</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Shri Shankaracharya Institute of Professional Management and Technology, Raipur</em><br>
@@ -1259,10 +1331,12 @@ author_profile: true
     <img src="/images/nexus23.webp" alt="Nexus Quiz '23">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-27">
   <h2>💡 Selected among the Top 1,000 ideas nationwide - Youth Ideathon 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by ThinkStartup and MEPSC</em><br>
@@ -1277,10 +1351,12 @@ author_profile: true
     <img src="/images/yi23.webp" alt="YI '23">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-28">
   <h2>🥎 Ultimate Sports Quiz 2023: Season 2</h2>
   <div class="achievement-meta">
     🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. – Jiohotstar.</em><br>
@@ -1412,10 +1488,12 @@ author_profile: true
     </div>
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-29">
   <h2>🤖 Winner - Data and AI Talks 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by igebra.ai</em><br>
@@ -1435,10 +1513,12 @@ author_profile: true
     </div>
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-30">
   <h2>🧠 All India Top 5 - Mind Wars National Academic Championship 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Zee Entertainment Enterprises Ltd.</em><br>
@@ -1451,10 +1531,12 @@ author_profile: true
     <img src="/images/mindwars.webp" alt="MindWars '23">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-31">
   <h2>🛕 CBSE Heritage India Quiz 2022</h2>
   
   <div class="achievement-meta">
@@ -1541,10 +1623,12 @@ author_profile: true
     </div>
   </div>
 </div>
+</section>
 
 <hr class="silver-line"/>
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-32">
   <h2>🏆 Winners of Paryavaran Paheli ECO Quiz - KPS Intelligence Fest 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
@@ -1557,10 +1641,12 @@ author_profile: true
     <img src="/images/intelli.webp" alt="ParyavaranPaheli '22">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-33">
   <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
@@ -1573,10 +1659,12 @@ author_profile: true
     <img src="/images/intach.webp" alt="INTACH '22">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-34">
   <h2>🏆 Winners of Senior Group Quiz - Shine COSMO 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by The Rotary Club of Raipur</em><br>
@@ -1589,10 +1677,12 @@ author_profile: true
     <img src="/images/shinecosmo.webp" alt="ShineCOSMO '22">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-35">
   <h2>🏏 Fit India Quiz 2021 – Season 1</h2>
   <div class="achievement-meta">
     🏢 <em>Organized by the Ministry of Youth Affairs and Sports in collaboration with the Central Board of Secondary Education and nationally broadcasted by Star India Group.</em><br>
@@ -1666,10 +1756,12 @@ author_profile: true
     </div>
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-36">
   <h2>🐼 National Level Qualifier - Wild Wisdom Global Challenge 2021</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
@@ -1683,10 +1775,12 @@ author_profile: true
     <img src="/images/wwq211.webp" alt="WWQ '21">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-37">
   <h2>🐼 Zonal 2nd Runner-Up – Senior Wild Wisdom Quiz 2019</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
@@ -1703,10 +1797,12 @@ author_profile: true
     <img src="/images/wwq194.webp" alt="WWQ '19">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-38">
   <h2>🌒 All India Rank 23 - All India Astronomy Test 2018-19</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by COSMOS Astronomy Education and Research</em><br>
@@ -1721,10 +1817,12 @@ author_profile: true
     <img src="/images/aiat.webp" alt="AIAT '18">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-39">
   <h2>🐝 Winner - Interschool Spell Bee Excella Fest 2018</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Chhattisgarh Public School</em><br>
@@ -1737,10 +1835,12 @@ author_profile: true
     <img src="/images/spell.webp" alt="SpellBee '18">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-40">
   <h2>🐼 Zonal 1st Runner-Up – Junior Wild Wisdom Quiz 2018</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
@@ -1756,10 +1856,12 @@ author_profile: true
     <img src="/images/wwq184.webp" alt="WWQ '18">
   </div>
 </div>
+</section>
 
 <hr class="silver-line" />
 
-<div class="achievement-section">
+<section>
+<div class="achievement-section" id="ach-41">
   <h2>🌏 2nd Runner-Up - Quiz Premier League 2.0 Earth Day</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
@@ -1774,6 +1876,7 @@ author_profile: true
     <img src="/images/qpl.webp" alt="QPL 2.0">
   </div>
 </div>
+</section>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -1818,6 +1921,10 @@ document.addEventListener('DOMContentLoaded', function () {
   var tocItems = document.querySelectorAll('#tocList li');
   document.getElementById('tocSearch').addEventListener('input', function () {
     var q = this.value.toLowerCase().trim();
+    /* Auto-open the TOC when the user starts typing */
+    if (q.length > 0) {
+      document.getElementById('achievementToc').classList.remove('collapsed');
+    }
     tocItems.forEach(function (li) {
       var text = li.textContent.toLowerCase();
       var tags = (li.getAttribute('data-tags') || '').toLowerCase();
