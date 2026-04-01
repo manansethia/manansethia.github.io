@@ -315,9 +315,9 @@ author_profile: true
     margin-bottom: 28px;
     border-radius: 14px;
     overflow: hidden;
-    border: 1.5px solid #e8c774;
-    background: linear-gradient(135deg, #fffaf0 0%, #fff5e1 100%);
-    box-shadow: 0 2px 12px rgba(192,115,0,0.08);
+    border: 2px solid rgba(192, 130, 0, 0.55);
+    background: linear-gradient(135deg, rgba(255, 220, 100, 0.38) 0%, rgba(255, 195, 50, 0.18) 60%, rgba(255, 230, 160, 0.1) 100%);
+    box-shadow: 0 4px 18px rgba(192,115,0,0.14);
     animation: fadeInUp 0.8s ease forwards;
   }
 
@@ -328,12 +328,12 @@ author_profile: true
     padding: 14px 20px 14px 20px;
     cursor: pointer;
     user-select: none;
-    background: linear-gradient(135deg, #fff3d6 0%, #ffe8b8 100%);
+    background: linear-gradient(135deg, #ffc940 0%, #ffb020 40%, #ffd060 100%);
     transition: background 0.3s ease;
   }
 
   .toc-header:hover {
-    background: linear-gradient(135deg, #ffedcc 0%, #ffe0a0 100%);
+    background: linear-gradient(135deg, #ffba30 0%, #ffa510 40%, #ffc850 100%);
   }
 
   .toc-header h2 {
@@ -341,7 +341,7 @@ author_profile: true
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
-    color: #8b5e00;
+    color: #5a3800;
     font-weight: 700;
   }
 
@@ -474,15 +474,15 @@ author_profile: true
 
   /* ── Dark Mode (class-based) ── */
   .dark-mode .toc-box {
-    background: linear-gradient(135deg, #1e1a14 0%, #2a2318 100%);
-    border-color: #5a4520;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, rgba(80, 55, 10, 0.55) 0%, rgba(50, 35, 5, 0.35) 100%);
+    border-color: rgba(200, 140, 30, 0.55);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
   }
   .dark-mode .toc-header {
-    background: linear-gradient(135deg, #2a2318 0%, #342b1c 100%);
+    background: linear-gradient(135deg, #3d2e0a 0%, #4a3510 40%, #3a2a08 100%);
   }
   .dark-mode .toc-header:hover {
-    background: linear-gradient(135deg, #342b1c 0%, #3e3220 100%);
+    background: linear-gradient(135deg, #4a3812 0%, #573f16 40%, #4a3812 100%);
   }
   .dark-mode .toc-header h2 { color: #f0c870; }
   .dark-mode .toc-chevron { border-color: #d4a040; }
