@@ -99,11 +99,11 @@
   img {
     max-width: 175px;
     border-radius: 25%;
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(185, 115, 0, 0.45);
 
     @include breakpoint($large) {
       padding: 0px;
-      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(185, 115, 0, 0.45);
     }
   }
 }
@@ -197,7 +197,7 @@
   margin-top: 40px;
   padding: 10px;
   list-style-type: none;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(185, 115, 0, 0.45);
   border-radius: $border-radius;
   background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
   backdrop-filter: blur(16px) saturate(180%);

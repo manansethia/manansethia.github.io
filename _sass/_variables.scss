@@ -16,17 +16,18 @@ $indent-var : 1.3em;
 $serif : Georgia,
 Times,
 serif;
+/* Body: -apple-system wins on Apple; SFProWeb (web font) for everyone else */
 $sans-serif : -apple-system,
-"SF Pro",
-"SF Pro Text",
+"SFProWeb",
 ".SFNSText-Regular",
 "San Francisco",
 "Segoe UI",
 "Helvetica Neue",
 Arial,
 sans-serif;
+/* Display: used for headings */
 $sans-serif-display : -apple-system,
-"SF Pro Display",
+"SFProDisplayWeb",
 ".SFNSDisplay",
 "San Francisco",
 "Segoe UI",
