@@ -156,16 +156,16 @@ author_profile: true
     position: relative;
     border-radius: 16px;
     padding: 25px 30px;
-    background: linear-gradient(135deg, rgba(255, 215, 100, 0.35) 0%, rgba(255, 185, 30, 0.14) 60%, rgba(255, 230, 180, 0.06) 100%);
-    box-shadow: 0 4px 24px rgba(192, 115, 0, 0.12);
-    border: 2px solid rgba(185, 125, 0, 0.45);
+    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+    box-shadow: 0 4px 24px rgba(192, 115, 0, 0.06);
+    border: 1.5px solid rgba(232, 199, 116, 0.4);
     box-sizing: border-box;
   }
   
   .dark-mode .project-section {
-    background: linear-gradient(135deg, rgba(80, 55, 10, 0.5) 0%, rgba(40, 28, 5, 0.28) 100%);
+    background: linear-gradient(135deg, rgba(30,26,20,0.6) 0%, rgba(20,16,10,0.3) 100%);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    border: 2px solid rgba(185, 125, 0, 0.45);
+    border: 1.5px solid rgba(90, 69, 32, 0.4);
   }
 
   .project-section h2 {
@@ -197,18 +197,18 @@ author_profile: true
     margin-bottom: 24px;
   }
   .project-meta span {
-    background: linear-gradient(135deg, #ffe070 0%, #ffd040 100%);
-    color: #6b4400;
+    background: linear-gradient(135deg, #fff3d6 0%, #ffe8b8 100%);
+    color: #8b5e00;
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.85em;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(192, 115, 0, 0.18);
+    box-shadow: 0 2px 6px rgba(192, 115, 0, 0.1);
   }
   .dark-mode .project-meta span {
-    background: linear-gradient(135deg, #4a3610 0%, #5a4218 100%);
-    color: #ffd870;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(135deg, #342b1c 0%, #2a2318 100%);
+    color: #f0c870;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
 
   /* Flex Layouts */

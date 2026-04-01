@@ -18,12 +18,6 @@ body {
   background-attachment: fixed;
   -webkit-tap-highlight-color: transparent !important;
 
-  /* Apple-style font rendering — makes SF Pro look crisp on all devices */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  font-optical-sizing: auto;
-
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;

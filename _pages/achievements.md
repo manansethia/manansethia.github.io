@@ -316,8 +316,8 @@ author_profile: true
     border-radius: 14px;
     overflow: hidden;
     border: 2px solid rgba(192, 130, 0, 0.55);
-    background: linear-gradient(135deg, rgba(255, 220, 100, 0.38) 0%, rgba(255, 195, 50, 0.18) 60%, rgba(255, 230, 160, 0.1) 100%);
-    box-shadow: 0 4px 18px rgba(192,115,0,0.14);
+    background: linear-gradient(135deg, rgba(255, 240, 195, 0.65) 0%, rgba(255, 232, 175, 0.4) 100%);
+    box-shadow: 0 4px 18px rgba(192,115,0,0.1);
     animation: fadeInUp 0.8s ease forwards;
   }
 
@@ -328,12 +328,12 @@ author_profile: true
     padding: 14px 20px 14px 20px;
     cursor: pointer;
     user-select: none;
-    background: linear-gradient(135deg, #ffc940 0%, #ffb020 40%, #ffd060 100%);
+    background: linear-gradient(135deg, rgba(255, 218, 130, 0.8) 0%, rgba(255, 205, 100, 0.65) 100%);
     transition: background 0.3s ease;
   }
 
   .toc-header:hover {
-    background: linear-gradient(135deg, #ffba30 0%, #ffa510 40%, #ffc850 100%);
+    background: linear-gradient(135deg, rgba(255, 208, 110, 0.9) 0%, rgba(255, 192, 80, 0.75) 100%);
   }
 
   .toc-header h2 {
@@ -341,7 +341,7 @@ author_profile: true
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
-    color: #5a3800;
+    color: #6b4400;
     font-weight: 700;
   }
 
@@ -474,15 +474,15 @@ author_profile: true
 
   /* ── Dark Mode (class-based) ── */
   .dark-mode .toc-box {
-    background: linear-gradient(135deg, rgba(80, 55, 10, 0.55) 0%, rgba(50, 35, 5, 0.35) 100%);
-    border-color: rgba(200, 140, 30, 0.55);
-    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    background: linear-gradient(135deg, rgba(55, 34, 7, 0.88) 0%, rgba(38, 23, 4, 0.7) 100%);
+    border-color: rgba(190, 125, 25, 0.55);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.4);
   }
   .dark-mode .toc-header {
-    background: linear-gradient(135deg, #3d2e0a 0%, #4a3510 40%, #3a2a08 100%);
+    background: linear-gradient(135deg, #3e2c08 0%, #4d3810 60%, #3e2c08 100%);
   }
   .dark-mode .toc-header:hover {
-    background: linear-gradient(135deg, #4a3812 0%, #573f16 40%, #4a3812 100%);
+    background: linear-gradient(135deg, #4e3810 0%, #5d4415 60%, #4e3810 100%);
   }
   .dark-mode .toc-header h2 { color: #f0c870; }
   .dark-mode .toc-chevron { border-color: #d4a040; }
