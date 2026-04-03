@@ -9,9 +9,6 @@
 
   html {
     background-color: #fffbeb;
-    /* background-color transition is applied only during theme switching
-       via the .theme-transitioning class in _base.scss — no permanent
-       transition here to avoid jank on every scroll/repaint. */
   }
 
   .theme-toggle {
@@ -455,7 +452,6 @@
     var themeToggle = document.getElementById("theme-toggle");
     var sun = document.querySelector(".sun");
     var moon = document.querySelector(".moon");
-    var _transitionTimer = null;
 
     function updateIcons() {
       var isDark = html.classList.contains("dark-mode");
@@ -466,24 +462,12 @@
     updateIcons();
 
     themeToggle.addEventListener("click", function () {
-      /* 1. Add transitioning class — this enables the CSS fade on all elements */
-      if (_transitionTimer) clearTimeout(_transitionTimer);
-      html.classList.add("theme-transitioning");
-
-      /* 2. Toggle theme on the next frame so the transition is already armed */
-      requestAnimationFrame(function () {
-        html.classList.toggle("dark-mode");
-        localStorage.setItem(
-          "theme",
-          html.classList.contains("dark-mode") ? "dark" : "light"
-        );
-        updateIcons();
-
-        /* 3. Remove transitioning class after transition finishes (350ms + buffer) */
-        _transitionTimer = setTimeout(function () {
-          html.classList.remove("theme-transitioning");
-        }, 420);
-      });
+      html.classList.toggle("dark-mode");
+      localStorage.setItem(
+        "theme",
+        html.classList.contains("dark-mode") ? "dark" : "light"
+      );
+      updateIcons();
     });
 
     /* ── Jump to Top ── */
