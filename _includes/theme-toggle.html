@@ -9,6 +9,9 @@
 
   html {
     background-color: #fffbeb;
+    /* background-color transition is applied only during theme switching
+       via the .theme-transitioning class in _base.scss — no permanent
+       transition here to avoid jank on every scroll/repaint. */
   }
 
   .theme-toggle {
@@ -447,48 +450,66 @@
 </button>
 
 <script data-cfasync="false">
-  const themeToggle = document.getElementById("theme-toggle");
-  const sun = document.querySelector(".sun");
-  const moon = document.querySelector(".moon");
+  (function () {
+    var html = document.documentElement;
+    var themeToggle = document.getElementById("theme-toggle");
+    var sun = document.querySelector(".sun");
+    var moon = document.querySelector(".moon");
+    var _transitionTimer = null;
 
-  function updateIcons() {
-    const isDark = document.documentElement.classList.contains("dark-mode");
-    sun.classList.toggle("visible", !isDark);
-    moon.classList.toggle("visible", isDark);
-  }
+    function updateIcons() {
+      var isDark = html.classList.contains("dark-mode");
+      sun.classList.toggle("visible", !isDark);
+      moon.classList.toggle("visible", isDark);
+    }
 
-  updateIcons();
-
-  themeToggle.addEventListener("click", function () {
-    document.documentElement.classList.toggle("dark-mode");
-    localStorage.setItem(
-      "theme",
-      document.documentElement.classList.contains("dark-mode") ? "dark" : "light"
-    );
     updateIcons();
-  });
 
-  document.getElementById("jump-to-top").addEventListener("click", function () {
-    if (window.jQuery) {
-      $("html, body").animate({ scrollTop: 0 }, 700, "swing");
-    } else {
+    themeToggle.addEventListener("click", function () {
+      /* 1. Add transitioning class — this enables the CSS fade on all elements */
+      if (_transitionTimer) clearTimeout(_transitionTimer);
+      html.classList.add("theme-transitioning");
+
+      /* 2. Toggle theme on the next frame so the transition is already armed */
+      requestAnimationFrame(function () {
+        html.classList.toggle("dark-mode");
+        localStorage.setItem(
+          "theme",
+          html.classList.contains("dark-mode") ? "dark" : "light"
+        );
+        updateIcons();
+
+        /* 3. Remove transitioning class after transition finishes (350ms + buffer) */
+        _transitionTimer = setTimeout(function () {
+          html.classList.remove("theme-transitioning");
+        }, 420);
+      });
+    });
+
+    /* ── Jump to Top ── */
+    var jttBtn = document.getElementById("jump-to-top");
+
+    jttBtn.addEventListener("click", function () {
+      /* Use native smooth scroll — far lighter than jQuery animate on mobile */
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  });
+    });
 
-  /* Show jump-to-top only when: page is scrollable AND not at the very top */
-  var jttBtn = document.getElementById("jump-to-top");
-  function updateJtt() {
-    var pageIsScrollable = document.body.scrollHeight > window.innerHeight;
-    var notAtTop = window.scrollY > 0;
-    if (pageIsScrollable && notAtTop) {
-      jttBtn.classList.add("visible");
-    } else {
-      jttBtn.classList.remove("visible");
+    /* Show/hide jump-to-top button — throttled via requestAnimationFrame */
+    var _jttRafPending = false;
+    function updateJtt() {
+      if (_jttRafPending) return;
+      _jttRafPending = true;
+      requestAnimationFrame(function () {
+        _jttRafPending = false;
+        var pageIsScrollable = document.body.scrollHeight > window.innerHeight;
+        var notAtTop = window.scrollY > 0;
+        jttBtn.classList.toggle("visible", pageIsScrollable && notAtTop);
+      });
     }
-  }
-  /* Defer slightly so browser scroll-restoration finishes before we check */
-  setTimeout(updateJtt, 100);
-  window.addEventListener("scroll", updateJtt, { passive: true });
+
+    /* Defer slightly so browser scroll-restoration finishes before we check */
+    setTimeout(updateJtt, 120);
+    window.addEventListener("scroll", updateJtt, { passive: true });
+  })();
 </script>
 <!-- END THEME TOGGLE BUTTON -->

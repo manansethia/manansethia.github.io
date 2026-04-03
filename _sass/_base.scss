@@ -28,7 +28,12 @@ body {
   background-color: #120c00;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0em 0 0.5em;
   line-height: 1.2;
   font-family: $header-font-family;
@@ -38,12 +43,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   margin-top: 0;
   font-size: $type-size-3;
-  letter-spacing: -0.022em; /* SF Pro Display tracking at ~25px */
+  letter-spacing: -0.022em;
+  /* SF Pro Display tracking at ~25px */
 }
 
 h2 {
   font-size: $type-size-4;
-  letter-spacing: -0.014em; /* SF Pro Display tracking at ~20px */
+  letter-spacing: -0.014em;
+  /* SF Pro Display tracking at ~20px */
 }
 
 h3 {
@@ -66,7 +73,8 @@ h6 {
   letter-spacing: 0;
 }
 
-small, .small {
+small,
+.small {
   font-size: $type-size-6;
 }
 
@@ -78,6 +86,7 @@ u,
 ins {
   text-decoration: none;
   border-bottom: 1px solid #000;
+
   a {
     color: inherit;
   }
@@ -89,7 +98,15 @@ del a {
 
 /* reduce orphans and widows when printing */
 
-p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
+p,
+pre,
+blockquote,
+ul,
+ol,
+dl,
+figure,
+table,
+fieldset {
   orphans: 3;
   widows: 3;
 }
@@ -137,19 +154,24 @@ a {
 
 /* code */
 
-tt, code, kbd, samp, pre {
+tt,
+code,
+kbd,
+samp,
+pre {
   font-family: $monospace;
 }
 
 pre {
-  overflow-x: auto; /* add scrollbars to wide code blocks*/
+  overflow-x: auto;
+  /* add scrollbars to wide code blocks*/
 }
 
-p > code,
-a > code,
-li > code,
-figcaption > code,
-td > code {
+p>code,
+a>code,
+li>code,
+figcaption>code,
+td>code {
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size: $type-size-6;
@@ -158,9 +180,11 @@ td > code {
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     letter-spacing: -0.2em;
-    content: "\00a0"; /* non-breaking space*/
+    content: "\00a0";
+    /* non-breaking space*/
   }
 }
 
@@ -195,9 +219,9 @@ figure {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   -webkit-box-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 2em 0;
 
@@ -214,13 +238,14 @@ figure {
     transition: $global-transition;
   }
 
-  > a {
+  >a {
     display: block;
   }
 
   &.half {
-    > a,
-    > img {
+
+    >a,
+    >img {
       @include breakpoint($small) {
         width: calc(50% - 0.5em);
       }
@@ -232,8 +257,9 @@ figure {
   }
 
   &.third {
-    > a,
-    > img {
+
+    >a,
+    >img {
       @include breakpoint($small) {
         width: calc(33.3333% - 0.5em);
       }
@@ -322,7 +348,61 @@ nav {
    Global animation transition
    ========================================================================== */
 
-b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
+/* Only apply default transitions to interactive / structural elements.
+   Text-only nodes (p, span, b, em, etc.) are intentionally excluded —
+   transitioning them on every scroll / theme-change tanks mobile perf. */
+
+img,
+figure,
+.archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+a,
+input,
+form button,
+input[type="submit"],
+.btn {
+  -webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/*
+   Theme-switch fade — applied only while the toggle is animating
+   ========================================================================== */
+
+/* html/body need background-color to fade; use a short duration so it feels
+   snappy on mobile. The .theme-transitioning class is added by JS just before
+   the class toggle and removed after the transition ends. */
+
+.theme-transitioning,
+.theme-transitioning body,
+.theme-transitioning .masthead,
+.theme-transitioning .page__footer,
+.theme-transitioning .greedy-nav,
+.theme-transitioning .author__urls,
+.theme-transitioning .sidebar,
+.theme-transitioning .author__content,
+.theme-transitioning h1,
+.theme-transitioning h2,
+.theme-transitioning h3,
+.theme-transitioning h4,
+.theme-transitioning h5,
+.theme-transitioning h6,
+.theme-transitioning p,
+.theme-transitioning span,
+.theme-transitioning a,
+.theme-transitioning li,
+.theme-transitioning blockquote,
+.theme-transitioning .page__content,
+.theme-transitioning .navicon,
+.theme-transitioning .navicon::before,
+.theme-transitioning .navicon::after {
+  -webkit-transition: background-color 0.35s ease, color 0.35s ease,
+    border-color 0.35s ease, box-shadow 0.35s ease !important;
+  transition: background-color 0.35s ease, color 0.35s ease,
+    border-color 0.35s ease, box-shadow 0.35s ease !important;
 }

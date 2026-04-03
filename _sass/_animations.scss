@@ -6,6 +6,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -15,7 +16,30 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
+}
+
+/* Theme-switch overlay fade
+   A pseudo-element on <html> fades in/out to mask the instant color flips
+   that can't be caught by CSS transitions (e.g. scroll-bar track, SVG fills).
+   Activated by the .theme-transitioning class added from JS. */
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  background: transparent;
+  opacity: 0;
+  -webkit-transition: opacity 0.18s ease;
+  transition: opacity 0.18s ease;
+}
+
+html.theme-transitioning::before {
+  opacity: 0.08;
+  background: #888;
 }
