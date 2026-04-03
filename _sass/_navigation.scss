@@ -247,8 +247,8 @@
         height: 4px;
         background: #ececec;
         width: 100%;
-        -webkit-transition: $global-transition;
-        transition: $global-transition;
+        -webkit-transition: transform 0.25s ease;
+        transition: transform 0.25s ease;
         -webkit-transform: scaleX(0);
         -ms-transform: scaleX(0);
         transform: scaleX(0);
