@@ -333,19 +333,20 @@ author_profile: true
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border: 1.5px solid rgba(192, 115, 0, 0.2);
+    border: 1.5px solid rgba(192, 115, 0, 0.3);
     background: #fff;
   }
   .dark-mode .pdf-wrapper {
     border-color: #5a4520;
   }
   .pdf-toolbar {
-    height: 36px;
-    background: linear-gradient(to bottom, #f6f6f6, #e0e0e0);
+    height: 38px;
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.55), rgba(255, 210, 120, 0.4));
+    border-bottom: 1.5px solid rgba(185, 115, 0, 0.35);
     display: flex;
     align-items: center;
     padding: 0 14px;
-    border-bottom: 1px solid #ccc;
+    user-select: none;
   }
   .dark-mode .pdf-toolbar {
     background: linear-gradient(to bottom, #3a3225, #2a2318);
@@ -359,26 +360,37 @@ author_profile: true
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .pdf-dot:hover {
+    filter: brightness(1.15);
   }
   .dot-red { background: #ff5f56; }
   .dot-yel { background: #ffbd2e; }
   .dot-grn { background: #27c93f; }
-  
+
   .pdf-toolbar-title {
     flex: 1;
     text-align: center;
     font-size: 0.8em;
     font-weight: 600;
-    color: #666;
-    margin-left: -50px; /* Centering offset */
+    color: #5a3e00;
+    pointer-events: none;
   }
-  .dark-mode .pdf-toolbar-title { color: #aaa; }
+  .dark-mode .pdf-toolbar-title { color: #c8a060; }
 
   .responsive-pdf {
     width: 100%;
-    height: 650px;
+    height: 500px;
     border: none;
     display: block;
+  }
+  @media (max-width: 600px) {
+    .responsive-pdf { height: 380px; }
+  }
+  .pdf-wrapper.minimized .responsive-pdf {
+    display: none;
   }
 
   @keyframes fadeInUp {
@@ -435,17 +447,35 @@ author_profile: true
   </div>
 
   <!-- Premium PDF Embed Document -->
-  <div class="pdf-wrapper">
+  <div class="pdf-wrapper" id="mrida-pdf-wrapper">
     <div class="pdf-toolbar">
       <div class="pdf-dots">
         <div class="pdf-dot dot-red"></div>
-        <div class="pdf-dot dot-yel"></div>
-        <div class="pdf-dot dot-grn"></div>
+        <div class="pdf-dot dot-yel" id="pdf-btn-yel" title="Minimise"></div>
+        <div class="pdf-dot dot-grn" id="pdf-btn-grn" title="Restore"></div>
       </div>
-      <div class="pdf-toolbar-title">mrida-research-deck.pdf</div>
+      <div class="pdf-toolbar-title">mrida.pdf</div>
     </div>
     <iframe src="/_pages/pdf-view.html" class="responsive-pdf" title="MRIDA Presentation"></iframe>
   </div>
+
+  <script>
+  (function() {
+    var wrapper = document.getElementById('mrida-pdf-wrapper');
+    var btnYel  = document.getElementById('pdf-btn-yel');
+    var btnGrn  = document.getElementById('pdf-btn-grn');
+
+    /* Yellow — toggle minimise: hide iframe, only toolbar visible */
+    btnYel.addEventListener('click', function() {
+      wrapper.classList.toggle('minimized');
+    });
+
+    /* Green — restore to normal (undo minimise if active) */
+    btnGrn.addEventListener('click', function() {
+      wrapper.classList.remove('minimized');
+    });
+  })();
+  </script>
 
 </div>
 

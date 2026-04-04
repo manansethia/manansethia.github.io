@@ -137,7 +137,6 @@ author_profile: true
   .achievement-section h3 {
     font-size: 1.12em;
     margin-top: 20px;
-    margin-bottom: 20px;
   }
 
   .achievement-section {
