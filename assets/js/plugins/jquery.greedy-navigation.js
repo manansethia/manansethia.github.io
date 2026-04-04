@@ -10,7 +10,8 @@ $(document).ready(function () {
   var $btn = $('#site-nav button');
   var $vlinks = $('#site-nav .visible-links');
   var $hlinks = $('#site-nav .hidden-links');
-  var breaks = [];
+  var resizeFrame = null;
+  var movableSelector = '*:not(.masthead__menu-item--lg)';
 
   /* Teleport to body so backdrop-filter works in Chrome */
   $hlinks.appendTo('body');
@@ -18,44 +19,88 @@ $(document).ready(function () {
   function positionHlinks() {
     var btnRect = $btn[0].getBoundingClientRect();
     var hlWidth = $hlinks.outerWidth(true);
+    var left = Math.max(10, btnRect.right - hlWidth);
     $hlinks.css({
       position: 'fixed',
       top: (btnRect.bottom + 15) + 'px',
-      left: (btnRect.right - hlWidth) + 'px'
+      left: left + 'px',
+      right: 'auto',
+      'max-width': 'calc(100vw - 20px)'
     });
   }
 
-  function updateNav() {
-    var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
-
-    if ($vlinks.width() > availableSpace) {
-      breaks.push($vlinks.width());
-      $vlinks.children('*:not(.masthead__menu-item--lg)').last().prependTo($hlinks);
-      if ($btn.hasClass('hidden')) { $btn.removeClass('hidden'); }
-    } else {
-      if (availableSpace > breaks[breaks.length - 1]) {
-        $hlinks.children().first().appendTo($vlinks);
-        breaks.pop();
-      }
-      if (breaks.length < 1) {
-        $btn.addClass('hidden');
-        $hlinks.addClass('hidden');
-      }
-    }
-
-    $btn.attr('count', breaks.length);
-
-    if ($vlinks.width() > availableSpace && $vlinks.children('*:not(.masthead__menu-item--lg)').length > 0) {
-      updateNav();
-    }
+  function closeHlinks() {
+    $hlinks.addClass('hidden');
+    $btn.removeClass('close');
   }
 
-  $(window).resize(function () {
-    updateNav();
-    if (!$hlinks.hasClass('hidden')) { positionHlinks(); }
+  function navWidth() {
+    return Math.floor($nav[0].getBoundingClientRect().width);
+  }
+
+  function buttonWidth() {
+    return $btn.outerWidth(true) || 0;
+  }
+
+  function visibleWidth() {
+    return Math.ceil($vlinks[0].scrollWidth);
+  }
+
+  function availableSpace(includeButton) {
+    return navWidth() - (includeButton ? buttonWidth() + 30 : 0);
+  }
+
+  function updateNav() {
+    $hlinks.children().appendTo($vlinks);
+    $btn.addClass('hidden');
+    closeHlinks();
+
+    if (visibleWidth() <= availableSpace(false)) {
+      $btn.attr('count', 0);
+      return;
+    }
+
+    $btn.removeClass('hidden');
+
+    while (visibleWidth() > availableSpace(true) && $vlinks.children(movableSelector).length > 0) {
+      $vlinks.children(movableSelector).last().prependTo($hlinks);
+    }
+
+    if ($hlinks.children().length < 1) {
+      $btn.addClass('hidden');
+      closeHlinks();
+    }
+
+    $btn.attr('count', $hlinks.children().length);
+  }
+
+  function scheduleUpdateNav() {
+    if (resizeFrame) {
+      window.cancelAnimationFrame(resizeFrame);
+    }
+
+    resizeFrame = window.requestAnimationFrame(function () {
+      resizeFrame = null;
+      updateNav();
+      if (!$hlinks.hasClass('hidden')) {
+        positionHlinks();
+      }
+    });
+  }
+
+  $(window).on('resize orientationchange', function () {
+    scheduleUpdateNav();
+  });
+
+  $(window).on('load', function () {
+    scheduleUpdateNav();
   });
 
   $btn.on('click', function () {
+    if ($btn.hasClass('hidden') || $hlinks.children().length < 1) {
+      return;
+    }
+
     $hlinks.toggleClass('hidden');
     $(this).toggleClass('close');
     if (!$hlinks.hasClass('hidden')) { positionHlinks(); }

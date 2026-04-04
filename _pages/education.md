@@ -37,13 +37,6 @@ author_profile: true
     min-width: 0;
   }
 
-  .edu-text h3,
-  .edu-text em,
-  .edu-text strong,
-  .edu-text ul {
-    margin: 0;
-  }
-
   .kps-entry {
     margin-top: 7px;
     margin-bottom: 12px;

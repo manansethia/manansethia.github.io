@@ -34,6 +34,41 @@
   }
 }
 
+@media screen and (min-width: 1080px) and (max-width: 1279px) {
+  #main {
+    max-width: 1080px;
+  }
+
+  .page,
+  .archive {
+    padding-left: 8%;
+  }
+
+  .page {
+    padding-right: 6%;
+  }
+
+  .archive {
+    padding-right: 2%;
+  }
+}
+
+.page__inner-wrap,
+.archive {
+  -webkit-animation: fade-up 0.8s ease both;
+  animation: fade-up 0.8s ease both;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page__inner-wrap,
+  .archive {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;

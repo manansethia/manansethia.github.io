@@ -188,6 +188,10 @@
   overflow: visible;
   /* CRITICAL: prevents parent from clipping backdrop-filter on .hidden-links */
 
+  @include breakpoint($medium) {
+    height: 100%;
+  }
+
   a {
     display: block;
     margin: 0 1rem;
@@ -211,10 +215,21 @@
     color: #fff;
     cursor: pointer;
     z-index: 110;
+
+    @include breakpoint($medium) {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
   }
 
   .visible-links {
     display: table;
+
+    @include breakpoint($medium) {
+      height: 100%;
+    }
 
     li {
       display: table-cell;

@@ -1,16 +1,9 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
-html {
-  /* sticky footer fix */
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin: 0;
   padding: $masthead-height 0 0;
-  padding-bottom: 9em;
   color: #000;
   font-family: $global-font-family;
   line-height: 1.5;
@@ -43,32 +36,26 @@ h6 {
 h1 {
   margin-top: 0;
   font-size: $type-size-3;
-  letter-spacing: -0.022em;
 }
 
 h2 {
   font-size: $type-size-4;
-  letter-spacing: -0.014em;
 }
 
 h3 {
   font-size: $type-size-5;
-  letter-spacing: -0.006em;
 }
 
 h4 {
   font-size: $type-size-6;
-  letter-spacing: 0;
 }
 
 h5 {
   font-size: $type-size-6;
-  letter-spacing: 0;
 }
 
 h6 {
   font-size: $type-size-6;
-  letter-spacing: 0;
 }
 
 small,
@@ -350,7 +337,12 @@ nav {
 /* Images — scale/shadow on hover */
 figure img,
 .cert-card img,
-.archive__item-teaser img {
+.archive__item-teaser img,
+.episode-card img,
+.episode-card-news img,
+.achievement-images img,
+.achievement-images-text img,
+.project-image-box img {
   -webkit-transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease !important;
   transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease !important;
 }

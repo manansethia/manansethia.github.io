@@ -256,10 +256,10 @@ author_profile: true
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   .project-image-box img:hover {
-    transform: translateY(-6px) scale(1.02);
+    transform: scale(1.035);
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
   }
 
@@ -303,11 +303,11 @@ author_profile: true
     border-radius: 10px;
     scroll-snap-align: start;
     box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: grab;
   }
   .project-gallery img:hover {
-    transform: translateY(-8px);
+    transform: scale(1.035);
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   }
   
