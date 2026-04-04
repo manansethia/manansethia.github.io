@@ -52,6 +52,17 @@
   }
 }
 
+body.footer-docked {
+  .page__footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 0;
+    z-index: 5;
+  }
+}
+
 .page__footer-copyright {
   font-family: $global-font-family;
   font-size: $type-size-7;

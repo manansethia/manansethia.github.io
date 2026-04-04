@@ -6,6 +6,40 @@ $(document).ready(function () {
   // FitVids init
   fitvids();
 
+  var $body = $("body");
+  var $footer = $(".page__footer");
+  var footerDockFrame = null;
+
+  function updateFooterDock() {
+    var footerHeight = $footer.outerHeight(true) || 0;
+
+    $body.removeClass("footer-docked").css("padding-bottom", "");
+
+    if (!footerHeight) {
+      return;
+    }
+
+    var footerRect = $footer[0].getBoundingClientRect();
+    var viewportHeight = window.innerHeight;
+
+    if (footerRect.bottom < viewportHeight) {
+      $body.addClass("footer-docked").css("padding-bottom", footerHeight + "px");
+    }
+  }
+
+  function scheduleFooterDockUpdate() {
+    if (footerDockFrame) {
+      window.cancelAnimationFrame(footerDockFrame);
+    }
+
+    footerDockFrame = window.requestAnimationFrame(function () {
+      footerDockFrame = null;
+      updateFooterDock();
+    });
+  }
+
+  scheduleFooterDockUpdate();
+
   // Follow menu drop down — teleport to body for Chrome backdrop-filter support
   var $authorUrls = $(".author__urls");
   var $authorBtn = $(".author__urls-wrapper button");
@@ -63,6 +97,8 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
+    scheduleFooterDockUpdate();
+
     if (isDesktop() && authorTeleported) {
       // return to sidebar on desktop — CSS handles display:block there
       returnToSidebar();
@@ -113,6 +149,10 @@ $(document).ready(function () {
     },
     closeOnContentClick: true,
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+  });
+
+  $(window).on("load", function () {
+    scheduleFooterDockUpdate();
   });
 
 });
