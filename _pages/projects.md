@@ -697,10 +697,10 @@ author_profile: true
         <div class="mrida-flip-card" id="mrida-flip" title="Click to flip">
           <div class="mrida-flip-inner">
             <div class="mrida-flip-front">
-              <img src="/images/mrida build.webp" alt="MRIDA build front" loading="lazy">
+              <img src="/images/mrida build.webp" alt="MRIDA build front">
             </div>
             <div class="mrida-flip-back">
-              <img src="/images/mridaback.webp" alt="MRIDA build back" loading="lazy">
+              <img src="/images/mridaback.webp" alt="MRIDA build back">
             </div>
           </div>
         </div>
@@ -729,7 +729,7 @@ author_profile: true
           <div class="mrida-stack-body" id="mrida-stack-body">
             <div class="mrida-specs-layout">
               <figure class="mrida-spec-figure">
-                <img src="/images/MRIDA diagram.webp" alt="MRIDA circuit diagram" loading="lazy">
+                <img src="/images/MRIDA diagram.webp" alt="MRIDA circuit diagram">
                 <figcaption>System and circuit overview for the current prototype.</figcaption>
               </figure>
               <div class="mrida-specs-text">
@@ -864,15 +864,15 @@ author_profile: true
   <!-- Premium Horizontal Gallery -->
   <div class="project-gallery">
     <figure>
-      <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn mockup" loading="lazy">
+      <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn mockup">
       <figcaption>My precise hand-drawn conceptual interface mockup</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixday.webp" alt="MATRIX Day Mode GUI" loading="lazy">
+      <img src="/images/matrixday.webp" alt="MATRIX Day Mode GUI">
       <figcaption>The finalized Light Mode GUI state</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixnight.webp" alt="MATRIX Night Mode GUI" loading="lazy">
+      <img src="/images/matrixnight.webp" alt="MATRIX Night Mode GUI">
       <figcaption>The finalized Dark Mode GUI state</figcaption>
     </figure>
   </div>
