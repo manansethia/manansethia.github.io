@@ -16,7 +16,7 @@ author_profile: true
   }
 
   .cert-section {
-    animation: fadeInUp 1s ease forwards;
+    /* fadeInUp removed for performance, content-visibility removed to prevent initial layout miscalculations */
   }
 
   .cert-section h2 {
@@ -37,6 +37,7 @@ author_profile: true
 
   .cert-scroll {
     display: flex;
+    justify-content: flex-start !important;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 15px 10px;
@@ -61,15 +62,16 @@ author_profile: true
     align-items: center;
     text-align: center;
     width: 270px;
+    scroll-snap-align: start;
+    scroll-margin-left: 10px;
   }
 
   .cert-card img {
     height: 180px;
     width: auto;
-    min-width: 20%;
+    max-width: 100%;
     border-radius: 10px;
-    object-fit: cover;
-    scroll-snap-align: start;
+    object-fit: contain;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     z-index: 1;
@@ -118,16 +120,7 @@ author_profile: true
     margin: 0 0 20px 0;
   }
 
-    @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(15px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  /* fadeInUp removed — was causing invisible content flash and layout jank */
 
   .achievement-images, 
   .quiz-episodes-scroll,
@@ -149,7 +142,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn Python - Pro.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnpython.webp" alt="Learn Python Pro">
+    <img src="/images/cert/jpg/learnpython.webp" alt="Learn Python Pro" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">Learn Python Programming</div>
       <div class="cert-desc">
@@ -159,7 +152,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn C Programming.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnc.webp" alt="Learn C Programming">
+    <img src="/images/cert/jpg/learnc.webp" alt="Learn C Programming" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">Learn C Programming</div>
       <div class="cert-desc">
@@ -169,7 +162,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn C++.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnc++.webp" alt="Learn C++">
+    <img src="/images/cert/jpg/learnc++.webp" alt="Learn C++" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">Learn C++</div>
       <div class="cert-desc">
@@ -179,7 +172,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn Java.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnjava.webp" alt="Learn Java">
+    <img src="/images/cert/jpg/learnjava.webp" alt="Learn Java" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">Learn Java</div>
       <div class="cert-desc">
@@ -191,7 +184,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/manan54-Advanced Python.pdf" target="_blank">
-    <img src="/images/cert/jpg/advancedpython.webp" alt="Advanced Python">
+    <img src="/images/cert/jpg/advancedpython.webp" alt="Advanced Python" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">Advanced Python</div>
       <div class="cert-desc">
@@ -201,7 +194,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Beginner DSA in Python.pdf" target="_blank">
-    <img src="/images/cert/jpg/pythondsa.webp" alt="DSA in Python">
+    <img src="/images/cert/jpg/pythondsa.webp" alt="DSA in Python" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">DSA in Python</div>
       <div class="cert-desc">
@@ -211,7 +204,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-C++ STL - Standard template library.pdf" target="_blank">
-    <img src="/images/cert/jpg/c++stl.webp" alt="C++ STL">
+    <img src="/images/cert/jpg/c++stl.webp" alt="C++ STL" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">C++ STL</div>
       <div class="cert-desc">
@@ -230,7 +223,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/Coursera Google Cybersecurity.pdf" target="_blank">
-    <img src="/images/cert/jpg/googlecybersec.webp" alt="Google Cybersecurity">
+    <img src="/images/cert/jpg/googlecybersec.webp" alt="Google Cybersecurity" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">Google Cybersecurity</div>
       <div class="cert-desc">
@@ -240,7 +233,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/Coursera IBM Ethical Hacking with Open Source Tools.pdf" target="_blank">
-    <img src="/images/cert/jpg/ibmhack.webp" alt="IBM Ethical Hacking">
+    <img src="/images/cert/jpg/ibmhack.webp" alt="IBM Ethical Hacking" loading="lazy">
     <div class="cert-text">
       <div class="cert-title">IBM Ethical Hacking with Open-Source Tools</div>
       <div class="cert-desc">

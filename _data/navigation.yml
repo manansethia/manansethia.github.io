@@ -11,20 +11,23 @@ main:
   - title: "Experience"
     url: /experience/
 
-  - title: "Certifications"
-    url: /certifications/
-
   - title: "Skills"
     url: /skills/
 
-  - title: "Achievements"
-    url: /achievements/ 
+  - title: "Certifications"
+    url: /certifications/
 
   - title: "Projects"
     url: /projects/
 
+  - title: "Achievements"
+    url: /achievements/
+
   - title: "In Media"
-    url: /media/    
-        
-  #- title: "Blogs"
-  #  url: /blogs/
+    url: /media/
+
+  - title: "Blogs"
+    url: /blogs/
+
+  - title: "Resume"
+    url: /cv/

@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale: "en-US"
-title: "Manan's Homepage"
+title: "Manan Sethia"
 title_separator: "-"
 name: &name "Manan Sethia"
 description: &description "Student, quizzer, and competitive programmer from Raipur — building things at the intersection of computer science and curiosity."

@@ -186,6 +186,11 @@
   min-width: 250px;
   background: transparent;
   overflow: visible;
+  opacity: 0; /* hidden initially to prevent layout flash during load */
+  transition: opacity 0.2s ease;
+  &.loaded {
+    opacity: 1;
+  }
   /* CRITICAL: prevents parent from clipping backdrop-filter on .hidden-links */
 
   @include breakpoint($medium) {

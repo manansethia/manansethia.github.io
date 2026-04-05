@@ -73,7 +73,7 @@ author_profile: true
   .episode-card span {
     margin-top: 0.4em;
     font-size: 0.9em;
-    color:rgb(232, 113, 28);
+    color: #7a5000;
     font-weight: 600;
     text-align: center;
     overflow: hidden;
@@ -82,6 +82,9 @@ author_profile: true
     align-items: center;
     text-decoration: none !important;
     outline: none !important;
+  }
+  .dark-mode .episode-card span {
+    color: #d4a040;
   }
 
   .episode-card-news {
@@ -142,13 +145,9 @@ author_profile: true
   .achievement-section {
     margin-top: 7px;
     margin-bottom: 12px;
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
     position: relative;
-  }
-
-  .achievement-section.visible {
-    opacity: 1;
+    /* content-visibility removed — it breaks anchor/TOC scroll positioning
+       because the browser uses estimated heights for off-screen sections */
   }
 
   .achievement-section p {
@@ -223,6 +222,8 @@ author_profile: true
     height: auto;
     width: 75%;
     min-width: 335px;
+    /* Reserve space so layout is stable when lazy-loaded img isn't yet fetched */
+    min-height: 200px;
     border-radius: 10px;
     flex-shrink: 0;
     align-items: center;
@@ -248,16 +249,7 @@ author_profile: true
     margin: 0 0 20px 0;
   }
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(15px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  /* fadeInUp removed — was causing invisible content flash and layout jank */
 
   @media (min-width: 1024px) {
     .achievement-images img {
@@ -317,7 +309,7 @@ author_profile: true
     border: 2px solid rgba(192, 130, 0, 0.55);
     background: linear-gradient(135deg, rgba(255, 240, 195, 0.65) 0%, rgba(255, 232, 175, 0.4) 100%);
     box-shadow: 0 4px 18px rgba(192,115,0,0.1);
-    animation: fadeInUp 0.8s ease forwards;
+    /* fadeInUp animation removed for perf — toc-box visible immediately */
   }
 
   .toc-header {
@@ -359,8 +351,12 @@ author_profile: true
   }
 
   .toc-search-wrap {
-    padding: 12px 20px 0;
+    padding: 12px 20px 10px;
     border-top: 1.5px solid #e8c774;
+  }
+
+  .toc-box.collapsed .toc-search-wrap {
+    border-top: 1.5px solid rgba(232, 199, 116, 0.4);
   }
 
   .toc-search {
@@ -536,47 +532,47 @@ author_profile: true
   </div>
   <div class="toc-body" id="tocBody">
     <ul class="toc-list" id="tocList">
-      <li data-tags="quiz tech iiit technovate campus"><a href="#ach-1"><span class="toc-num">1.</span><span class="toc-title">⚔️ Winner – Clash of Campus Quiz 2026 <span class="toc-date">(March 2026)</span></span></a></li>
-      <li data-tags="tech coding olympiad ibm"><a href="#ach-2"><span class="toc-num">2.</span><span class="toc-title">🥈 Silver Medalist: Future Tech Olympiad 2026 <span class="toc-date">(February 2026)</span></span></a></li>
-      <li data-tags="tech coding programming iit"><a href="#ach-3"><span class="toc-num">3.</span><span class="toc-title">🎲 Shaastra 2026 by IIT Madras <span class="toc-date">(December 2025)</span></span></a></li>
-      <li data-tags="quiz finance"><a href="#ach-4"><span class="toc-num">4.</span><span class="toc-title">📈 2nd Runner Ups - Wonga Wits Quiz Season 2 <span class="toc-date">(November 2025)</span></span></a></li>
-      <li data-tags="quiz tech tcs"><a href="#ach-5"><span class="toc-num">5.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2025 <span class="toc-date">(August 2025)</span></span></a></li>
-      <li data-tags="quiz science"><a href="#ach-6"><span class="toc-num">6.</span><span class="toc-title">🪨 Winner IIM Bhilai – BPMMQ 2025 <span class="toc-date">(August 2025)</span></span></a></li>
-      <li data-tags="quiz finance"><a href="#ach-7"><span class="toc-num">7.</span><span class="toc-title">🪙 Winner Bhopal – SBI Scholar Quiz 2025 <span class="toc-date">(June 2025)</span></span></a></li>
-      <li data-tags="coding code tech"><a href="#ach-8"><span class="toc-num">8.</span><span class="toc-title">👨‍💻 Winner – Code 2 Champions <span class="toc-date">(April 2025)</span></span></a></li>
-      <li data-tags="quiz science environment"><a href="#ach-9"><span class="toc-num">9.</span><span class="toc-title">🌏 Winner – Earth Day Quiz NEHU <span class="toc-date">(April 2025)</span></span></a></li>
-      <li data-tags="coding code tech"><a href="#ach-10"><span class="toc-num">10.</span><span class="toc-title">👨‍💻 AIR 10 – HPE Codewars 2025 <span class="toc-date">(April 2025)</span></span></a></li>
-      <li data-tags="olympiad science"><a href="#ach-11"><span class="toc-num">11.</span><span class="toc-title">🇮🇳 Qualified National Camp – INESO 2025 <span class="toc-date">(March 2025)</span></span></a></li>
-      <li data-tags="science quantum research"><a href="#ach-12"><span class="toc-num">12.</span><span class="toc-title">🦋 BeyondQuantum 2025 <span class="toc-date">(March 2025)</span></span></a></li>
-      <li data-tags="tech coding ai olympiad"><a href="#ach-13"><span class="toc-num">13.</span><span class="toc-title">🤖 Qualified Stage 2 – India AI Olympiad 2025 <span class="toc-date">(January 2025)</span></span></a></li>
-      <li data-tags="olympiad international"><a href="#ach-14"><span class="toc-num">14.</span><span class="toc-title">🎖️ Felicitated – International Olympiad Medalists <span class="toc-date">(December 2024)</span></span></a></li>
-      <li data-tags="coding code olympiad"><a href="#ach-15"><span class="toc-num">15.</span><span class="toc-title">👨‍💻 Zonal Topper – ZCO 2025 <span class="toc-date">(December 2024)</span></span></a></li>
-      <li data-tags="quiz tech tcs"><a href="#ach-16"><span class="toc-num">16.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2024 <span class="toc-date">(November 2024)</span></span></a></li>
-      <li data-tags="coding code quiz tech"><a href="#ach-17"><span class="toc-num">17.</span><span class="toc-title">✴️ Nexus 2K24 – SSIPMT Raipur <span class="toc-date">(November 2024)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-18"><span class="toc-num">18.</span><span class="toc-title">🧠 Winner – GK Quiz Mindspark 2024 <span class="toc-date">(October 2024)</span></span></a></li>
-      <li data-tags="mun diplomacy"><a href="#ach-19"><span class="toc-num">19.</span><span class="toc-title">🏅 Special Mention UNGA – KPS MUN 3.0 <span class="toc-date">(October 2024)</span></span></a></li>
-      <li data-tags="olympiad international science"><a href="#ach-20"><span class="toc-num">20.</span><span class="toc-title">🌏 International Earth Science Olympiad 2024 <span class="toc-date">(August 2024)</span></span></a></li>
-      <li data-tags="quiz finance"><a href="#ach-21"><span class="toc-num">21.</span><span class="toc-title">💳 Ranked 1st Central Zone – NFLQ 2024 <span class="toc-date">(May 2024)</span></span></a></li>
-      <li data-tags="science olympiad"><a href="#ach-22"><span class="toc-num">22.</span><span class="toc-title">🧪 High Distinction – Int'l Chemistry Quiz <span class="toc-date">(March 2024)</span></span></a></li>
-      <li data-tags="tech innovation"><a href="#ach-23"><span class="toc-num">23.</span><span class="toc-title">💡 Qualified DLEPC – INSPIRE MANAK <span class="toc-date">(February 2024)</span></span></a></li>
-      <li data-tags="tech innovation coding"><a href="#ach-24"><span class="toc-num">24.</span><span class="toc-title">💡 National Rounds – Jr. Smart India Hackathon <span class="toc-date">(January 2024)</span></span></a></li>
-      <li data-tags="quiz heritage"><a href="#ach-25"><span class="toc-num">25.</span><span class="toc-title">🛕 Runner-Up Bhubaneswar – CBSE HIQ 2023 <span class="toc-date">(December 2023)</span></span></a></li>
-      <li data-tags="quiz tech coding"><a href="#ach-26"><span class="toc-num">26.</span><span class="toc-title">👨‍💻 Winner Tech Quiz – Nexus 2K23 <span class="toc-date">(November 2023)</span></span></a></li>
-      <li data-tags="tech innovation"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
-      <li data-tags="quiz sports"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
-      <li data-tags="tech ai coding"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-30"><span class="toc-num">30.</span><span class="toc-title">🧠 All India Top 5 – Mind Wars 2023 <span class="toc-date">(May 2023)</span></span></a></li>
-      <li data-tags="quiz heritage"><a href="#ach-31"><span class="toc-num">31.</span><span class="toc-title">🛕 National 1st Runner-Ups – CBSE HIQ 2022 <span class="toc-date">(January 2023)</span></span></a></li>
-      <li data-tags="quiz environment"><a href="#ach-32"><span class="toc-num">32.</span><span class="toc-title">🏆 Winner – Paryavaran Paheli ECO Quiz <span class="toc-date">(November 2022)</span></span></a></li>
-      <li data-tags="quiz heritage"><a href="#ach-33"><span class="toc-num">33.</span><span class="toc-title">🛕 City Champions – INTACH Heritage Quiz <span class="toc-date">(October 2022)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-34"><span class="toc-num">34.</span><span class="toc-title">🏆 Winner – Shine COSMO 2022 <span class="toc-date">(September 2022)</span></span></a></li>
-      <li data-tags="quiz sports"><a href="#ach-35"><span class="toc-num">35.</span><span class="toc-title">🏏 Fit India Quiz 2021 – Season 1 <span class="toc-date">(June 2022)</span></span></a></li>
-      <li data-tags="quiz environment wildlife"><a href="#ach-36"><span class="toc-num">36.</span><span class="toc-title">🐼 National Qualifier – Wild Wisdom 2021 <span class="toc-date">(October 2021)</span></span></a></li>
-      <li data-tags="quiz environment wildlife"><a href="#ach-37"><span class="toc-num">37.</span><span class="toc-title">🐼 Zonal 2nd Runner-Up – Wild Wisdom 2019 <span class="toc-date">(October 2019)</span></span></a></li>
-      <li data-tags="science"><a href="#ach-38"><span class="toc-num">38.</span><span class="toc-title">🌒 AIR 23 – All India Astronomy Test 2018 <span class="toc-date">(January 2019)</span></span></a></li>
-      <li data-tags="quiz"><a href="#ach-39"><span class="toc-num">39.</span><span class="toc-title">🐝 Winner – Spell Bee Excella 2018 <span class="toc-date">(October 2018)</span></span></a></li>
-      <li data-tags="quiz environment wildlife"><a href="#ach-40"><span class="toc-num">40.</span><span class="toc-title">🐼 Zonal 1st Runner-Up – Wild Wisdom 2018 <span class="toc-date">(September 2018)</span></span></a></li>
-      <li data-tags="quiz environment"><a href="#ach-41"><span class="toc-num">41.</span><span class="toc-title">🌏 2nd Runner-Up – QPL 2.0 Earth Day <span class="toc-date">(April 2016)</span></span></a></li>
+      <li data-tags="quiz tech iiit technovate campus raipur college general knowledge aptitude"><a href="#ach-1"><span class="toc-num">1.</span><span class="toc-title">⚔️ Winner – Clash of Campus Quiz 2026 <span class="toc-date">(March 2026)</span></span></a></li>
+      <li data-tags="tech coding olympiad ibm ibm skillsbuild future 1m1b national medal silver"><a href="#ach-2"><span class="toc-num">2.</span><span class="toc-title">🥈 Silver Medalist: Future Tech Olympiad 2026 <span class="toc-date">(February 2026)</span></span></a></li>
+      <li data-tags="tech coding programming iit iit madras shaastra competitive programming codechef algorithm dsa potpourri"><a href="#ach-3"><span class="toc-num">3.</span><span class="toc-title">🎲 Shaastra 2026 by IIT Madras <span class="toc-date">(December 2025)</span></span></a></li>
+      <li data-tags="quiz finance yes securities wonga wits financial literacy stock market raipur"><a href="#ach-4"><span class="toc-num">4.</span><span class="toc-title">📈 2nd Runner Ups - Wonga Wits Quiz Season 2 <span class="toc-date">(November 2025)</span></span></a></li>
+      <li data-tags="quiz tech tcs tata it wiz technology nagpur maharashtra pickbrain rashmi furtado"><a href="#ach-5"><span class="toc-num">5.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2025 <span class="toc-date">(August 2025)</span></span></a></li>
+      <li data-tags="quiz science iim bhilai materials metallurgy brahmaprakash kalpakkam chhattisgarh nuclear"><a href="#ach-6"><span class="toc-num">6.</span><span class="toc-title">🪨 Winner IIM Bhilai – BPMMQ 2025 <span class="toc-date">(August 2025)</span></span></a></li>
+      <li data-tags="quiz finance sbi state bank bhopal scholarship financial literacy times of india"><a href="#ach-7"><span class="toc-num">7.</span><span class="toc-title">🪙 Winner Bhopal – SBI Scholar Quiz 2025 <span class="toc-date">(June 2025)</span></span></a></li>
+      <li data-tags="coding code tech sql dsa database itm raipur innovritti winner school"><a href="#ach-8"><span class="toc-num">8.</span><span class="toc-title">👨‍💻 Winner – Code 2 Champions <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="quiz science environment earth day nehu shillong north eastern hill university geology green hydrogen"><a href="#ach-9"><span class="toc-num">9.</span><span class="toc-title">🌏 Winner – Earth Day Quiz NEHU <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="coding code tech hpe hewlett packard codewars algorithm python competitive programming airrank10"><a href="#ach-10"><span class="toc-num">10.</span><span class="toc-title">👨‍💻 AIR 10 – HPE Codewars 2025 <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="olympiad science earth geology ineso ieso international national camp geological society india"><a href="#ach-11"><span class="toc-num">11.</span><span class="toc-title">🇮🇳 Qualified National Camp – INESO 2025 <span class="toc-date">(March 2025)</span></span></a></li>
+      <li data-tags="science quantum research beyondquantum thinkingbeyond physics linear algebra international programme"><a href="#ach-12"><span class="toc-num">12.</span><span class="toc-title">🦋 BeyondQuantum 2025 <span class="toc-date">(March 2025)</span></span></a></li>
+      <li data-tags="tech coding ai olympiad machine learning acm india artificial intelligence ioai inaio stage2"><a href="#ach-13"><span class="toc-num">13.</span><span class="toc-title">🤖 Qualified Stage 2 – India AI Olympiad 2025 <span class="toc-date">(January 2025)</span></span></a></li>
+      <li data-tags="olympiad international hbcse tifr felicitation ieso medal mumbai scholarship earth science"><a href="#ach-14"><span class="toc-num">14.</span><span class="toc-title">🎖️ Felicitated – International Olympiad Medalists <span class="toc-date">(December 2024)</span></span></a></li>
+      <li data-tags="coding code olympiad zco iarcs computing informatics ioi programming algorithm zonal topper"><a href="#ach-15"><span class="toc-num">15.</span><span class="toc-title">👨‍💻 Zonal Topper – ZCO 2025 <span class="toc-date">(December 2024)</span></span></a></li>
+      <li data-tags="quiz tech tcs tata nagpur pickbrain giri balasubramaniam technology it wiz 2024"><a href="#ach-16"><span class="toc-num">16.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2024 <span class="toc-date">(November 2024)</span></span></a></li>
+      <li data-tags="coding code quiz tech nexus ssipmt raipur shankaracharya techno cultural 2k24"><a href="#ach-17"><span class="toc-num">17.</span><span class="toc-title">✴️ Nexus 2K24 – SSIPMT Raipur <span class="toc-date">(November 2024)</span></span></a></li>
+      <li data-tags="quiz general knowledge gk mindspark raipur winner 2024"><a href="#ach-18"><span class="toc-num">18.</span><span class="toc-title">🧠 Winner – GK Quiz Mindspark 2024 <span class="toc-date">(October 2024)</span></span></a></li>
+      <li data-tags="mun diplomacy model united nations unga kps special mention 3.0 2024"><a href="#ach-19"><span class="toc-num">19.</span><span class="toc-title">🏅 Special Mention UNGA – KPS MUN 3.0 <span class="toc-date">(October 2024)</span></span></a></li>
+      <li data-tags="olympiad international earth science ieso 2024 geology india international represented medal"><a href="#ach-20"><span class="toc-num">20.</span><span class="toc-title">🌏 International Earth Science Olympiad 2024 <span class="toc-date">(August 2024)</span></span></a></li>
+      <li data-tags="quiz finance sebi nflq national financial literacy central zone ranked first 2024"><a href="#ach-21"><span class="toc-num">21.</span><span class="toc-title">💳 Ranked 1st Central Zone – NFLQ 2024 <span class="toc-date">(May 2024)</span></span></a></li>
+      <li data-tags="science chemistry international raci quiz high distinction australia 2023 2024"><a href="#ach-22"><span class="toc-num">22.</span><span class="toc-title">🧪 High Distinction – Int'l Chemistry Quiz <span class="toc-date">(March 2024)</span></span></a></li>
+      <li data-tags="tech innovation inspire manak dst mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project dlepc atl"><a href="#ach-23"><span class="toc-num">23.</span><span class="toc-title">💡 Qualified DLEPC – INSPIRE MANAK <span class="toc-date">(February 2024)</span></span></a></li>
+      <li data-tags="tech innovation coding hackathon jsih junior smart india mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project ministry education national"><a href="#ach-24"><span class="toc-num">24.</span><span class="toc-title">💡 National Rounds – Jr. Smart India Hackathon <span class="toc-date">(January 2024)</span></span></a></li>
+      <li data-tags="quiz heritage cbse heritage india bhubaneswar 2023 runner up regional history culture"><a href="#ach-25"><span class="toc-num">25.</span><span class="toc-title">🛕 Runner-Up Bhubaneswar – CBSE HIQ 2023 <span class="toc-date">(December 2023)</span></span></a></li>
+      <li data-tags="quiz tech coding nexus ssipmt 2023 technical raipur winner shankaracharya 2k23"><a href="#ach-26"><span class="toc-num">26.</span><span class="toc-title">👨‍💻 Winner Tech Quiz – Nexus 2K23 <span class="toc-date">(November 2023)</span></span></a></li>
+      <li data-tags="tech innovation youth ideathon mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project top 1000 cbse thinkstartup"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
+      <li data-tags="quiz sports ultimate sports quiz usq national runners up macbook kps viacom jiohotstar tv 2023"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
+      <li data-tags="tech ai coding data ai talks igebra mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project winner ipad champion group c senior 2023"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
+      <li data-tags="quiz general knowledge mind wars zee5 top5 national 2023 academic championship"><a href="#ach-30"><span class="toc-num">30.</span><span class="toc-title">🧠 All India Top 5 – Mind Wars 2023 <span class="toc-date">(May 2023)</span></span></a></li>
+      <li data-tags="quiz heritage cbse hiq 2022 national runners up new delhi history18 history tv18 network18 culture india freedom movement"><a href="#ach-31"><span class="toc-num">31.</span><span class="toc-title">🛕 National 1st Runner-Ups – CBSE HIQ 2022 <span class="toc-date">(January 2023)</span></span></a></li>
+      <li data-tags="quiz environment paryavaran eco ecology nature winner 2022 paheli"><a href="#ach-32"><span class="toc-num">32.</span><span class="toc-title">🏆 Winner – Paryavaran Paheli ECO Quiz <span class="toc-date">(November 2022)</span></span></a></li>
+      <li data-tags="quiz heritage intach india heritage city champions raipur 2022 culture history"><a href="#ach-33"><span class="toc-num">33.</span><span class="toc-title">🛕 City Champions – INTACH Heritage Quiz <span class="toc-date">(October 2022)</span></span></a></li>
+      <li data-tags="quiz general knowledge winner shine cosmo 2022 raipur"><a href="#ach-34"><span class="toc-num">34.</span><span class="toc-title">🏆 Winner – Shine COSMO 2022 <span class="toc-date">(September 2022)</span></span></a></li>
+      <li data-tags="quiz sports fit india state champions chhattisgarh ministry youth affairs sports 2021 2022 semi-final"><a href="#ach-35"><span class="toc-num">35.</span><span class="toc-title">🏏 Fit India Quiz 2021 – Season 1 <span class="toc-date">(June 2022)</span></span></a></li>
+      <li data-tags="quiz environment wildlife wwf wild wisdom global challenge national qualifier 2021 wwq india asia biggest"><a href="#ach-36"><span class="toc-num">36.</span><span class="toc-title">🐼 National Qualifier – Wild Wisdom 2021 <span class="toc-date">(October 2021)</span></span></a></li>
+      <li data-tags="quiz environment wildlife wwf wild wisdom 2019 zonal 2nd runner up bhopal madhya pradesh wwq senior"><a href="#ach-37"><span class="toc-num">37.</span><span class="toc-title">🐼 Zonal 2nd Runner-Up – Wild Wisdom 2019 <span class="toc-date">(October 2019)</span></span></a></li>
+      <li data-tags="science astronomy cosmos aiat all india rank 23 air 2018 2019 space universe national"><a href="#ach-38"><span class="toc-num">38.</span><span class="toc-title">🌒 AIR 23 – All India Astronomy Test 2018 <span class="toc-date">(January 2019)</span></span></a></li>
+      <li data-tags="quiz spell bee excella fest 2018 chhattisgarh public school raipur winner interschool"><a href="#ach-39"><span class="toc-num">39.</span><span class="toc-title">🐝 Winner – Spell Bee Excella 2018 <span class="toc-date">(October 2018)</span></span></a></li>
+      <li data-tags="quiz environment wildlife wwf wild wisdom 2018 zonal 1st runner up bhopal madhya pradesh wwq junior"><a href="#ach-40"><span class="toc-num">40.</span><span class="toc-title">🐼 Zonal 1st Runner-Up – Wild Wisdom 2018 <span class="toc-date">(September 2018)</span></span></a></li>
+      <li data-tags="quiz environment earth day qpl quiz premier league kps krishna public school 2016 runner up family parent"><a href="#ach-41"><span class="toc-num">41.</span><span class="toc-title">🌏 2nd Runner-Up – QPL 2.0 Earth Day <span class="toc-date">(April 2016)</span></span></a></li>
     </ul>
   </div>
 </div>
@@ -722,7 +718,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/YUFKJevNpG8" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/YUFKJevNpG8" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>TCS InQuizitive 2025<br>Nagpur Regional Round</span>
     </div>
@@ -969,7 +965,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/GGaPWeNIODI" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/GGaPWeNIODI" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>TCS InQuizitive 2024<br>Nagpur Regional Round</span>
     </div>
@@ -1393,7 +1389,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/4B1YQ5edqBs" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/4B1YQ5edqBs" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>National Grand Finale</span>
     </div>
@@ -1415,7 +1411,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/Bgdd8B0XzxE" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/Bgdd8B0XzxE" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>Semi Final - 1</span>
     </div>
@@ -1438,7 +1434,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/nPel1DDxFrw" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/nPel1DDxFrw" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>West Zone Finals</span>
     </div>
@@ -1461,7 +1457,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/DQZmbhGw6oE" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/DQZmbhGw6oE" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>USQ 2023<br>West Zone Prelims</span>
     </div>
@@ -1506,7 +1502,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/O19X4Ah9vfk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/O19X4Ah9vfk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>MRIDA Presentation<br>Data & AI Talks</span>
     </div>
@@ -1573,7 +1569,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/UwzXg_3KkWc" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/UwzXg_3KkWc" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>CBSE HIQ 2022<br>National Finale</span>
     </div>
@@ -1597,7 +1593,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/PpuNR-Q95Mk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/PpuNR-Q95Mk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>CBSE HIQ 2022<br>Semi-Final 4</span>
     </div>
@@ -1711,7 +1707,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/UAQWCSxxFqk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/UAQWCSxxFqk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
     </div>
@@ -1730,7 +1726,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
     </div>
@@ -1749,7 +1745,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk" title="YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <span>Fit India Quiz – Semi-Final 2<br>Chhattisgarh</span>
     </div>
@@ -1879,55 +1875,160 @@ author_profile: true
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  /* ── 1. Assign IDs to achievement sections (matching static TOC links) ── */
-  var sections = document.querySelectorAll('.achievement-section');
-  var idx = 0;
-  var sectionMap = [];
 
-  sections.forEach(function (sec) {
-    var h2 = sec.querySelector('h2');
-    if (!h2) return;
-    idx++;
-    sec.id = 'ach-' + idx;
-    sectionMap.push(sec);
+  /* ══════════════════════════════════════════════════════════
+     AUTO-BUILD: scan every .achievement-section h2 and rebuild
+     the TOC list — so adding a new section auto-adds an entry.
+     The static <li> list is used as a keyword/tag seed; any NEW
+     sections not yet in the static list get generated on the fly.
+  ══════════════════════════════════════════════════════════ */
+
+  var sections     = Array.from(document.querySelectorAll('.achievement-section'));
+  var tocList      = document.getElementById('tocList');
+  var countBadge   = document.querySelector('.toc-count');
+
+  /* Build a lookup of existing static li items keyed by href target */
+  var staticItems  = {};
+  Array.from(tocList.querySelectorAll('li')).forEach(function(li) {
+    var a = li.querySelector('a');
+    if (a) staticItems[a.getAttribute('href')] = li;
   });
 
-  /* ── 2. Click handler: scroll with offset above each section ── */
-  var tocLinks = document.querySelectorAll('#tocList a');
-  tocLinks.forEach(function (link) {
-    /* Move href to data-target so browser doesn't do native anchor jump */
-    var href = link.getAttribute('href');
-    if (href) {
-      link.setAttribute('data-target', href.substring(1));
-      /* DO NOT remove href here so crawlers can still see the links */
-      link.style.cursor = 'pointer';
+  /* Assign sequential IDs to every section */
+  sections.forEach(function(sec, i) {
+    sec.id = 'ach-' + (i + 1);
+  });
+
+  /* Rebuild TOC: keep static items if they match, generate missing ones */
+  var fragment = document.createDocumentFragment();
+  sections.forEach(function(sec, i) {
+    var num    = i + 1;
+    var id     = 'ach-' + num;
+    var href   = '#' + id;
+    var h2     = sec.querySelector('h2');
+    var title  = h2 ? h2.textContent.trim() : 'Achievement ' + num;
+
+    /* Try to extract a date hint from .achievement-meta */
+    var metaEl = sec.querySelector('.achievement-meta');
+    var dateMatch = metaEl ? metaEl.textContent.match(/[A-Z][a-z]+ \d{4}/) : null;
+    var dateStr  = dateMatch ? '(' + dateMatch[0] + ')' : '';
+
+    var li;
+    if (staticItems[href]) {
+      /* Reuse the hand-crafted static entry (preserves rich data-tags) */
+      li = staticItems[href];
+      /* Freshen the number in case order changed */
+      var numSpan = li.querySelector('.toc-num');
+      if (numSpan) numSpan.textContent = num + '.';
+    } else {
+      /* Auto-generate a new entry for any freshly added achievement */
+      li = document.createElement('li');
+      /* Build basic tags from the title words */
+      var autoTags = title.toLowerCase()
+        .replace(/[^a-z0-9 ]/g, ' ')
+        .split(/\s+/)
+        .filter(function(w){ return w.length > 2; })
+        .join(' ');
+      li.setAttribute('data-tags', autoTags);
+
+      var a = document.createElement('a');
+      a.setAttribute('href', href);
+      a.innerHTML = '<span class="toc-num">' + num + '.</span>'
+                  + '<span class="toc-title">' + title
+                  + (dateStr ? ' <span class="toc-date">' + dateStr + '</span>' : '')
+                  + '</span>';
+      li.appendChild(a);
     }
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var targetId = this.getAttribute('data-target');
-      var target = document.getElementById(targetId);
-      if (target) {
-        /* Use offsetTop for absolute position, subtract 100px for breathing room */
-        var destination = target.offsetTop - 85;
-        window.scrollTo({ top: destination, behavior: 'smooth' });
-      }
-      return false;
-    });
+    fragment.appendChild(li);
   });
 
-  /* ── 3. Search with tag support ── */
-  var tocItems = document.querySelectorAll('#tocList li');
+  /* Replace the list contents */
+  tocList.innerHTML = '';
+  tocList.appendChild(fragment);
+
+  /* Update the badge count */
+  var total = sections.length;
+  if (countBadge) {
+    countBadge.textContent = total + (total === 1 ? ' achievement' : ' achievements');
+  }
+
+  /* ── 2. Click handler: scroll with offset ── */
+  function attachClickHandlers() {
+    document.querySelectorAll('#tocList a').forEach(function (link) {
+      var href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        link.setAttribute('data-target', href.substring(1));
+        link.style.cursor = 'pointer';
+      }
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        var targetId = this.getAttribute('data-target');
+        var target   = document.getElementById(targetId);
+        if (!target) return false;
+
+        /* Custom RAF scroller — browser's behavior:'smooth' loses velocity on
+         * long pages because its physics engine caps speed. Fixed 600ms duration
+         * with ease-in-out-cubic always arrives at the correct position. */
+        var NAV_H    = 82; /* masthead height px */
+        var DURATION = 600; /* ms, fixed regardless of page length */
+        var startY   = window.scrollY;
+        /* getBoundingClientRect gives fresh live position (not cached offsetTop) */
+        var rawTop   = target.getBoundingClientRect().top + window.scrollY;
+        var endY     = Math.max(0, rawTop - NAV_H);
+        /* Clamp — can't scroll past scrollHeight - innerHeight */
+        endY = Math.min(endY, document.body.scrollHeight - window.innerHeight);
+
+        if (Math.abs(endY - startY) < 2) return false;
+
+        var t0 = null;
+        function step(ts) {
+          if (t0 === null) t0 = ts;
+          var progress = Math.min((ts - t0) / DURATION, 1);
+          /* ease-in-out-cubic */
+          var ease = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+          window.scrollTo(0, Math.round(startY + (endY - startY) * ease));
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        return false;
+      });
+    });
+  }
+  attachClickHandlers();
+
+  /* ── 3. Robust fuzzy-ish search ── */
   document.getElementById('tocSearch').addEventListener('input', function () {
-    var q = this.value.toLowerCase().trim();
-    /* Auto-open the TOC when the user starts typing */
-    if (q.length > 0) {
+    var raw = this.value.trim();
+
+    /* Auto-open the TOC when user starts typing */
+    if (raw.length > 0) {
       document.getElementById('achievementToc').classList.remove('collapsed');
     }
-    tocItems.forEach(function (li) {
+
+    if (!raw) {
+      /* Empty → show everything */
+      document.querySelectorAll('#tocList li').forEach(function(li){ li.style.display = ''; });
+      return;
+    }
+
+    /* Split into individual words so "mrida project" matches both tokens */
+    var tokens = raw.toLowerCase().split(/\s+/).filter(Boolean);
+
+    document.querySelectorAll('#tocList li').forEach(function (li) {
       var text = li.textContent.toLowerCase();
       var tags = (li.getAttribute('data-tags') || '').toLowerCase();
-      li.style.display = (text.indexOf(q) !== -1 || tags.indexOf(q) !== -1) ? '' : 'none';
+      var combined = text + ' ' + tags;
+
+      /* ALL tokens must appear somewhere in combined text+tags */
+      var match = tokens.every(function(token) {
+        return combined.indexOf(token) !== -1;
+      });
+
+      li.style.display = match ? '' : 'none';
     });
   });
 
@@ -1936,31 +2037,23 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateActive() {
     var scrollY = window.scrollY + 120;
     var current = null;
-    sectionMap.forEach(function (sec) {
+    sections.forEach(function (sec) {
       if (sec.offsetTop <= scrollY) current = sec;
     });
-    tocLinks.forEach(function (link) {
+    document.querySelectorAll('#tocList a').forEach(function (link) {
       var linkId = link.getAttribute('data-target');
-      if (current && current.id === linkId) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+      link.classList.toggle('active', !!(current && current.id === linkId));
     });
     ticking = false;
   }
-
   window.addEventListener('scroll', function () {
-    if (!ticking) {
-      requestAnimationFrame(updateActive);
-      ticking = true;
-    }
+    if (!ticking) { requestAnimationFrame(updateActive); ticking = true; }
   }, { passive: true });
+
 });
 
-/* ── 5. Toggle collapse (list only, search stays) ── */
+/* ── 5. Toggle collapse ── */
 function toggleToc() {
-  var box = document.getElementById('achievementToc');
-  box.classList.toggle('collapsed');
+  document.getElementById('achievementToc').classList.toggle('collapsed');
 }
 </script>

@@ -119,8 +119,10 @@ $(document).ready(function () {
     }
   });
 
-  // init smooth scroll — 800ms with eased curve for silky feel
-  $("a").smoothScroll({ offset: -80, speed: 800 });
+  // Smooth-scroll non-hash links only — hash anchor links (#id) are handled
+  // by native browser scroll + scroll-margin-top, so we exclude them to
+  // prevent jQuery's stale offsetTop from fighting scrollIntoView.
+  $("a:not([href^='#'])").smoothScroll({ offset: -80, speed: 400 });
 
   // add lightbox class to all image links
   $("a[href$='.webp'],a[href$='.webp'],a[href$='.webp'],a[href$='.webp'],a[href$='.gif']").addClass("image-popup");

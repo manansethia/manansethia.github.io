@@ -74,6 +74,15 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+
+    @media screen and (min-width: 925px) {
+      transform: translateX(18px);
+      display: inline-block;
+    }
+
+    @media screen and (min-width: 1080px) {
+      transform: translateX(28px);
+    }
   }
 }
 

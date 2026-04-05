@@ -55,6 +55,8 @@ $(document).ready(function () {
     $btn.addClass('hidden');
     closeHlinks();
 
+    $nav.addClass('loaded');
+
     if (visibleWidth() <= availableSpace(false)) {
       $btn.attr('count', 0);
       return;

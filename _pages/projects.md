@@ -145,14 +145,11 @@ author_profile: true
 </div>
 -->
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" media="print" onload="this.media='all'">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
   /* Base Project Section */
   .project-section {
     margin-bottom: 50px;
-    animation: fadeInUp 0.8s ease forwards;
-    opacity: 0;
     position: relative;
     border-radius: 16px;
     padding: 25px 30px;
@@ -272,6 +269,266 @@ author_profile: true
     text-transform: uppercase;
   }
 
+  .mrida-float-visual {
+    float: right;
+    width: min(42%, 360px);
+    margin: 6px 0 18px 24px;
+  }
+
+  /* ── MRIDA flip card ── */
+  .mrida-flip-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    perspective: 900px;
+    cursor: pointer;
+  }
+
+  .mrida-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    border-radius: 16px;
+    /* transition wins over * { transition-duration:0s } because higher specificity + !important */
+    -webkit-transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* hover: scale up (only when not mid-flip) */
+  .mrida-flip-card:hover .mrida-flip-inner {
+    transform: scale(1.035);
+  }
+
+  /* flipped: rotate — scale resets */
+  .mrida-flip-card.flipped .mrida-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* flipped + hover */
+  .mrida-flip-card.flipped:hover .mrida-flip-inner {
+    transform: rotateY(180deg) scale(1.035);
+  }
+
+  .mrida-flip-front,
+  .mrida-flip-back {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .mrida-flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .mrida-flip-front img,
+  .mrida-flip-back img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.16);
+  }
+
+  .mrida-image-note {
+    margin-top: 10px;
+    font-size: 0.82em;
+    font-family: Georgia, Times, serif;
+    color: #7a5c1e;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .dark-mode .mrida-image-note {
+    color: #c8a050;
+  }
+
+  /* ── Collapsible stack ── */
+  .mrida-stack-collapsible {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .mrida-stack-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    padding: 2px 0 10px;
+  }
+
+  .mrida-stack-header h4 {
+    margin: 0 !important;
+  }
+
+  .mrida-stack-dash {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #a07030;
+    line-height: 1;
+    transition: color 0.2s ease;
+    min-width: 18px;
+    text-align: center;
+  }
+  .dark-mode .mrida-stack-dash {
+    color: #d4a040;
+  }
+
+  .mrida-stack-body {
+    overflow: hidden;
+    /* max-height animated via JS — transition handled in _base.scss whitelist */
+    max-height: 0;
+    opacity: 0;
+  }
+
+  /* ── Stack tables ── */
+  .mrida-stack-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 28px;
+  }
+
+  /* Collapse to single column on small screens */
+  @media (max-width: 640px) {
+    .mrida-stack-cols {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .mrida-stack-section {
+    margin-bottom: 4px;
+  }
+
+  .mrida-stack-label {
+    font-size: 0.82em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #8a5a00;
+    margin-bottom: 8px;
+    margin-top: 12px;
+  }
+  .dark-mode .mrida-stack-label {
+    color: #d4a040;
+  }
+
+  .mrida-stack-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.91em;
+    line-height: 1.6;
+  }
+
+  .mrida-stack-list li {
+    padding: 3px 0;
+    color: #3a2e18;
+    border-bottom: 1px solid rgba(200, 140, 0, 0.10);
+    display: flex;
+    gap: 7px;
+    align-items: baseline;
+    /* Allow text to wrap — don't clip */
+    white-space: normal;
+    word-break: break-word;
+  }
+  .dark-mode .mrida-stack-list li {
+    color: #ddd;
+    border-bottom-color: rgba(200, 150, 40, 0.12);
+  }
+
+  .mrida-stack-list li:last-child {
+    border-bottom: none;
+  }
+
+  .mrida-stack-list li::before {
+    content: '·';
+    color: #b07830;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .dark-mode .mrida-stack-list li::before {
+    color: #d4a040;
+  }
+
+  .mrida-specs {
+    margin: 18px 0 20px;
+    /* No fixed height — grow with content */
+    padding: 16px 18px;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, rgba(255, 243, 217, 0.95), rgba(255, 249, 238, 0.96));
+    border: 1px solid rgba(198, 146, 39, 0.18);
+  }
+  .dark-mode .mrida-specs {
+    background: linear-gradient(135deg, rgba(56, 45, 26, 0.95), rgba(40, 32, 20, 0.96));
+    border-color: rgba(212, 160, 64, 0.18);
+  }
+
+  .mrida-specs h4 {
+    margin: 0 0 12px;
+    font-size: 0.98em;
+    color: #8a5a00;
+  }
+  .dark-mode .mrida-specs h4 {
+    color: #e0b45f;
+  }
+
+  /* Layout container: clearfix so it grows around floated image */
+  .mrida-specs-layout {
+    display: flow-root; /* modern clearfix — no overflow:hidden needed */
+  }
+
+  /* Circuit diagram image — float right on desktop */
+  .mrida-spec-figure {
+    float: right;
+    width: min(52%, 380px);
+    margin: 4px 0 12px 22px;
+  }
+
+  /* On mobile: clear float, image goes full width centered above lists */
+  @media (max-width: 700px) {
+    .mrida-spec-figure {
+      float: none;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 14px 0;
+    }
+    /* Remove the software toggle — show everything on mobile */
+    .mrida-sw-toggle {
+      display: none;
+    }
+    /* Both hardware and software always visible */
+    .mrida-software-section {
+      display: block !important;
+    }
+  }
+
+  .mrida-sw-toggle {
+    display: none; /* hidden everywhere — software is always visible */
+  }
+
+  .mrida-spec-figure img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.14);
+  }
+
+  .mrida-spec-figure figcaption {
+    margin-top: 8px;
+    font-size: 0.82em;
+    font-family: Georgia, Times, serif;
+    color: #7a5c1e;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .dark-mode .mrida-spec-figure figcaption {
+    color: #c8a050;
+  }
+
   /* Gallery Horizontal Scroll */
   .project-gallery {
     display: flex;
@@ -283,6 +540,7 @@ author_profile: true
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     margin-top: 15px;
+    align-items: stretch;
   }
   .project-gallery::-webkit-scrollbar { display: none; }
   
@@ -297,8 +555,9 @@ author_profile: true
   }
   
   .project-gallery img {
+    width: 100%;
     height: 220px;
-    flex: 0 0 auto;
+    flex: 0 0 220px;
     object-fit: cover;
     border-radius: 10px;
     scroll-snap-align: start;
@@ -314,7 +573,8 @@ author_profile: true
   .project-gallery figcaption {
     margin-top: 8px;
     font-size: 0.9em;
-    color: #666;
+    font-family: Georgia, Times, serif;
+    color: #7a5c1e;
     font-weight: 500;
     text-align: center;
     white-space: nowrap;
@@ -325,7 +585,7 @@ author_profile: true
     width: 100%;
     box-sizing: border-box;
   }
-  .dark-mode .project-gallery figcaption { color: #d4a040; }
+  .dark-mode .project-gallery figcaption { color: #c8a050; }
 
   /* PDF Container Vibe */
   .pdf-wrapper {
@@ -393,10 +653,7 @@ author_profile: true
     display: none;
   }
 
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  /* fadeInUp removed — was causing invisible content flash and layout jank */
 
   @media (min-width: 900px) {
     .project-container {
@@ -408,6 +665,15 @@ author_profile: true
     }
     .project-gallery figure {
       flex: 0 0 45%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .mrida-float-visual {
+      float: none;
+      width: 100%;
+      max-width: 420px;
+      margin: 10px auto 18px;
     }
   }
 </style>
@@ -427,9 +693,110 @@ author_profile: true
 
   <div class="project-container">
     <div class="project-text">
+      <div class="mrida-float-visual">
+        <div class="mrida-flip-card" id="mrida-flip" title="Click to flip">
+          <div class="mrida-flip-inner">
+            <div class="mrida-flip-front">
+              <img src="/images/mrida build.webp" alt="MRIDA build front" loading="lazy">
+            </div>
+            <div class="mrida-flip-back">
+              <img src="/images/mridaback.webp" alt="MRIDA build back" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="mrida-image-note">Prototype I made · tap to flip</div>
+
+        <script>
+        (function() {
+          var card = document.getElementById('mrida-flip');
+          card.addEventListener('click', function() {
+            card.classList.toggle('flipped');
+          });
+        })();
+        </script>
+      </div>
+
       <p><strong>MRIDA</strong> is an AI-powered project designed to help farmers easily check soil health and improve crop yields.</p>
       <p>It was created to measure soil pH, moisture, temperature, and nutrients while also providing weather alerts. It also had a built-in emergency service to contact concerned authorities and a speech-to-speech assistant to guide the user and provide insights.</p>
-      <p>While the hardware was not developed, the MRIDA app was successfully built using MIT App Inventor and Python to analyze soil conditions and offer useful AI-driven insights.</p>
+      <p>The software side was built using MIT App Inventor and Python, and the current prototype stack was planned around a portable Raspberry Pi based field unit with live sensing, imaging, connectivity, and GPS support.</p>
+
+      <div class="mrida-specs">
+        <div class="mrida-stack-collapsible" id="mrida-stack-toggle">
+          <div class="mrida-stack-header" onclick="toggleMridaStack()">
+            <h4>Prototype Build Stack</h4>
+            <span class="mrida-stack-dash" id="mrida-stack-dash">—</span>
+          </div>
+          <div class="mrida-stack-body" id="mrida-stack-body">
+            <div class="mrida-specs-layout">
+              <figure class="mrida-spec-figure">
+                <img src="/images/MRIDA diagram.webp" alt="MRIDA circuit diagram" loading="lazy">
+                <figcaption>System and circuit overview for the current prototype.</figcaption>
+              </figure>
+              <div class="mrida-specs-text">
+                <div class="mrida-stack-label">🔧 Hardware</div>
+                <div class="mrida-stack-cols">
+                  <ul class="mrida-stack-list">
+                    <li>Raspberry Pi 5 (4GB)</li>
+                    <li>Active Cooler</li>
+                    <li>64GB microSDXC</li>
+                    <li>7″ IPS LCD (1024×600)</li>
+                    <li>Pi Camera Module 3</li>
+                  </ul>
+                  <ul class="mrida-stack-list">
+                    <li>8-in-1 Soil Sensor</li>
+                    <li>Quectel EC200U (4G + GPS)</li>
+                    <li>NEO-6M GPS</li>
+                    <li>20,000mAh Battery</li>
+                  </ul>
+                </div>
+                <div class="mrida-software-section">
+                <div class="mrida-stack-label" style="margin-top: 16px;">💻 Software</div>
+                <div class="mrida-stack-cols">
+                  <ul class="mrida-stack-list">
+                    <li>MIT App Inventor</li>
+                    <li>Python (backend + sensors)</li>
+                    <li>scikit-learn (predictions)</li>
+                    <li>OpenCV (imaging)</li>
+                  </ul>
+                  <ul class="mrida-stack-list">
+                    <li>Speech-to-speech assistant</li>
+                    <li>Emergency call/SMS alerts</li>
+                    <li>4G/GSM + GPS connectivity</li>
+                    <li>Weather + soil insights</li>
+                  </ul>
+                </div>
+                </div>
+                <span class="mrida-sw-toggle" onclick="this.previousElementSibling.classList.toggle('shown'); this.textContent = this.previousElementSibling.classList.contains('shown') ? 'Hide software ▴' : 'Show software ▾'">Show software ▾</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+      (function() {
+        function toggleMridaStack() {
+          var body = document.getElementById('mrida-stack-body');
+          var dash = document.getElementById('mrida-stack-dash');
+          var isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+          if (isOpen) {
+            body.style.maxHeight = '0px';
+            body.style.opacity = '0';
+            dash.textContent = '|';
+          } else {
+            /* Use 9999px — scrollHeight can read 0 inside content-visibility containers */
+            body.style.maxHeight = '9999px';
+            body.style.opacity = '1';
+            dash.textContent = '—';
+          }
+        }
+        window.toggleMridaStack = toggleMridaStack;
+        /* Open by default — use large safe value instead of scrollHeight */
+        var body = document.getElementById('mrida-stack-body');
+        body.style.maxHeight = '9999px';
+        body.style.opacity = '1';
+      })();
+      </script>
       
       <p class="notable">🏆 This project was also presented in:</p>
       <ul>
@@ -438,11 +805,6 @@ author_profile: true
         <li><strong>INSPIRE Manak Awards 2023</strong> – Selected in the first stage and awarded ₹10,000.</li>
         <li><strong>Junior Smart India Hackathon 2023</strong> – Shortlisted for the Interview Round by the School Innovation Council and Ministry of Education's Innovation Cell.</li>
       </ul>
-    </div>
-    
-    <div class="project-image-box">
-      <img src="/images/mridaimg.webp" alt="MRIDA Project Concept">
-      <div class="ai-label">Initial Concept Layout Generated with AI</div>
     </div>
   </div>
 
@@ -502,15 +864,15 @@ author_profile: true
   <!-- Premium Horizontal Gallery -->
   <div class="project-gallery">
     <figure>
-      <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn mockup">
+      <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn mockup" loading="lazy">
       <figcaption>My precise hand-drawn conceptual interface mockup</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixday.webp" alt="MATRIX Day Mode GUI">
+      <img src="/images/matrixday.webp" alt="MATRIX Day Mode GUI" loading="lazy">
       <figcaption>The finalized Light Mode GUI state</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixnight.webp" alt="MATRIX Night Mode GUI">
+      <img src="/images/matrixnight.webp" alt="MATRIX Night Mode GUI" loading="lazy">
       <figcaption>The finalized Dark Mode GUI state</figcaption>
     </figure>
   </div>
