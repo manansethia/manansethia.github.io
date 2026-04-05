@@ -53,6 +53,7 @@
   "📋": "/images/emoji/emoji-1F4CB.webp",
   "📍": "/images/emoji/emoji-1F4CD.webp",
   "📜": "/images/emoji/emoji-1F4DC.webp",
+  "📄": "/images/emoji/emoji-1F4C4.webp",
   "📝": "/images/emoji/emoji-1F4DD.webp",
   "📡": "/images/emoji/emoji-1F4E1.webp",
   "📰": "/images/emoji/emoji-1F4F0.webp",

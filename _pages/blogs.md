@@ -1,6 +1,6 @@
 ---
 permalink: /blogs/
-title: "Blogs"
+title: "📝 Blogs"
 author_profile: true
 ---
 
