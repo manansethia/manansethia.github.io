@@ -37,6 +37,13 @@ author_profile: true
     min-width: 0;
   }
 
+  .edu-note {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-size: 0.9em;
+    font-style: italic;
+  }
+
   .kps-entry {
     margin-top: 7px;
     margin-bottom: 12px;
@@ -65,10 +72,8 @@ author_profile: true
     🎓 <em>Grade 1 - Grade 12</em><br>
     📍 Raipur, C.G., India <br>
     🗓️ March 2014 – March 2026 <br>
-    <strong style="margin-top: 5px; display: inline-block;">Roles:</strong><br>
-    -  <strong>Headboy :</strong> Head of the entire Student Council Body, 2025-26 <br>
-    -  <strong>President :</strong> Coder's Club, 2023-24 <br>
-    -  <strong>Vice President :</strong> Coder's Club, 2022-23 <br>
+    <div class="edu-note">Actively involved in student leadership, technical clubs and quizzing. (see Experience)</div>
+    <strong>Higher Secondary Stream:</strong> PCME + CS (Physics Chemistry Mathematics English with Computer Science)<br>
   </div>
 </div>
 

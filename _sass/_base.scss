@@ -435,3 +435,14 @@ figure img,
 .fa-location-dot.icon-pad-right {
   margin-right: 5px;
 }
+
+/* ── Experience timeline hover transitions ────────────────────────────── */
+.exp-row-role {
+  -webkit-transition: background 0.18s ease !important;
+  transition: background 0.18s ease !important;
+}
+
+.exp-dot {
+  -webkit-transition: background 0.18s ease, box-shadow 0.18s ease !important;
+  transition: background 0.18s ease, box-shadow 0.18s ease !important;
+}
