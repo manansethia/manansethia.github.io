@@ -877,3 +877,5 @@ author_profile: true
     </figure>
   </div>
 </div>
+
+{% include horizontal-scroll-keys.html %}

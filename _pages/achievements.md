@@ -2057,3 +2057,5 @@ function toggleToc() {
   document.getElementById('achievementToc').classList.toggle('collapsed');
 }
 </script>
+
+{% include horizontal-scroll-keys.html %}
