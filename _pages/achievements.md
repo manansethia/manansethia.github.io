@@ -383,6 +383,7 @@ author_profile: true
 
   .toc-body {
     overflow: hidden;
+    will-change: max-height, opacity, padding;
     transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1), padding 0.45s ease, opacity 0.3s ease;
     padding: 10px 20px 16px;
     max-height: 6000px;
@@ -458,13 +459,17 @@ author_profile: true
 
   .toc-count {
     display: inline-block;
+    align-items: center;
     font-size: 0.78em;
-    color: #a07830;
-    background: rgba(192,115,0,0.1);
-    padding: 2px 8px;
-    border-radius: 10px;
+    color: #301e04;
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(179, 108, 0, 0.18);
+    padding: 3px 9px;
+    border-radius: 999px;
     margin-left: 8px;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
   }
 
   /* ── Dark Mode (class-based) ── */
@@ -506,8 +511,9 @@ author_profile: true
   .dark-mode .toc-num { color: #c8a060; font-weight: 700; }
   .dark-mode .toc-date { color: #b89a60; opacity: 0.9; }
   .dark-mode .toc-count {
-    color: #c0a060;
-    background: rgba(90,69,32,0.3);
+    color: #fff0ca;
+    background: rgba(255, 237, 199, 0.06);
+    border-color: rgba(255, 210, 120, 0.14);
   }
 
   @media (min-width: 768px) {

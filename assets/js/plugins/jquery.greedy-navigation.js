@@ -47,6 +47,7 @@ $(document).ready(function () {
   }
 
   function availableSpace(includeButton) {
+    if (window.innerWidth <= 450) return 0; // Force all items to overflow on mobile specifically below 450px
     return navWidth() - (includeButton ? buttonWidth() + 30 : 0);
   }
 

@@ -147,22 +147,60 @@ author_profile: true
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" media="print" onload="this.media='all'">
 <style>
-  /* Base Project Section */
+  /* Base Project Section - Orbit Styled */
   .project-section {
     margin-bottom: 50px;
     position: relative;
-    border-radius: 16px;
+    overflow: hidden;
     padding: 25px 30px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
-    box-shadow: 0 4px 24px rgba(192, 115, 0, 0.06);
-    border: 1.5px solid rgba(232, 199, 116, 0.4);
+    border: 1px solid rgba(179, 108, 0, 0.34);
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at top right, rgba(255, 219, 148, 0.7), rgba(255, 219, 148, 0) 400px),
+      linear-gradient(145deg, rgba(255, 251, 243, 0.7), rgba(255, 240, 205, 0.65));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 24px 70px rgba(88, 57, 8, 0.16);
     box-sizing: border-box;
+    isolation: isolate;
+  }
+
+  .project-section::before,
+  .project-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .project-section > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .project-section::before {
+    top: -3rem;
+    right: -2rem;
+    width: 15rem;
+    height: 15rem;
+    border: 1px solid rgba(187, 128, 27, 0.2);
+  }
+
+  .project-section::after {
+    bottom: -3rem;
+    left: -1rem;
+    width: 12rem;
+    height: 12rem;
+    border: 1px dashed rgba(187, 128, 27, 0.18);
   }
   
   .dark-mode .project-section {
-    background: linear-gradient(135deg, rgba(30,26,20,0.6) 0%, rgba(20,16,10,0.3) 100%);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    border: 1.5px solid rgba(90, 69, 32, 0.4);
+    border-color: rgba(255, 210, 120, 0.25);
+    background:
+      radial-gradient(circle at top right, rgba(255, 198, 89, 0.18), rgba(255, 198, 89, 0) 350px),
+      linear-gradient(145deg, rgba(43, 29, 11, 0.85), rgba(24, 16, 7, 0.8));
+    box-shadow: 0 28px 75px rgba(0, 0, 0, 0.48);
   }
 
   .project-section h2 {
@@ -643,14 +681,20 @@ author_profile: true
   .responsive-pdf {
     width: 100%;
     height: 500px;
+    max-height: 500px;
     border: none;
     display: block;
+    opacity: 1;
+    will-change: max-height, opacity;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
   }
   @media (max-width: 600px) {
-    .responsive-pdf { height: 380px; }
+    .responsive-pdf { height: 380px; max-height: 380px; }
   }
   .pdf-wrapper.minimized .responsive-pdf {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
   }
 
   /* fadeInUp removed — was causing invisible content flash and layout jank */
