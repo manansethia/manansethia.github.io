@@ -1,757 +1,247 @@
 ---
 permalink: /skills/
-title: "🛠️ Skills"
+title: "Skills"
 author_profile: true
 ---
 
 <style>
-  /* ── Reset links in skills page ── */
-  a {
-    text-decoration: none !important;
-    border: none !important;
-    outline: none !important;
+  .skills-page {
+    --skills-bg: #fffdf8;
+    --skills-surface: #ffffff;
+    --skills-surface-2: #fff8ec;
+    --skills-border: #efdcb8;
+    --skills-title: #3b2c12;
+    --skills-text: #5a4a2c;
+    --skills-chip-bg: #fff3db;
+    --skills-chip-text: #5f4614;
+    --skills-chip-border: #ecd1a4;
+    --skills-shadow: 0 12px 34px rgba(78, 52, 9, 0.08);
+    color: var(--skills-text);
   }
 
-  .sidebar {
-    z-index: 10;
+  .dark-mode .skills-page {
+    --skills-bg: #111111;
+    --skills-surface: #181818;
+    --skills-surface-2: #1f1a13;
+    --skills-border: #3c3225;
+    --skills-title: #f5dfb3;
+    --skills-text: #d2c19f;
+    --skills-chip-bg: #2a2117;
+    --skills-chip-text: #f2d8a2;
+    --skills-chip-border: #4a3c28;
+    --skills-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
   }
 
-  /* ── Skills intro ── */
-  .skills-intro {
-    font-size: 0.97em;
-    color: #5a3e00;
-    line-height: 1.65;
-    margin-bottom: 28px;
-    padding: 16px 20px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(255, 243, 214, 0.7) 0%, rgba(255, 232, 175, 0.4) 100%);
-    border: 1.5px solid rgba(192, 130, 0, 0.3);
-  }
-  .dark-mode .skills-intro {
-    background: linear-gradient(135deg, rgba(55, 34, 7, 0.7) 0%, rgba(38, 23, 4, 0.4) 100%);
-    border-color: rgba(190, 125, 25, 0.4);
-    color: #e0c888;
-  }
-
-  /* ── Accordion category panel ── */
-  .skill-category {
-    margin-bottom: 14px;
+  .skills-hero {
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--skills-border);
     border-radius: 14px;
-    overflow: hidden;
-    border: 1.5px solid rgba(192, 130, 0, 0.35);
-    background: linear-gradient(135deg, rgba(255, 250, 235, 0.6) 0%, rgba(255, 243, 210, 0.3) 100%);
-    box-shadow: 0 3px 14px rgba(192, 115, 0, 0.07);
-    transition: box-shadow 0.25s ease;
-  }
-  .skill-category:hover {
-    box-shadow: 0 5px 20px rgba(192, 115, 0, 0.14);
-  }
-  .dark-mode .skill-category {
-    background: linear-gradient(135deg, rgba(45, 30, 6, 0.75) 0%, rgba(28, 18, 3, 0.5) 100%);
-    border-color: rgba(180, 120, 20, 0.4);
-    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
-  }
-  .dark-mode .skill-category:hover {
-    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.45);
+    background: linear-gradient(145deg, var(--skills-bg), var(--skills-surface-2));
+    box-shadow: var(--skills-shadow);
+    margin-bottom: 1rem;
   }
 
-  /* ── Panel header / toggle button ── */
-  .skill-category-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 20px;
-    cursor: pointer;
-    user-select: none;
-    background: linear-gradient(135deg, rgba(255, 220, 130, 0.65) 0%, rgba(255, 205, 95, 0.48) 100%);
-    transition: background 0.25s ease;
-    gap: 12px;
-  }
-  .skill-category-header:hover {
-    background: linear-gradient(135deg, rgba(255, 210, 110, 0.82) 0%, rgba(255, 192, 75, 0.65) 100%);
-  }
-  .dark-mode .skill-category-header {
-    background: linear-gradient(135deg, rgba(72, 50, 10, 0.9) 0%, rgba(55, 38, 8, 0.8) 100%);
-  }
-  .dark-mode .skill-category-header:hover {
-    background: linear-gradient(135deg, rgba(88, 62, 14, 0.95) 0%, rgba(68, 48, 12, 0.9) 100%);
+  .skills-hero p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 0.97rem;
   }
 
-  .skill-category-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-    min-width: 0;
+  .skills-focus {
+    margin-bottom: 1.35rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--skills-border);
+    background: var(--skills-surface);
   }
 
-  .skill-category-title h2 {
-    font-size: 1.02em !important;
-    font-weight: 700 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    color: #6b4400 !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .dark-mode .skill-category-title h2 {
-    color: #f2cc72 !important;
+  .skills-focus strong {
+    color: var(--skills-title);
+    display: block;
+    margin-bottom: 0.6rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
   }
 
-  .skill-count-badge {
-    display: inline-block;
-    font-size: 0.73em;
-    font-weight: 700;
-    color: #a07830;
-    background: rgba(192, 115, 0, 0.12);
-    padding: 2px 9px;
-    border-radius: 20px;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-  .dark-mode .skill-count-badge {
-    color: #d4a040;
-    background: rgba(90, 69, 32, 0.35);
-  }
-
-  .skill-chevron {
-    width: 9px;
-    height: 9px;
-    border-right: 2.5px solid #b07800;
-    border-bottom: 2.5px solid #b07800;
-    transform: rotate(45deg);
-    transition: transform 0.3s ease;
-    flex-shrink: 0;
-  }
-  .dark-mode .skill-chevron {
-    border-color: #d4a040;
-  }
-  .skill-category.collapsed .skill-chevron {
-    transform: rotate(-45deg);
-  }
-
-  /* ── Panel body (chip grid) ── */
-  .skill-category-body {
-    overflow: hidden;
-    max-height: 2000px;
-    opacity: 1;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.35s ease,
-                padding 0.4s ease;
-    padding: 18px 20px 20px;
-  }
-  .skill-category.collapsed .skill-category-body {
-    max-height: 0;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  /* ── Sub-group label inside a panel ── */
-  .skill-subgroup-label {
-    font-size: 0.72em;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: #9a6800;
-    margin: 12px 0 7px;
-  }
-  .skill-subgroup-label:first-child {
-    margin-top: 0;
-  }
-  .dark-mode .skill-subgroup-label {
-    color: #d4a040;
-  }
-
-  /* ── Chip grid ── */
-  .skill-chips {
+  .skills-chip-row,
+  .skills-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 4px;
+    gap: 0.5rem;
   }
 
-  /* ── Individual chip ── */
-  .skill-chip {
+  .skills-tag {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 5px 13px;
-    border-radius: 20px;
-    font-size: 0.84em;
-    font-weight: 500;
-    line-height: 1.3;
-    cursor: default;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-    /* Default — light warm gold */
-    background: linear-gradient(135deg, #fff8e6 0%, #ffefc8 100%);
-    color: #7a5200;
-    border: 1px solid rgba(192, 130, 0, 0.2);
-    box-shadow: 0 1px 4px rgba(192, 115, 0, 0.08);
-  }
-  .skill-chip:hover {
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 5px 14px rgba(192, 115, 0, 0.17);
-    background: linear-gradient(135deg, #fff2cc 0%, #ffe49a 100%);
-  }
-  .dark-mode .skill-chip {
-    background: linear-gradient(135deg, rgba(55, 40, 8, 0.9) 0%, rgba(42, 30, 5, 0.85) 100%);
-    color: #f0d080;
-    border-color: rgba(180, 130, 30, 0.3);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  }
-  .dark-mode .skill-chip:hover {
-    background: linear-gradient(135deg, rgba(72, 52, 10, 0.95) 0%, rgba(55, 40, 8, 0.9) 100%);
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--skills-chip-border);
+    background: var(--skills-chip-bg);
+    color: var(--skills-chip-text);
+    border-radius: 999px;
+    padding: 0.32rem 0.72rem;
+    font-size: 0.81rem;
+    line-height: 1.35;
   }
 
-  /* ── Accent chip variants (for major languages / highlights) ── */
-  .skill-chip.accent {
-    background: linear-gradient(135deg, rgba(255, 218, 105, 0.55) 0%, rgba(255, 200, 65, 0.4) 100%);
-    font-weight: 600;
-    border-color: rgba(192, 130, 0, 0.35);
-  }
-  .dark-mode .skill-chip.accent {
-    background: linear-gradient(135deg, rgba(88, 62, 10, 0.95) 0%, rgba(68, 48, 8, 0.9) 100%);
-    border-color: rgba(212, 160, 64, 0.45);
-    color: #f8dd90;
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 0.9rem;
   }
 
-  /* ── Divider between sub-groups ── */
-  .skill-divider {
-    border: none;
-    border-top: 1px dashed rgba(192, 115, 0, 0.2);
-    margin: 12px 0 10px;
-  }
-  .dark-mode .skill-divider {
-    border-top-color: rgba(180, 130, 30, 0.2);
-  }
-
-  /* ── "All expanded" / "All collapsed" quick controls ── */
-  .skills-controls {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 18px;
-    flex-wrap: wrap;
-  }
-  .skills-control-btn {
-    font-size: 0.8em;
-    font-weight: 600;
-    padding: 5px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    border: 1.5px solid rgba(192, 130, 0, 0.4);
-    background: rgba(255, 232, 150, 0.35);
-    color: #7a5200;
-    transition: background 0.2s ease, transform 0.15s ease;
-    user-select: none;
-  }
-  .skills-control-btn:hover {
-    background: rgba(255, 218, 100, 0.6);
-    transform: translateY(-1px);
-  }
-  .dark-mode .skills-control-btn {
-    background: rgba(60, 42, 6, 0.7);
-    border-color: rgba(180, 130, 30, 0.4);
-    color: #e8c870;
-  }
-  .dark-mode .skills-control-btn:hover {
-    background: rgba(80, 56, 10, 0.85);
+  .skills-card {
+    grid-column: span 12;
+    border: 1px solid var(--skills-border);
+    border-radius: 14px;
+    background: linear-gradient(180deg, var(--skills-surface), var(--skills-surface-2));
+    box-shadow: var(--skills-shadow);
+    padding: 0.95rem;
   }
 
-  /* ── Responsive: tighter padding on small screens ── */
-  @media (max-width: 600px) {
-    .skill-category-header {
-      padding: 12px 14px;
-    }
-    .skill-category-body {
-      padding: 14px 14px 16px;
-    }
-    .skill-chip {
-      font-size: 0.8em;
-      padding: 4px 11px;
-    }
-    .skill-category-title h2 {
-      font-size: 0.92em !important;
-    }
+  .skills-card h2 {
+    margin: 0 0 0.55rem;
+    border: 0 !important;
+    padding: 0 !important;
+    color: var(--skills-title);
+    font-size: 1rem !important;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .skills-group + .skills-group {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--skills-border);
+  }
+
+  .skills-group h3 {
+    margin: 0 0 0.45rem;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--skills-title);
+    font-weight: 700;
+  }
+
+  @media (min-width: 900px) {
+    .skills-card.span-6 { grid-column: span 6; }
+    .skills-card.span-4 { grid-column: span 4; }
+    .skills-card.span-8 { grid-column: span 8; }
+  }
+
+  @media (max-width: 500px) {
+    .skills-card { padding: 0.85rem; }
+    .skills-tag { font-size: 0.78rem; }
+    .skills-card h2 { font-size: 0.94rem !important; }
   }
 </style>
 
-<div class="skills-intro">
-  A snapshot of everything I've picked up across programming, systems, AI, hardware, and more. <br>
-  Click any category to explore — use the controls below to expand or collapse all at once.
-</div>
+<div class="skills-page">
+  <section class="skills-hero">
+    <p>
+      This page is structured by domain so each area is easy to scan on mobile and desktop.
+      Every skill you finalized is kept intact and grouped under clear headings.
+    </p>
+  </section>
 
-<div class="skills-controls">
-  <span class="skills-control-btn" onclick="skillsExpandAll()">Expand All ▾</span>
-  <span class="skills-control-btn" onclick="skillsCollapseAll()">Collapse All ▴</span>
-</div>
+  <section class="skills-focus">
+    <strong>🚀 Focus Areas</strong>
+    <div class="skills-chip-row">
+      <span class="skills-tag">Artificial Intelligence</span>
+      <span class="skills-tag">Systems Programming &amp; Operating Systems</span>
+      <span class="skills-tag">Cybersecurity</span>
+      <span class="skills-tag">General Programming &amp; Problem Solving</span>
+    </div>
+  </section>
 
-
-<!-- ═══ 1. Programming Languages ═══ -->
-<div class="skill-category" id="sk-1">
-  <div class="skill-category-header" onclick="skillsToggle('sk-1')">
-    <div class="skill-category-title">
+  <section class="skills-grid">
+    <article class="skills-card span-6">
       <h2>🧠 Programming Languages</h2>
-      <span class="skill-count-badge">9 languages · 10 ecosystems</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-subgroup-label">Core Languages</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">🐍 Python</span>
-      <span class="skill-chip accent">⚡ C++</span>
-      <span class="skill-chip accent">🔵 C</span>
-      <span class="skill-chip accent">☕ Java</span>
-      <span class="skill-chip accent">🗄️ SQL</span>
-      <span class="skill-chip accent">🌐 HTML</span>
-      <span class="skill-chip accent">🎨 CSS</span>
-      <span class="skill-chip accent">📜 JavaScript</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Python – Modules &amp; Libraries</div>
-    <div class="skill-chips">
-      <span class="skill-chip">👁️ OpenCV</span>
-      <span class="skill-chip">📊 Matplotlib</span>
-      <span class="skill-chip">🐼 Pandas</span>
-      <span class="skill-chip">🔢 NumPy</span>
-      <span class="skill-chip">🔥 PyTorch basics</span>
-      <span class="skill-chip">🌐 Django</span>
-      <span class="skill-chip">🌶️ Flask</span>
-      <span class="skill-chip">🐍 Anaconda</span>
-      <span class="skill-chip">📓 Jupyter Notebook</span>
-      <span class="skill-chip">🐢 Turtle</span>
-      <span class="skill-chip">🖼️ Tkinter</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">C++ &amp; C</div>
-    <div class="skill-chips">
-      <span class="skill-chip">📚 STL</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-group">
+        <h3>Languages</h3>
+        <div class="skills-tags">
+          <span class="skills-tag">Python</span><span class="skills-tag">C++ (with STL)</span><span class="skills-tag">C</span><span class="skills-tag">Java</span><span class="skills-tag">SQL</span><span class="skills-tag">HTML</span><span class="skills-tag">CSS</span><span class="skills-tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <h3>Python Modules &amp; Libraries</h3>
+        <div class="skills-tags">
+          <span class="skills-tag">OpenCV</span><span class="skills-tag">Matplotlib</span><span class="skills-tag">Pandas</span><span class="skills-tag">NumPy</span><span class="skills-tag">PyTorch basics</span><span class="skills-tag">Django</span><span class="skills-tag">Flask</span><span class="skills-tag">Anaconda</span><span class="skills-tag">Jupyter Notebook</span><span class="skills-tag">Turtle</span><span class="skills-tag">Tkinter</span>
+        </div>
+      </div>
+    </article>
 
-
-<!-- ═══ 2. Core Computer Science ═══ -->
-<div class="skill-category" id="sk-2">
-  <div class="skill-category-header" onclick="skillsToggle('sk-2')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>⚙️ Core Computer Science</h2>
-      <span class="skill-count-badge">8 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-chips">
-      <span class="skill-chip accent">🌳 Data Structures &amp; Algorithms</span>
-      <span class="skill-chip accent">🏆 Competitive Programming</span>
-      <span class="skill-chip">⏱️ Time Complexity Analysis</span>
-      <span class="skill-chip">🐛 Debugging</span>
-      <span class="skill-chip">🧩 Modular Programming</span>
-      <span class="skill-chip">🏗️ Object-Oriented Programming</span>
-      <span class="skill-chip">🏛️ System Design (basic)</span>
-      <span class="skill-chip">🗃️ Database Management</span>
-      <span class="skill-chip">🐘 SQL</span>
-      <span class="skill-chip">🍃 MongoDB</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-tags">
+        <span class="skills-tag">Data Structures &amp; Algorithms</span><span class="skills-tag">Competitive Programming</span><span class="skills-tag">Time Complexity Analysis</span><span class="skills-tag">Debugging</span><span class="skills-tag">Modular Programming</span><span class="skills-tag">Object-Oriented Programming</span><span class="skills-tag">System Design (basic)</span><span class="skills-tag">Database Management (SQL, MongoDB)</span>
+      </div>
+  </article>
 
-
-<!-- ═══ 3. AI & Machine Learning ═══ -->
-<div class="skill-category" id="sk-3">
-  <div class="skill-category-header" onclick="skillsToggle('sk-3')">
-    <div class="skill-category-title">
+  <article class="skills-card span-8">
       <h2>🤖 Artificial Intelligence &amp; ML</h2>
-      <span class="skill-count-badge">17 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-subgroup-label">Foundations</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">🤖 Artificial Intelligence (foundations)</span>
-      <span class="skill-chip">➕ Linear Algebra</span>
-      <span class="skill-chip">🎲 Probability &amp; Statistics</span>
-      <span class="skill-chip">∫ basic Calculus</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Applied &amp; Systems</div>
-    <div class="skill-chips">
-      <span class="skill-chip">⚙️ Applied AI Systems</span>
-      <span class="skill-chip">📊 Data Interpretation</span>
-      <span class="skill-chip">📈 Data Analysis</span>
-      <span class="skill-chip">🔧 Data Engineering (basics)</span>
-      <span class="skill-chip">🔗 Model Context Protocol (MCP) basics</span>
-      <span class="skill-chip">📚 RAG (beginner)</span>
-      <span class="skill-chip">🕸️ Agentic System Integration (basics)</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">ML &amp; Deep Learning</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">🧮 Machine Learning Fundamentals</span>
-      <span class="skill-chip">🎓 Training &amp; Evaluation</span>
-      <span class="skill-chip">📉 Overfitting</span>
-      <span class="skill-chip">🔬 Feature Engineering</span>
-      <span class="skill-chip">🗂️ Dataset Handling</span>
-      <span class="skill-chip accent">🧠 Deep Learning Fundamentals</span>
-      <span class="skill-chip">🔁 Neural Networks</span>
-      <span class="skill-chip">⬅️ Backpropagation</span>
-      <span class="skill-chip">🖼️ CNN basics</span>
-      <span class="skill-chip">🔄 RNN basics</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">LLM &amp; Local Inference</div>
-    <div class="skill-chips">
-      <span class="skill-chip">📝 LLM Systems (Foundational)</span>
-      <span class="skill-chip">🔢 Embeddings</span>
-      <span class="skill-chip">🔤 Tokenization</span>
-      <span class="skill-chip">✍️ Prompt Engineering</span>
-      <span class="skill-chip">🦙 Ollama</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-group"><h3>Foundations</h3><div class="skills-tags"><span class="skills-tag">Artificial Intelligence (foundations)</span><span class="skills-tag">AI Mathematics (Linear Algebra, Probability, Statistics, basic Calculus)</span></div></div>
+      <div class="skills-group"><h3>Applied</h3><div class="skills-tags"><span class="skills-tag">Applied AI Systems</span><span class="skills-tag">Data Interpretation</span><span class="skills-tag">Data Analysis</span><span class="skills-tag">Data Engineering (basics)</span><span class="skills-tag">Model Context Protocol (MCP) basics</span><span class="skills-tag">Retrieval-Augmented Generation (RAG) beginner</span><span class="skills-tag">Agentic System Integration (basics)</span></div></div>
+      <div class="skills-group"><h3>ML / DL / LLM</h3><div class="skills-tags"><span class="skills-tag">Machine Learning Fundamentals (training, evaluation, overfitting, feature engineering, dataset handling)</span><span class="skills-tag">Deep Learning Fundamentals (neural networks, backpropagation, CNN/RNN basics)</span><span class="skills-tag">LLM Systems (Foundational Understanding) (embeddings, tokenization, prompt engineering)</span><span class="skills-tag">Local AI / Inference Tools (Ollama)</span></div></div>
+  </article>
 
-
-<!-- ═══ 4. Software Development ═══ -->
-<div class="skill-category" id="sk-4">
-  <div class="skill-category-header" onclick="skillsToggle('sk-4')">
-    <div class="skill-category-title">
+  <article class="skills-card span-4">
       <h2>💻 Software Development</h2>
-      <span class="skill-count-badge">10 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-chips">
-      <span class="skill-chip">⌨️ CLI Development</span>
-      <span class="skill-chip">🖥️ GUI Development</span>
-      <span class="skill-chip">🖼️ Tkinter</span>
-      <span class="skill-chip">⚡ Electron</span>
-      <span class="skill-chip">🪟 .NET basics</span>
-      <span class="skill-chip">🔙 Backend Development</span>
-      <span class="skill-chip">🌶️ Flask</span>
-      <span class="skill-chip">🌐 Django</span>
-      <span class="skill-chip">🧪 Testing (unit / integration awareness)</span>
-      <span class="skill-chip">📦 pip</span>
-      <span class="skill-chip">📦 npm</span>
-      <span class="skill-chip">🐍 conda</span>
-      <span class="skill-chip">📦 apt</span>
-      <span class="skill-chip">🖥️ Bash Scripting</span>
-      <span class="skill-chip">🪟 PowerShell</span>
-      <span class="skill-chip">🔍 Browser DevTools &amp; Debugging</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-tags"><span class="skills-tag">CLI Development</span><span class="skills-tag">GUI Development (Tkinter, Electron, .NET basics)</span><span class="skills-tag">Backend Development (Flask, Django)</span><span class="skills-tag">Testing (basic unit/integration awareness)</span><span class="skills-tag">Package &amp; Dependency Management (pip, npm, conda, apt)</span><span class="skills-tag">Shell Scripting (Bash, PowerShell)</span><span class="skills-tag">Browser DevTools &amp; Debugging</span></div>
+  </article>
 
-
-<!-- ═══ 5. DevOps, Cloud & Virtualization ═══ -->
-<div class="skill-category" id="sk-5">
-  <div class="skill-category-header" onclick="skillsToggle('sk-5')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🧱 DevOps, Cloud &amp; Virtualization</h2>
-      <span class="skill-count-badge">10 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-subgroup-label">Version Control &amp; CI/CD</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">🔀 Git</span>
-      <span class="skill-chip accent">🐙 GitHub</span>
-      <span class="skill-chip">🔄 CI/CD</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Containers &amp; Virtualization</div>
-    <div class="skill-chips">
-      <span class="skill-chip">🐳 Docker</span>
-      <span class="skill-chip">📦 LXC</span>
-      <span class="skill-chip">🖥️ Proxmox</span>
-      <span class="skill-chip">🔲 VMs &amp; Hypervisors</span>
-      <span class="skill-chip">📦 VirtualBox</span>
-      <span class="skill-chip">🔧 VMware</span>
-      <span class="skill-chip">⚡ QEMU basics</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Hosting &amp; Infrastructure</div>
-    <div class="skill-chips">
-      <span class="skill-chip">🖥️ Server Hosting &amp; Management</span>
-      <span class="skill-chip">☁️ Cloudflare</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-tags"><span class="skills-tag">Git</span><span class="skills-tag">GitHub</span><span class="skills-tag">CI/CD</span><span class="skills-tag">Docker</span><span class="skills-tag">LXC</span><span class="skills-tag">Proxmox</span><span class="skills-tag">Virtualization Concepts (VMs, hypervisors, VirtualBox, VMware, QEMU basics)</span><span class="skills-tag">Server Hosting &amp; Management</span><span class="skills-tag">Cloudflare</span></div>
+  </article>
 
-
-<!-- ═══ 6. Operating Systems & Systems ═══ -->
-<div class="skill-category" id="sk-6">
-  <div class="skill-category-header" onclick="skillsToggle('sk-6')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🖥️ Operating Systems &amp; Systems</h2>
-      <span class="skill-count-badge">25+ skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-subgroup-label">Windows</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">🪟 Windows</span>
-      <span class="skill-chip">🔩 Advanced Windows Internals</span>
-      <span class="skill-chip">💾 DOS &amp; NT Kernel</span>
-      <span class="skill-chip">🪟 Windows 95 → Windows 11</span>
-      <span class="skill-chip">🏗️ Multi-architecture (16/32/64-bit, ARM)</span>
-      <span class="skill-chip">📟 Embedded / POS Windows</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Linux &amp; UNIX</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">🐧 Linux</span>
-      <span class="skill-chip">🟡 Advanced Linux (Debian-based)</span>
-      <span class="skill-chip">🎩 Fedora-based</span>
-      <span class="skill-chip">🔧 x86, ARM, RISC architectures</span>
-      <span class="skill-chip">📟 Embedded Linux</span>
-      <span class="skill-chip">🦀 macOS</span>
-      <span class="skill-chip">🌐 ChromeOS</span>
-      <span class="skill-chip">😈 BSD (Unix)</span>
-      <span class="skill-chip">☀️ Solaris</span>
-      <span class="skill-chip">🤖 Android</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">RTOS</div>
-    <div class="skill-chips">
-      <span class="skill-chip">⏱️ RTOS Concepts</span>
-      <span class="skill-chip">⚡ Zephyr RTOS</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Systems Knowledge</div>
-    <div class="skill-chips">
-      <span class="skill-chip">🔄 Processes &amp; Threads</span>
-      <span class="skill-chip">👻 Linux Processes &amp; Daemons</span>
-      <span class="skill-chip">🧠 Memory Concepts (basic)</span>
-      <span class="skill-chip">💾 Storage Management (HDD, SSD, swap)</span>
-      <span class="skill-chip">🗒️ Windows Registry &amp; Driver Management</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-group"><h3>Operating Systems</h3><div class="skills-tags"><span class="skills-tag">Operating Systems (conceptual + practical)</span><span class="skills-tag">Windows</span><span class="skills-tag">Advanced Windows Internals</span><span class="skills-tag">DOS &amp; NT Kernel</span><span class="skills-tag">Windows 95 → Windows 11</span><span class="skills-tag">Multi-architecture (16/32/64-bit, ARM)</span><span class="skills-tag">Embedded / POS Windows</span><span class="skills-tag">Linux</span><span class="skills-tag">Advanced Linux (Debian-based, Fedora-based)</span><span class="skills-tag">x86, ARM, RISC architectures</span><span class="skills-tag">Embedded Linux</span><span class="skills-tag">UNIX/Linux-Based Systems</span><span class="skills-tag">macOS</span><span class="skills-tag">ChromeOS</span><span class="skills-tag">Unix (BSD)</span><span class="skills-tag">Solaris</span><span class="skills-tag">Android</span><span class="skills-tag">RTOS</span><span class="skills-tag">RTOS Concepts</span><span class="skills-tag">Zephyr RTOS</span></div></div>
+      <div class="skills-group"><h3>Systems Knowledge</h3><div class="skills-tags"><span class="skills-tag">Processes &amp; Threads</span><span class="skills-tag">Linux Processes &amp; Daemons</span><span class="skills-tag">Memory Concepts (basic)</span><span class="skills-tag">Storage Management (HDD, SSD, swap, health monitoring)</span><span class="skills-tag">Windows Registry &amp; Driver Management</span></div></div>
+  </article>
 
-
-<!-- ═══ 7. Networking & Infrastructure ═══ -->
-<div class="skill-category" id="sk-7">
-  <div class="skill-category-header" onclick="skillsToggle('sk-7')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🌐 Networking &amp; Infrastructure</h2>
-      <span class="skill-count-badge">8 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-chips">
-      <span class="skill-chip accent">🌐 Networking Fundamentals</span>
-      <span class="skill-chip">📡 Computer Networks (Intermediate)</span>
-      <span class="skill-chip">🔗 TCP/IP (conceptual)</span>
-      <span class="skill-chip">🌍 DNS Management &amp; Hosts</span>
-      <span class="skill-chip">🛤️ Routing &amp; Routers</span>
-      <span class="skill-chip">🖥️ Server Setup &amp; Management</span>
-      <span class="skill-chip">🔒 Tailscale (VPN)</span>
-      <span class="skill-chip">🔐 SSH (Remote Access)</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-tags"><span class="skills-tag">Networking Fundamentals</span><span class="skills-tag">Computer Networks (Intermediate)</span><span class="skills-tag">TCP/IP (conceptual understanding)</span><span class="skills-tag">DNS Management &amp; Hosts</span><span class="skills-tag">Routing &amp; Routers</span><span class="skills-tag">Server Setup &amp; Management</span><span class="skills-tag">Tailscale (VPN / networking)</span><span class="skills-tag">SSH (Remote Access)</span></div>
+  </article>
 
-
-<!-- ═══ 8. Cybersecurity ═══ -->
-<div class="skill-category" id="sk-8">
-  <div class="skill-category-header" onclick="skillsToggle('sk-8')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🔐 Cybersecurity</h2>
-      <span class="skill-count-badge">12 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-subgroup-label">Foundations</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">🛡️ Cybersecurity Fundamentals</span>
-      <span class="skill-chip">🔑 Cryptography (basic)</span>
-      <span class="skill-chip">🔒 Secure Communication Concepts</span>
-      <span class="skill-chip">🔏 End-to-End Encryption</span>
-      <span class="skill-chip">⚠️ Basic Threat Awareness</span>
-      <span class="skill-chip">🌐 OWASP Concepts (introductory)</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Tools</div>
-    <div class="skill-chips">
-      <span class="skill-chip">💥 Metasploit</span>
-      <span class="skill-chip">🕷️ Burp Suite</span>
-      <span class="skill-chip">🦈 Wireshark</span>
-      <span class="skill-chip">📡 tcpdump</span>
-      <span class="skill-chip">🔍 Nmap</span>
-      <span class="skill-chip">💉 SQL Injection (Kali Linux)</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-group"><h3>Tools</h3><div class="skills-tags"><span class="skills-tag">Metasploit</span><span class="skills-tag">Burp Suite</span><span class="skills-tag">Wireshark</span><span class="skills-tag">tcpdump</span><span class="skills-tag">Nmap</span><span class="skills-tag">SQL Injection (Kali Linux)</span></div></div>
+      <div class="skills-group"><h3>Concepts</h3><div class="skills-tags"><span class="skills-tag">Cybersecurity Fundamentals</span><span class="skills-tag">Cryptography (basic)</span><span class="skills-tag">Secure Communication Concepts</span><span class="skills-tag">End-to-End Encryption</span><span class="skills-tag">Basic Threat Awareness</span><span class="skills-tag">OWASP Concepts (introductory)</span></div></div>
+  </article>
 
-
-<!-- ═══ 9. Embedded Systems & Hardware ═══ -->
-<div class="skill-category" id="sk-9">
-  <div class="skill-category-header" onclick="skillsToggle('sk-9')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🔌 Embedded Systems &amp; Hardware</h2>
-      <span class="skill-count-badge">8 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-chips">
-      <span class="skill-chip accent">🔌 Embedded Systems Programming</span>
-      <span class="skill-chip">🔧 Microprocessor Programming &amp; Development</span>
-      <span class="skill-chip">📡 ESP32</span>
-      <span class="skill-chip">🤖 Arduino Uno / Uno Q</span>
-      <span class="skill-chip">🍓 Raspberry Pi</span>
-      <span class="skill-chip">📐 Circuit Design &amp; Board Development</span>
-      <span class="skill-chip">🌐 IoT Systems</span>
-      <span class="skill-chip">📦 Sensors &amp; Robotics</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-tags"><span class="skills-tag">Embedded Systems Programming</span><span class="skills-tag">Microprocessor Programming &amp; Development</span><span class="skills-tag">ESP32</span><span class="skills-tag">Arduino Uno / Uno Q</span><span class="skills-tag">Raspberry Pi</span><span class="skills-tag">Circuit Design &amp; Board Development</span><span class="skills-tag">IoT Systems</span><span class="skills-tag">Sensors &amp; Robotics</span></div>
+  </article>
 
-
-<!-- ═══ 10. Web Development & Internet ═══ -->
-<div class="skill-category" id="sk-10">
-  <div class="skill-category-header" onclick="skillsToggle('sk-10')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🌍 Web Development &amp; Internet</h2>
-      <span class="skill-count-badge">9 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-chips">
-      <span class="skill-chip accent">🌐 Static Website Development</span>
-      <span class="skill-chip">💎 Jekyll</span>
-      <span class="skill-chip">📝 Markdown</span>
-      <span class="skill-chip">📄 GitHub Pages Deployment</span>
-      <span class="skill-chip">🧱 Website Structuring</span>
-      <span class="skill-chip">🔍 SEO (Google Search Console)</span>
-      <span class="skill-chip">📋 JSON</span>
-      <span class="skill-chip">📋 XML</span>
-      <span class="skill-chip">📋 YAML</span>
-      <span class="skill-chip">📊 CSV</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Emerging Tech</div>
-    <div class="skill-chips">
-      <span class="skill-chip">⚛️ Quantum Computing (introductory)</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-tags"><span class="skills-tag">Static Website Development</span><span class="skills-tag">Jekyll</span><span class="skills-tag">Markdown</span><span class="skills-tag">GitHub Pages Deployment</span><span class="skills-tag">Website Structuring</span><span class="skills-tag">SEO (Google Search Console)</span><span class="skills-tag">JSON</span><span class="skills-tag">XML</span><span class="skills-tag">YAML</span><span class="skills-tag">CSV</span></div>
+  </article>
 
+  <article class="skills-card span-6">
+      <h2>🧠 Advanced &amp; Emerging Tech</h2>
+      <div class="skills-tags"><span class="skills-tag">Quantum Computing (introductory)</span></div>
+  </article>
 
-<!-- ═══ 11. Tools & Platforms ═══ -->
-<div class="skill-category" id="sk-11">
-  <div class="skill-category-header" onclick="skillsToggle('sk-11')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🧰 Tools &amp; Platforms</h2>
-      <span class="skill-count-badge">20+ tools</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-subgroup-label">Editors &amp; IDEs</div>
-    <div class="skill-chips">
-      <span class="skill-chip accent">💙 VS Code / VSCodium</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Productivity &amp; Office</div>
-    <div class="skill-chips">
-      <span class="skill-chip">📊 Microsoft Office</span>
-      <span class="skill-chip">📄 LibreOffice</span>
-      <span class="skill-chip">🌐 Google Workspace</span>
-      <span class="skill-chip">☁️ Nextcloud</span>
-      <span class="skill-chip">📝 Collabora Office</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">Media &amp; File Handling</div>
-    <div class="skill-chips">
-      <span class="skill-chip">🎨 Photoshop</span>
-      <span class="skill-chip">🎨 Photopea</span>
-      <span class="skill-chip">✨ Adobe Firefly</span>
-      <span class="skill-chip">🎬 Clipchamp</span>
-      <span class="skill-chip">🎥 Premiere Pro</span>
-      <span class="skill-chip">🖼️ WEBP / JPEG / PNG</span>
-      <span class="skill-chip">🎞️ MKV / MOV / MP4</span>
-      <span class="skill-chip">📦 H.264 / H.265 / HEVC</span>
-      <span class="skill-chip">🗜️ Compression &amp; Conversion</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">App Development</div>
-    <div class="skill-chips">
-      <span class="skill-chip">📱 MIT App Inventor</span>
-      <span class="skill-chip">🤖 APK Dev, Tweaking &amp; Reverse Engineering</span>
-    </div>
-    <hr class="skill-divider">
-    <div class="skill-subgroup-label">System Administration</div>
-    <div class="skill-chips">
-      <span class="skill-chip">🕵️ Privacy Management</span>
-      <span class="skill-chip">🚫 Ad &amp; Tracker Blocking</span>
-      <span class="skill-chip">🌐 DNS &amp; Network Configuration</span>
-      <span class="skill-chip">⚡ System Optimization</span>
-      <span class="skill-chip">🔑 Access, Accounts &amp; Permissions (rwx)</span>
-    </div>
-  </div>
-</div>
+      <div class="skills-group"><h3>General Tools</h3><div class="skills-tags"><span class="skills-tag">VS Code / VSCodium</span></div></div>
+      <div class="skills-group"><h3>Office &amp; Productivity</h3><div class="skills-tags"><span class="skills-tag">Microsoft Office</span><span class="skills-tag">LibreOffice</span><span class="skills-tag">Google Workspace</span><span class="skills-tag">Nextcloud</span><span class="skills-tag">Collabora Office</span></div></div>
+      <div class="skills-group"><h3>Media &amp; File Handling</h3><div class="skills-tags"><span class="skills-tag">Image Editing (Photoshop, Photopea, Adobe Firefly)</span><span class="skills-tag">Video Editing (Clipchamp, Premiere Pro)</span><span class="skills-tag">Media Formats &amp; Processing (WEBP, PDF, JPEG, PNG, MKV, MOV, MP4, AV, H.264, H.265, HEVC, compression, conversion)</span></div></div>
+      <div class="skills-group"><h3>App Development</h3><div class="skills-tags"><span class="skills-tag">MIT App Inventor</span><span class="skills-tag">APK Development, Tweaking &amp; Reverse Engineering</span></div></div>
+  </article>
 
+  <article class="skills-card span-6">
+      <h2>🛠️ System Administration &amp; Utilities</h2>
+      <div class="skills-tags"><span class="skills-tag">Privacy Management</span><span class="skills-tag">Ad &amp; Tracker Blocking</span><span class="skills-tag">DNS &amp; Network Configuration</span><span class="skills-tag">System Optimization</span><span class="skills-tag">Access, Accounts &amp; Permissions (rwx)</span></div>
+  </article>
 
-<!-- ═══ 12. Soft Skills & Leadership ═══ -->
-<div class="skill-category" id="sk-12">
-  <div class="skill-category-header" onclick="skillsToggle('sk-12')">
-    <div class="skill-category-title">
+  <article class="skills-card span-6">
       <h2>🧠 Soft Skills &amp; Leadership</h2>
-      <span class="skill-count-badge">6 skills</span>
-    </div>
-    <span class="skill-chevron"></span>
-  </div>
-  <div class="skill-category-body">
-    <div class="skill-chips">
-      <span class="skill-chip accent">👥 Team Leadership</span>
-      <span class="skill-chip">🗓️ Event Management</span>
-      <span class="skill-chip">🎓 Mentorship</span>
-      <span class="skill-chip">🎤 Public Speaking</span>
-      <span class="skill-chip">📊 Presentation Skills</span>
-      <span class="skill-chip">✍️ Academic Writing</span>
-    </div>
-  </div>
+      <div class="skills-tags"><span class="skills-tag">Team Leadership</span><span class="skills-tag">Event Management</span><span class="skills-tag">Mentorship</span><span class="skills-tag">Public Speaking</span><span class="skills-tag">Presentation Skills</span><span class="skills-tag">Academic Writing</span></div>
+  </article>
+</section>
 </div>
-
-
-<script>
-(function () {
-  /* ── Toggle a single category ── */
-  function skillsToggle(id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    el.classList.toggle('collapsed');
-  }
-
-  /* ── Expand all ── */
-  function skillsExpandAll() {
-    document.querySelectorAll('.skill-category').forEach(function (el) {
-      el.classList.remove('collapsed');
-    });
-  }
-
-  /* ── Collapse all ── */
-  function skillsCollapseAll() {
-    document.querySelectorAll('.skill-category').forEach(function (el) {
-      el.classList.add('collapsed');
-    });
-  }
-
-  /* Expose to global scope for onclick handlers */
-  window.skillsToggle = skillsToggle;
-  window.skillsExpandAll = skillsExpandAll;
-  window.skillsCollapseAll = skillsCollapseAll;
-})();
-</script>
