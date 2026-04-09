@@ -533,8 +533,9 @@ author_profile: true
     <h2>📋 Quick Navigation <span class="toc-count">41 achievements</span></h2>
     <span class="toc-chevron"></span>
   </div>
-  <div class="toc-search-wrap">
-    <input type="text" class="toc-search" id="tocSearch" placeholder="🔍 Search achievements… (try: quiz, coding, olympiad, MUN)">
+  <div class="toc-search-wrap" style="position: relative;">
+    <span style="position: absolute; left: 30px; top: 19px; z-index: 2; pointer-events: none; font-size: 0.9em;">🔍</span>
+    <input type="text" class="toc-search" id="tocSearch" placeholder="  Search achievements… (try: quiz, coding, olympiad, MUN)" style="padding-left: 32px;">
   </div>
   <div class="toc-body" id="tocBody">
     <ul class="toc-list" id="tocList">

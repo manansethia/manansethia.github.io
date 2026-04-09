@@ -515,14 +515,29 @@ document.documentElement.classList.add('dark-mode');
         this.ctx = this.canvas.getContext('2d');
         this.fontSize = 20;
         this.columns = [];
+        this.lastWidth = window.innerWidth;
         this.resize();
-        window.addEventListener('resize', () => this.resize());
+        window.addEventListener('resize', () => {
+          if (window.innerWidth !== this.lastWidth) {
+            this.lastWidth = window.innerWidth;
+            this.resize();
+          }
+        });
         this.animate();
       }
       
       resize() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        /* Ignore mobile address bar hide/show triggers which only alter height slightly */
+        if (this.canvas.width === w && Math.abs(this.canvas.height - h) < 150) return;
+        
+        this.canvas.width = w;
+        this.canvas.height = h;
+        /* Remove inline overrides just in case they were appended */
+        this.canvas.style.width = '100vw';
+        this.canvas.style.height = '100vh';
+        
         const spacing = this.fontSize * 0.8; /* 20% higher density */
         const colCount = Math.floor(this.canvas.width / spacing);
         this.columns = [];

@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
             
             /* Scaled back to original preferred size */
             let size = Math.floor(250 + Math.random() * 100); 
-            if (window.innerWidth < 768) {
+            if (window.innerWidth >= 1440) {
+               size = Math.floor(380 + Math.random() * 160); /* ultra-large monitors */
+            } else if (window.innerWidth < 768) {
                size = Math.floor(150 + Math.random() * 60); /* smaller phones/tablets */
             } else if (window.innerWidth < 1024) {
                size = Math.floor(190 + Math.random() * 70); /* smaller laptops */

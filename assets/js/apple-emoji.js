@@ -13,6 +13,7 @@
   "⚔": "/images/emoji/emoji-2694.webp",
   "⚙": "/images/emoji/emoji-2699.webp",
   "⚙️": "/images/emoji/emoji-2699.webp",
+  "⌨️": "/images/emoji/emoji-2328.webp",
   "⚠": "/images/emoji/emoji-26A0.webp",
   "⚡": "/images/emoji/emoji-26A1.webp",
   "✅": "/images/emoji/emoji-2705.webp",
@@ -75,6 +76,7 @@
   "🕙": "/images/emoji/emoji-1F559.webp",
   "🖥": "/images/emoji/emoji-1F5A5.webp",
   "🖥️": "/images/emoji/emoji-1F5A5.webp",
+  "🕸️": "/images/emoji/emoji-1F578.webp",
   "🗄": "/images/emoji/emoji-1F5C4.webp",
   "🗓": "/images/emoji/emoji-1F5D3.webp",
   "😆": "/images/emoji/emoji-1F606.webp",
@@ -153,6 +155,8 @@
       node.nodeName !== 'STYLE' &&
       node.nodeName !== 'TEXTAREA' &&
       node.nodeName !== 'INPUT' &&
+      node.nodeName !== 'CODE' &&
+      node.nodeName !== 'PRE' &&
       !node.classList.contains('no-emoji')
     ) {
       var children = Array.from(node.childNodes);
