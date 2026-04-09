@@ -40,31 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById('sacred-geometry-overlay');
     if (!overlay) return;
 
-    // Include the parsed custom user sigils (auto-traced SVG paths from output.svg)
-    // Removed Jekyll include to fix IDE IDE error: now loaded securely above via <script src>
+    /* Include the parsed custom user sigils (auto-traced SVG paths from output.svg) */
+    /* Removed Jekyll include to fix IDE IDE error: now loaded securely above via <script src> */
     
-    // Check if OCCULT_SIGILS loaded securely, fallback to empty in worst-case delay
+    /* Check if OCCULT_SIGILS loaded securely, fallback to empty in worst-case delay */
     const generators = OCCULT_SIGILS && OCCULT_SIGILS.length ? OCCULT_SIGILS : [];
 
     
     let lastPopulatedY = 250;
     let isLeft = true;
     
-    // Dynamically stamps SVG objects down the page height
+    /* Dynamically stamps SVG objects down the page height */
     const populateToHeight = (targetHeight) => {
-        // Expand the literal height of the overlay container perfectly
+        /* Expand the literal height of the overlay container perfectly */
         overlay.style.height = targetHeight + 'px';
         
         while (lastPopulatedY < targetHeight - 350) {
             let div = document.createElement('div');
             div.className = 'sg-shape';
             
-            // Scaled back to original preferred size
+            /* Scaled back to original preferred size */
             let size = Math.floor(250 + Math.random() * 100); 
             if (window.innerWidth < 768) {
-               size = Math.floor(150 + Math.random() * 60); // smaller phones/tablets
+               size = Math.floor(150 + Math.random() * 60); /* smaller phones/tablets */
             } else if (window.innerWidth < 1024) {
-               size = Math.floor(190 + Math.random() * 70); // smaller laptops
+               size = Math.floor(190 + Math.random() * 70); /* smaller laptops */
             }
             
             div.style.width = size + 'px';
@@ -78,23 +78,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 div.style.right = edgeOffset; 
             }
             
-            // Randomly rotate the geometries to blend them more seamlessly over the background
+            /* Randomly rotate the geometries to blend them more seamlessly over the background */
             div.style.transform = `rotate(${Math.random() * 360}deg)`;
             
             let genSVG = generators[Math.floor(Math.random() * generators.length)];
             
-            // Animation logic is pre-embedded per path recursively in the python generation
+            /* Animation logic is pre-embedded per path recursively in the python generation */
             div.innerHTML = genSVG;
             
             overlay.appendChild(div);
             
             isLeft = !isLeft;
-            // Densify spawn interval
+            /* Densify spawn interval */
             lastPopulatedY += Math.floor(500 + Math.random() * 300); 
         }
     };
 
-    // Use ResizeObserver to detect layout flashes, image loads, and expanding pages
+    /* Use ResizeObserver to detect layout flashes, image loads, and expanding pages */
     const ro = new ResizeObserver(entries => {
         for (let entry of entries) {
             populateToHeight(entry.target.scrollHeight);
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.body) ro.observe(document.body);
     if (document.documentElement) ro.observe(document.documentElement);
     
-    // Explicit initial fire
+    /* Explicit initial fire */
     populateToHeight(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight));
 });
 </script>

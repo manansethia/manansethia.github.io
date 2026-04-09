@@ -523,14 +523,14 @@ document.documentElement.classList.add('dark-mode');
       resize() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        const spacing = this.fontSize * 0.8; // 20% higher density
+        const spacing = this.fontSize * 0.8; /* 20% higher density */
         const colCount = Math.floor(this.canvas.width / spacing);
         this.columns = [];
         for(let i=0; i<colCount; i++) {
           this.columns.push({
             x: i * spacing,
-            y: (Math.random() * -2000), // Random start above screen
-            speed: Math.random() * 0.17 + 0.06, // 10% faster
+            y: (Math.random() * -2000), /* Random start above screen */
+            speed: Math.random() * 0.17 + 0.06, /* 10% faster */
             nameIdx: -1,
             chars: []
           });
@@ -546,12 +546,12 @@ document.documentElement.classList.add('dark-mode');
         const r = isDark ? 255 : 145;
         const g = isDark ? 200 : 95;
         const b = isDark ? 110 : 20;
-        const maxAlpha = isDark ? 0.18 : 0.15; // Minutely decreased dark mode, softened light mode
+        const maxAlpha = isDark ? 0.18 : 0.15; /* Minutely decreased dark mode, softened light mode */
         
         const nameSeq = ["म", "न", "न", "से", "ठि", "या"];
 
         for (let col of this.columns) {
-          // Unsteady appearance/falling speed
+          /* Unsteady appearance/falling speed */
           col.speed = Math.max(0.04, Math.min(0.28, col.speed + (Math.random() - 0.5) * 0.03));
           
           if (Math.random() < col.speed) {
@@ -560,7 +560,7 @@ document.documentElement.classList.add('dark-mode');
             let charStr = "";
             let isHighlight = false;
             
-            // Random chance to start the name sequence (Approx once every 2-5 min across all columns)
+            /* Random chance to start the name sequence (Approx once every 2-5 min across all columns) */
             if (col.nameIdx === -1 && Math.random() < 0.000015) {
                col.nameIdx = 0;
             }
@@ -573,7 +573,7 @@ document.documentElement.classList.add('dark-mode');
                    col.nameIdx = -1;
                }
             } else {
-               // Devanagari primary consonants and vowels: 2308 (\u0904) to 2361 (\u0939)
+               /* Devanagari primary consonants and vowels: 2308 (\u0904) to 2361 (\u0939) */
                const charCode = Math.floor(Math.random() * 54) + 2308; 
                charStr = String.fromCharCode(charCode);
             }
@@ -596,15 +596,15 @@ document.documentElement.classList.add('dark-mode');
             
             let drawAlpha = drop.opacity * maxAlpha;
             if (drop.isHighlight) {
-                // When your name appears, make it extremely opaque (brightest in dark, darkest in light)
+                /* When your name appears, make it extremely opaque (brightest in dark, darkest in light) */
                 drawAlpha = isDark ? (drop.opacity * 0.9) : (drop.opacity * 0.85);
             }
             
-            // Render character
+            /* Render character */
             this.ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${drawAlpha})`;
             this.ctx.fillText(drop.char, col.x, drop.y);
             
-            // Unsteady disappearing effect. Highlight (name) characters stick for much longer.
+            /* Unsteady disappearing effect. Highlight (name) characters stick for much longer. */
             if (drop.isHighlight) {
                 drop.opacity -= (Math.random() * 0.003 + 0.001); 
             } else {
@@ -619,7 +619,7 @@ document.documentElement.classList.add('dark-mode');
       }
     }
     
-    // Initialize if supported
+    /* Initialize if supported */
     if (document.getElementById('matrix-rain')) {
       new MatrixRain('matrix-rain');
     }
