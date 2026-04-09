@@ -561,11 +561,11 @@ author_profile: true
       <li data-tags="olympiad international earth science ieso 2024 geology india international represented medal"><a href="#ach-20"><span class="toc-num">20.</span><span class="toc-title">🌏 International Earth Science Olympiad 2024 <span class="toc-date">(August 2024)</span></span></a></li>
       <li data-tags="quiz finance sebi nflq national financial literacy central zone ranked first 2024"><a href="#ach-21"><span class="toc-num">21.</span><span class="toc-title">💳 Ranked 1st Central Zone – NFLQ 2024 <span class="toc-date">(May 2024)</span></span></a></li>
       <li data-tags="science chemistry international raci quiz high distinction australia 2023 2024"><a href="#ach-22"><span class="toc-num">22.</span><span class="toc-title">🧪 High Distinction – Int'l Chemistry Quiz <span class="toc-date">(March 2024)</span></span></a></li>
-      <li data-tags="tech innovation inspire manak dst mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project dlepc atl"><a href="#ach-23"><span class="toc-num">23.</span><span class="toc-title">💡 Qualified DLEPC – INSPIRE MANAK <span class="toc-date">(February 2024)</span></span></a></li>
+      <li data-tags="tech innovation inspire manak dst mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project dlepc atl coding code"><a href="#ach-23"><span class="toc-num">23.</span><span class="toc-title">💡 Qualified DLEPC – INSPIRE MANAK <span class="toc-date">(February 2024)</span></span></a></li>
       <li data-tags="tech innovation coding hackathon jsih junior smart india mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project ministry education national"><a href="#ach-24"><span class="toc-num">24.</span><span class="toc-title">💡 National Rounds – Jr. Smart India Hackathon <span class="toc-date">(January 2024)</span></span></a></li>
       <li data-tags="quiz heritage cbse heritage india bhubaneswar 2023 runner up regional history culture"><a href="#ach-25"><span class="toc-num">25.</span><span class="toc-title">🛕 Runner-Up Bhubaneswar – CBSE HIQ 2023 <span class="toc-date">(December 2023)</span></span></a></li>
       <li data-tags="quiz tech coding nexus ssipmt 2023 technical raipur winner shankaracharya 2k23"><a href="#ach-26"><span class="toc-num">26.</span><span class="toc-title">👨‍💻 Winner Tech Quiz – Nexus 2K23 <span class="toc-date">(November 2023)</span></span></a></li>
-      <li data-tags="tech innovation youth ideathon mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project top 1000 cbse thinkstartup"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
+      <li data-tags="tech innovation youth ideathon mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project top 1000 cbse thinkstartup coding code"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
       <li data-tags="quiz sports ultimate sports quiz usq national runners up macbook kps viacom jiohotstar tv 2023"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
       <li data-tags="tech ai coding data ai talks igebra mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project winner ipad champion group c senior 2023"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
       <li data-tags="quiz general knowledge mind wars zee5 top5 national 2023 academic championship"><a href="#ach-30"><span class="toc-num">30.</span><span class="toc-title">🧠 All India Top 5 – Mind Wars 2023 <span class="toc-date">(May 2023)</span></span></a></li>
@@ -1087,11 +1087,9 @@ author_profile: true
     🏢 <em>Organized by the International Geoscience Education Organisation (IGEO).</em><br>
   </div>
 
-  <p>The International Earth Science Olympiad (IESO) is a prestigious global academic competition that brings together top school/junior college students from around the world to assess excellence in multiple domains of Earth Science, including geology, meteorology, oceanography, environmental science, and data interpretation.</p> 
-  <p>It is organized by the International Geoscience Education Organisation (IGEO) with the aim of promoting geoscience education and international scientific collaboration.</p>
-  <p>It features three core components: Earth System Project (ESP), which evaluates interdisciplinary understanding of Earth processes through scientific poster making and presentation between mixed international teams; the International Team Field Investigation (ITFI), a collaborative, field-based exercise conducted in mixed international teams; and an Individual Test that tests conceptual knowledge, data interpretation, and analytical skills across the Earth sciences.</p>
-  <p>In India, the selection process for IESO is conducted by the Geological Society of India(GSI) through a rigorous multi-stage pathway comprising the Indian National Earth Science Olympiad (INESO), followed by intensive training at the Indian National Camp and the Pre-Departure Training Camp.</p>
-  <p>Following this national selection and training process, I was selected to represent India as a member of Team India at Beijing, China.</p>
+  <p>The International Earth Science Olympiad (IESO) is a prestigious global competition organized by the International Geoscience Education Organisation (IGEO). It assesses excellence across multiple Earth Science domains, including geology, meteorology, and oceanography, while promoting international scientific collaboration.</p>
+  <p>The event features three core components: the interdisciplinary Earth System Project (ESP), the collaborative International Team Field Investigation (ITFI), and a rigorous Individual Test.</p>
+  <p>In India, the multi-stage selection process is conducted by the Geological Society of India (GSI), culminating in intensive national training camps. Following this rigorous pathway, I was honored to be selected to represent India at the international finals in Beijing, China.</p>
 
   <div class="achievement-images-text">
     <img src="/images/ieso.webp" alt="International Earth Science Olympiad 2024">
@@ -1107,9 +1105,8 @@ author_profile: true
     📍 <em>Beijing, China</em>
   </div>
 
-  <p>The Earth System Project (ESP) was conducted in international teams, each comprising students from multiple countries. My team, <strong>ESP-E</strong>, included students from <strong>India, Austria, South Korea, Germany, Belarus, and Macao</strong>. We were assigned the theme of <strong>Atmosphere</strong>, and our project focused on the historical evolution of Earth’s atmosphere, its key transitions, and its role in sustaining life.</p>
-
-  <p>I led the research direction and overall design of the project, while also distributing specific research components among team members to ensure efficient collaboration. I was primarily responsible for synthesizing the findings and designing the final poster presentation. Our project was evaluated as the <strong>highest-rated Earth System Project</strong> among all teams, securing the <strong>Gold Award</strong>.</p>
+  <p>The Earth System Project (ESP) is a collaborative effort conducted in mixed international teams. My team included students from India, Austria, South Korea, Germany, Belarus, and Macao. We worked on the theme of <strong>Atmosphere</strong>, focusing on its historical evolution, key transitions, and role in sustaining life.</p>
+  <p>I proudly led the research direction, synthesized our findings, and designed the final poster presentation. Our hard work paid off when our presentation was evaluated as the <strong>highest-rated Earth System Project</strong>, securing the <strong>Gold Award</strong>.</p>
 
   <div class="achievement-images">
     <img src="/images/iesog1.webp" alt="IESO">
@@ -1130,10 +1127,9 @@ author_profile: true
     📍 <em>Beijing, China</em>
   </div>
 
-  <p>The Individual Test is a rigorous written and practical examination designed to assess each participant’s independent mastery of Earth sciences.</p> 
-  <p>It typically includes both theoretical questions and practical problem-solving tasks covering disciplines such as geology, meteorology, oceanography and environmental science, requiring analytical thinking and application of earth system concepts.</p>
-  <p>It also featured a <strong>Data Mining Test (DMT)</strong> component, which involved analyzing large datasets related to Earth’s history. This section assessed skills in data interpretation through formulation, tabulation, graphical analysis, and drawing scientifically sound conclusions from real-world geoscientific data.</p>
-  <p>Based on my performance in the Individual Test, I was awarded the <strong>Bronze Medal</strong></p>
+  <p>The Individual Test is a rigorous written and practical examination assessing independent mastery of Earth sciences, covering geology, meteorology, and environmental science.</p>
+  <p>It also included a <strong>Data Mining Test (DMT)</strong> component, evaluating our ability to interpret large datasets, perform graphical analysis, and draw scientifically sound conclusions from real-world geoscientific data.</p>
+  <p>Based on my overall performance across these challenging assessments, I was awarded the <strong>Bronze Medal</strong>.</p>
 
   <div class="achievement-images">
     <img src="/images/iesob1.webp" alt="IESO">
@@ -1153,9 +1149,9 @@ author_profile: true
     📍 <em>Chennai, Tamil Nadu</em>
   </div>
 
-  <p>As part of the IESO selection process, I was invited to the <strong>Pre-Departure Training Camp</strong> held at <strong>Anna University, Chennai</strong>, which took place over a one-week period from <strong>31 July to 6 August</strong>. The camp provided advanced training in Earth sciences, conducted by professors and domain experts from across India, with sessions held both on-site and online.</p>
-  <p>The training included hands-on study of various fossil samples, along with field-based observations of atmospheric and oceanic phenomena along the Marina Beach coastline. These activities focused on understanding coastal processes such as sedimentation, wave dynamics, and shoreline formation.</p>
-  <p>As part of the field excursions, we also travelled to <strong>Puducherry</strong>, studying diverse geological formations along the route, including rock structures such as <em>Krishna’s Butter Ball</em>. We further examined the <strong>Shore Temple at Mahabalipuram</strong> to understand ancient construction techniques, particularly the use of sandstone and calcium carbonate–rich sea shell paste as binding materials in coastal temple architecture.</p>
+  <p>As part of the IESO selection process, I attended the <strong>Pre-Departure Training Camp</strong> at <strong>Anna University, Chennai</strong>. Over an intensive week, professors and domain experts provided advanced training in Earth sciences through both on-site and online sessions.</p>
+  <p>The training included hands-on study of fossil samples and field-based observations of atmospheric and oceanic phenomena along the Marina Beach coastline, focusing on coastal processes like sedimentation and wave dynamics.</p>
+  <p>We also traveled to <strong>Puducherry</strong> and <strong>Mahabalipuram</strong> to study diverse geological formations and ancient coastal temple architecture, analyzing rock structures like <em>Krishna’s Butter Ball</em> and the use of sandstone and sea shell paste as binding materials.</p>
 
   <div class="achievement-images">
     <img src="/images/iesopd1.webp" alt="IESO">
@@ -1175,10 +1171,9 @@ author_profile: true
     📍 <em>Shillong, Meghalaya</em>
   </div>
 
-  <p>Following the national selection process, I was selected among the <strong>top four students nationally</strong> and consequently chosen as a member of <strong>Team India</strong> for the International Earth Science Olympiad. As part of this process, I attended an intensive residential training and evaluation camp held at <strong>North-Eastern Hill University (NEHU), Shillong</strong>, from <strong>26 May to 13 June</strong>.</p>
-  <p>The camp featured comprehensive instruction by professors and subject experts from leading institutions across India, covering both fundamental and advanced topics in Earth sciences. Areas of study included geology, mineralogy, astronomy and astrophysics, environmental science, sustainability, Earth-system processes, and related interdisciplinary domains.</p>
-  <p>The academic program was complemented by extensive laboratory training, including hands-on work with mineral and rock samples, rock cutting techniques, and microscopic examination of crystalline structures. The camp concluded with a rigorous evaluation comprising theoretical examinations, practical assessments, and presentation-based components. As part of these assessments, I delivered a <strong>PowerPoint presentation on Microplastics</strong> and a <strong>poster presentation on Human Migration</strong>.</p>
-  <p>In addition, multiple field study excursions were conducted across geologically significant regions, where we examined mica-rich soils, rock and valley cuts, coal-bearing formations, and karst landscapes. Key sites included <strong>Sohra (Cherrapunjee)</strong>, the <strong>Arwah–Lumshynna Cave</strong>, and <strong>Laitkhanai Falls</strong>, providing firsthand exposure to geomorphological processes and sedimentary and cave formations. Beyond academics, the experience fostered strong collaborations and lasting professional friendships.</p>
+  <p>Following the national selection process, I ranked among the <strong>top four students nationally</strong> and was chosen to represent <strong>Team India</strong> at the International Earth Science Olympiad. This followed an intensive residential training and evaluation camp at <strong>North-Eastern Hill University (NEHU), Shillong</strong>.</p>
+  <p>The camp featured comprehensive training by domain experts across geology, mineralogy, astrophysics, and environmental science. This was heavily complemented by laboratory work, including rock cutting, mineral sampling, and the microscopic examination of crystalline structures.</p>
+  <p>Our academic training was paired with field excursions across geologically significant regions in Meghalaya, including karst landscapes, coal-bearing formations, and the Arwah–Lumshynna Cave. The camp culminated in rigorous theoretical and practical assessments, where I successfully delivered presentations on Microplastics and Human Migration.</p>
 
   <div class="achievement-images">
     <img src="/images/iesotc1.webp" alt="IESO">
@@ -1263,9 +1258,8 @@ author_profile: true
     🗓️ <em>February 2024</em><br>
     📍 <em>Online</em>
   </div>
-  <p>The INSPIRE Awards – MANAK (Million minds Augmenting National Aspirations and Knowledge) is a flagship initiative jointly executed by the Department of Science and Technology (DST) and the National Innovation Foundation (NIF).</p>
-  <p>This competition aims to foster a culture of creative and innovative thinking among school students aged 10–15 years (Classes 6 to 10) by encouraging them to develop science-rooted solutions for societal challenges.</p>
-  <p>My idea of <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> was selected for the District Level Exhibition and Project Competitions (DLEPC) and received a one-time financial award of ₹10,000 via Direct Benefit Transfer (DBT).</p>
+  <p>The INSPIRE Awards – MANAK is a flagship initiative jointly executed by the Department of Science and Technology (DST) and the National Innovation Foundation (NIF). The competition fosters a culture of creative thinking among school students, encouraging them to develop science-rooted solutions for societal challenges.</p>
+  <p>My idea of <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> was selected for the District Level Exhibition and Project Competitions (DLEPC), receiving a one-time financial award of ₹10,000 via Direct Benefit Transfer (DBT).</p>
 
   <div class="achievement-images">
     <img src="/images/inspiremanak.webp" alt="Inspire-MANAK '23">
@@ -1283,9 +1277,8 @@ author_profile: true
     🗓️ <em>January 2024</em><br>
     📍 <em>Online</em>
   </div>
-  <p>The Junior Smart India Hackathon 2023 is a nationwide initiative launched by All India Council for Technical Education and Ministry of Education to provide students with a platform to solve some of the pressing problems we face in our daily lives.</p>
-  <p>The event aims to inculcate a culture of product innovation and a mindset of problem-solving among young and innovative minds. The hackathon invites students from classes 6th to 12th to showcase their out-of-the-box thinking and innovative ideas.</p>
-  <p>I presented my Idea on <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and qualified for the National presentation round.</p>
+  <p>The Junior Smart India Hackathon 2023 is a nationwide initiative launched by AICTE and the Ministry of Education. It aims to inculcate a culture of product innovation and a mindset of problem-solving among young minds from classes 6th to 12th by solving pressing real-world problems.</p>
+  <p>I presented my idea on <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and successfully qualified for the National presentation round.</p>
 
   <div class="achievement-images">
     <img src="/images/jsih.webp" alt="JSIH '23">
@@ -1364,11 +1357,9 @@ author_profile: true
     🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. – Jiohotstar.</em><br>
   </div>
 
-  <p>Ultimate Sports Quiz was the most premium sports quiz show of India, which wanted to foster "a little sporting culture in India" by engaging students not just as players but as knowledgeable sports enthusiasts.</p>
-  <p>The 2023 edition was the 2nd season of the quiz, and it featured the top 36 teams shortlisted through a selection test from across 4000 teams and 350 cities across the county.</p>
-  <p>This competition is also an endeavor to support grass root level sports development as the top three teams that reach the national finals will be awarded a total prize pool of INR 1 Crore approx.</p>
-  <p>The format of the quiz is modelled on the Olympic motto of – Citius, Altius, Fortius. The three rounds are designed to test speed and accuracy, depth of knowledge and ability to perform under pressure.</p>
-  <p>My partner Ameya Tamaskar and I represented our school in all the rounds, ultimately finishing as the National 2nd Runners-Up. We were awarded Apple M1 MacBook Airs, and our school received ₹10,00,000.</p>
+  <p>Ultimate Sports Quiz is India's premium sports quiz show, aiming to foster a deep sporting culture by engaging students as knowledgeable sports enthusiasts.</p>
+  <p>Season 2 featured the top 36 teams dynamically shortlisted through rigorous selection tests from over 4,000 teams and 350 cities across the country. Following the Olympic motto—Citius, Altius, Fortius—the format heavily tested speed, accuracy, and depth of knowledge under intense pressure.</p>
+  <p>My partner, Ameya Tamaskar, and I proudly represented our school across all stages. We ultimately finished as the National 2nd Runners-Up, personally winning Apple M1 MacBook Airs while securing a massive ₹10,00,000 grant to support grassroots sports development at our school.</p>
 
   <div class="achievement-images-text">
     <img src="/images/usq.webp" alt="Ultimate Sports Quiz">
@@ -1545,11 +1536,9 @@ author_profile: true
     🏢 <em>Organized by the Central Board of Secondary Education in collaboration with and nationally broadcasted by the Network18 group – History TV18.</em><br>
   </div>
 
-  <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions.</p>
-  <p>The 2022 edition focused on the theme of India’s Freedom Movement, commemorating 75 years of independence under the Azadi Ka Amrit Mahotsav initiative.</p>
-  <p>Tens of thousands of schools from across the country participated in this multi-stage competition, which began with an online qualifying round.</p>
-  <p>Top-performing teams advanced through the regional rounds, with an average of over 30 teams competing in each region. The best among them moved on to the National Semi-Finals and Finals, held at Sardar Patel Vidyalaya, Lodi Estate, New Delhi.</p>
-  <p>Atharv Sharma, Shreeansh Naidu, and I represented our school in all the rounds, ultimately finishing as National 1st Runner-Ups and receiving a cash prize of ₹15,000.</p>
+  <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions. The 2022 edition focused specifically on India’s Freedom Movement to commemorate 75 years of independence.</p>
+  <p>Tens of thousands of schools from across the country participated in this massive multi-stage competition. The top-performing teams advanced from rigorous online qualifying rounds through regional battles to reach the National Semi-Finals and Finals in New Delhi.</p>
+  <p>Atharv Sharma, Shreeansh Naidu, and I navigated every stage together, representing our school fiercely. We ultimately finished as the National 1st Runner-Ups, receiving a cash prize of ₹15,000.</p>
 
   <div class="achievement-images-text">
     <img src="/images/hiq.webp" alt="Heritage India Quiz">
@@ -2039,7 +2028,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  /* ── 4. Scroll-spy: highlight active section ── */
+  /* ── 4. Parse URL query params ── */
+  var urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('search')) {
+    var searchVal = urlParams.get('search');
+    var searchInput = document.getElementById('tocSearch');
+    if (searchInput) {
+      searchInput.value = searchVal;
+      /* Trigger the input event to run the filter logic immediately */
+      searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+      /* Automatically uncollapse the TOC */
+      document.getElementById('achievementToc').classList.remove('collapsed');
+      /* Bring TOC into view */
+      document.getElementById('achievementToc').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  /* ── 5. Scroll-spy: highlight active section ── */
   var ticking = false;
   function updateActive() {
     var scrollY = window.scrollY + 120;
@@ -2059,7 +2064,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-/* ── 5. Toggle collapse ── */
+/* ── 6. Toggle collapse ── */
 function toggleToc() {
   document.getElementById('achievementToc').classList.toggle('collapsed');
 }
