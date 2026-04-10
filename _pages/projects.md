@@ -625,31 +625,40 @@ author_profile: true
   }
   .dark-mode .project-gallery figcaption { color: #c8a050; }
 
-  /* PDF Container Vibe */
+  /* ── PDF Container – CSS Grid smooth animation ── */
   .pdf-wrapper {
-    margin-top: 30px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border: 1.5px solid rgba(192, 115, 0, 0.3);
-    background: #fff;
+    margin-top: 24px;
   }
-  .dark-mode .pdf-wrapper {
-    border-color: #5a4520;
-  }
-  .pdf-toolbar {
-    height: 38px;
-    background: linear-gradient(135deg, rgba(229, 149, 0, 0.55), rgba(255, 210, 120, 0.4));
-    border-bottom: 1.5px solid rgba(185, 115, 0, 0.35);
+
+  /* Toggle bar – sits above the animated container */
+  .pdf-toggle-bar {
     display: flex;
     align-items: center;
-    padding: 0 14px;
+    justify-content: space-between;
+    padding: 9px 16px;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.55), rgba(255, 210, 120, 0.4));
+    border: 1.5px solid rgba(185, 115, 0, 0.35);
+    border-bottom: none;
+    cursor: pointer;
     user-select: none;
+    transition: background 0.3s ease;
   }
-  .dark-mode .pdf-toolbar {
+  .pdf-wrapper:not(.open) .pdf-toggle-bar {
+    border-radius: 12px;
+    border-bottom: 1.5px solid rgba(185, 115, 0, 0.35);
+  }
+  .dark-mode .pdf-toggle-bar {
     background: linear-gradient(to bottom, #3a3225, #2a2318);
-    border-bottom: 1px solid #1a150e;
+    border-color: rgba(255, 210, 120, 0.25);
   }
+
+  .pdf-toggle-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   .pdf-dots {
     display: flex;
     gap: 7px;
@@ -660,17 +669,14 @@ author_profile: true
     border-radius: 50%;
     cursor: pointer;
     flex-shrink: 0;
+    transition: filter 0.2s ease;
   }
-  .pdf-dot:hover {
-    filter: brightness(1.15);
-  }
+  .pdf-dot:hover { filter: brightness(1.2); }
   .dot-red { background: #ff5f56; }
   .dot-yel { background: #ffbd2e; }
   .dot-grn { background: #27c93f; }
 
   .pdf-toolbar-title {
-    flex: 1;
-    text-align: center;
     font-size: 0.8em;
     font-weight: 600;
     color: #5a3e00;
@@ -678,26 +684,58 @@ author_profile: true
   }
   .dark-mode .pdf-toolbar-title { color: #c8a060; }
 
+  .pdf-toggle-chevron {
+    font-size: 0.78em;
+    font-weight: 700;
+    color: #8a5a00;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .dark-mode .pdf-toggle-chevron { color: #c8a060; }
+  .pdf-wrapper.open .pdf-toggle-chevron {
+    transform: rotate(180deg);
+  }
+
+  /* CSS Grid outer – animated height */
+  .pdf-grid-outer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1.5px solid rgba(192, 115, 0, 0.3);
+    border-top: none;
+    border-radius: 0 0 14px 14px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .dark-mode .pdf-grid-outer {
+    border-color: #5a4520;
+    background: #0e0c08;
+  }
+  .pdf-wrapper.open .pdf-grid-outer {
+    grid-template-rows: 1fr;
+  }
+
+  /* Inner: min-height:0 is mandatory for 0fr collapse */
+  .pdf-grid-inner {
+    min-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.35s ease 0.15s;
+  }
+  .pdf-wrapper.open .pdf-grid-inner {
+    opacity: 1;
+  }
+
   .responsive-pdf {
     width: 100%;
     height: 500px;
-    max-height: 500px;
     border: none;
     display: block;
-    opacity: 1;
-    will-change: max-height, opacity;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
   }
   @media (max-width: 600px) {
-    .responsive-pdf { height: 380px; max-height: 380px; }
+    .responsive-pdf { height: 380px; }
   }
-  .pdf-wrapper.minimized .responsive-pdf {
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  /* fadeInUp removed — was causing invisible content flash and layout jank */
 
   @media (min-width: 900px) {
     .project-container {
@@ -854,32 +892,72 @@ author_profile: true
 
   <!-- Premium PDF Embed Document -->
   <div class="pdf-wrapper" id="mrida-pdf-wrapper">
-    <div class="pdf-toolbar">
-      <div class="pdf-dots">
-        <div class="pdf-dot dot-red"></div>
-        <div class="pdf-dot dot-yel" id="pdf-btn-yel" title="Minimise"></div>
-        <div class="pdf-dot dot-grn" id="pdf-btn-grn" title="Restore"></div>
+    <!-- Toggle bar: click anywhere to open/close -->
+    <div class="pdf-toggle-bar" id="mrida-pdf-toggle-bar">
+      <div class="pdf-toggle-bar-left">
+        <div class="pdf-dots">
+          <div class="pdf-dot dot-red" id="pdf-dot-close" title="Close"></div>
+          <div class="pdf-dot dot-yel" id="pdf-dot-min" title="Close"></div>
+          <div class="pdf-dot dot-grn" id="pdf-dot-open" title="Open"></div>
+        </div>
+        <div class="pdf-toolbar-title">mrida.pdf</div>
       </div>
-      <div class="pdf-toolbar-title">mrida.pdf</div>
+      <span class="pdf-toggle-chevron" id="mrida-pdf-chevron">▼</span>
     </div>
-    <iframe src="/_pages/pdf-view.html" class="responsive-pdf" title="MRIDA Presentation"></iframe>
+    <div class="pdf-grid-outer" id="mrida-pdf-grid-outer">
+      <div class="pdf-grid-inner" id="mrida-pdf-grid-inner">
+        <iframe class="responsive-pdf" id="mrida-pdf-frame" title="MRIDA Presentation"></iframe>
+      </div>
+    </div>
   </div>
 
   <script>
   (function() {
-    var wrapper = document.getElementById('mrida-pdf-wrapper');
-    var btnYel  = document.getElementById('pdf-btn-yel');
-    var btnGrn  = document.getElementById('pdf-btn-grn');
+    var wrapper   = document.getElementById('mrida-pdf-wrapper');
+    var toggleBar = document.getElementById('mrida-pdf-toggle-bar');
+    var frame     = document.getElementById('mrida-pdf-frame');
+    var dotClose  = document.getElementById('pdf-dot-close');
+    var dotMin    = document.getElementById('pdf-dot-min');
+    var dotOpen   = document.getElementById('pdf-dot-open');
+    var isOpen    = false;
+    var srcLoaded = false;
+    var closeTimer = null;
 
-    /* Yellow — toggle minimise: hide iframe, only toolbar visible */
-    btnYel.addEventListener('click', function() {
-      wrapper.classList.toggle('minimized');
-    });
+    function openPdf() {
+      if (isOpen) return;
+      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      if (!srcLoaded) {
+        frame.src = '/_pages/pdf-view.html';
+        srcLoaded = true;
+      }
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          wrapper.classList.add('open');
+          isOpen = true;
+        });
+      });
+    }
 
-    /* Green — restore to normal (undo minimise if active) */
-    btnGrn.addEventListener('click', function() {
-      wrapper.classList.remove('minimized');
-    });
+    function closePdf() {
+      if (!isOpen) return;
+      wrapper.classList.remove('open');
+      isOpen = false;
+      closeTimer = setTimeout(function() {
+        frame.src = 'about:blank';
+        srcLoaded = false;
+        closeTimer = null;
+      }, 650);
+    }
+
+    function togglePdf() {
+      if (isOpen) { closePdf(); } else { openPdf(); }
+    }
+
+    toggleBar.addEventListener('click', togglePdf);
+
+    dotClose.addEventListener('click', function(e) { e.stopPropagation(); closePdf(); });
+    dotMin.addEventListener('click', function(e) { e.stopPropagation(); closePdf(); });
+    dotOpen.addEventListener('click', function(e) { e.stopPropagation(); openPdf(); });
   })();
   </script>
 

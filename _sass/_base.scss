@@ -338,8 +338,8 @@ nav {
 *,
 *::before,
 *::after {
-  -webkit-transition-property: opacity, transform, box-shadow, visibility !important;
-  transition-property: opacity, transform, box-shadow, visibility !important;
+  -webkit-transition-property: opacity, transform, box-shadow, visibility, grid-template-rows !important;
+  transition-property: opacity, transform, box-shadow, visibility, grid-template-rows !important;
   -webkit-transition-duration: 0s !important;
   transition-duration: 0s !important;
 }
@@ -426,6 +426,44 @@ figure img,
 
 /* TOC chevron rotation */
 .toc-chevron {
+  -webkit-transition: transform 0.3s ease !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* PDF viewer (Resume page) — CSS Grid height + fade */
+.pdf-viewer-outer {
+  -webkit-transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.pdf-viewer-wrap {
+  -webkit-transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s !important;
+  transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s !important;
+}
+.pdf-viewer-frame {
+  -webkit-transition: opacity 0.5s ease !important;
+  transition: opacity 0.5s ease !important;
+}
+
+/* MRIDA PDF (Projects page) — CSS Grid height + fade */
+.pdf-grid-outer {
+  -webkit-transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.pdf-grid-inner {
+  -webkit-transition: opacity 0.35s ease 0.15s !important;
+  transition: opacity 0.35s ease 0.15s !important;
+}
+.pdf-toggle-chevron {
+  -webkit-transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Doc tabs (Resume page) — colour + transform */
+.doc-tab {
+  -webkit-transition: color 0s, background 0s, border-color 0s, transform 0.2s ease !important;
+  transition: color 0s, background 0s, border-color 0s, transform 0.2s ease !important;
+}
+.tab-icon {
   -webkit-transition: transform 0.3s ease !important;
   transition: transform 0.3s ease !important;
 }
