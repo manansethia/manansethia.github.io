@@ -362,6 +362,12 @@ figure img,
   transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease !important;
 }
 
+/* Education card hover lift */
+.edu-card {
+  -webkit-transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
 /* Navbar underline reveal (scaleX on ::before pseudo) */
 .greedy-nav .visible-links a::before {
   -webkit-transition: transform 0.25s ease !important;

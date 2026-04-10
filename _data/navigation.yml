@@ -23,11 +23,8 @@ main:
   - title: "Achievements"
     url: /achievements/
 
-  - title: "In Media"
-    url: /media/
+  - title: "Resume & CV"
+    url: /resume/
 
   - title: "Blogs"
     url: /blogs/
-
-  - title: "Resume"
-    url: /resume/

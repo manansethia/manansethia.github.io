@@ -116,13 +116,6 @@ redirect_from:
     border-top: none;
     background: #f5f0e8;
     position: relative;
-    opacity: 0;
-    transform: translateY(-6px);
-    transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s;
-  }
-  .pdf-viewer-outer.open .pdf-viewer-wrap {
-    opacity: 1;
-    transform: translateY(0);
   }
   .dark-mode .pdf-viewer-wrap {
     border-color: #5a4520;
@@ -165,7 +158,7 @@ redirect_from:
     display: block;
     background: #fff;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.4s ease;
   }
   .pdf-viewer-frame.loaded {
     opacity: 1;
@@ -289,49 +282,50 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
   });
 
   function switchDoc(which) {
-    /* Cancel any pending close timer */
     if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
 
     if (current === which) {
-      /* ── Collapse: remove open so grid animates back to 0fr ── */
-      outer.classList.remove('open');
-      tabR.classList.remove('active');
-      tabC.classList.remove('active');
-      current = null;
-      /* Unload iframe only AFTER the CSS transition ends (0.6 s) */
-      closeTimer = setTimeout(function() {
-        frame.src = 'about:blank';
-        frame.classList.remove('loaded');
-        wrap.classList.remove('loading');
-        closeTimer = null;
-      }, 650);
+      /* ── Collapse: hide content first, THEN collapse height ── */
+      frame.classList.remove('loaded');   /* iframe fades out instantly */
+      wrap.classList.remove('loading');
+      /* one rAF so the class removal paints before we remove 'open' */
+      requestAnimationFrame(function() {
+        outer.classList.remove('open');
+        tabR.classList.remove('active');
+        tabC.classList.remove('active');
+        current = null;
+        closeTimer = setTimeout(function() {
+          frame.src = 'about:blank';
+          closeTimer = null;
+        }, 650);
+      });
       return;
     }
 
-    /* Switching to a new tab or opening for first time */
     tabR.classList.toggle('active', which === 'resume');
     tabC.classList.toggle('active', which === 'cv');
-
-    /* Reset frame state */
-    frame.classList.remove('loaded');
-    wrap.classList.add('loading');
+    var target = which;
 
     if (!current) {
-      /* ── Opening from closed: ensure 0fr is painted FIRST ── */
-      /* Set src but keep outer closed so height starts at 0 */
-      frame.src = sources[which];
-      /* Double-rAF: first rAF enters the new frame, second rAF fires
-         after the browser has actually committed the layout at 0fr,
-         so the transition from 0 → 1fr is visible. */
+      /* ── Opening from closed: animate box FIRST, load src after ── */
+      frame.classList.remove('loaded');
+      wrap.classList.remove('loading');
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           outer.classList.add('open');
+          /* Load src only after height animation is nearly done */
+          closeTimer = setTimeout(function() {
+            wrap.classList.add('loading');
+            frame.src = sources[target];
+            closeTimer = null;
+          }, 620);
         });
       });
     } else {
-      /* ── Switching tab while already open: just swap src ── */
+      /* ── Switching tab while already open: swap src ── */
+      frame.classList.remove('loaded');
+      wrap.classList.add('loading');
       frame.src = sources[which];
-      /* outer stays open — no height animation needed */
     }
 
     current = which;

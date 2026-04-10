@@ -6,6 +6,10 @@
   'use strict';
 
   var EMOJI_MAP = {
+  "✨": "/images/emoji/emoji-2728.webp",
+  "☕": "/images/emoji/emoji-2615.webp",
+  "🎯": "/images/emoji/emoji-1F3AF.webp",
+  "🐾": "/images/emoji/emoji-1F43E.webp",
   "👨‍💻": "/images/emoji/emoji-1F468-200D-1F4BB.webp",
   "🇨🇳": "/images/emoji/emoji-1F1E8-1F1F3.webp",
   "🇮🇳": "/images/emoji/emoji-1F1EE-1F1F3.webp",
@@ -101,7 +105,8 @@
   "🧳": "/images/emoji/emoji-1F9F3.webp",
   "🪙": "/images/emoji/emoji-1FA99.webp",
   "🪨": "/images/emoji/emoji-1FAA8.webp",
-  "🪲": "/images/emoji/emoji-1FAB2.webp"
+  "🪲": "/images/emoji/emoji-1FAB2.webp",
+  "🔮": "/images/emoji/emoji-1F52E.webp"
   };
 
   // Build sorted keys (longest first so compound/ZWJ sequences match first)
@@ -136,7 +141,7 @@
           img.className = 'apple-emoji';
           img.setAttribute('aria-label', emoji);
           img.setAttribute('role', 'img');
-          img.setAttribute('loading', 'lazy');
+          img.setAttribute('loading', 'eager');
           frag.appendChild(img);
         } else {
           frag.appendChild(document.createTextNode(emoji));

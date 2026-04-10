@@ -339,6 +339,39 @@ author_profile: true
   .exp-images img { height: 180px; flex: 0 0 auto; border-radius: 8px; object-fit: cover; scroll-snap-align: start; transition: transform 0.3s ease, box-shadow 0.3s ease; z-index: 1; }
   .exp-images img:hover { transform: scale(1.03); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
   .exp-images.dragging { cursor: grabbing; }
+
+  /* KPS marquee gallery */
+  .exp-kps-wrap {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 78px; /* aligns with role content: 60px logo + 18px gap */
+    border-radius: 10px;
+  }
+  @media (max-width: 640px) {
+    .exp-kps-wrap { margin-left: 62px; } /* 48px logo + 14px gap */
+  }
+  .exp-kps-track {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    animation: kpsMarquee 90s linear infinite;
+  }
+  .exp-kps-wrap:hover .exp-kps-track {
+    animation-play-state: paused;
+  }
+  @keyframes kpsMarquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .exp-kps-track img {
+    height: 170px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    transition: none !important;
+    transform: none !important;
+  }
 </style>
 
 <div class="exp-section">
@@ -534,8 +567,52 @@ author_profile: true
       </article>
 
     </div>
+
+    <!-- KPS Photo Gallery — CSS marquee auto-scroll -->
+    <div class="exp-kps-wrap">
+      <div class="exp-kps-track" id="kpsTrack"></div>
+    </div>
+
   </article>
 </div>
+
+<script>
+(function () {
+  var imgs = [
+    'clean','5thquiz','cyb1','cyb2','data&aii','hdfc',
+    'headboy','hiqf','mindsparkquiz','mmq2','nr','nx2024','quiz4',
+    'sbi001','sc','shinecosmo','tcs242','tcs251','techday','udta',
+    'usq','usqq','usqqq','workshop','workshop2','workshop3','workshop4',
+    'wwq181','wwq191','yesww2'
+  ];
+
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    }
+    return arr;
+  }
+
+  var track = document.getElementById('kpsTrack');
+  if (!track) return;
+
+  var shuffled = shuffle(imgs.slice());
+
+  function addSet(list) {
+    list.forEach(function (name) {
+      var img = document.createElement('img');
+      img.src = '/images/' + name + '.webp';
+      img.alt = '';
+      track.appendChild(img);
+    });
+  }
+
+  /* Two sets: CSS animation goes 0 → -50%, creating seamless loop */
+  addSet(shuffled);
+  addSet(shuffled);
+})();
+</script>
 
 <script>
   (function () {

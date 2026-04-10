@@ -416,10 +416,12 @@ author_profile: true
   }
 
   .mrida-stack-body {
-    overflow: hidden;
-    /* max-height animated via JS — transition handled in _base.scss whitelist */
-    max-height: 0;
-    opacity: 0;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mrida-stack-body.open {
+    grid-template-rows: 1fr;
   }
 
   /* ── Stack tables ── */
@@ -517,6 +519,8 @@ author_profile: true
   /* Layout container: clearfix so it grows around floated image */
   .mrida-specs-layout {
     display: flow-root; /* modern clearfix — no overflow:hidden needed */
+    min-height: 0;
+    overflow: hidden;
   }
 
   /* Circuit diagram image — float right on desktop */
@@ -720,11 +724,6 @@ author_profile: true
   .pdf-grid-inner {
     min-height: 0;
     overflow: hidden;
-    opacity: 0;
-    transition: opacity 0.35s ease 0.15s;
-  }
-  .pdf-wrapper.open .pdf-grid-inner {
-    opacity: 1;
   }
 
   .responsive-pdf {
@@ -732,6 +731,11 @@ author_profile: true
     height: 500px;
     border: none;
     display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .responsive-pdf.loaded {
+    opacity: 1;
   }
   @media (max-width: 600px) {
     .responsive-pdf { height: 380px; }
@@ -860,23 +864,21 @@ author_profile: true
         function toggleMridaStack() {
           var body = document.getElementById('mrida-stack-body');
           var dash = document.getElementById('mrida-stack-dash');
-          var isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+          var isOpen = body.classList.contains('open');
+          
           if (isOpen) {
-            body.style.maxHeight = '0px';
-            body.style.opacity = '0';
+            body.classList.remove('open');
             dash.textContent = '|';
           } else {
-            /* Use 9999px — scrollHeight can read 0 inside content-visibility containers */
-            body.style.maxHeight = '9999px';
-            body.style.opacity = '1';
+            body.classList.add('open');
             dash.textContent = '—';
           }
         }
         window.toggleMridaStack = toggleMridaStack;
-        /* Open by default — use large safe value instead of scrollHeight */
+        
+        /* Open by default */
         var body = document.getElementById('mrida-stack-body');
-        body.style.maxHeight = '9999px';
-        body.style.opacity = '1';
+        body.classList.add('open');
       })();
       </script>
       
@@ -923,30 +925,46 @@ author_profile: true
     var srcLoaded = false;
     var closeTimer = null;
 
+    frame.addEventListener('load', function() {
+      if (frame.src && frame.src !== 'about:blank') {
+        frame.classList.add('loaded');
+      }
+    });
+
     function openPdf() {
       if (isOpen) return;
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-      if (!srcLoaded) {
-        frame.src = '/_pages/pdf-view.html';
-        srcLoaded = true;
-      }
+      /* Animate box open FIRST, then load src after animation completes */
+      isOpen = true;
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           wrapper.classList.add('open');
-          isOpen = true;
+          closeTimer = setTimeout(function() {
+            if (!srcLoaded) {
+              frame.src = '/_pages/pdf-view.html';
+              srcLoaded = true;
+            } else {
+              frame.classList.add('loaded');
+            }
+            closeTimer = null;
+          }, 620);
         });
       });
     }
 
     function closePdf() {
       if (!isOpen) return;
-      wrapper.classList.remove('open');
+      /* Hide frame first (instant), then collapse height */
+      frame.classList.remove('loaded');
       isOpen = false;
-      closeTimer = setTimeout(function() {
-        frame.src = 'about:blank';
-        srcLoaded = false;
-        closeTimer = null;
-      }, 650);
+      requestAnimationFrame(function() {
+        wrapper.classList.remove('open');
+        closeTimer = setTimeout(function() {
+          frame.src = 'about:blank';
+          srcLoaded = false;
+          closeTimer = null;
+        }, 650);
+      });
     }
 
     function togglePdf() {

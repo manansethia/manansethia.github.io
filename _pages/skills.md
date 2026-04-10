@@ -422,14 +422,14 @@ author_profile: true
       <div class="skills-focus-label" style="background: rgba(179, 108, 0, 0.08); border-color: rgba(179, 108, 0, 0.25);">🎯 142 Skills</div>
     </div>
     <div class="skills-focus-copy">
-      <h2>Built across AI, systems, security, and practical engineering.</h2>
+      <h2>Started with my dad's laptop. Grew from there.</h2>
       <p>
-        A high-signal map of the domains I work across most often, from programming foundations and operating systems to AI workflows, networking, and hands-on technical problem solving.
+        A 2012 Lenovo G580 and an unsupervised internet connection changed everything. I spent years on that machine clicking through things I did not fully understand, breaking the OS, figuring out why, and doing it all over again. No course, no roadmap. Just a curious kid discovering internals by accident and sheer stubbornness. Most of what is on this page traces back to that.
       </p>
     </div>
     <div class="skills-chip-row">
       <span class="skills-tag">Artificial Intelligence</span>
-      <span class="skills-tag">Systems Programming &amp; Operating Systems</span>
+      <span class="skills-tag">Systems &amp; Operating Systems</span>
       <span class="skills-tag">Cybersecurity</span>
       <span class="skills-tag">General Programming &amp; Problem Solving</span>
     </div>

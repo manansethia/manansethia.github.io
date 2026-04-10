@@ -584,6 +584,147 @@ author_profile: true
   </div>
 </div>
 
+<style>
+  .ach-summary {
+    position: relative;
+    margin-bottom: 28px;
+    padding: 22px 24px;
+    border-radius: 18px;
+    border: 1px solid rgba(179, 108, 0, 0.35);
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow: 0 10px 32px rgba(88, 57, 8, 0.14);
+  }
+  .dark-mode .ach-summary {
+    border-color: rgba(255, 210, 120, 0.22);
+    box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+  }
+
+  .ach-summary-collage {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    pointer-events: none;
+  }
+  .ach-summary-collage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: blur(0.3px) saturate(1.05);
+    opacity: 0.88;
+    border-radius: 0;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .dark-mode .ach-summary-collage img {
+    opacity: 0.65;
+    filter: blur(0.5px) saturate(0.85) brightness(0.9);
+  }
+
+  .ach-summary-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse at 70% 10%, rgba(255, 235, 160, 0.42) 0%, transparent 55%),
+      linear-gradient(160deg, rgba(255, 250, 232, 0.68) 0%, rgba(255, 238, 195, 0.65) 100%);
+  }
+  .dark-mode .ach-summary-overlay {
+    background:
+      radial-gradient(ellipse at 70% 10%, rgba(90, 50, 5, 0.45) 0%, transparent 55%),
+      linear-gradient(160deg, rgba(15, 9, 2, 0.52) 0%, rgba(8, 4, 0, 0.58) 100%);
+  }
+
+  .ach-summary-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Card-style label like skills focus area */
+  .ach-summary-title {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #5a3000;
+    background: rgba(255, 220, 130, 0.82);
+    border: 1px solid rgba(192, 115, 0, 0.4);
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 13px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .dark-mode .ach-summary-title {
+    color: #ffe090;
+    background: rgba(80, 50, 5, 0.85);
+    border-color: rgba(212, 160, 64, 0.5);
+  }
+
+  .ach-summary-lead {
+    font-size: 0.96em;
+    line-height: 1.78;
+    color: #120800;
+    text-shadow: 0 1px 3px rgba(255, 248, 230, 0.7);
+  }
+  .ach-summary-lead strong {
+    color: #3a1e00;
+  }
+  .dark-mode .ach-summary-lead {
+    color: #f0ddb0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  }
+  .dark-mode .ach-summary-lead strong {
+    color: #ffe8b0;
+  }
+</style>
+
+<div class="ach-summary">
+  <div class="ach-summary-collage">
+    <img src="/images/ieso.webp" alt="">
+    <img src="/images/iesob1.webp" alt="">
+    <img src="/images/iesob2.webp" alt="">
+    <img src="/images/iesob3.webp" alt="">
+    <img src="/images/iesog1.webp" alt="">
+    <img src="/images/iesog2.webp" alt="">
+    <img src="/images/iesog4.webp" alt="">
+    <img src="/images/iesotc1.webp" alt="">
+    <img src="/images/iesotc2.webp" alt="">
+    <img src="/images/iesotc3.webp" alt="">
+    <img src="/images/iesotc4.webp" alt="">
+    <img src="/images/fel.webp" alt="">
+    <img src="/images/fel1.webp" alt="">
+    <img src="/images/mmq2.webp" alt="">
+    <img src="/images/sbi01.webp" alt="">
+    <img src="/images/tcs251.webp" alt="">
+    <img src="/images/tcs253.webp" alt="">
+    <img src="/images/tcs242.webp" alt="">
+    <img src="/images/usqq.webp" alt="">
+    <img src="/images/yesww1.webp" alt="">
+    <img src="/images/sc.webp" alt="">
+    <img src="/images/shinecosmoo.webp" alt="">
+    <img src="/images/mun1.webp" alt="">
+    <img src="/images/mindsparkquiz.webp" alt="">
+  </div>
+  <div class="ach-summary-overlay"></div>
+  <div class="ach-summary-content">
+    <div class="ach-summary-title">📌 At a glance</div>
+    <div class="ach-summary-lead">
+      <strong>Representing India at the International Earth Science Olympiad 2024 is something I still find hard to fully process. Beyond that, I have been Zonal Topper at the Zonal Computing Olympiad, ranked AIR 10 at HPE Codewars among 6,100+ students, and walked into rooms full of college teams as the only school student and walked out having won.</strong>
+      <br><br>
+      <strong>Honestly, none of this was planned. I just love showing up to things that interest me. The curiosity comes first, the results follow. That is the only explanation I have for why this page looks the way it does.</strong>
+    </div>
+  </div>
+</div>
+
 <!-- Achievements Section -->
 
 <section>
@@ -595,10 +736,8 @@ author_profile: true
     📍 <em>Naya Raipur, Chhattisgarh</em>
   </div>
 
-  <p>Technovate is the annual technical fest of IIIT Naya Raipur, one of the premier IIITs in central India. Now in its seventh edition, Technovate 7.0 has grown into a flagship college-level event that brings together students from institutions across Chhattisgarh for a range of technical and aptitude-based competitions.</p>
-  <p>Clash of Campus was the flagship quiz event of Technovate 7.0 — a fast-paced, multi-round general knowledge and aptitude quiz open to college students, with teams of two competing against each other on stage.</p>
-  <p>I was the only school student in the entire competition, and I competed alone — no partner. Every other team was a college duo. That made the whole thing a little surreal, honestly.</p>
-  <p>Somehow, I came out on top, winning the quiz and taking home a ₹6000 cash prize.</p>
+  <p>Technovate is the annual technical fest of IIIT Naya Raipur. Clash of Campus was its flagship quiz, a fast-paced multi-round general knowledge and aptitude event open to college teams of two.</p>
+  <p>I was the only school student there, and I went in solo. Every other team was a college duo. I won, taking home a ₹6000 cash prize.</p>
 
   <div class="achievement-images">
   </div>
@@ -1354,11 +1493,11 @@ author_profile: true
 <div class="achievement-section" id="ach-28">
   <h2>🥎 Ultimate Sports Quiz 2023: Season 2</h2>
   <div class="achievement-meta">
-    🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. – Jiohotstar.</em><br>
+    🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. (Jiohotstar).</em><br>
   </div>
 
   <p>Ultimate Sports Quiz is India's premium sports quiz show, aiming to foster a deep sporting culture by engaging students as knowledgeable sports enthusiasts.</p>
-  <p>Season 2 featured the top 36 teams dynamically shortlisted through rigorous selection tests from over 4,000 teams and 350 cities across the country. Following the Olympic motto—Citius, Altius, Fortius—the format heavily tested speed, accuracy, and depth of knowledge under intense pressure.</p>
+  <p>Season 2 featured the top 36 teams dynamically shortlisted through rigorous selection tests from over 4,000 teams and 350 cities across the country. Following the Olympic motto (Citius, Altius, Fortius), the format heavily tested speed, accuracy, and depth of knowledge under intense pressure.</p>
   <p>My partner, Ameya Tamaskar, and I proudly represented our school across all stages. We ultimately finished as the National 2nd Runners-Up, personally winning Apple M1 MacBook Airs while securing a massive ₹10,00,000 grant to support grassroots sports development at our school.</p>
 
   <div class="achievement-images-text">
@@ -1681,7 +1820,7 @@ author_profile: true
   <p>The inaugural Fit India Quiz, launched in September 2021 as part of the Fit India Movement, aimed to promote fitness and sports awareness among schoolchildren across India.</p>
   <p>The preliminary rounds saw participation from 36,299 students representing 13,502 schools nationwide.</p>
   <p>From there, 360 schools advanced to the state-level competitions.</p>
-  <p>Eventually, 36 schools — each representing a different State or Union Territory — qualified for the National Finals.</p>
+  <p>Eventually, 36 schools, each representing a different State or Union Territory, qualified for the National Finals.</p>
   <p>Partnering with Ishant Talreja, we represented our school in the televised National Rounds. Our school received ₹2,50,000, and our team was awarded ₹25,000.</p>
 
   <div class="achievement-images-text">
@@ -1693,7 +1832,7 @@ author_profile: true
 
   <h3>📺 Selected for National Rounds</h3>
   <div class="achievement-meta">
-    🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
+    🏢 <em>Issued by the Ministry of Youth Affairs and Sports, Government of India</em><br>
     🗓️ <em>June 2022</em><br>
     📍 <em>Mumbai, Maharashtra</em>
   </div>
