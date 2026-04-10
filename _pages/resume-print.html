@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manan Sethia - Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @page { size: A4; margin: 0; }
+    @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 8.6pt; line-height: 1.4; color: #1e1e1e;
+      width: 210mm; height: 297mm;
+      margin: 0 auto; background: #fff;
+      display: flex; flex-direction: column;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .header { background: #1a0f04; text-align: center; padding: 24px 24px 16px; flex-shrink: 0; }
+    .header h1 { font-size: 20pt; font-weight: 700; letter-spacing: 4px; color: #fff; margin-bottom: 3px; }
+    .subtitle { font-size: 8.5pt; letter-spacing: 2px; color: #e6c194; }
+
+    .content { display: flex; flex: 1; }
+    .left {
+      width: 31%; padding: 24px 20px 32px 24px;
+      background: #faf6f0; border-right: 1.5px solid #c07300;
+      display: flex; flex-direction: column;
+    }
+    .right {
+      width: 69%; padding: 24px 24px 32px 20px;
+      display: flex; flex-direction: column;
+    }
+    .left-spacer { flex: 1; }
+
+    .sec {
+      font-size: 8.2pt; font-weight: 700; color: #7a5000;
+      text-transform: uppercase; letter-spacing: 1.2px;
+      border-bottom: 1.2px solid #c07300;
+      padding-bottom: 2px; margin-bottom: 5px; margin-top: 10px;
+    }
+    .sec:first-child { margin-top: 0; }
+
+    /* ── Contact with SVG icons ── */
+    .contact-row {
+      display: flex; align-items: center; gap: 2px;
+      margin-bottom: 2px; font-size: 8pt;
+    }
+    .contact-row i {
+      width: 12px; text-align: center; flex-shrink: 0;
+      color: #5a3e00; font-size: 8.5pt;
+    }
+    .contact-row .val { color: #333; word-break: break-all; }
+
+    .skill-cat { font-weight: 700; font-size: 7.8pt; color: #5a3e00; margin-top: 5px; margin-bottom: 1px; }
+    .skill-list { font-size: 8.2pt; color: #333; margin-bottom: 1px; line-height: 1.38; }
+
+    .edu-name { font-weight: 700; font-size: 8.8pt; color: #1a1a1a; }
+    .edu-detail { font-size: 7.8pt; color: #555; margin-top: 2px; }
+
+    .timeline { position: relative; padding-left: 14px; margin-top: 4px; }
+    .timeline::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: 4px; width: 1.5px; background: #c07300; }
+    .tl-org { position: relative; margin-bottom: 4px; padding-left: 10px; }
+    .tl-org::before { content: ""; position: absolute; left: -13px; top: 5px; width: 7px; height: 7px; border-radius: 50%; background: #c07300; border: 1.5px solid #fff; }
+    .tl-org-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .tl-org-name { font-weight: 700; font-size: 9pt; color: #1a1a1a; }
+    .tl-org-date { font-size: 7.2pt; color: #777; font-style: italic; white-space: nowrap; }
+    .tl-role { position: relative; padding-left: 10px; margin-top: 3px; }
+    .tl-role::before { content: ""; position: absolute; left: -13px; top: 5px; width: 5px; height: 5px; border-radius: 50%; background: #e0a050; border: 1px solid #fff; }
+    .tl-role-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .tl-role-name { font-weight: 600; font-size: 8.5pt; color: #333; }
+    .tl-role-date { font-size: 7pt; color: #888; font-style: italic; white-space: nowrap; }
+    .tl-desc { font-size: 8.2pt; color: #444; margin-top: 1px; line-height: 1.38; }
+    .tl-sub-roles { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 0; font-size: 7.5pt; color: #5a4a20; margin-top: 2px; font-weight: 600; }
+    .tl-chip { background: rgba(192,115,0,0.12); border: 1px solid rgba(192,115,0,0.3); border-radius: 3px; padding: 0px 5px; }
+    .tl-arrow { color: #c07300; font-weight: 700; padding: 0 2px; }
+    .tl-sep { border: none; height: 0.8px; background: rgba(192,115,0,0.3); margin: 4px 0 4px 10px; }
+
+    .proj-name { font-weight: 700; font-size: 8.6pt; color: #1a1a1a; margin-top: 5px; }
+    .proj-sub { font-size: 7.5pt; color: #8b5e00; font-style: italic; }
+    .proj-desc { font-size: 8.2pt; color: #444; margin-top: 1px; line-height: 1.38; }
+
+    .ach-item { font-size: 8.2pt; color: #333; padding-left: 10px; margin-bottom: 3px; text-indent: -10px; line-height: 1.38; }
+    .ach-item::before { content: "• "; color: #c07300; font-weight: 700; }
+    .ach-item b { color: #1a1a1a; }
+    .quiz-list { padding-left: 16px; margin-top: 3px; margin-bottom: 4px; }
+    .quiz-list div { font-size: 8pt; color: #555; line-height: 1.7; margin-bottom: 1px; }
+    .quiz-list div::before { content: "▸ "; color: #c07300; font-weight: 600; }
+
+    .cert-item { font-size: 8.2pt; color: #333; padding-left: 10px; margin-bottom: 2px; text-indent: -10px; }
+    .cert-item::before { content: "• "; color: #c07300; }
+    .cert-item b { color: #1a1a1a; }
+    .cert-sub { padding-left: 16px; margin-top: 1px; margin-bottom: 3px; }
+    .cert-sub div { font-size: 7.8pt; color: #555; line-height: 1.5; }
+    .cert-sub div::before { content: "▸ "; color: #c07300; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>MANAN SETHIA</h1>
+    <div class="subtitle">Programmer &middot; Developer &middot; Builder &middot; Quizzer &middot; Student &middot; Leader</div>
+  </div>
+  <div class="content">
+    <div class="left">
+      <div class="sec">Contact</div>
+      <div class="contact-row"><i class="fas fa-envelope"></i><a href="mailto:manan@manansethia.com" class="val">manan@manansethia.com</a></div>
+      <div class="contact-row"><i class="fas fa-link"></i><a href="https://manansethia.com" class="val">manansethia.com</a></div>
+      <div class="contact-row"><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/manansethia" class="val">linkedin.com/in/manansethia</a></div>
+      <div class="contact-row"><i class="fab fa-github"></i><a href="https://github.com/manansethia" class="val">github.com/manansethia</a></div>
+      <div class="contact-row"><i class="fa-solid fa-location-dot"></i><span class="val">Raipur, CG, IN</span></div>
+
+      <div class="sec">Skills</div>
+      <div class="skill-cat">Languages</div>
+      <div class="skill-list">Python, C++ (STL), C, Java, SQL, HTML, CSS, JavaScript</div>
+      <div class="skill-cat">AI &amp; Data</div>
+      <div class="skill-list">OpenCV, PyTorch, scikit-learn, pandas, NumPy, Matplotlib, Jupyter</div>
+      <div class="skill-cat">Web &amp; App Dev</div>
+      <div class="skill-list">Flask, Django, Jekyll, MIT App Inventor, GitHub Pages</div>
+      <div class="skill-cat">Systems &amp; IoT</div>
+      <div class="skill-list">Linux, Raspberry Pi, ESP32, Arduino, Embedded Systems, Robotics</div>
+      <div class="skill-cat">DevOps &amp; Cloud</div>
+      <div class="skill-list">Git, GitHub, Docker, CI/CD, Proxmox, Cloudflare, SSH</div>
+      <div class="skill-cat">Cybersecurity</div>
+      <div class="skill-list">Metasploit, Wireshark, Burp Suite, Nmap, Kali Linux, Cryptography</div>
+      <div class="skill-cat">Core CS</div>
+      <div class="skill-list">DSA, Competitive Programming, OOP, DBMS, System Design</div>
+      <div class="skill-cat">Professional</div>
+      <div class="skill-list">Leadership, Event Management, Public Speaking, Mentorship</div>
+
+      <div class="sec">Education</div>
+      <div class="edu-name">Krishna Public School, Kamal Vihar</div>
+      <div class="edu-detail">Grade 1 &ndash; 12 &nbsp;|&nbsp; Raipur, CG</div>
+      <div class="edu-detail">2014 &ndash; 2026</div>
+      <div class="edu-detail">Stream: PCME + Computer Science</div>
+
+      <div class="left-spacer"></div>
+    </div>
+
+    <div class="right">
+      <div class="sec">Experience</div>
+      <div class="timeline">
+        <div class="tl-org">
+          <div class="tl-org-head"><span class="tl-org-name">Intl. Geoscience Education Organisation</span><span class="tl-org-date">Mar 2026 &ndash; Present</span></div>
+          <div class="tl-role"><div class="tl-role-name">Member, IGYM</div><div class="tl-desc">Participating in the Himalayan Outreach Program at Dehradun with geological field visits.</div></div>
+        </div>
+        <hr class="tl-sep">
+        <div class="tl-org">
+          <div class="tl-org-head"><span class="tl-org-name">Krishna Public School, Kamal Vihar</span><span class="tl-org-date">Apr 2016 &ndash; Mar 2026</span></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Headboy, Student Council</span><span class="tl-role-date">Jul 2025 &ndash; Feb 2026</span></div><div class="tl-desc">Led student council overseeing 18 clubs, editorial board, and 97 members; organized flagship events.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Problem Setter, I-Code</span><span class="tl-role-date">Aug 2024 &ndash; Oct 2025</span></div><div class="tl-desc">Designed algorithm and logic questions for coding competitions across difficulty levels.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Advisor &amp; Coordinator, Xplora</span><span class="tl-role-date">Nov 2022 &ndash; Nov 2025</span></div><div class="tl-desc">Coordinated flagship tech fest with robowars, ideathons, and gaming; managed outreach and finances.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Innovator &amp; Mentor, ATL Club</span><span class="tl-role-date">Jul 2022 &ndash; Mar 2026</span></div><div class="tl-desc">Built prototypes using embedded systems; mentored juniors on robotics and IoT projects.</div></div>
+          <div class="tl-role">
+            <div class="tl-role-head"><span class="tl-role-name">Technical Lead, Coder's Club</span><span class="tl-role-date">Jul 2019 &ndash; Mar 2026</span></div>
+            <div class="tl-sub-roles"><span class="tl-chip">Member</span><span class="tl-arrow">&rarr;</span><span class="tl-chip">Vice President</span><span class="tl-arrow">&rarr;</span><span class="tl-chip">President</span><span class="tl-arrow">&rarr;</span><span class="tl-chip">Mentor</span></div>
+            <div class="tl-desc">Hosted workshops on CP, ML, and cybersecurity; championed Linux adoption across 5 labs.</div>
+          </div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Quiz Organizer &amp; Mentor, QPL</span><span class="tl-role-date">Apr 2016 &ndash; Mar 2026</span></div><div class="tl-desc">Represented school in national quizzes; organized intraschool events across diverse domains.</div></div>
+        </div>
+      </div>
+
+      <div class="sec">Projects</div>
+      <div class="proj-name">MRIDA &nbsp;<span class="proj-sub">Multipurpose Real-time Integrated Digital Analyzer &nbsp;|&nbsp; 2023 &ndash; 2025</span></div>
+      <div class="proj-desc">AI-powered soil health analyzer on Raspberry Pi 5 with Python, MIT App Inventor, and scikit-learn. Features soil sensing, weather alerts, emergency SMS, and speech assistant. Won Data &amp; AI Talks, Top 1000 Youth Ideathon, INSPIRE MANAK, Jr. SIH.</div>
+      <div class="proj-name">MATRIX &nbsp;<span class="proj-sub">Desktop Voice Assistant &nbsp;|&nbsp; 2021 &ndash; 2022</span></div>
+      <div class="proj-desc">JARVIS-inspired voice assistant with Python, Tkinter, and MS Voice Pack. Speech/text interaction, live weather, tech news, and hand-drawn custom GUI.</div>
+
+      <div class="sec">Selected Top Achievements</div>
+      <div class="ach-item"><b>Gold &amp; Bronze Medalist</b> at International Earth Science Olympiad (IESO) 2024; represented India in Beijing</div>
+      <div class="ach-item">Selected for <b>12-week intl. research program</b> on Quantum Computing &mdash; BeyondQuantum 2025</div>
+      <div class="ach-item">Secured <b>AIR 10</b> in Hewlett Packard Codewars 2025 among 6,000+ participants</div>
+      <div class="ach-item">Secured <b>AIR 17</b> in IIT Madras Shaastra Programming Contest 2026 among 18,000+; <b>National Finalist</b></div>
+      <div class="ach-item"><b>ZCO 2024 Zonal Topper</b> and <b>INAIO 2025 Stage 2</b> Qualifier</div>
+      <div class="ach-item">Multiple podium finishes in national and state-level quizzes:</div>
+      <div class="quiz-list">
+        <div>SBI Scholar Quiz</div>
+        <div>TCS InQuizitive</div>
+        <div>Wonga Wits Finance Quiz</div>
+        <div>CBSE Heritage India Quiz</div>
+        <div>Ultimate Sports Quiz</div>
+        <div>FIT India Quiz</div>
+        <div>IIM Bhilai Materials Quiz</div>
+      </div>
+
+      <div class="sec">Certifications</div>
+      <div class="cert-item"><b>Google Cybersecurity</b> Professional Certificate (Coursera)</div>
+      <div class="cert-item"><b>IBM Ethical Hacking</b> with Open-Source Tools (Coursera)</div>
+      <div class="cert-item"><b>Programming and DSA</b> Courses by CodeChef for:</div>
+      <div class="cert-sub"><div>Python</div><div>Java OOP</div><div>C/C++ with STL</div></div>
+    </div>
+  </div>
+</body>
+</html>
