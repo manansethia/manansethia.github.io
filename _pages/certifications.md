@@ -144,7 +144,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/Coursera Google Cybersecurity.pdf" target="_blank">
-    <img src="/images/cert/jpg/googlecybersec.avif" alt="Google Cybersecurity">
+    <img src="/images/cert/jpg/googlecybersec.avif" width="1024" height="791" alt="Google Cybersecurity">
     <div class="cert-text">
       <div class="cert-title">Google Cybersecurity</div>
       <div class="cert-desc">
@@ -154,7 +154,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/Coursera IBM Ethical Hacking with Open Source Tools.pdf" target="_blank">
-    <img src="/images/cert/jpg/ibmhack.avif" alt="IBM Ethical Hacking">
+    <img src="/images/cert/jpg/ibmhack.avif" width="1024" height="791" alt="IBM Ethical Hacking">
     <div class="cert-text">
       <div class="cert-title">IBM Ethical Hacking with Open-Source Tools</div>
       <div class="cert-desc">
@@ -173,7 +173,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn Python - Pro.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnpython.avif" alt="Learn Python Pro">
+    <img src="/images/cert/jpg/learnpython.avif" width="1024" height="700" alt="Learn Python Pro">
     <div class="cert-text">
       <div class="cert-title">Learn Python Programming</div>
       <div class="cert-desc">
@@ -183,7 +183,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn C Programming.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnc.avif" alt="Learn C Programming">
+    <img src="/images/cert/jpg/learnc.avif" width="1024" height="700" alt="Learn C Programming">
     <div class="cert-text">
       <div class="cert-title">Learn C Programming</div>
       <div class="cert-desc">
@@ -193,7 +193,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn C++.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnc++.avif" alt="Learn C++">
+    <img src="/images/cert/jpg/learnc++.avif" width="1024" height="700" alt="Learn C++">
     <div class="cert-text">
       <div class="cert-title">Learn C++</div>
       <div class="cert-desc">
@@ -203,7 +203,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Learn Java.pdf" target="_blank">
-    <img src="/images/cert/jpg/learnjava.avif" alt="Learn Java">
+    <img src="/images/cert/jpg/learnjava.avif" width="1024" height="700" alt="Learn Java">
     <div class="cert-text">
       <div class="cert-title">Learn Java</div>
       <div class="cert-desc">
@@ -215,7 +215,7 @@ author_profile: true
 
 <div class="cert-scroll">
   <a class="cert-card" href="/images/cert/pdf/manan54-Advanced Python.pdf" target="_blank">
-    <img src="/images/cert/jpg/advancedpython.avif" alt="Advanced Python">
+    <img src="/images/cert/jpg/advancedpython.avif" width="1024" height="700" alt="Advanced Python">
     <div class="cert-text">
       <div class="cert-title">Advanced Python</div>
       <div class="cert-desc">
@@ -225,7 +225,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-Beginner DSA in Python.pdf" target="_blank">
-    <img src="/images/cert/jpg/pythondsa.avif" alt="DSA in Python">
+    <img src="/images/cert/jpg/pythondsa.avif" width="1024" height="700" alt="DSA in Python">
     <div class="cert-text">
       <div class="cert-title">DSA in Python</div>
       <div class="cert-desc">
@@ -235,7 +235,7 @@ author_profile: true
   </a>
 
   <a class="cert-card" href="/images/cert/pdf/manan54-C++ STL - Standard template library.pdf" target="_blank">
-    <img src="/images/cert/jpg/c++stl.avif" alt="C++ STL">
+    <img src="/images/cert/jpg/c++stl.avif" width="1024" height="700" alt="C++ STL">
     <div class="cert-text">
       <div class="cert-title">C++ STL</div>
       <div class="cert-desc">

@@ -785,10 +785,10 @@ author_profile: true
         <div class="mrida-flip-card" id="mrida-flip" title="Click to flip">
           <div class="mrida-flip-inner">
             <div class="mrida-flip-front">
-              <img src="/images/mrida build.avif" alt="MRIDA build front">
+              <img src="/images/mrida build.avif" width="1024" height="768" alt="MRIDA build front">
             </div>
             <div class="mrida-flip-back">
-              <img src="/images/mridaback.avif" alt="MRIDA build back">
+              <img src="/images/mridaback.avif" width="1024" height="768" alt="MRIDA build back">
             </div>
           </div>
         </div>
@@ -817,7 +817,7 @@ author_profile: true
           <div class="mrida-stack-body" id="mrida-stack-body">
             <div class="mrida-specs-layout">
               <figure class="mrida-spec-figure">
-                <img src="/images/MRIDA diagram.avif" alt="MRIDA circuit diagram">
+                <img src="/images/MRIDA diagram.avif" width="1024" height="768" alt="MRIDA circuit diagram">
                 <figcaption>System and circuit overview for the current prototype.</figcaption>
               </figure>
               <div class="mrida-specs-text">
@@ -1006,15 +1006,15 @@ author_profile: true
   <!-- Premium Horizontal Gallery -->
   <div class="project-gallery">
     <figure>
-      <img src="/images/handdrawn.avif" alt="MATRIX Hand-drawn mockup">
+      <img src="/images/handdrawn.avif" width="1200" height="692" alt="MATRIX Hand-drawn mockup">
       <figcaption>My precise hand-drawn conceptual interface mockup</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixday.avif" alt="MATRIX Day Mode GUI">
+      <img src="/images/matrixday.avif" width="1200" height="639" alt="MATRIX Day Mode GUI">
       <figcaption>The finalized Light Mode GUI state</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixnight.avif" alt="MATRIX Night Mode GUI">
+      <img src="/images/matrixnight.avif" width="1200" height="639" alt="MATRIX Night Mode GUI">
       <figcaption>The finalized Dark Mode GUI state</figcaption>
     </figure>
   </div>

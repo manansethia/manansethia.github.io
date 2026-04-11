@@ -8,16 +8,16 @@
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}" fetchpriority="high">
+    	<img src="{{ author.avatar }}" alt="{{ author.name }}" width="319" height="359" fetchpriority="high">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" fetchpriority="high">
+    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" width="319" height="359" fetchpriority="high">
     {% endif %}
   </div>
 
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}<img src="/images/huh.avif" alt="" style="width: 1.5em; margin-left:1px; height:auto; vertical-align: text-bottom; image-rendering: auto;"></p>{% endif %}
+    {% if author.bio %}<p class="author__bio">{{ author.bio }}<img src="/images/huh.avif" alt="" width="60" height="53" style="width: 1.5em; margin-left:1px; height:auto; vertical-align: text-bottom; image-rendering: auto;"></p>{% endif %}
   </div>
 
   <div class="author__urls-wrapper">

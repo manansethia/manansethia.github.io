@@ -224,7 +224,7 @@ redirect_from:
   }
 </style>
 
-### Here are my Resume and CV.
+## Here are my Resume and CV.
 {: .resume-intro}
 
 Think of the tabs below like browser tabs; tap one to peek inside, tap it again to fold it back up, or switch between them. You can also grab a copy using the download buttons below.
