@@ -2,7 +2,7 @@
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fmanansethia.com&up_message=Online&down_message=Offline&style=for-the-badge&logo=cloudflare&color=orange)](https://manansethia.com)
 [![GitHub Deployments](https://img.shields.io/github/deployments/manansethia/manansethia.github.io/github-pages?style=for-the-badge&logo=github&color=blueviolet)](https://github.com/manansethia/manansethia.github.io/deployments)
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/manansethia/manansethia.github.io?style=for-the-badge&color=blue)](https://github.com/manansethia/manansethia.github.io)
+[![Deploy Size](https://img.shields.io/badge/Payload_Size-~11_MB-blue?style=for-the-badge)](https://manansethia.com)
 [![Last Commit](https://img.shields.io/github/last-commit/manansethia/manansethia.github.io?style=for-the-badge&color=green)](https://github.com/manansethia/manansethia.github.io/commits/master)
 [![Issues](https://img.shields.io/github/issues/manansethia/manansethia.github.io?style=for-the-badge&color=red)](https://github.com/manansethia/manansethia.github.io/issues)
 
@@ -12,25 +12,11 @@ Welcome to the open-source repository for my personal portfolio website, **[mana
 
 ## 📈 Repository Statistics
 
-Here is a live look at my activity and how this repository is managed:
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=manansethia&show_icons=true&hide_border=true&title_color=c07300&icon_color=4b2d00&text_color=333&bg_color=fffbeb" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=manansethia&layout=compact&hide_border=true&title_color=c07300&text_color=333&bg_color=fffbeb" />
-</div>
-
-<br>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=manansethia&repo=manansethia.github.io&hide_border=true&title_color=c07300&icon_color=4b2d00&text_color=333&bg_color=fffbeb" />
-</div>
-
 ### Project Metrics & History
 
 - **Active Since:** 🗓️ October 2024
 - **Total Commits:** 🔄 Over 600+ updates (pushes/pulls) dedicated to perfecting the UI/UX.
 - **Lines of Code:** 💻 ~64,700+ lines (encompassing SCSS, HTML layouts, JS logic, SVG vectors, and Markdown).
-- **Lighthouse Score:** 💯 100/100 across Mobile and Desktop for Performance, Accessibility, Best Practices, and SEO.
 
 ---
 
@@ -38,7 +24,7 @@ Here is a live look at my activity and how this repository is managed:
 
 This website is built with an extreme emphasis on raw performance and high-quality user experience over "lazy" development practices.
 
-- **Framework:** Powered by **Jekyll** (Ruby) customized off the original *Minimal Mistakes/Academic Pages* boilerplate—fully modernized.
+- **Framework:** Powered by **Jekyll** (Ruby) customized off the original *Minimal Mistakes/Academic Pages* boilerplate - fully modernized.
 - **Styling:** Highly modified SCSS featuring **CSS Grid**, fluid animations, responsive layouts, and glassmorphism.
 - **Typography:** Self-hosted, system-native **SF Pro** fonts to deliver an Apple-ecosystem aesthetic seamlessly across Windows, Android, and Linux.
 - **Media Delivery:** Ultra-optimized `AVIF` images and fonts with strict caching limits. Over **20MB** of YouTube iframes structurally replaced with lightweight click-to-load facades.
