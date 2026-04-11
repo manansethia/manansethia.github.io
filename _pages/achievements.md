@@ -284,6 +284,54 @@ author_profile: true
     border: 0;
   }
 
+  /* Lite YouTube Facade — loads real iframe only on click */
+  .yt-facade {
+    width: 335px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background: #000;
+    cursor: pointer;
+    scroll-snap-align: start;
+  }
+  .yt-facade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .yt-facade:hover img { transform: scale(1.05); }
+  .yt-facade::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px; height: 48px;
+    background: rgba(0,0,0,0.75);
+    border-radius: 14px;
+    pointer-events: none;
+  }
+  .yt-facade::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-42%, -50%);
+    border-style: solid;
+    border-width: 11px 0 11px 18px;
+    border-color: transparent transparent transparent #fff;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .yt-facade iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
   .achievement-images, 
   .quiz-episodes-scroll,
   .cert-scroll {
@@ -865,8 +913,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/YUFKJevNpG8" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="YUFKJevNpG8">
+        <img src="https://i.ytimg.com/vi/YUFKJevNpG8/hqdefault.jpg" alt="TCS InQuizitive 2025" width="335" height="188">
       </div>
       <span>TCS InQuizitive 2025<br>Nagpur Regional Round</span>
     </div>
@@ -1112,8 +1160,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/GGaPWeNIODI" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="GGaPWeNIODI">
+        <img src="https://i.ytimg.com/vi/GGaPWeNIODI/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>TCS InQuizitive 2024<br>Nagpur Regional Round</span>
     </div>
@@ -1527,8 +1575,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/4B1YQ5edqBs" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="4B1YQ5edqBs">
+        <img src="https://i.ytimg.com/vi/4B1YQ5edqBs/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>USQ 2023<br>National Grand Finale</span>
     </div>
@@ -1549,8 +1597,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/Bgdd8B0XzxE" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="Bgdd8B0XzxE">
+        <img src="https://i.ytimg.com/vi/Bgdd8B0XzxE/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>USQ 2023<br>Semi Final - 1</span>
     </div>
@@ -1572,8 +1620,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/nPel1DDxFrw" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="nPel1DDxFrw">
+        <img src="https://i.ytimg.com/vi/nPel1DDxFrw/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>USQ 2023<br>West Zone Finals</span>
     </div>
@@ -1595,8 +1643,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/DQZmbhGw6oE" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="DQZmbhGw6oE">
+        <img src="https://i.ytimg.com/vi/DQZmbhGw6oE/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>USQ 2023<br>West Zone Prelims</span>
     </div>
@@ -1640,8 +1688,8 @@ author_profile: true
   <p>I emerged as the winner of Group C (Senior) and was awarded an iPad along with various other prizes from the event sponsors.</p>
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/O19X4Ah9vfk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="O19X4Ah9vfk">
+        <img src="https://i.ytimg.com/vi/O19X4Ah9vfk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>MRIDA Presentation<br>Data & AI Talks</span>
     </div>
@@ -1705,8 +1753,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/UwzXg_3KkWc" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="UwzXg_3KkWc">
+        <img src="https://i.ytimg.com/vi/UwzXg_3KkWc/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>CBSE HIQ 2022<br>National Finale</span>
     </div>
@@ -1729,8 +1777,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/PpuNR-Q95Mk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="PpuNR-Q95Mk">
+        <img src="https://i.ytimg.com/vi/PpuNR-Q95Mk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>CBSE HIQ 2022<br>Semi-Final 4</span>
     </div>
@@ -1844,8 +1892,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/UAQWCSxxFqk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="UAQWCSxxFqk">
+        <img src="https://i.ytimg.com/vi/UAQWCSxxFqk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
     </div>
@@ -1863,8 +1911,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/BQ2v2y-vIAo" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="BQ2v2y-vIAo">
+        <img src="https://i.ytimg.com/vi/BQ2v2y-vIAo/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
     </div>
@@ -1882,8 +1930,8 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/2n_GQwlG0Bk" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper yt-facade" data-id="2n_GQwlG0Bk">
+        <img src="https://i.ytimg.com/vi/2n_GQwlG0Bk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>Fit India Quiz – Semi-Final 2<br>Chhattisgarh</span>
     </div>
@@ -2223,6 +2271,23 @@ document.addEventListener('DOMContentLoaded', function () {
 function toggleToc() {
   document.getElementById('achievementToc').classList.toggle('collapsed');
 }
+</script>
+
+<script>
+/* ── YouTube Lite Facade: click to load real iframe ── */
+document.querySelectorAll('.yt-facade').forEach(function(el) {
+  el.addEventListener('click', function() {
+    var id = el.getAttribute('data-id');
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
+    iframe.title = 'YouTube video';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+    iframe.allowFullscreen = true;
+    el.textContent = '';
+    el.appendChild(iframe);
+    el.classList.remove('yt-facade');
+  }, { once: true });
+});
 </script>
 
 {% include horizontal-scroll-keys.html %}
