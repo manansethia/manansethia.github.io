@@ -51,29 +51,11 @@
 <link rel="dns-prefetch" href="https://github.githubassets.com">
 <link rel="dns-prefetch" href="https://collector.github.com">
 
-<!-- Critical inline CSS: navbar + body base so page renders styled immediately -->
+<!-- Dark-mode flash prevention — must be inline, minimal -->
 <style>
-/* === Dark mode flash prevention === */
 html{background:#fff}
 .dark-mode{background:transparent!important;color:#fdfdfd}
-/* === Masthead / navbar — fully styled before main.css arrives === */
-.masthead{position:fixed;top:0;left:0;right:0;z-index:20;background:linear-gradient(135deg,rgba(229,149,0,0.7),rgba(255,188,66,0.4));backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border-bottom:2px solid rgba(185,115,0,0.45)}
-.dark-mode .masthead{background:linear-gradient(135deg,rgba(80,50,0,0.7),rgba(40,25,0,0.5))!important;backdrop-filter:blur(16px) saturate(180%)!important;-webkit-backdrop-filter:blur(16px) saturate(180%)!important;border-bottom:2px solid rgba(255,210,120,0.45)!important}
-.masthead__inner-wrap{padding:0.5em 1em;display:flex;align-items:center}
-.masthead__menu{flex:1}
-.greedy-nav{display:flex;align-items:center;min-height:2em;background:transparent}
-.greedy-nav a{display:inline-block;padding:0.5em 0.75em;color:inherit;text-decoration:none;font-weight:500}
-.visible-links{display:flex;flex-wrap:nowrap;list-style:none;margin:0;padding:0;overflow:hidden}
-.hidden-links{display:none;position:fixed;z-index:25;background:inherit;list-style:none;margin:0;padding:0.5em}
-.greedy-nav button{background:transparent;border:none;cursor:pointer;padding:0.25em 0.5em;display:inline-flex;align-items:center}
-.navicon{width:1.2em;height:2px;background:currentColor;position:relative;display:block}
-.navicon::before,.navicon::after{content:'';position:absolute;left:0;width:100%;height:2px;background:currentColor}
-.navicon::before{top:-6px}.navicon::after{top:6px}
-/* === Body base === */
-body{margin:0;padding-top:54px;font-family:-apple-system,'SFProWeb','SF Pro Text','Helvetica Neue',sans-serif;box-sizing:border-box}
-#main{clear:both;margin:0 auto;padding:1em}
-/* === Author avatar === */
-.author__avatar img{border-radius:50%}
+.dark-mode .masthead{background:linear-gradient(135deg,rgba(80,50,0,0.7),rgba(40,25,0,0.5))!important;backdrop-filter:blur(16px) saturate(180%)!important;-webkit-backdrop-filter:blur(16px) saturate(180%)!important;color:#fdfdfd;border-bottom:2px solid rgba(255,210,120,0.45)!important}
 </style>
 
 <!-- CSS: render-blocking (intentional — ensures full design before paint) -->
