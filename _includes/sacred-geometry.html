@@ -33,20 +33,16 @@
   }
 </style>
 
-<!-- Load the huge JS securely without IDE templating errors blocking -->
+<!-- Load the sigils JS -->
 <script src="{{ '/assets/js/occult-sigils.js' | relative_url }}" defer></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById('sacred-geometry-overlay');
     if (!overlay) return;
 
-    /* Include the parsed custom user sigils (auto-traced SVG paths from output.svg) */
-    /* Removed Jekyll include to fix IDE IDE error: now loaded securely above via <script src> */
-    
     /* Check if OCCULT_SIGILS loaded securely, fallback to empty in worst-case delay */
-    const generators = OCCULT_SIGILS && OCCULT_SIGILS.length ? OCCULT_SIGILS : [];
+    const generators = (typeof OCCULT_SIGILS !== 'undefined' && OCCULT_SIGILS.length) ? OCCULT_SIGILS : [];
 
-    
     let lastPopulatedY = 250;
     let isLeft = true;
     
@@ -96,11 +92,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    /* Use ResizeObserver to detect layout flashes, image loads, and expanding pages */
-    const ro = new ResizeObserver(entries => {
-        for (let entry of entries) {
-            populateToHeight(entry.target.scrollHeight);
-        }
+    /* Use ResizeObserver to detect layout flashes, image loads, and expanding pages
+       Throttled via rAF to prevent forced reflow storms */
+    let _sgRaf = false;
+    const ro = new ResizeObserver(() => {
+        if (_sgRaf) return;
+        _sgRaf = true;
+        requestAnimationFrame(() => {
+            _sgRaf = false;
+            populateToHeight(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight));
+        });
     });
 
     if (document.body) ro.observe(document.body);

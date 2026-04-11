@@ -1,6 +1,8 @@
 ---
 permalink: /
 title: "🙏 Namaste!"
+description: "Manan Sethia — student, quizzer, and competitive programmer from Raipur. Passionate about AI, cybersecurity, operating systems, and building things at the intersection of curiosity and code."
+keywords: "Manan Sethia, portfolio, computer science, competitive programming, quizzer, Raipur, IESO, ZCO, AI, cybersecurity"
 author_profile: true
 ---
 
@@ -252,19 +254,19 @@ author_profile: true
 
   <div class="home-photos" id="homePhotos">
     <div class="home-photo-card">
-      <img src="/images/oldlaptop.webp" alt="">
+      <img src="/images/oldlaptop.avif" alt="">
       <div class="home-photo-cap">The G580 on XP SP3 with One-Core API and the Al Pacino Gangsta Edition boot skin</div>
     </div>
     <div class="home-photo-card">
-      <img src="/images/rpi5unoqesp32p4.webp" alt="">
+      <img src="/images/rpi5unoqesp32p4.avif" alt="">
       <div class="home-photo-cap">Raspberry Pi 5, Arduino Uno Q & ESP32-P4, my experimental lab rats</div>
     </div>
     <div class="home-photo-card">
-      <img src="/images/tylerdurd.webp" alt="">
+      <img src="/images/tylerdurd.avif" alt="">
       <div class="home-photo-cap">Tyler Durden & The Narrator, a sketch I made a year back using black pen</div>
     </div>
     <div class="home-photo-card">
-      <img src="/images/dexter.webp" alt="">
+      <img src="/images/dexter.avif" alt="">
       <div class="home-photo-cap">Dexter the Lhasa Apso on his 1st birthday, named after the cartoon scientist</div>
     </div>
   </div>

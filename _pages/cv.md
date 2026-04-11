@@ -2,6 +2,8 @@
 layout: archive
 title: "📄 Resume"
 permalink: /resume/
+description: "Manan Sethia's Resume and CV — download or view inline. One-page resume and detailed curriculum vitae."
+keywords: "Manan Sethia resume, Manan Sethia CV, download resume, student resume, competitive programmer resume"
 author_profile: true
 redirect_from:
   - /cv

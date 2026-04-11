@@ -2,129 +2,110 @@
    SF Pro Web – Apple's typeface, self-hosted for non-Apple devices
    Named "SFProWeb" / "SFProDisplayWeb" to avoid clashing with the
    native -apple-system resolution on macOS/iOS.
-   font-display: optional → Apple devices always use their system font;
-   non-Apple devices load the web font on subsequent visits (no FOUT).
+   font-display: swap → text is visible immediately with fallback font,
+   then swaps to SF Pro once downloaded (~50KB each).
+   
+   Optimized: OTF → WOFF2 (Latin subset), 14 variants, ~672KB total.
    ========================================================================== */
 
 /* ── SF Pro Text (body copy) ── */
 @font-face {
   font-family: "SFProWeb";
-  font-weight: 300;
-  font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-Light.otf") format("opentype");
-}
-@font-face {
-  font-family: "SFProWeb";
-  font-weight: 300;
-  font-style: italic;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-LightItalic.otf") format("opentype");
-}
-@font-face {
-  font-family: "SFProWeb";
   font-weight: 400;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-Regular.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-400.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProWeb";
   font-weight: 400;
   font-style: italic;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-RegularItalic.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-400-italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProWeb";
   font-weight: 500;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-Medium.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-500.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProWeb";
   font-weight: 500;
   font-style: italic;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-MediumItalic.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-500-italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProWeb";
   font-weight: 600;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-Semibold.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-600.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProWeb";
   font-weight: 600;
   font-style: italic;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-SemiboldItalic.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-600-italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProWeb";
   font-weight: 700;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-Bold.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-700.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProWeb";
   font-weight: 700;
   font-style: italic;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Text-BoldItalic.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-700-italic.woff2") format("woff2");
 }
 
 /* ── SF Pro Display (headings / large text > ~19px) ── */
 @font-face {
   font-family: "SFProDisplayWeb";
-  font-weight: 300;
-  font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Display-Light.otf") format("opentype");
-}
-@font-face {
-  font-family: "SFProDisplayWeb";
   font-weight: 400;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Display-Regular.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-400.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProDisplayWeb";
   font-weight: 400;
   font-style: italic;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Display-RegularItalic.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-400-italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProDisplayWeb";
   font-weight: 500;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Display-Medium.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-500.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProDisplayWeb";
   font-weight: 600;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Display-Semibold.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-600.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProDisplayWeb";
   font-weight: 700;
   font-style: normal;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Display-Bold.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-700.woff2") format("woff2");
 }
 @font-face {
   font-family: "SFProDisplayWeb";
   font-weight: 700;
   font-style: italic;
-  font-display: optional;
-  src: url("/assets/fonts/sf-pro/SF-Pro-Display-BoldItalic.otf") format("opentype");
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-700-italic.woff2") format("woff2");
 }

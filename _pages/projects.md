@@ -1,6 +1,8 @@
 ---
 permalink: /projects/
 title: "🧰 Projects"
+description: "Manan Sethia's projects — MRIDA assistive device for the visually impaired, Conputer OS built from scratch, AI and embedded systems prototypes."
+keywords: "Manan Sethia projects, MRIDA, Conputer OS, assistive technology, embedded systems, AI projects, student developer"
 author_profile: true
 ---
 
@@ -69,7 +71,7 @@ author_profile: true
 
 <div class="airavat-container">
   <div class="airavat-image">
-    <img src="/images/airavat.webp" alt="Airavat Image">
+    <img src="/images/airavat.avif" alt="Airavat Image">
   </div>
 
   <div class="airavat-text">
@@ -133,7 +135,7 @@ author_profile: true
 
 <div class="conos-container">
   <div class="conos-image">
-    <img src="/images/con.webp" alt="Conputer OS Image">
+    <img src="/images/con.avif" alt="Conputer OS Image">
   </div>
 
   <div class="conos-text">
@@ -783,10 +785,10 @@ author_profile: true
         <div class="mrida-flip-card" id="mrida-flip" title="Click to flip">
           <div class="mrida-flip-inner">
             <div class="mrida-flip-front">
-              <img src="/images/mrida build.webp" alt="MRIDA build front">
+              <img src="/images/mrida build.avif" alt="MRIDA build front">
             </div>
             <div class="mrida-flip-back">
-              <img src="/images/mridaback.webp" alt="MRIDA build back">
+              <img src="/images/mridaback.avif" alt="MRIDA build back">
             </div>
           </div>
         </div>
@@ -815,7 +817,7 @@ author_profile: true
           <div class="mrida-stack-body" id="mrida-stack-body">
             <div class="mrida-specs-layout">
               <figure class="mrida-spec-figure">
-                <img src="/images/MRIDA diagram.webp" alt="MRIDA circuit diagram">
+                <img src="/images/MRIDA diagram.avif" alt="MRIDA circuit diagram">
                 <figcaption>System and circuit overview for the current prototype.</figcaption>
               </figure>
               <div class="mrida-specs-text">
@@ -1004,15 +1006,15 @@ author_profile: true
   <!-- Premium Horizontal Gallery -->
   <div class="project-gallery">
     <figure>
-      <img src="/images/handdrawn.webp" alt="MATRIX Hand-drawn mockup">
+      <img src="/images/handdrawn.avif" alt="MATRIX Hand-drawn mockup">
       <figcaption>My precise hand-drawn conceptual interface mockup</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixday.webp" alt="MATRIX Day Mode GUI">
+      <img src="/images/matrixday.avif" alt="MATRIX Day Mode GUI">
       <figcaption>The finalized Light Mode GUI state</figcaption>
     </figure>
     <figure>
-      <img src="/images/matrixnight.webp" alt="MATRIX Night Mode GUI">
+      <img src="/images/matrixnight.avif" alt="MATRIX Night Mode GUI">
       <figcaption>The finalized Dark Mode GUI state</figcaption>
     </figure>
   </div>

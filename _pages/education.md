@@ -1,6 +1,8 @@
 ---
 permalink: /education/
 title: "🎓 Education"
+description: "Manan Sethia's education — Krishna Public School, Raipur. CBSE PCME with Computer Science, active in student leadership, technical clubs, and quizzing."
+keywords: "Manan Sethia education, Krishna Public School, CBSE, Raipur, Computer Science, PCME"
 author_profile: true
 ---
 
@@ -157,7 +159,7 @@ author_profile: true
 
 <div class="edu-card">
   <div class="edu-header">
-    <img src="/images/kps.webp" alt="KPS Logo">
+    <img src="/images/kps.avif" alt="KPS Logo">
     <div class="edu-title-block">
       <h3>Krishna Public School, Kamal Vihar</h3>
       <div class="edu-subtitle">Affiliated to CBSE · Raipur, C.G., India</div>

@@ -125,7 +125,7 @@ $(document).ready(function () {
   $("a:not([href^='#'])").smoothScroll({ offset: -80, speed: 400 });
 
   // add lightbox class to all image links
-  $("a[href$='.webp'],a[href$='.webp'],a[href$='.webp'],a[href$='.webp'],a[href$='.gif']").addClass("image-popup");
+  $("a[href$='.avif'],a[href$='.webp'],a[href$='.gif']").addClass("image-popup");
 
   // Magnific-Popup options
   $(".image-popup").magnificPopup({

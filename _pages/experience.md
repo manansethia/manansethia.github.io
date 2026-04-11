@@ -1,6 +1,8 @@
 ---
 permalink: /experience/
 title: "💼 Experience"
+description: "Manan Sethia's experience — Headboy, Coder's Club President, ATL Innovator, IGYM Member, Xplora Coordinator, and 10 years at Krishna Public School."
+keywords: "Manan Sethia experience, Headboy, Coder's Club, Krishna Public School, student leadership, IGYM, Xplora"
 author_profile: true
 ---
 
@@ -378,7 +380,7 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
-        <img src="/images/igeo.webp" alt="IGEO Logo">
+        <img src="/images/igeo.avif" alt="IGEO Logo">
       </div>
       <div class="exp-org-copy">
         <div class="exp-org-name">International Geoscience Education Organisation (IGEO)</div>
@@ -393,7 +395,7 @@ author_profile: true
         </div>
         <div class="exp-role-main">
           <div class="exp-role-icon">
-            <img src="/images/igym.webp" alt="IGYM Logo">
+            <img src="/images/igym.avif" alt="IGYM Logo">
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Member</div>
@@ -418,7 +420,7 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
-        <img src="/images/kps.webp" alt="KPS Logo">
+        <img src="/images/kps.avif" alt="KPS Logo">
       </div>
       <div class="exp-org-copy">
         <div class="exp-org-name">Krishna Public School, Kamal Vihar</div>
@@ -430,7 +432,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/stud.webp" alt="Student Council Logo"></div>
+          <div class="exp-role-icon"><img src="/images/stud.avif" alt="Student Council Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Headboy</div>
             <div class="exp-role-sub">Student Council · 8 mos</div>
@@ -447,7 +449,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/icode.webp" alt="I-Code Logo"></div>
+          <div class="exp-role-icon"><img src="/images/icode.avif" alt="I-Code Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Problem Setter</div>
             <div class="exp-role-sub">I-Code · 1 yr 2 mos</div>
@@ -464,7 +466,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/xplora.webp" alt="Xplora Logo"></div>
+          <div class="exp-role-icon"><img src="/images/xplora.avif" alt="Xplora Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Advisor and Coordinator</div>
             <div class="exp-role-sub">Xplora · 3 yrs 1 mo</div>
@@ -481,7 +483,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/atl.webp" alt="ATL Club Logo"></div>
+          <div class="exp-role-icon"><img src="/images/atl.avif" alt="ATL Club Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Innovator and Mentor</div>
             <div class="exp-role-sub">Atal Tinkering Lab (ATL Club) · 3 yrs 9 mos</div>
@@ -498,7 +500,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/coders.webp" alt="Coder's Club Logo"></div>
+          <div class="exp-role-icon"><img src="/images/coders.avif" alt="Coder's Club Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Technical Leadership and Community Building</div>
             <div class="exp-role-sub">Coder's Club · 6 yrs 9 mos</div>
@@ -552,7 +554,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/qpllogo.webp" alt="QPL Quiz Club Logo"></div>
+          <div class="exp-role-icon"><img src="/images/qpllogo.avif" alt="QPL Quiz Club Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Member, Quiz Organizer and Mentor</div>
             <div class="exp-role-sub">Quiz Premier League (QPL) · 10 yrs</div>
@@ -602,7 +604,7 @@ author_profile: true
   function addSet(list) {
     list.forEach(function (name) {
       var img = document.createElement('img');
-      img.src = '/images/' + name + '.webp';
+      img.src = '/images/' + name + '.avif';
       img.alt = '';
       track.appendChild(img);
     });
