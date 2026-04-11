@@ -66,12 +66,14 @@ author_profile: true
     flex-shrink: 0;
   }
 
-  .edu-title-block h2 {
+  .edu-title-block .edu-school-name {
     margin: 0 0 3px;
     font-size: 1.15em;
+    font-weight: 600;
     color: #3a2600;
+    display: block;
   }
-  .dark-mode .edu-title-block h2 { color: #ffe090; }
+  .dark-mode .edu-title-block .edu-school-name { color: #ffe090; }
 
   .edu-subtitle {
     font-size: 0.83em;
@@ -161,7 +163,7 @@ author_profile: true
   <div class="edu-header">
     <img src="/images/kps.avif" alt="KPS Logo" width="62" height="62">
     <div class="edu-title-block">
-      <h2 style="font-size:1.15em;margin:0 0 3px">Krishna Public School, Kamal Vihar</h2>
+      <span class="edu-school-name" role="heading" aria-level="2">Krishna Public School, Kamal Vihar</span>
       <div class="edu-subtitle">Affiliated to CBSE · Raipur, C.G., India</div>
     </div>
   </div>

@@ -224,8 +224,7 @@ redirect_from:
   }
 </style>
 
-## Here are my Resume and CV.
-{: .resume-intro}
+<span class="resume-intro" role="heading" aria-level="2" style="font-size:1.17em;font-weight:600;display:block;margin-bottom:20px">Here are my Resume and CV.</span>
 
 Think of the tabs below like browser tabs; tap one to peek inside, tap it again to fold it back up, or switch between them. You can also grab a copy using the download buttons below.
 {: .resume-intro}

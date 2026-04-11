@@ -212,6 +212,7 @@ author_profile: true
     font-size: 0.94em;
     line-height: 1.7;
     color: #7b5b2d;
+    transition: color 0.3s ease, border-top-color 0.3s ease;
   }
   .dark-mode .home-closing {
     border-top-color: #e6c194;
