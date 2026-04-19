@@ -474,7 +474,6 @@ author_profile: true
         </div>
       </div>
     </article>
-
     <article class="skills-card span-5">
       <div class="skills-card-header">
         <div>
@@ -492,7 +491,6 @@ author_profile: true
         <span class="skills-tag">Database Management (SQL, MongoDB)</span>
       </div>
     </article>
-
     <article class="skills-card span-12">
       <div class="skills-card-header">
         <div>
@@ -528,7 +526,6 @@ author_profile: true
         </div>
       </div>
     </article>
-
     <article class="skills-card span-6">
       <div class="skills-card-header">
         <div>
@@ -545,7 +542,6 @@ author_profile: true
         <span class="skills-tag">Browser DevTools &amp; Debugging</span>
       </div>
     </article>
-
     <article class="skills-card span-6">
       <div class="skills-card-header">
         <div>
@@ -564,7 +560,6 @@ author_profile: true
         <span class="skills-tag">Cloudflare</span>
       </div>
     </article>
-
     <article class="skills-card span-12">
       <div class="skills-card-header">
         <div>
@@ -607,7 +602,6 @@ author_profile: true
         </div>
       </div>
     </article>
-
     <article class="skills-card span-5">
       <div class="skills-card-header">
         <div>
@@ -625,7 +619,6 @@ author_profile: true
         <span class="skills-tag">SSH (Remote Access)</span>
       </div>
     </article>
-
     <article class="skills-card span-7">
       <div class="skills-card-header">
         <div>
@@ -656,7 +649,6 @@ author_profile: true
         </div>
       </div>
     </article>
-
     <article class="skills-card span-6">
       <div class="skills-card-header">
         <div>
@@ -674,7 +666,6 @@ author_profile: true
         <span class="skills-tag">Sensors &amp; Robotics</span>
       </div>
     </article>
-
     <article class="skills-card span-6">
       <div class="skills-card-header">
         <div>
@@ -694,7 +685,6 @@ author_profile: true
         <span class="skills-tag">CSV</span>
       </div>
     </article>
-
     <article class="skills-card span-12">
       <div class="skills-card-header">
         <div>
@@ -733,7 +723,6 @@ author_profile: true
         </div>
       </div>
     </article>
-
     <article class="skills-card span-6">
       <div class="skills-card-header">
         <div>
@@ -748,7 +737,6 @@ author_profile: true
         <span class="skills-tag">Access, Accounts &amp; Permissions (rwx)</span>
       </div>
     </article>
-
     <article class="skills-card span-6">
       <div class="skills-card-header">
         <div>

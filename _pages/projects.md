@@ -166,7 +166,6 @@ author_profile: true
     box-sizing: border-box;
     isolation: isolate;
   }
-
   .project-section::before,
   .project-section::after {
     content: "";
@@ -175,12 +174,10 @@ author_profile: true
     pointer-events: none;
     z-index: 0;
   }
-
   .project-section > * {
     position: relative;
     z-index: 1;
   }
-
   .project-section::before {
     top: -3rem;
     right: -2rem;
@@ -188,7 +185,6 @@ author_profile: true
     height: 15rem;
     border: 1px solid rgba(187, 128, 27, 0.2);
   }
-
   .project-section::after {
     bottom: -3rem;
     left: -1rem;
@@ -196,7 +192,6 @@ author_profile: true
     height: 12rem;
     border: 1px dashed rgba(187, 128, 27, 0.18);
   }
-  
   .dark-mode .project-section {
     border-color: rgba(255, 210, 120, 0.25);
     background:
@@ -204,7 +199,6 @@ author_profile: true
       linear-gradient(145deg, rgba(43, 29, 11, 0.85), rgba(24, 16, 7, 0.8));
     box-shadow: 0 28px 75px rgba(0, 0, 0, 0.48);
   }
-
   .project-section h2 {
     font-size: 1.7em;
     margin-top: 0;
@@ -212,12 +206,10 @@ author_profile: true
     padding-bottom: 0;
     border-bottom: none !important;
     color: #5a3e00;
-  }
-  
+  } 
   .dark-mode .project-section h2 {
     color: #ffe6aa;
   }
-
   .project-section h3 {
     font-size: 1.05em;
     font-weight: 500;
@@ -225,7 +217,6 @@ author_profile: true
     margin-bottom: 8px;
     color: #c07300;
   }
-
   /* Tech Stack Pills */
   .project-meta {
     display: flex;
@@ -247,14 +238,12 @@ author_profile: true
     color: #f0c870;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
-
   /* Flex Layouts */
   .project-container {
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
-
   .project-text {
     flex: 1;
     font-size: 0.98em;
@@ -263,7 +252,6 @@ author_profile: true
   .project-text p {
     margin-bottom: 12px;
   }
-
   .project-text .notable {
     margin-top: 25px;
     font-weight: 600;
@@ -272,23 +260,19 @@ author_profile: true
   .dark-mode .project-text .notable {
     color: #f0c870;
   }
-
   .project-text ul {
     margin-top: 8px;
     padding-left: 20px;
   }
-
   .project-text li {
     margin-bottom: 6px;
   }
-
   .project-image-box {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
+  } 
   .project-image-box img {
     width: 100%;
     border-radius: 12px;
@@ -299,7 +283,6 @@ author_profile: true
     transform: scale(1.035);
     box-shadow: 0 12px 30px rgba(0,0,0,0.18);
   }
-
   .ai-label {
     font-size: 11px;
     font-family: 'Orbitron', sans-serif;
@@ -308,13 +291,11 @@ author_profile: true
     margin-top: 12px;
     text-transform: uppercase;
   }
-
   .mrida-float-visual {
     float: right;
     width: min(42%, 360px);
     margin: 6px 0 18px 24px;
   }
-
   /* ── MRIDA flip card ── */
   .mrida-flip-card {
     width: 100%;
@@ -322,7 +303,6 @@ author_profile: true
     perspective: 900px;
     cursor: pointer;
   }
-
   .mrida-flip-inner {
     position: relative;
     width: 100%;
@@ -333,22 +313,18 @@ author_profile: true
     -webkit-transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) !important;
     transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
-
   /* hover: scale up (only when not mid-flip) */
   .mrida-flip-card:hover .mrida-flip-inner {
     transform: scale(1.035);
   }
-
   /* flipped: rotate — scale resets */
   .mrida-flip-card.flipped .mrida-flip-inner {
     transform: rotateY(180deg);
   }
-
   /* flipped + hover */
   .mrida-flip-card.flipped:hover .mrida-flip-inner {
     transform: rotateY(180deg) scale(1.035);
   }
-
   .mrida-flip-front,
   .mrida-flip-back {
     position: absolute;
@@ -358,11 +334,9 @@ author_profile: true
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-
   .mrida-flip-back {
     transform: rotateY(180deg);
   }
-
   .mrida-flip-front img,
   .mrida-flip-back img {
     display: block;
@@ -372,7 +346,6 @@ author_profile: true
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.16);
   }
-
   .mrida-image-note {
     margin-top: 10px;
     font-size: 0.82em;
@@ -384,13 +357,11 @@ author_profile: true
   .dark-mode .mrida-image-note {
     color: #c8a050;
   }
-
   /* ── Collapsible stack ── */
   .mrida-stack-collapsible {
     border-radius: 12px;
     overflow: hidden;
   }
-
   .mrida-stack-header {
     display: flex;
     align-items: center;
@@ -399,11 +370,9 @@ author_profile: true
     user-select: none;
     padding: 2px 0 10px;
   }
-
   .mrida-stack-header h4 {
     margin: 0 !important;
   }
-
   .mrida-stack-dash {
     font-size: 1.4em;
     font-weight: 700;
@@ -416,7 +385,6 @@ author_profile: true
   .dark-mode .mrida-stack-dash {
     color: #d4a040;
   }
-
   .mrida-stack-body {
     display: grid;
     grid-template-rows: 0fr;
@@ -425,25 +393,21 @@ author_profile: true
   .mrida-stack-body.open {
     grid-template-rows: 1fr;
   }
-
   /* ── Stack tables ── */
   .mrida-stack-cols {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 28px;
   }
-
   /* Collapse to single column on small screens */
   @media (max-width: 640px) {
     .mrida-stack-cols {
       grid-template-columns: 1fr;
     }
   }
-
   .mrida-stack-section {
     margin-bottom: 4px;
   }
-
   .mrida-stack-label {
     font-size: 0.82em;
     font-weight: 700;
@@ -456,7 +420,6 @@ author_profile: true
   .dark-mode .mrida-stack-label {
     color: #d4a040;
   }
-
   .mrida-stack-list {
     list-style: none;
     padding: 0;
@@ -464,7 +427,6 @@ author_profile: true
     font-size: 0.91em;
     line-height: 1.6;
   }
-
   .mrida-stack-list li {
     padding: 3px 0;
     color: #3a2e18;
@@ -480,11 +442,9 @@ author_profile: true
     color: #ddd;
     border-bottom-color: rgba(200, 150, 40, 0.12);
   }
-
   .mrida-stack-list li:last-child {
     border-bottom: none;
   }
-
   .mrida-stack-list li::before {
     content: '·';
     color: #b07830;
@@ -494,7 +454,6 @@ author_profile: true
   .dark-mode .mrida-stack-list li::before {
     color: #d4a040;
   }
-
   .mrida-specs {
     margin: 18px 0 20px;
     /* No fixed height — grow with content */
@@ -508,7 +467,6 @@ author_profile: true
     background: linear-gradient(135deg, rgba(56, 45, 26, 0.95), rgba(40, 32, 20, 0.96));
     border-color: rgba(212, 160, 64, 0.18);
   }
-
   .mrida-specs h4 {
     margin: 0 0 12px;
     font-size: 0.98em;
@@ -517,21 +475,18 @@ author_profile: true
   .dark-mode .mrida-specs h4 {
     color: #e0b45f;
   }
-
   /* Layout container: clearfix so it grows around floated image */
   .mrida-specs-layout {
     display: flow-root; /* modern clearfix — no overflow:hidden needed */
     min-height: 0;
     overflow: hidden;
   }
-
   /* Circuit diagram image — float right on desktop */
   .mrida-spec-figure {
     float: right;
     width: min(52%, 380px);
     margin: 4px 0 12px 22px;
   }
-
   /* On mobile: clear float, image goes full width centered above lists */
   @media (max-width: 700px) {
     .mrida-spec-figure {
@@ -550,17 +505,14 @@ author_profile: true
       display: block !important;
     }
   }
-
   .mrida-sw-toggle {
     display: none; /* hidden everywhere — software is always visible */
   }
-
   .mrida-spec-figure img {
     width: 100%;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.14);
   }
-
   .mrida-spec-figure figcaption {
     margin-top: 8px;
     font-size: 0.82em;
@@ -572,7 +524,6 @@ author_profile: true
   .dark-mode .mrida-spec-figure figcaption {
     color: #c8a050;
   }
-
   /* Gallery Horizontal Scroll */
   .project-gallery {
     display: flex;
@@ -587,7 +538,6 @@ author_profile: true
     align-items: stretch;
   }
   .project-gallery::-webkit-scrollbar { display: none; }
-  
   .project-gallery figure {
     flex: 0 0 85%;
     max-width: 420px;
@@ -597,7 +547,6 @@ author_profile: true
     flex-direction: column;
     align-items: center;
   }
-  
   .project-gallery img {
     width: 100%;
     height: 220px;
@@ -613,7 +562,6 @@ author_profile: true
     transform: scale(1.035);
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   }
-  
   .project-gallery figcaption {
     margin-top: 8px;
     font-size: 0.9em;
@@ -630,12 +578,10 @@ author_profile: true
     box-sizing: border-box;
   }
   .dark-mode .project-gallery figcaption { color: #c8a050; }
-
   /* ── PDF Container – CSS Grid smooth animation ── */
   .pdf-wrapper {
     margin-top: 24px;
   }
-
   /* Toggle bar – sits above the animated container */
   .pdf-toggle-bar {
     display: flex;
@@ -658,13 +604,11 @@ author_profile: true
     background: linear-gradient(to bottom, #3a3225, #2a2318);
     border-color: rgba(255, 210, 120, 0.25);
   }
-
   .pdf-toggle-bar-left {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-
   .pdf-dots {
     display: flex;
     gap: 7px;
@@ -681,7 +625,6 @@ author_profile: true
   .dot-red { background: #ff5f56; }
   .dot-yel { background: #ffbd2e; }
   .dot-grn { background: #27c93f; }
-
   .pdf-toolbar-title {
     font-size: 0.8em;
     font-weight: 600;
@@ -689,7 +632,6 @@ author_profile: true
     pointer-events: none;
   }
   .dark-mode .pdf-toolbar-title { color: #c8a060; }
-
   .pdf-toggle-chevron {
     font-size: 0.78em;
     font-weight: 700;
@@ -702,7 +644,6 @@ author_profile: true
   .pdf-wrapper.open .pdf-toggle-chevron {
     transform: rotate(180deg);
   }
-
   /* CSS Grid outer – animated height */
   .pdf-grid-outer {
     display: grid;
@@ -721,13 +662,11 @@ author_profile: true
   .pdf-wrapper.open .pdf-grid-outer {
     grid-template-rows: 1fr;
   }
-
   /* Inner: min-height:0 is mandatory for 0fr collapse */
   .pdf-grid-inner {
     min-height: 0;
     overflow: hidden;
   }
-
   .responsive-pdf {
     width: 100%;
     height: 500px;
@@ -742,7 +681,6 @@ author_profile: true
   @media (max-width: 600px) {
     .responsive-pdf { height: 380px; }
   }
-
   @media (min-width: 900px) {
     .project-container {
       flex-direction: row;
@@ -755,7 +693,6 @@ author_profile: true
       flex: 0 0 45%;
     }
   }
-
   @media (max-width: 900px) {
     .mrida-float-visual {
       float: none;
@@ -793,7 +730,6 @@ author_profile: true
           </div>
         </div>
         <div class="mrida-image-note">Prototype I made · tap to flip</div>
-
         <script>
         (function() {
           var card = document.getElementById('mrida-flip');
@@ -803,11 +739,9 @@ author_profile: true
         })();
         </script>
       </div>
-
       <p><strong>MRIDA</strong> is an AI-powered project designed to help farmers easily check soil health and improve crop yields.</p>
       <p>It was created to measure soil pH, moisture, temperature, and nutrients while also providing weather alerts. It also had a built-in emergency service to contact concerned authorities and a speech-to-speech assistant to guide the user and provide insights.</p>
       <p>The software side was built using MIT App Inventor and Python, and the current prototype stack was planned around a portable Raspberry Pi based field unit with live sensing, imaging, connectivity, and GPS support.</p>
-
       <div class="mrida-specs">
         <div class="mrida-stack-collapsible" id="mrida-stack-toggle">
           <div class="mrida-stack-header" onclick="toggleMridaStack()">
@@ -860,14 +794,12 @@ author_profile: true
           </div>
         </div>
       </div>
-
       <script>
       (function() {
         function toggleMridaStack() {
           var body = document.getElementById('mrida-stack-body');
           var dash = document.getElementById('mrida-stack-dash');
           var isOpen = body.classList.contains('open');
-          
           if (isOpen) {
             body.classList.remove('open');
             dash.textContent = '|';
@@ -877,13 +809,11 @@ author_profile: true
           }
         }
         window.toggleMridaStack = toggleMridaStack;
-        
         /* Open by default */
         var body = document.getElementById('mrida-stack-body');
         body.classList.add('open');
       })();
       </script>
-      
       <p class="notable">🏆 This project was also presented in:</p>
       <ul>
         <li><strong>Data and AI Talks 2023</strong> – Champion in Group C (Senior) category. Awarded a 9th Gen iPad, Trophy, AI-powered Rubik's Cube, and Certificates.</li>
@@ -1021,5 +951,3 @@ author_profile: true
 </div>
 
 {% include horizontal-scroll-keys.html %}
-
-</content>

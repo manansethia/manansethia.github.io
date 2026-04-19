@@ -157,4 +157,6 @@ $(document).ready(function () {
     scheduleFooterDockUpdate();
   });
 
+  $(window).on("scroll", scheduleFooterDockUpdate);
+
 });

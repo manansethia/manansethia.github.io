@@ -380,6 +380,43 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
+        <img src="/images/fsti.avif" width="100" height="100" alt="FSTI Logo">
+      </div>
+      <div class="exp-org-copy">
+        <div class="exp-org-name">First Step Innovations (FSTI)</div>
+        <div class="exp-org-range">Apr 2026 – Jul 2026 · 3 mos</div>
+      </div>
+    </header>
+    <div class="exp-role-list">
+      <article class="exp-role-row">
+        <div class="exp-role-marker">
+          <div class="exp-role-dot"></div>
+        </div>
+        <div class="exp-role-main">
+          <div class="exp-role-icon">
+            <img src="/images/fsti.avif" width="100" height="100" alt="FSTI Logo">
+          </div>
+          <div class="exp-role-copy">
+            <div class="exp-role-title">R&amp;D Intern</div>
+            <div class="exp-role-sub">
+              Research &amp; Development · 3 mos
+            </div>
+            <div class="exp-role-date">Apr 2026 – Jul 2026</div>
+            <div class="exp-desc">
+              <p>First Step Innovations is an Edu-Tech startup based in Bilaspur, Chhattisgarh, focused on STEAM education, coding, AI, and robotics for school students. As an R&amp;D Intern, I am working on three full-stack projects: an e-commerce web application, an AI-powered career counselling platform, and an interactive drone assembly simulator web app. I am also responsible for technical documentation, daily progress reporting, and QA testing across all deliverables.</p>
+            </div>
+            <div class="exp-images"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </article>
+
+  <hr class="silver-line exp-divider" />
+
+  <article class="exp-org">
+    <header class="exp-org-header">
+      <div class="exp-logo-box">
         <img src="/images/igeo.avif" width="100" height="102" alt="IGEO Logo">
       </div>
       <div class="exp-org-copy">
@@ -387,7 +424,6 @@ author_profile: true
         <div class="exp-org-range">Mar 2026 – Present</div>
       </div>
     </header>
-
     <div class="exp-role-list">
       <article class="exp-role-row">
         <div class="exp-role-marker">
@@ -427,7 +463,6 @@ author_profile: true
         <div class="exp-org-range">Apr 2016 – Mar 2026 · 10 yrs</div>
       </div>
     </header>
-
     <div class="exp-role-list">
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
@@ -445,7 +480,6 @@ author_profile: true
           </div>
         </div>
       </article>
-
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
@@ -462,7 +496,6 @@ author_profile: true
           </div>
         </div>
       </article>
-
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
@@ -479,7 +512,6 @@ author_profile: true
           </div>
         </div>
       </article>
-
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
@@ -496,7 +528,6 @@ author_profile: true
           </div>
         </div>
       </article>
-
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
@@ -509,10 +540,8 @@ author_profile: true
               <p>Previously known as the Computer Club, this is where my primary technological efforts took root.</p>
             </div>
             <div class="exp-images"></div>
-
             <div class="exp-sub-timeline">
               <div class="exp-sub-list">
-                
                 <div class="exp-sub-row">
                   <div class="exp-sub-role">Mentor</div>
                   <div class="exp-sub-date">Jun 2024 – Mar 2026 · 1 yr 10 mos</div>
@@ -520,7 +549,6 @@ author_profile: true
                     <p>I guided students deeply into competitive programming by creating and assigning practice problems, including dedicated prep material for I-Code. I helped students identify their technical skill levels, assisted faculty with technical limitations, and conducted specialized workshops on practical cybersecurity: offensive, defensive, and prevention strategies.</p>
                   </div>
                 </div>
-
                 <div class="exp-sub-row">
                   <div class="exp-sub-role">President</div>
                   <div class="exp-sub-date">Jul 2023 – Jun 2024 · 1 yr</div>
@@ -528,7 +556,6 @@ author_profile: true
                     <p>I hosted advanced technical workshops spanning MIT App Inventor, reinforcement learning chatbots, and competitive programming using C++. During this time, I proudly represented the school in multiple high stakes competitions: Data and AI, Junior SIH, Inspire Manak, Youth Ideathon, and technical quizzes (<a href="/achievements/?search=coding">view my achievements</a>). I heavily promoted Linux adoption among both students and teachers, taking personal initiative to upgrade existing Edubuntu systems and fix failing hardware across 5 computer labs.</p>
                   </div>
                 </div>
-
                 <div class="exp-sub-row">
                   <div class="exp-sub-role">Vice President</div>
                   <div class="exp-sub-date">Jul 2022 – Jun 2023 · 1 yr</div>
@@ -536,7 +563,6 @@ author_profile: true
                     <p>I conducted app development workshops using MIT App Inventor for grades 6 to 12 and organized complementary competitions. I introduced younger students to the basics of computer vision using OpenCV and conducted exploratory sessions on game development involving Python, Pygame, and Tkinter. Behind the scenes, I helped coordinate our flagship event, XPLORA.</p>
                   </div>
                 </div>
-
                 <div class="exp-sub-row">
                   <div class="exp-sub-role">Member</div>
                   <div class="exp-sub-date">Jul 2019 – Jun 2022 · 3 yrs</div>
@@ -544,13 +570,11 @@ author_profile: true
                     <p>I started entirely driven by curiosity. I explored block coding, basic Python scripting, and the fundamental differences between CLI and GUI usage. These early days gave me a solid introduction to supervised and unsupervised learning concepts, leading me to create engaging technology presentations for school assemblies, competitions, and annual functions.</p>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </article>
-
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
@@ -567,14 +591,11 @@ author_profile: true
           </div>
         </div>
       </article>
-
     </div>
-
     <!-- KPS Photo Gallery — CSS marquee auto-scroll -->
     <div class="exp-kps-wrap">
       <div class="exp-kps-track" id="kpsTrack"></div>
     </div>
-
   </article>
 </div>
 
