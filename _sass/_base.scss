@@ -36,6 +36,18 @@ body {
   background-attachment: fixed;
 }
 
+.royal-mode body {
+  background-color: #0d0d0c;
+  background-image:
+    radial-gradient(circle at 5% 10%, rgba(35, 35, 33, 0.8), transparent 38%),
+    radial-gradient(circle at 90% -5%, rgba(45, 44, 40, 0.6), transparent 35%),
+    radial-gradient(circle at 95% 55%, rgba(40, 39, 35, 0.7), transparent 40%),
+    radial-gradient(circle at 10% 65%, rgba(48, 47, 43, 0.5), transparent 35%),
+    radial-gradient(circle at 75% 95%, rgba(30, 30, 28, 0.8), transparent 38%),
+    radial-gradient(circle at 35% 105%, rgba(55, 53, 48, 0.4), transparent 40%);
+  background-attachment: fixed;
+}
+
 h1,
 h2,
 h3,

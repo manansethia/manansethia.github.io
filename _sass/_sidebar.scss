@@ -289,7 +289,7 @@
   }
 }
 
-.dark-mode .sidebar {
+.dark-mode .sidebar, .royal-mode .sidebar {
   &::before {
     display: none;
   }

@@ -116,15 +116,26 @@ body>.hidden-links:after {
   border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
 }
 
+.royal-mode body>.hidden-links {
+  background: linear-gradient(135deg, rgba(60, 51, 38, 0.8), rgba(40, 35, 25, 0.6)) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.08) !important;
+}
+
 .dark-mode body>.hidden-links li {
   border-bottom: 1.5px solid #ffe6c4;
 }
 
-.dark-mode body>.hidden-links li:last-child {
+.royal-mode body>.hidden-links li {
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode body>.hidden-links li:last-child,
+.royal-mode body>.hidden-links li:last-child {
   border-bottom: none;
 }
 
-.dark-mode body>.hidden-links a {
+.dark-mode body>.hidden-links a,
+.royal-mode body>.hidden-links a {
   color: #fdfdfd;
 }
 
@@ -132,8 +143,16 @@ body>.hidden-links:after {
   border-color: rgba(255, 230, 196, 0.2) transparent;
 }
 
+.royal-mode body>.hidden-links:before {
+  border-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
 .dark-mode body>.hidden-links:after {
   border-color: rgba(80, 50, 0, 0.8) transparent;
+}
+
+.royal-mode body>.hidden-links:after {
+  border-color: rgba(60, 51, 38, 0.8) transparent;
 }
 
 /* ── Teleported author__urls base styles ── */
@@ -187,6 +206,11 @@ body>.author__urls a:hover {
 .dark-mode body>.author__urls {
   background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
   border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+}
+
+.royal-mode body>.author__urls {
+  background: linear-gradient(135deg, rgba(60, 51, 38, 0.8), rgba(40, 35, 25, 0.6)) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.08) !important;
 }
 
 /* ── Force GPU compositing for author__urls blur in Chrome ──

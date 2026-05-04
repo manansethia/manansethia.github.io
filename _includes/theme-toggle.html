@@ -65,6 +65,12 @@
     stroke: #ffe6c4;
   }
 
+  .icon.star.visible {
+    opacity: 1;
+    transform: scale(1);
+    stroke: #ffffff;
+  }
+
   .dark-mode .theme-toggle .sun-moon-container {
     background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6));
     border: 1.5px solid rgba(255, 230, 196, 0.2);
@@ -119,6 +125,15 @@
 
   .dark-mode a {
     color: #fdfdfd;
+  }
+
+  .royal-mode .masthead {
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.92) 0%, rgba(33, 30, 23, 0.92) 100%) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    color: #ffffff;
+    border-bottom: 1.5px solid rgba(240, 240, 240, 0.5) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
   }
 
   .dark-mode .page__footer {
@@ -285,8 +300,9 @@
   }
 
   .dark-mode .page__content h2 {
-    border-bottom: 1px solid #ffae34;
+    border-bottom: 1.5px solid #ffae34;
   }
+
 
   .dark-mode .site-nav {
     background-color: #120c00;
@@ -418,13 +434,253 @@
   .dark-mode .jump-to-top .jtt-arrow {
     stroke: #ffe6c4;
   }
+
+  .royal-mode .theme-toggle .sun-moon-container {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.85), rgba(50, 48, 43, 0.75));
+    border: 1.5px solid rgba(240, 240, 240, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(240, 240, 240, 0.15);
+  }
+
+  .royal-mode .icon.sun, .royal-mode .icon.moon { opacity: 0; transform: scale(0.8); }
+
+  .royal-mode {
+    background-color: transparent !important;
+    color: #ffffff;
+  }
+
+  .royal-mode .greedy-nav .hidden-links:before {
+    border-color: #ffffff transparent;
+  }
+
+  .royal-mode .navicon,
+  .royal-mode .navicon:before,
+  .royal-mode .navicon:after {
+    background-color: #ffffff !important;
+  }
+
+  .royal-mode .close .navicon {
+    background: transparent;
+  }
+
+  .royal-mode .greedy-nav a:hover {
+    color: #ffffd1;
+  }
+
+  .royal-mode .greedy-nav .visible-links a:before {
+    background: #ffffd1;
+  }
+
+  .royal-mode a {
+    color: #ffffff;
+  }
+
+  .royal-mode .page__footer {
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.92) 0%, rgba(33, 30, 23, 0.92) 100%) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 2px solid rgba(228, 228, 228, 0.4) !important;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .royal-mode .page__footer footer {
+    color: #D1D1D1;
+  }
+
+  .royal-mode .masthead {
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.92) 0%, rgba(33, 30, 23, 0.92) 100%) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    color: #ffffff;
+    border-bottom: 1.5px solid rgba(240, 240, 240, 0.5) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .royal-mode .greedy-nav {
+    background-color: transparent !important;
+    color: #ffffff;
+    overflow: visible !important;
+  }
+
+  .royal-mode .author__content,
+  .royal-mode .author__urls,
+  .royal-mode .social-icons .fa-github {
+    color: #ffffff;
+  }
+
+  .royal-mode .author__urls:before {
+    border-color: rgba(255, 255, 255, 0.08) transparent;
+  }
+
+  .royal-mode .author__urls:after {
+    border-color: rgba(45, 43, 38, 0.8) transparent;
+  }
+
+  .royal-mode .social-icons .fa-instagram {
+    color: #ad2bff;
+  }
+
+  .royal-mode .social-icons .fa-linkedin {
+    color: #00acff;
+  }
+
+  .royal-mode .author__urls {
+    background: linear-gradient(135deg, rgba(45, 43, 38, 0.8), rgba(35, 33, 29, 0.6)) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  @media (min-width: 57.8125em) {
+    .royal-mode .author__urls {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .royal-mode .author__avatar img {
+    max-width: 175px;
+    border: 2px solid rgba(239, 239, 239, 0.63);
+  }
+
+  @media (min-width: 57.8125em) {
+    .royal-mode .author__avatar img {
+      border: 3px solid rgba(239, 239, 239, 0.63);
+    }
+  }
+
+  .royal-mode .greedy-nav .hidden-links,
+  .royal-mode body > .hidden-links {
+    background: rgba(42, 38, 30, 0.95) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1px solid rgba(240, 240, 240, 0.2) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+    z-index: 100 !important;
+    transform: translateZ(0);
+  }
+
+  .royal-mode .greedy-nav .hidden-links li,
+  .royal-mode body > .hidden-links li {
+    border-bottom: 1.5px solid rgba(255, 255, 241, 0.7) !important;
+  }
+
+  .royal-mode .greedy-nav .hidden-links li:last-child,
+  .royal-mode body > .hidden-links li:last-child {
+    border-bottom: none !important;
+  }
+
+  .royal-mode .greedy-nav .hidden-links:after {
+    border-color: #ffffff transparent;
+  }
+
+  .royal-mode .btn--inverse:hover {
+    box-shadow: #ffffd1 0 0 0.3rem !important;
+    background: linear-gradient(135deg, rgba(74, 70, 61, 0.8), rgba(50, 48, 43, 0.8)) !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffd1 !important;
+  }
+
+  .royal-mode .btn--inverse {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.8), rgba(50, 48, 43, 0.7)) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffffd1 !important;
+    border: 1px solid rgba(240, 240, 240, 0.3) !important;
+  }
+
+  .royal-mode h1,
+  .royal-mode h2,
+  .royal-mode h3,
+  .royal-mode h4,
+  .royal-mode h5,
+  .royal-mode h6 {
+    color: #ffffff;
+  }
+
+
+  .royal-mode .site-nav {
+    background-color: transparent !important;
+    color: #ffffff;
+  }
+
+  .royal-mode .page__content {
+    background-color: transparent !important;
+    color: #F5F5F5;
+  }
+
+  .royal-mode .archive {
+    background-color: transparent !important;
+    color: #F5F5F5;
+  }
+
+  .royal-mode .site-title {
+    color: #F5F5F5;
+  }
+
+  .royal-mode .site-nav a {
+    color: #F5F5F5;
+  }
+
+  .royal-mode ::selection {
+    background: #ffffd1;
+    color: #000;
+  }
+
+  .royal-mode .edu-divider {
+    background-color: #ffffd1;
+  }
+
+  .royal-mode .achievement-meta {
+    color: #D1D1D1;
+  }
+
+  .royal-mode .achievement-images-text {
+    color: #F5F5F5;
+  }
+
+  .royal-mode .episode-card-news span {
+    color: #F5F5F5;
+  }
+
+  .royal-mode .episode-card span {
+    color: #ffffd1;
+  }
+
+  .royal-mode .dashed-line {
+    color: rgba(240, 240, 240, 0.6);
+    opacity: 1;
+  }
+
+  .royal-mode hr.silver-line {
+    background-color: #ffffd1;
+  }
+
+  .royal-mode .pdf-frame {
+    border-color: rgba(240, 240, 240, 0.3);
+  }
+
+  .royal-mode .jump-to-top .jtt-container {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.85), rgba(50, 48, 43, 0.75));
+    border: 1.5px solid rgba(240, 240, 240, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(240, 240, 240, 0.15);
+  }
+
+  .royal-mode .jump-to-top .jtt-arrow {
+    stroke: #ffffff;
+  }
 </style>
 
 <script data-cfasync="false">
   (function () {
     try {
-      if (localStorage.getItem('theme') === 'dark') {
-document.documentElement.classList.add('dark-mode');
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      } else if (theme === 'royal') {
+        document.documentElement.classList.add('royal-mode');
       }
     } catch (e) { }
   })();
@@ -456,6 +712,9 @@ document.documentElement.classList.add('dark-mode');
     <svg class="moon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
     </svg>
+    <svg class="star icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+    </svg>
   </div>
 </button>
 
@@ -465,21 +724,37 @@ document.documentElement.classList.add('dark-mode');
     var themeToggle = document.getElementById("theme-toggle");
     var sun = document.querySelector(".sun");
     var moon = document.querySelector(".moon");
+    var star = document.querySelector(".star");
 
     function updateIcons() {
       var isDark = html.classList.contains("dark-mode");
-      sun.classList.toggle("visible", !isDark);
+      var isRoyal = html.classList.contains("royal-mode");
+      sun.classList.toggle("visible", !isDark && !isRoyal);
       moon.classList.toggle("visible", isDark);
+      star.classList.toggle("visible", isRoyal);
     }
 
     updateIcons();
 
     themeToggle.addEventListener("click", function () {
-      html.classList.toggle("dark-mode");
-      localStorage.setItem(
-        "theme",
-        html.classList.contains("dark-mode") ? "dark" : "light"
-      );
+      var isDark = html.classList.contains("dark-mode");
+      var isRoyal = html.classList.contains("royal-mode");
+
+      if (isDark) {
+        // Switch to Royal
+        html.classList.remove("dark-mode");
+        html.classList.add("royal-mode");
+        localStorage.setItem("theme", "royal");
+      } else if (isRoyal) {
+        // Switch to Light
+        html.classList.remove("royal-mode");
+        localStorage.setItem("theme", "light");
+      } else {
+        // Switch to Dark
+        html.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+      }
+      
       updateIcons();
     });
 
@@ -558,10 +833,12 @@ document.documentElement.classList.add('dark-mode');
         this.ctx.font = `600 ${this.fontSize}px 'SF Pro Display', 'SF Pro Text', sans-serif`;
         
         const isDark = document.documentElement.classList.contains('dark-mode');
-        const r = isDark ? 255 : 145;
-        const g = isDark ? 200 : 95;
-        const b = isDark ? 110 : 20;
-        const maxAlpha = isDark ? 0.18 : 0.15; /* Minutely decreased dark mode, softened light mode */
+        const isRoyal = document.documentElement.classList.contains('royal-mode');
+        
+        const r = isRoyal ? 240 : (isDark ? 255 : 145);
+        const g = isRoyal ? 245 : (isDark ? 200 : 95);
+        const b = isRoyal ? 250 : (isDark ? 110 : 20);
+        const maxAlpha = isRoyal ? 0.15 : (isDark ? 0.18 : 0.15);
         
         const nameSeq = ["म", "न", "न", "से", "ठि", "या"];
 
@@ -611,8 +888,12 @@ document.documentElement.classList.add('dark-mode');
             
             let drawAlpha = drop.opacity * maxAlpha;
             if (drop.isHighlight) {
-                /* When your name appears, make it extremely opaque (brightest in dark, darkest in light) */
-                drawAlpha = isDark ? (drop.opacity * 0.9) : (drop.opacity * 0.85);
+                /* When your name appears, make it extremely opaque */
+                if (isRoyal) {
+                    drawAlpha = drop.opacity * 0.65;
+                } else {
+                    drawAlpha = isDark ? (drop.opacity * 0.9) : (drop.opacity * 0.85);
+                }
             }
             
             /* Render character */

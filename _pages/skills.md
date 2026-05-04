@@ -76,6 +76,22 @@ author_profile: true
     --skills-shadow: 0 20px 60px rgba(0, 0, 0, 0.34);
     --skills-shadow-strong: 0 28px 75px rgba(0, 0, 0, 0.48);
   }
+  .royal-mode .skills-page {
+    --skills-bg: #0d0d0c;
+    --skills-surface: rgba(60, 58, 54, 0.78);
+    --skills-surface-strong: rgba(60, 58, 54, 0.88);
+    --skills-surface-soft: rgba(60, 58, 54, 0.75);
+    --skills-border: rgba(240, 240, 240, 0.2);
+    --skills-border-strong: rgba(240, 240, 240, 0.2);
+    --skills-title: #ffffff;
+    --skills-text: #ffffff;
+    --skills-muted: #ffffd1;
+    --skills-chip-bg: rgba(72, 70, 64, 0.85);
+    --skills-chip-text: #ffffd1;
+    --skills-chip-border: rgba(240, 240, 240, 0.2);
+    --skills-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --skills-shadow-strong: 0 28px 75px rgba(0, 0, 0, 0.6);
+  }
 
   .skills-orbit {
     position: relative;
@@ -128,6 +144,17 @@ author_profile: true
       radial-gradient(circle at top right, rgba(255, 198, 89, 0.18), rgba(255, 198, 89, 0) 34%),
       linear-gradient(145deg, rgba(43, 29, 11, 0.85), rgba(24, 16, 7, 0.8));
   }
+  .royal-mode .skills-orbit {
+    background:
+      radial-gradient(circle at top right, rgba(255, 232, 165, 0.35), rgba(255, 233, 166, 0) 34%),
+      linear-gradient(145deg, rgba(71, 69, 65, 0.72), rgba(31, 31, 28, 0.68));
+  }
+  .royal-mode .skills-orbit::before {
+    border-color: rgba(240, 240, 240, 0.12);
+  }
+  .royal-mode .skills-orbit::after {
+    border-color: rgba(240, 240, 240, 0.1);
+  }
 
   .skills-focus-label {
     display: inline-flex;
@@ -148,6 +175,10 @@ author_profile: true
   .dark-mode .skills-focus-label {
     background: rgba(255, 237, 199, 0.06);
     border-color: rgba(255, 210, 120, 0.14);
+  }
+  .royal-mode .skills-focus-label {
+    background: rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
   }
 
   .skills-focus-grid {
@@ -190,6 +221,11 @@ author_profile: true
 
   .dark-mode .skills-metric {
     background: rgba(255, 249, 239, 0.04);
+    box-shadow: none;
+  }
+  .royal-mode .skills-metric {
+    background: rgba(255, 255, 209, 0.06);
+    border-color: rgba(240, 240, 240, 0.2);
     box-shadow: none;
   }
 
@@ -239,6 +275,11 @@ author_profile: true
       linear-gradient(180deg, rgba(74, 53, 24, 0.95), rgba(53, 37, 16, 0.98));
     box-shadow: none;
   }
+  .royal-mode .skills-tag {
+    background:
+      linear-gradient(180deg, rgba(72, 70, 64, 0.88), rgba(50, 48, 43, 0.92));
+    box-shadow: none;
+  }
 
   .skills-grid {
     display: grid;
@@ -280,6 +321,11 @@ author_profile: true
       linear-gradient(135deg, rgba(255, 199, 88, 0.12), rgba(255, 199, 88, 0) 40%),
       linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
   }
+  .royal-mode .skills-card::before {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 209, 0.1), rgba(255, 255, 209, 0) 40%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+  }
 
   .skills-card > * {
     position: relative;
@@ -315,6 +361,9 @@ author_profile: true
   .dark-mode .skills-group + .skills-group {
     border-top-color: rgba(255, 210, 120, 0.14);
   }
+  .royal-mode .skills-group + .skills-group {
+    border-top-color: rgba(240, 240, 240, 0.18);
+  }
 
   .skills-group h3 {
     margin: 0 0 0.55rem;
@@ -334,6 +383,9 @@ author_profile: true
   }
 
   .dark-mode .skills-page img.apple-emoji {
+    background: transparent !important;
+  }
+  .royal-mode .skills-page img.apple-emoji {
     background: transparent !important;
   }
 
@@ -372,6 +424,11 @@ author_profile: true
     .dark-mode .skills-card:focus-within,
     .dark-mode .skills-orbit:hover {
       box-shadow: 0 28px 80px rgba(0, 0, 0, 0.56);
+    }
+    .royal-mode .skills-card:hover,
+    .royal-mode .skills-card:focus-within,
+    .royal-mode .skills-orbit:hover {
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.6);
     }
     
     /* Staggered entrance for sibling cards */
@@ -415,6 +472,7 @@ author_profile: true
       font-size: 0.76rem;
     }
   }
+  .royal-mode .page__content h2 { border-bottom: none !important; }
 </style>
 
 <div class="skills-page">

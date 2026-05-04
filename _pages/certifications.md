@@ -133,6 +133,7 @@ author_profile: true
   .dragging {
     cursor: grabbing;
   }
+  .royal-mode .page__content h2 { border-bottom: none !important; }
 </style>
 
 <div class="cert-section">

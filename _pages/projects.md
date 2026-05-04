@@ -199,6 +199,19 @@ author_profile: true
       linear-gradient(145deg, rgba(43, 29, 11, 0.85), rgba(24, 16, 7, 0.8));
     box-shadow: 0 28px 75px rgba(0, 0, 0, 0.48);
   }
+  .royal-mode .project-section {
+    border-color: rgba(240, 240, 240, 0.2);
+    background:
+      radial-gradient(circle at top right, rgba(72, 70, 64, 0.4), rgba(72, 70, 64, 0) 350px),
+      linear-gradient(145deg, rgba(72, 70, 64, 0.7), rgba(50, 48, 43, 0.65));
+    box-shadow: 0 28px 75px rgba(0, 0, 0, 0.5);
+  }
+  .royal-mode .project-section::before {
+    border-color: rgba(240, 240, 240, 0.12);
+  }
+  .royal-mode .project-section::after {
+    border-color: rgba(240, 240, 240, 0.1);
+  }
   .project-section h2 {
     font-size: 1.7em;
     margin-top: 0;
@@ -209,6 +222,15 @@ author_profile: true
   } 
   .dark-mode .project-section h2 {
     color: #ffe6aa;
+  }
+  .royal-mode .project-section h2 {
+    color: #ffffff;
+  }
+  .royal-mode .project-section h3 {
+    color: rgba(240, 240, 240, 0.8) !important;
+  }
+  .royal-mode .project-year {
+    color: #feffdd !important;
   }
   .project-section h3 {
     font-size: 1.05em;
@@ -238,6 +260,12 @@ author_profile: true
     color: #f0c870;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   }
+  .royal-mode .project-meta span {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.85), rgba(72, 70, 64, 0.75));
+    color: #ffffd1;
+    border: 1px solid rgba(240, 240, 240, 0.15);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
   /* Flex Layouts */
   .project-container {
     display: flex;
@@ -259,6 +287,9 @@ author_profile: true
   }
   .dark-mode .project-text .notable {
     color: #f0c870;
+  }
+  .royal-mode .project-text .notable {
+    color: #ffffd1;
   }
   .project-text ul {
     margin-top: 8px;
@@ -357,6 +388,9 @@ author_profile: true
   .dark-mode .mrida-image-note {
     color: #c8a050;
   }
+  .royal-mode .mrida-image-note {
+    color: #ffffd1;
+  }
   /* ── Collapsible stack ── */
   .mrida-stack-collapsible {
     border-radius: 12px;
@@ -384,6 +418,9 @@ author_profile: true
   }
   .dark-mode .mrida-stack-dash {
     color: #d4a040;
+  }
+  .royal-mode .mrida-stack-dash {
+    color: #ffffd1;
   }
   .mrida-stack-body {
     display: grid;
@@ -420,6 +457,9 @@ author_profile: true
   .dark-mode .mrida-stack-label {
     color: #d4a040;
   }
+  .royal-mode .mrida-stack-label {
+    color: #ffffd1;
+  }
   .mrida-stack-list {
     list-style: none;
     padding: 0;
@@ -442,6 +482,10 @@ author_profile: true
     color: #ddd;
     border-bottom-color: rgba(200, 150, 40, 0.12);
   }
+  .royal-mode .mrida-stack-list li {
+    color: #ffffff;
+    border-bottom-color: rgba(240, 240, 240, 0.12);
+  }
   .mrida-stack-list li:last-child {
     border-bottom: none;
   }
@@ -453,6 +497,9 @@ author_profile: true
   }
   .dark-mode .mrida-stack-list li::before {
     color: #d4a040;
+  }
+  .royal-mode .mrida-stack-list li::before {
+    color: #ffffd1;
   }
   .mrida-specs {
     margin: 18px 0 20px;
@@ -467,6 +514,10 @@ author_profile: true
     background: linear-gradient(135deg, rgba(56, 45, 26, 0.95), rgba(40, 32, 20, 0.96));
     border-color: rgba(212, 160, 64, 0.18);
   }
+  .royal-mode .mrida-specs {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.7), rgba(50, 48, 43, 0.65));
+    border-color: rgba(240, 240, 240, 0.15);
+  }
   .mrida-specs h4 {
     margin: 0 0 12px;
     font-size: 0.98em;
@@ -474,6 +525,9 @@ author_profile: true
   }
   .dark-mode .mrida-specs h4 {
     color: #e0b45f;
+  }
+  .royal-mode .mrida-specs h4 {
+    color: #ffffff;
   }
   /* Layout container: clearfix so it grows around floated image */
   .mrida-specs-layout {
@@ -523,6 +577,9 @@ author_profile: true
   }
   .dark-mode .mrida-spec-figure figcaption {
     color: #c8a050;
+  }
+  .royal-mode .mrida-spec-figure figcaption {
+    color: #ffffd1;
   }
   /* Gallery Horizontal Scroll */
   .project-gallery {
@@ -578,6 +635,7 @@ author_profile: true
     box-sizing: border-box;
   }
   .dark-mode .project-gallery figcaption { color: #c8a050; }
+  .royal-mode .project-gallery figcaption { color: #ffffd1; }
   /* ── PDF Container – CSS Grid smooth animation ── */
   .pdf-wrapper {
     margin-top: 24px;
@@ -600,9 +658,16 @@ author_profile: true
     border-radius: 12px;
     border-bottom: 1.5px solid rgba(185, 115, 0, 0.35);
   }
+  .royal-mode .pdf-wrapper:not(.open) .pdf-toggle-bar {
+    border-bottom: 1.5px solid rgba(130, 130, 130, 0.35);
+  }
   .dark-mode .pdf-toggle-bar {
     background: linear-gradient(to bottom, #3a3225, #2a2318);
     border-color: rgba(255, 210, 120, 0.25);
+  }
+  .royal-mode .pdf-toggle-bar {
+    background: linear-gradient(to bottom, rgba(72, 70, 64, 0.85), rgba(50, 48, 43, 0.8));
+    border-color: rgba(240, 240, 240, 0.2);
   }
   .pdf-toggle-bar-left {
     display: flex;
@@ -632,6 +697,7 @@ author_profile: true
     pointer-events: none;
   }
   .dark-mode .pdf-toolbar-title { color: #c8a060; }
+  .royal-mode .pdf-toolbar-title { color: #ffffd1; }
   .pdf-toggle-chevron {
     font-size: 0.78em;
     font-weight: 700;
@@ -641,6 +707,7 @@ author_profile: true
     pointer-events: none;
   }
   .dark-mode .pdf-toggle-chevron { color: #c8a060; }
+  .royal-mode .pdf-toggle-chevron { color: #ffffd1; }
   .pdf-wrapper.open .pdf-toggle-chevron {
     transform: rotate(180deg);
   }
@@ -658,6 +725,10 @@ author_profile: true
   .dark-mode .pdf-grid-outer {
     border-color: #5a4520;
     background: #0e0c08;
+  }
+  .royal-mode .pdf-grid-outer {
+    border-color: rgba(240, 240, 240, 0.2);
+    background: #0d0d0c;
   }
   .pdf-wrapper.open .pdf-grid-outer {
     grid-template-rows: 1fr;
@@ -701,12 +772,13 @@ author_profile: true
       margin: 10px auto 18px;
     }
   }
+  .royal-mode .page__content h2 { border-bottom: none !important; }
 </style>
 
 <div class="project-section" id="mrida"> 
   <h2>MRIDA 🌱</h2>
   <h3>Multipurpose Real-time Integrated Digital Analyzer</h3>
-  <div style="margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;">2023 - 2025</div>
+  <div style="margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;" class="project-year">2023 - 2025</div>
   
   <div class="project-meta">
     <span>🐍 Python</span>
@@ -916,7 +988,7 @@ author_profile: true
 <div class="project-section" id="matrix">
   <h2>MATRIX 🤖</h2>
   <h3>A JARVIS Inspired Voice and Text Activated Assistant</h3>
-  <div style="margin-top: 0px; margin-bottom: 15px; font-weight: 500; color: #a07830; font-size: 0.9em;">2021 - 2022</div>
+  <div style="margin-top: 0px; margin-bottom: 15px; font-weight: 500; color: #a07830; font-size: 0.9em;" class="project-year">2021 - 2022</div>
 
   <div class="project-meta">
     <span>🐍 Python</span>

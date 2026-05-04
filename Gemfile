@@ -9,3 +9,7 @@ group :jekyll_plugins do
 end
 
 gem 'github-pages'
+gem 'csv'
+gem 'base64'
+gem 'bigdecimal'
+gem 'mutex_m'

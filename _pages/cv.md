@@ -31,6 +31,9 @@ redirect_from:
   .dark-mode .resume-divider {
     background: linear-gradient(90deg, transparent, rgba(255, 210, 120, 0.35), transparent);
   }
+  .royal-mode .resume-divider {
+    background: linear-gradient(90deg, transparent, rgba(240, 240, 240, 0.3), transparent);
+  }
 
   /* ── Tab Strip ── */
   .doc-tabs {
@@ -42,6 +45,9 @@ redirect_from:
   }
   .dark-mode .doc-tabs {
     border-bottom-color: rgba(255, 210, 120, 0.35);
+  }
+  .royal-mode .doc-tabs {
+    border-bottom-color: rgba(240, 240, 240, 0.3);
   }
 
   .doc-tab {
@@ -64,6 +70,9 @@ redirect_from:
   .dark-mode .doc-tab {
     color: #a08050;
   }
+  .royal-mode .doc-tab {
+    color: #ffffd1;
+  }
   .doc-tab:hover {
     color: #5a3e00;
     background: rgba(229, 149, 0, 0.08);
@@ -72,6 +81,10 @@ redirect_from:
   .dark-mode .doc-tab:hover {
     color: #e6c194;
     background: rgba(255, 210, 120, 0.06);
+  }
+  .royal-mode .doc-tab:hover {
+    color: #ffffd1;
+    background: rgba(255, 255, 209, 0.1);
   }
 
   /* Active tab – light mode */
@@ -85,6 +98,11 @@ redirect_from:
     color: #f0d8a8;
     background: #1a1408;
     border-color: rgba(255, 210, 120, 0.35);
+  }
+  .royal-mode .doc-tab.active {
+    color: #ffffff;
+    background: #1e1d1a;
+    border-color: rgba(240, 240, 240, 0.3);
   }
 
   .tab-icon {
@@ -124,6 +142,11 @@ redirect_from:
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
     background: #0e0c08;
   }
+  .royal-mode .pdf-viewer-wrap {
+    border-color: #4a463d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: #0d0d0c;
+  }
 
   /* Loading shimmer */
   .pdf-viewer-wrap.loading::after {
@@ -145,6 +168,14 @@ redirect_from:
       rgba(255, 210, 120, 0.02) 25%,
       rgba(255, 210, 120, 0.06) 50%,
       rgba(255, 210, 120, 0.02) 75%
+    );
+    background-size: 200% 100%;
+  }
+  .royal-mode .pdf-viewer-wrap.loading::after {
+    background: linear-gradient(90deg,
+      rgba(255, 255, 209, 0.02) 25%,
+      rgba(255, 255, 209, 0.06) 50%,
+      rgba(255, 255, 209, 0.02) 75%
     );
     background-size: 200% 100%;
   }
@@ -218,10 +249,25 @@ redirect_from:
     border: 2px solid #dc880a !important;
     transform: translateY(-2px);
   }
+  .royal-mode .dl-btn {
+    background: linear-gradient(135deg, rgba(45, 43, 38, 0.8), rgba(35, 33, 29, 0.6)) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffffd1 !important;
+    border: 2px solid #4a463d !important;
+  }
+  .royal-mode .dl-btn:hover {
+    box-shadow: #ffffd1 0 0 0.3rem !important;
+    background: linear-gradient(135deg, rgba(74, 70, 61, 1), rgba(60, 56, 49, 1)) !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffd1 !important;
+    transform: translateY(-2px);
+  }
 
   .dl-icon {
     font-size: 1.1em;
   }
+  .royal-mode .page__content h2 { border-bottom: 1.5px solid rgba(240, 240, 240, 0.9); }
 </style>
 
 <span class="resume-intro" role="heading" aria-level="2" style="font-size:1.17em;font-weight:600;display:block;margin-bottom:20px">Here are my Resume and CV.</span>

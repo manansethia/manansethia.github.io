@@ -11,6 +11,9 @@ author_profile: true
   .dark-mode .page__title {
     color: #ffffff;
   }
+  .royal-mode .page__title {
+    color: #ffffff;
+  }
 
   /* Layout */
   .exp-section {
@@ -33,6 +36,9 @@ author_profile: true
 
   .dark-mode .exp-org::before {
     background: #e6c194;
+  }
+  .royal-mode .exp-org::before {
+    background: #ffffd1;
   }
 
   .exp-org-header,
@@ -70,6 +76,10 @@ author_profile: true
   .dark-mode .exp-logo-box,
   .dark-mode .exp-role-icon {
     border-color: rgba(255, 210, 120, 0.45);
+  }
+  .royal-mode .exp-logo-box,
+  .royal-mode .exp-role-icon {
+    border-color: rgba(240, 240, 240, 0.25);
   }
 
   .exp-logo-box img,
@@ -120,6 +130,11 @@ author_profile: true
   .dark-mode .exp-sub-role {
     color: #ffffff;
   }
+  .royal-mode .exp-org-name,
+  .royal-mode .exp-role-title,
+  .royal-mode .exp-sub-role {
+    color: #ffffff;
+  }
 
   .exp-org-range,
   .exp-role-sub,
@@ -159,6 +174,12 @@ author_profile: true
   .dark-mode .exp-sub-date {
     color: rgb(255 223 192);
   }
+  .royal-mode .exp-org-range,
+  .royal-mode .exp-role-sub,
+  .royal-mode .exp-role-date,
+  .royal-mode .exp-sub-date {
+    color: #ffffff;
+  }
 
   /* Role rows */
   .exp-role-list {
@@ -176,6 +197,9 @@ author_profile: true
 
   .dark-mode .exp-role-row + .exp-role-row {
     border-top-color: rgba(230, 193, 148, 0.8);
+  }
+  .royal-mode .exp-role-row + .exp-role-row {
+    border-top-color: rgba(240, 240, 240, 0.2);
   }
 
   .exp-role-marker {
@@ -198,6 +222,10 @@ author_profile: true
     background: #e6c194;
     border-color: #120c00;
   }
+  .royal-mode .exp-role-dot {
+    background: #ffffd1;
+    border-color: #0d0d0c;
+  }
 
   .exp-role-main {
     display: grid;
@@ -216,6 +244,9 @@ author_profile: true
 
   .dark-mode .exp-sub-timeline {
     border-top-color: rgba(230, 193, 148, 0.7);
+  }
+  .royal-mode .exp-sub-timeline {
+    border-top-color: rgba(240, 240, 240, 0.2);
   }
 
   .exp-sub-list {
@@ -251,6 +282,15 @@ author_profile: true
       transparent 11px
     );
   }
+  .royal-mode .exp-sub-list::before {
+    background: repeating-linear-gradient(
+      to bottom,
+      #ffffd1 0px,
+      #ffffd1 6px,
+      transparent 6px,
+      transparent 11px
+    );
+  }
 
   .exp-sub-row {
     position: relative;
@@ -272,6 +312,10 @@ author_profile: true
     background: #e6c194;
     border-color: #120c00;
   }
+  .royal-mode .exp-sub-row::before {
+    background: #ffffd1;
+    border-color: #0d0d0c;
+  }
 
   /* Divider */
   .exp-divider {
@@ -283,6 +327,9 @@ author_profile: true
 
   .dark-mode hr.exp-divider {
     background-color: #e6c194;
+  }
+  .royal-mode hr.exp-divider {
+    background-color: rgba(240, 240, 240, 0.25);
   }
 
   /* Responsive */
@@ -330,11 +377,14 @@ author_profile: true
   .exp-desc, .exp-sub-desc { font-family: inherit; letter-spacing: 0; }
   .exp-desc { margin-top: 8px; font-size: 0.95em; line-height: 1.5; color: #111; }
   .dark-mode .exp-desc { color: #eee; }
+  .royal-mode .exp-desc { color: #ffffff; }
   .exp-desc p, .exp-sub-desc p { margin: 6px 0; }
   .exp-desc a, .exp-sub-desc a { color: #c07300; text-decoration: none; border-bottom: 1px solid #c07300; }
   .dark-mode .exp-desc a, .dark-mode .exp-sub-desc a { color: #e6c194; border-bottom-color: #e6c194; }
+  .royal-mode .exp-desc a, .royal-mode .exp-sub-desc a { color: #ffffd1; border-bottom-color: #ffffd1; }
   .exp-sub-desc { margin-top: 4px; font-size: 0.92em; line-height: 1.45; color: #222; }
   .dark-mode .exp-sub-desc { color: #ddd; }
+  .royal-mode .exp-sub-desc { color: #ffffff; }
   .exp-images { display: flex; overflow-x: auto; overflow-y: hidden; padding: 10px 0; margin-top: 5px; gap: 15px; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; cursor: grab; }
   .exp-images:empty { display: none; }
   .exp-images::-webkit-scrollbar { display: none; }
@@ -374,6 +424,8 @@ author_profile: true
     transition: none !important;
     transform: none !important;
   }
+  .royal-mode .page__content h2 { border-bottom: 1.5px solid rgba(240, 240, 240, 0.9); }
+  .royal-mode .exp-role-row + .exp-role-row { border-top-color: rgba(240, 240, 240, 0.5) !important; }
 </style>
 
 <div class="exp-section">
