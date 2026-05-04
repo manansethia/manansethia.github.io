@@ -741,16 +741,16 @@
       var isRoyal = html.classList.contains("royal-mode");
 
       if (isDark) {
-        // Switch to Royal
+        /* Switch to Royal */
         html.classList.remove("dark-mode");
         html.classList.add("royal-mode");
         localStorage.setItem("theme", "royal");
       } else if (isRoyal) {
-        // Switch to Light
+        /* Switch to Light */
         html.classList.remove("royal-mode");
         localStorage.setItem("theme", "light");
       } else {
-        // Switch to Dark
+        /* Switch to Dark */
         html.classList.add("dark-mode");
         localStorage.setItem("theme", "dark");
       }
