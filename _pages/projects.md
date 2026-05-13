@@ -921,7 +921,6 @@ author_profile: true
   (function() {
     var wrapper   = document.getElementById('mrida-pdf-wrapper');
     var toggleBar = document.getElementById('mrida-pdf-toggle-bar');
-    var gridOuter = document.getElementById('mrida-pdf-grid-outer');
     var frame     = document.getElementById('mrida-pdf-frame');
     var dotClose  = document.getElementById('pdf-dot-close');
     var dotMin    = document.getElementById('pdf-dot-min');
@@ -929,9 +928,6 @@ author_profile: true
     var isOpen    = false;
     var srcLoaded = false;
     var closeTimer = null;
-
-    var TOGGLE_BAR_H = 44;
-    var FRAME_HEIGHT = 500;
 
     frame.addEventListener('load', function() {
       if (frame.src && frame.src !== 'about:blank') {
@@ -943,7 +939,6 @@ author_profile: true
       if (isOpen) return;
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
       isOpen = true;
-      wrapper.style.minHeight = (FRAME_HEIGHT + TOGGLE_BAR_H) + 'px';
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           wrapper.classList.add('open');
@@ -957,12 +952,6 @@ author_profile: true
             closeTimer = null;
           }, 620);
         });
-      });
-      gridOuter.addEventListener('transitionend', function onEnd(e) {
-        if (e.propertyName !== 'grid-template-rows') return;
-        gridOuter.removeEventListener('transitionend', onEnd);
-        wrapper.style.minHeight = '';
-        frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     }
 

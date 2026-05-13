@@ -286,11 +286,9 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
 </div>
 
 <!-- ═══ PDF Viewer (CSS Grid animation wrapper) ═══ -->
-<div id="pdfOuterWrap">
-  <div class="pdf-viewer-outer" id="pdfOuter">
-    <div class="pdf-viewer-wrap" id="pdfWrap">
-      <iframe class="pdf-viewer-frame" id="docFrame" title="Document Viewer"></iframe>
-    </div>
+<div class="pdf-viewer-outer" id="pdfOuter">
+  <div class="pdf-viewer-wrap" id="pdfWrap">
+    <iframe class="pdf-viewer-frame" id="docFrame" title="Document Viewer"></iframe>
   </div>
 </div>
 
@@ -308,7 +306,6 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
 
 <script>
 (function() {
-  var outerWrap = document.getElementById('pdfOuterWrap');
   var outer   = document.getElementById('pdfOuter');
   var wrap    = document.getElementById('pdfWrap');
   var frame   = document.getElementById('docFrame');
@@ -321,8 +318,6 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     resume: '/_pages/resume-pdf-view.html',
     cv:     '/_pages/cv-pdf-view.html'
   };
-
-  var FRAME_HEIGHT = 550;
 
   frame.addEventListener('load', function() {
     if (frame.src && frame.src !== 'about:blank' && frame.src !== window.location.href) {
@@ -339,7 +334,6 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     if (current === which) {
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
-      outerWrap.style.minHeight = '';
       requestAnimationFrame(function() {
         outer.classList.remove('open');
         tabR.classList.remove('active');
@@ -360,7 +354,6 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     if (!current) {
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
-      outerWrap.style.minHeight = (FRAME_HEIGHT + 4) + 'px';
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           outer.classList.add('open');
@@ -370,12 +363,6 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
             closeTimer = null;
           }, 620);
         });
-      });
-      outer.addEventListener('transitionend', function onEnd(e) {
-        if (e.propertyName !== 'grid-template-rows') return;
-        outer.removeEventListener('transitionend', onEnd);
-        outerWrap.style.minHeight = '';
-        frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     } else {
       frame.classList.remove('loaded');
