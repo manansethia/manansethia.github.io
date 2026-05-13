@@ -339,6 +339,7 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     if (current === which) {
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
+      outerWrap.style.minHeight = '';
       requestAnimationFrame(function() {
         outer.classList.remove('open');
         tabR.classList.remove('active');
@@ -346,7 +347,6 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
         current = null;
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
-          outerWrap.style.minHeight = '';
           closeTimer = null;
         }, 650);
       });

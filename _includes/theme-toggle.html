@@ -13,12 +13,16 @@
 
   body {
     min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
 
-  .page__footer {
-    margin-top: auto;
+  body > .page__footer {
+    align-self: end;
+  }
+
+  .masthead {
+    will-change: transform;
   }
 
   .theme-toggle {
@@ -694,7 +698,7 @@
   })();
 </script>
 
-<canvas id="matrix-rain" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; will-change: transform; transform: translateZ(0); filter: blur(1px); -webkit-filter: blur(1px);"></canvas>
+<canvas id="matrix-rain" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; transform: translateZ(0); filter: blur(1px); -webkit-filter: blur(1px);"></canvas>
 
 <button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
   <div class="jtt-container">
