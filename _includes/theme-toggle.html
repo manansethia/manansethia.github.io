@@ -11,6 +11,16 @@
     background-color: transparent !important;
   }
 
+  body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page__footer {
+    margin-top: auto;
+  }
+
   .theme-toggle {
     position: fixed;
     bottom: 30px;
@@ -684,7 +694,7 @@
   })();
 </script>
 
-<canvas id="matrix-rain" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; will-change: transform; transform: translateZ(0);"></canvas>
+<canvas id="matrix-rain" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; will-change: transform; transform: translateZ(0); filter: blur(1px); -webkit-filter: blur(1px);"></canvas>
 
 <button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
   <div class="jtt-container">

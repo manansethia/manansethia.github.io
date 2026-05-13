@@ -286,9 +286,11 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
 </div>
 
 <!-- ═══ PDF Viewer (CSS Grid animation wrapper) ═══ -->
-<div class="pdf-viewer-outer" id="pdfOuter">
-  <div class="pdf-viewer-wrap" id="pdfWrap">
-    <iframe class="pdf-viewer-frame" id="docFrame" title="Document Viewer"></iframe>
+<div id="pdfOuterWrap">
+  <div class="pdf-viewer-outer" id="pdfOuter">
+    <div class="pdf-viewer-wrap" id="pdfWrap">
+      <iframe class="pdf-viewer-frame" id="docFrame" title="Document Viewer"></iframe>
+    </div>
   </div>
 </div>
 
@@ -306,6 +308,7 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
 
 <script>
 (function() {
+  var outerWrap = document.getElementById('pdfOuterWrap');
   var outer   = document.getElementById('pdfOuter');
   var wrap    = document.getElementById('pdfWrap');
   var frame   = document.getElementById('docFrame');
@@ -330,10 +333,6 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     }
   });
 
-  function setOuterHeight(px) {
-    outer.style.minHeight = px ? px + 'px' : '';
-  }
-
   function switchDoc(which) {
     if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
 
@@ -341,15 +340,13 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
       requestAnimationFrame(function() {
-        setOuterHeight(0);
         outer.classList.remove('open');
         tabR.classList.remove('active');
         tabC.classList.remove('active');
         current = null;
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
-          setOuterHeight(0);
-          outer.style.minHeight = '';
+          outerWrap.style.minHeight = '';
           closeTimer = null;
         }, 650);
       });
@@ -363,7 +360,7 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     if (!current) {
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
-      setOuterHeight(FRAME_HEIGHT + 4);
+      outerWrap.style.minHeight = (FRAME_HEIGHT + 4) + 'px';
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           outer.classList.add('open');
@@ -377,7 +374,7 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
       outer.addEventListener('transitionend', function onEnd(e) {
         if (e.propertyName !== 'grid-template-rows') return;
         outer.removeEventListener('transitionend', onEnd);
-        outer.style.minHeight = '';
+        outerWrap.style.minHeight = '';
         frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     } else {

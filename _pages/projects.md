@@ -930,6 +930,7 @@ author_profile: true
     var srcLoaded = false;
     var closeTimer = null;
 
+    var TOGGLE_BAR_H = 44;
     var FRAME_HEIGHT = 500;
 
     frame.addEventListener('load', function() {
@@ -938,15 +939,11 @@ author_profile: true
       }
     });
 
-    function setOuterHeight(px) {
-      gridOuter.style.minHeight = px ? px + 'px' : '';
-    }
-
     function openPdf() {
       if (isOpen) return;
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
       isOpen = true;
-      setOuterHeight(FRAME_HEIGHT + 4);
+      wrapper.style.minHeight = (FRAME_HEIGHT + TOGGLE_BAR_H) + 'px';
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           wrapper.classList.add('open');
@@ -964,8 +961,7 @@ author_profile: true
       gridOuter.addEventListener('transitionend', function onEnd(e) {
         if (e.propertyName !== 'grid-template-rows') return;
         gridOuter.removeEventListener('transitionend', onEnd);
-        setOuterHeight(0);
-        gridOuter.style.minHeight = '';
+        wrapper.style.minHeight = '';
         frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       });
     }
@@ -979,7 +975,6 @@ author_profile: true
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
           srcLoaded = false;
-          gridOuter.style.minHeight = '';
           closeTimer = null;
         }, 650);
       });
