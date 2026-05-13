@@ -585,10 +585,8 @@
 
   .royal-mode .btn--inverse {
     background: linear-gradient(135deg, rgba(72, 70, 64, 0.8), rgba(50, 48, 43, 0.7)) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
     color: #ffffd1 !important;
-    border: 1px solid rgba(240, 240, 240, 0.3) !important;
+    border: 2px solid rgb(177 172 139) !important;
   }
 
   .royal-mode h1,
@@ -686,7 +684,7 @@
   })();
 </script>
 
-<canvas id="matrix-rain" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; filter: blur(1px); -webkit-filter: blur(1px);"></canvas>
+<canvas id="matrix-rain" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; will-change: transform; transform: translateZ(0);"></canvas>
 
 <button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
   <div class="jtt-container">

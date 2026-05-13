@@ -63,8 +63,6 @@ author_profile: true
     cursor: pointer;
     z-index: 1;
     text-decoration: none;
-    margin-top: 10px;
-    margin-bottom: 7px;
   }
 
   .episode-card img:hover {

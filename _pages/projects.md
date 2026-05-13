@@ -921,6 +921,7 @@ author_profile: true
   (function() {
     var wrapper   = document.getElementById('mrida-pdf-wrapper');
     var toggleBar = document.getElementById('mrida-pdf-toggle-bar');
+    var gridOuter = document.getElementById('mrida-pdf-grid-outer');
     var frame     = document.getElementById('mrida-pdf-frame');
     var dotClose  = document.getElementById('pdf-dot-close');
     var dotMin    = document.getElementById('pdf-dot-min');
@@ -929,17 +930,23 @@ author_profile: true
     var srcLoaded = false;
     var closeTimer = null;
 
+    var FRAME_HEIGHT = 500;
+
     frame.addEventListener('load', function() {
       if (frame.src && frame.src !== 'about:blank') {
         frame.classList.add('loaded');
       }
     });
 
+    function setOuterHeight(px) {
+      gridOuter.style.minHeight = px ? px + 'px' : '';
+    }
+
     function openPdf() {
       if (isOpen) return;
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-      /* Animate box open FIRST, then load src after animation completes */
       isOpen = true;
+      setOuterHeight(FRAME_HEIGHT + 4);
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           wrapper.classList.add('open');
@@ -954,11 +961,17 @@ author_profile: true
           }, 620);
         });
       });
+      gridOuter.addEventListener('transitionend', function onEnd(e) {
+        if (e.propertyName !== 'grid-template-rows') return;
+        gridOuter.removeEventListener('transitionend', onEnd);
+        setOuterHeight(0);
+        gridOuter.style.minHeight = '';
+        frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
     }
 
     function closePdf() {
       if (!isOpen) return;
-      /* Hide frame first (instant), then collapse height */
       frame.classList.remove('loaded');
       isOpen = false;
       requestAnimationFrame(function() {
@@ -966,6 +979,7 @@ author_profile: true
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
           srcLoaded = false;
+          gridOuter.style.minHeight = '';
           closeTimer = null;
         }, 650);
       });
@@ -976,7 +990,6 @@ author_profile: true
     }
 
     toggleBar.addEventListener('click', togglePdf);
-
     dotClose.addEventListener('click', function(e) { e.stopPropagation(); closePdf(); });
     dotMin.addEventListener('click', function(e) { e.stopPropagation(); closePdf(); });
     dotOpen.addEventListener('click', function(e) { e.stopPropagation(); openPdf(); });

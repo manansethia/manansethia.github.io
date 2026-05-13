@@ -319,6 +319,8 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     cv:     '/_pages/cv-pdf-view.html'
   };
 
+  var FRAME_HEIGHT = 550;
+
   frame.addEventListener('load', function() {
     if (frame.src && frame.src !== 'about:blank' && frame.src !== window.location.href) {
       setTimeout(function() {
@@ -328,21 +330,26 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     }
   });
 
+  function setOuterHeight(px) {
+    outer.style.minHeight = px ? px + 'px' : '';
+  }
+
   function switchDoc(which) {
     if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
 
     if (current === which) {
-      /* ── Collapse: hide content first, THEN collapse height ── */
-      frame.classList.remove('loaded');   /* iframe fades out instantly */
+      frame.classList.remove('loaded');
       wrap.classList.remove('loading');
-      /* one rAF so the class removal paints before we remove 'open' */
       requestAnimationFrame(function() {
+        setOuterHeight(0);
         outer.classList.remove('open');
         tabR.classList.remove('active');
         tabC.classList.remove('active');
         current = null;
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
+          setOuterHeight(0);
+          outer.style.minHeight = '';
           closeTimer = null;
         }, 650);
       });
@@ -354,13 +361,12 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     var target = which;
 
     if (!current) {
-      /* ── Opening from closed: animate box FIRST, load src after ── */
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
+      setOuterHeight(FRAME_HEIGHT + 4);
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           outer.classList.add('open');
-          /* Load src only after height animation is nearly done */
           closeTimer = setTimeout(function() {
             wrap.classList.add('loading');
             frame.src = sources[target];
@@ -368,8 +374,13 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
           }, 620);
         });
       });
+      outer.addEventListener('transitionend', function onEnd(e) {
+        if (e.propertyName !== 'grid-template-rows') return;
+        outer.removeEventListener('transitionend', onEnd);
+        outer.style.minHeight = '';
+        frame.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
     } else {
-      /* ── Switching tab while already open: swap src ── */
       frame.classList.remove('loaded');
       wrap.classList.add('loading');
       frame.src = sources[which];
