@@ -868,7 +868,6 @@ author_profile: true
       </div>
       <script>
       (function() {
-        var stackTimer = null;
         function toggleMridaStack() {
           var body = document.getElementById('mrida-stack-body');
           var dash = document.getElementById('mrida-stack-dash');
@@ -876,15 +875,7 @@ author_profile: true
           if (isOpen) {
             body.classList.remove('open');
             dash.textContent = '|';
-            if (stackTimer) clearTimeout(stackTimer);
-            stackTimer = setTimeout(function() {
-              body.style.display = 'none';
-              stackTimer = null;
-            }, 600);
           } else {
-            if (stackTimer) { clearTimeout(stackTimer); stackTimer = null; }
-            body.style.display = 'grid';
-            body.offsetHeight; // force reflow
             body.classList.add('open');
             dash.textContent = '—';
           }
@@ -893,7 +884,6 @@ author_profile: true
         /* Open by default */
         var body = document.getElementById('mrida-stack-body');
         body.classList.add('open');
-        body.style.display = 'grid';
       })();
       </script>
       <p class="notable">🏆 This project was also presented in:</p>
@@ -931,7 +921,6 @@ author_profile: true
   (function() {
     var wrapper   = document.getElementById('mrida-pdf-wrapper');
     var toggleBar = document.getElementById('mrida-pdf-toggle-bar');
-    var gridOuter = document.getElementById('mrida-pdf-grid-outer');
     var frame     = document.getElementById('mrida-pdf-frame');
     var dotClose  = document.getElementById('pdf-dot-close');
     var dotMin    = document.getElementById('pdf-dot-min');
@@ -949,9 +938,8 @@ author_profile: true
     function openPdf() {
       if (isOpen) return;
       if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+      /* Animate box open FIRST, then load src after animation completes */
       isOpen = true;
-      gridOuter.style.display = 'grid';
-      gridOuter.offsetHeight; // force reflow
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           wrapper.classList.add('open');
@@ -970,16 +958,16 @@ author_profile: true
 
     function closePdf() {
       if (!isOpen) return;
+      /* Hide frame first (instant), then collapse height */
       frame.classList.remove('loaded');
       isOpen = false;
       requestAnimationFrame(function() {
         wrapper.classList.remove('open');
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
-          gridOuter.style.display = 'none';
           srcLoaded = false;
           closeTimer = null;
-        }, 600);
+        }, 650);
       });
     }
 
@@ -988,6 +976,7 @@ author_profile: true
     }
 
     toggleBar.addEventListener('click', togglePdf);
+
     dotClose.addEventListener('click', function(e) { e.stopPropagation(); closePdf(); });
     dotMin.addEventListener('click', function(e) { e.stopPropagation(); closePdf(); });
     dotOpen.addEventListener('click', function(e) { e.stopPropagation(); openPdf(); });

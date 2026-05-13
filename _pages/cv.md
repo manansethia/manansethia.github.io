@@ -332,8 +332,10 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
 
     if (current === which) {
-      frame.classList.remove('loaded');
+      /* ── Collapse: hide content first, THEN collapse height ── */
+      frame.classList.remove('loaded');   /* iframe fades out instantly */
       wrap.classList.remove('loading');
+      /* one rAF so the class removal paints before we remove 'open' */
       requestAnimationFrame(function() {
         outer.classList.remove('open');
         tabR.classList.remove('active');
@@ -341,9 +343,8 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
         current = null;
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
-          outer.style.display = 'none';
           closeTimer = null;
-        }, 600);
+        }, 650);
       });
       return;
     }
@@ -353,13 +354,13 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     var target = which;
 
     if (!current) {
-      outer.style.display = 'grid';
-      outer.offsetHeight; // force reflow
+      /* ── Opening from closed: animate box FIRST, load src after ── */
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           outer.classList.add('open');
+          /* Load src only after height animation is nearly done */
           closeTimer = setTimeout(function() {
             wrap.classList.add('loading');
             frame.src = sources[target];
@@ -368,6 +369,7 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
         });
       });
     } else {
+      /* ── Switching tab while already open: swap src ── */
       frame.classList.remove('loaded');
       wrap.classList.add('loading');
       frame.src = sources[which];

@@ -103,6 +103,8 @@ author_profile: true
     background:
       radial-gradient(circle at top right, rgba(255, 219, 148, 0.7), rgba(255, 219, 148, 0) 38%),
       linear-gradient(145deg, rgba(255, 251, 243, 0.7), rgba(255, 240, 205, 0.65));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--skills-shadow-strong);
     isolation: isolate;
     animation: entranceUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
@@ -295,6 +297,8 @@ author_profile: true
     background:
       linear-gradient(180deg, var(--skills-surface-strong), var(--skills-surface)),
       linear-gradient(145deg, rgba(255, 241, 205, 0.2), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--skills-shadow);
     isolation: isolate;
     animation: entranceUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;

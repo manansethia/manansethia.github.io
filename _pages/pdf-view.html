@@ -45,7 +45,7 @@
 
     <script>
         let pdfURL = "/files/MRIDA.pdf";
-        let scaleFactor = 2;
+        let scaleFactor = 5;  // ✅ Balanced for quality & performance
 
         async function renderPDF() {
             let pdfDoc = await pdfjsLib.getDocument(pdfURL).promise;
