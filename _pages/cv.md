@@ -341,8 +341,9 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
         current = null;
         closeTimer = setTimeout(function() {
           frame.src = 'about:blank';
+          outer.style.display = 'none';
           closeTimer = null;
-        }, 650);
+        }, 600);
       });
       return;
     }
@@ -352,6 +353,8 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     var target = which;
 
     if (!current) {
+      outer.style.display = 'grid';
+      outer.offsetHeight; // force reflow
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
       requestAnimationFrame(function() {
