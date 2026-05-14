@@ -165,6 +165,9 @@ author_profile: true
     box-shadow: 0 24px 70px rgba(88, 57, 8, 0.16);
     box-sizing: border-box;
     isolation: isolate;
+    /* Confine reflow + paint so child collapse/expand (MRIDA stack, MRIDA pdf)
+       doesn't ripple to sibling .project-section blurs below. */
+    contain: layout paint;
   }
   .project-section::before,
   .project-section::after {
@@ -423,12 +426,19 @@ author_profile: true
     color: #ffffd1;
   }
   .mrida-stack-body {
-    display: grid;
+    display: grid !important;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    /* !important ensures we beat both _base.scss override and the wildcard
+       transition-duration:0s rule. Matches pdf-grid-outer's 0.6s feel. */
+    transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
   .mrida-stack-body.open {
     grid-template-rows: 1fr;
+  }
+  .mrida-stack-body > * {
+    /* Required for grid 0fr<->1fr trick: child must allow shrink + clip. */
+    min-height: 0;
+    overflow: hidden;
   }
   /* ── Stack tables ── */
   .mrida-stack-cols {
@@ -737,6 +747,42 @@ author_profile: true
   .pdf-grid-inner {
     min-height: 0;
     overflow: hidden;
+    position: relative;
+  }
+  /* Loading shimmer overlay (matches Resume/CV pdf-viewer-wrap.loading). */
+  .pdf-grid-inner.loading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+      rgba(192, 115, 0, 0.03) 25%,
+      rgba(192, 115, 0, 0.08) 50%,
+      rgba(192, 115, 0, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: pdfShimmer 1.5s infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .dark-mode .pdf-grid-inner.loading::after {
+    background: linear-gradient(90deg,
+      rgba(255, 210, 120, 0.02) 25%,
+      rgba(255, 210, 120, 0.06) 50%,
+      rgba(255, 210, 120, 0.02) 75%
+    );
+    background-size: 200% 100%;
+  }
+  .royal-mode .pdf-grid-inner.loading::after {
+    background: linear-gradient(90deg,
+      rgba(255, 255, 209, 0.02) 25%,
+      rgba(255, 255, 209, 0.06) 50%,
+      rgba(255, 255, 209, 0.02) 75%
+    );
+    background-size: 200% 100%;
+  }
+  @keyframes pdfShimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
   }
   .responsive-pdf {
     width: 100%;
@@ -879,6 +925,8 @@ author_profile: true
             body.classList.add('open');
             dash.textContent = '—';
           }
+          /* Pump footer push per frame for the 0.6s grid anim duration. */
+          if (window.smoothFooterPush) window.smoothFooterPush(700);
         }
         window.toggleMridaStack = toggleMridaStack;
         /* Open by default */
@@ -922,35 +970,44 @@ author_profile: true
     var wrapper   = document.getElementById('mrida-pdf-wrapper');
     var toggleBar = document.getElementById('mrida-pdf-toggle-bar');
     var frame     = document.getElementById('mrida-pdf-frame');
+    var inner     = document.getElementById('mrida-pdf-grid-inner');
     var dotClose  = document.getElementById('pdf-dot-close');
     var dotMin    = document.getElementById('pdf-dot-min');
     var dotOpen   = document.getElementById('pdf-dot-open');
     var isOpen    = false;
     var srcLoaded = false;
-    var closeTimer = null;
 
+    /* No eager preload: load src AFTER box opens (user requested behavior).
+       Loading shimmer (.loading::after) provides visual feedback while iframe
+       fetches, exactly like Resume/CV pattern. Keeps initial page weight
+       small + avoids invisible iframe rendering during the height anim. */
     frame.addEventListener('load', function() {
       if (frame.src && frame.src !== 'about:blank') {
+        inner.classList.remove('loading');
         frame.classList.add('loaded');
       }
     });
 
+    function pumpFooter() {
+      if (window.smoothFooterPush) window.smoothFooterPush(700);
+    }
+
     function openPdf() {
       if (isOpen) return;
-      if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-      /* Animate box open FIRST, then load src after animation completes */
       isOpen = true;
+      pumpFooter(); /* per-frame footer push during 0.6s grid anim */
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
           wrapper.classList.add('open');
-          closeTimer = setTimeout(function() {
+          /* After height anim done: trigger src load (or fade-in if cached). */
+          setTimeout(function() {
             if (!srcLoaded) {
+              inner.classList.add('loading');
               frame.src = '/_pages/pdf-view.html';
               srcLoaded = true;
             } else {
               frame.classList.add('loaded');
             }
-            closeTimer = null;
           }, 620);
         });
       });
@@ -958,16 +1015,13 @@ author_profile: true
 
     function closePdf() {
       if (!isOpen) return;
-      /* Hide frame first (instant), then collapse height */
-      frame.classList.remove('loaded');
       isOpen = false;
+      frame.classList.remove('loaded');
+      inner.classList.remove('loading');
+      pumpFooter(); /* per-frame footer push during close */
       requestAnimationFrame(function() {
         wrapper.classList.remove('open');
-        closeTimer = setTimeout(function() {
-          frame.src = 'about:blank';
-          srcLoaded = false;
-          closeTimer = null;
-        }, 650);
+        /* Keep src after first load so re-open is instant. */
       });
     }
 

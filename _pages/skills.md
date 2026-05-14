@@ -303,6 +303,11 @@ author_profile: true
     isolation: isolate;
     animation: entranceUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
     animation-delay: 0.1s;
+    /* Confine layout + paint per card so sibling card repaints + scroll-driven
+       backdrop resamples don't ripple across the whole grid. Reduces jitter
+       on long pages where many cards stack. Already overflow:hidden so no
+       clip behaviour change. */
+    contain: layout paint;
   }
 
   .skills-card::before {
@@ -408,13 +413,15 @@ author_profile: true
     .skills-card,
     .skills-orbit {
       transition: transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.24s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.24s ease;
-      will-change: transform, box-shadow;
+      /* will-change moved to :hover/:focus-within ONLY. Always-on was creating
+         a permanent GPU layer per card; combined with backdrop-filter (which
+         already needs its own layer) = 2 layers per card -> GPU pressure on
+         long scrolls -> blanking patches. */
     }
-    
-    /* Ensure hover doesn't fight entrance animation */
     .skills-card:hover,
     .skills-card:focus-within,
     .skills-orbit:hover {
+      will-change: transform, box-shadow;
       transform: translateY(-4px) scale(1.01);
       box-shadow: var(--skills-shadow-strong);
       border-color: var(--skills-border-strong);

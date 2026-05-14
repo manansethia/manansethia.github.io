@@ -312,67 +312,84 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
   var tabR    = document.getElementById('tabResume');
   var tabC    = document.getElementById('tabCV');
   var current = null;
-  var closeTimer = null;
 
   var sources = {
     resume: '/_pages/resume-pdf-view.html',
     cv:     '/_pages/cv-pdf-view.html'
   };
 
-  frame.addEventListener('load', function() {
-    if (frame.src && frame.src !== 'about:blank' && frame.src !== window.location.href) {
-      setTimeout(function() {
-        frame.classList.add('loaded');
-        wrap.classList.remove('loading');
-      }, 400);
-    }
-  });
+  /* Eager preload, but defer to window.load + idle tick so masthead/navbar
+     JS init runs first. Without this defer, the heavy PDF iframe load
+     blocks greedy-nav .loaded class application -> navbar flashes blank. */
+  var loadedSource = null;
+  function preload() {
+    if (loadedSource) return;
+    frame.src = sources.resume;
+    loadedSource = 'resume';
+  }
+  if (document.readyState === 'complete') {
+    setTimeout(preload, 0);
+  } else {
+    window.addEventListener('load', function() { setTimeout(preload, 0); });
+  }
+
+  /* Pump per-frame footer push during the height transition. Bypasses
+     ResizeObserver (which can miss frames if body height is locked by
+     min-height). 700ms covers 0.6s grid anim + 100ms settle margin. */
+  function pumpFooter() {
+    if (window.smoothFooterPush) window.smoothFooterPush(700);
+  }
 
   function switchDoc(which) {
-    if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
-
     if (current === which) {
-      /* ── Collapse: hide content first, THEN collapse height ── */
-      frame.classList.remove('loaded');   /* iframe fades out instantly */
+      /* Collapse: hide content first, then collapse height. Keep iframe src
+         loaded so re-opening this tab is instant — no re-fetch, no re-render. */
+      frame.classList.remove('loaded');
       wrap.classList.remove('loading');
-      /* one rAF so the class removal paints before we remove 'open' */
+      pumpFooter(); /* start per-frame footer pump at click moment */
       requestAnimationFrame(function() {
         outer.classList.remove('open');
         tabR.classList.remove('active');
         tabC.classList.remove('active');
         current = null;
-        closeTimer = setTimeout(function() {
-          frame.src = 'about:blank';
-          closeTimer = null;
-        }, 650);
       });
       return;
     }
 
     tabR.classList.toggle('active', which === 'resume');
     tabC.classList.toggle('active', which === 'cv');
-    var target = which;
 
-    if (!current) {
-      /* ── Opening from closed: animate box FIRST, load src after ── */
-      frame.classList.remove('loaded');
-      wrap.classList.remove('loading');
-      requestAnimationFrame(function() {
-        requestAnimationFrame(function() {
-          outer.classList.add('open');
-          /* Load src only after height animation is nearly done */
-          closeTimer = setTimeout(function() {
-            wrap.classList.add('loading');
-            frame.src = sources[target];
-            closeTimer = null;
-          }, 620);
-        });
-      });
-    } else {
-      /* ── Switching tab while already open: swap src ── */
+    preload(); /* in case user clicks before window.load fires */
+    var needsSwap = (loadedSource !== which);
+    if (needsSwap) {
       frame.classList.remove('loaded');
       wrap.classList.add('loading');
       frame.src = sources[which];
+      loadedSource = which;
+    }
+
+    if (!current) {
+      /* Opening from closed — animate height (0.6s), then fade iframe in. */
+      pumpFooter(); /* start per-frame footer pump at click moment */
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          outer.classList.add('open');
+          setTimeout(function() {
+            frame.classList.add('loaded');
+            wrap.classList.remove('loading');
+          }, 620);
+        });
+      });
+    } else if (needsSwap) {
+      /* Already open, just swapped src — fade back in once load fires. */
+      var onLoad = function() {
+        frame.removeEventListener('load', onLoad);
+        setTimeout(function() {
+          frame.classList.add('loaded');
+          wrap.classList.remove('loading');
+        }, 50);
+      };
+      frame.addEventListener('load', onLoad);
     }
 
     current = which;

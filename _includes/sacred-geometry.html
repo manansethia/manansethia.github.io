@@ -7,6 +7,12 @@
     z-index: -2;
     pointer-events: none;
     overflow: hidden;
+    /* Single GPU layer for the WHOLE sigil overlay. Children inherit it
+       instead of each .sg-shape promoting itself separately (was N layers
+       for N sigils -> GPU memory pressure -> long-scroll jitter). */
+    transform: translateZ(0);
+    will-change: transform;
+    contain: strict;
   }
   .sg-shape {
     position: absolute;
@@ -15,7 +21,8 @@
     fill: none;
     stroke-width: 0.6px;
     opacity: 0.15; /* Dim static container opacity */
-    will-change: transform;
+    /* will-change removed: per-shape promotion was creating 1 GPU layer per
+       sigil. Parent overlay is now the single composite layer. */
   }
   
   .dark-mode .sg-shape {
@@ -51,13 +58,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let lastPopulatedY = 250;
     let isLeft = true;
+    /* Cap total sigils to bound DOM size + GPU work on very long pages. */
+    const MAX_SIGILS = 60;
     
-    /* Dynamically stamps SVG objects down the page height */
+    /* Dynamically stamps SVG objects down the page height.
+       NOTE: overlay's own height contributes to body.scrollHeight (it's
+       position:absolute inside body). If we measured with overlay still at
+       its old height, page would only ever grow. Caller now zeros overlay
+       before measuring (see ResizeObserver below). */
     const populateToHeight = (targetHeight) => {
         /* Expand the literal height of the overlay container perfectly */
         overlay.style.height = targetHeight + 'px';
-        
-        while (lastPopulatedY < targetHeight - 350) {
+
+        while (lastPopulatedY < targetHeight - 350 && overlay.childElementCount < MAX_SIGILS) {
             let div = document.createElement('div');
             div.className = 'sg-shape';
             
@@ -98,6 +111,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    /* Measure body content height EXCLUDING overlay itself. Without this the
+       overlay would lock body.scrollHeight at the max-ever value, preventing
+       page from shrinking on collapse (mrida pdf close, stack close, etc). */
+    const measureContentHeight = () => {
+        const prev = overlay.style.height;
+        overlay.style.height = '0px';
+        const h = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        overlay.style.height = prev;
+        return h;
+    };
+
     /* Use ResizeObserver to detect layout flashes, image loads, and expanding pages
        Throttled via rAF to prevent forced reflow storms */
     let _sgRaf = false;
@@ -106,14 +130,14 @@ document.addEventListener("DOMContentLoaded", () => {
         _sgRaf = true;
         requestAnimationFrame(() => {
             _sgRaf = false;
-            populateToHeight(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight));
+            populateToHeight(measureContentHeight());
         });
     });
 
     if (document.body) ro.observe(document.body);
     if (document.documentElement) ro.observe(document.documentElement);
-    
+
     /* Explicit initial fire */
-    populateToHeight(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight));
+    populateToHeight(measureContentHeight());
 });
 </script>

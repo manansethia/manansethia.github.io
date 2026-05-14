@@ -1,6 +1,12 @@
+@charset "UTF-8";
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+html {
+  /* Native smooth-scroll for anchor jumps (TOC quick-nav, hash links).
+     Fixes Safari teleport on TOC click + adds smoothness on Chrome/Firefox. */
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   padding: $masthead-height 0 0;
@@ -8,7 +14,7 @@ body {
   font-family: $global-font-family;
   line-height: 1.5;
   background-color: #fffbeb;
-  background-image: 
+  background-image:
     radial-gradient(circle at 5% 10%, rgba(255, 219, 148, 0.4), transparent 38%),
     radial-gradient(circle at 90% -5%, rgba(255, 230, 164, 0.3), transparent 35%),
     radial-gradient(circle at 95% 55%, rgba(255, 215, 130, 0.35), transparent 40%),
@@ -17,6 +23,13 @@ body {
     radial-gradient(circle at 35% 105%, rgba(255, 220, 140, 0.3), transparent 40%);
   background-attachment: fixed;
   -webkit-tap-highlight-color: transparent !important;
+
+  /* CSS sticky footer: flex column + min-height:100vh ensures footer
+     sticks to viewport bottom on short pages. .page__footer margin-top:auto
+     consumes remaining space. No JS needed. */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -430,10 +443,11 @@ figure img,
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Collapsible stack body — expand/collapse animation */
+/* Collapsible stack body — expand/collapse animation
+   Uses grid-template-rows: 0fr <-> 1fr (matches pdf-grid-outer pattern). */
 .mrida-stack-body {
-  -webkit-transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease !important;
-  transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease !important;
+  -webkit-transition: grid-template-rows 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease !important;
+  transition: grid-template-rows 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease !important;
 }
 
 /* TOC collapsible body — expand/collapse */

@@ -9,13 +9,19 @@
   width: 100%;
   position: relative;
   height: auto;
-  margin-top: 3em;
+  /* JS in _main.js drives explicit margin-top via getBoundingClientRect +
+     ResizeObserver. margin-top:0 default; JS sets push value when content
+     is shorter than viewport. Auto would conflict with explicit JS write. */
+  margin-top: 0;
+  /* No CSS transition: per-frame JS writes from RO give smooth slide
+     directly. CSS transition would restart per frame and make footer
+     trail content by full transition duration (= teleport feel). */
   color: mix(#fff, $gray, 25%);
   -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
+  animation: intro 0.3s both;
   -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
-  background: linear-gradient(135deg, rgba(229,149,0,0.6), rgba(255,188,66,0.3));
+  animation-delay: 0.45s;
+  background: linear-gradient(135deg, rgba(229, 149, 0, 0.6), rgba(255, 188, 66, 0.3));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top: 1.5px solid rgba(255, 255, 255, 0.4);
@@ -52,16 +58,9 @@
   }
 }
 
-body.footer-docked {
-  .page__footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-top: 0;
-    z-index: 5;
-  }
-}
+/* footer-docked rule removed: superseded by CSS sticky-footer pattern above
+   (body flex + page__footer margin-top:auto). The .footer-docked class may
+   still be added by legacy JS but no longer changes positioning. */
 
 .page__footer-copyright {
   font-family: $global-font-family;
@@ -84,7 +83,7 @@ body.footer-docked {
     text-transform: uppercase;
   }
 
-  li + li:before {
+  li+li:before {
     content: "";
     padding-right: 5px;
   }

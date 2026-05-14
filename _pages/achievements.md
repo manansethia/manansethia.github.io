@@ -692,6 +692,11 @@ author_profile: true
     overflow: hidden;
     isolation: isolate;
     box-shadow: 0 10px 32px rgba(88, 57, 8, 0.14);
+    /* Safari fix: overflow:hidden + border-radius doesn't always clip
+       absolutely-positioned descendants (the collage). Force GPU layer
+       so Safari respects the rounded clip. */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
   }
   .dark-mode .ach-summary {
     border-color: rgba(255, 210, 120, 0.22);
@@ -705,19 +710,32 @@ author_profile: true
   .ach-summary-collage {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2px;
+    /* minmax(0, 1fr) — Safari's `1fr` in abs-positioned grid container
+       defaults to min-content sizing (= 0) for image cells. minmax(0, 1fr)
+       forces explicit minimum 0, allowing grid to distribute space cleanly.
+       gap:0 prevents border bleed where parent bg shows through. */
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 0;
     pointer-events: none;
   }
   .ach-summary-collage img {
     width: 100%;
     height: 100%;
+    /* min-* zero — required so img can shrink below its intrinsic dimensions
+       inside grid cell. Safari fix: without these, img keeps natural size
+       and grid layout breaks. */
+    min-width: 0;
+    min-height: 0;
     object-fit: cover;
     display: block;
-    filter: blur(0.3px) saturate(1.05);
+    /* Safari renders sub-pixel `filter: blur(0.3px)` as visible blur (other
+       browsers round to 0). Use saturate-only for cross-browser parity. */
+    filter: saturate(1.05);
     opacity: 0.88;
     border-radius: 0;
     transition: none !important;
@@ -726,11 +744,11 @@ author_profile: true
   }
   .dark-mode .ach-summary-collage img {
     opacity: 0.65;
-    filter: blur(0.5px) saturate(0.85) brightness(0.9);
+    filter: saturate(0.85) brightness(0.9);
   }
   .royal-mode .ach-summary-collage img {
     opacity: 0.85;
-    filter: blur(0.3px) saturate(1.0) brightness(1.1);
+    filter: saturate(1.0) brightness(1.1);
   }
 
   .ach-summary-overlay {
@@ -2344,6 +2362,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ── 6. Toggle collapse ── */
 function toggleToc() {
   document.getElementById('achievementToc').classList.toggle('collapsed');
+  /* Pump footer push per frame for the 0.6s height transition. */
+  if (window.smoothFooterPush) window.smoothFooterPush(700);
 }
 </script>
 

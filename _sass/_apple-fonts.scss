@@ -1,11 +1,12 @@
+@charset "UTF-8";
 /* ==========================================================================
-   SF Pro Web – Apple's typeface, self-hosted for non-Apple devices
+   SF Pro Web -- Apple's typeface, self-hosted for non-Apple devices
    Named "SFProWeb" / "SFProDisplayWeb" to avoid clashing with the
    native -apple-system resolution on macOS/iOS.
-   font-display: swap → text is visible immediately with fallback font,
+   font-display: swap -> text is visible immediately with fallback font,
    then swaps to SF Pro once downloaded (~50KB each).
-   
-   Optimized: OTF → WOFF2 (Latin subset), 14 variants, ~672KB total.
+
+   Optimized: OTF -> WOFF2 (Latin subset), 14 variants, ~672KB total.
    ========================================================================== */
 
 /* ── SF Pro Text (body copy) ── */

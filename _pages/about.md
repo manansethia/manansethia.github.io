@@ -221,11 +221,18 @@ author_profile: true
     border-top-right-radius: 13px;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    /* !important required to beat the wildcard `* { transition-duration: 0s
+       !important }` rule in _base.scss. Without it, hover snaps instantly. */
+    -webkit-transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                border-radius 0.3s ease !important;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+                border-radius 0.3s ease !important;
   }
   .home-photo-card img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transform: scale(1.07) translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
     position: relative;
     z-index: 10;
     border-radius: 13px;

@@ -6,39 +6,72 @@ $(document).ready(function () {
   // FitVids init
   fitvids();
 
-  var $body = $("body");
+  /* ── Footer push: bbox-based, JS-only ──
+     Reads footer's CURRENT bottom via getBoundingClientRect (no forced
+     layout when called inside rAF — layout already settled).
+     diff = vpH - footer.bottom. positive = footer above viewport bottom
+     (need more push). Negative = below (need less).
+     newPush = max(0, lastPush + diff). Self-correcting per frame.
+
+     Critical: `margin-top: auto` from CSS is NOT used (would conflict with
+     explicit JS write). _sass/_footer.scss should set margin-top: 0. */
   var $footer = $(".page__footer");
-  var footerDockFrame = null;
+  var footerEl = $footer[0];
+  var lastPush = 0;
+  var footerScheduled = false;
 
-  function updateFooterDock() {
-    var footerHeight = $footer.outerHeight(true) || 0;
-
-    $body.removeClass("footer-docked").css("padding-bottom", "");
-
-    if (!footerHeight) {
-      return;
-    }
-
-    var footerRect = $footer[0].getBoundingClientRect();
-    var viewportHeight = window.innerHeight;
-
-    if (footerRect.bottom < viewportHeight) {
-      $body.addClass("footer-docked").css("padding-bottom", footerHeight + "px");
-    }
+  function calcAndApplyPush() {
+    footerScheduled = false;
+    if (!footerEl) return;
+    var rect = footerEl.getBoundingClientRect();
+    var vpH = window.innerHeight;
+    var diff = vpH - rect.bottom;
+    var newPush = Math.max(0, lastPush + diff);
+    /* Sub-px tolerance breaks any rounding-induced loops. */
+    if (Math.abs(newPush - lastPush) < 1) return;
+    lastPush = newPush;
+    footerEl.style.marginTop = newPush + 'px';
   }
 
   function scheduleFooterDockUpdate() {
-    if (footerDockFrame) {
-      window.cancelAnimationFrame(footerDockFrame);
-    }
-
-    footerDockFrame = window.requestAnimationFrame(function () {
-      footerDockFrame = null;
-      updateFooterDock();
-    });
+    if (footerScheduled) return;
+    footerScheduled = true;
+    window.requestAnimationFrame(calcAndApplyPush);
   }
 
+  /* ── rAF pump for transitions ──
+     RO on body misses frames when body height is locked by min-height
+     (short pages w/ small content): body doesn't change size as descendant
+     content shrinks, so RO never fires, footer never updates -> footer ends
+     above viewport bottom. Open/close handlers call window.smoothFooterPush
+     to pump push calc per frame for the transition duration regardless. */
+  var pumpUntil = 0;
+  var pumping = false;
+  function pumpTick() {
+    calcAndApplyPush();
+    if (performance.now() < pumpUntil) {
+      window.requestAnimationFrame(pumpTick);
+    } else {
+      pumping = false;
+      /* one extra calc after settle to catch final state */
+      window.requestAnimationFrame(calcAndApplyPush);
+    }
+  }
+  window.smoothFooterPush = function (durationMs) {
+    pumpUntil = Math.max(pumpUntil, performance.now() + (durationMs || 700));
+    if (!pumping) {
+      pumping = true;
+      window.requestAnimationFrame(pumpTick);
+    }
+  };
+
+  /* Initial: defer until layout settles */
   scheduleFooterDockUpdate();
+
+  if (typeof ResizeObserver !== "undefined" && document.body) {
+    var bodyResizeObserver = new ResizeObserver(scheduleFooterDockUpdate);
+    bodyResizeObserver.observe(document.body);
+  }
 
   // Follow menu drop down — teleport to body for Chrome backdrop-filter support
   var $authorUrls = $(".author__urls");
