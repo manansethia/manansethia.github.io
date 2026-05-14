@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
@@ -7,6 +8,7 @@ html {
      Fixes Safari teleport on TOC click + adds smoothness on Chrome/Firefox. */
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: $masthead-height 0 0;
@@ -24,11 +26,9 @@ body {
   background-attachment: fixed;
   -webkit-tap-highlight-color: transparent !important;
 
-  /* CSS sticky footer: flex column + min-height:100vh ensures footer
-     sticks to viewport bottom on short pages. .page__footer margin-top:auto
-     consumes remaining space. No JS needed. */
-  display: flex;
-  flex-direction: column;
+  /* min-height ensures body always fills viewport so JS-driven footer
+     push has consistent baseline. display:block (default) — flex was
+     causing margin-top:auto/explicit conflict with JS writes. */
   min-height: 100vh;
 
   &.overflow--hidden {
@@ -446,14 +446,14 @@ figure img,
 /* Collapsible stack body — expand/collapse animation
    Uses grid-template-rows: 0fr <-> 1fr (matches pdf-grid-outer pattern). */
 .mrida-stack-body {
-  -webkit-transition: grid-template-rows 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease !important;
-  transition: grid-template-rows 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.4s ease !important;
+  -webkit-transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease !important;
+  transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease !important;
 }
 
 /* TOC collapsible body — expand/collapse */
 .toc-body {
-  -webkit-transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease !important;
-  transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease !important;
+  -webkit-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
 }
 
 /* TOC chevron rotation */
@@ -467,10 +467,12 @@ figure img,
   -webkit-transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
+
 .pdf-viewer-wrap {
   -webkit-transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s !important;
   transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s !important;
 }
+
 .pdf-viewer-frame {
   -webkit-transition: opacity 0.5s ease !important;
   transition: opacity 0.5s ease !important;
@@ -481,10 +483,12 @@ figure img,
   -webkit-transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
+
 .pdf-grid-inner {
   -webkit-transition: opacity 0.35s ease 0.15s !important;
   transition: opacity 0.35s ease 0.15s !important;
 }
+
 .pdf-toggle-chevron {
   -webkit-transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
   transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
@@ -495,6 +499,7 @@ figure img,
   -webkit-transition: color 0s, background 0s, border-color 0s, transform 0.2s ease !important;
   transition: color 0s, background 0s, border-color 0s, transform 0.2s ease !important;
 }
+
 .tab-icon {
   -webkit-transition: transform 0.3s ease !important;
   transition: transform 0.3s ease !important;
