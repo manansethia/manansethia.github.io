@@ -211,17 +211,41 @@ author_profile: true
 
 <div class="edu-card">
   <div class="edu-header">
+    <img src="/images/ntu.avif" alt="NTU Logo" width="62" height="62">
+    <div class="edu-title-block">
+      <span class="edu-school-name" role="heading" aria-level="2">Nanyang Technological University</span>
+      <div class="edu-subtitle">College of Computing and Data Science (CCDS) · Singapore</div>
+    </div>
+  </div>
+
+  <div class="edu-pills">
+    <span class="edu-pill">🎓 Bachelor of Computing (Hons) in Computer Science</span>
+    <span class="edu-pill">🗓️ 2026 – 2030</span>
+  </div>
+
+  <div class="edu-stream">
+    <div class="edu-stream-label">🔬 Specialisations</div>
+    <div class="edu-stream-subjects">
+      <span class="edu-subject">Cyber Security</span>
+      <span class="edu-subject">Artificial Intelligence</span>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="edu-card">
+  <div class="edu-header">
     <img src="/images/kps.avif" alt="KPS Logo" width="62" height="62">
     <div class="edu-title-block">
       <span class="edu-school-name" role="heading" aria-level="2">Krishna Public School, Kamal Vihar</span>
-      <div class="edu-subtitle">Affiliated to CBSE · Raipur, C.G., India</div>
+      <div class="edu-subtitle">Affiliated to CBSE · Raipur, Chhattisgarh, India</div>
     </div>
   </div>
 
   <div class="edu-pills">
     <span class="edu-pill">🎓 Grade 1 – Grade 12</span>
     <span class="edu-pill">🗓️ 2014 – 2026</span>
-    <span class="edu-pill">📍 Raipur, India</span>
   </div>
 
   <div class="edu-stream">
