@@ -1,6 +1,18 @@
+@charset "UTF-8";
 /* ==========================================================================
    FOOTER
    ========================================================================== */
+
+/* CSS sticky-footer: body is flex column (in _base.scss). The
+   .layout-main wrapper around content has `flex: 1 0 auto`, absorbing
+   leftover vertical space and pushing footer to viewport bottom when
+   content is short. On long pages, layout-main grows to its content
+   size and footer flows naturally below. Footer itself has
+   `flex-shrink: 0` so it never gets squashed when content is tall. */
+.layout-main {
+  flex: 1 0 auto;
+  width: 100%;
+}
 
 .page__footer {
   @include clearfix;
@@ -9,13 +21,10 @@
   width: 100%;
   position: relative;
   height: auto;
-  /* JS in _main.js drives explicit margin-top via getBoundingClientRect +
-     ResizeObserver. margin-top:0 default; JS sets push value when content
-     is shorter than viewport. Auto would conflict with explicit JS write. */
   margin-top: 0;
-  /* No CSS transition: per-frame JS writes from RO give smooth slide
-     directly. CSS transition would restart per frame and make footer
-     trail content by full transition duration (= teleport feel). */
+  flex-shrink: 0;
+  /* No CSS transition on margin-top: flex layout updates are immediate
+     and per-frame, smoother than any explicit transition. */
   color: mix(#fff, $gray, 25%);
   -webkit-animation: intro 0.3s both;
   animation: intro 0.3s both;

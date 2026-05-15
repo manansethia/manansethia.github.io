@@ -6,72 +6,17 @@ $(document).ready(function () {
   // FitVids init
   fitvids();
 
-  /* ── Footer push: bbox-based, JS-only ──
-     Reads footer's CURRENT bottom via getBoundingClientRect (no forced
-     layout when called inside rAF — layout already settled).
-     diff = vpH - footer.bottom. positive = footer above viewport bottom
-     (need more push). Negative = below (need less).
-     newPush = max(0, lastPush + diff). Self-correcting per frame.
-
-     Critical: `margin-top: auto` from CSS is NOT used (would conflict with
-     explicit JS write). _sass/_footer.scss should set margin-top: 0. */
-  var $footer = $(".page__footer");
-  var footerEl = $footer[0];
-  var lastPush = 0;
-  var footerScheduled = false;
-
-  function calcAndApplyPush() {
-    footerScheduled = false;
-    if (!footerEl) return;
-    var rect = footerEl.getBoundingClientRect();
-    var vpH = window.innerHeight;
-    var diff = vpH - rect.bottom;
-    var newPush = Math.max(0, lastPush + diff);
-    /* Sub-px tolerance breaks any rounding-induced loops. */
-    if (Math.abs(newPush - lastPush) < 1) return;
-    lastPush = newPush;
-    footerEl.style.marginTop = newPush + 'px';
-  }
-
-  function scheduleFooterDockUpdate() {
-    if (footerScheduled) return;
-    footerScheduled = true;
-    window.requestAnimationFrame(calcAndApplyPush);
-  }
-
-  /* ── rAF pump for transitions ──
-     RO on body misses frames when body height is locked by min-height
-     (short pages w/ small content): body doesn't change size as descendant
-     content shrinks, so RO never fires, footer never updates -> footer ends
-     above viewport bottom. Open/close handlers call window.smoothFooterPush
-     to pump push calc per frame for the transition duration regardless. */
-  var pumpUntil = 0;
-  var pumping = false;
-  function pumpTick() {
-    calcAndApplyPush();
-    if (performance.now() < pumpUntil) {
-      window.requestAnimationFrame(pumpTick);
-    } else {
-      pumping = false;
-      /* one extra calc after settle to catch final state */
-      window.requestAnimationFrame(calcAndApplyPush);
-    }
-  }
-  window.smoothFooterPush = function (durationMs) {
-    pumpUntil = Math.max(pumpUntil, performance.now() + (durationMs || 700));
-    if (!pumping) {
-      pumping = true;
-      window.requestAnimationFrame(pumpTick);
-    }
-  };
-
-  /* Initial: defer until layout settles */
-  scheduleFooterDockUpdate();
-
-  if (typeof ResizeObserver !== "undefined" && document.body) {
-    var bodyResizeObserver = new ResizeObserver(scheduleFooterDockUpdate);
-    bodyResizeObserver.observe(document.body);
-  }
+  /* ── Footer positioning ──
+     Handled entirely by CSS sticky-footer pattern:
+       body { display: flex; flex-direction: column; min-height: 100vh; }
+       .page__footer { margin-top: auto; }
+     Browser updates flex layout each frame during content height
+     transitions (collapsibles, PDFs), so no JS push / rAF pump / RO is
+     needed. window.smoothFooterPush is kept as a no-op stub for
+     backward compatibility with existing callers in cv.md, projects.md,
+     achievements.md (they all guard with `if (window.smoothFooterPush)`,
+     so the function existing-and-doing-nothing keeps them safe). */
+  window.smoothFooterPush = function () { /* no-op — CSS handles it */ };
 
   // Follow menu drop down — teleport to body for Chrome backdrop-filter support
   var $authorUrls = $(".author__urls");
@@ -130,8 +75,6 @@ $(document).ready(function () {
   });
 
   $(window).resize(function () {
-    scheduleFooterDockUpdate();
-
     if (isDesktop() && authorTeleported) {
       // return to sidebar on desktop — CSS handles display:block there
       returnToSidebar();
@@ -185,11 +128,5 @@ $(document).ready(function () {
     closeOnContentClick: true,
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
-
-  $(window).on("load", function () {
-    scheduleFooterDockUpdate();
-  });
-
-  $(window).on("scroll", scheduleFooterDockUpdate);
 
 });

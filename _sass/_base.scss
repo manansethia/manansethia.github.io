@@ -26,9 +26,22 @@ body {
   background-attachment: fixed;
   -webkit-tap-highlight-color: transparent !important;
 
-  /* min-height ensures body always fills viewport so JS-driven footer
-     push has consistent baseline. display:block (default) — flex was
-     causing margin-top:auto/explicit conflict with JS writes. */
+  /* CSS sticky-footer pattern: body is a flex column with min-height: 100vh.
+     .layout-main wrapper around {{ content }} uses `flex: 1 0 auto` to
+     absorb leftover vertical space, pinning footer to viewport bottom
+     on short pages and flowing naturally below content on long pages.
+     Browser updates layout each frame during content height transitions
+     (e.g. PDF/panel collapsibles) — no JS push, no rAF pump, no
+     ResizeObserver needed.
+
+     Why a wrapper (not direct flex on body): when #main becomes a flex
+     item with `margin: 0 auto` for centering, flex sizing rules clash
+     with auto margins + max-width + align-self stretch, collapsing the
+     content to min-content width. Wrapping inside `.layout-main` makes
+     #main a normal block child again, restoring centered max-width
+     behavior on every page (education, blogs, etc). */
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 
   &.overflow--hidden {
