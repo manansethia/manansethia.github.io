@@ -204,9 +204,7 @@ author_profile: true
   }
   .royal-mode .project-section {
     border-color: rgba(240, 240, 240, 0.2);
-    background:
-      radial-gradient(circle at top right, rgba(72, 70, 64, 0.4), rgba(72, 70, 64, 0) 350px),
-      linear-gradient(145deg, rgba(72, 70, 64, 0.7), rgba(50, 48, 43, 0.65));
+    background: radial-gradient(circle at top right, rgb(224 215 185 / 40%), rgb(0 0 0 / 0%) 350px), linear-gradient(145deg, rgba(72, 70, 64, 0.7), rgba(50, 48, 43, 0.65));
     box-shadow: 0 28px 75px rgba(0, 0, 0, 0.5);
   }
   .royal-mode .project-section::before {
