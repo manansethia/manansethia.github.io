@@ -90,6 +90,13 @@ author_profile: true
     display: block;
   }
 
+  /* Buildabot logo is a rounded-square icon — use contain so corners aren't clipped */
+  .exp-logo-box img[src*="buildabot"],
+  .exp-role-icon img[src*="buildabot"] {
+    object-fit: contain;
+    background: #e8391a;
+  }
+
   /* Typography */
   .exp-org-copy,
   .exp-role-copy {
@@ -429,6 +436,47 @@ author_profile: true
 </style>
 
 <div class="exp-section">
+  <article class="exp-org">
+    <header class="exp-org-header">
+      <div class="exp-logo-box">
+        <img src="/images/buildabot.avif" width="200" height="200" alt="Buildabot Labs Logo">
+      </div>
+      <div class="exp-org-copy">
+        <div class="exp-org-name">Buildabot Labs Private Limited</div>
+        <div class="exp-org-range">May 2026 – Present
+          <span class="exp-live-duration" data-duration-start="2026-05" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
+        </div>
+      </div>
+    </header>
+    <div class="exp-role-list">
+      <article class="exp-role-row">
+        <div class="exp-role-marker">
+          <div class="exp-role-dot"></div>
+        </div>
+        <div class="exp-role-main">
+          <div class="exp-role-icon">
+            <img src="/images/buildabot.avif" width="200" height="200" alt="Buildabot Labs Logo">
+          </div>
+          <div class="exp-role-copy">
+            <div class="exp-role-title">Chief Technology and Innovations Officer (CTIO)</div>
+            <div class="exp-role-sub">
+              Subsidiary of First Step Innovations (FSTI)
+              <span class="exp-live-duration" data-duration-start="2026-05" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
+            </div>
+            <div class="exp-role-date">May 2026 – Present</div>
+            <div class="exp-desc">
+              <p>Buildabot Labs is a technology subsidiary of First Step Innovations (FSTI), focused on building cutting-edge software infrastructure and interactive digital solutions. Promoted to CTIO after my initial tenure as an R&amp;D Intern at FSTI, I now lead all technology strategy and engineering at the subsidiary level.</p>
+              <p>My work encompasses maintaining and building their database systems and backend servers, developing and managing the company website, and integrating a RAG (Retrieval-Augmented Generation) AI assistant directly into the web platform. I also design and implement interactive elements and bespoke web-based solutions, and have architected an emulation playground that enables users to virtually test and validate their projects to a meaningful extent before physical deployment.</p>
+            </div>
+            <div class="exp-images"></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </article>
+
+  <hr class="silver-line exp-divider" />
+
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
