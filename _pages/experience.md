@@ -517,45 +517,6 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
-        <img src="/images/igeo.avif" width="100" height="102" alt="IGEO Logo">
-      </div>
-      <div class="exp-org-copy">
-        <div class="exp-org-name">International Geoscience Education Organisation (IGEO)</div>
-        <div class="exp-org-range">Mar 2026 – Present</div>
-      </div>
-    </header>
-    <div class="exp-role-list">
-      <article class="exp-role-row">
-        <div class="exp-role-marker">
-          <div class="exp-role-dot"></div>
-        </div>
-        <div class="exp-role-main">
-          <div class="exp-role-icon">
-            <img src="/images/igym.avif" width="1154" height="1155" alt="IGYM Logo">
-          </div>
-          <div class="exp-role-copy">
-            <div class="exp-role-title">Member</div>
-            <div class="exp-role-sub">
-              International Geoscience Youth Movement (IGYM)
-              <span class="exp-live-duration" data-duration-start="2026-03" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
-            </div>
-            <div class="exp-role-date">Mar 2026 – Present</div>
-            <div class="exp-desc">
-              <p>IGYM is a youth led initiative associated with the Earth Science Olympiad ecosystem, focused on geoscience awareness, climate action, and student led research and outreach. Members are usually selected from IESO participants. Each year a sponsored program is conducted at different locations to foster continued engagement in earth sciences and outreach.</p>
-              <p>I will be participating in the Himalayan Outreach Program at Dehradun from 10th to 16th June, involving field visits to natural formations across Dehradun, Benog Tibba, Tehri, including the Tehri Dam.</p>
-            </div>
-            <div class="exp-images"></div>
-          </div>
-        </div>
-      </article>
-    </div>
-  </article>
-
-  <hr class="silver-line exp-divider" />
-
-  <article class="exp-org">
-    <header class="exp-org-header">
-      <div class="exp-logo-box">
         <img src="/images/kps.avif" width="1200" height="1200" alt="KPS Logo">
       </div>
       <div class="exp-org-copy">

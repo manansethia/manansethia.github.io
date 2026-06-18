@@ -6,4 +6,4 @@ keywords: "Manan Sethia blog, tech blog, competitive programming, student blog"
 author_profile: true
 ---
 
-Details will be added shortly.
+Blogs will be added shortly.
