@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     @page { size: A4; margin: 0; }
-    @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+    @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; width: 210mm; height: 297mm; } }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif;
       font-size: 8.6pt; line-height: 1.4; color: #1e1e1e;
-      width: 210mm; height: 297mm;
+      width: 100%; min-height: 100vh;
       margin: 0 auto; background: #fff;
       display: flex; flex-direction: column;
     }
@@ -42,7 +42,7 @@
     }
     .sec:first-child { margin-top: 0; }
 
-    /* ── Contact with SVG icons ── */
+    /* ── Contact ── */
     .contact-row {
       display: flex; align-items: center; gap: 2px;
       margin-bottom: 2px; font-size: 8pt;
@@ -94,6 +94,110 @@
     .cert-sub { padding-left: 16px; margin-top: 1px; margin-bottom: 3px; }
     .cert-sub div { font-size: 7.8pt; color: #555; line-height: 1.5; }
     .cert-sub div::before { content: "▸ "; color: #c07300; }
+
+    /* ═══════════════════════════════════════════
+       DARK MODE
+       ═══════════════════════════════════════════ */
+    .dark body { background: #0a0700; color: #f0e4d4; }
+    .dark .header { background: #261808; }
+    .dark .header h1 { color: #fff; }
+    .dark .subtitle { color: #f0d090; }
+
+    .dark .left {
+      background: linear-gradient(180deg, #1e1308 0%, #2e1e0c 100%);
+      border-right: 2px solid rgba(230,193,148,0.45);
+      color: #f0e4d4;
+    }
+    .dark .right { background: #0a0700; }
+
+    .dark .sec { color: #f0d090; border-bottom-color: rgba(240,208,144,0.45); }
+    .dark .contact-row i { color: #f0d090; }
+    .dark .contact-row .val { color: #e8dcc4; }
+    .dark .skill-cat { color: #f0d090; }
+    .dark .skill-list { color: #e0d4b8; }
+    .dark .edu-name { color: #fff; }
+    .dark .edu-detail { color: #d8c8a8; }
+
+    .dark .timeline::before { background: rgba(240,208,144,0.4); }
+    .dark .tl-org::before { background: #f0d090; border-color: #0a0700; }
+    .dark .tl-org-name { color: #fff; }
+    .dark .tl-org-date { color: #d8c8a8; }
+    .dark .tl-role::before { background: #e0b060; border-color: #0a0700; }
+    .dark .tl-role-name { color: #f8f0e0; }
+    .dark .tl-role-date { color: #c0b090; }
+    .dark .tl-desc { color: #ddd0b4; }
+    .dark .tl-sub-roles { color: #f0d090; }
+    .dark .tl-chip { background: rgba(240,208,144,0.15); border-color: rgba(240,208,144,0.4); color: #f0d090; }
+    .dark .tl-arrow { color: #f0d090; }
+    .dark .tl-sep { background: rgba(240,208,144,0.25); }
+
+    .dark .proj-name { color: #fff; }
+    .dark .proj-sub { color: #f0d090; }
+    .dark .proj-desc { color: #ddd0b4; }
+
+    .dark .ach-item { color: #e0d4b8; }
+    .dark .ach-item::before { color: #f0d090; }
+    .dark .ach-item b { color: #fff; }
+    .dark .quiz-list div { color: #c8b898; }
+    .dark .quiz-list div::before { color: #f0d090; }
+
+    .dark .cert-item { color: #e0d4b8; }
+    .dark .cert-item::before { color: #f0d090; }
+    .dark .cert-item b { color: #fff; }
+    .dark .cert-sub div { color: #c8b898; }
+    .dark .cert-sub div::before { color: #f0d090; }
+
+    /* ═══════════════════════════════════════════
+       ROYAL MODE
+       ═══════════════════════════════════════════ */
+    .royal body { background: #141310; color: #F5F5F5; }
+    .royal .header { background: linear-gradient(90deg, #4a4030 0%, #2e2820 100%); }
+    .royal .header h1 { color: #fff; }
+    .royal .subtitle { color: #ffffd1; }
+
+    .royal .left {
+      background: linear-gradient(180deg, #3a362e 0%, #2c2a24 100%);
+      border-right: 2px solid rgba(255,255,209,0.3);
+      color: #F5F5F5;
+    }
+    .royal .right { background: #141310; }
+
+    .royal .sec { color: #ffffd1; border-bottom-color: rgba(255,255,209,0.35); }
+    .royal .contact-row i { color: #ffffd1; }
+    .royal .contact-row .val { color: #E0E0E0; }
+    .royal .skill-cat { color: #ffffd1; }
+    .royal .skill-list { color: #E0E0E0; }
+    .royal .edu-name { color: #fff; }
+    .royal .edu-detail { color: #C8C8C8; }
+
+    .royal .timeline::before { background: rgba(255,255,209,0.3); }
+    .royal .tl-org::before { background: #ffffd1; border-color: #141310; }
+    .royal .tl-org-name { color: #fff; }
+    .royal .tl-org-date { color: #C0C0C0; }
+    .royal .tl-role::before { background: #e0e0a0; border-color: #141310; }
+    .royal .tl-role-name { color: #F8F8F8; }
+    .royal .tl-role-date { color: #B0B0B0; }
+    .royal .tl-desc { color: #D8D8D8; }
+    .royal .tl-sub-roles { color: #ffffd1; }
+    .royal .tl-chip { background: rgba(255,255,209,0.12); border-color: rgba(255,255,209,0.35); color: #ffffd1; }
+    .royal .tl-arrow { color: #ffffd1; }
+    .royal .tl-sep { background: rgba(255,255,209,0.2); }
+
+    .royal .proj-name { color: #fff; }
+    .royal .proj-sub { color: #ffffd1; }
+    .royal .proj-desc { color: #D8D8D8; }
+
+    .royal .ach-item { color: #E0E0E0; }
+    .royal .ach-item::before { color: #ffffd1; }
+    .royal .ach-item b { color: #fff; }
+    .royal .quiz-list div { color: #C0C0C0; }
+    .royal .quiz-list div::before { color: #ffffd1; }
+
+    .royal .cert-item { color: #E0E0E0; }
+    .royal .cert-item::before { color: #ffffd1; }
+    .royal .cert-item b { color: #fff; }
+    .royal .cert-sub div { color: #C0C0C0; }
+    .royal .cert-sub div::before { color: #ffffd1; }
   </style>
 </head>
 <body>
@@ -138,6 +242,12 @@
       <div class="edu-detail">Grade 1 &ndash; 12 &nbsp;|&nbsp; Raipur, CG</div>
       <div class="edu-detail">2014 &ndash; 2026</div>
       <div class="edu-detail">Stream: PCME + Computer Science</div>
+
+      <div class="sec">Certifications</div>
+      <div class="cert-item"><b>Google Cybersecurity</b> Professional Certificate (Coursera)</div>
+      <div class="cert-item"><b>IBM Ethical Hacking</b> with Open-Source Tools (Coursera)</div>
+      <div class="cert-item"><b>Programming and DSA</b> Courses by CodeChef for:</div>
+      <div class="cert-sub"><div>Python</div><div>Java OOP</div><div>C/C++ with STL</div></div>
 
       <div class="left-spacer"></div>
     </div>
@@ -192,13 +302,30 @@
         <div>FIT India Quiz</div>
         <div>IIM Bhilai Materials Quiz</div>
       </div>
-
-      <div class="sec">Certifications</div>
-      <div class="cert-item"><b>Google Cybersecurity</b> Professional Certificate (Coursera)</div>
-      <div class="cert-item"><b>IBM Ethical Hacking</b> with Open-Source Tools (Coursera)</div>
-      <div class="cert-item"><b>Programming and DSA</b> Courses by CodeChef for:</div>
-      <div class="cert-sub"><div>Python</div><div>Java OOP</div><div>C/C++ with STL</div></div>
     </div>
   </div>
+
+  <script>
+    (function() {
+      /* Read theme from URL ?theme=dark|royal|light */
+      var params = new URLSearchParams(window.location.search);
+      var theme = params.get('theme') || 'light';
+
+      function applyTheme(t) {
+        document.documentElement.classList.remove('dark', 'royal');
+        if (t === 'dark') document.documentElement.classList.add('dark');
+        else if (t === 'royal') document.documentElement.classList.add('royal');
+      }
+
+      applyTheme(theme);
+
+      /* Listen for live theme changes from parent */
+      window.addEventListener('message', function(e) {
+        if (e.data && e.data.type === 'theme-change') {
+          applyTheme(e.data.theme);
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

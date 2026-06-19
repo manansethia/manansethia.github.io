@@ -296,13 +296,42 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
 
 <!-- ═══ Download Buttons ═══ -->
 <div class="download-row">
-  <a class="dl-btn" href="/files/resume.pdf" download="Manan_Sethia_Resume.pdf">
+  <a class="dl-btn" id="dlResume" href="/files/v1_resume.pdf" download="v1_Manan_Sethia_Resume.pdf">
     <span class="dl-icon">⬇</span> Download Resume
   </a>
-  <a class="dl-btn" href="/files/cv.pdf" download="Manan_Sethia_CV.pdf">
+  <a class="dl-btn" id="dlCV" href="/files/v1_cv.pdf" download="v1_Manan_Sethia_CV.pdf">
     <span class="dl-icon">⬇</span> Download CV
   </a>
 </div>
+
+<script>
+(function() {
+  var dlResume = document.getElementById('dlResume');
+  var dlCV     = document.getElementById('dlCV');
+
+  var versionMap = { light: 'v1', dark: 'v2', royal: 'v3' };
+
+  function getTheme() {
+    var h = document.documentElement;
+    if (h.classList.contains('dark-mode')) return 'dark';
+    if (h.classList.contains('royal-mode')) return 'royal';
+    return 'light';
+  }
+
+  function updateDownloads() {
+    var v = versionMap[getTheme()];
+    dlResume.href     = '/files/' + v + '_resume.pdf';
+    dlResume.download = v + '_Manan_Sethia_Resume.pdf';
+    dlCV.href         = '/files/' + v + '_cv.pdf';
+    dlCV.download     = v + '_Manan_Sethia_CV.pdf';
+  }
+
+  updateDownloads();
+
+  new MutationObserver(updateDownloads)
+    .observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+})();
+</script>
 
 <script>
 (function() {
@@ -313,18 +342,28 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
   var tabC    = document.getElementById('tabCV');
   var current = null;
 
-  var sources = {
-    resume: '/_pages/resume-pdf-view.html',
-    cv:     '/_pages/cv-pdf-view.html'
-  };
+  /* Detect current theme from <html> classes */
+  function getTheme() {
+    var html = document.documentElement;
+    if (html.classList.contains('dark-mode')) return 'dark';
+    if (html.classList.contains('royal-mode')) return 'royal';
+    return 'light';
+  }
+
+  function buildSrc(which) {
+    var base = which === 'resume'
+      ? '/_pages/resume-print.html'
+      : '/_pages/cv-print.html';
+    return base + '?theme=' + getTheme();
+  }
 
   /* Eager preload, but defer to window.load + idle tick so masthead/navbar
-     JS init runs first. Without this defer, the heavy PDF iframe load
+     JS init runs first. Without this defer, the heavy iframe load
      blocks greedy-nav .loaded class application -> navbar flashes blank. */
   var loadedSource = null;
   function preload() {
     if (loadedSource) return;
-    frame.src = sources.resume;
+    frame.src = buildSrc('resume');
     loadedSource = 'resume';
   }
   if (document.readyState === 'complete') {
@@ -332,6 +371,19 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
   } else {
     window.addEventListener('load', function() { setTimeout(preload, 0); });
   }
+
+  /* Watch for theme changes on <html> and forward to iframe via postMessage */
+  var lastTheme = getTheme();
+  var observer = new MutationObserver(function() {
+    var t = getTheme();
+    if (t !== lastTheme) {
+      lastTheme = t;
+      if (frame.contentWindow) {
+        frame.contentWindow.postMessage({ type: 'theme-change', theme: t }, '*');
+      }
+    }
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 
   /* Pump per-frame footer push during the height transition. Bypasses
      ResizeObserver (which can miss frames if body height is locked by
@@ -364,8 +416,14 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     if (needsSwap) {
       frame.classList.remove('loaded');
       wrap.classList.add('loading');
-      frame.src = sources[which];
+      frame.src = buildSrc(which);
       loadedSource = which;
+    } else {
+      /* Same doc — but theme may have changed since we built the URL;
+         push current theme into the iframe just in case. */
+      if (frame.contentWindow) {
+        frame.contentWindow.postMessage({ type: 'theme-change', theme: getTheme() }, '*');
+      }
     }
 
     if (!current) {
