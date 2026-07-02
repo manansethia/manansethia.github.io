@@ -628,7 +628,7 @@ author_profile: true
 <!-- ═══ Quick Navigation TOC ═══ -->
 <div class="toc-box collapsed" id="achievementToc">
   <div class="toc-header" onclick="toggleToc()">
-    <h2>📋 Quick Navigation <span class="toc-count">41 achievements</span></h2>
+    <h2>📋 Quick Navigation <span class="toc-count">44 achievements</span></h2>
     <span class="toc-chevron"></span>
   </div>
   <div class="toc-search-wrap" style="position: relative;">
