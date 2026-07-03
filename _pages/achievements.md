@@ -2224,11 +2224,7 @@ document.addEventListener('DOMContentLoaded', function () {
   tocList.innerHTML = '';
   tocList.appendChild(fragment);
 
-  /* Update the badge count */
-  var total = sections.length;
-  if (countBadge) {
-    countBadge.textContent = total + (total === 1 ? ' achievement' : ' achievements');
-  }
+  /* Badge count is hardcoded in the HTML to account for bundled achievements */
 
   /* ── 2. Click handler: scroll with offset ── */
   function attachClickHandlers() {
