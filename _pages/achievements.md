@@ -860,7 +860,7 @@ author_profile: true
   </div>
   <div class="ach-summary-overlay"></div>
   <div class="ach-summary-content">
-    <div class="ach-summary-title">📌 At a glance</div>
+    <div class="ach-summary-title">At a glance</div>
     <div class="ach-summary-lead">
       <strong>Representing India at the International Earth Science Olympiad 2024 is something I still find hard to fully process. Beyond that, I have been Zonal Topper at the Zonal Computing Olympiad, ranked AIR 10 at HPE Codewars among 6,100+ students, and walked into rooms full of college teams as the only school student and walked out having won.</strong>
       <br><br>

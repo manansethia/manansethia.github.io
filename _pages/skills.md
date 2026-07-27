@@ -485,7 +485,7 @@ author_profile: true
 <div class="skills-page">
   <section class="skills-orbit">
     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-      <div class="skills-focus-label">🚀 Focus Areas</div>
+      <div class="skills-focus-label">Focus Areas</div>
       <div class="skills-focus-label" style="background: rgba(179, 108, 0, 0.08); border-color: rgba(179, 108, 0, 0.25);">🎯 142 Skills</div>
     </div>
     <div class="skills-focus-copy">
