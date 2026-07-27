@@ -1,6 +1,6 @@
 ---
 permalink: /education/
-title: "🎓 Education"
+title: "Education"
 description: "Manan Sethia's education — Krishna Public School, Raipur. CBSE PCME with Computer Science, active in student leadership, technical clubs, and quizzing."
 keywords: "Manan Sethia education, Krishna Public School, CBSE, Raipur, Computer Science, PCME"
 author_profile: true
@@ -219,12 +219,12 @@ author_profile: true
   </div>
 
   <div class="edu-pills">
-    <span class="edu-pill">🎓 Bachelor of Computing (Hons) in Computer Science</span>
-    <span class="edu-pill">🗓️ 2026 – 2030</span>
+    <span class="edu-pill">Bachelor of Computing (Hons) in Computer Science</span>
+    <span class="edu-pill">2026 – 2030</span>
   </div>
 
   <div class="edu-stream">
-    <div class="edu-stream-label">🔬 Specialisations</div>
+    <div class="edu-stream-label">Specialisations</div>
     <div class="edu-stream-subjects">
       <span class="edu-subject">Cyber Security</span>
       <span class="edu-subject">Artificial Intelligence</span>
@@ -244,12 +244,12 @@ author_profile: true
   </div>
 
   <div class="edu-pills">
-    <span class="edu-pill">🎓 Grade 1 – Grade 12</span>
-    <span class="edu-pill">🗓️ 2014 – 2026</span>
+    <span class="edu-pill">Grade 1 – Grade 12</span>
+    <span class="edu-pill">2014 – 2026</span>
   </div>
 
   <div class="edu-stream">
-    <div class="edu-stream-label">📚 Higher Secondary Stream (PCME + CS)</div>
+    <div class="edu-stream-label">Higher Secondary Stream (PCME + CS)</div>
     <div class="edu-stream-subjects">
       <span class="edu-subject">Physics</span>
       <span class="edu-subject">Chemistry</span>

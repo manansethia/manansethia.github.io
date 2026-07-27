@@ -1,6 +1,6 @@
 ---
 permalink: /experience/
-title: "💼 Experience"
+title: "Experience"
 description: "Manan Sethia's experience — Headboy, Coder's Club President, ATL Innovator, IGYM Member, Xplora Coordinator, and 10 years at Krishna Public School."
 keywords: "Manan Sethia experience, Headboy, Coder's Club, Krishna Public School, student leadership, IGYM, Xplora"
 author_profile: true

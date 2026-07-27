@@ -1,13 +1,13 @@
 ---
 permalink: /projects/
-title: "🧰 Projects"
+title: "Projects"
 description: "Manan Sethia's projects — MRIDA assistive device for the visually impaired, Conputer OS built from scratch, AI and embedded systems prototypes."
 keywords: "Manan Sethia projects, MRIDA, Conputer OS, assistive technology, embedded systems, AI projects, student developer"
 author_profile: true
 ---
 
 <!--
-## AIRAVAT 🐘  
+## AIRAVAT  
 ### Artificial Intelligence-based Rapid Analysis of Variability in Atmospheric Trends  
 <style>
   h1 {
@@ -84,7 +84,7 @@ author_profile: true
 -->
 
 <!--
-## Conputer OS 🪲  
+## Conputer OS
 <style>
   .conos-container {
     display: flex;
@@ -820,7 +820,7 @@ author_profile: true
 </style>
 
 <div class="project-section" id="mrida"> 
-  <h2>MRIDA 🌱</h2>
+  <h2>MRIDA</h2>
   <h3>Multipurpose Real-time Integrated Digital Analyzer</h3>
   <div style="margin-bottom: 20px; font-weight: 500; color: #a07830; font-size: 0.9em;" class="project-year">2023 - 2025</div>
   
@@ -871,7 +871,7 @@ author_profile: true
                 <figcaption>System and circuit overview for the current prototype.</figcaption>
               </figure>
               <div class="mrida-specs-text">
-                <div class="mrida-stack-label">🔧 Hardware</div>
+                <div class="mrida-stack-label">Hardware</div>
                 <div class="mrida-stack-cols">
                   <ul class="mrida-stack-list">
                     <li>Raspberry Pi 5 (4GB)</li>
@@ -888,7 +888,7 @@ author_profile: true
                   </ul>
                 </div>
                 <div class="mrida-software-section">
-                <div class="mrida-stack-label" style="margin-top: 16px;">💻 Software</div>
+                <div class="mrida-stack-label" style="margin-top: 16px;">Software</div>
                 <div class="mrida-stack-cols">
                   <ul class="mrida-stack-list">
                     <li>MIT App Inventor</li>
@@ -1038,7 +1038,7 @@ author_profile: true
 </div>
 
 <div class="project-section" id="matrix">
-  <h2>MATRIX 🤖</h2>
+  <h2>MATRIX</h2>
   <h3>A JARVIS Inspired Voice and Text Activated Assistant</h3>
   <div style="margin-top: 0px; margin-bottom: 15px; font-weight: 500; color: #a07830; font-size: 0.9em;" class="project-year">2021 - 2022</div>
 

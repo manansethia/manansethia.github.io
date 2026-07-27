@@ -1,6 +1,6 @@
 ---
 permalink: /certifications/
-title: "📜 Certifications"
+title: "Certifications"
 description: "Manan Sethia's certifications — Google Cybersecurity, IBM Ethical Hacking, CodeChef Python, C++, Java, DSA, and C++ STL professional courses."
 keywords: "Manan Sethia certifications, Google Cybersecurity, IBM Ethical Hacking, CodeChef, Python, C++, Java, DSA"
 author_profile: true

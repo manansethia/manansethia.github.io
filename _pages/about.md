@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "🙏 Namaste!"
+title: "Namaste!"
 description: "Manan Sethia — student, quizzer, and competitive programmer from Raipur. Passionate about AI, cybersecurity, operating systems, and building things at the intersection of curiosity and code."
 keywords: "Manan Sethia, portfolio, computer science, competitive programming, quizzer, Raipur, IESO, ZCO, AI, cybersecurity"
 author_profile: true
@@ -274,7 +274,7 @@ author_profile: true
   <div class="home-hero-content">
     <div class="home-pill" id="greetPill">Hey, I'm Manan!</div>
     <div class="home-hero-text">
-      I grew up in Raipur, a small city in central India. Most of what I know today started with a <strong>birthday gift from my grandmother</strong>, a <strong>broken laptop</strong>, and an internet connection nobody was monitoring. I am 18, endlessly curious about how we tricked sand into thinking, and still chasing the same feeling I got the first time I turned a page and discovered something I wasn't supposed to know yet.
+      I grew up in Raipur, a city in central India. Most of what I know today started with a <strong>birthday gift from my grandmother</strong>, a <strong>broken laptop</strong>, and an internet connection nobody was monitoring. I am 18, endlessly curious about how we tricked sand into thinking, and still chasing the same feeling I got the first time I turned a page and discovered something I wasn't supposed to know yet.
     </div>
   </div>
 </div>
@@ -282,12 +282,12 @@ author_profile: true
 <!-- Narrative -->
 <div class="home-body">
 
-  <h2>✨ How it started</h2>
+  <h2>How it started</h2>
   <p>
     My grandmother gifted me a <strong>DK Knowledge Encyclopedia</strong> on my 10th birthday. I don't think she knew what she was setting off. Every page was pure bliss, and that book turned curiosity from a habit into a compulsion. That same year I signed up for a WWF wildlife quiz, not because I knew anything about wildlife, but because I quietly wanted to be the kid in school who did things. By my first major quiz, the QPL, I realized it was never about the fame. It was about the hunger to learn.
   </p>
 
-  <h2>💻 The Lenovo G580</h2>
+  <h2>The Lenovo G580</h2>
   <p>
     Before coding, computers meant GTA Vice City, Angry Birds Star Wars, and hours on MS Paint. The machine was my dad's old <strong>2012 Lenovo G580</strong>. During COVID, I tried modding Minecraft and accidentally ran a Trojan. It attacked svchost.exe, consumed all 4GB of RAM, and corrupted family photos. I couldn't sleep that night. I didn't tell my parents. My instinct was to fix it myself. Weeks of tutorials, three recovery programs, and a dying HDD later, I recovered what I could, added an SSD, upgraded the RAM, and moved to Windows 10. All on my own.
   </p>
@@ -295,12 +295,12 @@ author_profile: true
     That laptop has seen many lives since: different versions of Windows going all the way back to XP, Ubuntu, Chrome OS, Kali Linux, macOS Ventura, and a custom Debian build I was putting together. Each one taught me something new.
   </p>
 
-  <h2>🎯 The thrill</h2>
+  <h2>The thrill</h2>
   <p>
     Walking into a competition as the only school student in a room full of college teams feels surreal. Defeating someone by a thin margin is a feeling I live for. I'm a free bird by nature, and mixing leadership with patience and a genuine sense of fun turned out to be the only thing that gets a team aligned.
   </p>
 
-  <h2>☕️ Beyond the usual</h2>
+  <h2>Beyond the usual</h2>
 
   <div class="home-photos" id="homePhotos">
     <div class="home-photo-card">
@@ -329,7 +329,7 @@ author_profile: true
   </p>
 
   <div class="home-closing">
-    Thanks for reading. Feel free to explore the rest through the navbar above. There's a lot more to see. 🔮
+    Thanks for reading. Feel free to explore the rest through the navbar above. There's a lot more to see.
   </div>
 
 </div>

@@ -1,6 +1,6 @@
 ---
 permalink: /skills/
-title: "🛠️ Skills"
+title: "Skills"
 description: "Manan Sethia's 142+ technical skills — Python, C++, AI/ML, cybersecurity, Linux, embedded systems, networking, web development, and leadership."
 keywords: "Manan Sethia skills, Python, C++, AI, machine learning, cybersecurity, Linux, embedded systems, competitive programming"
 author_profile: true
