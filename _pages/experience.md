@@ -464,7 +464,7 @@ author_profile: true
               <span class="exp-live-duration" data-duration-start="2026-09" data-duration-end="present" data-duration-prefix=" · "> · 1 mo</span>
             </div>
             <div class="exp-desc">
-              <p>Thank God It's Friday Hacks is a sub club under NTU's Open Source Society. It explores hackathon, hardware building, software projects and workshops as well as several different competitions.</p>
+              <p>Thank God It's Friday Hacks is a sub club under NTU's Open Source Society. It explores hackathons, hardware building, software projects and workshops as well as several different competitions.</p>
             </div>
             <div class="exp-images"></div>
           </div>
@@ -583,7 +583,7 @@ author_profile: true
             </div>
             <div class="exp-role-date">Apr 2026 – Jul 2026</div>
             <div class="exp-desc">
-              <p>First Step Innovations is an Edu-Tech startup based in Bilaspur, Chhattisgarh, focused on STEAM education, coding, AI, and robotics for school students. As an R&amp;D Intern, I am working on three full-stack projects: an e-commerce web application, an AI-powered career counselling platform, and an interactive drone assembly simulator web app. I am also responsible for technical documentation, daily progress reporting, and QA testing across all deliverables.</p>
+              <p>First Step Innovations is an Edu-Tech startup based in Bilaspur, Chhattisgarh, focused on STEAM education, coding, AI, and robotics for school students. As an R&amp;D Intern, I worked on three full-stack projects: an e-commerce web application, an AI-powered career counselling platform, and an interactive drone assembly simulator web app. I was also responsible for technical documentation, daily progress reporting, and QA testing across all deliverables.</p>
             </div>
             <div class="exp-images"></div>
           </div>
@@ -614,8 +614,8 @@ author_profile: true
             <div class="exp-role-sub">Student Council · 8 mos</div>
             <div class="exp-role-date">Jul 2025 – Feb 2026</div>
             <div class="exp-desc">
-              <p>As Headboy, I share the responsibility with the Headgirl of overseeing the entire student council: a network comprising 18 clubs, an editorial board, and 4 houses. We oversee 97 members, including presidents, vice presidents, prefects, deputy prefects, and editorial members.</p>
-              <p>My core responsibilities involve maintaining discipline across the council, scheduling events, managing assemblies, and organizing new initiatives. I proudly oversaw major school events: XPLORA (interschool tech and robotics), KPSMUN (three day interschool MUN), Venture Vortex (business pitching), Kaushal Mahotsav (performing arts), Lihitya (literature and creative expression), Intelligence Fest (large scale interschool multi domain competition), and our Annual Function and Felicitation where I handled speeches, event flow, and guest coordination.</p>
+              <p>As Headboy, I shared the responsibility with the Headgirl of overseeing the entire student council: a network comprising 18 clubs, an editorial board, and 4 houses. We oversaw 97 members, including presidents, vice presidents, prefects, deputy prefects, and editorial members.</p>
+              <p>My core responsibilities involved maintaining discipline across the council, scheduling events, managing assemblies, and organizing new initiatives. I proudly oversaw major school events: XPLORA (interschool tech and robotics), KPSMUN (three day interschool MUN), Venture Vortex (business pitching), Kaushal Mahotsav (performing arts), Lihitya (literature and creative expression), Intelligence Fest (large scale interschool multi domain competition), and our Annual Function and Felicitation where I handled speeches, event flow, and guest coordination.</p>
             </div>
             <div class="exp-images"></div>
           </div>
@@ -663,7 +663,7 @@ author_profile: true
             <div class="exp-role-date">Jul 2022 – Mar 2026</div>
             <div class="exp-desc">
               <p>My journey began as an innovator: building prototypes, participating in competitions, and exploring robotics, embedded systems, and single board computers.</p>
-              <p>Over time, I naturally transitioned into mentoring. I proudly guide juniors on their projects, assist them with acquiring materials, wiring components, writing code, and offer support throughout execution and refinement.</p>
+              <p>Over time, I naturally transitioned into mentoring. I proudly guided juniors on their projects, assisted them with acquiring materials, wiring components, writing code, and offered support throughout execution and refinement.</p>
             </div>
             <div class="exp-images"></div>
           </div>
@@ -725,7 +725,7 @@ author_profile: true
             <div class="exp-role-sub">Quiz Premier League (QPL) · 10 yrs</div>
             <div class="exp-role-date">Apr 2016 – Mar 2026</div>
             <div class="exp-desc">
-              <p>I joined the quiz club in 3rd grade as part of its 4th generation. I learned immensely under my seniors and gradually improved my knowledge base, eventually representing the school in multiple high tier quizzes (<a href="/achievements/?search=quiz">see my quizzes</a>).</p>
+              <p>I joined the quiz club in 3rd grade as part of its 4th generation. I learned immensely under my seniors and gradually improved my knowledge base, eventually representing the school in multiple high tier quizzes.(<a href="/achievements/?search=quiz">see my quizzes</a>).</p>
               <p>I utilized this experience to host intraschool quizzes across diverse domains: general knowledge, finance, history, technology, and sports. I actively championed participation in quizzing and guided juniors on reliable preparation strategies.</p>
             </div>
             <div class="exp-images"></div>
