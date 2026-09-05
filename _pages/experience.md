@@ -1,8 +1,8 @@
 ---
 permalink: /experience/
 title: "Experience"
-description: "Manan Sethia's experience — Headboy, Coder's Club President, ATL Innovator, IGYM Member, Xplora Coordinator, and 10 years at Krishna Public School."
-keywords: "Manan Sethia experience, Headboy, Coder's Club, Krishna Public School, student leadership, IGYM, Xplora"
+description: "Manan Sethia's experience — Technical Director at NTU OSS, CTIO at Buildabot Labs, Headboy, Coder's Club President, ATL Innovator, and 10 years at Krishna Public School."
+keywords: "Manan Sethia experience, NTU OSS, Technical Director, Buildabot Labs, Headboy, Coder's Club, Krishna Public School"
 author_profile: true
 ---
 
@@ -303,6 +303,37 @@ author_profile: true
     position: relative;
   }
 
+  .exp-sub-role-main {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  .exp-sub-role-icon {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background: #ffffff;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid rgba(185, 115, 0, 0.45);
+  }
+
+  .exp-sub-role-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .dark-mode .exp-sub-role-icon {
+    border-color: rgba(255, 210, 120, 0.45);
+  }
+  .royal-mode .exp-sub-role-icon {
+    border-color: rgba(240, 240, 240, 0.25);
+  }
+
   .exp-sub-row::before {
     content: "";
     position: absolute;
@@ -439,12 +470,69 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
+        <img src="/images/ntu.avif" width="512" height="512" alt="Nanyang Technological University Logo">
+      </div>
+      <div class="exp-org-copy">
+        <div class="exp-org-name">Nanyang Technological University</div>
+        <div class="exp-org-range">Aug 2026 – Present
+          <span class="exp-live-duration" data-duration-start="2026-08" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
+        </div>
+      </div>
+    </header>
+    <div class="exp-role-list">
+      <article class="exp-role-row">
+        <div class="exp-role-marker">
+          <div class="exp-role-dot"></div>
+        </div>
+        <div class="exp-role-main">
+          <div class="exp-role-icon">
+            <img src="/images/ntu_oss.avif" width="512" height="512" alt="NTU Open Source Society Logo">
+          </div>
+          <div class="exp-role-copy">
+            <div class="exp-role-title">Technical Director</div>
+            <div class="exp-role-sub">TGIFHacks – Sub Club of NTU OSS</div>
+            <div class="exp-role-date">Sep 2026 – Present
+              <span class="exp-live-duration" data-duration-start="2026-09" data-duration-end="present" data-duration-prefix=" · "> · 1 mo</span>
+            </div>
+            <div class="exp-desc">
+              <p>Thank God It's Friday Hacks is a sub club under NTU's Open Source Society. It explores hackathon, hardware building, software projects and workshops as well as several different competitions.</p>
+            </div>
+            <div class="exp-sub-timeline">
+              <div class="exp-sub-list">
+                <div class="exp-sub-row">
+                  <div class="exp-sub-role-main">
+                    <div class="exp-sub-role-icon">
+                      <img src="/images/ntu_sentinels.avif" width="512" height="512" alt="NTU Sentinels Logo">
+                    </div>
+                    <div>
+                      <div class="exp-sub-role">Technical Subcommittee Member</div>
+                      <div class="exp-sub-date">Aug 2026 – Present
+                        <span class="exp-live-duration" data-duration-start="2026-08" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
+                      </div>
+                      <div class="exp-sub-desc">
+                        <p>Sentinels is a flagship club focused around cybersecurity and CTFs.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </article>
+
+  <hr class="silver-line exp-divider" />
+
+  <article class="exp-org">
+    <header class="exp-org-header">
+      <div class="exp-logo-box">
         <img src="/images/buildabot.avif" width="200" height="200" alt="Buildabot Labs Logo">
       </div>
       <div class="exp-org-copy">
         <div class="exp-org-name">Buildabot Labs Private Limited</div>
-        <div class="exp-org-range">May 2026 – Present
-          <span class="exp-live-duration" data-duration-start="2026-05" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
+        <div class="exp-org-range">May 2026 – Aug 2026 · 4 mos
         </div>
       </div>
     </header>
@@ -459,14 +547,11 @@ author_profile: true
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Chief Technology and Innovations Officer (CTIO)</div>
-            <div class="exp-role-sub">
-              Subsidiary of First Step Innovations (FSTI)
-              <span class="exp-live-duration" data-duration-start="2026-05" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
-            </div>
-            <div class="exp-role-date">May 2026 – Present</div>
+            <div class="exp-role-sub">Subsidiary of First Step Innovations (FSTI) · 4 mos</div>
+            <div class="exp-role-date">May 2026 – Aug 2026</div>
             <div class="exp-desc">
-              <p>Buildabot Labs is a technology subsidiary of First Step Innovations (FSTI), focused on building cutting-edge software infrastructure and interactive digital solutions. Promoted to CTIO after my initial tenure as an R&amp;D Intern at FSTI, I now lead all technology strategy and engineering at the subsidiary level.</p>
-              <p>My work encompasses maintaining and building their database systems and backend servers, developing and managing the company website, and integrating a RAG (Retrieval-Augmented Generation) AI assistant directly into the web platform. I also design and implement interactive elements and bespoke web-based solutions, and have architected an emulation playground that enables users to virtually test and validate their projects to a meaningful extent before physical deployment.</p>
+              <p>Buildabot Labs is a technology subsidiary of First Step Innovations (FSTI), focused on building cutting-edge software infrastructure and interactive digital solutions. Promoted to CTIO after my initial tenure as an R&amp;D Intern at FSTI, I led all technology strategy and engineering at the subsidiary level.</p>
+              <p>My work encompassed maintaining and building their database systems and backend servers, developing and managing the company website, and integrating a RAG (Retrieval-Augmented Generation) AI assistant directly into the web platform. I also designed and implemented interactive elements and bespoke web-based solutions, and architected an emulation playground that enabled users to virtually test and validate their projects to a meaningful extent before physical deployment.</p>
             </div>
             <div class="exp-images"></div>
           </div>
