@@ -501,10 +501,8 @@ author_profile: true
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Data Analytics &amp; Engineering Assistant</div>
-            <div class="exp-role-sub">NTU Office of Data and Analytics (Work Study Scheme)</div>
-            <div class="exp-role-date">Jul 2026 – Present
-              <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 3 mos</span>
-            </div>
+            <div class="exp-role-sub">NTU Office of Data and Analytics (Work Study Scheme, ad hoc basis) · 9 mos</div>
+            <div class="exp-role-date">Jul 2026 – Mar 2027</div>
             <div class="exp-desc">
               <p>At NTU's Office of Data and Analytics, I build automated data-harvesting, identity-resolution, and ETL pipelines that link fragmented academic records across bibliometric sources. The work handles API rate limits, inconsistent schemas, author disambiguation, and standardized SQL and flat-file delivery at scale.</p>
               <ul>
