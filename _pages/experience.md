@@ -303,37 +303,6 @@ author_profile: true
     position: relative;
   }
 
-  .exp-sub-role-main {
-    display: grid;
-    grid-template-columns: 40px minmax(0, 1fr);
-    gap: 12px;
-    align-items: start;
-  }
-
-  .exp-sub-role-icon {
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    background: #ffffff;
-    box-sizing: border-box;
-    border-radius: 8px;
-    border: 2px solid rgba(185, 115, 0, 0.45);
-  }
-
-  .exp-sub-role-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .dark-mode .exp-sub-role-icon {
-    border-color: rgba(255, 210, 120, 0.45);
-  }
-  .royal-mode .exp-sub-role-icon {
-    border-color: rgba(240, 240, 240, 0.25);
-  }
-
   .exp-sub-row::before {
     content: "";
     position: absolute;
@@ -490,33 +459,61 @@ author_profile: true
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Technical Director</div>
-            <div class="exp-role-sub">TGIFHacks – Sub Club of NTU OSS</div>
+            <div class="exp-role-sub">TGIFHacks: Sub Club of NTU OSS</div>
             <div class="exp-role-date">Sep 2026 – Present
               <span class="exp-live-duration" data-duration-start="2026-09" data-duration-end="present" data-duration-prefix=" · "> · 1 mo</span>
             </div>
             <div class="exp-desc">
               <p>Thank God It's Friday Hacks is a sub club under NTU's Open Source Society. It explores hackathon, hardware building, software projects and workshops as well as several different competitions.</p>
             </div>
-            <div class="exp-sub-timeline">
-              <div class="exp-sub-list">
-                <div class="exp-sub-row">
-                  <div class="exp-sub-role-main">
-                    <div class="exp-sub-role-icon">
-                      <img src="/images/ntu_sentinels.avif" width="512" height="512" alt="NTU Sentinels Logo">
-                    </div>
-                    <div>
-                      <div class="exp-sub-role">Technical Subcommittee Member</div>
-                      <div class="exp-sub-date">Aug 2026 – Present
-                        <span class="exp-live-duration" data-duration-start="2026-08" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
-                      </div>
-                      <div class="exp-sub-desc">
-                        <p>Sentinels is a flagship club focused around cybersecurity and CTFs.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="exp-images"></div>
+          </div>
+        </div>
+      </article>
+      <article class="exp-role-row">
+        <div class="exp-role-marker">
+          <div class="exp-role-dot"></div>
+        </div>
+        <div class="exp-role-main">
+          <div class="exp-role-icon">
+            <img src="/images/ntu_sentinels.avif" width="512" height="512" alt="NTU Sentinels Logo">
+          </div>
+          <div class="exp-role-copy">
+            <div class="exp-role-title">Technical Subcommittee Member</div>
+            <div class="exp-role-sub">NTU Sentinels</div>
+            <div class="exp-role-date">Aug 2026 – Present
+              <span class="exp-live-duration" data-duration-start="2026-08" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
             </div>
+            <div class="exp-desc">
+              <p>Sentinels is a flagship club focused around cybersecurity and CTFs.</p>
+            </div>
+            <div class="exp-images"></div>
+          </div>
+        </div>
+      </article>
+      <article class="exp-role-row">
+        <div class="exp-role-marker">
+          <div class="exp-role-dot"></div>
+        </div>
+        <div class="exp-role-main">
+          <div class="exp-role-icon">
+            <img src="/images/ntu.avif" width="512" height="512" alt="Nanyang Technological University Logo">
+          </div>
+          <div class="exp-role-copy">
+            <div class="exp-role-title">Data Analytics &amp; Engineering Assistant</div>
+            <div class="exp-role-sub">NTU Office of Data and Analytics (Work Study Scheme)</div>
+            <div class="exp-role-date">Jul 2026 – Present
+              <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 3 mos</span>
+            </div>
+            <div class="exp-desc">
+              <p>At NTU's Office of Data and Analytics, I build automated data-harvesting, identity-resolution, and ETL pipelines that link fragmented academic records across bibliometric sources. The work handles API rate limits, inconsistent schemas, author disambiguation, and standardized SQL and flat-file delivery at scale.</p>
+              <ul>
+                <li><strong>Pipeline &amp; tooling:</strong> Developed 241 modular Python scripts and integrated 11 open-source repositories, custom tools, and MCP servers to orchestrate ingestion across 8+ APIs and public knowledge graphs, including SciVal, Scopus, Semantic Scholar, OpenAlex, ROR, and Wikidata.</li>
+                <li><strong>Entity resolution &amp; enrichment:</strong> Matched approximately 50,000 UBC researcher profiles and linked 45,801 Stanford Top 2% researchers with Scopus IDs, classifications, h-indices, ranks, and institutional metadata.</li>
+                <li><strong>Large-scale delivery:</strong> Processed 5.2 million researcher records across 127 universities, delivered as six spreadsheet volumes, clean CSVs, and indexed SQL database dumps with technical documentation.</li>
+              </ul>
+            </div>
+            <div class="exp-images"></div>
           </div>
         </div>
       </article>
