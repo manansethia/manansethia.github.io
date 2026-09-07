@@ -29,7 +29,6 @@ package-lock.json
 .LSOverride
 
 # IDE / tool configurations
-.claude/
 .vscode/
 .idea/
 
