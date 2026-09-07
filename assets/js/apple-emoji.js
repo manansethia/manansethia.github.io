@@ -137,6 +137,9 @@
         img.src = src;
         img.alt = match[0];
         img.className = 'apple-emoji';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.fetchPriority = 'low';
         img.setAttribute('aria-label', match[0]);
         img.setAttribute('role', 'img');
         frag.appendChild(img);
@@ -151,64 +154,74 @@
     node.parentNode.replaceChild(frag, node);
   }
 
-  /* Collect ALL text nodes in document first (one-pass traversal) */
-  function collectTextNodes(root) {
-    var nodes = [];
-    var walker = document.createTreeWalker(
+  /* Stream text nodes instead of retaining a page-sized array in memory. */
+  function createTextIterator(root) {
+    return document.createNodeIterator(
       root,
-      NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
+      NodeFilter.SHOW_TEXT,
       {
         acceptNode: function(node) {
-          if (node.nodeType === Node.ELEMENT_NODE) {
-            var tag = node.nodeName;
-            if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'TEXTAREA' ||
-                tag === 'INPUT' || tag === 'CODE' || tag === 'PRE' ||
-                node.classList.contains('no-emoji')) {
-              return NodeFilter.FILTER_REJECT; // skip entire subtree
-            }
-            return NodeFilter.FILTER_SKIP;
+          if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+          var parent = node.parentElement;
+          if (!parent || parent.closest('script, style, textarea, input, code, pre, .no-emoji')) {
+            return NodeFilter.FILTER_REJECT;
           }
           return NodeFilter.FILTER_ACCEPT;
         }
       },
       false
     );
-    var node;
-    while ((node = walker.nextNode())) {
-      if (node.nodeValue && node.nodeValue.trim()) nodes.push(node);
-    }
-    return nodes;
   }
 
-  /* Process text nodes in idle-time chunks to avoid blocking main thread */
-  function processInChunks(nodes, chunkSize) {
-    var idx = 0;
+  function init() {
+    /* Apple OS (macOS, iOS, iPadOS) natively renders full-color Apple emojis at system font level.
+       Skipping image substitution on Apple devices avoids minutes of DOM mutations, forced reflows,
+       and hundreds of unnecessary AVIF image decodes on initial page open. */
+    var isApple = /Macintosh|Mac OS|iPhone|iPad|iPod/.test(navigator.userAgent || '');
+    if (isApple) return;
+
+    processInChunks(createTextIterator(document.getElementById('main') || document.body));
+  }
+
+  /* Process nodes in fast slices without dragging across minutes */
+  function processInChunks(iterator) {
+    var finished = false;
+    var cancelled = false;
+
     function doChunk(deadline) {
-      /* Use deadline if available (requestIdleCallback), else just run chunk */
-      var timeRemaining = deadline ? deadline.timeRemaining() : 10;
-      while (idx < nodes.length && timeRemaining > 1) {
-        var node = nodes[idx++];
-        if (node.parentNode) replaceTextNode(node);
-        timeRemaining = deadline ? deadline.timeRemaining() : (--chunkSize > 0 ? 10 : 0);
+      if (cancelled || document.hidden) {
+        schedule();
+        return;
       }
-      if (idx < nodes.length) {
+
+      var processed = 0;
+      while (processed < 250 && (!deadline || deadline.timeRemaining() > 0.5)) {
+        var node = iterator.nextNode();
+        if (!node) {
+          finished = true;
+          break;
+        }
+        if (node.parentNode) replaceTextNode(node);
+        processed += 1;
+      }
+
+      if (!finished) schedule();
+    }
+
+    function schedule() {
+      if (cancelled || finished) return;
+      if (!document.hidden) {
         if ('requestIdleCallback' in window) {
-          requestIdleCallback(doChunk, { timeout: 2000 });
+          requestIdleCallback(doChunk, { timeout: 100 });
         } else {
           setTimeout(function() { doChunk(null); }, 16);
         }
       }
     }
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(doChunk, { timeout: 2000 });
-    } else {
-      setTimeout(function() { doChunk(null); }, 100);
-    }
-  }
 
-  function init() {
-    var nodes = collectTextNodes(document.body);
-    processInChunks(nodes, 50); // 50 nodes per chunk
+    document.addEventListener('visibilitychange', schedule);
+    window.addEventListener('pagehide', function() { cancelled = true; }, { once: true });
+    schedule();
   }
 
   if (document.readyState === 'loading') {

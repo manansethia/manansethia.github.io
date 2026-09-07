@@ -1,34 +1,6 @@
 {% include base_path %}
 
-<!-- start custom head snippets -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.avif">
-<link rel="icon" type="image/webp" sizes="32x32" href="/favicon-32x32.webp">
-<link rel="icon" type="image/webp" sizes="16x16" href="/favicon-16x16.webp">
-<link rel="manifest" href="/site.webmanifest">
-
-<!-- Preload critical fonts -->
-<link rel="preload" href="{{ base_path }}/assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ base_path }}/assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="apple-touch-icon" sizes="57x57" href="{{ base_path }}/images/apple-touch-icon-57x57.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="60x60" href="{{ base_path }}/images/apple-touch-icon-60x60.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ base_path }}/images/apple-touch-icon-72x72.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="76x76" href="{{ base_path }}/images/apple-touch-icon-76x76.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ base_path }}/images/apple-touch-icon-114x114.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="120x120" href="{{ base_path }}/images/apple-touch-icon-120x120.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="144x144" href="{{ base_path }}/images/apple-touch-icon-144x144.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ base_path }}/images/apple-touch-icon-152x152.avif?v=M44lzPylqQ">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.avif?v=M44lzPylqQ">
-<link rel="icon" type="image/webp" href="{{ base_path }}/images/favicon-32x32.webp?v=M44lzPylqQ" sizes="32x32">
-<link rel="icon" type="image/avif" href="{{ base_path }}/images/android-chrome-192x192.avif?v=M44lzPylqQ" sizes="192x192">
-<link rel="icon" type="image/avif" href="{{ base_path }}/images/favicon-96x96.avif?v=M44lzPylqQ" sizes="96x96">
-<link rel="icon" type="image/webp" href="{{ base_path }}/images/favicon-16x16.webp?v=M44lzPylqQ" sizes="16x16">
-<link rel="manifest" href="{{ base_path }}/images/manifest.json?v=M44lzPylqQ">
-<link rel="mask-icon" href="{{ base_path }}/images/safari-pinned-tab.svg?v=M44lzPylqQ" color="#000000">
-<link rel="shortcut icon" href="/images/favicon.ico?v=M44lzPylqQ">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="{{ base_path }}/images/mstile-144x144.avif?v=M44lzPylqQ">
-<meta name="msapplication-config" content="{{ base_path }}/images/browserconfig.xml?v=M44lzPylqQ">
-<meta name="theme-color" content="#ffffff">
+<!-- Academicons is non-critical; activate it after the primary stylesheet. -->
 <link rel="preload" href="{{ base_path }}/assets/css/academicons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"></noscript>
 
@@ -38,5 +10,3 @@
 <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {% endif %}
-
-<!-- end custom head snippets -->

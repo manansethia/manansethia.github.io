@@ -1,8 +1,8 @@
 ---
 permalink: /achievements/
 title: "Achievements"
-description: "Manan Sethia's achievements — IESO India representative, ZCO Zonal Topper, HPE CodeWars AIR 10, TCS CodeVita Global Top 0.5%, quiz champion, and more."
-keywords: "Manan Sethia achievements, IESO 2024, Zonal Computing Olympiad, HPE CodeWars, TCS CodeVita, quiz competitions, competitive programming"
+description: "Manan Sethia's achievements — IESO India representative, ZCO Zonal Topper, HPE CodeWars AIR 10, quiz champion, and more."
+keywords: "Manan Sethia achievements, IESO 2024, Zonal Computing Olympiad, HPE CodeWars, quiz competitions, competitive programming"
 author_profile: true
 ---
 
@@ -84,7 +84,7 @@ author_profile: true
     outline: none !important;
   }
   .dark-mode .episode-card span {
-    color: #d4a040;
+    color: rgb(212, 159, 15);
   }
   .royal-mode .episode-card span {
     color: #ffffd1;
@@ -358,7 +358,9 @@ author_profile: true
     border-radius: 14px;
     overflow: hidden;
     border: 2px solid rgba(192, 130, 0, 0.55);
-    background: linear-gradient(135deg, rgba(255, 240, 195, 0.65) 0%, rgba(255, 232, 175, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(255, 240, 195, 0.88) 0%, rgba(255, 232, 175, 0.88) 100%);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
     box-shadow: 0 4px 18px rgba(192,115,0,0.1);
     /* fadeInUp animation removed for perf — toc-box visible immediately */
   }
@@ -370,12 +372,14 @@ author_profile: true
     padding: 14px 20px 14px 20px;
     cursor: pointer;
     user-select: none;
-    background: linear-gradient(135deg, rgba(255, 218, 130, 0.8) 0%, rgba(255, 205, 100, 0.65) 100%);
+    background: linear-gradient(135deg, rgba(255, 235, 181, 0.92) 0%, rgba(238, 180, 72, 0.88) 58%, rgba(255, 210, 105, 0.9) 100%);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
     transition: background 0.3s ease;
   }
 
   .toc-header:hover {
-    background: linear-gradient(135deg, rgba(255, 208, 110, 0.9) 0%, rgba(255, 192, 80, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(255, 230, 166, 0.94) 0%, rgba(230, 164, 48, 0.9) 58%, rgba(255, 202, 86, 0.92) 100%);
   }
 
   .toc-header h2 {
@@ -383,7 +387,7 @@ author_profile: true
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
-    color: #6b4400;
+    color: #4a2a00;
     font-weight: 700;
   }
 
@@ -404,6 +408,9 @@ author_profile: true
   .toc-search-wrap {
     padding: 12px 20px 10px;
     border-top: 1.5px solid #e8c774;
+    background: rgba(255, 240, 195, 0.88);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
   }
 
   .toc-box.collapsed .toc-search-wrap {
@@ -418,7 +425,7 @@ author_profile: true
     font-size: 0.85em;
     outline: none;
     background: rgba(255,255,255,0.7);
-    color: #5a3e00;
+    color: #5a3600;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
   }
@@ -429,28 +436,27 @@ author_profile: true
   }
 
   .toc-search::placeholder {
-    color: #b89960;
-  }
-
-  .toc-body {
-    overflow: hidden;
-    will-change: max-height, opacity, padding;
-    transition: max-height 0.6s cubic-bezier(0.4,0,0.2,1), padding 0.45s ease, opacity 0.3s ease;
-    padding: 10px 20px 16px;
-    max-height: 6000px;
+    color: #5a3600;
     opacity: 1;
   }
 
-  .toc-box.collapsed .toc-body {
+  .toc-body {
     max-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    opacity: 0;
+    overflow: hidden;
+    overflow-anchor: none;
+    background: rgba(255, 240, 195, 0.88);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+    transition: max-height 0.72s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .toc-box:not(.collapsed) .toc-body {
+    max-height: var(--toc-open-height, 6000px);
   }
 
   .toc-list {
     list-style: none;
-    padding: 0;
+    padding: 6px 20px 16px;
     margin: 0;
   }
 
@@ -525,29 +531,43 @@ author_profile: true
 
   /* ── Dark Mode (class-based) ── */
   .dark-mode .toc-box {
-    background: linear-gradient(135deg, rgba(55, 34, 7, 0.88) 0%, rgba(38, 23, 4, 0.7) 100%);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     border-color: rgba(190, 125, 25, 0.55);
     box-shadow: 0 4px 18px rgba(0,0,0,0.4);
   }
-  .dark-mode .toc-header {
-    background: linear-gradient(135deg, #3e2c08 0%, #4d3810 60%, #3e2c08 100%);
-  }
+  html.dark-mode .toc-header,
+  .dark-mode .toc-header,
+  html.dark-mode .toc-header:hover,
   .dark-mode .toc-header:hover {
-    background: linear-gradient(135deg, #4e3810 0%, #5d4415 60%, #4e3810 100%);
+    background: linear-gradient(135deg, rgba(45, 33, 8, 0.96) 0%, rgba(74, 58, 30, 0.96) 60%, rgba(26, 17, 0, 0.96) 100%) !important;
+    background: linear-gradient(135deg, unquote("rgb(45 33 8 / 96%)") 0%, unquote("rgb(74 58 30 / 96%)") 60%, unquote("rgb(26 17 0 / 96%)") 100%) !important;
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
   }
   .dark-mode .toc-header h2 { color: #f0c870; }
   .dark-mode .toc-chevron { border-color: #d4a040; }
+  .dark-mode .toc-body,
+  .dark-mode .toc-search-wrap {
+    background: rgb(62 44 8 / 88%);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+  }
   .dark-mode .toc-search-wrap { border-top-color: #5a4520; }
+  .dark-mode .toc-box.collapsed .toc-search-wrap {
+    border-top-color: #5a4520;
+  }
   .dark-mode .toc-search {
     background: rgba(40,34,26,0.8);
     border-color: #5a4520;
-    color: #e8d0a0;
+    color: #ffca61;
   }
   .dark-mode .toc-search:focus {
     border-color: #d4a040;
     box-shadow: 0 0 0 3px rgba(212,160,64,0.2);
   }
-  .dark-mode .toc-search::placeholder { color: #8a7050; }
+  .dark-mode .toc-search::placeholder { color: #ffca61; opacity: 1; }
   .dark-mode .toc-list li { border-bottom-color: rgba(90,69,32,0.4); }
   .dark-mode .toc-list a { color: #d4b878 !important; }
   .dark-mode .toc-list a:hover {
@@ -569,18 +589,26 @@ author_profile: true
 
   /* ── Royal Mode ── */
   .royal-mode .toc-box {
-    background: linear-gradient(135deg, rgba(72, 69, 64, 0.88), rgba(72, 69, 64, 0.7));
+    background: linear-gradient(135deg, rgba(72, 69, 64, 0.88), rgba(72, 69, 64, 0.88));
     border-color: rgba(240, 240, 240, 0.3);
     box-shadow: 0 4px 18px rgba(0,0,0,0.4);
   }
   .royal-mode .toc-header {
-    background: linear-gradient(135deg, #2b2926 0%, #4a463d 60%, #2b2926 100%);
+    background: linear-gradient(135deg, rgba(43, 41, 38, 0.88) 0%, rgba(74, 70, 61, 0.88) 60%, rgba(43, 41, 38, 0.88) 100%);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
   }
   .royal-mode .toc-header:hover {
     background: linear-gradient(135deg, #35332e 0%, #4a463d 60%, #35332e 100%);
   }
   .royal-mode .toc-header h2 { color: #ffffff; }
   .royal-mode .toc-chevron { border-color: #ffffd1; }
+  .royal-mode .toc-body,
+  .royal-mode .toc-search-wrap {
+    background: rgba(72, 69, 64, 0.88);
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(60px);
+  }
   .royal-mode .toc-search-wrap { border-top-color: rgba(240, 240, 240, 0.2); }
   .royal-mode .toc-box.collapsed .toc-search-wrap {
     border-top: 1.5px solid rgba(241, 239, 235, 0.4);
@@ -616,8 +644,11 @@ author_profile: true
 
   @media (min-width: 768px) {
     .toc-list {
-      columns: 2;
-      column-gap: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(22, auto);
+      column-gap: 16px;
     }
     .toc-list li {
       break-inside: avoid;
@@ -640,13 +671,13 @@ author_profile: true
       <li data-tags="quiz tech iiit technovate campus raipur college general knowledge aptitude"><a href="#ach-1"><span class="toc-num">1.</span><span class="toc-title">⚔️ Winner – Clash of Campus Quiz 2026 <span class="toc-date">(March 2026)</span></span></a></li>
       <li data-tags="tech coding olympiad ibm ibm skillsbuild future 1m1b national medal silver"><a href="#ach-2"><span class="toc-num">2.</span><span class="toc-title">🥈 Silver Medalist: Future Tech Olympiad 2026 <span class="toc-date">(February 2026)</span></span></a></li>
       <li data-tags="tech coding programming iit iit madras shaastra competitive programming codechef algorithm dsa potpourri"><a href="#ach-3"><span class="toc-num">3.</span><span class="toc-title">🎲 Shaastra 2026 by IIT Madras <span class="toc-date">(December 2025)</span></span></a></li>
-      <li data-tags="quiz finance yes securities wonga wits financial literacy stock market raipur"><a href="#ach-4"><span class="toc-num">4.</span><span class="toc-title">📈 2nd Runner Ups - Wonga Wits Quiz Season 2 <span class="toc-date">(November 2025)</span></span></a></li>
+      <li data-tags="quiz finance yes securities wonga wits financial literacy stock market raipur"><a href="#ach-4"><span class="toc-num">4.</span><span class="toc-title">📈 2nd Runner-Up – Wonga Wits Quiz Season 2 <span class="toc-date">(November 2025)</span></span></a></li>
       <li data-tags="quiz tech tcs tata it wiz technology nagpur maharashtra pickbrain rashmi furtado"><a href="#ach-5"><span class="toc-num">5.</span><span class="toc-title">📱 1st Runner-Up Nagpur – TCS InQuizitive 2025 <span class="toc-date">(August 2025)</span></span></a></li>
       <li data-tags="quiz science iim bhilai materials metallurgy brahmaprakash kalpakkam chhattisgarh nuclear"><a href="#ach-6"><span class="toc-num">6.</span><span class="toc-title">🪨 Winner IIM Bhilai – BPMMQ 2025 <span class="toc-date">(August 2025)</span></span></a></li>
       <li data-tags="quiz finance sbi state bank bhopal scholarship financial literacy times of india"><a href="#ach-7"><span class="toc-num">7.</span><span class="toc-title">🪙 Winner Bhopal – SBI Scholar Quiz 2025 <span class="toc-date">(June 2025)</span></span></a></li>
       <li data-tags="coding code tech sql dsa database itm raipur innovritti winner school"><a href="#ach-8"><span class="toc-num">8.</span><span class="toc-title">👨‍💻 Winner – Code 2 Champions <span class="toc-date">(April 2025)</span></span></a></li>
       <li data-tags="quiz science environment earth day nehu shillong north eastern hill university geology green hydrogen"><a href="#ach-9"><span class="toc-num">9.</span><span class="toc-title">🌏 Winner – Earth Day Quiz NEHU <span class="toc-date">(April 2025)</span></span></a></li>
-      <li data-tags="coding code tech hpe hewlett packard codewars algorithm python competitive programming airrank10"><a href="#ach-10"><span class="toc-num">10.</span><span class="toc-title">👨‍💻 AIR 10 – HPE Codewars 2025 <span class="toc-date">(April 2025)</span></span></a></li>
+      <li data-tags="coding code tech hpe hewlett packard codewars algorithm python competitive programming airrank10"><a href="#ach-10"><span class="toc-num">10.</span><span class="toc-title">👨‍💻 AIR 10 – HPE CodeWars 2025 <span class="toc-date">(April 2025)</span></span></a></li>
       <li data-tags="olympiad science earth geology ineso ieso international national camp geological society india"><a href="#ach-11"><span class="toc-num">11.</span><span class="toc-title">🇮🇳 Qualified National Camp – INESO 2025 <span class="toc-date">(March 2025)</span></span></a></li>
       <li data-tags="science quantum research beyondquantum thinkingbeyond physics linear algebra international programme"><a href="#ach-12"><span class="toc-num">12.</span><span class="toc-title">🦋 BeyondQuantum 2025 <span class="toc-date">(March 2025)</span></span></a></li>
       <li data-tags="tech coding ai olympiad machine learning acm india artificial intelligence ioai inaio stage2"><a href="#ach-13"><span class="toc-num">13.</span><span class="toc-title">🤖 Qualified Stage 2 – India AI Olympiad 2025 <span class="toc-date">(January 2025)</span></span></a></li>
@@ -664,10 +695,10 @@ author_profile: true
       <li data-tags="quiz heritage cbse heritage india bhubaneswar 2023 runner up regional history culture"><a href="#ach-25"><span class="toc-num">25.</span><span class="toc-title">🛕 Runner-Up Bhubaneswar – CBSE HIQ 2023 <span class="toc-date">(December 2023)</span></span></a></li>
       <li data-tags="quiz tech coding nexus ssipmt 2023 technical raipur winner shankaracharya 2k23"><a href="#ach-26"><span class="toc-num">26.</span><span class="toc-title">👨‍💻 Winner Tech Quiz – Nexus 2K23 <span class="toc-date">(November 2023)</span></span></a></li>
       <li data-tags="tech innovation youth ideathon mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project top 1000 cbse thinkstartup coding code"><a href="#ach-27"><span class="toc-num">27.</span><span class="toc-title">💡 Top 1,000 – Youth Ideathon 2023 <span class="toc-date">(October 2023)</span></span></a></li>
-      <li data-tags="quiz sports ultimate sports quiz usq national runners up macbook kps viacom jiohotstar tv 2023"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
-      <li data-tags="tech ai coding data ai talks igebra mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project winner ipad champion group c senior 2023"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
+      <li data-tags="quiz sports ultimate sports quiz usq national runner up kps viacom jiohotstar tv 2023"><a href="#ach-28"><span class="toc-num">28.</span><span class="toc-title">🥎 Ultimate Sports Quiz 2023: Season 2 <span class="toc-date">(September 2023)</span></span></a></li>
+      <li data-tags="tech ai coding data ai talks igebra mrida multipurpose real-time integrated digital analyzer soil agritech iot raspberry pi project winner champion group c senior 2023"><a href="#ach-29"><span class="toc-num">29.</span><span class="toc-title">🤖 Winner – Data and AI Talks 2023 <span class="toc-date">(August 2023)</span></span></a></li>
       <li data-tags="quiz general knowledge mind wars zee5 top5 national 2023 academic championship"><a href="#ach-30"><span class="toc-num">30.</span><span class="toc-title">🧠 All India Top 5 – Mind Wars 2023 <span class="toc-date">(May 2023)</span></span></a></li>
-      <li data-tags="quiz heritage cbse hiq 2022 national runners up new delhi history18 history tv18 network18 culture india freedom movement"><a href="#ach-31"><span class="toc-num">31.</span><span class="toc-title">🛕 National 1st Runner-Ups – CBSE HIQ 2022 <span class="toc-date">(January 2023)</span></span></a></li>
+      <li data-tags="quiz heritage cbse hiq 2022 national runner up new delhi history18 history tv18 network18 culture india freedom movement"><a href="#ach-31"><span class="toc-num">31.</span><span class="toc-title">🛕 National 1st Runner-Up – CBSE HIQ 2022 <span class="toc-date">(January 2023)</span></span></a></li>
       <li data-tags="quiz environment paryavaran eco ecology nature winner 2022 paheli"><a href="#ach-32"><span class="toc-num">32.</span><span class="toc-title">🏆 Winner – Paryavaran Paheli ECO Quiz <span class="toc-date">(November 2022)</span></span></a></li>
       <li data-tags="quiz heritage intach india heritage city champions raipur 2022 culture history"><a href="#ach-33"><span class="toc-num">33.</span><span class="toc-title">🛕 City Champions – INTACH Heritage Quiz <span class="toc-date">(October 2022)</span></span></a></li>
       <li data-tags="quiz general knowledge winner shine cosmo 2022 raipur"><a href="#ach-34"><span class="toc-num">34.</span><span class="toc-title">🏆 Winner – Shine COSMO 2022 <span class="toc-date">(September 2022)</span></span></a></li>
@@ -735,20 +766,20 @@ author_profile: true
     display: block;
     /* Safari renders sub-pixel `filter: blur(0.3px)` as visible blur (other
        browsers round to 0). Use saturate-only for cross-browser parity. */
-    filter: saturate(1.05);
-    opacity: 0.88;
+    filter: saturate(1.4) contrast(1.06) brightness(0.98);
+    opacity: 0.82;
     border-radius: 0;
     transition: none !important;
     transform: none !important;
     box-shadow: none !important;
   }
   .dark-mode .ach-summary-collage img {
-    opacity: 0.65;
-    filter: saturate(0.85) brightness(0.9);
+    opacity: 0.76;
+    filter: saturate(1.05) contrast(1.05) brightness(0.92);
   }
   .royal-mode .ach-summary-collage img {
-    opacity: 0.85;
-    filter: saturate(1.0) brightness(1.1);
+    opacity: 0.93;
+    filter: saturate(1.15) contrast(1.07) brightness(1.02);
   }
 
   .ach-summary-overlay {
@@ -756,19 +787,13 @@ author_profile: true
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background:
-      radial-gradient(ellipse at 70% 10%, rgba(255, 235, 160, 0.42) 0%, transparent 55%),
-      linear-gradient(160deg, rgba(255, 250, 232, 0.68) 0%, rgba(255, 238, 195, 0.65) 100%);
+    background: linear-gradient(160deg, rgba(255, 250, 232, 0.52) 0%, rgba(255, 238, 195, 0.48) 100%);
   }
   .dark-mode .ach-summary-overlay {
-    background:
-      radial-gradient(ellipse at 70% 10%, rgba(90, 50, 5, 0.45) 0%, transparent 55%),
-      linear-gradient(160deg, rgba(15, 9, 2, 0.52) 0%, rgba(8, 4, 0, 0.58) 100%);
+    background: linear-gradient(160deg, rgba(15, 9, 2, 0.52) 0%, rgba(8, 4, 0, 0.58) 100%);
   }
   .royal-mode .ach-summary-overlay {
-    background:
-      radial-gradient(ellipse at 70% 10%, rgba(50, 48, 45, 0.45) 0%, transparent 55%),
-      linear-gradient(160deg, rgba(39, 39, 38, 0.8), rgba(53, 50, 46, 0.9) 100%);
+    background: linear-gradient(160deg, rgba(39, 39, 38, 0.62), rgba(53, 50, 46, 0.72) 100%);
   }
 
   .ach-summary-content {
@@ -831,36 +856,36 @@ author_profile: true
 
 <div class="ach-summary">
   <div class="ach-summary-collage">
-    <img src="/images/ieso.avif" alt="" fetchpriority="high">
-    <img src="/images/iesob1.avif" alt="" fetchpriority="high">
-    <img src="/images/iesob2.avif" alt="" fetchpriority="high">
-    <img src="/images/iesob3.avif" alt="" fetchpriority="high">
-    <img src="/images/iesog1.avif" alt="" fetchpriority="high">
-    <img src="/images/iesog2.avif" alt="" fetchpriority="high">
-    <img src="/images/iesog4.avif" alt="">
-    <img src="/images/iesotc1.avif" alt="">
-    <img src="/images/iesotc2.avif" alt="">
-    <img src="/images/iesotc3.avif" alt="">
-    <img src="/images/iesotc4.avif" alt="">
-    <img src="/images/fel.avif" alt="">
-    <img src="/images/fel1.avif" alt="">
-    <img src="/images/mmq2.avif" alt="">
-    <img src="/images/sbi01.avif" alt="">
-    <img src="/images/tcs251.avif" alt="">
-    <img src="/images/tcs253.avif" alt="">
-    <img src="/images/tcs242.avif" alt="">
-    <img src="/images/usqq.avif" alt="">
-    <img src="/images/yesww1.avif" alt="">
-    <img src="/images/sc.avif" alt="">
-    <img src="/images/shinecosmoo.avif" alt="">
-    <img src="/images/mun1.avif" alt="">
-    <img src="/images/mindsparkquiz.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/ieso.avif" alt="" fetchpriority="high">
+    <img loading="lazy" decoding="async" src="/images/iesob1.avif" alt="" fetchpriority="high">
+    <img loading="lazy" decoding="async" src="/images/iesob2.avif" alt="" fetchpriority="high">
+    <img loading="lazy" decoding="async" src="/images/iesob3.avif" alt="" fetchpriority="high">
+    <img loading="lazy" decoding="async" src="/images/iesog1.avif" alt="" fetchpriority="high">
+    <img loading="lazy" decoding="async" src="/images/iesog2.avif" alt="" fetchpriority="high">
+    <img loading="lazy" decoding="async" src="/images/iesog4.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/iesotc1.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/iesotc2.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/iesotc3.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/iesotc4.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/fel.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/fel1.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/mmq2.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/sbi01.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/tcs251.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/tcs253.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/tcs242.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/usqq.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/yesww1.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/sc.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/shinecosmoo.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/mun1.avif" alt="">
+    <img loading="lazy" decoding="async" src="/images/mindsparkquiz.avif" alt="">
   </div>
   <div class="ach-summary-overlay"></div>
   <div class="ach-summary-content">
     <div class="ach-summary-title">At a glance</div>
     <div class="ach-summary-lead">
-      <strong>Representing India at the International Earth Science Olympiad 2024 is something I still find hard to fully process. Beyond that, I have been Zonal Topper at the Zonal Computing Olympiad, ranked AIR 10 at HPE Codewars among 6,100+ students, and walked into rooms full of college teams as the only school student and walked out having won.</strong>
+      <strong>Representing India at the International Earth Science Olympiad 2024 is something I still find hard to fully process. Beyond that, I have been Zonal Topper at the Zonal Computing Olympiad, ranked AIR 10 at HPE CodeWars, and won competitions whose fields included college teams while I was still at school.</strong>
       <br><br>
       <strong>Honestly, none of this was planned. I just love showing up to things that interest me. The curiosity comes first, the results follow. That is the only explanation I have for why this page looks the way it does.</strong>
     </div>
@@ -871,17 +896,18 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-1">
-  <h2>⚔️ Winner - Clash of Campus Quiz 2026</h2>
+  <h2>⚔️ Winner – Clash of Campus Quiz 2026</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by IIIT Naya Raipur</em><br>
     🗓️ <em>March 2026</em><br>
     📍 <em>Naya Raipur, Chhattisgarh</em>
   </div>
 
-  <p>Technovate is the annual technical fest of IIIT Naya Raipur. Clash of Campus was its flagship quiz, a fast-paced multi-round general knowledge and aptitude event open to college teams of two.</p>
-  <p>I was the only school student there, and I went in solo. Every other team was a college duo. I won, taking home a ₹6000 cash prize.</p>
+  <p>Technovate is the annual technical fest of IIIT Naya Raipur. Clash of Campus was a fast-paced, multi-round general knowledge and aptitude quiz open to college teams of two.</p>
+  <p>I was the only school student there, and I entered solo while every other team was a college duo. I won the event.</p>
 
   <div class="achievement-images">
+    <img loading="lazy" decoding="async" src="/images/cociiitnr.avif" alt="Clash of Campus Quiz 2026 at IIIT Naya Raipur">
   </div>
 
 </div>
@@ -900,10 +926,10 @@ author_profile: true
   </div>
 
   <p>The Future Tech Olympiad is a national-level competition organized by 1M1B in collaboration with IBM SkillsBuild, aimed at promoting technological literacy, innovation, and problem-solving skills among students.</p>
-  <p>It was a national level competition and I was the only student from my school to be awarded a medal.</p>
+  <p>I received a silver medal in the 2026 edition.</p>
 
   <div class="achievement-images">
-    <img src="/images/fto.avif" alt="Future Tech Olympiad '26">
+    <img loading="lazy" decoding="async" src="/images/fto.avif" alt="Future Tech Olympiad '26">
   </div>
 
 </div>
@@ -919,36 +945,36 @@ author_profile: true
     🏢 <em>Organized by the Indian Institute of Technology, Madras</em><br>
   </div>
 
-  <p>Shaastra is the annual technical festival of the Indian Institute of Technology Madras and is widely recognized as one of Asia’s largest student-run technical festivals.</p>
+  <p>Shaastra is the annual technical festival of the Indian Institute of Technology Madras.</p>
   <p>Since its inception in 2000, Shaastra has served as a national platform for engineering, programming, and innovation-driven competitions, attracting participation from students across India and abroad.</p>
   <p>The 2026 edition of Shaastra continued this legacy through a series of large-scale technical contests conducted both online and on campus, with several events hosted in collaboration with established competitive programming and academic platforms.</p>
 
   <div class="dashed-line"></div>
 
-  <h3>👨‍💻 All India Rank 17 in First level and Qualified for the National Shaastra Programming Contest 2026</h3>
+  <h3>👨‍💻 All India Rank 17 in the first level and qualified for the National Shaastra Programming Contest 2026</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Institute of Technology, Madras</em><br>
     🗓️ <em>December 2025</em><br>
-    📍 <em>CodeChef - Online</em>
+    📍 <em>CodeChef – Online</em>
   </div>
 
-  <p>The Shaastra Programming Contest is a national-level competitive programming event conducted as part of Shaastra, IIT Madras. Hosted on CodeChef, as one of it's signature START contest.</p> 
+  <p>The Shaastra Programming Contest is a national-level competitive programming event conducted as part of Shaastra, IIT Madras, and hosted on CodeChef as one of its signature START contests.</p>
   <p>The contest focuses on algorithmic problem-solving, logical reasoning, and efficient implementation under strict time constraints.</p>
   <p>I secured an All India Rank of 17, qualifying for the National Shaastra Programming Contest 2026.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/spc26.avif" alt="SPC '26">
+    <img loading="lazy" decoding="async" src="/images/spc26.avif" alt="SPC '26">
   </div>
 
   <div class="dashed-line"></div>
 
-  <h3>🍯 Selected for the National Finals - Competitive Programming Potpourri 2026</h3>
+  <h3>🍯 Selected for the National Finals – Competitive Programming Potpourri 2026</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Institute of Technology, Madras</em><br>
     🗓️ <em>December 2025</em><br>
-    📍 <em>CodeChef - Online</em>
+    📍 <em>CodeChef – Online</em>
   </div>
 
   <p>Competitive Programming Potpourri is a multi-round programming challenge organized under the Shaastra framework by IIT Madras. The event is designed to test adaptability across diverse problem types, including algorithms, data structures, and logical reasoning.</p>
@@ -956,7 +982,7 @@ author_profile: true
   <p>I was selected for the National Finals of Competitive Programming Potpourri 2026 based on my performance in the qualifying rounds.</p>
 
   <div class="achievement-images">
-    <img src="/images/cppot.avif" alt="SCPP '26">
+    <img loading="lazy" decoding="async" src="/images/cppot.avif" alt="SCPP '26">
   </div>
 
 </div>
@@ -966,7 +992,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-4">
-  <h2>📈 2nd Runner Ups - Wonga Wits Quiz Season 2</h2>
+  <h2>📈 2nd Runner-Up – Wonga Wits Quiz Season 2</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Yes Securities</em><br>
     🗓️ <em>November 2025</em><br>
@@ -974,14 +1000,14 @@ author_profile: true
   </div>
 
   <p>Wonga Wits Quiz is a national-level quiz competition organized by Yes Securities, aimed at promoting financial literacy, market awareness, and analytical thinking among students.</p>
-  <p>Since it was a inter-college national quiz, I was the only school student who cleared the prelims and qualified for the stage round in Raipur. The quiz was organized by quizmaster Mr. Ajay Poonia.</p>
-  <p>With my junior Shantanu Shukla, we finished as the 2nd Runner-Ups. </p>
+  <p>Since it was an inter-college national quiz, I was the only school student who cleared the prelims and qualified for the stage round in Raipur. The quiz was conducted by quizmaster Mr. Ajay Poonia.</p>
+  <p>With my junior Shantanu Shukla, we finished as the 2nd runner-up.</p>
 
   <div class="achievement-images">
-    <img src="/images/yesww1.avif" alt="WongaWits '25">
-    <img src="/images/yesww2.avif" alt="WongaWits '25">
-    <img src="/images/yesww3.avif" alt="WongaWits '25">
-    <img src="/images/yesww4.avif" alt="WongaWits '25">
+    <img loading="lazy" decoding="async" src="/images/yesww1.avif" alt="WongaWits '25">
+    <img loading="lazy" decoding="async" src="/images/yesww2.avif" alt="WongaWits '25">
+    <img loading="lazy" decoding="async" src="/images/yesww3.avif" alt="WongaWits '25">
+    <img loading="lazy" decoding="async" src="/images/yesww4.avif" alt="WongaWits '25">
   </div>
 
 </div>
@@ -991,31 +1017,31 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-5">
-  <h2>📱 1st Runner-Up of Nagpur region - TCS InQuizitive 2025</h2>
+  <h2>📱 1st Runner-Up of Nagpur Region – TCS InQuizitive 2025</h2>
   <div class="achievement-meta">
-    🏢 <em>Issued by Issued by Tata Consultancy Services</em><br>
+    🏢 <em>Issued by Tata Consultancy Services</em><br>
     🗓️ <em>August 2025</em><br>
     📍 <em>Nagpur, Maharashtra</em>
   </div>
 
-  <p>TCS InQuizitive is a premier national-level inter-school quiz organized by Tata Consultancy Services (TCS) for students in Grades 8 to 12.</p>
+  <p>TCS InQuizitive is a national-level inter-school quiz organized by Tata Consultancy Services (TCS) for students in Grades 8 to 12.</p>
   <p>Reimagined from the long-standing TCS IT Wiz, the competition focuses on the latest global trends in technology, science, sports, engineering, and the arts. This edition also brought back participation in teams of two.</p>
   <p>The Nagpur regional round of the 2025 edition featured quizmaster Ms. Rashmi Furtado, and almost every other team was from Maharashtra except us.</p>
-  <p>With my junior Om Nirmalkar, we emerged as the Nagpur region's 1st Runner-Up.</p>
+  <p>With my junior Om Nirmalkar, we emerged as the Nagpur region's 1st runner-up.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="YUFKJevNpG8">
-        <img src="https://i.ytimg.com/vi/YUFKJevNpG8/hqdefault.jpg" alt="TCS InQuizitive 2025" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/YUFKJevNpG8/hqdefault.jpg" alt="TCS InQuizitive 2025" width="335" height="188">
       </div>
       <span>TCS InQuizitive 2025<br>Nagpur Regional Round</span>
     </div>
   </div>
 
   <div class="achievement-images">
-    <img src="/images/tcs252.avif" alt="TCS '25">
-    <img src="/images/tcs253.avif" alt="TCS '25">
-    <img src="/images/tcs254.avif" alt="TCS '25">
+    <img loading="lazy" decoding="async" src="/images/tcs252.avif" alt="TCS '25">
+    <img loading="lazy" decoding="async" src="/images/tcs253.avif" alt="TCS '25">
+    <img loading="lazy" decoding="async" src="/images/tcs254.avif" alt="TCS '25">
   </div>
 </div>
 </section>
@@ -1024,22 +1050,22 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-6">
-  <h2>🪨 Winner of IIM Bhilai Chapter - Brahmaprakash Memorial Materials Quiz 2025</h2>
+  <h2>🪨 Winner of IIM Bhilai Chapter – Brahmaprakash Memorial Materials Quiz 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Institute of Metals, Bhilai</em><br>
     🗓️ <em>August 2025</em><br>
     📍 <em>Bhilai, Chhattisgarh</em>
   </div>
-  <p>The Brahmaprakash Memorial Materials Quiz (BPMMQ) is a prestigious national-level competition organized annually by the Indian Institute of Metals (IIM) to promote interest in metallurgy and materials science among students in Classes 11 and 12.</p>
+  <p>The Brahmaprakash Memorial Materials Quiz (BPMMQ) is a national-level competition organized annually by the Indian Institute of Metals (IIM) to promote interest in metallurgy and materials science among students in Classes 11 and 12.</p>
   <p>The 33rd edition of the national grand finale was held on September 12–13, 2025, at the Indira Gandhi Centre for Atomic Research (IGCAR) in Kalpakkam, Tamil Nadu.</p> 
   <p>The IIM Bhilai Chapter, which operates in close coordination with the academic and research environment of the region, serves as the local hub for selecting teams to represent Chhattisgarh at the national level.</p>
   <p>Schools from across Chhattisgarh participated in this quiz. I partnered with my junior, Shantanu Shukla, and we emerged victorious, defeating five other teams on stage.</p> 
-  <p>Our performance qualified us for the National Finale and the Metal Camp held at Kalpakkam, Tamil Nadu, home to a major nuclear power facility. We were also awarded printers as part of the recognition.</p>
+  <p>Our performance qualified us for the National Finale and the Metal Camp held at Kalpakkam, Tamil Nadu, home to a major nuclear power facility.</p>
 
   <div class="achievement-images">
-    <img src="/images/mmq2.avif" alt="BPMMQ '25">
-    <img src="/images/mmq4.avif" alt="BPMMQ '25">
-    <img src="/images/mmq3.avif" alt="BPMMQ '25">
+    <img loading="lazy" decoding="async" src="/images/mmq2.avif" alt="BPMMQ '25">
+    <img loading="lazy" decoding="async" src="/images/mmq4.avif" alt="BPMMQ '25">
+    <img loading="lazy" decoding="async" src="/images/mmq3.avif" alt="BPMMQ '25">
   </div>
 </div>
 </section>
@@ -1048,7 +1074,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-7">
-  <h2>🪙 Winner of Bhopal Region - SBI Scholar Quiz 2025</h2>
+  <h2>🪙 Winner of Bhopal Region – SBI Scholar Quiz 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by State Bank of India</em><br>
     🗓️ <em>June 2025</em><br>
@@ -1057,12 +1083,11 @@ author_profile: true
   <p>The SBI Scholar Quiz is a national-level competition organized by the State Bank of India (SBI) in association with The Times of India, aimed at students in Grades 9 to 12 to promote financial literacy.</p> 
   <p>The quiz commemorated SBI's 70 years of service and featured regional rounds in 16 cities across India.</p>
   <p>Along with my younger sister, Hiranya Sethia, I participated in the Bhopal Regional Round and secured the Winner title.</p>
-  <p>Each of us was awarded a ₹50,000 scholarship, our accompanying parent received ₹25,000, and our school was awarded ₹50,000.</p>
 
    <div class="achievement-images">
-    <img src="/images/sbi001.avif" alt="SBI '25">
-    <img src="/images/sbi01.avif" alt="SBI '25">
-    <img src="/images/sbi.avif" alt="SBI '25">
+    <img loading="lazy" decoding="async" src="/images/sbi001.avif" alt="SBI '25">
+    <img loading="lazy" decoding="async" src="/images/sbi01.avif" alt="SBI '25">
+    <img loading="lazy" decoding="async" src="/images/sbi.avif" alt="SBI '25">
   </div>
 </div>
 </section>
@@ -1071,7 +1096,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-8">
-  <h2>👨‍💻 Winner of Code 2 Champions - Innovritti 1.0</h2>
+  <h2>👨‍💻 Winner of Code 2 Champions – Innovritti 1.0</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Institute of Technology and Management, Raipur</em><br>
     🗓️ <em>April 2025</em><br>
@@ -1080,10 +1105,10 @@ author_profile: true
   <p>Innovritti 1.0 was the inaugural edition of the National Level Innovation Fest hosted by ITM University, Raipur. Organized by the university's Club Technica.</p>
   <p>A handful of school students also participated in the contests (I was one of them).</p>
   <p>I took part in the "Code 2 Champions" coding competition, which consisted of three rounds covering SQL mind maps, queries, and databases, with the final round including DSA integration. Over 20 individuals and teams participated, almost all of them college students.</p>
-  <p>I was the only school student in the competition and emerged as the champion, winning a prize of ₹3000.</p>
+  <p>I emerged as the champion.</p>
 
   <div class="achievement-images">
-    <img src="/images/itm.avif" alt="ITM '25">
+    <img loading="lazy" decoding="async" src="/images/itm.avif" alt="ITM '25">
   </div>
 </div>
 </section>
@@ -1092,7 +1117,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-9">
-  <h2>🌏 Winner of Earth Day Quiz 2025 - NEHU Shillong</h2>
+  <h2>🌏 Winner of Earth Day Quiz 2025 – NEHU Shillong</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by North Eastern Hill University Shillong</em><br>
     🗓️ <em>April 2025</em><br>
@@ -1102,8 +1127,8 @@ author_profile: true
   <p>The quiz saw around 200 participants from across India. The program also featured two insightful lectures by members of the Geological Society of India on Geothermal Energy and Green Hydrogen.</p>
 
   <div class="achievement-images">
-    <img src="/images/nehueday.avif" alt="NEHU '25">
-    <img src="/images/nehuearth.avif" alt="NEHU '25">
+    <img loading="lazy" decoding="async" src="/images/nehueday.avif" alt="NEHU '25">
+    <img loading="lazy" decoding="async" src="/images/nehuearth.avif" alt="NEHU '25">
   </div>
 </div>
 </section>
@@ -1112,18 +1137,18 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-10">
-  <h2>👨‍💻 All India Rank 10 - HPE Codewars 2025 India Edition</h2>
+  <h2>👨‍💻 All India Rank 10 – HPE CodeWars 2025 India Edition</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Hewlett Packard Enterprise and Codingal</em><br>
     🗓️ <em>April 2025</em><br>
     📍 <em>Online</em>
   </div>
-  <p>HPE CodeWars is one of the world's most renowned high school computer science competitions, hosted annually by Hewlett Packard Enterprise (HPE) with Codingal in India.</p> 
+  <p>HPE CodeWars is a high-school computer science competition hosted by Hewlett Packard Enterprise (HPE) with Codingal in India.</p>
   <p>The event challenges students in Grades 9–12 to solve a series of complex algorithmic problems within a three-hour window using languages like Python, C++, or Java.</p>
-  <p>6131 students participated, and I secured the 10th position, earning a keyboard and mouse set with a ₹1000 Amazon voucher as a prize.</p>
+  <p>I secured All India Rank 10.</p>
 
   <div class="achievement-images">
-    <img src="/images/hpe.avif" alt="HPE '25">
+    <img loading="lazy" decoding="async" src="/images/hpe.avif" alt="HPE '25">
   </div>
 </div>
 </section>
@@ -1132,7 +1157,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-11">
-  <h2>🇮🇳 Qualified for National Camp - Indian National Earth Science Olympiad 2025</h2>
+  <h2>🇮🇳 Qualified for National Camp – Indian National Earth Science Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Geological Society of India</em><br>
     🗓️ <em>March 2025</em><br>
@@ -1144,7 +1169,7 @@ author_profile: true
   <p>Since I had already represented India in IESO 2024, I was not eligible to be selected again for the international team.</p>
 
   <div class="achievement-images">
-    <img src="/images/ineso.avif" alt="INESO '25">
+    <img loading="lazy" decoding="async" src="/images/ineso.avif" alt="INESO '25">
   </div>
 </div>
 </section>
@@ -1153,7 +1178,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-12">
-  <h2>🦋 Selected for International Quantum Research - BeyondQuantum 2025</h2>
+  <h2>🦋 Selected for International Quantum Research – BeyondQuantum 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by ThinkingBeyond</em><br>
     🗓️ <em>March 2025</em><br>
@@ -1164,9 +1189,9 @@ author_profile: true
   <p>The programme culminates in the BeyondQuantum Research Fair, a one-day online conference where participants showcase their findings to a public audience and leading quantum experts.</p>
   <p>I was selected for the program after a lengthy application process.</p>
   <div class="achievement-images">
-    <img src="/images/bequ1.avif" alt="BEQU '25">
-    <img src="/images/bequ2.avif" alt="BEQU '25">
-    <img src="/images/bequ3.avif" alt="BEQU '25">
+    <img loading="lazy" decoding="async" src="/images/bequ1.avif" alt="BEQU '25">
+    <img loading="lazy" decoding="async" src="/images/bequ2.avif" alt="BEQU '25">
+    <img loading="lazy" decoding="async" src="/images/bequ3.avif" alt="BEQU '25">
   </div>
 </div>
 </section>
@@ -1175,7 +1200,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-13">
-  <h2>🤖 Qualified for Stage 2 - The India Artificial Intelligence Olympiad 2025</h2>
+  <h2>🤖 Qualified for Stage 2 – The India Artificial Intelligence Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Association for Computing Machinery, Pune, India</em><br>
     🗓️ <em>January 2025</em><br>
@@ -1186,7 +1211,7 @@ author_profile: true
   <p>I qualified for Stage 2 of the India Artificial Intelligence Olympiad.</p>
 
   <div class="achievement-images">
-    <img src="/images/ioai.avif" alt="INAIO '25">
+    <img loading="lazy" decoding="async" src="/images/ioai.avif" alt="INAIO '25">
   </div>
 </div>
 </section>
@@ -1195,7 +1220,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-14">
-  <h2>🎖️ Felicitated as One of India's Esteemed International Olympiad Medalists of 2024</h2>
+  <h2>🎖️ Felicitated as an International Olympiad Medalist of 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Homi Bhabha Centre for Science Education and Tata Institute of Fundamental Research.</em><br>
     🗓️ <em>December 2024</em><br>
@@ -1203,12 +1228,12 @@ author_profile: true
   </div>
   <p>The Homi Bhabha Centre for Science Education (HBCSE), a national centre of the Tata Institute of Fundamental Research (TIFR), serves as the nodal agency for felicitating Indian students who win medals at International Olympiads.</p>
   <p>A comprehensive Felicitation of International Olympiad Medallists is held annually in December.</p>
-  <p>I was felicitated for my achievement at International Earth Science Olympiad (IESO) 2024 and was awarded with a scholarship of ₹15000.</p>
+  <p>I was felicitated for my medal at the International Earth Science Olympiad (IESO) 2024.</p>
 
   <div class="achievement-images">
-    <img src="/images/fel.avif" alt="Felicitation '24">
-    <img src="/images/fel1.avif" alt="Felicitation '24">
-    <img src="/images/fel2.avif" alt="Felicitation '24">
+    <img loading="lazy" decoding="async" src="/images/fel.avif" alt="Felicitation '24">
+    <img loading="lazy" decoding="async" src="/images/fel1.avif" alt="Felicitation '24">
+    <img loading="lazy" decoding="async" src="/images/fel2.avif" alt="Felicitation '24">
   </div>
 </div>
 </section>
@@ -1217,7 +1242,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-15">
-  <h2>👨‍💻 Zonal Topper - Zonal Computing Olympiad 2025</h2>
+  <h2>👨‍💻 Zonal Topper – Zonal Computing Olympiad 2025</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian Association for Research in Computing Science</em><br>
     🗓️ <em>December 2024</em><br>
@@ -1229,7 +1254,7 @@ author_profile: true
   <p>I qualified for Indian National Olympiad in Informatics, which is the second level and was also the Zonal Topper.</p>
 
   <div class="achievement-images">
-    <img src="/images/zco.avif" alt="ZCO '25">
+    <img loading="lazy" decoding="async" src="/images/zco.avif" alt="ZCO '25">
   </div>
 </div>
 </section>
@@ -1238,31 +1263,31 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-16">
-  <h2>📱 1st Runner-Up of Nagpur region - TCS InQuizitive 2024</h2>
+  <h2>📱 1st Runner-Up of Nagpur Region – TCS InQuizitive 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Tata Consultancy Services</em><br>
     🗓️ <em>November 2024</em><br>
     📍 <em>Nagpur, Maharashtra</em>
   </div>
 
-  <p>TCS InQuizitive is a premier national-level inter-school quiz organized by Tata Consultancy Services (TCS) for students in Grades 8 to 12.</p>
+  <p>TCS InQuizitive is a national-level inter-school quiz organized by Tata Consultancy Services (TCS) for students in Grades 8 to 12.</p>
   <p>Reimagined from the long-standing TCS IT Wiz, the competition focuses on the latest global trends in technology, science, sports, engineering, and the arts.</p>
   <p>The Nagpur regional round of the 2024 edition featured quizmaster Mr. Giri "Pickbrain" Balasubramaniam, and almost every other participant was from Nagpur or Maharashtra except me.</p>
-  <p>I emerged as the Nagpur region's 1st Runner-Up.</p>
+  <p>I emerged as the Nagpur region's 1st runner-up.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="GGaPWeNIODI">
-        <img src="https://i.ytimg.com/vi/GGaPWeNIODI/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/GGaPWeNIODI/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>TCS InQuizitive 2024<br>Nagpur Regional Round</span>
     </div>
   </div>
 
   <div class="achievement-images">
-    <img src="/images/tcs242.avif" alt="TCS '24">
-    <img src="/images/tcs24cer.avif" alt="TCS '24">
-    <img src="/images/tcs24semcer.avif" alt="TCS '24">
+    <img loading="lazy" decoding="async" src="/images/tcs242.avif" alt="TCS '24">
+    <img loading="lazy" decoding="async" src="/images/tcs24cer.avif" alt="TCS '24">
+    <img loading="lazy" decoding="async" src="/images/tcs24semcer.avif" alt="TCS '24">
   </div>
 </div>
 </section>
@@ -1282,7 +1307,7 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>👨‍💻 Winner of Coding Competition - Nexus 2K24</h3>
+  <h3>👨‍💻 Winner of Coding Competition – Nexus 2K24</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by SSIPMT Raipur</em><br>
@@ -1290,15 +1315,15 @@ author_profile: true
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
 
-  <p>The competition saw participation from over 40 students and was conducted across three progressively challenging rounds. In the final stage, participants were required to solve three intermediate-level programs; I completed all three in approximately four minutes, while most others took over fifteen minutes, and was awarded with a ₹5000 cheque.</p>
+  <p>The competition saw participation from over 40 students and was conducted across three progressively challenging rounds. In the final stage, participants had to solve three intermediate-level programs; I completed all three in approximately four minutes and won the competition.</p>
 
   <div class="achievement-images">
-    <img src="/images/nexcod.avif" alt="Nexus'24">
+    <img loading="lazy" decoding="async" src="/images/nexcod.avif" alt="Nexus'24">
   </div>
 
   <div class="dashed-line"></div>
 
-  <h3>👨‍💻 1st Runner-ups of Technical Quiz - Nexus 2K24</h3>
+  <h3>👨‍💻 1st Runner-Up in the Technical Quiz – Nexus 2K24</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by SSIPMT Raipur</em><br>
@@ -1306,10 +1331,10 @@ author_profile: true
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
 
-  <p>Over 70 students participated in the quiz, which included a written pen-and-paper round followed by five on-stage rounds. Partnering with my senior, Ayush Agarwal, we finished as 1st Runner-Up.</p>
+  <p>Over 70 students participated in the quiz, which included a written pen-and-paper round followed by five on-stage rounds. Partnering with my senior, Ayush Agarwal, we finished as the 1st runner-up.</p>
 
   <div class="achievement-images">
-    <img src="/images/nexquiz.avif" alt="Nexus'24">
+    <img loading="lazy" decoding="async" src="/images/nexquiz.avif" alt="Nexus'24">
   </div>
 
 </div>
@@ -1319,7 +1344,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-18">
-  <h2>🧠 Winner of General Knowledge Quiz - Mindspark 2024</h2>
+  <h2>🧠 Winner of General Knowledge Quiz – Mindspark 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Brighton International School</em><br>
     🗓️ <em>October 2024</em><br>
@@ -1327,12 +1352,12 @@ author_profile: true
   </div>
 
   <p>The Mindspark 2024 General Knowledge Quiz was a featured component of the annual inter-school fest organized by Brighton International School, Raipur.</p>
-  <p>The fest attracted approximately 700 participants from 14 prominent schools across the region.</p>
+  <p>The fest attracted approximately 700 participants from 14 schools across the region.</p>
   <p>I teamed up with my great friend Aditya Singh and we, together as "Team ThinkTank" emerged as the winner of the quiz.</p>
 
   <div class="achievement-images">
-    <img src="/images/mindsparkquiz.avif" alt="Minspark '24">
-    <img src="/images/quizbrighton.avif" alt="Minspark '24">
+    <img loading="lazy" decoding="async" src="/images/mindsparkquiz.avif" alt="Minspark '24">
+    <img loading="lazy" decoding="async" src="/images/quizbrighton.avif" alt="Minspark '24">
   </div>
 </div>
 </section>
@@ -1341,7 +1366,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-19">
-  <h2>🏅 Special Mention (United Nations General Assembly) - KPS Model United Nations 3.0</h2>
+  <h2>🏅 Special Mention (United Nations General Assembly) – KPS Model United Nations 3.0</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
     🗓️ <em>October 2024</em><br>
@@ -1352,9 +1377,9 @@ author_profile: true
   <p>I represented the Syrian Arab Republic in the United Nations General Assembly (UNGA), where the agenda focused on deliberations on de-escalation and demobilisation in the context of global peace. The role required navigating complex geopolitical narratives and defending positions under intense debate, allowing me to engage actively and articulate arguments from a challenging diplomatic standpoint. Consequently, I was given the Special Mention Award.</p>
 
   <div class="achievement-images">
-    <img src="/images/mun1.avif" alt="KPS MUN 3.0 '24">
-    <img src="/images/mun2.avif" alt="KPS MUN 3.0 '24">
-    <img src="/images/kpsmun.avif" alt="KPS MUN 3.0 '24">
+    <img loading="lazy" decoding="async" src="/images/mun1.avif" alt="KPS MUN 3.0 '24">
+    <img loading="lazy" decoding="async" src="/images/mun2.avif" alt="KPS MUN 3.0 '24">
+    <img loading="lazy" decoding="async" src="/images/kpsmun.avif" alt="KPS MUN 3.0 '24">
   </div>
 </div>
 </section>
@@ -1368,17 +1393,17 @@ author_profile: true
     🏢 <em>Organized by the International Geoscience Education Organisation (IGEO).</em><br>
   </div>
 
-  <p>The International Earth Science Olympiad (IESO) is a prestigious global competition organized by the International Geoscience Education Organisation (IGEO). It assesses excellence across multiple Earth Science domains, including geology, meteorology, and oceanography, while promoting international scientific collaboration.</p>
+  <p>The International Earth Science Olympiad (IESO) is organized by the International Geoscience Education Organisation (IGEO). It covers several Earth Science domains, including geology, meteorology, and oceanography, while promoting international scientific collaboration.</p>
   <p>The event features three core components: the interdisciplinary Earth System Project (ESP), the collaborative International Team Field Investigation (ITFI), and a rigorous Individual Test.</p>
   <p>In India, the multi-stage selection process is conducted by the Geological Society of India (GSI), culminating in intensive national training camps. Following this rigorous pathway, I was honored to be selected to represent India at the international finals in Beijing, China.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/ieso.avif" alt="International Earth Science Olympiad 2024">
+    <img loading="lazy" decoding="async" src="/images/ieso.avif" alt="International Earth Science Olympiad 2024">
   </div>
 
   <div class="dashed-line"></div>
 
-  <h3>🥇 Gold Award - Earth System Project</h3>
+  <h3>🥇 Gold Award – Earth System Project</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by International Geoscience Education Organisation (IGEO)</em><br>
@@ -1387,20 +1412,20 @@ author_profile: true
   </div>
 
   <p>The Earth System Project (ESP) is a collaborative effort conducted in mixed international teams. My team included students from India, Austria, South Korea, Germany, Belarus, and Macao. We worked on the theme of <strong>Atmosphere</strong>, focusing on its historical evolution, key transitions, and role in sustaining life.</p>
-  <p>I proudly led the research direction, synthesized our findings, and designed the final poster presentation. Our hard work paid off when our presentation was evaluated as the <strong>highest-rated Earth System Project</strong>, securing the <strong>Gold Award</strong>.</p>
+  <p>I led the research direction, synthesized our findings, and designed the final poster presentation. Our presentation was evaluated as the <strong>highest-rated Earth System Project</strong> and received the <strong>Gold Award</strong>.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesog1.avif" alt="IESO">
-    <img src="/images/iesog2.avif" alt="IESO">
-    <img src="/images/iesog3.avif" alt="IESO">
-    <img src="/images/iesog4.avif" alt="IESO">
-    <img src="/images/iesog5.avif" alt="IESO">
-    <img src="/images/iesog6.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesog1.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesog2.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesog3.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesog4.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesog5.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesog6.avif" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
 
-  <h3>🥉 Bronze Medal - Individual Test</h3>
+  <h3>🥉 Bronze Medal – Individual Test</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by International Geoscience Education Organisation (IGEO)</em><br>
@@ -1413,11 +1438,11 @@ author_profile: true
   <p>Based on my overall performance across these challenging assessments, I was awarded the <strong>Bronze Medal</strong>.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesob1.avif" alt="IESO">
-    <img src="/images/iesob2.avif" alt="IESO">
-    <img src="/images/iesob3.avif" alt="IESO">
-    <img src="/images/iesob4.avif" alt="IESO">
-    <img src="/images/iesob5.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesob1.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesob2.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesob3.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesob4.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesob5.avif" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
@@ -1426,7 +1451,7 @@ author_profile: true
 
   <div class="achievement-meta">
     🏢 <em>Conducted by Geological Society of India (GSI)</em><br>
-    🗓️ <em>July - August 2024</em><br>
+    🗓️ <em>July–August 2024</em><br>
     📍 <em>Chennai, Tamil Nadu</em>
   </div>
 
@@ -1435,11 +1460,11 @@ author_profile: true
   <p>We also traveled to <strong>Puducherry</strong> and <strong>Mahabalipuram</strong> to study diverse geological formations and ancient coastal temple architecture, analyzing rock structures like <em>Krishna’s Butter Ball</em> and the use of sandstone and sea shell paste as binding materials.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesopd1.avif" alt="IESO">
-    <img src="/images/iesopd2.avif" alt="IESO">
-    <img src="/images/iesopd3.avif" alt="IESO">
-    <img src="/images/iesopd4.avif" alt="IESO">
-    <img src="/images/iesopd5.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesopd1.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesopd2.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesopd3.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesopd4.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesopd5.avif" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
@@ -1448,7 +1473,7 @@ author_profile: true
 
   <div class="achievement-meta">
     🏢 <em>Conducted by Geological Society of India (GSI)</em><br>
-    🗓️ <em>May - June 2024</em><br>
+    🗓️ <em>May–June 2024</em><br>
     📍 <em>Shillong, Meghalaya</em>
   </div>
 
@@ -1457,14 +1482,14 @@ author_profile: true
   <p>Our academic training was paired with field excursions across geologically significant regions in Meghalaya, including karst landscapes, coal-bearing formations, and the Arwah–Lumshynna Cave. The camp culminated in rigorous theoretical and practical assessments, where I successfully delivered presentations on Microplastics and Human Migration.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesotc1.avif" alt="IESO">
-    <img src="/images/iesotc2.avif" alt="IESO">
-    <img src="/images/iesotc3.avif" alt="IESO">
-    <img src="/images/iesotc4.avif" alt="IESO">
-    <img src="/images/iesotc0.avif" alt="IESO">
-    <img src="/images/iesotc5.avif" alt="IESO">
-    <img src="/images/iesotc6.avif" alt="IESO">
-    <img src="/images/iesotc.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc1.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc2.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc3.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc4.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc0.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc5.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc6.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesotc.avif" alt="IESO">
   </div>
 
   <div class="dashed-line"></div>
@@ -1473,7 +1498,7 @@ author_profile: true
 
   <div class="achievement-meta">
     🏢 <em>Conducted by Geological Society of India (GSI)</em><br>
-    🗓️ <em>May - June 2024</em><br>
+    🗓️ <em>May–June 2024</em><br>
     📍 <em>Shillong, Meghalaya</em>
   </div>
 
@@ -1482,8 +1507,8 @@ author_profile: true
   <p>I was the <strong>only student selected from Chhattisgarh</strong>, one of only two students from Central India, and the <strong>third student from my school</strong> to achieve this qualification.</p>
 
   <div class="achievement-images">
-    <img src="/images/iesoqt1.avif" alt="IESO">
-    <img src="/images/iesoqt2.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesoqt1.avif" alt="IESO">
+    <img loading="lazy" decoding="async" src="/images/iesoqt2.avif" alt="IESO">
   </div>
 </div>
 </section>
@@ -1492,7 +1517,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-21">
-  <h2>💳 Ranked First in Central Zone - National Financial Literacy Quiz 2024</h2>
+  <h2>💳 Ranked First in Central Zone – National Financial Literacy Quiz 2024</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Securities and Exchange Board of India (SEBI)</em><br>
     🗓️ <em>May 2024</em><br>
@@ -1500,10 +1525,10 @@ author_profile: true
   </div>
   <p>The National Financial Literacy Quiz (NFLQ) 2024 was a major initiative organized by the Securities and Exchange Board of India (SEBI) and the National Institute of Securities Markets (NISM) to enhance financial awareness among Indian youth.</p>
   <p>Organized with the National Centre for Financial Education (NCFE) in coordination with regulators like RBI, SEBI, IRDAI, and PFRDA, the school edition of this quiz was part of Financial Literacy Week 2024 (February 26 – March 1, 2024).</p>
-  <p>I was ranked first in the central zone (intermediate category) and received a ₹5,000 Amazon Voucher.</p>
+  <p>I was ranked first in the central zone in the intermediate category.</p>
 
   <div class="achievement-images">
-    <img src="/images/nflq.avif" alt="NFLQ '24">
+    <img loading="lazy" decoding="async" src="/images/nflq.avif" alt="NFLQ '24">
   </div>
 </div>
 </section>
@@ -1512,19 +1537,19 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-22">
-  <h2>🧪 Certificate of High Distinction - International Chemistry Quiz 2023</h2>
+  <h2>🧪 Certificate of High Distinction – International Chemistry Quiz 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Royal Australian Chemical Institute</em><br>
     🗓️ <em>March 2024</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
-  <p>The International Chemistry Quiz (ICQ) 2023-24, organized by the Royal Australian Chemical Institute (RACI), continued its long-standing tradition of promoting chemical science as a vital and engaging subject for secondary students worldwide.</p>
+  <p>The International Chemistry Quiz (ICQ) 2023–24, organized by the Royal Australian Chemical Institute (RACI), continued its long-standing tradition of promoting chemical science as a vital and engaging subject for secondary students worldwide.</p>
   <p>Held between June and October 2023 depending on the region, the quiz attracted over 100,000 candidates from 21 countries, including Australia, India, China, and Germany.</p>
   <p>The competition focused on higher-order thinking and the application of fundamental chemistry principles to modern societal problems, intentionally moving away from rote memorization of any specific school syllabus.</p>
-  <p>I was awarded with the "Certificate of High Distinction", which is the highest level of recognition awarded in ICQ.</p>
+  <p>I received the "Certificate of High Distinction", the highest level of recognition in the ICQ.</p>
 
   <div class="achievement-images">
-    <img src="/images/icq.avif" alt="ICQ '23">
+    <img loading="lazy" decoding="async" src="/images/icq.avif" alt="ICQ '23">
   </div>
 </div>
 </section>
@@ -1533,17 +1558,17 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-23">
-  <h2>💡 Qualified for DLEPC - ATL Inspire Manak Awards 2023-24</h2>
+  <h2>💡 Qualified for DLEPC – INSPIRE MANAK Awards 2023–24</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Department of Science and Technology (DST) Government of India</em><br>
     🗓️ <em>February 2024</em><br>
     📍 <em>Online</em>
   </div>
-  <p>The INSPIRE Awards – MANAK is a flagship initiative jointly executed by the Department of Science and Technology (DST) and the National Innovation Foundation (NIF). The competition fosters a culture of creative thinking among school students, encouraging them to develop science-rooted solutions for societal challenges.</p>
-  <p>My idea of <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> was selected for the District Level Exhibition and Project Competitions (DLEPC), receiving a one-time financial award of ₹10,000 via Direct Benefit Transfer (DBT).</p>
+  <p>The INSPIRE Awards – MANAK initiative is jointly run by the Department of Science and Technology (DST) and the National Innovation Foundation (NIF). It encourages school students to develop science-based solutions for societal challenges.</p>
+  <p>My idea for <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> was selected for the District Level Exhibition and Project Competitions (DLEPC) and received project-development support.</p>
 
   <div class="achievement-images">
-    <img src="/images/inspiremanak.avif" alt="Inspire-MANAK '23">
+    <img loading="lazy" decoding="async" src="/images/inspiremanak.avif" alt="INSPIRE MANAK 2023">
   </div>
 </div>
 </section>
@@ -1552,7 +1577,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-24">
-  <h2>💡 Idea selected for the National Rounds - Junior Smart India Hackathon 2023</h2>
+  <h2>💡 Idea Selected for the National Rounds – Junior Smart India Hackathon 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Ministry of Education's Innovation Cell Government of India</em><br>
     🗓️ <em>January 2024</em><br>
@@ -1562,7 +1587,7 @@ author_profile: true
   <p>I presented my idea on <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and successfully qualified for the National presentation round.</p>
 
   <div class="achievement-images">
-    <img src="/images/jsih.avif" alt="JSIH '23">
+    <img loading="lazy" decoding="async" src="/images/jsih.avif" alt="JSIH '23">
   </div>
 </div>
 </section>
@@ -1571,7 +1596,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-25">
-  <h2>🛕 Bhubaneswar region Runner-Up - CBSE Heritage India Quiz 2023</h2>
+  <h2>🛕 Bhubaneswar Region Runner-Up – CBSE Heritage India Quiz 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
     🗓️ <em>December 2023</em><br>
@@ -1580,10 +1605,10 @@ author_profile: true
   <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions.</p>
   <p>The 2022 edition focused on "India: The Mother of Democracy," celebrating India's G20 presidency and rich history.</p>
   <p>Tens of thousands of schools from across the country participated in this multi-stage competition, which began with an online qualifying round.</p>
-  <p>Atharv Sharma, Snigdha Mohanty, and I represented our school in the Bhubaneswar regional round but were unable to qualify for the national finale as we emerged as the regional runner-ups.</p>
+  <p>Atharv Sharma, Snigdha Mohanty, and I represented our school in the Bhubaneswar regional round and finished as the regional runner-up.</p>
 
   <div class="achievement-images">
-    <img src="/images/cbsehiq23.avif" alt="CBSE HIQ '23">
+    <img loading="lazy" decoding="async" src="/images/cbsehiq23.avif" alt="CBSE HIQ '23">
   </div>
 </div>
 </section>
@@ -1592,19 +1617,19 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-26">
-  <h2>👨‍💻 Winner of Technical Quiz - Nexus 2K23</h2>
+  <h2>👨‍💻 Winner of Technical Quiz – Nexus 2K23</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Shri Shankaracharya Institute of Professional Management and Technology, Raipur</em><br>
     🗓️ <em>November 2023</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
 
-  <p>NEXUS 2K23 was a high-profile inter-school competition organized by the Shri Shankaracharya Institute of Professional Management and Technology (SSIPMT), Raipur.</p> 
+  <p>NEXUS 2K23 was an inter-school competition organized by the Shri Shankaracharya Institute of Professional Management and Technology (SSIPMT), Raipur.</p>
   <p>Centered on the theme "Young Ignited Minds," the event aimed to provide a platform for school students to demonstrate their skills across technical, cultural, and sporting categories.</p> 
-  <p>I finished first among teams from almost every school in raipur in the Technical Quiz event, winning a cash prize of ₹10,000.</p>
+  <p>I finished first in the Technical Quiz event, competing against teams from schools across Raipur.</p>
 
   <div class="achievement-images">
-    <img src="/images/nexus23.avif" alt="Nexus Quiz '23">
+    <img loading="lazy" decoding="async" src="/images/nexus23.avif" alt="Nexus Quiz '23">
   </div>
 </div>
 </section>
@@ -1613,18 +1638,18 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-27">
-  <h2>💡 Selected among the Top 1,000 ideas nationwide - Youth Ideathon 2023</h2>
+  <h2>💡 Selected among the Top 1,000 Ideas Nationwide – Youth Ideathon 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by ThinkStartup and MEPSC</em><br>
     🗓️ <em>October 2023</em><br>
     📍 <em>Online</em>
   </div>
-  <p>Youth Ideathon 2023 was the third edition of India’s largest innovation and entrepreneurship competition for school students, organized by ThinkStartup and the Management Entrepreneurship Professional Skills Council (MEPSC) in collaboration with CBSE.</p>
+  <p>Youth Ideathon 2023 was a national innovation and entrepreneurship competition for school students, organized by ThinkStartup and the Management Entrepreneurship Professional Skills Council (MEPSC) in collaboration with CBSE.</p>
   <p>The event focused on the theme "iStartup a Good Thing for India" (Mera Idea Jo Badal De Bharat).</p>
   <p>I presented my Idea on <a href="https://manansethia.com/projects/#mrida" style="color:#de8d00; text-decoration:none; font-weight:bold;">MRIDA (Multipurpose Real-time Integrated Digital Analyzer)</a> and was selected among the Top 1,000 ideas.</p>
 
   <div class="achievement-images">
-    <img src="/images/yi23.avif" alt="YI '23">
+    <img loading="lazy" decoding="async" src="/images/yi23.avif" alt="YI '23">
   </div>
 </div>
 </section>
@@ -1638,17 +1663,17 @@ author_profile: true
     🏢 <em>Organized by the Super Six Sports Gaming Private Limited (SSSG) in collaboration with and nationally broadcasted by the Viacom18 Media Pvt. Ltd. (Jiohotstar).</em><br>
   </div>
 
-  <p>Ultimate Sports Quiz is India's premium sports quiz show, aiming to foster a deep sporting culture by engaging students as knowledgeable sports enthusiasts.</p>
-  <p>Season 2 featured the top 36 teams dynamically shortlisted through rigorous selection tests from over 4,000 teams and 350 cities across the country. Following the Olympic motto (Citius, Altius, Fortius), the format heavily tested speed, accuracy, and depth of knowledge under intense pressure.</p>
-  <p>My partner, Ameya Tamaskar, and I proudly represented our school across all stages. We ultimately finished as the National 2nd Runners-Up, personally winning Apple M1 MacBook Airs while securing a massive ₹10,00,000 grant to support grassroots sports development at our school.</p>
+  <p>Ultimate Sports Quiz is a national sports quiz show that encourages students to explore sport beyond the playing field.</p>
+  <p>Season 2 featured 36 teams shortlisted through selection tests from over 4,000 teams and 350 cities across the country. Following the Olympic motto (Citius, Altius, Fortius), the format tested speed, accuracy, and depth of knowledge.</p>
+  <p>My partner, Ameya Tamaskar, and I represented our school across all stages and finished as the National 2nd runner-up. Our school also received support for grassroots sports development.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/usq.avif" alt="Ultimate Sports Quiz">
+    <img loading="lazy" decoding="async" src="/images/usq.avif" alt="Ultimate Sports Quiz">
   </div>
 
   <div class="dashed-line"></div>
 
-  <h3>🥳 National Grand Finale - 2nd Runners-Up</h3>
+  <h3>🥳 National Grand Finale – 2nd Runner-Up</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Super Six Sports Gaming Private Limited</em><br>
@@ -1657,18 +1682,18 @@ author_profile: true
   </div>
 
   <p>National Grand Finale featured KPS Kamal Vihar (our team), BHS Kolkata, and Tagore International (VV), New Delhi.</p>
-  <p>We scored 50 points and emerged as the National 2nd Runner-Ups.</p>
+  <p>We scored 50 points and emerged as the National 2nd runner-up.</p>
   <p><strong>😆 Fun Fact:</strong> The team we defeated in the Semi-Finals (BHS Kolkata) were the lucky losers of the Semi Finals, and then went on to defeat us in the National Finals! Also, Tagore International was the second lucky loser of Zonal Finals.</p>
 
   <div style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
-    <img src="/images/yoda.avif" alt="Yoda" style="height: 1.4em; vertical-align: middle;">
+    <img loading="lazy" decoding="async" src="/images/yoda.avif" alt="Yoda" style="height: 1.4em; vertical-align: middle;">
     <strong>Hmmm… the National Finale, for lucky losers it became.</strong>
   </div>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="4B1YQ5edqBs">
-        <img src="https://i.ytimg.com/vi/4B1YQ5edqBs/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/4B1YQ5edqBs/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>USQ 2023<br>National Grand Finale</span>
     </div>
@@ -1684,15 +1709,15 @@ author_profile: true
     📍 <em>Mumbai, Maharashtra</em>
   </div>
 
-  <p>Semi Final - 1 featured KPS Kamal Vihar (our team), St. Francis Hazratganj, Lucknow, and BHS Kolkata.</p>
+  <p>Semi-Final 1 featured KPS Kamal Vihar (our team), St. Francis Hazratganj, Lucknow, and BHS Kolkata.</p>
   <p>We scored 130 points and emerged as the winners of the round.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="Bgdd8B0XzxE">
-        <img src="https://i.ytimg.com/vi/Bgdd8B0XzxE/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/Bgdd8B0XzxE/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
-      <span>USQ 2023<br>Semi Final - 1</span>
+      <span>USQ 2023<br>Semi-Final 1</span>
     </div>
   </div>
 
@@ -1713,7 +1738,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="nPel1DDxFrw">
-        <img src="https://i.ytimg.com/vi/nPel1DDxFrw/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/nPel1DDxFrw/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>USQ 2023<br>West Zone Finals</span>
     </div>
@@ -1731,12 +1756,12 @@ author_profile: true
 
   <p>Our preliminary round featured KPS Kamal Vihar (our team), Kendriya Vidyalaya Bhandup, Mumbai, and Bhatikar Model High School, Goa.</p>
   <p>We scored 130 points and emerged as the winners of the round.</p>
-  <p><strong>😆 Fun Fact:</strong> This episode was supposed to be aired and uploaded on 1st December 2023 but, was uploaded a day earlier on 30th November 2023, which was my birthday lol.</p>
+  <p><strong>😆 Fun Fact:</strong> This episode was supposed to air on 1 December 2023, but it was uploaded a day earlier, on 30 November, which was my birthday.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="DQZmbhGw6oE">
-        <img src="https://i.ytimg.com/vi/DQZmbhGw6oE/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/DQZmbhGw6oE/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>USQ 2023<br>West Zone Prelims</span>
     </div>
@@ -1757,7 +1782,7 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card-news">
-      <img src="/images/usqqt.avif" alt="Regional Rounds" style="width: 335px; height: auto; max-height: 100%">
+      <img loading="lazy" decoding="async" src="/images/usqqt.avif" alt="Regional Rounds" style="width: 335px; height: auto; max-height: 100%">
       <span>Top 9 Teams of West Zone</span>
     </div>
   </div>
@@ -1768,20 +1793,20 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-29">
-  <h2>🤖 Winner - Data and AI Talks 2023</h2>
+  <h2>🤖 Winner – Data and AI Talks 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by igebra.ai</em><br>
     🗓️ <em>August 2023</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
-  <p>Data and AI Talks 2023 was a flagship program organized by igebra.ai, a Delaware, US-based AI research, product development, and education company.</p>
+  <p>Data and AI Talks 2023 was organized by igebra.ai, a Delaware, US-based AI research, product development, and education company.</p>
   <p>Over 10,000 students from 12 schools participated in the event, with the grand finale held at NH Goel School, Raipur.</p>
   <p>Out of 10,000+ participants, 1,034 were selected for the qualifying rounds, 72 advanced to Level 1, and 12 to Level 2.</p>
-  <p>I emerged as the winner of Group C (Senior) and was awarded an iPad along with various other prizes from the event sponsors.</p>
+  <p>I emerged as the winner of Group C (Senior) with my presentation of MRIDA.</p>
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="O19X4Ah9vfk">
-        <img src="https://i.ytimg.com/vi/O19X4Ah9vfk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/O19X4Ah9vfk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>MRIDA Presentation<br>Data & AI Talks</span>
     </div>
@@ -1793,16 +1818,16 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-30">
-  <h2>🧠 All India Top 5 - Mind Wars National Academic Championship 2023</h2>
+  <h2>🧠 All India Top 5 – Mind Wars National Academic Championship 2023</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Zee Entertainment Enterprises Ltd.</em><br>
     🗓️ <em>May 2023</em><br>
     📍 <em>Online</em>
   </div>
-  <p>Mind Wars was a platform supported by Zee5 where anyone could play quizzes on various topics and learn something new. It also hosted various contests with exciting prizes.</p>
-  <p>This particular competition was a one-of-a-kind online MCQ-based test, where the top 2 rankers won a trip to Thailand. I don’t remember my exact rank, but I was in the top 5.</p>
+  <p>Mind Wars was a platform supported by Zee5 where anyone could play quizzes on various topics and learn something new. It also hosted several online contests.</p>
+  <p>This competition was an online MCQ-based test. I don’t remember my exact rank, but I was in the top 5.</p>
   <div class="achievement-images">
-    <img src="/images/mindwars.avif" alt="MindWars '23">
+    <img loading="lazy" decoding="async" src="/images/mindwars.avif" alt="MindWars '23">
   </div>
 </div>
 </section>
@@ -1818,17 +1843,17 @@ author_profile: true
   </div>
 
   <p>The CBSE Heritage India Quiz aims to deepen students’ understanding and appreciation of India's rich cultural legacy, historical milestones, and diverse traditions. The 2022 edition focused specifically on India’s Freedom Movement to commemorate 75 years of independence.</p>
-  <p>Tens of thousands of schools from across the country participated in this massive multi-stage competition. The top-performing teams advanced from rigorous online qualifying rounds through regional battles to reach the National Semi-Finals and Finals in New Delhi.</p>
-  <p>Atharv Sharma, Shreeansh Naidu, and I navigated every stage together, representing our school fiercely. We ultimately finished as the National 1st Runner-Ups, receiving a cash prize of ₹15,000.</p>
+  <p>Schools from across the country participated in this multi-stage competition. Teams advanced through online qualifiers and regional rounds to reach the National Semi-Finals and Finals in New Delhi.</p>
+  <p>Atharv Sharma, Shreeansh Naidu, and I advanced through every stage together and finished as the National 1st runner-up.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/hiq.avif" alt="Heritage India Quiz">
+    <img loading="lazy" decoding="async" src="/images/hiq.avif" alt="Heritage India Quiz">
     <span>Team Picture: Left to right<br> Manan Sethia, Shreeansh Naidu, Atharv Sharma</span>
   </div>
 
   <div class="dashed-line"></div>
 
-  <h3>📺 National 1st Runners-Up</h3>
+  <h3>📺 National 1st Runner-Up</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
@@ -1841,12 +1866,12 @@ author_profile: true
 
   <p>Competing at the national stage in New Delhi, we represented Chhattisgarh and faced teams with
   diverse academic and regional backgrounds. After a closely contested final comprising multiple
-  high-pressure rounds, the team from New Delhi secured first place, while we emerged as the National 1st Runners-Up.</p>
+  rounds, the team from New Delhi secured first place, while we emerged as the National 1st runner-up.</p>
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="UwzXg_3KkWc">
-        <img src="https://i.ytimg.com/vi/UwzXg_3KkWc/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/UwzXg_3KkWc/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>CBSE HIQ 2022<br>National Finale</span>
     </div>
@@ -1870,7 +1895,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="PpuNR-Q95Mk">
-        <img src="https://i.ytimg.com/vi/PpuNR-Q95Mk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/PpuNR-Q95Mk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>CBSE HIQ 2022<br>Semi-Final 4</span>
     </div>
@@ -1878,7 +1903,7 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>🏆 Zonal Champions - Bhubaneswar region</h3>
+  <h3>🏆 Zonal Champions – Bhubaneswar Region</h3>
 
   <div class="achievement-meta">
     🏢 <em>Issued by Central Board of Secondary Education</em><br>
@@ -1890,7 +1915,7 @@ author_profile: true
 
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card-news">
-      <img src="/images/hiqn.avif" alt="Regional Rounds" style="width: 335px;">
+      <img loading="lazy" decoding="async" src="/images/hiqn.avif" alt="Regional Rounds" style="width: 335px;">
       <span>News Coverage</span>
     </div>
   </div>
@@ -1901,16 +1926,16 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-32">
-  <h2>🏆 Winners of Paryavaran Paheli ECO Quiz - KPS Intelligence Fest 2022</h2>
+  <h2>🏆 Winners of Paryavaran Paheli ECO Quiz – KPS Intelligence Fest 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
     🗓️ <em>November 2022</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
-  <p>Once again, with my quiz partner Atharv, we took part in our school's interschool fest quiz competition and emerged as the winners in the senior category.</p>
+  <p>Once again, with my quiz partner Atharv, we took part in our school's inter-school fest quiz competition and emerged as the winners in the senior category.</p>
   <p>Several teams from various schools in Raipur participated in the prelims, and six teams were selected for the on-stage finals.</p>
   <div class="achievement-images">
-    <img src="/images/intelli.avif" alt="ParyavaranPaheli '22">
+    <img loading="lazy" decoding="async" src="/images/intelli.avif" alt="ParyavaranPaheli '22">
   </div>
 </div>
 </section>
@@ -1919,16 +1944,16 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-33">
-  <h2>🛕 City Champions - Intach Heritage Quiz 2022</h2>
+  <h2>🛕 City Champions – INTACH Heritage Quiz 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Indian National Trust for Art and Cultural Heritage (INTACH)</em><br>
     🗓️ <em>October 2022</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
-  <p>The INTACH Heritage Quiz is an annual national-level quiz competition based on organized by the Indian National Trust for Art and Cultural Heritage (INTACH).</p>
+  <p>The INTACH Heritage Quiz is an annual national-level competition organized by the Indian National Trust for Art and Cultural Heritage (INTACH).</p>
   <p>Alongside my classmate and friend Atharv Sharma, we secured first place in the city round of the quiz, despite the rather underwhelming setup, which relied on phone stopwatches instead of proper buzzers.</p>
   <div class="achievement-images">
-    <img src="/images/intach.avif" alt="INTACH '22">
+    <img loading="lazy" decoding="async" src="/images/intach.avif" alt="INTACH '22">
   </div>
 </div>
 </section>
@@ -1937,17 +1962,17 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-34">
-  <h2>🏆 Winners of Senior Group Quiz - Shine COSMO 2022</h2>
+  <h2>🏆 Winners of Senior Group Quiz – Shine COSMO 2022</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by The Rotary Club of Raipur</em><br>
     🗓️ <em>September 2022</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
-  <p>Shine COSMO is an interschool event conducted by the Rotary Club of Raipur and hosted by Maharaja Agrasen International College.</p>
+  <p>Shine COSMO is an inter-school event conducted by the Rotary Club of Raipur and hosted by Maharaja Agrasen International College.</p>
   <p>Partnering with my classmate and friend Atharv Sharma, we emerged as the champions of the quiz competition, which saw participation from over 30 schools.</p>
   <div class="achievement-images">
-    <img src="/images/shinecosmoo.avif" alt="ShineCOSMO '22">
-    <img src="/images/shinecosmo.avif" alt="ShineCOSMO '22">
+    <img loading="lazy" decoding="async" src="/images/shinecosmoo.avif" alt="ShineCOSMO '22">
+    <img loading="lazy" decoding="async" src="/images/shinecosmo.avif" alt="ShineCOSMO '22">
   </div>
 </div>
 </section>
@@ -1964,10 +1989,10 @@ author_profile: true
   <p>The preliminary rounds saw participation from 36,299 students representing 13,502 schools nationwide.</p>
   <p>From there, 360 schools advanced to the state-level competitions.</p>
   <p>Eventually, 36 schools, each representing a different State or Union Territory, qualified for the National Finals.</p>
-  <p>Partnering with Ishant Talreja, we represented our school in the televised National Rounds. Our school received ₹2,50,000, and our team was awarded ₹25,000.</p>
+  <p>Partnering with Ishant Talreja, I represented our school in the televised National Rounds.</p>
 
   <div class="achievement-images-text">
-    <img src="/images/sc.avif" alt="FIQ '21">
+    <img loading="lazy" decoding="async" src="/images/sc.avif" alt="FIQ '21">
     <span>Felicitation of State Champions in Mumbai</span>
   </div>
 
@@ -1985,7 +2010,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="UAQWCSxxFqk">
-        <img src="https://i.ytimg.com/vi/UAQWCSxxFqk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/UAQWCSxxFqk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>Fit India Quiz – National Rounds<br>Season 1, Episode 4</span>
     </div>
@@ -1993,7 +2018,7 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>📺 State Champions - Chhattisgarh</h3>
+  <h3>📺 State Champions – Chhattisgarh</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>February 2022</em><br>
@@ -2004,7 +2029,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="BQ2v2y-vIAo">
-        <img src="https://i.ytimg.com/vi/BQ2v2y-vIAo/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/BQ2v2y-vIAo/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>Fit India Quiz – State Final<br>Chhattisgarh</span>
     </div>
@@ -2012,7 +2037,7 @@ author_profile: true
 
   <div class="dashed-line"></div>
 
-  <h3>📺 Winners - Chhattisgarh State Semi-Final 2</h3>
+  <h3>📺 Winners – Chhattisgarh State Semi-Final 2</h3>
   <div class="achievement-meta">
     🏢 <em>Issued by the Ministry of Youth Affairs and Sports – Government of India</em><br>
     🗓️ <em>February 2022</em><br>
@@ -2023,7 +2048,7 @@ author_profile: true
   <div class="episode-container" style="display: flex; justify-content: center;">
     <div class="episode-card">
       <div class="video-wrapper yt-facade" data-id="2n_GQwlG0Bk">
-        <img src="https://i.ytimg.com/vi/2n_GQwlG0Bk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
+        <img loading="lazy" decoding="async" src="https://i.ytimg.com/vi/2n_GQwlG0Bk/hqdefault.jpg" alt="YouTube video" width="335" height="188">
       </div>
       <span>Fit India Quiz – Semi-Final 2<br>Chhattisgarh</span>
     </div>
@@ -2035,17 +2060,17 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-36">
-  <h2>🐼 National Level Qualifier - Wild Wisdom Global Challenge 2021</h2>
+  <h2>🐼 National Level Qualifier – Wild Wisdom Global Challenge 2021</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by World Wide Fund for Nature (WWF-India)</em><br>
     🗓️ <em>October 2021</em><br>
     📍 <em>Online</em>
   </div>
-  <p>The Wild Wisdom Global Challenge (earlier known as the Wild Wisdom Quiz), initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness. It is Asia's biggest wildlife quiz.</p>
+  <p>The Wild Wisdom Global Challenge, earlier known as the Wild Wisdom Quiz, is a WWF-India competition focused on wildlife and environmental awareness.</p>
   <p>Due to COVID-19, 2020 edition of Wild Wisdom Quiz was cancelled and was later renamed as Wild Wisdom Global Challenge, highlighting participations from students outside of India.</p>
   <p>It was conducted online and individually due to the pandemic outbreak.</p>
   <div class="achievement-images">
-    <img src="/images/wwq211.avif" alt="WWQ '21">
+    <img loading="lazy" decoding="async" src="/images/wwq211.avif" alt="WWQ '21">
   </div>
 </div>
 </section>
@@ -2060,14 +2085,13 @@ author_profile: true
     🗓️ <em>October 2019</em><br>
     📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
-  <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness. It is Asia's biggest wildlife quiz.</p>
   <p>Upon entering 6th grade, I became eligible for the senior category of the Wild Wisdom Quiz. </p>
   <p>Partnering with Utkarsh Dewangan, then in 8th grade, we competed together and secured the position of Zonal 2nd Runner-Up. Back-to-back podium finishes by our team!</p>
   <div class="achievement-images">
-    <img src="/images/wwq191.avif" alt="WWQ '19">
-    <img src="/images/wwq192.avif" alt="WWQ '19">
-    <img src="/images/wwq193.avif" alt="WWQ '19">
-    <img src="/images/wwq194.avif" alt="WWQ '19">
+    <img loading="lazy" decoding="async" src="/images/wwq191.avif" alt="WWQ '19">
+    <img loading="lazy" decoding="async" src="/images/wwq192.avif" alt="WWQ '19">
+    <img loading="lazy" decoding="async" src="/images/wwq193.avif" alt="WWQ '19">
+    <img loading="lazy" decoding="async" src="/images/wwq194.avif" alt="WWQ '19">
   </div>
 </div>
 </section>
@@ -2076,7 +2100,7 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-38">
-  <h2>🌒 All India Rank 23 - All India Astronomy Test 2018-19</h2>
+  <h2>🌒 All India Rank 23 – All India Astronomy Test 2018–19</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by COSMOS Astronomy Education and Research</em><br>
     🗓️ <em>January 2019</em><br>
@@ -2087,7 +2111,7 @@ author_profile: true
   <p>It was a computer based contest and I took part in it through my school.</p>
   <p>Honestly, being in the top 25 of my category across the entire nation felt really, really cool to me at that time.</p>
   <div class="achievement-images">
-    <img src="/images/aiat.avif" alt="AIAT '18">
+    <img loading="lazy" decoding="async" src="/images/aiat.avif" alt="AIAT '18">
   </div>
 </div>
 </section>
@@ -2096,16 +2120,16 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-39">
-  <h2>🐝 Winner - Interschool Spell Bee Excella Fest 2018</h2>
+  <h2>🐝 Winner – Interschool Spell Bee Excella Fest 2018</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Chhattisgarh Public School</em><br>
     🗓️ <em>October 2018</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
-  <p>The Interschool Spell Bee was a prominent feature of Excella Fest 2018, an annual inter-school competition hosted by Chhattisgarh Public School (CPS), Raipur.</p>
+  <p>The Interschool Spell Bee was part of Excella Fest 2018, an annual inter-school competition hosted by Chhattisgarh Public School (CPS), Raipur.</p>
   <p>It was a fusion of a spell bee and a quiz competition, and I participated in it while I was in the 5th grade.</p>
   <div class="achievement-images">
-    <img src="/images/spell.avif" alt="SpellBee '18">
+    <img loading="lazy" decoding="async" src="/images/spell.avif" alt="SpellBee '18">
   </div>
 </div>
 </section>
@@ -2120,13 +2144,12 @@ author_profile: true
     🗓️ <em>September 2018</em><br>
     📍 <em>Bhopal, Madhya Pradesh</em>
   </div>
-  <p>The Wild Wisdom Quiz, initiated by WWF-India in 2008, is a renowned competition focusing on wildlife and environmental awareness. It is Asia's biggest wildlife quiz.</p>
   <p>In 5th grade, I participated alongside my teammate, Agriyan Maulik, who was then in 4th grade. The quiz featured teams from Chhattisgarh and Madhya Pradesh. Together, we achieved the position of Zonal 1st Runner-Up.</p>
   <div class="achievement-images">
-    <img src="/images/wwq181.avif" alt="WWQ '18">
-    <img src="/images/wwq182.avif" alt="WWQ '18">
-    <img src="/images/wwq183.avif" alt="WWQ '18">
-    <img src="/images/wwq184.avif" alt="WWQ '18">
+    <img loading="lazy" decoding="async" src="/images/wwq181.avif" alt="WWQ '18">
+    <img loading="lazy" decoding="async" src="/images/wwq182.avif" alt="WWQ '18">
+    <img loading="lazy" decoding="async" src="/images/wwq183.avif" alt="WWQ '18">
+    <img loading="lazy" decoding="async" src="/images/wwq184.avif" alt="WWQ '18">
   </div>
 </div>
 </section>
@@ -2135,18 +2158,18 @@ author_profile: true
 
 <section>
 <div class="achievement-section" id="ach-41">
-  <h2>🌏 2nd Runner-Up - Quiz Premier League 2.0 Earth Day</h2>
+  <h2>🌏 2nd Runner-Up – Quiz Premier League 2.0 Earth Day</h2>
   <div class="achievement-meta">
     🏢 <em>Issued by Krishna Public School Kamal Vihar</em><br>
     🗓️ <em>April 2016</em><br>
     📍 <em>Raipur, Chhattisgarh</em>
   </div>
-  <p>QPL, which stands for the Quiz Premier League, is a signature academic initiative of Krishna Public School (KPS), Raipur. Designed as a "Quiz, Play, and Learn" ecosystem, the program serves as the school’s dedicated quiz club.</p>
+  <p>QPL, which stands for the Quiz Premier League, is an academic initiative of Krishna Public School (KPS), Raipur. Designed as a "Quiz, Play, and Learn" ecosystem, the program serves as the school’s dedicated quiz club.</p>
   <p>QPL 2.0 was an Earth Day–themed quiz that uniquely included a “Partner with Your Parent” format.</p>
   <p>This was the first quiz I ever participated in. I took part with my father as my partner when I was in 3rd grade, it was a family quiz. I really enjoyed it and found out about it through a school notification.</p>
-  <p>The key moment I remember from this quiz is when a buzzer question was asked about the Rafflesia flower. I couldn’t recall its name, but I still pressed the buzzer and said, ‘The name sounds something like this but it has no stem and no roots.’ I was even awarded with the points too lol.</p>
+  <p>The key moment I remember from this quiz is when a buzzer question was asked about the Rafflesia flower. I couldn’t recall its name, but I still pressed the buzzer and said, ‘The name sounds something like this but it has no stem and no roots.’ They still awarded me the points.</p>
   <div class="achievement-images">
-    <img src="/images/qpl.avif" alt="QPL 2.0">
+    <img loading="lazy" decoding="async" src="/images/qpl.avif" alt="QPL 2.0">
   </div>
 </div>
 </section>
@@ -2275,50 +2298,41 @@ document.addEventListener('DOMContentLoaded', function () {
   attachClickHandlers();
 
   /* ── 3. Robust fuzzy-ish search ── */
-  document.getElementById('tocSearch').addEventListener('input', function () {
-    var raw = this.value.trim();
-
-    /* Auto-open the TOC when user starts typing */
-    if (raw.length > 0) {
-      document.getElementById('achievementToc').classList.remove('collapsed');
-    }
-
+  function filterAchievements(raw) {
     if (!raw) {
-      /* Empty → show everything */
       document.querySelectorAll('#tocList li').forEach(function(li){ li.style.display = ''; });
       return;
     }
-
-    /* Split into individual words so "mrida project" matches both tokens */
     var tokens = raw.toLowerCase().split(/\s+/).filter(Boolean);
-
     document.querySelectorAll('#tocList li').forEach(function (li) {
       var text = li.textContent.toLowerCase();
       var tags = (li.getAttribute('data-tags') || '').toLowerCase();
       var combined = text + ' ' + tags;
-
-      /* ALL tokens must appear somewhere in combined text+tags */
       var match = tokens.every(function(token) {
         return combined.indexOf(token) !== -1;
       });
-
       li.style.display = match ? '' : 'none';
     });
+  }
+
+  document.getElementById('tocSearch').addEventListener('input', function () {
+    var raw = this.value.trim();
+    /* Auto-open the TOC only if user actively types inside it while closed */
+    if (raw.length > 0 && !tocTargetOpen) {
+      openToc();
+    }
+    filterAchievements(raw);
+    syncTocHeight();
   });
 
-  /* ── 4. Parse URL query params ── */
+  /* ── 4. Parse URL query params (filter query but keep TOC closed by default) ── */
   var urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has('search')) {
     var searchVal = urlParams.get('search');
     var searchInput = document.getElementById('tocSearch');
     if (searchInput) {
       searchInput.value = searchVal;
-      /* Trigger the input event to run the filter logic immediately */
-      searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-      /* Automatically uncollapse the TOC */
-      document.getElementById('achievementToc').classList.remove('collapsed');
-      /* Bring TOC into view */
-      document.getElementById('achievementToc').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      filterAchievements(searchVal.trim());
     }
   }
 
@@ -2355,12 +2369,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-/* ── 6. Toggle collapse ── */
-function toggleToc() {
-  document.getElementById('achievementToc').classList.toggle('collapsed');
-  /* Pump footer push per frame for the 0.6s height transition. */
-  if (window.smoothFooterPush) window.smoothFooterPush(700);
+/* ── 6. Toggle collapse: original one-state interaction with measured height ── */
+var tocTargetOpen = false;
+
+function syncTocHeight() {
+  var box = document.getElementById('achievementToc');
+  var body = document.getElementById('tocBody');
+  if (!box || !body || box.classList.contains('collapsed')) return;
+  body.style.setProperty('--toc-open-height', body.scrollHeight + 'px');
 }
+
+function openToc() {
+  var box = document.getElementById('achievementToc');
+  var body = document.getElementById('tocBody');
+  if (!box || !body) return;
+  tocTargetOpen = true;
+  body.style.setProperty('--toc-open-height', body.scrollHeight + 'px');
+  box.classList.remove('collapsed');
+  if (window.smoothFooterPush) window.smoothFooterPush(800);
+}
+
+function closeToc() {
+  var box = document.getElementById('achievementToc');
+  var body = document.getElementById('tocBody');
+  if (!box || !body) return;
+  tocTargetOpen = false;
+  box.classList.add('collapsed');
+  if (window.smoothFooterPush) window.smoothFooterPush(800);
+}
+
+function toggleToc() {
+  if (tocTargetOpen) closeToc();
+  else openToc();
+}
+window.toggleToc = toggleToc;
+window.openToc = openToc;
+window.closeToc = closeToc;
+window.addEventListener('resize', function() {
+  window.requestAnimationFrame(syncTocHeight);
+}, { passive: true });
 </script>
 
 <script>

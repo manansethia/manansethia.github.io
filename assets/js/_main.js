@@ -23,6 +23,7 @@ $(document).ready(function () {
   var $authorBtn = $(".author__urls-wrapper button");
   var $authorOriginalParent = $authorUrls.parent();
   var authorTeleported = false;
+  var authorScrollClosing = false;
 
   function teleportToBody() {
     if (!authorTeleported) {
@@ -47,6 +48,15 @@ $(document).ready(function () {
       'max-width': maxW + 'px',
       'margin-top': '0'
     });
+
+    // Keep the pointer attached to the Connect button when the panel is
+    // clamped against either viewport edge.
+    var menuRect = $authorUrls[0].getBoundingClientRect();
+    if (menuRect.width) {
+      var arrowLeft = (btnRect.left + btnRect.width / 2) - menuRect.left;
+      arrowLeft = Math.max(16, Math.min(menuRect.width - 16, arrowLeft));
+      $authorUrls[0].style.setProperty('--author-arrow-left', arrowLeft + 'px');
+    }
   }
 
   var DESKTOP_BREAKPOINT = 925;
@@ -59,20 +69,35 @@ $(document).ready(function () {
     if (authorTeleported) {
       $authorUrls.appendTo($authorOriginalParent);
       $authorUrls.css({ position: '', top: '', left: '', right: '', 'max-width': '', 'margin-top': '' });
+      $authorUrls[0].style.removeProperty('--author-arrow-left');
       authorTeleported = false;
     }
   }
 
   $authorBtn.on("click", function () {
     teleportToBody();
+    authorScrollClosing = false;
     if ($authorUrls.is(':visible')) {
-      $authorUrls.fadeOut("fast");
+      $authorUrls.stop(true, true).fadeOut("fast");
+      $authorBtn.removeClass("open");
     } else {
       positionAuthorUrls();
-      $authorUrls.fadeIn("fast");
+      $authorUrls.stop(true, true).fadeIn("fast");
+      requestAnimationFrame(positionAuthorUrls);
+      $authorBtn.addClass("open");
     }
-    $authorBtn.toggleClass("open");
   });
+
+  // Close immediately when scrolling so the fixed popup never trails the page.
+  window.addEventListener('scroll', function () {
+    if (!isDesktop() && authorTeleported && $authorUrls.is(':visible') && !authorScrollClosing) {
+      authorScrollClosing = true;
+      $authorUrls.stop(true, false).fadeOut("fast", function () {
+        authorScrollClosing = false;
+      });
+      $authorBtn.removeClass("open");
+    }
+  }, { passive: true });
 
   $(window).resize(function () {
     if (isDesktop() && authorTeleported) {

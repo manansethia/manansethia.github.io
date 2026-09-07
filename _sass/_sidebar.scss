@@ -200,7 +200,7 @@
   margin-top: 40px;
   padding: 10px;
   list-style-type: none;
-  border: 2px solid rgba(185, 115, 0, 0.45);
+  border: 1.5px solid rgba(84, 57, 0, 0.5);
   border-radius: $border-radius;
   background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
   backdrop-filter: blur(16px) saturate(180%);
@@ -227,11 +227,11 @@
     content: "";
     position: absolute;
     top: -11px;
-    left: calc(50% - 10px);
+    left: calc(var(--author-arrow-left, 50%) - 10px);
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: rgba(255, 255, 255, 0.4) transparent;
+    border-color: rgba(84, 57, 0, 0.5) transparent;
     z-index: 0;
 
     @include breakpoint($large) {
@@ -244,11 +244,11 @@
     content: "";
     position: absolute;
     top: -10px;
-    left: calc(50% - 10px);
+    left: calc(var(--author-arrow-left, 50%) - 10px);
     width: 0;
     border-style: solid;
     border-width: 0 10px 10px;
-    border-color: rgba(229, 149, 0, 0.7) transparent;
+    border-color: rgba(84, 57, 0, 0.5) transparent;
     z-index: 1;
 
     @include breakpoint($large) {

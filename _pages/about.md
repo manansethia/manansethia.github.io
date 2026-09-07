@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Namaste!"
-description: "Manan Sethia — student, quizzer, and competitive programmer from Raipur. Passionate about AI, cybersecurity, operating systems, and building things at the intersection of curiosity and code."
+description: "Manan Sethia — Computer Science undergraduate at NTU Singapore, quizzer, competitive programmer, and curious builder."
 keywords: "Manan Sethia, portfolio, computer science, competitive programming, quizzer, Raipur, IESO, ZCO, AI, cybersecurity"
 author_profile: true
 ---
@@ -15,12 +15,12 @@ author_profile: true
     border-radius: 22px;
 
     background:
-      linear-gradient(135deg, rgba(255,255,255,0.55), rgba(255,255,255,0.15)),
+      linear-gradient(135deg, rgba(255,255,255,0.88), rgba(255,248,232,0.88)),
       radial-gradient(1200px 400px at -10% -20%, rgba(255, 200, 120, 0.25), transparent 60%),
       radial-gradient(1000px 500px at 110% 120%, rgba(255, 180, 60, 0.18), transparent 60%);
 
-    backdrop-filter: blur(22px) saturate(160%);
-    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    backdrop-filter: blur(60px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(60px) saturate(160%) !important;
 
     border: 1px solid rgba(255, 190, 90, 0.35);
 
@@ -39,7 +39,7 @@ author_profile: true
 
   .dark-mode .home-hero {
     background:
-      linear-gradient(135deg, rgba(60,40,15,0.6), rgba(30,20,8,0.4)),
+      linear-gradient(135deg, rgba(60,40,15,0.88), rgba(30,20,8,0.88)),
       radial-gradient(1200px 400px at -10% -20%, rgba(255, 170, 60, 0.15), transparent 60%),
       radial-gradient(1000px 500px at 110% 120%, rgba(255, 150, 40, 0.12), transparent 60%);
 
@@ -54,7 +54,7 @@ author_profile: true
 
   .royal-mode .home-hero {
     background:
-      linear-gradient(135deg, rgba(66, 58, 46, 0.75), rgba(33, 30, 23, 0.6)),
+      linear-gradient(135deg, rgba(66, 58, 46, 0.88), rgba(33, 30, 23, 0.88)),
       radial-gradient(1200px 400px at -10% -20%, rgba(72, 70, 64, 0.2), transparent 60%),
       radial-gradient(1000px 500px at 110% 120%, rgba(72, 70, 64, 0.15), transparent 60%);
 
@@ -96,7 +96,10 @@ author_profile: true
     opacity: 0.6;
     z-index: 0;
     animation: premiumFloat 8s ease-in-out infinite alternate;
+    will-change: transform;
   }
+
+  .home-hero.is-offscreen::after { animation-play-state: paused; }
 
   @keyframes premiumFloat {
     0%   { transform: translate(0, 0) scale(1); }
@@ -147,7 +150,7 @@ author_profile: true
     color: #f5f0e6;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   }
-  .dark-mode .home-hero-text strong { color: #ffffff; }
+  .dark-mode .home-hero-text strong { color: #ffe499; }
 
   .royal-mode .home-hero-text {
     color: #ffffff;
@@ -169,8 +172,9 @@ author_profile: true
   }
   .dark-mode .home-body h2 { border-bottom-color: #e6c194; }
   .home-body p { margin-bottom: 1rem; }
+  .home-body strong { color: #3a1e00; }
   .dark-mode .home-body { color: #f0ece4; }
-  .dark-mode .home-body strong { color: #ffffff; }
+  .dark-mode .home-body strong { color: #ffe499; }
 
   .royal-mode .home-body h2 { border-bottom-color: rgba(200, 200, 200, 0.7); }
   .royal-mode .home-body { color: #ffffff; }
@@ -300,23 +304,28 @@ author_profile: true
     Walking into a competition as the only school student in a room full of college teams feels surreal. Defeating someone by a thin margin is a feeling I live for. I'm a free bird by nature, and mixing leadership with patience and a genuine sense of fun turned out to be the only thing that gets a team aligned.
   </p>
 
+  <h2>The NTU chapter</h2>
+  <p>
+    I am now pursuing a <strong>Bachelor of Computing (Honours) in Computer Science</strong> at Nanyang Technological University's College of Computing and Data Science, with specialisations in <strong>Cyber Security</strong> and <strong>Artificial Intelligence</strong>. I am supported by the <strong>NTU Science and Technology Undergraduate Scholarship</strong>.
+  </p>
+
   <h2>Beyond the usual</h2>
 
   <div class="home-photos" id="homePhotos">
     <div class="home-photo-card">
-      <img src="/images/oldlaptop.avif" alt="">
+      <img loading="lazy" decoding="async" src="/images/oldlaptop.avif" alt="">
       <div class="home-photo-cap">The G580 on XP SP3 with One-Core API and the Al Pacino Gangsta Edition boot skin</div>
     </div>
     <div class="home-photo-card">
-      <img src="/images/rpi5unoqesp32p4.avif" alt="">
+      <img loading="lazy" decoding="async" src="/images/rpi5unoqesp32p4.avif" alt="">
       <div class="home-photo-cap">Raspberry Pi 5, Arduino Uno Q & ESP32-P4, my experimental lab rats</div>
     </div>
     <div class="home-photo-card">
-      <img src="/images/tylerdurd.avif" alt="">
+      <img loading="lazy" decoding="async" src="/images/tylerdurd.avif" alt="">
       <div class="home-photo-cap">Tyler Durden & The Narrator, a sketch I made a year back using black pen</div>
     </div>
     <div class="home-photo-card">
-      <img src="/images/dexter.avif" alt="">
+      <img loading="lazy" decoding="async" src="/images/dexter.avif" alt="">
       <div class="home-photo-cap">Dexter the Lhasa Apso on his 1st birthday, named after the cartoon scientist</div>
     </div>
   </div>
@@ -325,7 +334,7 @@ author_profile: true
     I read Wikipedia every day just to discover something new. I watch Fern, Neo, and Mustard documentaries. I read true crime, dystopia, and real-life histories like <em>Killing Pablo</em>, <em>Permanent Record</em>, and <em>American Prometheus</em>. I used to draw a lot too, starting with oil pastels, then sketch pens, and eventually settling into black pen stencils and monochrome work.
   </p>
   <p>
-    At home there's <strong>Dexter</strong>, my Lhasa Apso. Lately I have been deep in elevated digital privacy, degooglification, and tracker blocking across all my devices. I recently finished school as <strong>Headboy of Krishna Public School</strong>, and right now I am preparing for a Computer Science degree, which feels less like a career plan and more like the next chapter of a story that started with a virus and a lot of late nights on forums.
+    At home there's <strong>Dexter</strong>, my Lhasa Apso. Lately I have been deep in elevated digital privacy, degooglification, and tracker blocking across all my devices. After finishing school as <strong>Headboy of Krishna Public School</strong>, I began studying Computer Science at Nanyang Technological University in Singapore. It feels less like a career plan and more like the next chapter of a story that started with a virus and a lot of late nights on forums.
   </p>
 
   <div class="home-closing">
@@ -389,6 +398,9 @@ author_profile: true
 
     var idx = 0;
     var animating = false;
+    var decodeTimer = 0;
+    var cycleTimer = 0;
+    var heroInView = true;
 
     function shuffle(arr) {
       for (var i = arr.length - 1; i > 0; i--) {
@@ -413,7 +425,7 @@ author_profile: true
       var iterations = 0;
       var totalFrames = 16;
 
-      var interval = setInterval(function() {
+      decodeTimer = window.setInterval(function() {
         iterations++;
         var progress = iterations / totalFrames;
         var revealed = Math.floor(progress * target.length);
@@ -430,35 +442,93 @@ author_profile: true
         pill.textContent = display;
 
         if (iterations >= totalFrames) {
-          clearInterval(interval);
+          window.clearInterval(decodeTimer);
+          decodeTimer = 0;
           pill.textContent = target;
           animating = false;
         }
       }, 35);
     }
 
-    setInterval(function() {
-      idx = (idx + 1) % greetings.length;
-      glitchTo(greetings[idx]);
-    }, 3000);
+    function startCycle() {
+      if (!heroInView || cycleTimer || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      cycleTimer = window.setInterval(function() {
+        idx = (idx + 1) % greetings.length;
+        glitchTo(greetings[idx]);
+      }, 3000);
+    }
+
+    function stopCycle() {
+      window.clearInterval(cycleTimer);
+      window.clearInterval(decodeTimer);
+      cycleTimer = 0;
+      decodeTimer = 0;
+      animating = false;
+    }
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden || !heroInView) stopCycle();
+      else startCycle();
+    });
+
+    var hero = pill.closest('.home-hero');
+    var heroObserver = null;
+    if (hero && 'IntersectionObserver' in window) {
+      heroObserver = new IntersectionObserver(function(entries) {
+        heroInView = Boolean(entries[0] && entries[0].isIntersecting);
+        hero.classList.toggle('is-offscreen', !heroInView);
+        if (heroInView && !document.hidden) startCycle();
+        else stopCycle();
+      });
+      heroObserver.observe(hero);
+    }
+    window.addEventListener('pagehide', stopCycle, { once: true });
+    window.addEventListener('pagehide', function() {
+      if (heroObserver) heroObserver.disconnect();
+    }, { once: true });
+    startCycle();
   })();
 
   /* ── Drag-to-scroll for photo strip ── */
   (function() {
     var el = document.getElementById('homePhotos');
     if (!el) return;
-    var isDown = false, startX, scrollLeft;
-    el.addEventListener('mousedown', function(e) {
-      isDown = true; el.classList.add('dragging');
-      startX = e.pageX - el.offsetLeft;
-      scrollLeft = el.scrollLeft;
-    });
-    el.addEventListener('mouseleave', function() { isDown = false; el.classList.remove('dragging'); });
-    el.addEventListener('mouseup', function() { isDown = false; el.classList.remove('dragging'); });
-    el.addEventListener('mousemove', function(e) {
+    var isDown = false;
+    var startX = 0;
+    var scrollStart = 0;
+    var latestX = 0;
+    var dragRaf = 0;
+
+    function renderDrag() {
+      dragRaf = 0;
+      if (isDown) el.scrollLeft = scrollStart - (latestX - startX) * 1.5;
+    }
+
+    function finishDrag(e) {
       if (!isDown) return;
-      e.preventDefault();
-      el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX) * 1.5;
+      isDown = false;
+      el.classList.remove('dragging');
+      if (e && el.hasPointerCapture && el.hasPointerCapture(e.pointerId)) el.releasePointerCapture(e.pointerId);
+    }
+
+    el.addEventListener('pointerdown', function(e) {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      isDown = true;
+      startX = latestX = e.clientX;
+      scrollStart = el.scrollLeft;
+      el.classList.add('dragging');
+      el.setPointerCapture(e.pointerId);
     });
+    el.addEventListener('pointermove', function(e) {
+      if (!isDown) return;
+      latestX = e.clientX;
+      if (!dragRaf) dragRaf = requestAnimationFrame(renderDrag);
+      e.preventDefault();
+    });
+    el.addEventListener('pointerup', finishDrag);
+    el.addEventListener('pointercancel', finishDrag);
+    window.addEventListener('pagehide', function() {
+      if (dragRaf) cancelAnimationFrame(dragRaf);
+    }, { once: true });
   })();
 </script>

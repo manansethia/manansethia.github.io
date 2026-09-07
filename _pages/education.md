@@ -1,8 +1,8 @@
 ---
 permalink: /education/
 title: "Education"
-description: "Manan Sethia's education — Krishna Public School, Raipur. CBSE PCME with Computer Science, active in student leadership, technical clubs, and quizzing."
-keywords: "Manan Sethia education, Krishna Public School, CBSE, Raipur, Computer Science, PCME"
+description: "Manan Sethia's education — Bachelor of Computing in Computer Science at Nanyang Technological University, Singapore, after Krishna Public School, Raipur."
+keywords: "Manan Sethia education, Nanyang Technological University, NTU Singapore, Computer Science, Krishna Public School, CBSE"
 author_profile: true
 ---
 
@@ -211,7 +211,7 @@ author_profile: true
 
 <div class="edu-card">
   <div class="edu-header">
-    <img src="/images/ntu.avif" alt="NTU Logo" width="62" height="62">
+    <img loading="lazy" decoding="async" src="/images/ntu.avif" alt="NTU Logo" width="62" height="62">
     <div class="edu-title-block">
       <span class="edu-school-name" role="heading" aria-level="2">Nanyang Technological University</span>
       <div class="edu-subtitle">College of Computing and Data Science (CCDS) · Singapore</div>
@@ -230,13 +230,15 @@ author_profile: true
       <span class="edu-subject">Artificial Intelligence</span>
     </div>
   </div>
+
+  <div class="edu-note">Recipient of the NTU Science and Technology Undergraduate Scholarship.</div>
 </div>
 
 <br>
 
 <div class="edu-card">
   <div class="edu-header">
-    <img src="/images/kps.avif" alt="KPS Logo" width="62" height="62">
+    <img loading="lazy" decoding="async" src="/images/kps.avif" alt="KPS Logo" width="62" height="62">
     <div class="edu-title-block">
       <span class="edu-school-name" role="heading" aria-level="2">Krishna Public School, Kamal Vihar</span>
       <div class="edu-subtitle">Affiliated to CBSE · Raipur, Chhattisgarh, India</div>

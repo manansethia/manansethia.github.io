@@ -4,34 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Viewer</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background-color: white; overflow-x: hidden; }
-        .pdf-container { width: 100vw; min-height: 100vh; overflow-y: auto; display: block; background-color: white; }
-        canvas { display: block; width: 100vw; height: auto; background-color: #ffffff; border: none; }
+        .pdf-container { width: 100%; min-height: 100vh; display: block; background-color: white; }
+        .pdf-page { width: 100%; margin: 0 auto; position: relative; contain: layout paint; background: #fff; }
+        .pdf-page + .pdf-page { border-top: 1px solid #eee; }
+        canvas { display: block; width: 100%; height: auto; background-color: #ffffff; border: none; }
+        .pdf-error { min-height: 100vh; display: grid; place-items: center; padding: 24px; color: #444; font: 14px/1.5 system-ui, sans-serif; text-align: center; }
+        @media (max-width: 600px) {
+            .pdf-container { padding: 8px 0; }
+            .pdf-page { width: 92%; }
+        }
+        @media (max-width: 420px) {
+            .pdf-page { width: 88%; }
+        }
     </style>
 </head>
 <body>
-    <div class="pdf-container" id="pdf-container"></div>
-    <script>
-        let pdfURL = "/files/cv.pdf";
-        let scaleFactor = 5;
-        async function renderPDF() {
-            let pdfDoc = await pdfjsLib.getDocument(pdfURL).promise;
-            let container = document.getElementById("pdf-container");
-            for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
-                let page = await pdfDoc.getPage(pageNum);
-                let viewport = page.getViewport({ scale: scaleFactor });
-                let canvas = document.createElement("canvas");
-                let context = canvas.getContext("2d");
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
-                container.appendChild(canvas);
-                await page.render({ canvasContext: context, viewport: viewport });
-            }
-        }
-        renderPDF();
-    </script>
+    <div class="pdf-container" id="pdf-container" data-pdf-kind="cv"></div>
+    <script type="module" src="/assets/js/lazy-pdf-viewer.js"></script>
 </body>
 </html>

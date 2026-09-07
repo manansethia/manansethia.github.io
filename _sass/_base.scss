@@ -11,19 +11,12 @@ html {
 
 body {
   margin: 0;
+  position: relative;
   padding: $masthead-height 0 0;
   color: #000;
   font-family: $global-font-family;
   line-height: 1.5;
   background-color: #fffbeb;
-  background-image:
-    radial-gradient(circle at 5% 10%, rgba(255, 219, 148, 0.4), transparent 38%),
-    radial-gradient(circle at 90% -5%, rgba(255, 230, 164, 0.3), transparent 35%),
-    radial-gradient(circle at 95% 55%, rgba(255, 215, 130, 0.35), transparent 40%),
-    radial-gradient(circle at 10% 65%, rgba(255, 225, 150, 0.4), transparent 35%),
-    radial-gradient(circle at 75% 95%, rgba(255, 205, 115, 0.3), transparent 38%),
-    radial-gradient(circle at 35% 105%, rgba(255, 220, 140, 0.3), transparent 40%);
-  background-attachment: fixed;
   -webkit-tap-highlight-color: transparent !important;
 
   /* CSS sticky-footer pattern: body is a flex column with min-height: 100vh.
@@ -50,8 +43,30 @@ body {
   }
 }
 
+/* The same fixed radial background, isolated on a viewport-sized static
+   layer. `background-attachment: fixed` repaints the body on every scroll;
+   this version is rasterized once and simply composited behind the content. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 5% 10%, rgba(255, 219, 148, 0.4), transparent 38%),
+    radial-gradient(circle at 90% -5%, rgba(255, 230, 164, 0.3), transparent 35%),
+    radial-gradient(circle at 95% 55%, rgba(255, 215, 130, 0.35), transparent 40%),
+    radial-gradient(circle at 10% 65%, rgba(255, 225, 150, 0.4), transparent 35%),
+    radial-gradient(circle at 75% 95%, rgba(255, 205, 115, 0.3), transparent 38%),
+    radial-gradient(circle at 35% 105%, rgba(255, 220, 140, 0.3), transparent 40%);
+  contain: strict;
+}
+
 .dark-mode body {
   background-color: #120c00;
+}
+
+.dark-mode body::before {
   background-image:
     radial-gradient(circle at 5% 10%, rgba(225, 155, 45, 0.07), transparent 38%),
     radial-gradient(circle at 90% -5%, rgba(230, 145, 30, 0.05), transparent 35%),
@@ -59,11 +74,13 @@ body {
     radial-gradient(circle at 10% 65%, rgba(210, 140, 40, 0.07), transparent 35%),
     radial-gradient(circle at 75% 95%, rgba(170, 105, 15, 0.06), transparent 38%),
     radial-gradient(circle at 35% 105%, rgba(220, 145, 35, 0.05), transparent 40%);
-  background-attachment: fixed;
 }
 
 .royal-mode body {
   background-color: #0d0d0c;
+}
+
+.royal-mode body::before {
   background-image:
     radial-gradient(circle at 5% 10%, rgba(35, 35, 33, 0.8), transparent 38%),
     radial-gradient(circle at 90% -5%, rgba(45, 44, 40, 0.6), transparent 35%),
@@ -71,7 +88,6 @@ body {
     radial-gradient(circle at 10% 65%, rgba(48, 47, 43, 0.5), transparent 35%),
     radial-gradient(circle at 75% 95%, rgba(30, 30, 28, 0.8), transparent 38%),
     radial-gradient(circle at 35% 105%, rgba(55, 53, 48, 0.4), transparent 40%);
-  background-attachment: fixed;
 }
 
 h1,
@@ -456,55 +472,101 @@ figure img,
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* Collapsible stack body — expand/collapse animation
-   Uses grid-template-rows: 0fr <-> 1fr (matches pdf-grid-outer pattern). */
+/* Collapsible stack body — shell and content use separate phases. */
 .mrida-stack-body {
-  -webkit-transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease !important;
-  transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease !important;
+  display: grid !important;
+  grid-template-rows: 0fr;
+  overflow: hidden !important;
+  visibility: hidden;
+  -webkit-transition: grid-template-rows 0.56s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.56s !important;
+  transition: grid-template-rows 0.56s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.56s !important;
 }
 
-/* TOC collapsible body — expand/collapse */
+.mrida-stack-body.open {
+  grid-template-rows: 1fr !important;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.mrida-stack-body > .mrida-specs-layout {
+  min-height: 0;
+  overflow: hidden !important;
+  opacity: 0;
+  -webkit-transition: opacity 0.24s ease, transform 0.24s ease !important;
+  transition: opacity 0.24s ease, transform 0.24s ease !important;
+}
+
+.mrida-stack-body.content-visible > .mrida-specs-layout {
+  opacity: 1 !important;
+}
+
+/* Achievements TOC: one-state measured-height collapse (search remains outside). */
 .toc-body {
-  -webkit-transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
-  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease !important;
+  max-height: 0;
+  overflow: hidden !important;
+  overflow-anchor: none;
+  -webkit-transition: max-height 0.72s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: max-height 0.72s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.toc-box:not(.collapsed) .toc-body {
+  max-height: var(--toc-open-height, 6000px);
+}
+
+.toc-list {
+  height: auto !important;
 }
 
 /* TOC chevron rotation */
 .toc-chevron {
-  -webkit-transition: transform 0.3s ease !important;
-  transition: transform 0.3s ease !important;
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-/* PDF viewer (Resume page) — CSS Grid height + fade */
+/* Dark theme TOC header gradient */
+html.dark-mode .toc-header,
+.dark-mode .toc-header,
+html.dark-mode .toc-header:hover,
+.dark-mode .toc-header:hover {
+  background: linear-gradient(135deg, rgba(45, 33, 8, 0.96) 0%, rgba(74, 58, 30, 0.96) 60%, rgba(26, 17, 0, 0.96) 100%) !important;
+  background: linear-gradient(135deg, unquote("rgb(45 33 8 / 96%)") 0%, unquote("rgb(74 58 30 / 96%)") 60%, unquote("rgb(26 17 0 / 96%)") 100%) !important;
+}
+
+/* PDF viewer (Resume page) — CSS Grid height (box slides down into place) */
 .pdf-viewer-outer {
-  -webkit-transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  -webkit-transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .pdf-viewer-wrap {
-  -webkit-transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s !important;
-  transition: opacity 0.4s ease 0.05s, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.05s !important;
+  -webkit-transition: opacity 0.25s ease !important;
+  transition: opacity 0.25s ease !important;
 }
 
 .pdf-viewer-frame {
-  -webkit-transition: opacity 0.5s ease !important;
-  transition: opacity 0.5s ease !important;
+  -webkit-transition: opacity 0.25s ease !important;
+  transition: opacity 0.25s ease !important;
 }
 
-/* MRIDA PDF (Projects page) — CSS Grid height + fade */
+/* MRIDA PDF (Projects page) — CSS Grid height matching cv.md */
 .pdf-grid-outer {
-  -webkit-transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  -webkit-transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .pdf-grid-inner {
-  -webkit-transition: opacity 0.35s ease 0.15s !important;
-  transition: opacity 0.35s ease 0.15s !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+}
+
+.responsive-pdf {
+  -webkit-transition: opacity 0.25s ease !important;
+  transition: opacity 0.25s ease !important;
 }
 
 .pdf-toggle-chevron {
-  -webkit-transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 /* Doc tabs (Resume page) — colour + transform */

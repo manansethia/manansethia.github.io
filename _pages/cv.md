@@ -21,6 +21,17 @@ redirect_from:
     color: inherit;
   }
 
+  /* Tighten the two intro gaps without changing the rest of the page rhythm. */
+  .page__title {
+    margin-bottom: 0.325em;
+  }
+  .resume-intro-heading {
+    margin-bottom: 7px !important;
+  }
+  .archive > p:has(> .resume-intro-heading) {
+    margin-bottom: 0.78em;
+  }
+
   /* ── Decorative divider ── */
   .resume-divider {
     height: 2px;
@@ -57,7 +68,7 @@ redirect_from:
     padding: 10px 24px 9px;
     font-size: 0.88em;
     font-weight: 600;
-    color: #8b7040;
+    color: #835400;
     cursor: pointer;
     border: 2px solid transparent;
     border-bottom: none;
@@ -68,7 +79,7 @@ redirect_from:
     transition: color 0.3s ease, background 0.3s ease, border-color 0.35s ease, transform 0.2s ease;
   }
   .dark-mode .doc-tab {
-    color: #a08050;
+    color: #f1c27b;
   }
   .royal-mode .doc-tab {
     color: #ffffd1;
@@ -121,7 +132,7 @@ redirect_from:
   .pdf-viewer-outer {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .pdf-viewer-outer.open {
     grid-template-rows: 1fr;
@@ -191,7 +202,7 @@ redirect_from:
     display: block;
     background: #fff;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.25s ease;
   }
   .pdf-viewer-frame.loaded {
     opacity: 1;
@@ -225,13 +236,13 @@ redirect_from:
     background: linear-gradient(135deg, rgb(68, 41, 0), rgb(141, 85, 0));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    color: #e9a700 !important;
+    color: #ffbf1f !important;
     border: 2px solid rgba(6, 4, 0);
   }
   .dl-btn:hover {
     box-shadow: #000000 0 0 0.3rem;
     background: linear-gradient(135deg, rgb(48, 29, 0), rgb(65, 42, 9)) !important;
-    color: #e9a700 !important;
+    color: #ffbf1f !important;
     border: 2px solid #060400 !important;
     transform: translateY(-2px);
   }
@@ -250,11 +261,11 @@ redirect_from:
     transform: translateY(-2px);
   }
   .royal-mode .dl-btn {
-    background: linear-gradient(135deg, rgba(45, 43, 38, 0.8), rgba(35, 33, 29, 0.6)) !important;
+    background: linear-gradient(135deg, rgba(45, 43, 38, 1), rgba(35, 33, 29, 1)) !important;
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(8px) !important;
     color: #ffffd1 !important;
-    border: 2px solid #4a463d !important;
+    border: 2px solid #817968 !important;
   }
   .royal-mode .dl-btn:hover {
     box-shadow: #ffffd1 0 0 0.3rem !important;
@@ -270,7 +281,7 @@ redirect_from:
   .royal-mode .page__content h2 { border-bottom: 1.5px solid rgba(240, 240, 240, 0.9); }
 </style>
 
-<span class="resume-intro" role="heading" aria-level="2" style="font-size:1.17em;font-weight:600;display:block;margin-bottom:20px">Here are my Resume and CV.</span>
+<span class="resume-intro resume-intro-heading" role="heading" aria-level="2" style="font-size:1.17em;font-weight:600;display:block">Here are my Resume and CV.</span>
 
 Think of the tabs below like browser tabs; tap one to peek inside, tap it again to fold it back up, or switch between them. You can also grab a copy using the download buttons below.
 {: .resume-intro}
@@ -387,24 +398,23 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
 
   /* Pump per-frame footer push during the height transition. Bypasses
      ResizeObserver (which can miss frames if body height is locked by
-     min-height). 700ms covers 0.6s grid anim + 100ms settle margin. */
+     min-height). 600ms covers 0.5s grid anim + 100ms settle margin. */
   function pumpFooter() {
-    if (window.smoothFooterPush) window.smoothFooterPush(700);
+    if (window.smoothFooterPush) window.smoothFooterPush(600);
   }
 
   function switchDoc(which) {
     if (current === which) {
-      /* Collapse: hide content first, then collapse height. Keep iframe src
-         loaded so re-opening this tab is instant — no re-fetch, no re-render. */
+      /* Collapse: fade content out first (0.18s), then collapse height smoothly (0.45s). */
       frame.classList.remove('loaded');
       wrap.classList.remove('loading');
-      pumpFooter(); /* start per-frame footer pump at click moment */
-      requestAnimationFrame(function() {
+      tabR.classList.remove('active');
+      tabC.classList.remove('active');
+      current = null;
+      setTimeout(function() {
+        pumpFooter();
         outer.classList.remove('open');
-        tabR.classList.remove('active');
-        tabC.classList.remove('active');
-        current = null;
-      });
+      }, 180);
       return;
     }
 
@@ -427,17 +437,13 @@ Think of the tabs below like browser tabs; tap one to peek inside, tap it again 
     }
 
     if (!current) {
-      /* Opening from closed — animate height (0.6s), then fade iframe in. */
+      /* Opening from closed — animate height (0.45s), then fade iframe in (0.25s). */
       pumpFooter(); /* start per-frame footer pump at click moment */
-      requestAnimationFrame(function() {
-        requestAnimationFrame(function() {
-          outer.classList.add('open');
-          setTimeout(function() {
-            frame.classList.add('loaded');
-            wrap.classList.remove('loading');
-          }, 620);
-        });
-      });
+      outer.classList.add('open');
+      setTimeout(function() {
+        frame.classList.add('loaded');
+        wrap.classList.remove('loading');
+      }, 450);
     } else if (needsSwap) {
       /* Already open, just swapped src — fade back in once load fires. */
       var onLoad = function() {

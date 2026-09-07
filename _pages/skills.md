@@ -1,7 +1,7 @@
 ---
 permalink: /skills/
 title: "Skills"
-description: "Manan Sethia's 142+ technical skills — Python, C++, AI/ML, cybersecurity, Linux, embedded systems, networking, web development, and leadership."
+description: "Manan Sethia's technical tools and skills — programming, data engineering, AI/ML, cybersecurity, Linux, build systems, mobile development, DevOps, networking, and embedded systems."
 keywords: "Manan Sethia skills, Python, C++, AI, machine learning, cybersecurity, Linux, embedded systems, competitive programming"
 author_profile: true
 ---
@@ -14,14 +14,14 @@ author_profile: true
 
   .skills-page {
     --skills-bg: #fff8ec;
-    --skills-surface: rgba(255, 255, 255, 0.65);
-    --skills-surface-strong: rgba(255, 250, 241, 0.75);
-    --skills-surface-soft: rgba(255, 243, 221, 0.65);
+    --skills-surface: rgba(255, 255, 255, 0.88);
+    --skills-surface-strong: rgba(255, 250, 241, 0.88);
+    --skills-surface-soft: rgba(255, 243, 221, 0.88);
     --skills-border: rgba(191, 129, 12, 0.26);
     --skills-border-strong: rgba(179, 108, 0, 0.34);
     --skills-title: #301e04;
     --skills-text: #5e4420;
-    --skills-muted: #7b5b2d;
+    --skills-muted: #633a00;
     --skills-chip-bg: rgba(255, 244, 224, 0.9);
     --skills-chip-text: #5d3f11;
     --skills-chip-border: rgba(192, 132, 26, 0.26);
@@ -35,13 +35,12 @@ author_profile: true
   .skills-page::before,
   .skills-page::after {
     content: "";
-    position: fixed;
+    position: absolute;
     z-index: -1;
     inset: auto;
     border-radius: 50%;
     pointer-events: none;
-    filter: blur(18px);
-    opacity: 0.7;
+    display: none;
   }
 
   .skills-page::before {
@@ -62,9 +61,9 @@ author_profile: true
 
   .dark-mode .skills-page {
     --skills-bg: #130d04;
-    --skills-surface: rgba(31, 21, 9, 0.7);
-    --skills-surface-strong: rgba(44, 31, 15, 0.8);
-    --skills-surface-soft: rgba(50, 35, 16, 0.7);
+    --skills-surface: rgba(31, 21, 9, 0.88);
+    --skills-surface-strong: rgba(44, 31, 15, 0.88);
+    --skills-surface-soft: rgba(50, 35, 16, 0.88);
     --skills-border: rgba(255, 204, 112, 0.15);
     --skills-border-strong: rgba(255, 210, 120, 0.25);
     --skills-title: #fff0ca;
@@ -78,9 +77,9 @@ author_profile: true
   }
   .royal-mode .skills-page {
     --skills-bg: #0d0d0c;
-    --skills-surface: rgba(60, 58, 54, 0.78);
+    --skills-surface: rgba(60, 58, 54, 0.88);
     --skills-surface-strong: rgba(60, 58, 54, 0.88);
-    --skills-surface-soft: rgba(60, 58, 54, 0.75);
+    --skills-surface-soft: rgba(60, 58, 54, 0.88);
     --skills-border: rgba(240, 240, 240, 0.2);
     --skills-border-strong: rgba(240, 240, 240, 0.2);
     --skills-title: #ffffff;
@@ -102,9 +101,9 @@ author_profile: true
     border-radius: 28px;
     background:
       radial-gradient(circle at top right, rgba(255, 219, 148, 0.7), rgba(255, 219, 148, 0) 38%),
-      linear-gradient(145deg, rgba(255, 251, 243, 0.7), rgba(255, 240, 205, 0.65));
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+      linear-gradient(145deg, rgba(255, 251, 243, 0.88), rgba(255, 240, 205, 0.88));
+    backdrop-filter: blur(60px) !important;
+    -webkit-backdrop-filter: blur(60px) !important;
     box-shadow: var(--skills-shadow-strong);
     isolation: isolate;
     animation: entranceUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
@@ -121,6 +120,7 @@ author_profile: true
     position: absolute;
     border-radius: 999px;
     pointer-events: none;
+    display: none;
   }
 
   .skills-orbit::before {
@@ -142,12 +142,12 @@ author_profile: true
   .dark-mode .skills-orbit {
     background:
       radial-gradient(circle at top right, rgba(255, 198, 89, 0.18), rgba(255, 198, 89, 0) 34%),
-      linear-gradient(145deg, rgba(43, 29, 11, 0.85), rgba(24, 16, 7, 0.8));
+      linear-gradient(145deg, rgba(43, 29, 11, 0.88), rgba(24, 16, 7, 0.88));
   }
   .royal-mode .skills-orbit {
     background:
       radial-gradient(circle at top right, rgba(255, 232, 165, 0.35), rgba(255, 233, 166, 0) 34%),
-      linear-gradient(145deg, rgba(71, 69, 65, 0.72), rgba(31, 31, 28, 0.68));
+      linear-gradient(145deg, rgba(71, 69, 65, 0.88), rgba(31, 31, 28, 0.88));
   }
   .royal-mode .skills-orbit::before {
     border-color: rgba(240, 240, 240, 0.12);
@@ -297,16 +297,12 @@ author_profile: true
     background:
       linear-gradient(180deg, var(--skills-surface-strong), var(--skills-surface)),
       linear-gradient(145deg, rgba(255, 241, 205, 0.2), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     box-shadow: var(--skills-shadow);
     isolation: isolate;
-    animation: entranceUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-    animation-delay: 0.1s;
-    /* Confine layout + paint per card so sibling card repaints + scroll-driven
-       backdrop resamples don't ripple across the whole grid. Reduces jitter
-       on long pages where many cards stack. Already overflow:hidden so no
-       clip behaviour change. */
+    backdrop-filter: blur(60px) !important;
+    -webkit-backdrop-filter: blur(60px) !important;
+    /* Bound each filtered surface so its backdrop work cannot spill into
+       neighbouring cards during scroll. */
     contain: layout paint;
   }
 
@@ -409,14 +405,11 @@ author_profile: true
     }
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  @media (prefers-reduced-motion: no-preference) and (hover: hover) and (pointer: fine) {
     .skills-card,
     .skills-orbit {
       transition: transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.24s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.24s ease;
-      /* will-change moved to :hover/:focus-within ONLY. Always-on was creating
-         a permanent GPU layer per card; combined with backdrop-filter (which
-         already needs its own layer) = 2 layers per card -> GPU pressure on
-         long scrolls -> blanking patches. */
+      /* Promote only the card being interacted with. */
     }
     .skills-card:hover,
     .skills-card:focus-within,
@@ -437,13 +430,6 @@ author_profile: true
     .royal-mode .skills-orbit:hover {
       box-shadow: 0 28px 80px rgba(0, 0, 0, 0.6);
     }
-    
-    /* Staggered entrance for sibling cards */
-    .skills-card:nth-child(2) { animation-delay: 0.15s; }
-    .skills-card:nth-child(3) { animation-delay: 0.2s; }
-    .skills-card:nth-child(4) { animation-delay: 0.25s; }
-    .skills-card:nth-child(5) { animation-delay: 0.3s; }
-    .skills-card:nth-child(6) { animation-delay: 0.35s; }
   }
 
   @media (max-width: 640px) {
@@ -486,7 +472,7 @@ author_profile: true
   <section class="skills-orbit">
     <div style="display: flex; justify-content: space-between; align-items: flex-start;">
       <div class="skills-focus-label">Focus Areas</div>
-      <div class="skills-focus-label" style="background: rgba(179, 108, 0, 0.08); border-color: rgba(179, 108, 0, 0.25);">🎯 142 Skills</div>
+      <div class="skills-focus-label" id="skillsCount" style="background: rgba(179, 108, 0, 0.08); border-color: rgba(179, 108, 0, 0.25);">🎯 Tools &amp; Skills</div>
     </div>
     <div class="skills-focus-copy">
       <h2>Started with my dad's laptop. Grew from there.</h2>
@@ -520,6 +506,12 @@ author_profile: true
           <span class="skills-tag">HTML</span>
           <span class="skills-tag">CSS</span>
           <span class="skills-tag">JavaScript</span>
+          <span class="skills-tag">TypeScript</span>
+          <span class="skills-tag">C# / .NET basics</span>
+          <span class="skills-tag">Swift / Xcode basics</span>
+          <span class="skills-tag">Kotlin basics</span>
+          <span class="skills-tag">Bash</span>
+          <span class="skills-tag">PowerShell</span>
         </div>
       </div>
       <div class="skills-group">
@@ -536,6 +528,16 @@ author_profile: true
           <span class="skills-tag">Jupyter Notebook</span>
           <span class="skills-tag">Turtle</span>
           <span class="skills-tag">Tkinter</span>
+          <span class="skills-tag">Requests</span>
+          <span class="skills-tag">HTTPX</span>
+          <span class="skills-tag">Beautiful Soup</span>
+          <span class="skills-tag">openpyxl</span>
+          <span class="skills-tag">Pydantic</span>
+          <span class="skills-tag">asyncio</span>
+          <span class="skills-tag">Concurrent Futures &amp; Multiprocessing</span>
+          <span class="skills-tag">Regular Expressions</span>
+          <span class="skills-tag">pytest</span>
+          <span class="skills-tag">Playwright / Browser Automation</span>
         </div>
       </div>
     </article>
@@ -575,10 +577,33 @@ author_profile: true
           <span class="skills-tag">Applied AI Systems</span>
           <span class="skills-tag">Data Interpretation</span>
           <span class="skills-tag">Data Analysis</span>
-          <span class="skills-tag">Data Engineering (basics)</span>
+          <span class="skills-tag">Data Engineering &amp; ETL Pipelines</span>
           <span class="skills-tag">Model Context Protocol (MCP) basics</span>
           <span class="skills-tag">Retrieval-Augmented Generation (RAG) beginner</span>
           <span class="skills-tag">Agentic System Integration (basics)</span>
+        </div>
+      </div>
+      <div class="skills-group">
+        <h3>Academic Data &amp; Research Engineering</h3>
+        <div class="skills-tags">
+          <span class="skills-tag">Bibliometric Data Engineering</span>
+          <span class="skills-tag">ETL Pipeline Design</span>
+          <span class="skills-tag">Entity Resolution</span>
+          <span class="skills-tag">Researcher &amp; Author Disambiguation</span>
+          <span class="skills-tag">Schema Normalization</span>
+          <span class="skills-tag">Deduplication</span>
+          <span class="skills-tag">API Orchestration &amp; Rate-Limit Handling</span>
+          <span class="skills-tag">SciVal APIs</span>
+          <span class="skills-tag">Scopus APIs</span>
+          <span class="skills-tag">Semantic Scholar Academic Graph</span>
+          <span class="skills-tag">OpenAlex</span>
+          <span class="skills-tag">Research Organization Registry (ROR)</span>
+          <span class="skills-tag">Wikidata</span>
+          <span class="skills-tag">ORCID Validation &amp; Enrichment</span>
+          <span class="skills-tag">SQLite WAL &amp; Transactional Pipelines</span>
+          <span class="skills-tag">Large-Scale CSV, XLSX &amp; SQL Delivery</span>
+          <span class="skills-tag">Data Integrity &amp; Audit Trails</span>
+          <span class="skills-tag">Adversarial Data-Pipeline Testing</span>
         </div>
       </div>
       <div class="skills-group">
@@ -605,6 +630,15 @@ author_profile: true
         <span class="skills-tag">Package &amp; Dependency Management (pip, npm, conda, apt)</span>
         <span class="skills-tag">Shell Scripting (Bash, PowerShell)</span>
         <span class="skills-tag">Browser DevTools &amp; Debugging</span>
+        <span class="skills-tag">Node.js Runtime &amp; npm/npx Workflows</span>
+        <span class="skills-tag">REST APIs &amp; JSON Integrations</span>
+        <span class="skills-tag">Asynchronous &amp; Concurrent Pipelines</span>
+        <span class="skills-tag">Java Build Tooling (Maven, Gradle)</span>
+        <span class="skills-tag">.NET CLI &amp; NuGet basics</span>
+        <span class="skills-tag">Android Studio, Gradle &amp; ADB</span>
+        <span class="skills-tag">Xcode &amp; Swift Package Manager basics</span>
+        <span class="skills-tag">Linting &amp; Formatting (ESLint, Prettier, Biome)</span>
+        <span class="skills-tag">Testing (pytest, Jest, Vitest)</span>
       </div>
     </article>
     <article class="skills-card span-6">
@@ -616,13 +650,20 @@ author_profile: true
       <div class="skills-tags">
         <span class="skills-tag">Git</span>
         <span class="skills-tag">GitHub</span>
-        <span class="skills-tag">CI/CD</span>
+        <span class="skills-tag">Git Branching, Rebasing &amp; Code Review</span>
+        <span class="skills-tag">CI/CD Pipelines</span>
+        <span class="skills-tag">GitHub Actions</span>
         <span class="skills-tag">Docker</span>
+        <span class="skills-tag">Docker Compose</span>
         <span class="skills-tag">LXC</span>
         <span class="skills-tag">Proxmox</span>
         <span class="skills-tag">Virtualization Concepts (VMs, hypervisors, VirtualBox, VMware, QEMU basics)</span>
         <span class="skills-tag">Server Hosting &amp; Management</span>
         <span class="skills-tag">Cloudflare</span>
+        <span class="skills-tag">Build, Test &amp; Release Automation</span>
+        <span class="skills-tag">Environment &amp; Secret Configuration</span>
+        <span class="skills-tag">Nginx basics</span>
+        <span class="skills-tag">SSH, SCP &amp; rsync Deployments</span>
       </div>
     </article>
     <article class="skills-card span-12">
@@ -643,6 +684,14 @@ author_profile: true
           <span class="skills-tag">Embedded / POS Windows</span>
           <span class="skills-tag">Linux</span>
           <span class="skills-tag">Advanced Linux (Debian-based, Fedora-based)</span>
+          <span class="skills-tag">Ubuntu</span>
+          <span class="skills-tag">Debian</span>
+          <span class="skills-tag">Fedora</span>
+          <span class="skills-tag">Arch Linux</span>
+          <span class="skills-tag">Kali Linux</span>
+          <span class="skills-tag">Raspberry Pi OS</span>
+          <span class="skills-tag">Linux Mint</span>
+          <span class="skills-tag">Tails</span>
           <span class="skills-tag">x86, ARM, RISC architectures</span>
           <span class="skills-tag">Embedded Linux</span>
           <span class="skills-tag">UNIX/Linux-Based Systems</span>
@@ -664,6 +713,10 @@ author_profile: true
           <span class="skills-tag">Memory Concepts (basic)</span>
           <span class="skills-tag">Storage Management (HDD, SSD, swap, health monitoring)</span>
           <span class="skills-tag">Windows Registry &amp; Driver Management</span>
+          <span class="skills-tag">Bash, zsh &amp; Shell Environments</span>
+          <span class="skills-tag">systemd Services, Logs &amp; Daemons</span>
+          <span class="skills-tag">Cron &amp; Scheduled Automation</span>
+          <span class="skills-tag">File Permissions, Users &amp; Groups</span>
         </div>
       </div>
     </article>
@@ -682,6 +735,10 @@ author_profile: true
         <span class="skills-tag">Server Setup &amp; Management</span>
         <span class="skills-tag">Tailscale (VPN / networking)</span>
         <span class="skills-tag">SSH (Remote Access)</span>
+        <span class="skills-tag">HTTP/HTTPS &amp; TLS basics</span>
+        <span class="skills-tag">Proxies &amp; SOCKS</span>
+        <span class="skills-tag">VPN &amp; Overlay Networks</span>
+        <span class="skills-tag">API Pagination, Retries &amp; Backoff</span>
       </div>
     </article>
     <article class="skills-card span-7">
@@ -711,6 +768,7 @@ author_profile: true
           <span class="skills-tag">End-to-End Encryption</span>
           <span class="skills-tag">Basic Threat Awareness</span>
           <span class="skills-tag">OWASP Concepts (introductory)</span>
+          <span class="skills-tag">CTF Fundamentals</span>
         </div>
       </div>
     </article>
@@ -729,6 +787,7 @@ author_profile: true
         <span class="skills-tag">Circuit Design &amp; Board Development</span>
         <span class="skills-tag">IoT Systems</span>
         <span class="skills-tag">Sensors &amp; Robotics</span>
+        <span class="skills-tag">Hackathon Hardware Prototyping</span>
       </div>
     </article>
     <article class="skills-card span-6">
@@ -743,6 +802,12 @@ author_profile: true
         <span class="skills-tag">Markdown</span>
         <span class="skills-tag">GitHub Pages Deployment</span>
         <span class="skills-tag">Website Structuring</span>
+        <span class="skills-tag">Node.js</span>
+        <span class="skills-tag">npm / npx</span>
+        <span class="skills-tag">Liquid Templates</span>
+        <span class="skills-tag">Sass / SCSS</span>
+        <span class="skills-tag">Responsive Web Design</span>
+        <span class="skills-tag">Accessibility &amp; Semantic HTML</span>
         <span class="skills-tag">SEO (Google Search Console)</span>
         <span class="skills-tag">JSON</span>
         <span class="skills-tag">XML</span>
@@ -760,6 +825,11 @@ author_profile: true
         <h3>General Tools</h3>
         <div class="skills-tags">
           <span class="skills-tag">VS Code / VSCodium</span>
+          <span class="skills-tag">Android Studio</span>
+          <span class="skills-tag">Xcode</span>
+          <span class="skills-tag">GitHub Desktop</span>
+          <span class="skills-tag">Postman / API Testing</span>
+          <span class="skills-tag">Terminal &amp; CLI Toolchains</span>
         </div>
       </div>
       <div class="skills-group">
@@ -785,6 +855,10 @@ author_profile: true
         <div class="skills-tags">
           <span class="skills-tag">MIT App Inventor</span>
           <span class="skills-tag">APK Development, Tweaking &amp; Reverse Engineering</span>
+          <span class="skills-tag">Android Studio &amp; ADB</span>
+          <span class="skills-tag">Xcode &amp; iOS Build Workflow basics</span>
+          <span class="skills-tag">Electron Desktop Apps</span>
+          <span class="skills-tag">.NET Desktop Development basics</span>
         </div>
       </div>
     </article>
@@ -815,7 +889,17 @@ author_profile: true
         <span class="skills-tag">Public Speaking</span>
         <span class="skills-tag">Presentation Skills</span>
         <span class="skills-tag">Academic Writing</span>
+        <span class="skills-tag">Technical Workshop Direction</span>
       </div>
     </article>
   </section>
 </div>
+
+<script>
+  (function () {
+    var label = document.getElementById('skillsCount');
+    if (!label) return;
+    var count = document.querySelectorAll('.skills-grid .skills-tag').length;
+    label.textContent = '🎯 ' + count + ' Tools & Skills';
+  })();
+</script>

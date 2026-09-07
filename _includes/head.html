@@ -14,9 +14,17 @@
   "name": "Manan Sethia",
   "url": "https://manansethia.com",
   "image": "https://manansethia.com/images/manan.avif",
-  "jobTitle": "Student & Competitive Programmer",
-  "description": "Student, quizzer, and competitive programmer from Raipur — building things at the intersection of computer science and curiosity.",
+  "jobTitle": "Computer Science Undergraduate",
+  "description": "Computer Science undergraduate at Nanyang Technological University, Singapore, building across data engineering, systems, cybersecurity, and applied AI.",
   "knowsAbout": ["Computer Science", "Artificial Intelligence", "Cybersecurity", "Competitive Programming", "Embedded Systems", "Operating Systems"],
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Nanyang Technological University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SG"
+    }
+  },
   "alumniOf": {
     "@type": "EducationalOrganization",
     "name": "Krishna Public School, Kamal Vihar",
@@ -45,13 +53,20 @@
 
 
 
-<!-- Dark-mode flash prevention — must be inline, minimal -->
+<!-- Theme flash prevention — inline and intentionally tiny. -->
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem("theme");
+      if (theme === "dark") document.documentElement.classList.add("dark-mode");
+      if (theme === "royal") document.documentElement.classList.add("royal-mode");
+    } catch (error) { /* Storage may be disabled. */ }
+  })();
+</script>
 <style>
-html{background:#fff}
-.dark-mode{background:transparent!important;color:#fdfdfd}
-.dark-mode .masthead{background:linear-gradient(135deg,rgba(80,50,0,0.7),rgba(40,25,0,0.5))!important;backdrop-filter:blur(16px) saturate(180%)!important;-webkit-backdrop-filter:blur(16px) saturate(180%)!important;color:#fdfdfd;border-bottom:2px solid rgba(255,210,120,0.45)!important}
-.royal-mode{background:transparent!important;color:#fdfdfd}
-.royal-mode .masthead{background:linear-gradient(135deg,rgba(30,29,26,0.7),rgba(13,12,9,0.5))!important;backdrop-filter:blur(16px) saturate(180%)!important;-webkit-backdrop-filter:blur(16px) saturate(180%)!important;color:#fdfdfd;border-bottom:2px solid rgba(200,169,106,0.45)!important}
+html{background:#fffbeb}
+html.dark-mode{background:#120c00;color:#fdfdfd}
+html.royal-mode{background:#0d0d0c;color:#fdfdfd}
 </style>
 
 <!-- CSS: render-blocking (intentional — ensures full design before paint) -->

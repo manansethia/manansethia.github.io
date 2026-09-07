@@ -23,13 +23,15 @@
   height: auto;
   margin-top: 0;
   flex-shrink: 0;
-  /* No CSS transition on margin-top: flex layout updates are immediate
-     and per-frame, smoother than any explicit transition. */
+  /* Keep footer placement entirely in normal flex flow. It must never wait
+     for an entrance animation while content above it changes height. */
   color: mix(#fff, $gray, 25%);
-  -webkit-animation: intro 0.3s both;
-  animation: intro 0.3s both;
-  -webkit-animation-delay: 0.45s;
-  animation-delay: 0.45s;
+  -webkit-animation: none !important;
+  animation: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
   background: linear-gradient(135deg, rgba(229, 149, 0, 0.6), rgba(255, 188, 66, 0.3));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);

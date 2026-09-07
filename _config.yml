@@ -11,7 +11,7 @@ locale: "en-US"
 title: "Manan Sethia"
 title_separator: "-"
 name: &name "Manan Sethia"
-description: &description "Student, quizzer, and competitive programmer from Raipur — building things at the intersection of computer science and curiosity."
+description: &description "Computer Science undergraduate at NTU Singapore — building across data engineering, systems, cybersecurity, and applied AI."
 url: "https://manansethia.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "manansethia/manansethia.github.io"
@@ -25,7 +25,7 @@ author:
   name: "Manan Sethia"
   pronouns: #"he/him"
   bio: "Curious learner and Computer Science enthusiast."
-  location: "Raipur, Chhattisgarh"
+  location: "Singapore"
   employer: "NTU Singapore"
   uri: # URL
   email: "manan@manansethia.com"
@@ -339,6 +339,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-gems:
-  - jekyll-sitemap

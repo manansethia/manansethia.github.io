@@ -185,7 +185,7 @@ author_profile: true
   .royal-mode .exp-role-sub,
   .royal-mode .exp-role-date,
   .royal-mode .exp-sub-date {
-    color: #ffffff;
+    color: #f5f5df;
   }
 
   /* Role rows */
@@ -413,16 +413,30 @@ author_profile: true
     display: flex;
     gap: 10px;
     width: max-content;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+  .exp-kps-track.is-ready {
     animation: kpsMarquee 90s linear infinite;
+    will-change: transform;
+  }
+  .exp-kps-track.is-paused {
+    animation-play-state: paused;
+  }
+  .exp-kps-set {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 10px;
   }
   .exp-kps-wrap:hover .exp-kps-track {
     animation-play-state: paused;
   }
   @keyframes kpsMarquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(var(--kps-distance, -50%), 0, 0); }
   }
   .exp-kps-track img {
+    width: auto;
     height: 170px;
     flex-shrink: 0;
     border-radius: 8px;
@@ -430,6 +444,9 @@ author_profile: true
     display: block;
     transition: none !important;
     transform: none !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .exp-kps-track.is-ready { animation-play-state: paused; }
   }
   .royal-mode .page__content h2 { border-bottom: 1.5px solid rgba(240, 240, 240, 0.9); }
   .royal-mode .exp-role-row + .exp-role-row { border-top-color: rgba(240, 240, 240, 0.5) !important; }
@@ -439,12 +456,12 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
-        <img src="/images/ntu.avif" width="512" height="512" alt="Nanyang Technological University Logo">
+        <img loading="lazy" decoding="async" src="/images/ntu.avif" width="512" height="512" alt="Nanyang Technological University Logo">
       </div>
       <div class="exp-org-copy">
         <div class="exp-org-name">Nanyang Technological University</div>
-        <div class="exp-org-range">Aug 2026 – Present
-          <span class="exp-live-duration" data-duration-start="2026-08" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
+        <div class="exp-org-range">Jul 2026 – Present
+          <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 3 mos</span>
         </div>
       </div>
     </header>
@@ -455,7 +472,7 @@ author_profile: true
         </div>
         <div class="exp-role-main">
           <div class="exp-role-icon">
-            <img src="/images/ntu_oss.avif" width="512" height="512" alt="NTU Open Source Society Logo">
+            <img loading="lazy" decoding="async" src="/images/ntu_oss.avif" width="512" height="512" alt="NTU Open Source Society Logo">
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Technical Director</div>
@@ -464,7 +481,7 @@ author_profile: true
               <span class="exp-live-duration" data-duration-start="2026-09" data-duration-end="present" data-duration-prefix=" · "> · 1 mo</span>
             </div>
             <div class="exp-desc">
-              <p>Thank God It's Friday Hacks is a sub club under NTU's Open Source Society. It explores hackathons, hardware building, software projects and workshops as well as several different competitions.</p>
+              <p>Thank God It's Friday Hacks is a sub club under NTU's Open Source Society. It explores hackathon, hardware building, software projects and workshops as well as several different competitions.</p>
             </div>
             <div class="exp-images"></div>
           </div>
@@ -476,7 +493,7 @@ author_profile: true
         </div>
         <div class="exp-role-main">
           <div class="exp-role-icon">
-            <img src="/images/ntu_sentinels.avif" width="512" height="512" alt="NTU Sentinels Logo">
+            <img loading="lazy" decoding="async" src="/images/ntu_sentinels.avif" width="512" height="512" alt="NTU Sentinels Logo">
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Technical Subcommittee Member</div>
@@ -497,12 +514,15 @@ author_profile: true
         </div>
         <div class="exp-role-main">
           <div class="exp-role-icon">
-            <img src="/images/ntu.avif" width="512" height="512" alt="Nanyang Technological University Logo">
+            <img loading="lazy" decoding="async" src="/images/ntu.avif" width="512" height="512" alt="Nanyang Technological University Logo">
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Data Analytics &amp; Engineering Assistant</div>
-            <div class="exp-role-sub">NTU Office of Data and Analytics (Work Study Scheme, ad hoc basis) · 9 mos</div>
-            <div class="exp-role-date">Jul 2026 – Mar 2027</div>
+            <div class="exp-role-sub">NTU Office of Data and Analytics (Work Study Scheme)</div>
+            <div class="exp-role-date">Jul 2026 – Present
+              <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 3 mos</span>
+              <span class="exp-engagement-note"> · Ad hoc through 31 Mar 2027</span>
+            </div>
             <div class="exp-desc">
               <p>At NTU's Office of Data and Analytics, I build automated data-harvesting, identity-resolution, and ETL pipelines that link fragmented academic records across bibliometric sources. The work handles API rate limits, inconsistent schemas, author disambiguation, and standardized SQL and flat-file delivery at scale.</p>
               <ul>
@@ -523,7 +543,7 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
-        <img src="/images/buildabot.avif" width="200" height="200" alt="Buildabot Labs Logo">
+        <img loading="lazy" decoding="async" src="/images/buildabot.avif" width="200" height="200" alt="Buildabot Labs Logo">
       </div>
       <div class="exp-org-copy">
         <div class="exp-org-name">Buildabot Labs Private Limited</div>
@@ -538,7 +558,7 @@ author_profile: true
         </div>
         <div class="exp-role-main">
           <div class="exp-role-icon">
-            <img src="/images/buildabot.avif" width="200" height="200" alt="Buildabot Labs Logo">
+            <img loading="lazy" decoding="async" src="/images/buildabot.avif" width="200" height="200" alt="Buildabot Labs Logo">
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Chief Technology and Innovations Officer (CTIO)</div>
@@ -560,7 +580,7 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
-        <img src="/images/fsti.avif" width="100" height="100" alt="FSTI Logo">
+        <img loading="lazy" decoding="async" src="/images/fsti.avif" width="100" height="100" alt="FSTI Logo">
       </div>
       <div class="exp-org-copy">
         <div class="exp-org-name">First Step Innovations (FSTI)</div>
@@ -574,7 +594,7 @@ author_profile: true
         </div>
         <div class="exp-role-main">
           <div class="exp-role-icon">
-            <img src="/images/fsti.avif" width="100" height="100" alt="FSTI Logo">
+            <img loading="lazy" decoding="async" src="/images/fsti.avif" width="100" height="100" alt="FSTI Logo">
           </div>
           <div class="exp-role-copy">
             <div class="exp-role-title">R&amp;D Intern</div>
@@ -597,7 +617,7 @@ author_profile: true
   <article class="exp-org">
     <header class="exp-org-header">
       <div class="exp-logo-box">
-        <img src="/images/kps.avif" width="1200" height="1200" alt="KPS Logo">
+        <img loading="lazy" decoding="async" src="/images/kps.avif" width="1200" height="1200" alt="KPS Logo">
       </div>
       <div class="exp-org-copy">
         <div class="exp-org-name">Krishna Public School, Kamal Vihar</div>
@@ -608,14 +628,14 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/stud.avif" width="1024" height="1024" alt="Student Council Logo"></div>
+          <div class="exp-role-icon"><img loading="lazy" decoding="async" src="/images/stud.avif" width="1024" height="1024" alt="Student Council Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Headboy</div>
             <div class="exp-role-sub">Student Council · 8 mos</div>
             <div class="exp-role-date">Jul 2025 – Feb 2026</div>
             <div class="exp-desc">
-              <p>As Headboy, I shared the responsibility with the Headgirl of overseeing the entire student council: a network comprising 18 clubs, an editorial board, and 4 houses. We oversaw 97 members, including presidents, vice presidents, prefects, deputy prefects, and editorial members.</p>
-              <p>My core responsibilities involved maintaining discipline across the council, scheduling events, managing assemblies, and organizing new initiatives. I proudly oversaw major school events: XPLORA (interschool tech and robotics), KPSMUN (three day interschool MUN), Venture Vortex (business pitching), Kaushal Mahotsav (performing arts), Lihitya (literature and creative expression), Intelligence Fest (large scale interschool multi domain competition), and our Annual Function and Felicitation where I handled speeches, event flow, and guest coordination.</p>
+              <p>As Headboy, I share the responsibility with the Headgirl of overseeing the entire student council: a network comprising 18 clubs, an editorial board, and 4 houses. We oversee 97 members, including presidents, vice presidents, prefects, deputy prefects, and editorial members.</p>
+              <p>My core responsibilities involve maintaining discipline across the council, scheduling events, managing assemblies, and organizing new initiatives. I proudly oversaw major school events: XPLORA (interschool tech and robotics), KPSMUN (three day interschool MUN), Venture Vortex (business pitching), Kaushal Mahotsav (performing arts), Lihitya (literature and creative expression), Intelligence Fest (large scale interschool multi domain competition), and our Annual Function and Felicitation where I handled speeches, event flow, and guest coordination.</p>
             </div>
             <div class="exp-images"></div>
           </div>
@@ -624,7 +644,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/icode.avif" width="1080" height="1080" alt="I-Code Logo"></div>
+          <div class="exp-role-icon"><img loading="lazy" decoding="async" src="/images/icode.avif" width="1080" height="1080" alt="I-Code Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Problem Setter</div>
             <div class="exp-role-sub">I-Code · 1 yr 2 mos</div>
@@ -640,7 +660,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/xplora.avif" width="1080" height="1080" alt="Xplora Logo"></div>
+          <div class="exp-role-icon"><img loading="lazy" decoding="async" src="/images/xplora.avif" width="1080" height="1080" alt="Xplora Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Advisor and Coordinator</div>
             <div class="exp-role-sub">Xplora · 3 yrs 1 mo</div>
@@ -656,14 +676,14 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/atl.avif" width="200" height="200" alt="ATL Club Logo"></div>
+          <div class="exp-role-icon"><img loading="lazy" decoding="async" src="/images/atl.avif" width="200" height="200" alt="ATL Club Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Innovator and Mentor</div>
             <div class="exp-role-sub">Atal Tinkering Lab (ATL Club) · 3 yrs 9 mos</div>
             <div class="exp-role-date">Jul 2022 – Mar 2026</div>
             <div class="exp-desc">
               <p>My journey began as an innovator: building prototypes, participating in competitions, and exploring robotics, embedded systems, and single board computers.</p>
-              <p>Over time, I naturally transitioned into mentoring. I proudly guided juniors on their projects, assisted them with acquiring materials, wiring components, writing code, and offered support throughout execution and refinement.</p>
+              <p>Over time, I naturally transitioned into mentoring. I proudly guide juniors on their projects, assist them with acquiring materials, wiring components, writing code, and offer support throughout execution and refinement.</p>
             </div>
             <div class="exp-images"></div>
           </div>
@@ -672,7 +692,7 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/coders.avif" width="294" height="294" alt="Coder's Club Logo"></div>
+          <div class="exp-role-icon"><img loading="lazy" decoding="async" src="/images/coders.avif" width="294" height="294" alt="Coder's Club Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Technical Leadership and Community Building</div>
             <div class="exp-role-sub">Coder's Club · 6 yrs 9 mos</div>
@@ -719,13 +739,13 @@ author_profile: true
       <article class="exp-role-row">
         <div class="exp-role-marker"><div class="exp-role-dot"></div></div>
         <div class="exp-role-main">
-          <div class="exp-role-icon"><img src="/images/qpllogo.avif" width="2048" height="1548" alt="QPL Quiz Club Logo"></div>
+          <div class="exp-role-icon"><img loading="lazy" decoding="async" src="/images/qpllogo.avif" width="2048" height="1548" alt="QPL Quiz Club Logo"></div>
           <div class="exp-role-copy">
             <div class="exp-role-title">Member, Quiz Organizer and Mentor</div>
             <div class="exp-role-sub">Quiz Premier League (QPL) · 10 yrs</div>
             <div class="exp-role-date">Apr 2016 – Mar 2026</div>
             <div class="exp-desc">
-              <p>I joined the quiz club in 3rd grade as part of its 4th generation. I learned immensely under my seniors and gradually improved my knowledge base, eventually representing the school in multiple high tier quizzes.(<a href="/achievements/?search=quiz">see my quizzes</a>).</p>
+              <p>I joined the quiz club in 3rd grade as part of its 4th generation. I learned immensely under my seniors and gradually improved my knowledge base, eventually representing the school in multiple high tier quizzes (<a href="/achievements/?search=quiz">see my quizzes</a>).</p>
               <p>I utilized this experience to host intraschool quizzes across diverse domains: general knowledge, finance, history, technology, and sports. I actively championed participation in quizzing and guided juniors on reliable preparation strategies.</p>
             </div>
             <div class="exp-images"></div>
@@ -749,6 +769,18 @@ author_profile: true
     'usq','usqq','usqqq','workshop','workshop2','workshop3','workshop4',
     'wwq181','wwq191','yesww2'
   ];
+  var dimensions = {
+    'clean':[599,475], '5thquiz':[600,373], 'cyb1':[600,369],
+    'cyb2':[600,319], 'data&aii':[600,436], 'hdfc':[600,507],
+    'headboy':[600,600], 'hiqf':[1200,657], 'mindsparkquiz':[733,550],
+    'mmq2':[648,454], 'nr':[1200,628], 'nx2024':[600,535],
+    'quiz4':[600,472], 'sbi001':[536,384], 'sc':[1200,878],
+    'shinecosmo':[740,550], 'tcs242':[553,550], 'tcs251':[1200,680],
+    'techday':[600,453], 'udta':[600,628], 'usq':[1200,871],
+    'usqq':[600,450], 'usqqq':[600,481], 'workshop':[600,451],
+    'workshop2':[600,377], 'workshop3':[600,286], 'workshop4':[600,438],
+    'wwq181':[412,550], 'wwq191':[541,550], 'yesww2':[561,550]
+  };
 
   function shuffle(arr) {
     for (var i = arr.length - 1; i > 0; i--) {
@@ -760,21 +792,75 @@ author_profile: true
 
   var track = document.getElementById('kpsTrack');
   if (!track) return;
+  var wrap = track.parentElement;
 
   var shuffled = shuffle(imgs.slice());
+  var populated = false;
+  var ready = false;
+  var inView = false;
+  var observer = null;
+  var visibilityHandler = null;
 
   function addSet(list) {
+    var set = document.createElement('div');
+    set.className = 'exp-kps-set';
+    var fragment = document.createDocumentFragment();
     list.forEach(function (name) {
       var img = document.createElement('img');
       img.src = '/images/' + name + '.avif';
       img.alt = '';
-      track.appendChild(img);
+      /* The entire gallery is inserted only near the viewport, so eager here
+         means "eager after intent" and avoids horizontal lazy-load deadlocks. */
+      img.loading = 'eager';
+      img.decoding = 'async';
+      if (dimensions[name]) {
+        img.width = dimensions[name][0];
+        img.height = dimensions[name][1];
+      }
+      fragment.appendChild(img);
     });
+    set.appendChild(fragment);
+    track.appendChild(set);
+    return set;
   }
 
-  /* Two sets: CSS animation goes 0 → -50%, creating seamless loop */
-  addSet(shuffled);
-  addSet(shuffled);
+  function populate() {
+    if (populated) return;
+    populated = true;
+    /* Two identical, dimension-stable sets create a seamless compositor loop. */
+    var firstSet = addSet(shuffled);
+    addSet(shuffled);
+    /* Width/height attributes reserve every image's exact aspect ratio, so
+       measuring does not need to wait for network fetches or image decoding. */
+    var distance = firstSet.getBoundingClientRect().width + 10;
+    track.style.setProperty('--kps-distance', '-' + distance + 'px');
+    ready = true;
+    track.classList.add('is-ready');
+    syncPlayback();
+  }
+
+  function syncPlayback() {
+    track.classList.toggle('is-paused', document.hidden || !inView || !ready);
+  }
+
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver(function (entries) {
+      inView = Boolean(entries[0] && entries[0].isIntersecting);
+      if (inView) populate();
+      syncPlayback();
+    }, { rootMargin: '600px 0px' });
+    observer.observe(wrap);
+    visibilityHandler = syncPlayback;
+    document.addEventListener('visibilitychange', visibilityHandler);
+  } else {
+    inView = true;
+    populate();
+  }
+
+  window.addEventListener('pagehide', function () {
+    if (observer) observer.disconnect();
+    if (visibilityHandler) document.removeEventListener('visibilitychange', visibilityHandler);
+  }, { once: true });
 })();
 </script>
 

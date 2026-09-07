@@ -128,11 +128,11 @@
   }
 
   .royal-mode .masthead {
-    background: linear-gradient(90deg, rgba(66, 58, 46, 0.92) 0%, rgba(33, 30, 23, 0.92) 100%) !important;
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.72) 0%, rgba(33, 30, 23, 0.56) 100%) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     color: #ffffff;
-    border-bottom: 1.5px solid rgba(240, 240, 240, 0.5) !important;
+    border-bottom: 2px solid rgba(240, 240, 240, 0.5) !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
   }
 
@@ -170,11 +170,11 @@
   }
 
   .dark-mode .author__urls:before {
-    border-color: rgba(255, 230, 196, 0.2) transparent;
+    border-color: rgb(253 195 116 / 50%) transparent;
   }
 
   .dark-mode .author__urls:after {
-    border-color: rgba(80, 50, 0, 0.8) transparent;
+    border-color: rgb(253 195 116 / 50%) transparent;
   }
 
   .dark-mode .social-icons .fa-instagram {
@@ -191,7 +191,7 @@
   /* Light mode: fix z-index:-1 from main.css that kills backdrop-filter */
   .author__urls {
     z-index: 20 !important;
-    border: 2px solid rgba(185, 115, 0, 0.45) !important;
+    border: 1.5px solid rgb(84 57 0 / 50%) !important;
     background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4)) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
@@ -214,7 +214,7 @@
     background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-    border: 2px solid rgba(255, 210, 120, 0.45) !important;
+    border: 1.5px solid rgb(253 195 116 / 50%) !important;
   }
 
   @media (min-width: 57.8125em) {
@@ -245,7 +245,6 @@
     border: 2px solid rgba(255, 210, 120, 0.5) !important;
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1) !important;
     z-index: 100 !important;
-    transform: translateZ(0);
   }
 
   .dark-mode .greedy-nav .hidden-links li {
@@ -263,7 +262,7 @@
   .btn--inverse:hover {
     box-shadow: #000000 0 0 0.3rem;
     background: linear-gradient(135deg, rgb(48, 29, 0), rgb(65, 42, 9)) !important;
-    color: #e9a700 !important;
+    color: #ffeab6 !important;
     border: 2px solid #060400 !important;
   }
 
@@ -271,7 +270,7 @@
     background: linear-gradient(135deg, rgb(68 41 0), rgb(141 85 0)) !important;
     backdrop-filter: blur(8px) !important;
     -webkit-backdrop-filter: blur(8px) !important;
-    color: #e9a700 !important;
+    color: #ffbf1f !important;
     border: 2px solid rgba(6, 4, 0) !important;
   }
 
@@ -301,6 +300,10 @@
 
   .dark-mode .page__content h2 {
     border-bottom: 1.5px solid #ffae34;
+  }
+
+  .dark-mode .home-body h2 {
+    border-bottom-color: #e6c194;
   }
 
 
@@ -349,7 +352,7 @@
   }
 
   .dark-mode .episode-card span {
-    color: rgb(237, 130, 54);
+    color: rgb(212 159 15);
   }
 
   .dark-mode .dashed-line {
@@ -491,11 +494,11 @@
   }
 
   .royal-mode .masthead {
-    background: linear-gradient(90deg, rgba(66, 58, 46, 0.92) 0%, rgba(33, 30, 23, 0.92) 100%) !important;
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.72) 0%, rgba(33, 30, 23, 0.56) 100%) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     color: #ffffff;
-    border-bottom: 1.5px solid rgba(240, 240, 240, 0.5) !important;
+    border-bottom: 2px solid rgba(240, 240, 240, 0.5) !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
   }
 
@@ -512,11 +515,11 @@
   }
 
   .royal-mode .author__urls:before {
-    border-color: rgba(255, 255, 255, 0.08) transparent;
+    border-color: rgb(255 255 255 / 50%) transparent;
   }
 
   .royal-mode .author__urls:after {
-    border-color: rgba(45, 43, 38, 0.8) transparent;
+    border-color: rgb(255 255 255 / 50%) transparent;
   }
 
   .royal-mode .social-icons .fa-instagram {
@@ -531,7 +534,7 @@
     background: linear-gradient(135deg, rgba(45, 43, 38, 0.8), rgba(35, 33, 29, 0.6)) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-    border: 2px solid rgba(255, 255, 255, 0.08) !important;
+    border: 1.5px solid rgb(255 255 255 / 50%) !important;
   }
 
   @media (min-width: 57.8125em) {
@@ -557,13 +560,12 @@
 
   .royal-mode .greedy-nav .hidden-links,
   .royal-mode body>.hidden-links {
-    background: rgba(42, 38, 30, 0.95) !important;
+    background: linear-gradient(135deg, rgba(60, 51, 38, 0.78), rgba(40, 35, 25, 0.58)) !important;
     backdrop-filter: blur(16px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
     border: 1px solid rgba(240, 240, 240, 0.2) !important;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
     z-index: 100 !important;
-    transform: translateZ(0);
   }
 
   .royal-mode .greedy-nav .hidden-links li,
@@ -638,7 +640,7 @@
   }
 
   .royal-mode .achievement-meta {
-    color: #D1D1D1;
+    color: #f5f5df;
   }
 
   .royal-mode .achievement-images-text {
@@ -691,7 +693,7 @@
 </script>
 
 <canvas id="matrix-rain"
-  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none; filter: blur(1px); -webkit-filter: blur(1px);"></canvas>
+  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
 
 <button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
   <div class="jtt-container">
@@ -762,6 +764,9 @@
       }
 
       updateIcons();
+      document.dispatchEvent(new CustomEvent("site-theme-change", {
+        detail: { theme: html.classList.contains("dark-mode") ? "dark" : (html.classList.contains("royal-mode") ? "royal" : "light") }
+      }));
     });
 
     /* ── Jump to Top ── */
@@ -793,18 +798,203 @@
     class MatrixRain {
       constructor(canvasId) {
         this.canvas = document.getElementById(canvasId);
-        this.ctx = this.canvas.getContext('2d');
+        this.ctx = this.canvas.getContext('2d', { alpha: true, desynchronized: true });
         this.fontSize = 20;
-        this.columns = [];
+        this.atlasFontSize = 20;
+        this.nameSeq = ["म", "न", "न", "से", "ठि", "या"];
+        this.glyphs = [];
+        for (let code = 2308; code <= 2361; code++) this.glyphs.push(String.fromCharCode(code));
+        for (let nameChar of this.nameSeq) {
+          if (this.glyphs.indexOf(nameChar) === -1) this.glyphs.push(nameChar);
+        }
+        this.glyphIndex = new Map(this.glyphs.map((glyph, index) => [glyph, index]));
+        this.atlas = document.createElement('canvas');
+        this.atlasTheme = '';
+        this.rafId = 0;
+        this.lastFrame = 0;
+        this.resizeTimer = 0;
+        this.running = false;
+        this.lastCompositeScrollY = -1;
+        this.reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         this.lastWidth = window.innerWidth;
+        /* Draw back-to-front. Layer 1 is the exact original rain; layers 2
+           and 3 only add progressively fainter, slightly faster depth. The
+           atmospheric layers render at lower internal resolution, then scale
+           once during composition; this reduces their backing-store memory
+           and raster work without changing their CSS size or movement. */
+        this.layerConfigs = [
+          { speedFactor: 1.265625, opacity: 0.25, parallax: 0.0750, resolutionScale: 0.50 },
+          { speedFactor: 1.125, opacity: 0.50, parallax: 0.0375, resolutionScale: 0.75 },
+          { speedFactor: 1.000, opacity: 1.00, parallax: 0.0150, resolutionScale: 1.00 }
+        ];
+        this.layers = this.layerConfigs.map((config) => {
+          const buffer = document.createElement('canvas');
+          return {
+            config: config,
+            canvas: buffer,
+            ctx: buffer.getContext('2d', { alpha: true, desynchronized: true }),
+            columns: [],
+            accumulator: Math.random() * (1000 / 60)
+          };
+        });
+        this.frame = this.frame.bind(this);
+        this.handleResize = this.handleResize.bind(this);
+        this.handleVisibility = this.handleVisibility.bind(this);
+        this.handleTheme = this.handleTheme.bind(this);
+        this.handlePageHide = this.handlePageHide.bind(this);
+        this.handlePageShow = this.handlePageShow.bind(this);
+        this.destroy = this.destroy.bind(this);
         this.resize();
-        window.addEventListener('resize', () => {
-          if (window.innerWidth !== this.lastWidth) {
+        window.addEventListener('resize', this.handleResize, { passive: true });
+        document.addEventListener('visibilitychange', this.handleVisibility);
+        document.addEventListener('site-theme-change', this.handleTheme);
+        window.addEventListener('pagehide', this.handlePageHide);
+        window.addEventListener('pageshow', this.handlePageShow);
+        window.addEventListener('beforeunload', this.destroy, { once: true });
+
+        if (this.reduceMotion) this.drawStillFrame();
+        else this.start();
+      }
+
+      themeState() {
+        const isDark = document.documentElement.classList.contains('dark-mode');
+        const isRoyal = document.documentElement.classList.contains('royal-mode');
+        return {
+          key: isRoyal ? 'royal' : (isDark ? 'dark' : 'light'),
+          r: isRoyal ? 240 : (isDark ? 255 : 145),
+          g: isRoyal ? 245 : (isDark ? 200 : 95),
+          b: isRoyal ? 250 : (isDark ? 110 : 20),
+          maxAlpha: isRoyal ? 0.15 : (isDark ? 0.18 : 0.2182125),
+          highlightAlpha: isRoyal ? 0.65 : (isDark ? 0.9 : 1)
+        };
+      }
+
+      buildAtlas(theme) {
+        const cellWidth = 48;
+        const cellHeight = 36;
+        const columns = 10;
+        const rows = Math.ceil(this.glyphs.length / columns);
+        this.atlas.width = cellWidth * columns;
+        this.atlas.height = cellHeight * rows;
+        const atlasContext = this.atlas.getContext('2d');
+        atlasContext.font = `600 ${this.atlasFontSize}px 'SF Pro Display', 'SF Pro Text', sans-serif`;
+        atlasContext.textBaseline = 'alphabetic';
+        atlasContext.fillStyle = `rgb(${theme.r}, ${theme.g}, ${theme.b})`;
+        /* Blur the tiny atlas once instead of filtering the full viewport on
+           every animation frame. The glyph softness remains the same. */
+        if ('filter' in atlasContext) atlasContext.filter = 'blur(1px)';
+        for (let index = 0; index < this.glyphs.length; index++) {
+          const x = (index % columns) * cellWidth + 2;
+          const y = Math.floor(index / columns) * cellHeight + 25;
+          atlasContext.fillText(this.glyphs[index], x, y);
+        }
+        this.atlasTheme = theme.key;
+      }
+
+      handleResize() {
+        window.clearTimeout(this.resizeTimer);
+        this.resizeTimer = window.setTimeout(() => {
+          if (window.innerWidth !== this.lastWidth || Math.abs(this.canvas.height - window.innerHeight) >= 150) {
             this.lastWidth = window.innerWidth;
             this.resize();
           }
-        });
-        this.animate();
+        }, 140);
+      }
+
+      handleVisibility() {
+        if (document.hidden) this.stop();
+        else if (this.reduceMotion) this.drawStillFrame();
+        else this.start();
+      }
+
+      handleTheme() {
+        this.atlasTheme = '';
+        this.lastCompositeScrollY = -1;
+        for (const layer of this.layers) {
+          layer.ctx.clearRect(0, 0, layer.canvas.width, layer.canvas.height);
+        }
+        if (this.reduceMotion || !this.running) this.drawStillFrame();
+      }
+
+      releaseBackingStores() {
+        /* Explicitly release the four viewport-sized canvas allocations before
+           reload/BFCache retention. Compressed images are small; these raw
+           RGBA surfaces are the site's largest per-tab memory allocation. */
+        this.canvas.width = 1;
+        this.canvas.height = 1;
+        this.atlas.width = 1;
+        this.atlas.height = 1;
+        this.atlasTheme = '';
+        this.lastCompositeScrollY = -1;
+        for (const layer of this.layers) {
+          layer.canvas.width = 1;
+          layer.canvas.height = 1;
+          layer.columns = [];
+          layer.accumulator = Math.random() * (1000 / 60);
+        }
+      }
+
+      handlePageHide() {
+        this.stop();
+        window.clearTimeout(this.resizeTimer);
+        this.releaseBackingStores();
+      }
+
+      handlePageShow(event) {
+        if (!event.persisted) return;
+        this.lastWidth = window.innerWidth;
+        this.resize();
+        if (this.reduceMotion) this.drawStillFrame();
+        else this.start();
+      }
+
+      start() {
+        if (this.running || document.hidden || this.reduceMotion) return;
+        this.running = true;
+        this.lastFrame = 0;
+        this.rafId = requestAnimationFrame(this.frame);
+      }
+
+      stop() {
+        this.running = false;
+        if (this.rafId) cancelAnimationFrame(this.rafId);
+        this.rafId = 0;
+      }
+
+      destroy() {
+        this.stop();
+        window.clearTimeout(this.resizeTimer);
+        window.removeEventListener('resize', this.handleResize);
+        document.removeEventListener('visibilitychange', this.handleVisibility);
+        document.removeEventListener('site-theme-change', this.handleTheme);
+        window.removeEventListener('pagehide', this.handlePageHide);
+        window.removeEventListener('pageshow', this.handlePageShow);
+        this.releaseBackingStores();
+      }
+
+      frame(timestamp) {
+        if (!this.running) return;
+        const deltaMs = this.lastFrame ? Math.min(50, timestamp - this.lastFrame) : (1000 / 60);
+        this.lastFrame = timestamp;
+        const theme = this.themeState();
+        if (theme.key !== this.atlasTheme) this.buildAtlas(theme);
+        let layerChanged = false;
+        for (const layer of this.layers) {
+          layer.accumulator += deltaMs;
+          let updates = 0;
+          while (layer.accumulator >= (1000 / 60) && updates < 3) {
+            this.updateLayer(layer, theme, 1);
+            layer.accumulator -= (1000 / 60);
+            updates++;
+            layerChanged = true;
+          }
+        }
+        const scrollY = window.scrollY || window.pageYOffset || 0;
+        if (layerChanged || scrollY !== this.lastCompositeScrollY) {
+          this.composite(theme);
+          this.lastCompositeScrollY = scrollY;
+        }
+        this.rafId = requestAnimationFrame(this.frame);
       }
 
       resize() {
@@ -818,106 +1008,119 @@
         /* Remove inline overrides just in case they were appended */
         this.canvas.style.width = '100vw';
         this.canvas.style.height = '100vh';
+        this.lastCompositeScrollY = -1;
 
-        const spacing = this.fontSize * 0.8; /* 20% higher density */
-        const colCount = Math.floor(this.canvas.width / spacing);
-        this.columns = [];
-        for (let i = 0; i < colCount; i++) {
-          this.columns.push({
-            x: i * spacing,
-            y: (Math.random() * -2000), /* Random start above screen */
-            speed: Math.random() * 0.17 + 0.06, /* 10% faster */
-            nameIdx: -1,
-            chars: []
-          });
+        for (const layer of this.layers) {
+          const resolutionScale = layer.config.resolutionScale || 1;
+          layer.canvas.width = Math.ceil(w * resolutionScale);
+          layer.canvas.height = Math.ceil(h * resolutionScale);
+          layer.columns = [];
+          const spacing = this.fontSize * 0.8;
+          const colCount = Math.ceil(w / spacing) + 1;
+          for (let index = 0; index < colCount; index++) {
+            layer.columns.push({
+              x: index * spacing,
+              y: Math.random() * -2000,
+              speed: Math.random() * 0.17 + 0.06,
+              nameIdx: -1,
+              chars: []
+            });
+          }
         }
       }
 
-      animate() {
-        requestAnimationFrame(() => this.animate());
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.ctx.font = `600 ${this.fontSize}px 'SF Pro Display', 'SF Pro Text', sans-serif`;
+      chance(probabilityAt60Hz, frameScale) {
+        return Math.random() < 1 - Math.pow(1 - probabilityAt60Hz, frameScale);
+      }
 
-        const isDark = document.documentElement.classList.contains('dark-mode');
-        const isRoyal = document.documentElement.classList.contains('royal-mode');
+      updateLayer(layer, theme, frameScale) {
+        const context = layer.ctx;
+        const config = layer.config;
+        const resolutionScale = config.resolutionScale || 1;
+        const cellWidth = 48;
+        const cellHeight = 36;
+        const atlasColumns = 10;
+        context.setTransform(1, 0, 0, 1, 0, 0);
+        context.clearRect(0, 0, layer.canvas.width, layer.canvas.height);
+        context.setTransform(resolutionScale, 0, 0, resolutionScale, 0, 0);
 
-        const r = isRoyal ? 240 : (isDark ? 255 : 145);
-        const g = isRoyal ? 245 : (isDark ? 200 : 95);
-        const b = isRoyal ? 250 : (isDark ? 110 : 20);
-        const maxAlpha = isRoyal ? 0.15 : (isDark ? 0.18 : 0.15);
+        for (const column of layer.columns) {
+          column.speed = Math.max(0.04, Math.min(0.28,
+            column.speed + (Math.random() - 0.5) * 0.03 * Math.sqrt(frameScale)
+          ));
 
-        const nameSeq = ["म", "न", "न", "से", "ठि", "या"];
-
-        for (let col of this.columns) {
-          /* Unsteady appearance/falling speed */
-          col.speed = Math.max(0.04, Math.min(0.28, col.speed + (Math.random() - 0.5) * 0.03));
-
-          if (Math.random() < col.speed) {
-            col.y += this.fontSize;
-
-            let charStr = "";
-            let isHighlight = false;
-
-            /* Random chance to start the name sequence (Approx once every 2-5 min across all columns) */
-            if (col.nameIdx === -1 && Math.random() < 0.000015) {
-              col.nameIdx = 0;
-            }
-
-            if (col.nameIdx !== -1) {
-              charStr = nameSeq[col.nameIdx];
-              isHighlight = true;
-              col.nameIdx++;
-              if (col.nameIdx >= nameSeq.length) {
-                col.nameIdx = -1;
-              }
+          /* Multiplying speed in probability space retains the old irregular
+             cadence while making only the rear layers 12.5% faster. */
+          const movementChance = 1 - Math.pow(1 - column.speed, config.speedFactor);
+          if (this.chance(movementChance, frameScale)) {
+            column.y += this.fontSize;
+            let glyph;
+            let highlighted = false;
+            if (column.nameIdx === -1 && this.chance(0.000015, frameScale)) column.nameIdx = 0;
+            if (column.nameIdx !== -1) {
+              glyph = this.nameSeq[column.nameIdx++];
+              highlighted = true;
+              if (column.nameIdx >= this.nameSeq.length) column.nameIdx = -1;
             } else {
-              /* Devanagari primary consonants and vowels: 2308 (\u0904) to 2361 (\u0939) */
-              const charCode = Math.floor(Math.random() * 54) + 2308;
-              charStr = String.fromCharCode(charCode);
+              glyph = String.fromCharCode(Math.floor(Math.random() * 54) + 2308);
             }
-
-            col.chars.unshift({
-              char: charStr,
-              y: col.y,
-              opacity: 1.0,
-              isHighlight: isHighlight
-            });
+            column.chars.unshift({ char: glyph, y: column.y, opacity: 1, isHighlight: highlighted });
+            if (column.chars.length > 24) column.chars.length = 24;
           }
-          if (col.y > this.canvas.height && Math.random() > 0.98) {
-            col.y = Math.random() * -2000;
-            col.chars = [];
-            col.speed = Math.random() * 0.17 + 0.06;
-            col.nameIdx = -1;
+
+          if (column.y > this.canvas.height && this.chance(0.02, frameScale)) {
+            column.y = Math.random() * -2000;
+            column.speed = Math.random() * 0.17 + 0.06;
+            column.nameIdx = -1;
+            column.chars = [];
           }
-          for (let i = col.chars.length - 1; i >= 0; i--) {
-            const drop = col.chars[i];
 
-            let drawAlpha = drop.opacity * maxAlpha;
-            if (drop.isHighlight) {
-              /* When your name appears, make it extremely opaque */
-              if (isRoyal) {
-                drawAlpha = drop.opacity * 0.65;
-              } else {
-                drawAlpha = isDark ? (drop.opacity * 0.9) : (drop.opacity * 0.85);
-              }
-            }
+          for (let index = column.chars.length - 1; index >= 0; index--) {
+            const drop = column.chars[index];
+            const glyphIndex = this.glyphIndex.get(drop.char) || 0;
+            const sourceX = (glyphIndex % atlasColumns) * cellWidth;
+            const sourceY = Math.floor(glyphIndex / atlasColumns) * cellHeight;
+            context.globalAlpha = drop.opacity * (drop.isHighlight ? theme.highlightAlpha : theme.maxAlpha);
+            context.drawImage(this.atlas, sourceX, sourceY, cellWidth, cellHeight, column.x - 2, drop.y - 25, cellWidth, cellHeight);
 
-            /* Render character */
-            this.ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${drawAlpha})`;
-            this.ctx.fillText(drop.char, col.x, drop.y);
-
-            /* Unsteady disappearing effect. Highlight (name) characters stick for much longer. */
-            if (drop.isHighlight) {
-              drop.opacity -= (Math.random() * 0.003 + 0.001);
-            } else {
-              drop.opacity -= (Math.random() * 0.025 + 0.008);
-            }
-
-            if (drop.opacity <= 0) {
-              col.chars.splice(i, 1);
-            }
+            if (drop.isHighlight) drop.opacity -= (Math.random() * 0.003 + 0.001) * frameScale;
+            else drop.opacity -= (Math.random() * 0.025 + 0.008) * frameScale;
+            if (drop.opacity <= 0) column.chars.splice(index, 1);
           }
         }
+        context.globalAlpha = 1;
+        context.setTransform(1, 0, 0, 1, 0, 0);
+      }
+
+      composite(theme) {
+        const height = this.canvas.height;
+        const scrollY = window.scrollY || window.pageYOffset || 0;
+        this.ctx.clearRect(0, 0, this.canvas.width, height);
+        for (let layerIndex = 0; layerIndex < this.layers.length; layerIndex++) {
+          const layer = this.layers[layerIndex];
+          const offset = -((scrollY * layer.config.parallax) % height);
+          let opacityMultiplier = 1;
+          if (theme.key === 'light') {
+            /* maxAlpha carries the shared light-theme increase; retain the
+               existing extra rear/middle depth weighting. */
+            if (layerIndex === 0) opacityMultiplier = 1.090909;
+            else if (layerIndex === 1) opacityMultiplier = 1.045455;
+          } else {
+            if (layerIndex === 0) opacityMultiplier = 1.15;
+            else if (layerIndex === 1) opacityMultiplier = 1.10;
+          }
+          this.ctx.globalAlpha = Math.min(1, layer.config.opacity * opacityMultiplier);
+          this.ctx.drawImage(layer.canvas, 0, offset, this.canvas.width, height);
+          this.ctx.drawImage(layer.canvas, 0, offset + height, this.canvas.width, height);
+        }
+        this.ctx.globalAlpha = 1;
+      }
+
+      drawStillFrame() {
+        const theme = this.themeState();
+        if (theme.key !== this.atlasTheme) this.buildAtlas(theme);
+        for (const layer of this.layers) this.updateLayer(layer, theme, 1);
+        this.composite(theme);
       }
     }
 

@@ -30,6 +30,9 @@
     .sb-avatar img { width: 100px; height: 100px; border-radius: 25%; border: 3px solid rgba(230,193,148,0.6); object-fit: cover; }
     .sb-name { font-size: 13pt; font-weight: 700; color: #fff; text-align: center; margin-top: 6px; letter-spacing: 1px; }
     .sb-desc { font-size: 8pt; color: #d4c4a8; text-align: center; margin-top: 3px; padding: 0 20px; line-height: 1.4; }
+    .sb-identity { padding: 34px 20px 6px; }
+    .sb-identity .sb-name { text-align: left; margin-top: 0; font-size: 16pt; }
+    .sb-identity .sb-desc { text-align: left; padding: 0; margin-top: 5px; }
 
     .sb-section { padding: 0 20px; margin-top: 22px; }
     .sb-title {
@@ -247,13 +250,14 @@
   <!-- ═══════════ PAGE 1 ═══════════ -->
   <div class="page">
     <div class="sidebar">
-      <div class="sb-avatar"><img src="/images/manan.avif" alt="Manan Sethia"></div>
-      <div class="sb-name">Manan Sethia</div>
-      <div class="sb-desc">Curious learner and Computer Science enthusiast.</div>
+      <div class="sb-identity">
+        <div class="sb-name">Manan Sethia</div>
+        <div class="sb-desc">Computer Science undergraduate at NTU Singapore, interested in data engineering, systems, cybersecurity, and practical research tooling.</div>
+      </div>
 
       <div class="sb-section">
         <div class="sb-title">Contact</div>
-        <div class="sb-contact-item"><i class="fa-solid fa-location-dot"></i><span>Raipur, Chhattisgarh</span></div>
+        <div class="sb-contact-item"><i class="fa-solid fa-location-dot"></i><span>Singapore</span></div>
         <div class="sb-contact-item"><i class="fas fa-envelope"></i><a href="mailto:manan@manansethia.com">manan@manansethia.com</a></div>
         <div class="sb-contact-item"><i class="fas fa-link"></i><a href="https://manansethia.com">manansethia.com</a></div>
         <div class="sb-contact-item"><i class="fab fa-github"></i><a href="https://github.com/manansethia">github.com/manansethia</a></div>
@@ -262,18 +266,17 @@
 
       <div class="sb-section">
         <div class="sb-title">Technical Skills</div>
-        <div class="sb-skill-group"><div class="sb-skill-label">Languages</div><div class="sb-skill-list">Python, C++ (STL), C, Java, SQL, HTML, CSS, JavaScript</div></div>
-        <div class="sb-skill-group"><div class="sb-skill-label">AI &amp; ML</div><div class="sb-skill-list">OpenCV, PyTorch, scikit-learn, pandas, NumPy, Matplotlib, Jupyter</div></div>
-        <div class="sb-skill-group"><div class="sb-skill-label">Web &amp; App Dev</div><div class="sb-skill-list">Flask, Django, Jekyll, MIT App Inventor, GitHub Pages</div></div>
-        <div class="sb-skill-group"><div class="sb-skill-label">Systems &amp; IoT</div><div class="sb-skill-list">Linux, Raspberry Pi, ESP32, Arduino, Embedded Systems, Robotics</div></div>
-        <div class="sb-skill-group"><div class="sb-skill-label">DevOps &amp; Cloud</div><div class="sb-skill-list">Git, GitHub, Docker, CI/CD, Proxmox, Cloudflare, SSH</div></div>
-        <div class="sb-skill-group"><div class="sb-skill-label">Cybersecurity</div><div class="sb-skill-list">Metasploit, Wireshark, Burp Suite, Nmap, Kali Linux, Cryptography</div></div>
-        <div class="sb-skill-group"><div class="sb-skill-label">Core CS</div><div class="sb-skill-list">DSA, Competitive Programming, OOP, DBMS, System Design</div></div>
+        <div class="sb-skill-group"><div class="sb-skill-label">Languages &amp; Toolchains</div><div class="sb-skill-list">Python, C/C++, Java, JavaScript/TypeScript, SQL, C#/.NET, Kotlin, Swift; npm/npx, Maven/Gradle, NuGet, SPM</div></div>
+        <div class="sb-skill-group"><div class="sb-skill-label">Data Engineering</div><div class="sb-skill-list">ETL, REST APIs, async/batch ingestion, entity resolution, schema normalization, pandas, SQLite, Excel/CSV; SciVal, Scopus, OpenAlex, ROR, Wikidata, ORCID</div></div>
+        <div class="sb-skill-group"><div class="sb-skill-label">AI &amp; Development</div><div class="sb-skill-list">NumPy, scikit-learn, OpenCV, PyTorch basics, Flask, Django, Node.js, RAG, MCP, pytest, Playwright</div></div>
+        <div class="sb-skill-group"><div class="sb-skill-label">DevOps &amp; Linux</div><div class="sb-skill-list">Git, GitHub Actions/CI/CD, Docker, Bash/zsh, SSH, cron, Nginx; Ubuntu, Debian, Fedora, Arch and Kali</div></div>
+        <div class="sb-skill-group"><div class="sb-skill-label">Apps, Security &amp; IoT</div><div class="sb-skill-list">Android Studio, Xcode, Wireshark, Burp Suite, Nmap; Raspberry Pi, ESP32, Arduino, sensors, robotics</div></div>
+        <div class="sb-skill-group"><div class="sb-skill-label">Core CS</div><div class="sb-skill-list">DSA, competitive programming, OOP, DBMS, systems fundamentals</div></div>
       </div>
 
       <div class="sb-section">
         <div class="sb-title">Professional Skills</div>
-        <div class="sb-skill-list">Team Leadership, Event Management, Mentorship, Public Speaking, Presentation, Academic Writing</div>
+        <div class="sb-skill-list">Team leadership, event management, mentorship, public speaking, presentation, academic writing</div>
       </div>
 
       <div class="sb-section" style="margin-bottom: 16px;">
@@ -282,6 +285,7 @@
         <div class="sb-edu-detail">Bachelor of Computing (Hons) in CS</div>
         <div class="sb-edu-detail">2026 &ndash; 2030 &nbsp;|&nbsp; Singapore</div>
         <div class="sb-edu-detail">Specialisations: Cyber Security, AI</div>
+        <div class="sb-edu-detail">NTU Science and Technology Undergraduate Scholar</div>
         <div style="margin-top:8px;"></div>
         <div class="sb-edu-name">Krishna Public School, Kamal Vihar</div>
         <div class="sb-edu-detail">Grade 1 &ndash; 12 &nbsp;|&nbsp; 2014 &ndash; 2026</div>
@@ -294,8 +298,15 @@
       <div class="m-sec">Experience</div>
       <div class="timeline">
         <div class="tl-org">
-          <div class="tl-org-head"><span class="tl-org-name">Buildabot Labs Private Limited</span><span class="tl-org-date">May 2026 &ndash; Present</span></div>
-          <div class="tl-role"><div class="tl-role-name">Chief Technology and Innovations Officer (CTIO)</div><div class="tl-desc">Leading technology strategy and engineering at FSTI's technology subsidiary. Building database systems, backend servers, company website, and RAG AI assistant. Architected an emulation playground for virtual project testing.</div></div>
+          <div class="tl-org-head"><span class="tl-org-name">Nanyang Technological University</span><span class="tl-org-date">Jul 2026 &ndash; Present</span></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Technical Director, TGIFHacks (NTU OSS)</span><span class="tl-role-date">Sep 2026 &ndash; Present</span></div><div class="tl-desc">Direct technical planning for hackathons, hardware and software builds, workshops, and competitions.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Technical Subcommittee Member, NTU Sentinels</span><span class="tl-role-date">Aug 2026 &ndash; Present</span></div><div class="tl-desc">Contribute to cybersecurity and capture-the-flag activities.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Data Analytics &amp; Engineering Assistant</span><span class="tl-role-date">Jul 2026 &ndash; Present</span></div><div class="tl-desc">Build auditable Python ETL and identity-resolution pipelines for the Office of Data and Analytics under the Work Study Scheme (ad hoc through 31 Mar 2027). Work spans bibliometric APIs, rate-limit handling, schema normalization, deduplication, manual verification, and SQL/CSV/XLSX delivery. Current datasets include the 45,801-record Stanford Top 2% collection and UBC researcher matching.</div></div>
+        </div>
+        <hr class="tl-sep">
+        <div class="tl-org">
+          <div class="tl-org-head"><span class="tl-org-name">Buildabot Labs Private Limited</span><span class="tl-org-date">May 2026 &ndash; Aug 2026</span></div>
+          <div class="tl-role"><div class="tl-role-name">Chief Technology and Innovations Officer (CTIO)</div><div class="tl-desc">Led technology strategy and engineering at FSTI's technology subsidiary. Built database and backend systems, the company website, a RAG assistant, and an emulation playground for virtual project testing.</div></div>
         </div>
         <hr class="tl-sep">
         <div class="tl-org">
@@ -319,7 +330,7 @@
       </div>
 
       <div class="m-sec">Projects</div>
-      <div class="proj"><div class="proj-head">MRIDA <span class="proj-meta">&nbsp;|&nbsp; Multipurpose Real-time Integrated Digital Analyzer &nbsp;|&nbsp; 2023 &ndash; 2025</span></div><div class="proj-body">AI-powered soil health analyzer on Raspberry Pi 5. Features 8-in-1 soil sensing, 4G/GPS, emergency alerts, and speech assistant. Won Data &amp; AI Talks, Top 1000 Youth Ideathon, INSPIRE MANAK, Jr. SIH.</div></div>
+      <div class="proj"><div class="proj-head">MRIDA <span class="proj-meta">&nbsp;|&nbsp; Multipurpose Real-time Integrated Digital Analyzer &nbsp;|&nbsp; 2023 &ndash; 2025</span></div><div class="proj-body">AI-powered Raspberry Pi soil-health analyzer with 8-in-1 sensing, 4G/GPS, emergency alerts, and speech guidance. Winner at Data &amp; AI Talks; selected for Youth Ideathon Top 1,000, INSPIRE MANAK DLEPC, and the Junior SIH national presentation round.</div></div>
       <div class="proj"><div class="proj-head">MATRIX <span class="proj-meta">&nbsp;|&nbsp; Desktop Voice Assistant &nbsp;|&nbsp; 2021 &ndash; 2022</span></div><div class="proj-body">JARVIS-inspired assistant with Python, Tkinter. Speech/text interaction, weather, news, and hand-drawn GUI.</div></div>
 
       <div class="m-sec">Certifications</div>
@@ -327,14 +338,6 @@
       <div class="cert"><b>IBM Ethical Hacking</b> with Open-Source Tools (Coursera)</div>
       <div class="cert"><b>Programming and DSA</b> Courses by CodeChef for:</div>
       <div class="cert-sub"><div>Python</div><div>Java OOP</div><div>C/C++ with STL</div></div>
-
-      <div class="m-sec">Achievements</div>
-
-      <div class="ach-cat">International</div>
-      <div class="ach ach-hl"><b>Gold Award (ESP) and Bronze Medal (Individual)</b> at IESO 2024 in Beijing; represented India <span class="ach-date">(Aug 2024)</span></div>
-      <div class="ach ach-hl">Selected for <b>BeyondQuantum 2025</b>, a 12-week international research program on Quantum Computing <span class="ach-date">(Mar 2025)</span></div>
-      <div class="ach ach-hl"><b>Felicitated by HBCSE-TIFR</b> as International Olympiad Medalist; awarded scholarship <span class="ach-date">(Dec 2024)</span></div>
-      <div class="ach"><b>High Distinction</b> in International Chemistry Quiz by RACI, Australia <span class="ach-date">(Mar 2024)</span></div>
 
     </div>
   </div>
@@ -350,6 +353,14 @@
 
     <div class="main" style="padding-top: 20px;">
 
+      <div class="m-sec" style="margin-top: 0;">Achievements</div>
+
+      <div class="ach-cat" style="margin-top: 0;">International</div>
+      <div class="ach ach-hl"><b>Gold Award (ESP) and Bronze Medal (Individual)</b> at IESO 2024 in Beijing; represented India <span class="ach-date">(Aug 2024)</span></div>
+      <div class="ach ach-hl">Selected for <b>BeyondQuantum 2025</b>, a 12-week international research program on quantum computing <span class="ach-date">(Mar 2025)</span></div>
+      <div class="ach ach-hl"><b>Felicitated by HBCSE-TIFR</b> as an International Olympiad medalist; scholarship recipient <span class="ach-date">(Dec 2024)</span></div>
+      <div class="ach"><b>High Distinction</b> in the International Chemistry Quiz by RACI, Australia <span class="ach-date">(Mar 2024)</span></div>
+
       <div class="ach-cat" style="margin-top: 0;">Programming, Innovation &amp; Computing</div>
       <div class="ach ach-hl"><b>AIR 10</b> in HPE Codewars 2025 among 6,000+ participants <span class="ach-date">(Apr 2025)</span></div>
       <div class="ach ach-hl"><b>AIR 17</b> in IIT Madras Shaastra Programming Contest 2026 among 18,000+ participants <span class="ach-date">(Dec 2025)</span></div>
@@ -357,9 +368,9 @@
       <div class="ach ach-hl"><b>Silver Medalist</b>, Future Tech Olympiad 2026 by 1M1B and IBM SkillsBuild <span class="ach-date">(Feb 2026)</span></div>
       <div class="ach ach-hl"><b>Winner</b>, Code 2 Champions at ITM University Raipur; only school student <span class="ach-date">(Apr 2025)</span></div>
       <div class="ach ach-hl"><b>Winner</b>, Coding Competition at Nexus 2K24 by SSIPMT; solved finals in 4 minutes <span class="ach-date">(Nov 2024)</span></div>
-      <div class="ach ach-hl"><b>Champion</b>, Data and AI Talks 2023 by iGebra; awarded iPad and trophy <span class="ach-date">(Aug 2023)</span></div>
+      <div class="ach ach-hl"><b>Champion</b>, Data and AI Talks 2023 by iGebra <span class="ach-date">(Aug 2023)</span></div>
       <div class="ach"><b>Top 1,000</b> nationally, Youth Ideathon 2023 (CBSE + ThinkStartup) <span class="ach-date">(Oct 2023)</span></div>
-      <div class="ach"><b>Qualified DLEPC</b>, INSPIRE MANAK Awards 2023 by DST; awarded Rs. 10,000 <span class="ach-date">(Feb 2024)</span></div>
+      <div class="ach"><b>Qualified for DLEPC</b>, INSPIRE MANAK Awards 2023 by DST; received project-development support <span class="ach-date">(Feb 2024)</span></div>
       <div class="ach">Shortlisted for <b>National Rounds</b>, Junior Smart India Hackathon 2023 <span class="ach-date">(Jan 2024)</span></div>
 
       <div class="ach-cat">National Olympiads</div>
@@ -372,7 +383,7 @@
       <div class="ach ach-hl"><b>2nd Runner-Up</b>, Wonga Wits Finance Quiz S2 by Yes Securities; only school student <span class="ach-date">(Nov 2025)</span></div>
       <div class="ach ach-hl"><b>1st Runner-Up Nagpur</b>, TCS InQuizitive 2025; only CG team <span class="ach-date">(Aug 2025)</span></div>
       <div class="ach ach-hl"><b>Winner IIM Bhilai</b>, Brahmaprakash Memorial Materials Quiz 2025; qualified Nationals <span class="ach-date">(Aug 2025)</span></div>
-      <div class="ach ach-hl"><b>Winner Bhopal Region</b>, SBI Scholar Quiz 2025; Rs. 50,000 scholarship <span class="ach-date">(Jun 2025)</span></div>
+      <div class="ach ach-hl"><b>Winner, Bhopal Region</b>, SBI Scholar Quiz 2025 <span class="ach-date">(Jun 2025)</span></div>
       <div class="ach"><b>Winner</b>, Earth Day Quiz 2025 by NEHU Shillong <span class="ach-date">(Apr 2025)</span></div>
       <div class="ach ach-hl"><b>1st Runner-Up Nagpur</b>, TCS InQuizitive 2024 <span class="ach-date">(Nov 2024)</span></div>
       <div class="ach"><b>1st Runner-Up</b>, Technical Quiz at Nexus 2K24 <span class="ach-date">(Nov 2024)</span></div>
@@ -389,11 +400,6 @@
       <div class="ach"><b>Winner</b>, Shine COSMO GK Quiz 2022 <span class="ach-date">(Sep 2022)</span></div>
       <div class="ach ach-hl"><b>State Champions CG</b>, Fit India Quiz Season 1 <span class="ach-date">(Jun 2022)</span></div>
       <div class="ach"><b>National Qualifier</b>, WWF Wild Wisdom 2021 <span class="ach-date">(Oct 2021)</span></div>
-      <div class="ach"><b>Zonal 2nd Runner-Up</b>, Wild Wisdom 2019 <span class="ach-date">(Oct 2019)</span></div>
-      <div class="ach"><b>AIR 23</b>, All India Astronomy Test 2018 <span class="ach-date">(Jan 2019)</span></div>
-      <div class="ach"><b>Winner</b>, Spell Bee at Excella Fest 2018 <span class="ach-date">(Oct 2018)</span></div>
-      <div class="ach"><b>Zonal 1st Runner-Up</b>, Wild Wisdom 2018 <span class="ach-date">(Sep 2018)</span></div>
-      <div class="ach"><b>2nd Runner-Up</b>, QPL 2.0 Earth Day Family Quiz <span class="ach-date">(Apr 2016)</span></div>
     </div>
   </div>
 

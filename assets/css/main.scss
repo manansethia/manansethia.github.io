@@ -117,7 +117,7 @@ body>.hidden-links:after {
 }
 
 .royal-mode body>.hidden-links {
-  background: linear-gradient(135deg, rgba(60, 51, 38, 0.8), rgba(40, 35, 25, 0.6)) !important;
+  background: linear-gradient(135deg, rgba(60, 51, 38, 0.78), rgba(40, 35, 25, 0.58)) !important;
   border: 1.5px solid rgba(255, 255, 255, 0.08) !important;
 }
 
@@ -166,12 +166,11 @@ body>.author__urls {
   width: auto !important;
   padding: 10px !important;
   list-style-type: none !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
+  border: 1.5px solid rgba(84, 57, 0, 0.5) !important;
   border-radius: 4px !important;
   background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4)) !important;
   backdrop-filter: blur(16px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-  will-change: backdrop-filter !important;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) !important;
   font-size: 0.75em !important;
   cursor: default !important;
@@ -205,21 +204,12 @@ body>.author__urls a:hover {
 
 .dark-mode body>.author__urls {
   background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
-  border: 1.5px solid rgba(255, 230, 196, 0.2) !important;
+  border: 1.5px solid rgba(253, 195, 116, 0.5) !important;
 }
 
 .royal-mode body>.author__urls {
   background: linear-gradient(135deg, rgba(60, 51, 38, 0.8), rgba(40, 35, 25, 0.6)) !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-/* ── Force GPU compositing for author__urls blur in Chrome ──
-   Sidebar is position:fixed only at 1024px+, but button hidden at 925px+
-   so blur only needs forcing in the 925-1024px range where both coexist ── */
-@media screen and (max-width: 1023px) {
-  .author__urls {
-    will-change: backdrop-filter !important;
-  }
+  border: 1.5px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 /* ── Apple Emoji images ── */
@@ -236,4 +226,35 @@ img.apple-emoji {
   pointer-events: none;
   user-select: none;
   -webkit-user-select: none;
+}
+
+/* ── Boundary safety ──
+   These rules do not alter normal layout; they only prevent oversized media,
+   long tokens, or nested grid/flex children from widening the viewport. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+.page,
+.page__inner-wrap,
+.page__content,
+.archive,
+.layout-main,
+.exp-role-copy,
+.skills-page,
+.skills-card {
+  min-width: 0;
+}
+
+.page__content iframe,
+.page__content video {
+  max-width: 100%;
+}
+
+.page__content a,
+.page__content code {
+  overflow-wrap: anywhere;
 }
