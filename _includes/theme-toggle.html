@@ -1,0 +1,1133 @@
+<!-- BEGIN THEME TOGGLE BUTTON -->
+<style>
+  @media (min-width: 57.8125em) {
+    .page {
+      padding-right: 5%;
+      padding-left: 5%;
+    }
+  }
+
+  html {
+    background-color: transparent !important;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 1000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+  }
+
+  .theme-toggle .sun-moon-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background/border instant — theme toggle container */
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .icon {
+    position: absolute;
+    top: 14.25%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    width: 37px;
+    height: 37px;
+    transition: opacity 0.3s ease, transform 0.3s ease, stroke 0.3s ease;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  .icon.sun.visible {
+    opacity: 1;
+    transform: scale(1);
+    stroke: #fff7dc;
+  }
+
+  .icon.moon.visible {
+    opacity: 1;
+    transform: scale(1);
+    stroke: #ffe6c4;
+  }
+
+  .icon.star.visible {
+    opacity: 1;
+    transform: scale(1);
+    stroke: #ffffff;
+  }
+
+  .dark-mode .theme-toggle .sun-moon-container {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6));
+    border: 1.5px solid rgba(255, 230, 196, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .dark-mode .icon.sun {
+    stroke: #fff7dc;
+  }
+
+  .dark-mode .icon.moon {
+    stroke: #ffe6c4;
+  }
+
+  /* Dark theme site styles */
+  .dark-mode {
+    background-color: transparent !important;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .greedy-nav .hidden-links:before {
+    border-color: #ffffff transparent;
+  }
+
+  .dark-mode .navicon,
+  .dark-mode .navicon:before,
+  .dark-mode .navicon:after {
+    background-color: #ffffff !important;
+  }
+
+  .navicon,
+  .navicon:before,
+  .navicon:after {
+    background-color: #4b2d00 !important;
+  }
+
+  .dark-mode .close .navicon {
+    background: transparent;
+  }
+
+  .close .navicon {
+    background: none;
+  }
+
+  .dark-mode .greedy-nav a:hover {
+    color: #ffdc9b;
+  }
+
+  .dark-mode .greedy-nav .visible-links a:before {
+    background: #ffdc9b;
+  }
+
+  .dark-mode a {
+    color: #fdfdfd;
+  }
+
+  .royal-mode .masthead {
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.72) 0%, rgba(33, 30, 23, 0.56) 100%) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    color: #ffffff;
+    border-bottom: 2px solid rgba(240, 240, 240, 0.5) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .dark-mode .page__footer {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.7), rgba(40, 25, 0, 0.5)) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 2px solid rgba(255, 210, 120, 0.45) !important;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .dark-mode .page__footer footer {
+    color: #eeeeee;
+  }
+
+  .dark-mode .masthead {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.7), rgba(40, 25, 0, 0.5)) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    color: #fdfdfd;
+    border-bottom: 2px solid rgba(255, 210, 120, 0.45) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .dark-mode .greedy-nav {
+    background-color: transparent !important;
+    color: #fdfdfd;
+    overflow: visible !important;
+  }
+
+  .dark-mode .author__content,
+  .dark-mode .author__urls,
+  .dark-mode .social-icons .fa-github {
+    color: #fdfdfd;
+  }
+
+  .dark-mode .author__urls:before {
+    border-color: rgb(253 195 116 / 50%) transparent;
+  }
+
+  .dark-mode .author__urls:after {
+    border-color: rgb(253 195 116 / 50%) transparent;
+  }
+
+  .dark-mode .social-icons .fa-instagram {
+    color: #ad2bff;
+  }
+
+  .dark-mode .social-icons .fa-linkedin,
+  .social-icons .fa-linkedin-square {
+    color: #00acff;
+  }
+
+  /* ── Author URLs ── */
+
+  /* Light mode: fix z-index:-1 from main.css that kills backdrop-filter */
+  .author__urls {
+    z-index: 20 !important;
+    border: 1.5px solid rgb(84 57 0 / 50%) !important;
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4)) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  }
+
+  /* Desktop: strip everything back — no glass effect needed */
+  @media (min-width: 57.8125em) {
+    .author__urls {
+      z-index: auto !important;
+      background: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  /* Dark mode override (desktop reset above still applies via cascade) */
+  .dark-mode .author__urls {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6)) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1.5px solid rgb(253 195 116 / 50%) !important;
+  }
+
+  @media (min-width: 57.8125em) {
+    .dark-mode .author__urls {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .dark-mode .author__avatar img {
+    max-width: 175px;
+    border: 2px solid rgba(255, 210, 120, 0.45);
+  }
+
+  @media (min-width: 57.8125em) {
+    .dark-mode .author__avatar img {
+      border: 3px solid rgba(255, 210, 120, 0.45);
+    }
+  }
+
+  .dark-mode .greedy-nav .hidden-links {
+    background: rgba(102, 61, 0, 0.75) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 2px solid rgba(255, 210, 120, 0.5) !important;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1) !important;
+    z-index: 100 !important;
+  }
+
+  .dark-mode .greedy-nav .hidden-links li {
+    border-bottom: 2px solid rgba(255, 210, 120, 0.45);
+  }
+
+  .dark-mode .greedy-nav .hidden-links li:last-child {
+    border-bottom: none;
+  }
+
+  .dark-mode .greedy-nav .hidden-links:after {
+    border-color: #ffffff transparent;
+  }
+
+  .btn--inverse:hover {
+    box-shadow: #000000 0 0 0.3rem;
+    background: linear-gradient(135deg, rgb(48, 29, 0), rgb(65, 42, 9)) !important;
+    color: #ffeab6 !important;
+    border: 2px solid #060400 !important;
+  }
+
+  .btn--inverse {
+    background: linear-gradient(135deg, rgb(68 41 0), rgb(141 85 0)) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffbf1f !important;
+    border: 2px solid rgba(6, 4, 0) !important;
+  }
+
+  .dark-mode .btn--inverse:hover {
+    box-shadow: #fff5e7 0 0 0.3rem !important;
+    background: linear-gradient(135deg, rgb(255 245 224), rgb(255 211 114)) !important;
+    color: #663d00 !important;
+    border: 2px solid #dc880a !important;
+  }
+
+  .dark-mode .btn--inverse {
+    background: linear-gradient(135deg, rgba(255, 240, 208), rgba(255, 213, 122)) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #663d00 !important;
+    border: 2px solid rgb(204 145 57) !important;
+  }
+
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode h3,
+  .dark-mode h4,
+  .dark-mode h5,
+  .dark-mode h6 {
+    color: #fdfdfd;
+  }
+
+  .dark-mode .page__content h2 {
+    border-bottom: 1.5px solid #ffae34;
+  }
+
+  .dark-mode .home-body h2 {
+    border-bottom-color: #e6c194;
+  }
+
+
+  .dark-mode .site-nav {
+    background-color: #120c00;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .page__content {
+    background-color: transparent !important;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .archive {
+    background-color: transparent !important;
+    color: #fdfdfd;
+  }
+
+  .dark-mode .site-title {
+    color: #ffffff;
+  }
+
+  .dark-mode .site-nav a {
+    color: #ffffff;
+  }
+
+  .dark-mode ::selection {
+    background: #fdfdfd;
+    color: #000;
+  }
+
+  .dark-mode .edu-divider {
+    background-color: #e6c194;
+  }
+
+  .dark-mode .achievement-meta {
+    color: rgb(255 223 192);
+  }
+
+  .dark-mode .achievement-images-text {
+    color: #fdfdfd;
+  }
+
+  .dark-mode .episode-card-news span {
+    color: #fdfdfd;
+  }
+
+  .dark-mode .episode-card span {
+    color: rgb(212 159 15);
+  }
+
+  .dark-mode .dashed-line {
+    color: #e6c194;
+  }
+
+  .dark-mode hr.silver-line {
+    background-color: #e6c194;
+  }
+
+  .pdf-frame {
+    border: 3px solid #4c2d00;
+  }
+
+  .dark-mode .pdf-frame {
+    border-color: #d39c2e;
+  }
+
+  /* ── Jump to Top Button ── */
+  .jump-to-top {
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+    z-index: 1000;
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    padding: 0;
+    width: 55px;
+    height: 55px;
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none !important;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  }
+
+  .jump-to-top.visible {
+    opacity: 1 !important;
+    visibility: visible;
+    pointer-events: auto !important;
+    transform: translateY(0);
+  }
+
+  .jump-to-top .jtt-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    background: linear-gradient(135deg, rgba(229, 149, 0, 0.7), rgba(255, 188, 66, 0.4));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .jump-to-top .jtt-container:hover {
+    transform: translateY(-2px);
+  }
+
+  .jump-to-top .jtt-arrow {
+    width: 22px;
+    height: 22px;
+    stroke: #fff7dc;
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s ease;
+  }
+
+  .dark-mode .jump-to-top .jtt-container {
+    background: linear-gradient(135deg, rgba(80, 50, 0, 0.8), rgba(40, 25, 0, 0.6));
+    border: 1.5px solid rgba(255, 230, 196, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  }
+
+  .dark-mode .jump-to-top .jtt-arrow {
+    stroke: #ffe6c4;
+  }
+
+  .royal-mode .theme-toggle .sun-moon-container {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.85), rgba(50, 48, 43, 0.75));
+    border: 1.5px solid rgba(240, 240, 240, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(240, 240, 240, 0.15);
+  }
+
+  .royal-mode .icon.sun,
+  .royal-mode .icon.moon {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  .royal-mode {
+    background-color: transparent !important;
+    color: #ffffff;
+  }
+
+  .royal-mode .greedy-nav .hidden-links:before {
+    border-color: #ffffff transparent;
+  }
+
+  .royal-mode .navicon,
+  .royal-mode .navicon:before,
+  .royal-mode .navicon:after {
+    background-color: #ffffff !important;
+  }
+
+  .royal-mode .close .navicon {
+    background: transparent;
+  }
+
+  .royal-mode .greedy-nav a:hover {
+    color: #ffffd1;
+  }
+
+  .royal-mode .greedy-nav .visible-links a:before {
+    background: #ffffd1;
+  }
+
+  .royal-mode a {
+    color: #ffffff;
+  }
+
+  .royal-mode .page__footer {
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.92) 0%, rgba(33, 30, 23, 0.92) 100%) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-top: 2px solid rgba(228, 228, 228, 0.4) !important;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .royal-mode .page__footer footer {
+    color: #D1D1D1;
+  }
+
+  .royal-mode .masthead {
+    background: linear-gradient(90deg, rgba(66, 58, 46, 0.72) 0%, rgba(33, 30, 23, 0.56) 100%) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    color: #ffffff;
+    border-bottom: 2px solid rgba(240, 240, 240, 0.5) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .royal-mode .greedy-nav {
+    background-color: transparent !important;
+    color: #ffffff;
+    overflow: visible !important;
+  }
+
+  .royal-mode .author__content,
+  .royal-mode .author__urls,
+  .royal-mode .social-icons .fa-github {
+    color: #ffffff;
+  }
+
+  .royal-mode .author__urls:before {
+    border-color: rgb(255 255 255 / 50%) transparent;
+  }
+
+  .royal-mode .author__urls:after {
+    border-color: rgb(255 255 255 / 50%) transparent;
+  }
+
+  .royal-mode .social-icons .fa-instagram {
+    color: #ad2bff;
+  }
+
+  .royal-mode .social-icons .fa-linkedin {
+    color: #00acff;
+  }
+
+  .royal-mode .author__urls {
+    background: linear-gradient(135deg, rgba(45, 43, 38, 0.8), rgba(35, 33, 29, 0.6)) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1.5px solid rgb(255 255 255 / 50%) !important;
+  }
+
+  @media (min-width: 57.8125em) {
+    .royal-mode .author__urls {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .royal-mode .author__avatar img {
+    max-width: 175px;
+    border: 2px solid rgba(239, 239, 239, 0.63);
+  }
+
+  @media (min-width: 57.8125em) {
+    .royal-mode .author__avatar img {
+      border: 3px solid rgba(239, 239, 239, 0.63);
+    }
+  }
+
+  .royal-mode .greedy-nav .hidden-links,
+  .royal-mode body>.hidden-links {
+    background: linear-gradient(135deg, rgba(60, 51, 38, 0.78), rgba(40, 35, 25, 0.58)) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1px solid rgba(240, 240, 240, 0.2) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+    z-index: 100 !important;
+  }
+
+  .royal-mode .greedy-nav .hidden-links li,
+  .royal-mode body>.hidden-links li {
+    border-bottom: 1.5px solid rgba(255, 255, 241, 0.7) !important;
+  }
+
+  .royal-mode .greedy-nav .hidden-links li:last-child,
+  .royal-mode body>.hidden-links li:last-child {
+    border-bottom: none !important;
+  }
+
+  .royal-mode .greedy-nav .hidden-links:after {
+    border-color: #ffffff transparent;
+  }
+
+  .royal-mode .btn--inverse:hover {
+    box-shadow: #ffffd1 0 0 0.3rem !important;
+    background: linear-gradient(135deg, rgba(74, 70, 61, 0.8), rgba(50, 48, 43, 0.8)) !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffd1 !important;
+  }
+
+  .royal-mode .btn--inverse {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.8), rgba(50, 48, 43, 0.7)) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffffd1 !important;
+    border: 2px solid rgb(177 172 139) !important;
+  }
+
+  .royal-mode h1,
+  .royal-mode h2,
+  .royal-mode h3,
+  .royal-mode h4,
+  .royal-mode h5,
+  .royal-mode h6 {
+    color: #ffffff;
+  }
+
+
+  .royal-mode .site-nav {
+    background-color: transparent !important;
+    color: #ffffff;
+  }
+
+  .royal-mode .page__content {
+    background-color: transparent !important;
+    color: #F5F5F5;
+  }
+
+  .royal-mode .archive {
+    background-color: transparent !important;
+    color: #F5F5F5;
+  }
+
+  .royal-mode .site-title {
+    color: #F5F5F5;
+  }
+
+  .royal-mode .site-nav a {
+    color: #F5F5F5;
+  }
+
+  .royal-mode ::selection {
+    background: #ffffd1;
+    color: #000;
+  }
+
+  .royal-mode .edu-divider {
+    background-color: #ffffd1;
+  }
+
+  .royal-mode .achievement-meta {
+    color: #f5f5df;
+  }
+
+  .royal-mode .achievement-images-text {
+    color: #F5F5F5;
+  }
+
+  .royal-mode .episode-card-news span {
+    color: #F5F5F5;
+  }
+
+  .royal-mode .episode-card span {
+    color: #ffffd1;
+  }
+
+  .royal-mode .dashed-line {
+    color: rgba(240, 240, 240, 0.6);
+    opacity: 1;
+  }
+
+  .royal-mode hr.silver-line {
+    background-color: #ffffd1;
+  }
+
+  .royal-mode .pdf-frame {
+    border-color: rgba(240, 240, 240, 0.3);
+  }
+
+  .royal-mode .jump-to-top .jtt-container {
+    background: linear-gradient(135deg, rgba(72, 70, 64, 0.85), rgba(50, 48, 43, 0.75));
+    border: 1.5px solid rgba(240, 240, 240, 0.25);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(240, 240, 240, 0.15);
+  }
+
+  .royal-mode .jump-to-top .jtt-arrow {
+    stroke: #ffffff;
+  }
+</style>
+
+<script data-cfasync="false">
+  (function () {
+    try {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      } else if (theme === 'royal') {
+        document.documentElement.classList.add('royal-mode');
+      }
+    } catch (e) { }
+  })();
+</script>
+
+<canvas id="matrix-rain"
+  style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+
+<button id="jump-to-top" class="jump-to-top" aria-label="Jump to Top">
+  <div class="jtt-container">
+    <svg class="jtt-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+</button>
+
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+  <div class="sun-moon-container">
+    <svg class="sun icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="star icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+      </polygon>
+    </svg>
+  </div>
+</button>
+
+<script data-cfasync="false">
+  (function () {
+    var html = document.documentElement;
+    var themeToggle = document.getElementById("theme-toggle");
+    var sun = document.querySelector(".sun");
+    var moon = document.querySelector(".moon");
+    var star = document.querySelector(".star");
+
+    function updateIcons() {
+      var isDark = html.classList.contains("dark-mode");
+      var isRoyal = html.classList.contains("royal-mode");
+      sun.classList.toggle("visible", !isDark && !isRoyal);
+      moon.classList.toggle("visible", isDark);
+      star.classList.toggle("visible", isRoyal);
+    }
+
+    updateIcons();
+
+    themeToggle.addEventListener("click", function () {
+      var isDark = html.classList.contains("dark-mode");
+      var isRoyal = html.classList.contains("royal-mode");
+
+      if (isDark) {
+        /* Switch to Royal */
+        html.classList.remove("dark-mode");
+        html.classList.add("royal-mode");
+        localStorage.setItem("theme", "royal");
+      } else if (isRoyal) {
+        /* Switch to Light */
+        html.classList.remove("royal-mode");
+        localStorage.setItem("theme", "light");
+      } else {
+        /* Switch to Dark */
+        html.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+      }
+
+      updateIcons();
+      document.dispatchEvent(new CustomEvent("site-theme-change", {
+        detail: { theme: html.classList.contains("dark-mode") ? "dark" : (html.classList.contains("royal-mode") ? "royal" : "light") }
+      }));
+    });
+
+    /* ── Jump to Top ── */
+    var jttBtn = document.getElementById("jump-to-top");
+
+    jttBtn.addEventListener("click", function () {
+      /* Use native smooth scroll — far lighter than jQuery animate on mobile */
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    /* Show/hide jump-to-top button — throttled via requestAnimationFrame */
+    var _jttRafPending = false;
+    function updateJtt() {
+      if (_jttRafPending) return;
+      _jttRafPending = true;
+      requestAnimationFrame(function () {
+        _jttRafPending = false;
+        var pageIsScrollable = document.body.scrollHeight > window.innerHeight;
+        var notAtTop = window.scrollY > 0;
+        jttBtn.classList.toggle("visible", pageIsScrollable && notAtTop);
+      });
+    }
+
+    /* Defer slightly so browser scroll-restoration finishes before we check */
+    setTimeout(updateJtt, 120);
+    window.addEventListener("scroll", updateJtt, { passive: true });
+
+    /* ── Devanagari Matrix Rain ── */
+    class MatrixRain {
+      constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d', { alpha: true, desynchronized: true });
+        this.fontSize = 20;
+        this.atlasFontSize = 20;
+        this.nameSeq = ["म", "न", "न", "से", "ठि", "या"];
+        this.glyphs = [];
+        for (let code = 2308; code <= 2361; code++) this.glyphs.push(String.fromCharCode(code));
+        for (let nameChar of this.nameSeq) {
+          if (this.glyphs.indexOf(nameChar) === -1) this.glyphs.push(nameChar);
+        }
+        this.glyphIndex = new Map(this.glyphs.map((glyph, index) => [glyph, index]));
+        this.atlas = document.createElement('canvas');
+        this.atlasTheme = '';
+        this.rafId = 0;
+        this.lastFrame = 0;
+        this.resizeTimer = 0;
+        this.running = false;
+        this.lastCompositeScrollY = -1;
+        this.reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        this.lastWidth = window.innerWidth;
+        /* Draw back-to-front. Layer 1 is the exact original rain; layers 2
+           and 3 only add progressively fainter, slightly faster depth. The
+           atmospheric layers render at lower internal resolution, then scale
+           once during composition; this reduces their backing-store memory
+           and raster work without changing their CSS size or movement. */
+        this.layerConfigs = [
+          { speedFactor: 1.265625, opacity: 0.25, parallax: 0.0750, resolutionScale: 0.50 },
+          { speedFactor: 1.125, opacity: 0.50, parallax: 0.0375, resolutionScale: 0.75 },
+          { speedFactor: 1.000, opacity: 1.00, parallax: 0.0150, resolutionScale: 1.00 }
+        ];
+        this.layers = this.layerConfigs.map((config) => {
+          const buffer = document.createElement('canvas');
+          return {
+            config: config,
+            canvas: buffer,
+            ctx: buffer.getContext('2d', { alpha: true, desynchronized: true }),
+            columns: [],
+            accumulator: Math.random() * (1000 / 60)
+          };
+        });
+        this.frame = this.frame.bind(this);
+        this.handleResize = this.handleResize.bind(this);
+        this.handleVisibility = this.handleVisibility.bind(this);
+        this.handleTheme = this.handleTheme.bind(this);
+        this.handlePageHide = this.handlePageHide.bind(this);
+        this.handlePageShow = this.handlePageShow.bind(this);
+        this.destroy = this.destroy.bind(this);
+        this.resize();
+        window.addEventListener('resize', this.handleResize, { passive: true });
+        document.addEventListener('visibilitychange', this.handleVisibility);
+        document.addEventListener('site-theme-change', this.handleTheme);
+        window.addEventListener('pagehide', this.handlePageHide);
+        window.addEventListener('pageshow', this.handlePageShow);
+        window.addEventListener('beforeunload', this.destroy, { once: true });
+
+        if (this.reduceMotion) this.drawStillFrame();
+        else this.start();
+      }
+
+      themeState() {
+        const isDark = document.documentElement.classList.contains('dark-mode');
+        const isRoyal = document.documentElement.classList.contains('royal-mode');
+        return {
+          key: isRoyal ? 'royal' : (isDark ? 'dark' : 'light'),
+          r: isRoyal ? 240 : (isDark ? 255 : 145),
+          g: isRoyal ? 245 : (isDark ? 200 : 95),
+          b: isRoyal ? 250 : (isDark ? 110 : 20),
+          maxAlpha: isRoyal ? 0.15 : (isDark ? 0.18 : 0.2182125),
+          highlightAlpha: isRoyal ? 0.65 : (isDark ? 0.9 : 1)
+        };
+      }
+
+      buildAtlas(theme) {
+        const cellWidth = 48;
+        const cellHeight = 36;
+        const columns = 10;
+        const rows = Math.ceil(this.glyphs.length / columns);
+        this.atlas.width = cellWidth * columns;
+        this.atlas.height = cellHeight * rows;
+        const atlasContext = this.atlas.getContext('2d');
+        atlasContext.font = `600 ${this.atlasFontSize}px 'SF Pro Display', 'SF Pro Text', sans-serif`;
+        atlasContext.textBaseline = 'alphabetic';
+        atlasContext.fillStyle = `rgb(${theme.r}, ${theme.g}, ${theme.b})`;
+        /* Blur the tiny atlas once instead of filtering the full viewport on
+           every animation frame. The glyph softness remains the same. */
+        if ('filter' in atlasContext) atlasContext.filter = 'blur(1px)';
+        for (let index = 0; index < this.glyphs.length; index++) {
+          const x = (index % columns) * cellWidth + 2;
+          const y = Math.floor(index / columns) * cellHeight + 25;
+          atlasContext.fillText(this.glyphs[index], x, y);
+        }
+        this.atlasTheme = theme.key;
+      }
+
+      handleResize() {
+        window.clearTimeout(this.resizeTimer);
+        this.resizeTimer = window.setTimeout(() => {
+          if (window.innerWidth !== this.lastWidth || Math.abs(this.canvas.height - window.innerHeight) >= 150) {
+            this.lastWidth = window.innerWidth;
+            this.resize();
+          }
+        }, 140);
+      }
+
+      handleVisibility() {
+        if (document.hidden) this.stop();
+        else if (this.reduceMotion) this.drawStillFrame();
+        else this.start();
+      }
+
+      handleTheme() {
+        this.atlasTheme = '';
+        this.lastCompositeScrollY = -1;
+        for (const layer of this.layers) {
+          layer.ctx.clearRect(0, 0, layer.canvas.width, layer.canvas.height);
+        }
+        if (this.reduceMotion || !this.running) this.drawStillFrame();
+      }
+
+      releaseBackingStores() {
+        /* Explicitly release the four viewport-sized canvas allocations before
+           reload/BFCache retention. Compressed images are small; these raw
+           RGBA surfaces are the site's largest per-tab memory allocation. */
+        this.canvas.width = 1;
+        this.canvas.height = 1;
+        this.atlas.width = 1;
+        this.atlas.height = 1;
+        this.atlasTheme = '';
+        this.lastCompositeScrollY = -1;
+        for (const layer of this.layers) {
+          layer.canvas.width = 1;
+          layer.canvas.height = 1;
+          layer.columns = [];
+          layer.accumulator = Math.random() * (1000 / 60);
+        }
+      }
+
+      handlePageHide() {
+        this.stop();
+        window.clearTimeout(this.resizeTimer);
+        this.releaseBackingStores();
+      }
+
+      handlePageShow(event) {
+        if (!event.persisted) return;
+        this.lastWidth = window.innerWidth;
+        this.resize();
+        if (this.reduceMotion) this.drawStillFrame();
+        else this.start();
+      }
+
+      start() {
+        if (this.running || document.hidden || this.reduceMotion) return;
+        this.running = true;
+        this.lastFrame = 0;
+        this.rafId = requestAnimationFrame(this.frame);
+      }
+
+      stop() {
+        this.running = false;
+        if (this.rafId) cancelAnimationFrame(this.rafId);
+        this.rafId = 0;
+      }
+
+      destroy() {
+        this.stop();
+        window.clearTimeout(this.resizeTimer);
+        window.removeEventListener('resize', this.handleResize);
+        document.removeEventListener('visibilitychange', this.handleVisibility);
+        document.removeEventListener('site-theme-change', this.handleTheme);
+        window.removeEventListener('pagehide', this.handlePageHide);
+        window.removeEventListener('pageshow', this.handlePageShow);
+        this.releaseBackingStores();
+      }
+
+      frame(timestamp) {
+        if (!this.running) return;
+        const deltaMs = this.lastFrame ? Math.min(50, timestamp - this.lastFrame) : (1000 / 60);
+        this.lastFrame = timestamp;
+        const theme = this.themeState();
+        if (theme.key !== this.atlasTheme) this.buildAtlas(theme);
+        let layerChanged = false;
+        for (const layer of this.layers) {
+          layer.accumulator += deltaMs;
+          let updates = 0;
+          while (layer.accumulator >= (1000 / 60) && updates < 3) {
+            this.updateLayer(layer, theme, 1);
+            layer.accumulator -= (1000 / 60);
+            updates++;
+            layerChanged = true;
+          }
+        }
+        const scrollY = window.scrollY || window.pageYOffset || 0;
+        if (layerChanged || scrollY !== this.lastCompositeScrollY) {
+          this.composite(theme);
+          this.lastCompositeScrollY = scrollY;
+        }
+        this.rafId = requestAnimationFrame(this.frame);
+      }
+
+      resize() {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        /* Ignore mobile address bar hide/show triggers which only alter height slightly */
+        if (this.canvas.width === w && Math.abs(this.canvas.height - h) < 150) return;
+
+        this.canvas.width = w;
+        this.canvas.height = h;
+        /* Remove inline overrides just in case they were appended */
+        this.canvas.style.width = '100vw';
+        this.canvas.style.height = '100vh';
+        this.lastCompositeScrollY = -1;
+
+        for (const layer of this.layers) {
+          const resolutionScale = layer.config.resolutionScale || 1;
+          layer.canvas.width = Math.ceil(w * resolutionScale);
+          layer.canvas.height = Math.ceil(h * resolutionScale);
+          layer.columns = [];
+          const spacing = this.fontSize * 0.8;
+          const colCount = Math.ceil(w / spacing) + 1;
+          for (let index = 0; index < colCount; index++) {
+            layer.columns.push({
+              x: index * spacing,
+              y: Math.random() * -2000,
+              speed: Math.random() * 0.17 + 0.06,
+              nameIdx: -1,
+              chars: []
+            });
+          }
+        }
+      }
+
+      chance(probabilityAt60Hz, frameScale) {
+        return Math.random() < 1 - Math.pow(1 - probabilityAt60Hz, frameScale);
+      }
+
+      updateLayer(layer, theme, frameScale) {
+        const context = layer.ctx;
+        const config = layer.config;
+        const resolutionScale = config.resolutionScale || 1;
+        const cellWidth = 48;
+        const cellHeight = 36;
+        const atlasColumns = 10;
+        context.setTransform(1, 0, 0, 1, 0, 0);
+        context.clearRect(0, 0, layer.canvas.width, layer.canvas.height);
+        context.setTransform(resolutionScale, 0, 0, resolutionScale, 0, 0);
+
+        for (const column of layer.columns) {
+          column.speed = Math.max(0.04, Math.min(0.28,
+            column.speed + (Math.random() - 0.5) * 0.03 * Math.sqrt(frameScale)
+          ));
+
+          /* Multiplying speed in probability space retains the old irregular
+             cadence while making only the rear layers 12.5% faster. */
+          const movementChance = 1 - Math.pow(1 - column.speed, config.speedFactor);
+          if (this.chance(movementChance, frameScale)) {
+            column.y += this.fontSize;
+            let glyph;
+            let highlighted = false;
+            if (column.nameIdx === -1 && this.chance(0.000015, frameScale)) column.nameIdx = 0;
+            if (column.nameIdx !== -1) {
+              glyph = this.nameSeq[column.nameIdx++];
+              highlighted = true;
+              if (column.nameIdx >= this.nameSeq.length) column.nameIdx = -1;
+            } else {
+              glyph = String.fromCharCode(Math.floor(Math.random() * 54) + 2308);
+            }
+            column.chars.unshift({ char: glyph, y: column.y, opacity: 1, isHighlight: highlighted });
+            if (column.chars.length > 24) column.chars.length = 24;
+          }
+
+          if (column.y > this.canvas.height && this.chance(0.02, frameScale)) {
+            column.y = Math.random() * -2000;
+            column.speed = Math.random() * 0.17 + 0.06;
+            column.nameIdx = -1;
+            column.chars = [];
+          }
+
+          for (let index = column.chars.length - 1; index >= 0; index--) {
+            const drop = column.chars[index];
+            const glyphIndex = this.glyphIndex.get(drop.char) || 0;
+            const sourceX = (glyphIndex % atlasColumns) * cellWidth;
+            const sourceY = Math.floor(glyphIndex / atlasColumns) * cellHeight;
+            context.globalAlpha = drop.opacity * (drop.isHighlight ? theme.highlightAlpha : theme.maxAlpha);
+            context.drawImage(this.atlas, sourceX, sourceY, cellWidth, cellHeight, column.x - 2, drop.y - 25, cellWidth, cellHeight);
+
+            if (drop.isHighlight) drop.opacity -= (Math.random() * 0.003 + 0.001) * frameScale;
+            else drop.opacity -= (Math.random() * 0.025 + 0.008) * frameScale;
+            if (drop.opacity <= 0) column.chars.splice(index, 1);
+          }
+        }
+        context.globalAlpha = 1;
+        context.setTransform(1, 0, 0, 1, 0, 0);
+      }
+
+      composite(theme) {
+        const height = this.canvas.height;
+        const scrollY = window.scrollY || window.pageYOffset || 0;
+        this.ctx.clearRect(0, 0, this.canvas.width, height);
+        for (let layerIndex = 0; layerIndex < this.layers.length; layerIndex++) {
+          const layer = this.layers[layerIndex];
+          const offset = -((scrollY * layer.config.parallax) % height);
+          let opacityMultiplier = 1;
+          if (theme.key === 'light') {
+            /* maxAlpha carries the shared light-theme increase; retain the
+               existing extra rear/middle depth weighting. */
+            if (layerIndex === 0) opacityMultiplier = 1.090909;
+            else if (layerIndex === 1) opacityMultiplier = 1.045455;
+          } else {
+            if (layerIndex === 0) opacityMultiplier = 1.15;
+            else if (layerIndex === 1) opacityMultiplier = 1.10;
+          }
+          this.ctx.globalAlpha = Math.min(1, layer.config.opacity * opacityMultiplier);
+          this.ctx.drawImage(layer.canvas, 0, offset, this.canvas.width, height);
+          this.ctx.drawImage(layer.canvas, 0, offset + height, this.canvas.width, height);
+        }
+        this.ctx.globalAlpha = 1;
+      }
+
+      drawStillFrame() {
+        const theme = this.themeState();
+        if (theme.key !== this.atlasTheme) this.buildAtlas(theme);
+        for (const layer of this.layers) this.updateLayer(layer, theme, 1);
+        this.composite(theme);
+      }
+    }
+
+    /* Initialize if supported */
+    if (document.getElementById('matrix-rain')) {
+      new MatrixRain('matrix-rain');
+    }
+  })();
+</script>
+<!-- END THEME TOGGLE BUTTON -->

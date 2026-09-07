@@ -1,0 +1,259 @@
+<div id="sacred-geometry-overlay"></div>
+
+<style>
+  #sacred-geometry-overlay {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -2;
+    pointer-events: none;
+    overflow: hidden;
+    /* Do not promote this full-document overlay to one enormous GPU texture.
+       Only the few visible rotating sigils need compositor attention. */
+    contain: strict;
+  }
+  .sg-shape {
+    position: absolute;
+    stroke: #8a5a0f; /* Much darker brown for light mode */
+    color: #8a5a0f;
+    fill: none;
+    stroke-width: 0.6px;
+    opacity: 0.18975; /* Light mode: 15% stronger than the current 0.165 */
+    transform-origin: center center;
+    animation: sg-axis-rotation 60s linear infinite;
+    animation-play-state: paused;
+    /* will-change removed: per-shape promotion was creating 1 GPU layer per
+       sigil. Parent overlay is now the single composite layer. */
+  }
+
+  .sg-shape.sg-visible { animation-play-state: running; }
+
+  @keyframes sg-axis-rotation {
+    from { transform: translate3d(0, var(--sg-scroll-offset, 0px), 0) rotate(var(--sg-start-angle, 0deg)); }
+    to { transform: translate3d(0, var(--sg-scroll-offset, 0px), 0) rotate(calc(var(--sg-start-angle, 0deg) + 360deg)); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sg-shape { animation: none; }
+  }
+  
+  .dark-mode .sg-shape {
+    stroke: #ffebb8;
+    color: #ffebb8;
+    opacity: 0.18;
+  }
+
+  .royal-mode .sg-shape {
+    stroke: #e8ecf1;
+    color: #e8ecf1;
+    opacity: 0.22;
+  }
+  
+  /* The static background SVG styling */
+  .sg-glow-path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1px;
+    opacity: 0.7; /* Internal path opacity to blend with shape container */
+  }
+</style>
+
+<script>
+(function () {
+  function initSacredGeometry() {
+    const overlay = document.getElementById('sacred-geometry-overlay');
+    if (!overlay) return;
+
+    /* Check if OCCULT_SIGILS loaded securely, fallback to empty in worst-case delay */
+    const generators = (typeof OCCULT_SIGILS !== 'undefined' && OCCULT_SIGILS.length) ? OCCULT_SIGILS : [];
+
+    let lastPopulatedY = 250;
+    let isLeft = true;
+    let isActive = true;
+    let scrollRaf = 0;
+    let currentScrollOffset = '0px';
+    const visibleSigils = new Set();
+    const rotationObserver = 'IntersectionObserver' in window
+      ? new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            entry.target.classList.toggle('sg-visible', entry.isIntersecting);
+            if (entry.isIntersecting) {
+              visibleSigils.add(entry.target);
+              entry.target.style.setProperty('--sg-scroll-offset', currentScrollOffset);
+            } else {
+              visibleSigils.delete(entry.target);
+            }
+          });
+        }, { rootMargin: '120px 0px' })
+      : null;
+    
+    /* Dynamically stamps SVG objects down the page height. The overlay itself
+       is stretched between the body's top and bottom by CSS, so it follows
+       content height synchronously without extending the document's scroll
+       range or holding stale height while a panel collapses. */
+    const populateToHeight = (targetHeight) => {
+        const fragment = document.createDocumentFragment();
+
+        while (lastPopulatedY < targetHeight - 350) {
+            let div = document.createElement('div');
+            div.className = 'sg-shape';
+            
+            /* Scaled back to original preferred size */
+            let size = Math.floor(250 + Math.random() * 100); 
+            if (window.innerWidth >= 1440) {
+               size = Math.floor(380 + Math.random() * 160); /* ultra-large monitors */
+            } else if (window.innerWidth < 768) {
+               size = Math.floor(150 + Math.random() * 60); /* smaller phones/tablets */
+            } else if (window.innerWidth < 1024) {
+               size = Math.floor(190 + Math.random() * 70); /* smaller laptops */
+            }
+            
+            div.style.width = size + 'px';
+            div.style.height = size + 'px';
+            div.style.top = lastPopulatedY + 'px';
+            
+            let edgeOffset = `-${size * 0.4}px`;
+            if (isLeft) { 
+                div.style.left = edgeOffset; 
+            } else { 
+                div.style.right = edgeOffset; 
+            }
+            
+            /* Randomly rotate the geometries to blend them more seamlessly over the background */
+            const startAngle = Math.random() * 360;
+            div.style.setProperty('--sg-start-angle', `${startAngle}deg`);
+            div.style.transform = `rotate(${startAngle}deg)`;
+            
+            let genSVG = generators[Math.floor(Math.random() * generators.length)];
+            
+            /* Animation logic is pre-embedded per path recursively in the python generation */
+            div.innerHTML = genSVG;
+            
+            fragment.appendChild(div);
+            if (rotationObserver) rotationObserver.observe(div);
+            else {
+              div.classList.add('sg-visible');
+              visibleSigils.add(div);
+              div.style.setProperty('--sg-scroll-offset', currentScrollOffset);
+            }
+            
+            isLeft = !isLeft;
+            /* Densify spawn interval */
+            lastPopulatedY += Math.floor(500 + Math.random() * 300); 
+        }
+
+        if (fragment.childNodes.length > 0) {
+          overlay.appendChild(fragment);
+        }
+    };
+
+    /* Measure the real content and footer, never the overlay itself. The old
+       zero-height/restore measurement mutated the same document observed by
+       ResizeObserver and could form a self-triggering resize cycle. */
+    const measureContentHeight = () => {
+        const main = document.getElementById('main');
+        const footer = document.querySelector('.page__footer');
+        const mainBottom = main ? (main.offsetTop + main.offsetHeight) : 0;
+        const footerBottom = footer ? (footer.offsetTop + footer.offsetHeight) : 0;
+        return Math.max(window.innerHeight, mainBottom, footerBottom);
+    };
+
+    /* Shape population may trail an expanding panel slightly; the CSS-sized
+       overlay and footer do not. This avoids per-frame layout reads while
+       keeping panel collapse and browser scroll clamping immediate. */
+    let _sgResizeTimer = 0;
+    const ro = new ResizeObserver(() => {
+        if (!isActive) return;
+        window.clearTimeout(_sgResizeTimer);
+        _sgResizeTimer = window.setTimeout(() => {
+            requestAnimationFrame(() => populateToHeight(measureContentHeight()));
+        }, 120);
+    });
+
+    const observeLayout = () => {
+        const main = document.getElementById('main');
+        const footer = document.querySelector('.page__footer');
+        if (main) ro.observe(main);
+        if (footer) ro.observe(footer);
+    };
+
+    /* Track the matrix foreground with a stronger 1.5625% parallax.
+       Only visible sigils receive transform updates; off-screen SVGs remain
+       untouched while keeping their fixed positions along the page edges. */
+    const updateScrollOffset = () => {
+        scrollRaf = 0;
+        const scrollY = window.scrollY || window.pageYOffset || 0;
+        currentScrollOffset = `${-(scrollY * 0.015625)}px`;
+        visibleSigils.forEach((shape) => {
+            shape.style.setProperty('--sg-scroll-offset', currentScrollOffset);
+        });
+    };
+    const scheduleScrollOffset = () => {
+        if (!isActive || scrollRaf) return;
+        scrollRaf = requestAnimationFrame(updateScrollOffset);
+    };
+
+    const releaseSigils = () => {
+        isActive = false;
+        window.clearTimeout(_sgResizeTimer);
+        if (scrollRaf) cancelAnimationFrame(scrollRaf);
+        scrollRaf = 0;
+        ro.disconnect();
+        if (rotationObserver) rotationObserver.disconnect();
+        visibleSigils.clear();
+        overlay.replaceChildren();
+        lastPopulatedY = 250;
+        isLeft = true;
+    };
+
+    const restoreSigils = () => {
+        if (isActive) return;
+        isActive = true;
+        observeLayout();
+        updateScrollOffset();
+        populateToHeight(measureContentHeight());
+    };
+
+    observeLayout();
+    window.addEventListener('scroll', scheduleScrollOffset, { passive: true });
+
+    /* Explicit initial fire */
+    updateScrollOffset();
+    populateToHeight(measureContentHeight());
+    window.addEventListener('pagehide', releaseSigils);
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) restoreSigils();
+    });
+  }
+
+  /* The six detailed SVG generators are the site's largest decorative script.
+     Load and parse them after the first paint so they never delay the page's
+     text, navigation, or initial input readiness. */
+  function loadSacredGeometry() {
+    if (typeof OCCULT_SIGILS !== 'undefined') {
+      initSacredGeometry();
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = "{{ '/assets/js/occult-sigils.js' | relative_url }}?v={{ site.time | date: '%s' }}";
+    script.async = true;
+    script.onload = initSacredGeometry;
+    document.head.appendChild(script);
+  }
+
+  function scheduleSacredGeometry() {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadSacredGeometry, { timeout: 700 });
+    } else {
+      window.setTimeout(loadSacredGeometry, 32);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scheduleSacredGeometry, { once: true });
+  } else {
+    scheduleSacredGeometry();
+  }
+})();
+</script>

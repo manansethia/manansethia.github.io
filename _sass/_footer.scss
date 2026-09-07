@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+/* CSS sticky-footer: body is flex column (in _base.scss). The
+   .layout-main wrapper around content has `flex: 1 0 auto`, absorbing
+   leftover vertical space and pushing footer to viewport bottom when
+   content is short. On long pages, layout-main grows to its content
+   size and footer flows naturally below. Footer itself has
+   `flex-shrink: 0` so it never gets squashed when content is tall. */
+.layout-main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.page__footer {
+  @include clearfix;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin-top: 0;
+  flex-shrink: 0;
+  /* Keep footer placement entirely in normal flex flow. It must never wait
+     for an entrance animation while content above it changes height. */
+  color: mix(#fff, $gray, 25%);
+  -webkit-animation: none !important;
+  animation: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  background: linear-gradient(135deg, rgba(229, 149, 0, 0.6), rgba(255, 188, 66, 0.3));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+  footer {
+    @include clearfix;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    max-width: 100%;
+    padding: 0 1em 1em;
+    color: #452900;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .fas,
+  .fab,
+  .far,
+  .fal {
+    color: mix(#fff, $gray, 25%);
+  }
+}
+
+/* footer-docked rule removed: superseded by CSS sticky-footer pattern above
+   (body flex + page__footer margin-top:auto). The .footer-docked class may
+   still be added by legacy JS but no longer changes positioning. */
+
+.page__footer-copyright {
+  font-family: $global-font-family;
+  font-size: $type-size-7;
+}
+
+.page__footer-follow {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: $sans-serif-narrow;
+    font-size: $type-size-6;
+    text-transform: uppercase;
+  }
+
+  li+li:before {
+    content: "";
+    padding-right: 5px;
+  }
+
+  a {
+    padding-right: 10px;
+    font-weight: bold;
+  }
+
+  .social-icons {
+    a {
+      white-space: nowrap;
+    }
+  }
+}

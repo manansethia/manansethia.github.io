@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            overflow-x: hidden;
+            /* ✅ Allow full vertical scrolling */
+        }
+
+        .pdf-container {
+            width: 100%;
+            min-height: 100vh;
+            display: block;
+            background-color: white;
+        }
+
+        .pdf-page {
+            width: 100%;
+            position: relative;
+            contain: layout paint;
+            background-color: #ffffff;
+        }
+
+        .pdf-page + .pdf-page {
+            border-top: 1px solid #eeeeee;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: auto;
+            background-color: #ffffff;
+            border: none;
+        }
+
+        .pdf-error {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            color: #444444;
+            font: 14px/1.5 system-ui, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pdf-container" id="pdf-container" data-pdf-url="/files/MRIDA.pdf"></div>
+
+    <script type="module" src="/assets/js/lazy-pdf-viewer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<script>
+  (function () {
+    var rowSelectors = [
+      '.achievement-images',
+      '.quiz-episodes-scroll',
+      '.cert-scroll',
+      '.project-gallery',
+      '.exp-images'
+    ];
+    var activeRow = null;
+
+    function isEditable(element) {
+      if (!element) {
+        return false;
+      }
+
+      var tag = element.tagName;
+      return element.isContentEditable
+        || tag === 'INPUT'
+        || tag === 'TEXTAREA'
+        || tag === 'SELECT';
+    }
+
+    function setActiveRow(row) {
+      activeRow = row;
+    }
+
+    document.querySelectorAll(rowSelectors.join(',')).forEach(function (row) {
+      row.addEventListener('mouseenter', function () {
+        setActiveRow(row);
+      });
+
+      row.addEventListener('mouseleave', function () {
+        if (activeRow === row) {
+          activeRow = null;
+        }
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (!activeRow || isEditable(document.activeElement)) {
+        return;
+      }
+
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') {
+        return;
+      }
+
+      if (activeRow.scrollWidth <= activeRow.clientWidth) {
+        return;
+      }
+
+      event.preventDefault();
+
+      var direction = event.key === 'ArrowRight' ? 1 : -1;
+      var step = Math.max(180, Math.round(activeRow.clientWidth * 0.8));
+
+      activeRow.scrollBy({
+        left: direction * step,
+        behavior: 'smooth'
+      });
+    });
+  })();
+</script>

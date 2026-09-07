@@ -1,0 +1,465 @@
+---
+layout: archive
+title: "Resume"
+permalink: /resume/
+description: "Manan Sethia's Resume and CV — download or view inline. One-page resume and detailed curriculum vitae."
+keywords: "Manan Sethia resume, Manan Sethia CV, download resume, student resume, competitive programmer resume"
+author_profile: true
+redirect_from:
+  - /cv
+  - /portfolio
+---
+
+{% include base_path %}
+
+<style>
+  /* ── Intro Text ── */
+  .resume-intro {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: inherit;
+  }
+
+  /* Keep the title and the two-line introduction compact. The introduction is
+     written with explicit elements below so Markdown's automatic paragraph
+     margins cannot add a second, hidden gap around the heading. */
+  .page__title {
+    margin: 0 0 0.386em !important;
+  }
+  .resume-intro-heading {
+    display: block;
+    margin: 0 0 9px !important;
+  }
+  .resume-intro-copy {
+    margin: 0 0 12px !important;
+  }
+
+  /* ── Decorative divider ── */
+  .resume-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(192, 115, 0, 0.5), transparent);
+    border: none;
+    margin: 24px 0;
+  }
+  .dark-mode .resume-divider {
+    background: linear-gradient(90deg, transparent, rgba(255, 210, 120, 0.35), transparent);
+  }
+  .royal-mode .resume-divider {
+    background: linear-gradient(90deg, transparent, rgba(240, 240, 240, 0.3), transparent);
+  }
+
+  /* ── Tab Strip ── */
+  .doc-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid rgba(185, 115, 0, 0.45);
+    user-select: none;
+    margin-bottom: 0;
+  }
+  .dark-mode .doc-tabs {
+    border-bottom-color: rgba(255, 210, 120, 0.35);
+  }
+  .royal-mode .doc-tabs {
+    border-bottom-color: rgba(240, 240, 240, 0.3);
+  }
+
+  .doc-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 24px 9px;
+    font-size: 0.88em;
+    font-weight: 600;
+    color: #835400;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    background: transparent;
+    position: relative;
+    bottom: -2px;
+    transition: color 0.3s ease, background 0.3s ease, border-color 0.35s ease, transform 0.2s ease;
+  }
+  .dark-mode .doc-tab {
+    color: #f1c27b;
+  }
+  .royal-mode .doc-tab {
+    color: #ffffd1;
+  }
+  .doc-tab:hover {
+    color: #5a3e00;
+    background: rgba(229, 149, 0, 0.08);
+    transform: translateY(-1px);
+  }
+  .dark-mode .doc-tab:hover {
+    color: #e6c194;
+    background: rgba(255, 210, 120, 0.06);
+  }
+  .royal-mode .doc-tab:hover {
+    color: #ffffd1;
+    background: rgba(255, 255, 209, 0.1);
+  }
+
+  /* Active tab – light mode */
+  .doc-tab.active {
+    color: #3a2400;
+    background: #fff;
+    border-color: rgba(185, 115, 0, 0.45);
+  }
+  /* Active tab – dark mode: subtle warm dark background */
+  .dark-mode .doc-tab.active {
+    color: #f0d8a8;
+    background: #1a1408;
+    border-color: rgba(255, 210, 120, 0.35);
+  }
+  .royal-mode .doc-tab.active {
+    color: #ffffff;
+    background: #1e1d1a;
+    border-color: rgba(240, 240, 240, 0.3);
+  }
+
+  .tab-icon {
+    font-size: 1.05em;
+    transition: transform 0.3s ease;
+  }
+  .doc-tab.active .tab-icon {
+    transform: scale(1.15);
+  }
+
+  @media (max-width: 480px) {
+    .doc-tab { padding: 8px 14px 7px; font-size: 0.82em; gap: 4px; }
+  }
+
+  /* ── PDF Viewer – CSS Grid smooth height animation ── */
+  .pdf-viewer-outer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .pdf-viewer-outer.open {
+    grid-template-rows: 1fr;
+  }
+
+  .pdf-viewer-wrap {
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 0 14px 14px 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1.5px solid rgba(192, 115, 0, 0.3);
+    border-top: none;
+    background: #f5f0e8;
+    position: relative;
+  }
+  .dark-mode .pdf-viewer-wrap {
+    border-color: #5a4520;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    background: #0e0c08;
+  }
+  .royal-mode .pdf-viewer-wrap {
+    border-color: #4a463d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: #0d0d0c;
+  }
+
+  /* Loading shimmer */
+  .pdf-viewer-wrap.loading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+      rgba(192, 115, 0, 0.03) 25%,
+      rgba(192, 115, 0, 0.08) 50%,
+      rgba(192, 115, 0, 0.03) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .dark-mode .pdf-viewer-wrap.loading::after {
+    background: linear-gradient(90deg,
+      rgba(255, 210, 120, 0.02) 25%,
+      rgba(255, 210, 120, 0.06) 50%,
+      rgba(255, 210, 120, 0.02) 75%
+    );
+    background-size: 200% 100%;
+  }
+  .royal-mode .pdf-viewer-wrap.loading::after {
+    background: linear-gradient(90deg,
+      rgba(255, 255, 209, 0.02) 25%,
+      rgba(255, 255, 209, 0.06) 50%,
+      rgba(255, 255, 209, 0.02) 75%
+    );
+    background-size: 200% 100%;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  .pdf-viewer-frame {
+    width: 100%;
+    height: 550px;
+    border: none;
+    display: block;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .pdf-viewer-frame.loaded {
+    opacity: 1;
+  }
+  @media (max-width: 600px) {
+    .pdf-viewer-frame { height: 500px; }
+  }
+
+  /* ── Download Buttons (exact .btn--inverse from theme-toggle) ── */
+  .download-row {
+    display: flex;
+    gap: 14px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.5em 1.2em;
+    font-family: inherit;
+    font-size: 0.85em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    background: linear-gradient(135deg, rgb(68, 41, 0), rgb(141, 85, 0));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffbf1f !important;
+    border: 2px solid rgba(6, 4, 0);
+  }
+  .dl-btn:hover {
+    box-shadow: #000000 0 0 0.3rem;
+    background: linear-gradient(135deg, rgb(48, 29, 0), rgb(65, 42, 9)) !important;
+    color: #ffbf1f !important;
+    border: 2px solid #060400 !important;
+    transform: translateY(-2px);
+  }
+  .dark-mode .dl-btn {
+    background: linear-gradient(135deg, rgba(255, 240, 208), rgba(255, 213, 122)) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #663d00 !important;
+    border: 2px solid rgb(204, 145, 57) !important;
+  }
+  .dark-mode .dl-btn:hover {
+    box-shadow: #fff5e7 0 0 0.3rem !important;
+    background: linear-gradient(135deg, rgb(255, 245, 224), rgb(255, 211, 114)) !important;
+    color: #663d00 !important;
+    border: 2px solid #dc880a !important;
+    transform: translateY(-2px);
+  }
+  .royal-mode .dl-btn {
+    background: linear-gradient(135deg, rgba(45, 43, 38, 1), rgba(35, 33, 29, 1)) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffffd1 !important;
+    border: 2px solid #817968 !important;
+  }
+  .royal-mode .dl-btn:hover {
+    box-shadow: #ffffd1 0 0 0.3rem !important;
+    background: linear-gradient(135deg, rgba(74, 70, 61, 1), rgba(60, 56, 49, 1)) !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffd1 !important;
+    transform: translateY(-2px);
+  }
+
+  .dl-icon {
+    font-size: 1.1em;
+  }
+  .royal-mode .page__content h2 { border-bottom: 1.5px solid rgba(240, 240, 240, 0.9); }
+</style>
+
+<div class="resume-intro resume-intro-heading" role="heading" aria-level="2" style="font-size:1.17em;font-weight:600">Here are my Resume and CV.</div>
+<p class="resume-intro resume-intro-copy">Think of the tabs below like browser tabs; tap one to peek inside, tap it again to fold it back up, or switch between them. You can also grab a copy using the download buttons below.</p>
+
+<!-- ═══ Tab Strip ═══ -->
+<div class="doc-tabs" id="docTabs">
+  <div class="doc-tab" id="tabResume" onclick="switchDoc('resume')">
+    <span class="tab-icon">📄</span> Resume
+  </div>
+  <div class="doc-tab" id="tabCV" onclick="switchDoc('cv')">
+    <span class="tab-icon">📑</span> Curriculum Vitae
+  </div>
+</div>
+
+<!-- ═══ PDF Viewer (CSS Grid animation wrapper) ═══ -->
+<div class="pdf-viewer-outer" id="pdfOuter">
+  <div class="pdf-viewer-wrap" id="pdfWrap">
+    <iframe class="pdf-viewer-frame" id="docFrame" title="Document Viewer"></iframe>
+  </div>
+</div>
+
+<hr class="resume-divider">
+
+<!-- ═══ Download Buttons ═══ -->
+<div class="download-row">
+  <a class="dl-btn" id="dlResume" href="/files/v1_resume.pdf" download="v1_Manan_Sethia_Resume.pdf">
+    <span class="dl-icon">⬇</span> Download Resume
+  </a>
+  <a class="dl-btn" id="dlCV" href="/files/v1_cv.pdf" download="v1_Manan_Sethia_CV.pdf">
+    <span class="dl-icon">⬇</span> Download CV
+  </a>
+</div>
+
+<script>
+(function() {
+  var dlResume = document.getElementById('dlResume');
+  var dlCV     = document.getElementById('dlCV');
+
+  var versionMap = { light: 'v1', dark: 'v2', royal: 'v3' };
+
+  function getTheme() {
+    var h = document.documentElement;
+    if (h.classList.contains('dark-mode')) return 'dark';
+    if (h.classList.contains('royal-mode')) return 'royal';
+    return 'light';
+  }
+
+  function updateDownloads() {
+    var v = versionMap[getTheme()];
+    dlResume.href     = '/files/' + v + '_resume.pdf';
+    dlResume.download = v + '_Manan_Sethia_Resume.pdf';
+    dlCV.href         = '/files/' + v + '_cv.pdf';
+    dlCV.download     = v + '_Manan_Sethia_CV.pdf';
+  }
+
+  updateDownloads();
+
+  new MutationObserver(updateDownloads)
+    .observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+})();
+</script>
+
+<script>
+(function() {
+  var outer   = document.getElementById('pdfOuter');
+  var wrap    = document.getElementById('pdfWrap');
+  var frame   = document.getElementById('docFrame');
+  var tabR    = document.getElementById('tabResume');
+  var tabC    = document.getElementById('tabCV');
+  var current = null;
+
+  /* Detect current theme from <html> classes */
+  function getTheme() {
+    var html = document.documentElement;
+    if (html.classList.contains('dark-mode')) return 'dark';
+    if (html.classList.contains('royal-mode')) return 'royal';
+    return 'light';
+  }
+
+  function buildSrc(which) {
+    var base = which === 'resume'
+      ? '/_pages/resume-print.html'
+      : '/_pages/cv-print.html';
+    return base + '?theme=' + getTheme();
+  }
+
+  /* Eager preload, but defer to window.load + idle tick so masthead/navbar
+     JS init runs first. Without this defer, the heavy iframe load
+     blocks greedy-nav .loaded class application -> navbar flashes blank. */
+  var loadedSource = null;
+  function preload() {
+    if (loadedSource) return;
+    frame.src = buildSrc('resume');
+    loadedSource = 'resume';
+  }
+  if (document.readyState === 'complete') {
+    setTimeout(preload, 0);
+  } else {
+    window.addEventListener('load', function() { setTimeout(preload, 0); });
+  }
+
+  /* Watch for theme changes on <html> and forward to iframe via postMessage */
+  var lastTheme = getTheme();
+  var observer = new MutationObserver(function() {
+    var t = getTheme();
+    if (t !== lastTheme) {
+      lastTheme = t;
+      if (frame.contentWindow) {
+        frame.contentWindow.postMessage({ type: 'theme-change', theme: t }, '*');
+      }
+    }
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+  /* Pump per-frame footer push during the height transition. Bypasses
+     ResizeObserver (which can miss frames if body height is locked by
+     min-height). 600ms covers 0.5s grid anim + 100ms settle margin. */
+  function pumpFooter() {
+    if (window.smoothFooterPush) window.smoothFooterPush(600);
+  }
+
+  function switchDoc(which) {
+    if (current === which) {
+      /* Collapse: fade content out first (0.18s), then collapse height smoothly (0.45s). */
+      frame.classList.remove('loaded');
+      wrap.classList.remove('loading');
+      tabR.classList.remove('active');
+      tabC.classList.remove('active');
+      current = null;
+      setTimeout(function() {
+        pumpFooter();
+        outer.classList.remove('open');
+      }, 180);
+      return;
+    }
+
+    tabR.classList.toggle('active', which === 'resume');
+    tabC.classList.toggle('active', which === 'cv');
+
+    preload(); /* in case user clicks before window.load fires */
+    var needsSwap = (loadedSource !== which);
+    if (needsSwap) {
+      frame.classList.remove('loaded');
+      wrap.classList.add('loading');
+      frame.src = buildSrc(which);
+      loadedSource = which;
+    } else {
+      /* Same doc — but theme may have changed since we built the URL;
+         push current theme into the iframe just in case. */
+      if (frame.contentWindow) {
+        frame.contentWindow.postMessage({ type: 'theme-change', theme: getTheme() }, '*');
+      }
+    }
+
+    if (!current) {
+      /* Opening from closed — animate height (0.45s), then fade iframe in (0.25s). */
+      pumpFooter(); /* start per-frame footer pump at click moment */
+      outer.classList.add('open');
+      setTimeout(function() {
+        frame.classList.add('loaded');
+        wrap.classList.remove('loading');
+      }, 450);
+    } else if (needsSwap) {
+      /* Already open, just swapped src — fade back in once load fires. */
+      var onLoad = function() {
+        frame.removeEventListener('load', onLoad);
+        setTimeout(function() {
+          frame.classList.add('loaded');
+          wrap.classList.remove('loading');
+        }, 50);
+      };
+      frame.addEventListener('load', onLoad);
+    }
+
+    current = which;
+  }
+
+  window.switchDoc = switchDoc;
+})();
+</script>

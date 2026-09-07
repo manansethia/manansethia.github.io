@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* ==========================================================================
+   SF Pro Web -- Apple's typeface, self-hosted for non-Apple devices
+   Named "SFProWeb" / "SFProDisplayWeb" to avoid clashing with the
+   native -apple-system resolution on macOS/iOS.
+   font-display: swap -> text is visible immediately with fallback font,
+   then swaps to SF Pro once downloaded (~50KB each).
+
+   Optimized: OTF -> WOFF2 (Latin subset), 14 variants, ~672KB total.
+   ========================================================================== */
+
+/* ── SF Pro Text (body copy) ── */
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-500-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-600-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProWeb";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-text-700-italic.woff2") format("woff2");
+}
+
+/* ── SF Pro Display (headings / large text > ~19px) ── */
+@font-face {
+  font-family: "SFProDisplayWeb";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplayWeb";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-400-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplayWeb";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplayWeb";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplayWeb";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplayWeb";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url("/assets/fonts/sf-pro-woff2/sf-pro-display-700-italic.woff2") format("woff2");
+}

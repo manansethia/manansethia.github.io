@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+    {% include sacred-geometry.html %}
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    <div class="layout-main">
+      {{ content }}
+    </div>
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+    {% include theme-toggle.html %}
+  </body>
+</html>

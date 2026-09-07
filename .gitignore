@@ -1,0 +1,35 @@
+# Ignore the contents of the _site directory and other cache directories
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.ruby-lsp/
+
+# Ignore the directory for local files during development
+local/
+
+# Bundler / Ruby
+Gemfile.lock
+.bundle/
+vendor/bundle/
+
+# npm / node
+node_modules/
+package-lock.json
+
+# Archive / temporary files
+*.zip
+*.bundle
+*.tar.gz
+
+# macOS Finder metadata
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE / tool configurations
+.claude/
+.vscode/
+.idea/
+

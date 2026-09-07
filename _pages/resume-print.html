@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manan Sethia - Resume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @page { size: A4; margin: 0; }
+    @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; width: 210mm; height: 297mm; } }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 8.45pt; line-height: 1.38; color: #1e1e1e;
+      width: 100%; min-height: 100vh;
+      margin: 0 auto; background: #fff;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .content { display: flex; min-height: 297mm; }
+    .left {
+      width: 31%; padding: 21px 20px 24px 24px;
+      background: #faf6f0; border-right: 1.5px solid #c07300;
+      display: flex; flex-direction: column;
+    }
+    .right {
+      width: 69%; padding: 21px 24px 24px 20px;
+      display: flex; flex-direction: column;
+    }
+    .left-spacer { flex: 1; }
+
+    .resume-identity { margin-bottom: 16px; }
+    .resume-identity h1 { font-size: 18pt; line-height: 1.05; letter-spacing: 1px; color: #1a1a1a; margin: 0 0 6px; }
+    .resume-summary { font-size: 8.1pt; line-height: 1.42; color: #555; }
+
+    .sec {
+      font-size: 8.2pt; font-weight: 700; color: #7a5000;
+      text-transform: uppercase; letter-spacing: 1.2px;
+      border-bottom: 1.2px solid #c07300;
+      padding-bottom: 2px; margin-bottom: 5px; margin-top: 8px;
+    }
+    .sec:first-child { margin-top: 0; }
+
+    /* ── Contact ── */
+    .contact-row {
+      display: flex; align-items: center; gap: 2px;
+      margin-bottom: 2px; font-size: 8pt;
+    }
+    .contact-row i {
+      width: 12px; text-align: center; flex-shrink: 0;
+      color: #5a3e00; font-size: 8.5pt;
+    }
+    .contact-row .val { color: #333; word-break: break-all; }
+
+    .skill-cat { font-weight: 700; font-size: 7.8pt; color: #5a3e00; margin-top: 5px; margin-bottom: 1px; }
+    .skill-list { font-size: 8.2pt; color: #333; margin-bottom: 1px; line-height: 1.38; }
+
+    .edu-name { font-weight: 700; font-size: 8.8pt; color: #1a1a1a; }
+    .edu-detail { font-size: 7.8pt; color: #555; margin-top: 2px; }
+
+    .timeline { position: relative; padding-left: 14px; margin-top: 4px; }
+    .timeline::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: 4px; width: 1.5px; background: #c07300; }
+    .tl-org { position: relative; margin-bottom: 4px; padding-left: 10px; }
+    .tl-org::before { content: ""; position: absolute; left: -13px; top: 5px; width: 7px; height: 7px; border-radius: 50%; background: #c07300; border: 1.5px solid #fff; }
+    .tl-org-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .tl-org-name { font-weight: 700; font-size: 9pt; color: #1a1a1a; }
+    .tl-org-date { font-size: 7.2pt; color: #777; font-style: italic; white-space: nowrap; }
+    .tl-role { position: relative; padding-left: 10px; margin-top: 3px; }
+    .tl-role::before { content: ""; position: absolute; left: -13px; top: 5px; width: 5px; height: 5px; border-radius: 50%; background: #e0a050; border: 1px solid #fff; }
+    .tl-role-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .tl-role-name { font-weight: 600; font-size: 8.5pt; color: #333; }
+    .tl-role-date { font-size: 7pt; color: #888; font-style: italic; white-space: nowrap; }
+    .tl-desc { font-size: 8.2pt; color: #444; margin-top: 1px; line-height: 1.38; }
+    .tl-sub-roles { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 0; font-size: 7.5pt; color: #5a4a20; margin-top: 2px; font-weight: 600; }
+    .tl-chip { background: rgba(192,115,0,0.12); border: 1px solid rgba(192,115,0,0.3); border-radius: 3px; padding: 0px 5px; }
+    .tl-arrow { color: #c07300; font-weight: 700; padding: 0 2px; }
+    .tl-sep { border: none; height: 0.8px; background: rgba(192,115,0,0.3); margin: 4px 0 4px 10px; }
+
+    .proj-name { font-weight: 700; font-size: 8.6pt; color: #1a1a1a; margin-top: 5px; }
+    .proj-sub { font-size: 7.5pt; color: #8b5e00; font-style: italic; }
+    .proj-desc { font-size: 8.2pt; color: #444; margin-top: 1px; line-height: 1.38; }
+
+    .ach-item { font-size: 8.1pt; color: #333; padding-left: 10px; margin-bottom: 2px; text-indent: -10px; line-height: 1.34; }
+    .ach-item::before { content: "• "; color: #c07300; font-weight: 700; }
+    .ach-item b { color: #1a1a1a; }
+    .quiz-list { padding-left: 16px; margin-top: 3px; margin-bottom: 4px; }
+    .quiz-list div { font-size: 8pt; color: #555; line-height: 1.7; margin-bottom: 1px; }
+    .quiz-list div::before { content: "▸ "; color: #c07300; font-weight: 600; }
+
+    .cert-item { font-size: 8.2pt; color: #333; padding-left: 10px; margin-bottom: 2px; text-indent: -10px; }
+    .cert-item::before { content: "• "; color: #c07300; }
+    .cert-item b { color: #1a1a1a; }
+    .cert-sub { padding-left: 16px; margin-top: 1px; margin-bottom: 3px; }
+    .cert-sub div { font-size: 7.8pt; color: #555; line-height: 1.5; }
+    .cert-sub div::before { content: "▸ "; color: #c07300; }
+
+    /* ═══════════════════════════════════════════
+       DARK MODE
+       ═══════════════════════════════════════════ */
+    .dark body { background: #0a0700; color: #f0e4d4; }
+    .dark .header { background: #261808; }
+    .dark .header h1 { color: #fff; }
+    .dark .subtitle { color: #f0d090; }
+    .dark .resume-identity h1 { color: #fff; }
+    .dark .resume-summary { color: #d8c8a8; }
+
+    .dark .left {
+      background: linear-gradient(180deg, #1e1308 0%, #2e1e0c 100%);
+      border-right: 2px solid rgba(230,193,148,0.45);
+      color: #f0e4d4;
+    }
+    .dark .right { background: #0a0700; }
+
+    .dark .sec { color: #f0d090; border-bottom-color: rgba(240,208,144,0.45); }
+    .dark .contact-row i { color: #f0d090; }
+    .dark .contact-row .val { color: #e8dcc4; }
+    .dark .skill-cat { color: #f0d090; }
+    .dark .skill-list { color: #e0d4b8; }
+    .dark .edu-name { color: #fff; }
+    .dark .edu-detail { color: #d8c8a8; }
+
+    .dark .timeline::before { background: rgba(240,208,144,0.4); }
+    .dark .tl-org::before { background: #f0d090; border-color: #0a0700; }
+    .dark .tl-org-name { color: #fff; }
+    .dark .tl-org-date { color: #d8c8a8; }
+    .dark .tl-role::before { background: #e0b060; border-color: #0a0700; }
+    .dark .tl-role-name { color: #f8f0e0; }
+    .dark .tl-role-date { color: #c0b090; }
+    .dark .tl-desc { color: #ddd0b4; }
+    .dark .tl-sub-roles { color: #f0d090; }
+    .dark .tl-chip { background: rgba(240,208,144,0.15); border-color: rgba(240,208,144,0.4); color: #f0d090; }
+    .dark .tl-arrow { color: #f0d090; }
+    .dark .tl-sep { background: rgba(240,208,144,0.25); }
+
+    .dark .proj-name { color: #fff; }
+    .dark .proj-sub { color: #f0d090; }
+    .dark .proj-desc { color: #ddd0b4; }
+
+    .dark .ach-item { color: #e0d4b8; }
+    .dark .ach-item::before { color: #f0d090; }
+    .dark .ach-item b { color: #fff; }
+    .dark .quiz-list div { color: #c8b898; }
+    .dark .quiz-list div::before { color: #f0d090; }
+
+    .dark .cert-item { color: #e0d4b8; }
+    .dark .cert-item::before { color: #f0d090; }
+    .dark .cert-item b { color: #fff; }
+    .dark .cert-sub div { color: #c8b898; }
+    .dark .cert-sub div::before { color: #f0d090; }
+
+    /* ═══════════════════════════════════════════
+       ROYAL MODE
+       ═══════════════════════════════════════════ */
+    .royal body { background: #141310; color: #F5F5F5; }
+    .royal .header { background: linear-gradient(90deg, #4a4030 0%, #2e2820 100%); }
+    .royal .header h1 { color: #fff; }
+    .royal .subtitle { color: #ffffd1; }
+    .royal .resume-identity h1 { color: #fff; }
+    .royal .resume-summary { color: #C8C8C8; }
+
+    .royal .left {
+      background: linear-gradient(180deg, #3a362e 0%, #2c2a24 100%);
+      border-right: 2px solid rgba(255,255,209,0.3);
+      color: #F5F5F5;
+    }
+    .royal .right { background: #141310; }
+
+    .royal .sec { color: #ffffd1; border-bottom-color: rgba(255,255,209,0.35); }
+    .royal .contact-row i { color: #ffffd1; }
+    .royal .contact-row .val { color: #E0E0E0; }
+    .royal .skill-cat { color: #ffffd1; }
+    .royal .skill-list { color: #E0E0E0; }
+    .royal .edu-name { color: #fff; }
+    .royal .edu-detail { color: #C8C8C8; }
+
+    .royal .timeline::before { background: rgba(255,255,209,0.3); }
+    .royal .tl-org::before { background: #ffffd1; border-color: #141310; }
+    .royal .tl-org-name { color: #fff; }
+    .royal .tl-org-date { color: #C0C0C0; }
+    .royal .tl-role::before { background: #e0e0a0; border-color: #141310; }
+    .royal .tl-role-name { color: #F8F8F8; }
+    .royal .tl-role-date { color: #B0B0B0; }
+    .royal .tl-desc { color: #D8D8D8; }
+    .royal .tl-sub-roles { color: #ffffd1; }
+    .royal .tl-chip { background: rgba(255,255,209,0.12); border-color: rgba(255,255,209,0.35); color: #ffffd1; }
+    .royal .tl-arrow { color: #ffffd1; }
+    .royal .tl-sep { background: rgba(255,255,209,0.2); }
+
+    .royal .proj-name { color: #fff; }
+    .royal .proj-sub { color: #ffffd1; }
+    .royal .proj-desc { color: #D8D8D8; }
+
+    .royal .ach-item { color: #E0E0E0; }
+    .royal .ach-item::before { color: #ffffd1; }
+    .royal .ach-item b { color: #fff; }
+    .royal .quiz-list div { color: #C0C0C0; }
+    .royal .quiz-list div::before { color: #ffffd1; }
+
+    .royal .cert-item { color: #E0E0E0; }
+    .royal .cert-item::before { color: #ffffd1; }
+    .royal .cert-item b { color: #fff; }
+    .royal .cert-sub div { color: #C0C0C0; }
+    .royal .cert-sub div::before { color: #ffffd1; }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="left">
+      <div class="resume-identity">
+        <h1>Manan Sethia</h1>
+        <div class="resume-summary">Computer Science undergraduate at NTU Singapore, building data pipelines, software systems, and security projects.</div>
+      </div>
+      <div class="sec">Contact</div>
+      <div class="contact-row"><i class="fas fa-envelope"></i><a href="mailto:manan@manansethia.com" class="val">manan@manansethia.com</a></div>
+      <div class="contact-row"><i class="fas fa-link"></i><a href="https://manansethia.com" class="val">manansethia.com</a></div>
+      <div class="contact-row"><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/manansethia" class="val">linkedin.com/in/manansethia</a></div>
+      <div class="contact-row"><i class="fab fa-github"></i><a href="https://github.com/manansethia" class="val">github.com/manansethia</a></div>
+      <div class="contact-row"><i class="fa-solid fa-location-dot"></i><span class="val">Singapore</span></div>
+
+      <div class="sec">Skills</div>
+      <div class="skill-cat">Languages &amp; Toolchains</div>
+      <div class="skill-list">Python, C/C++, Java, JavaScript/TypeScript, SQL, C#/.NET, Kotlin, Swift; npm, Maven/Gradle, NuGet, SPM</div>
+      <div class="skill-cat">Data &amp; Pipelines</div>
+      <div class="skill-list">ETL, REST APIs, async/batch ingestion, entity resolution, schema normalization, pandas, SQLite, Excel/CSV, SciVal, Scopus, OpenAlex, ROR, Wikidata</div>
+      <div class="skill-cat">Development &amp; AI</div>
+      <div class="skill-list">Flask, Django, Node.js, HTML/CSS, scikit-learn, OpenCV, PyTorch basics, RAG, MCP, pytest, Playwright</div>
+      <div class="skill-cat">DevOps &amp; Systems</div>
+      <div class="skill-list">Git, GitHub Actions/CI/CD, Docker, Bash/zsh, SSH, cron, Nginx; Ubuntu, Debian, Fedora, Arch and Kali Linux</div>
+      <div class="skill-cat">Apps, Security &amp; Hardware</div>
+      <div class="skill-list">Android Studio, Xcode, Wireshark, Burp Suite, Nmap, Raspberry Pi, ESP32, Arduino, sensors, robotics</div>
+
+      <div class="sec">Education</div>
+      <div class="edu-name">Nanyang Technological University</div>
+      <div class="edu-detail">Bachelor of Computing (Hons) in Computer Science</div>
+      <div class="edu-detail">2026 &ndash; 2030 &nbsp;|&nbsp; Singapore</div>
+      <div class="edu-detail">Specialisations: Cyber Security, Artificial Intelligence</div>
+      <div class="edu-detail">NTU Science and Technology Undergraduate Scholar</div>
+      <div style="margin-top:8px;"></div>
+      <div class="edu-name">Krishna Public School, Kamal Vihar</div>
+      <div class="edu-detail">PCME + Computer Science &nbsp;|&nbsp; 2014 &ndash; 2026</div>
+
+      <div class="left-spacer"></div>
+    </div>
+
+    <div class="right">
+      <div class="sec">Experience</div>
+      <div class="timeline">
+        <div class="tl-org">
+          <div class="tl-org-head"><span class="tl-org-name">Nanyang Technological University</span><span class="tl-org-date">Jul 2026 &ndash; Present</span></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Technical Director, TGIFHacks (NTU OSS)</span><span class="tl-role-date">Sep 2026 &ndash; Present</span></div><div class="tl-desc">Direct technical planning for hackathons, hardware and software builds, workshops, and competitions.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Technical Subcommittee Member, NTU Sentinels</span><span class="tl-role-date">Aug 2026 &ndash; Present</span></div><div class="tl-desc">Contribute to cybersecurity and capture-the-flag activities.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Data Analytics &amp; Engineering Assistant</span><span class="tl-role-date">Jul 2026 &ndash; Present</span></div><div class="tl-desc">Build auditable ETL and identity-resolution pipelines across bibliometric APIs under NTU's Work Study Scheme (ad hoc through 31 Mar 2027), including the Stanford Top 2% and UBC researcher datasets.</div></div>
+        </div>
+        <hr class="tl-sep">
+        <div class="tl-org">
+          <div class="tl-org-head"><span class="tl-org-name">Buildabot Labs Private Limited</span><span class="tl-org-date">May 2026 &ndash; Aug 2026</span></div>
+          <div class="tl-role"><div class="tl-role-name">Chief Technology and Innovations Officer (CTIO)</div><div class="tl-desc">Built backend and database systems, the company website, a RAG assistant, and a virtual project-testing playground.</div></div>
+        </div>
+        <hr class="tl-sep">
+        <div class="tl-org">
+          <div class="tl-org-head"><span class="tl-org-name">First Step Innovations (FSTI)</span><span class="tl-org-date">Apr 2026 &ndash; Jul 2026</span></div>
+          <div class="tl-role"><div class="tl-role-name">R&amp;D Intern</div><div class="tl-desc">Delivered e-commerce, AI career-counselling, and drone-assembly prototypes; handled documentation and QA.</div></div>
+        </div>
+        <hr class="tl-sep">
+        <div class="tl-org">
+          <div class="tl-org-head"><span class="tl-org-name">Krishna Public School, Kamal Vihar</span><span class="tl-org-date">Apr 2016 &ndash; Mar 2026</span></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Headboy, Student Council</span><span class="tl-role-date">Jul 2025 &ndash; Feb 2026</span></div><div class="tl-desc">Co-led a 97-member council across 18 clubs and four houses; managed major school events.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Problem Setter, I-Code</span><span class="tl-role-date">Aug 2024 &ndash; Oct 2025</span></div><div class="tl-desc">Designed algorithm and logic questions across difficulty levels.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Advisor &amp; Coordinator, Xplora</span><span class="tl-role-date">Nov 2022 &ndash; Nov 2025</span></div><div class="tl-desc">Coordinated the school technology fest, outreach, and finances.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Innovator &amp; Mentor, ATL Club</span><span class="tl-role-date">Jul 2022 &ndash; Mar 2026</span></div><div class="tl-desc">Built embedded prototypes and mentored robotics and IoT projects.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Technical Lead, Coder's Club</span><span class="tl-role-date">Jul 2019 &ndash; Mar 2026</span></div><div class="tl-desc">Led workshops in programming, ML, Linux, and cybersecurity.</div></div>
+          <div class="tl-role"><div class="tl-role-head"><span class="tl-role-name">Quiz Organizer &amp; Mentor, QPL</span><span class="tl-role-date">Apr 2016 &ndash; Mar 2026</span></div><div class="tl-desc">Organized school quizzes and represented KPS in national events.</div></div>
+        </div>
+      </div>
+
+      <div class="sec">Projects</div>
+      <div class="proj-name">MRIDA &nbsp;<span class="proj-sub">Multipurpose Real-time Integrated Digital Analyzer &nbsp;|&nbsp; 2023 &ndash; 2025</span></div>
+      <div class="proj-desc">AI-powered Raspberry Pi soil-health analyzer with sensing, weather alerts, emergency messaging, and speech guidance. Winner at Data &amp; AI Talks; selected for Youth Ideathon Top 1,000, INSPIRE MANAK DLEPC, and the Junior SIH national presentation round.</div>
+      <div class="proj-name">MATRIX &nbsp;<span class="proj-sub">Desktop Voice Assistant &nbsp;|&nbsp; 2021 &ndash; 2022</span></div>
+      <div class="proj-desc">JARVIS-inspired voice assistant with Python, Tkinter, and MS Voice Pack. Speech/text interaction, live weather, tech news, and hand-drawn custom GUI.</div>
+
+      <div class="sec">Certifications</div>
+      <div class="cert-item"><b>Google Cybersecurity</b> Professional Certificate (Coursera)</div>
+      <div class="cert-item"><b>IBM Ethical Hacking</b> with Open-Source Tools (Coursera)</div>
+      <div class="cert-item"><b>Programming &amp; DSA:</b> CodeChef courses in Python, Java, C and C++</div>
+
+      <div class="sec">Selected Top Achievements</div>
+      <div class="ach-item"><b>Gold &amp; Bronze Medalist</b> at International Earth Science Olympiad (IESO) 2024; represented India in Beijing</div>
+      <div class="ach-item">Selected for <b>12-week intl. research program</b> on Quantum Computing &mdash; BeyondQuantum 2025</div>
+      <div class="ach-item">Secured <b>AIR 10</b> in Hewlett Packard Codewars 2025 among 6,000+ participants</div>
+      <div class="ach-item">Secured <b>AIR 17</b> in IIT Madras Shaastra Programming Contest 2026 among 18,000+; <b>National Finalist</b></div>
+      <div class="ach-item"><b>ZCO 2024 Zonal Topper</b> and <b>INAIO 2025 Stage 2</b> Qualifier</div>
+      <div class="ach-item"><b>Silver Medalist</b>, Future Tech Olympiad 2026 by 1M1B and IBM SkillsBuild</div>
+      <div class="ach-item"><b>Winner</b>, Code 2 Champions at ITM University Raipur; only school student in the field</div>
+      <div class="ach-item">Qualified for the <b>INESO 2025 National Camp</b> in the Indian Earth Science Olympiad selection programme</div>
+      <div class="ach-item">National runner-up in the CBSE Heritage India Quiz and Ultimate Sports Quiz; regional winner at SBI Scholar Quiz and IIM Bhilai Materials Quiz</div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      /* Read theme from URL ?theme=dark|royal|light */
+      var params = new URLSearchParams(window.location.search);
+      var theme = params.get('theme') || 'light';
+
+      function applyTheme(t) {
+        document.documentElement.classList.remove('dark', 'royal');
+        if (t === 'dark') document.documentElement.classList.add('dark');
+        else if (t === 'royal') document.documentElement.classList.add('royal');
+      }
+
+      applyTheme(theme);
+
+      /* Listen for live theme changes from parent */
+      window.addEventListener('message', function(e) {
+        if (e.data && e.data.type === 'theme-change') {
+          applyTheme(e.data.theme);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

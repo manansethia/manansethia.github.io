@@ -1,0 +1,79 @@
+{% include base_path %}
+
+<meta charset="utf-8">
+
+{% include seo.html %}
+
+
+
+<!-- ✅ JSON-LD Schema — enriched for Google Knowledge Graph -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Manan Sethia",
+  "url": "https://manansethia.com",
+  "image": "https://manansethia.com/images/manan.avif",
+  "jobTitle": "Computer Science Undergraduate",
+  "description": "Computer Science undergraduate at Nanyang Technological University, Singapore, building across data engineering, systems, cybersecurity, and applied AI.",
+  "knowsAbout": ["Computer Science", "Artificial Intelligence", "Cybersecurity", "Competitive Programming", "Embedded Systems", "Operating Systems"],
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Nanyang Technological University",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SG"
+    }
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Krishna Public School, Kamal Vihar",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Raipur",
+      "addressRegion": "Chhattisgarh",
+      "addressCountry": "IN"
+    }
+  },
+  "sameAs": [
+    "https://github.com/manansethia",
+    "https://linkedin.com/in/manan-sethia/"
+  ]
+}
+</script>
+
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+
+
+<!-- Theme flash prevention — inline and intentionally tiny. -->
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem("theme");
+      if (theme === "dark") document.documentElement.classList.add("dark-mode");
+      if (theme === "royal") document.documentElement.classList.add("royal-mode");
+    } catch (error) { /* Storage may be disabled. */ }
+  })();
+</script>
+<style>
+html{background:#fffbeb}
+html.dark-mode{background:#120c00;color:#fdfdfd}
+html.royal-mode{background:#0d0d0c;color:#fdfdfd}
+</style>
+
+<!-- CSS: render-blocking (intentional — ensures full design before paint) -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.avif">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta http-equiv="cleartype" content="on">
