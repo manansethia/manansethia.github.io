@@ -765,7 +765,7 @@ author_profile: true
   var imgs = [
     '5thquiz','cyb1','cyb2','data&aii','hdfc',
     'headboy','hiqf','mindsparkquiz','mmq2','nr','nx2024','quiz4',
-    'sbi001','sc','shinecosmo','tcs242','tcs251','techday','udta',
+    'sbi001','sc','shinecosmoo','tcs242','tcs251','techday','udta',
     'usq','usqq','usqqq','workshop','workshop2','workshop3','workshop4',
     'wwq181','wwq191','yesww2'
   ];
@@ -775,7 +775,7 @@ author_profile: true
     'headboy':[600,600], 'hiqf':[1200,657], 'mindsparkquiz':[733,550],
     'mmq2':[648,454], 'nr':[1200,628], 'nx2024':[600,535],
     'quiz4':[600,472], 'sbi001':[536,384], 'sc':[1200,878],
-    'shinecosmo':[740,550], 'tcs242':[553,550], 'tcs251':[1200,680],
+    'shinecosmoo':[740,550], 'tcs242':[553,550], 'tcs251':[1200,680],
     'techday':[600,453], 'udta':[600,628], 'usq':[1200,871],
     'usqq':[600,450], 'usqqq':[600,481], 'workshop':[600,451],
     'workshop2':[600,377], 'workshop3':[600,286], 'workshop4':[600,438],
