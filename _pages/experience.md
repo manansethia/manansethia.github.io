@@ -763,14 +763,14 @@ author_profile: true
 <script>
 (function () {
   var imgs = [
-    'clean','5thquiz','cyb1','cyb2','data&aii','hdfc',
+    '5thquiz','cyb1','cyb2','data&aii','hdfc',
     'headboy','hiqf','mindsparkquiz','mmq2','nr','nx2024','quiz4',
     'sbi001','sc','shinecosmo','tcs242','tcs251','techday','udta',
     'usq','usqq','usqqq','workshop','workshop2','workshop3','workshop4',
     'wwq181','wwq191','yesww2'
   ];
   var dimensions = {
-    'clean':[599,475], '5thquiz':[600,373], 'cyb1':[600,369],
+    '5thquiz':[600,373], 'cyb1':[600,369],
     'cyb2':[600,319], 'data&aii':[600,436], 'hdfc':[600,507],
     'headboy':[600,600], 'hiqf':[1200,657], 'mindsparkquiz':[733,550],
     'mmq2':[648,454], 'nr':[1200,628], 'nx2024':[600,535],
