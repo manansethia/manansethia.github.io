@@ -1,0 +1,222 @@
+%-------------------------
+% ATS-Friendly Resume in LaTeX
+% Candidate: Manan Sethia
+% Format: Single-column, machine-parseable, clean typography
+%-------------------------
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[top=0.5in, bottom=0.5in, left=0.6in, right=0.6in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+% PDF Metadata
+\hypersetup{
+    pdftitle={Manan Sethia - ATS Resume},
+    pdfauthor={Manan Sethia},
+    pdfsubject={Resume},
+    pdfkeywords={Manan Sethia, Computer Science, NTU Singapore, Software Engineer, Resume},
+    colorlinks=false,
+    hidelinks
+}
+
+% Page styling
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting — bold uppercase with a horizontal rule
+\titleformat{\section}{
+  \vspace{2pt}\raggedright\large\bfseries\scshape
+}{}{0em}{}[\titlerule \vspace{2pt}]
+
+% List formatting
+\setlist[itemize]{leftmargin=0.18in, label=$\bullet$, noitemsep, topsep=2pt, parsep=1pt, partopsep=0pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1}
+}
+
+% Organisation heading:  Bold Name (left) — Bold Location (right)
+%                        Italic Degree/Stream — Italic Dates
+\newcommand{\resumeSubheading}[4]{
+  \vspace{3pt}
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{0pt}
+}
+
+% Role line under an organisation:  Bold Title (left) — Dates (right)
+\newcommand{\resumeRole}[2]{
+  \vspace{3pt}
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\small#1} & {\small #2} \\
+  \end{tabular*}\vspace{0pt}
+}
+
+% Project heading:  Bold Name | Emph tagline (left) — Dates (right)
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{3pt}
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & {\small #2} \\
+  \end{tabular*}\vspace{0pt}
+}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{MANAN SETHIA}} \\[5pt]
+    \small
+    Singapore \enspace$\vert$\enspace
+    \href{mailto:manan@manansethia.com}{manan@manansethia.com} \enspace$\vert$\enspace
+    \href{mailto:manan004@e.ntu.edu.sg}{manan004@e.ntu.edu.sg} \\[2pt]
+    \href{https://manansethia.com}{manansethia.com} \enspace$\vert$\enspace
+    \href{https://linkedin.com/in/manan-sethia}{linkedin.com/in/manan-sethia} \enspace$\vert$\enspace
+    \href{https://github.com/manansethia}{github.com/manansethia}
+\end{center}
+
+\vspace{-2pt}
+\begin{center}
+    \small \textit{Computer Science undergraduate at NTU Singapore, building data pipelines, software systems, and security projects.}
+\end{center}
+\vspace{-2pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubheading
+    {Nanyang Technological University}{Singapore}
+    {Bachelor of Computing (Hons) in Computer Science}{Jul 2026 -- Present (Expected 2030)}
+    \begin{itemize}
+      \resumeItem{Specialisations: Cyber Security, Artificial Intelligence.}
+      \resumeItem{NTU Science and Technology Undergraduate Scholar.}
+    \end{itemize}
+
+  \resumeSubheading
+    {Krishna Public School, Kamal Vihar}{Raipur, India}
+    {Senior Secondary (PCME + Computer Science)}{2014 -- 2026}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages \& Toolchains}: Python, C/C++, Java, JavaScript/TypeScript, SQL, C\#/.NET, Kotlin, Swift; npm, Maven/Gradle, NuGet, SPM \\[2pt]
+     \textbf{Data \& Pipelines}: ETL, REST APIs, async/batch ingestion, entity resolution, schema normalization, pandas, SQLite, Excel/CSV, SciVal, Scopus, OpenAlex, ROR, Wikidata \\[2pt]
+     \textbf{Web \& Frontend}: Jekyll, Liquid, GitHub Pages, WYSIWYG editor engineering, responsive design, Sass/SCSS, SEO, accessibility, semantic HTML \\[2pt]
+     \textbf{Development \& AI}: Flask, Django, Node.js, HTML/CSS, scikit-learn, OpenCV, PyTorch basics, RAG, MCP, pytest, Playwright \\[2pt]
+     \textbf{DevOps \& Systems}: Git, GitHub Actions/CI/CD, Docker, Bash/zsh, SSH, cron, Nginx; Ubuntu, Debian, Fedora, Arch, Kali Linux \\[2pt]
+     \textbf{Security, Apps \& Hardware}: Android Studio, Xcode, Wireshark, Burp Suite, Nmap, Raspberry Pi, ESP32, Arduino, sensors, robotics
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+
+  \textbf{Nanyang Technological University} \hfill \textbf{\small Singapore} \\
+  \vspace{1pt}
+
+  \resumeRole{Webmaster \& Frontend Developer, Wee Kim Wee School (WKWSCI)}{Oct 2026 -- Present}
+  \begin{itemize}
+    \resumeItem{Built and maintain official Jekyll/GitHub Pages websites for Prof. Kwan Min Lee (Korea Foundation Endowed Chair Professor), the Korean Studies Lab (KSL), and the Human-AI Interaction Lab (HAIL) at WKWSCI.}
+    \resumeItem{Engineered a custom, zero-dependency in-browser WYSIWYG visual studio editor featuring inline text formatting, floating context inspectors, responsive device canvas simulation, and Git-backed draft staging---enabling faculty to update research, publications, and news directly via browser without code manipulation.}
+    \resumeItem{Implemented modern academic design systems utilizing Plus Jakarta Sans typography, refined academic palettes, structured metadata schemas, and zero-layout-shift asset optimization across all lab portals.}
+  \end{itemize}
+
+  \resumeRole{IT Subcommittee Backend Engineer, NTU SCDS Club}{Oct 2026 -- Present}
+  \begin{itemize}
+    \resumeItem{Architect and engineer backend services, database schemas, RESTful APIs, and cross-platform integrations across all active club software projects and student initiatives under the NTU Students' Computing and Data Science Club.}
+    \resumeItem{Build reliable internal tooling, database workflows, and automated deployment pipelines supporting SCDS hackathons, tech workshops, and community data science platforms.}
+  \end{itemize}
+
+  \resumeRole{Technical Director, TGIFHacks (NTU Open Source Society)}{Sep 2026 -- Present}
+  \begin{itemize}
+    \resumeItem{Direct technical planning, architecture, and logistics for hackathons, hardware and software builds, workshops, and competitions.}
+  \end{itemize}
+
+  \resumeRole{Technical Subcommittee Member, NTU Sentinels}{Aug 2026 -- Present}
+  \begin{itemize}
+    \resumeItem{Contribute to cybersecurity initiatives, capture-the-flag (CTF) problem setting, and vulnerability analysis.}
+  \end{itemize}
+
+  \resumeRole{Data Analytics \& Engineering Assistant, Office of Data and Analytics}{Jul 2026 -- Present}
+  \begin{itemize}
+    \resumeItem{Build automated Python ETL and identity-resolution pipelines linking fragmented bibliometric sources (SciVal, Scopus, OpenAlex, ROR, Wikidata) with rate-limit handling, schema normalization, and database delivery at scale.}
+    \resumeItem{Developed 241 modular scripts, matched 50,000 UBC researcher profiles, and linked 45,801 Stanford Top 2\% researchers across 5.2M records delivered as clean SQL database dumps and CSV collections.}
+  \end{itemize}
+
+  \vspace{4pt}
+  \resumeSubheading
+    {Buildabot Labs Private Limited}{May 2026 -- Aug 2026}
+    {Chief Technology and Innovations Officer (CTIO) (Subsidiary of First Step Innovations)}{Raipur, India}
+    \begin{itemize}
+      \resumeItem{Led technology strategy and engineering; maintained database systems and backend servers, developed company website, integrated a RAG AI assistant, and architected an emulation playground for virtual project testing.}
+    \end{itemize}
+
+  \vspace{4pt}
+  \resumeSubheading
+    {First Step Innovations (FSTI)}{Apr 2026 -- Jul 2026}
+    {R\&D Intern (Research \& Development)}{Bilaspur, India}
+    \begin{itemize}
+      \resumeItem{Delivered full-stack projects: e-commerce web application, AI career counselling platform, and interactive drone assembly simulator web app; handled technical documentation and QA testing across all deliverables.}
+    \end{itemize}
+
+  \vspace{4pt}
+  \resumeSubheading
+    {Krishna Public School, Kamal Vihar}{Apr 2016 -- Mar 2026}
+    {Student Leadership, Technical Development, and Mentorship}{Raipur, India}
+    \begin{itemize}
+      \resumeItem{\textbf{Headboy, Student Council (Jul 2025 -- Feb 2026)}: Co-led 97-member council across 18 clubs; directed XPLORA, KPSMUN, and Annual Function.}
+      \resumeItem{\textbf{Problem Setter, I-Code (Aug 2024 -- Oct 2025)}: Designed algorithm and logic questions across difficulty levels for coding competitions.}
+      \resumeItem{\textbf{Advisor \& Coordinator, Xplora (Nov 2022 -- Nov 2025)}: Directed school technology fest planning, outreach, and competition design.}
+      \resumeItem{\textbf{Innovator \& Mentor, ATL Club (Jul 2022 -- Mar 2026)}: Prototyped IoT and embedded systems; mentored junior robotics projects.}
+      \resumeItem{\textbf{Technical Leadership, Coder's Club (Jul 2019 -- Mar 2026)}: Conducted workshops on competitive programming, ML, and cybersecurity.}
+      \resumeItem{\textbf{Quiz Organizer \& Mentor, QPL (Apr 2016 -- Mar 2026)}: Organized school quizzes and represented KPS in national events.}
+    \end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeProjectHeading
+    {\textbf{MRIDA} $\vert$ \emph{Multipurpose Real-time Integrated Digital Analyzer}}{2023 -- 2025}
+    \begin{itemize}
+      \resumeItem{AI-powered Raspberry Pi soil-health analyzer with real-time sensing, weather alerts, emergency messaging, and voice guidance.}
+      \resumeItem{Winner at Data \& AI Talks; selected for Youth Ideathon Top 1,000, INSPIRE MANAK DLEPC, and Junior SIH national presentation round.}
+    \end{itemize}
+
+  \resumeProjectHeading
+    {\textbf{MATRIX} $\vert$ \emph{Desktop Voice Assistant}}{2021 -- 2022}
+    \begin{itemize}
+      \resumeItem{JARVIS-inspired voice assistant built in Python and Tkinter with speech recognition, live weather/news integration, and hand-drawn GUI.}
+    \end{itemize}
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+  \begin{itemize}
+    \resumeItem{\textbf{Google Cybersecurity} Professional Certificate (Coursera)}
+    \resumeItem{\textbf{IBM Ethical Hacking} with Open-Source Tools (Coursera)}
+    \resumeItem{\textbf{Programming \& DSA}: CodeChef certifications across Python, Java, C, and C++}
+  \end{itemize}
+
+%-----------HONORS & AWARDS-----------
+\section{Honors \& Awards / Selected Achievements}
+  \begin{itemize}
+    \resumeItem{\textbf{Gold \& Bronze Medalist} at International Earth Science Olympiad (IESO) 2024; represented Team India in Beijing}
+    \resumeItem{Selected for \textbf{12-week international research program} on Quantum Computing (BeyondQuantum 2025)}
+    \resumeItem{Secured \textbf{AIR 10} in Hewlett Packard Enterprise (HPE) Codewars 2025 among 6,000+ participants}
+    \resumeItem{Secured \textbf{AIR 17} in IIT Madras Shaastra Programming Contest 2026 among 18,000+; \textbf{National Finalist}}
+    \resumeItem{\textbf{ZCO 2024 Zonal Topper} and \textbf{INAIO 2025 Stage 2} Qualifier}
+    \resumeItem{\textbf{Silver Medalist}, Future Tech Olympiad 2026 by 1M1B and IBM SkillsBuild}
+    \resumeItem{\textbf{Winner}, Code 2 Champions at ITM University Raipur (only school student in the field)}
+    \resumeItem{Qualified for \textbf{INESO 2025 National Camp} in the Indian Earth Science Olympiad selection programme}
+    \resumeItem{National runner-up in CBSE Heritage India Quiz and Ultimate Sports Quiz; regional winner at SBI Scholar Quiz and IIM Bhilai Materials Quiz}
+  \end{itemize}
+
+\end{document}

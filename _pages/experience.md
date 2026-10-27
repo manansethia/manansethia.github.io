@@ -1,8 +1,8 @@
 ---
 permalink: /experience/
 title: "Experience"
-description: "Manan Sethia's experience — Technical Director at NTU OSS, CTIO at Buildabot Labs, Headboy, Coder's Club President, ATL Innovator, and 10 years at Krishna Public School."
-keywords: "Manan Sethia experience, NTU OSS, Technical Director, Buildabot Labs, Headboy, Coder's Club, Krishna Public School"
+description: "Manan Sethia's experience — Webmaster & Frontend Developer at WKWSCI, IT Subcommittee Backend Engineer at NTU SCDS Club, Technical Director at NTU OSS, CTIO at Buildabot Labs, Headboy, Coder's Club President, ATL Innovator, and 10 years at Krishna Public School."
+keywords: "Manan Sethia experience, WKWSCI, Webmaster, Frontend Developer, NTU SCDS Club, Backend Engineer, NTU OSS, Technical Director, Buildabot Labs, Headboy, Coder's Club, Krishna Public School"
 author_profile: true
 ---
 
@@ -461,11 +461,62 @@ author_profile: true
       <div class="exp-org-copy">
         <div class="exp-org-name">Nanyang Technological University</div>
         <div class="exp-org-range">Jul 2026 – Present
-          <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 3 mos</span>
+          <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 4 mos</span>
         </div>
       </div>
     </header>
     <div class="exp-role-list">
+      <article class="exp-role-row">
+        <div class="exp-role-marker">
+          <div class="exp-role-dot"></div>
+        </div>
+        <div class="exp-role-main">
+          <div class="exp-role-icon">
+            <img loading="lazy" decoding="async" src="/images/ntuwkwsci.avif" width="200" height="200" alt="Wee Kim Wee School of Communication and Information Logo">
+          </div>
+          <div class="exp-role-copy">
+            <div class="exp-role-title">Webmaster &amp; Frontend Developer</div>
+            <div class="exp-role-sub">Wee Kim Wee School of Communication and Information · Part-time</div>
+            <div class="exp-role-date">Oct 2026 – Present
+              <span class="exp-live-duration" data-duration-start="2026-10" data-duration-end="present" data-duration-prefix=" · "> · 1 mo</span>
+            </div>
+            <div class="exp-desc">
+              <p>Sole developer and webmaster architecting, developing, and maintaining the official lab and academic portfolio websites for Prof. Kwan Min Lee (Korea Foundation Endowed Chair Professor), the Korean Studies Lab (KSL), and the Human-AI Interaction Lab (HAIL) at the Wee Kim Wee School of Communication and Information (WKWSCI).</p>
+              <ul>
+                <li><strong>Static Architecture &amp; Performance:</strong> Developed and maintain high-performance, zero-maintenance static websites using Jekyll, Liquid, and JekyllPad, deployed and hosted on GitHub Pages for blazing-fast response times and continuous deployments via GitHub Actions.</li>
+                <li><strong>Custom In-Browser Visual Studio Editor:</strong> Engineered a bespoke, zero-dependency in-browser WYSIWYG visual studio editor featuring inline text formatting, floating context inspectors, responsive device canvas simulation (desktop, laptop, mobile), and Git-backed draft session staging—enabling the professor and lab researchers to update research themes, publications, news, and personnel directly from the web without code manipulation.</li>
+                <li><strong>Editorial Design Systems &amp; Maintenance:</strong> Crafted modern academic design systems utilizing Plus Jakarta Sans typography, refined academic palettes, structured metadata schemas, and zero-layout-shift asset optimization across all lab portals.</li>
+              </ul>
+            </div>
+            <div class="exp-images"></div>
+          </div>
+        </div>
+      </article>
+      <article class="exp-role-row">
+        <div class="exp-role-marker">
+          <div class="exp-role-dot"></div>
+        </div>
+        <div class="exp-role-main">
+          <div class="exp-role-icon">
+            <img loading="lazy" decoding="async" src="/images/scds.avif" width="200" height="200" alt="NTU SCDS Club Logo">
+          </div>
+          <div class="exp-role-copy">
+            <div class="exp-role-title">IT Subcommittee Backend Engineer</div>
+            <div class="exp-role-sub">Nanyang Technological University Students' Computing and Data Science Club (NTU SCDS Club) · Part-time</div>
+            <div class="exp-role-date">Oct 2026 – Present
+              <span class="exp-live-duration" data-duration-start="2026-10" data-duration-end="present" data-duration-prefix=" · "> · 1 mo</span>
+            </div>
+            <div class="exp-desc">
+              <p>Backend engineer within the IT Subcommittee of the NTU Students' Computing and Data Science Club (NTU SCDS Club), architecting backend services, database infrastructure, and API integrations across all active club software projects and student initiatives.</p>
+              <ul>
+                <li><strong>Backend Architecture &amp; Integration:</strong> Developing and maintaining server-side infrastructure, RESTful APIs, and system integrations powering club digital platforms, event portals, and internal tooling.</li>
+                <li><strong>Club Ecosystem Engineering:</strong> Collaborating with engineering subcommittees to deliver reliable, scalable backend logic and database workflows supporting SCDS hackathons, tech workshops, and community data science platforms.</li>
+              </ul>
+            </div>
+            <div class="exp-images"></div>
+          </div>
+        </div>
+      </article>
       <article class="exp-role-row">
         <div class="exp-role-marker">
           <div class="exp-role-dot"></div>
@@ -478,7 +529,7 @@ author_profile: true
             <div class="exp-role-title">Technical Director</div>
             <div class="exp-role-sub">TGIFHacks: Sub Club of NTU OSS</div>
             <div class="exp-role-date">Sep 2026 – Present
-              <span class="exp-live-duration" data-duration-start="2026-09" data-duration-end="present" data-duration-prefix=" · "> · 1 mo</span>
+              <span class="exp-live-duration" data-duration-start="2026-09" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
             </div>
             <div class="exp-desc">
               <p>Thank God It's Friday Hacks is a sub club under NTU's Open Source Society. It explores hackathon, hardware building, software projects and workshops as well as several different competitions.</p>
@@ -499,7 +550,7 @@ author_profile: true
             <div class="exp-role-title">Technical Subcommittee Member</div>
             <div class="exp-role-sub">NTU Sentinels</div>
             <div class="exp-role-date">Aug 2026 – Present
-              <span class="exp-live-duration" data-duration-start="2026-08" data-duration-end="present" data-duration-prefix=" · "> · 2 mos</span>
+              <span class="exp-live-duration" data-duration-start="2026-08" data-duration-end="present" data-duration-prefix=" · "> · 3 mos</span>
             </div>
             <div class="exp-desc">
               <p>Sentinels is a flagship club focused around cybersecurity and CTFs.</p>
@@ -520,7 +571,7 @@ author_profile: true
             <div class="exp-role-title">Data Analytics &amp; Engineering Assistant</div>
             <div class="exp-role-sub">NTU Office of Data and Analytics (Work Study Scheme)</div>
             <div class="exp-role-date">Jul 2026 – Present
-              <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 3 mos</span>
+              <span class="exp-live-duration" data-duration-start="2026-07" data-duration-end="present" data-duration-prefix=" · "> · 4 mos</span>
               <span class="exp-engagement-note"> · Ad hoc through 31 Mar 2027</span>
             </div>
             <div class="exp-desc">

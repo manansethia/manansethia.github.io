@@ -623,6 +623,10 @@ author_profile: true
         </div>
       </div>
       <div class="skills-tags">
+        <span class="skills-tag">Backend Architecture &amp; RESTful API Engineering</span>
+        <span class="skills-tag">Database Schema Design &amp; Migrations</span>
+        <span class="skills-tag">Internal Tooling &amp; Developer Automation</span>
+        <span class="skills-tag">Cross-Platform Service Integration</span>
         <span class="skills-tag">CLI Development</span>
         <span class="skills-tag">GUI Development (Tkinter, Electron, .NET basics)</span>
         <span class="skills-tag">Backend Development (Flask, Django)</span>
@@ -799,16 +803,21 @@ author_profile: true
       <div class="skills-tags">
         <span class="skills-tag">Static Website Development</span>
         <span class="skills-tag">Jekyll</span>
-        <span class="skills-tag">Markdown</span>
+        <span class="skills-tag">Liquid Templates</span>
         <span class="skills-tag">GitHub Pages Deployment</span>
+        <span class="skills-tag">WYSIWYG Editor Engineering</span>
+        <span class="skills-tag">JekyllPad &amp; In-Browser CMS Workflows</span>
+        <span class="skills-tag">Academic Web Design Systems</span>
+        <span class="skills-tag">Interactive Device &amp; Preview Canvas Simulation</span>
+        <span class="skills-tag">Responsive Web Design</span>
+        <span class="skills-tag">Sass / SCSS</span>
+        <span class="skills-tag">Accessibility &amp; Semantic HTML</span>
+        <span class="skills-tag">SEO &amp; Structured Metadata</span>
+        <span class="skills-tag">Performance &amp; Layout Shift (CLS) Optimization</span>
+        <span class="skills-tag">Markdown</span>
         <span class="skills-tag">Website Structuring</span>
         <span class="skills-tag">Node.js</span>
         <span class="skills-tag">npm / npx</span>
-        <span class="skills-tag">Liquid Templates</span>
-        <span class="skills-tag">Sass / SCSS</span>
-        <span class="skills-tag">Responsive Web Design</span>
-        <span class="skills-tag">Accessibility &amp; Semantic HTML</span>
-        <span class="skills-tag">SEO (Google Search Console)</span>
         <span class="skills-tag">JSON</span>
         <span class="skills-tag">XML</span>
         <span class="skills-tag">YAML</span>

@@ -1512,7 +1512,6 @@ author_profile: true
     <img loading="lazy" decoding="async" src="/images/iesotc2.avif" alt="IESO">
     <img loading="lazy" decoding="async" src="/images/iesotc3.avif" alt="IESO">
     <img loading="lazy" decoding="async" src="/images/iesotc4.avif" alt="IESO">
-    <img loading="lazy" decoding="async" src="/images/iesotc0.avif" alt="IESO">
     <img loading="lazy" decoding="async" src="/images/iesotc5.avif" alt="IESO">
     <img loading="lazy" decoding="async" src="/images/iesotc6.avif" alt="IESO">
     <img loading="lazy" decoding="async" src="/images/iesotc.avif" alt="IESO">

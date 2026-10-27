@@ -2,8 +2,8 @@
 layout: archive
 title: "Resume"
 permalink: /resume/
-description: "Manan Sethia's Resume and CV — download or view inline. One-page resume and detailed curriculum vitae."
-keywords: "Manan Sethia resume, Manan Sethia CV, download resume, student resume, competitive programmer resume"
+description: "Manan Sethia's Resume, CV, and ATS-Friendly Resume — download or view inline. One-page resume, detailed curriculum vitae, and plain LaTeX ATS resume."
+keywords: "Manan Sethia resume, Manan Sethia CV, ATS friendly resume, LaTeX resume, download resume, student resume, competitive programmer resume"
 author_profile: true
 redirect_from:
   - /cv
@@ -284,7 +284,7 @@ redirect_from:
   .royal-mode .page__content h2 { border-bottom: 1.5px solid rgba(240, 240, 240, 0.9); }
 </style>
 
-<div class="resume-intro resume-intro-heading" role="heading" aria-level="2" style="font-size:1.17em;font-weight:600">Here are my Resume and CV.</div>
+<div class="resume-intro resume-intro-heading" role="heading" aria-level="2" style="font-size:1.17em;font-weight:600">Here are my Resume, CV, and ATS-Friendly Resume.</div>
 <p class="resume-intro resume-intro-copy">Think of the tabs below like browser tabs; tap one to peek inside, tap it again to fold it back up, or switch between them. You can also grab a copy using the download buttons below.</p>
 
 <!-- ═══ Tab Strip ═══ -->
@@ -294,6 +294,9 @@ redirect_from:
   </div>
   <div class="doc-tab" id="tabCV" onclick="switchDoc('cv')">
     <span class="tab-icon">📑</span> Curriculum Vitae
+  </div>
+  <div class="doc-tab" id="tabATS" onclick="switchDoc('ats')">
+    <span class="tab-icon">📋</span> ATS Friendly
   </div>
 </div>
 
@@ -313,6 +316,9 @@ redirect_from:
   </a>
   <a class="dl-btn" id="dlCV" href="/files/v1_cv.pdf" download="v1_Manan_Sethia_CV.pdf">
     <span class="dl-icon">⬇</span> Download CV
+  </a>
+  <a class="dl-btn" id="dlATS" href="/files/ats_resume.pdf" download="Manan_Sethia_ATS_Resume.pdf">
+    <span class="dl-icon">⬇</span> Download ATS Resume
   </a>
 </div>
 
@@ -352,6 +358,7 @@ redirect_from:
   var frame   = document.getElementById('docFrame');
   var tabR    = document.getElementById('tabResume');
   var tabC    = document.getElementById('tabCV');
+  var tabA    = document.getElementById('tabATS');
   var current = null;
 
   /* Detect current theme from <html> classes */
@@ -363,6 +370,9 @@ redirect_from:
   }
 
   function buildSrc(which) {
+    if (which === 'ats') {
+      return '/_pages/ats-pdf-view.html';
+    }
     var base = which === 'resume'
       ? '/_pages/resume-print.html'
       : '/_pages/cv-print.html';
@@ -411,6 +421,7 @@ redirect_from:
       wrap.classList.remove('loading');
       tabR.classList.remove('active');
       tabC.classList.remove('active');
+      tabA.classList.remove('active');
       current = null;
       setTimeout(function() {
         pumpFooter();
@@ -421,6 +432,7 @@ redirect_from:
 
     tabR.classList.toggle('active', which === 'resume');
     tabC.classList.toggle('active', which === 'cv');
+    tabA.classList.toggle('active', which === 'ats');
 
     preload(); /* in case user clicks before window.load fires */
     var needsSwap = (loadedSource !== which);
